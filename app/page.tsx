@@ -1,3 +1,10 @@
+import Profile from "./components/Profile";
+
 export default function Page() {
-    return <h1>Portfolio App</h1>
+    return (
+        <section>
+            <h1>Portfolio</h1>
+            <Profile />
+        </section>
+    )
 }
