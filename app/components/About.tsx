@@ -15,12 +15,18 @@ export default function About() {
             <p className="aboutP">Are you looking to have a website created or edited for your small business?</p>
             <p className="aboutP">I'm here to assist! With 6 years of experience transitioning from quality testing to front-end development, I bring a unique perspective to streamline your workflows and enhance your web applications.</p>
             <h2 className="aboutHeading">What I bring to the table:</h2>
-            <ul className="aboutUl">
+            <ul className="aboutUl" style={{
+                backgroundColor: "black",
+                color: "white"
+            }}>
                 <li className="aboutLi">{tableBringings[0]}</li>
                 <li className="aboutLi">{tableBringings[1]}</li>
             </ul>
             <h2 className="aboutHeading">Technical Skills:</h2>
-            <ul className="aboutUl">
+            <ul className="aboutUl" style={{
+                backgroundColor: "black",
+                color: "white"
+            }}>
                 <li className="aboutLi">{technicalSkills[0]}</li>
                 <li className="aboutLi">{technicalSkills[1]}</li>
                 <li className="aboutLi">{technicalSkills[2]}</li>
