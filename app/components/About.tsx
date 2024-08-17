@@ -1,15 +1,4 @@
-export default function About() {
-    const tableBringings = [
-        "Expertise in technology for front-end development",
-        "Selecting and applying concepts tailored for front-end applications"
-    ]
-
-    const technicalSkills = {
-        programmingLanguages: "JavaScript (including frameworks like React)",
-        websitePlatform: "WordPress",
-        versionControl: "Git"
-    }
-
+export default function About({ tableBringings, technicalSkills }) {
     return (
         <>
             <p className="aboutP">Are you looking to have a website created or edited for your small business?</p>
@@ -27,7 +16,7 @@ export default function About() {
                 backgroundColor: "black",
                 color: "yellow"
             }}>
-                <li className="aboutLi">Programming Languages: {technicalSkills.programmingLanguages}</li>
+                <li className="aboutLi">Programming Languages: {technicalSkills.programmingLanguage}</li>
                 <li className="aboutLi">Website Platform: {technicalSkills.websitePlatform}</li>
                 <li className="aboutLi">Version Control: {technicalSkills.versionControl}</li>
             </ul>

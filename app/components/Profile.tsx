@@ -1,11 +1,8 @@
-export default function Profile() {
-    const src = "./picture.jpg";
-    const alt = "Nikolai Reyes";
-
+export default function Profile({ src, alt, h2 }) {
     return (
         <>
             <img className="profileImg" src={src} alt={alt} />
-            <h2 className="profileHeading">Wordpress Developer | Front-end Developer | Quality Tester</h2>
+            <h2 className="profileH2">{h2}</h2>
         </>
     );
 }
