@@ -4,11 +4,11 @@ export default function About() {
         "Selecting and applying concepts tailored for front-end applications"
     ]
 
-    const technicalSkills = [
-        "Programming Languages: JavaScript (including frameworks like React)",
-        "Website Platform: WordPress",
-        "Version Control: Git"
-    ]
+    const technicalSkills = {
+        programmingLanguages: "JavaScript (including frameworks like React)",
+        websitePlatform: "WordPress",
+        versionControl: "Git"
+    }
 
     return (
         <>
@@ -17,7 +17,7 @@ export default function About() {
             <h2 className="aboutHeading">What I bring to the table:</h2>
             <ul className="aboutUl" style={{
                 backgroundColor: "black",
-                color: "white"
+                color: "yellow"
             }}>
                 <li className="aboutLi">{tableBringings[0]}</li>
                 <li className="aboutLi">{tableBringings[1]}</li>
@@ -25,11 +25,11 @@ export default function About() {
             <h2 className="aboutHeading">Technical Skills:</h2>
             <ul className="aboutUl" style={{
                 backgroundColor: "black",
-                color: "white"
+                color: "yellow"
             }}>
-                <li className="aboutLi">{technicalSkills[0]}</li>
-                <li className="aboutLi">{technicalSkills[1]}</li>
-                <li className="aboutLi">{technicalSkills[2]}</li>
+                <li className="aboutLi">Programming Languages: {technicalSkills.programmingLanguages}</li>
+                <li className="aboutLi">Website Platform: {technicalSkills.websitePlatform}</li>
+                <li className="aboutLi">Version Control: {technicalSkills.versionControl}</li>
             </ul>
             <p className="aboutP">I understand it's a bit technical, but let's discuss your specific needs. Together, we can achieve your dream website. Looking forward to chatting soon!</p>
             <p className="aboutP">Best regards,<br />Nik</p>
