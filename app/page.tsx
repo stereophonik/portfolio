@@ -3,7 +3,7 @@ import Profile from "./components/Profile";
 import About from "./components/About";
 
 export default function Page() {
-    const profileSrc = "./picture.jpg";
+    const profileSrc = "./about.svg";
     const profileAlt = "Nikolai Reyes";
     const profileHeading = "Wordpress Developer | Front-end Developer | Quality Tester";
 
