@@ -2,18 +2,18 @@
 
 import { useState, useEffect } from "react";
 
-import Header from "./components/Header";
 import Profile from "./components/Profile";
 import About from "./components/About";
 
 export default function Page() {
     const [profileSrc, setProfileSrc] = useState("");
     const [profileAlt, setProfileAlt] = useState("");
+    const [profileH1, setProfileH1] = useState("");
     const [profileH2, setProfileH2] = useState("");
-    const [aboutStartings, setAboutStartings] = useState("");
-    const [aboutTableBringings, setAboutTableBringings] = useState("");
-    const [aboutTechnicalSkills, setAboutTechnicalSkills] = useState("");
-    const [aboutEndings, setAboutEndings] = useState("");
+    const [aboutStartings, setAboutStartings] = useState([]);
+    const [aboutTableBringings, setAboutTableBringings] = useState([]);
+    const [aboutTechnicalSkills, setAboutTechnicalSkills] = useState([]);
+    const [aboutEndings, setAboutEndings] = useState([]);
 
     useEffect(() => {
         fetch("/api?fileName=profile", {
@@ -23,6 +23,7 @@ export default function Page() {
             .then(jsonProfileFile => {
                 setProfileSrc(jsonProfileFile.src);
                 setProfileAlt(jsonProfileFile.alt);
+                setProfileH1(jsonProfileFile.h1);
                 setProfileH2(jsonProfileFile.h2);
             });
 
@@ -40,10 +41,10 @@ export default function Page() {
 
     return (
         <>
-            <Header />
             <Profile
                 src={profileSrc}
                 alt={profileAlt}
+                h1={profileH1}
                 h2={profileH2}
             />
             <About

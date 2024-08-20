@@ -7,11 +7,28 @@
         "Expertise in technology for front-end development",
         "Selecting and applying concepts tailored for front-end applications"
     ],
-    "technicalSkills": {
-        "programmingLanguage": "JavaScript",
-        "websitePlatform": "WordPress",
-        "versionControl": "Git"
-    },
+    "technicalSkills": [
+        {
+            "generic": "Website Platform: WordPress",
+            "specifics": []
+        },
+        {
+            "generic": "Framework: Next.js",
+            "specifics": []
+        },
+        {
+            "generic": "Library: React",
+            "specifics": []
+        },
+        {
+            "generic": "Version Control: Git",
+            "specifics": []
+        },
+        {
+            "generic": "Programming Language: JavaScript",
+            "specifics": []
+        }
+    ],
     "endings": [
         "I understand it's a bit technical, but let's discuss your specific needs. Together, we can achieve your dream website. Looking forward to chatting soon!",
         "Best regards,",
