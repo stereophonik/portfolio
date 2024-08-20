@@ -1,3 +1,4 @@
+import TableBringings from "./TableBringings";
 import TechnicalSkills from "./TechnicalSkills";
 
 export default function About({ startings, tableBringings, technicalSkills, endings }) {
@@ -9,11 +10,9 @@ export default function About({ startings, tableBringings, technicalSkills, endi
                     backgroundColor: "white",
                     color: "#0464ff"
                 }}>
-                <h2 className="aboutHeading">What I bring to the table:</h2>
-                <ul className="aboutUl">
-                    <li className="aboutLi">{tableBringings[0]}</li>
-                    <li className="aboutLi">{tableBringings[1]}</li>
-                </ul>
+                <TableBringings
+                    tableBringings={tableBringings}
+                />
                 <TechnicalSkills
                     technicalSkills={technicalSkills}
                 />

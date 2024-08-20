@@ -8,9 +8,24 @@ const anonymousPro = Anonymous_Pro({
 export default function Profile({ src, alt, h1, h2 }) {
     return (
         <>
-            <img className="profileImg" src={src} alt={alt} />
-            <h1 className={anonymousPro.className}>{h1}</h1>
-            <h2 className={anonymousPro.className}>{h2}</h2>
+            <div style={{
+                    display: "grid",
+                    rowGap: "0",
+                    gridTemplateColumns: "repeat(5, 1fr)"
+                }}>
+                <img className="profileImg" src={src} alt={alt} style={{
+                    gridColumn: "1"
+                }}/>
+                <div>
+                    <h1 className={anonymousPro.className} style={{
+                        gridColumn: "2"
+                    }}>{h1}</h1>
+                    <br />
+                    <h2 className={anonymousPro.className} style={{
+                        gridColumn: "2"
+                    }}>{h2}</h2>
+                </div>
+            </div>
         </>
     );
 }
