@@ -2,7 +2,7 @@ import { Anonymous_Pro } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
 
 const anonymousPro = Anonymous_Pro({
-    weight: "700",
+    weight: "400",
     subsets: ["latin"]
 })
 
