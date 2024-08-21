@@ -3,13 +3,20 @@ import Startings from "./Startings";
 import TableBringings from "./TableBringings";
 import TechnicalSkills from "./TechnicalSkills";
 
+const isSmall = window.innerWidth <= 480;
+const heights = [
+    isSmall ? "40vw" : "20vw",
+    isSmall ? "70vw" : "30vw",
+    isSmall ? "30vw" : "15vw"
+]
+
 export default function About({ startings, tableBringings, technicalSkills, endings }) {
     return (
         <>
             <div style={{
                     overflow: "hidden",
                     width: "100vw",
-                    height: "20vw",
+                    height: heights[0],
                     backgroundColor: "white",
                     color: "#0464ff",
                     textAlign: "center"
@@ -24,7 +31,7 @@ export default function About({ startings, tableBringings, technicalSkills, endi
             <div style={{
                     overflow: "hidden",
                     width: "100vw",
-                    height: "30vw",
+                    height: heights[1],
                     backgroundColor: "#0464ff",
                     color: "white",
                     textAlign: "center"
@@ -42,7 +49,7 @@ export default function About({ startings, tableBringings, technicalSkills, endi
             <div style={{
                     overflow: "hidden",
                     width: "100vw",
-                    height: "15vw",
+                    height: heights[2],
                     backgroundColor: "white",
                     color: "#0464ff",
                     textAlign: "center"

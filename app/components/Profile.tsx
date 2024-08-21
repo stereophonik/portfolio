@@ -11,6 +11,11 @@ const robotoMono = Roboto_Mono({
     subsets: ["latin"]
 })
 
+const isSmall = window.innerWidth <= 480;
+const height = isSmall ? "50vw" : "25vw"
+const h1FontSize = isSmall ? "1rem" : "3rem"
+const h2FontSize = isSmall ? "0.75rem" : "2rem"
+
 export default function Profile({ src, alt, h1, h2 }) {
     return (
         <>
@@ -21,7 +26,7 @@ export default function Profile({ src, alt, h1, h2 }) {
                     columnGap: "1%",
                     gridTemplateColumns: "5% 25% 70%",
                     width: "100vw",
-                    height: "25vw",
+                    height: height,
                     textAlign: "center"
                 }}>
                 <div style={{
@@ -40,10 +45,12 @@ export default function Profile({ src, alt, h1, h2 }) {
                         height: "30%"
                     }}></div>
                     <h1 className={robotoMono.className} style={{
-                        gridColumn: "3"
+                        gridColumn: "3",
+                        fontSize: h1FontSize
                     }}>{h1}</h1>
                     <h2 className={anonymousPro.className} style={{
-                        gridColumn: "3"
+                        gridColumn: "3",
+                        fontSize: h2FontSize
                     }}>{h2}</h2>
                 </div>
             </div>
