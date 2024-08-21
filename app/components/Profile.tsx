@@ -19,7 +19,7 @@ export default function Profile({ src, alt, h1, h2 }) {
                     display: "grid",
                     rowGap: "0",
                     columnGap: "1%",
-                    gridTemplateColumns: "30% 70%",
+                    gridTemplateColumns: "5% 25% 70%",
                     width: "100vw",
                     height: "25vw"
                 }}>
@@ -27,7 +27,7 @@ export default function Profile({ src, alt, h1, h2 }) {
                     height: "100%"
                 }}></div>
                 <img className="profileImg" src={src} alt={alt} style={{
-                    gridColumn: "1",
+                    gridColumn: "2",
                     width: "auto",
                     height: "auto",
                     maxWidth: "100%",
