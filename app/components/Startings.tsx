@@ -8,11 +8,16 @@ const anonymousPro = Anonymous_Pro({
 export default function Startings({ startings }) {
     return (
         <>
-            {
-                startings.map((starting) =>
-                    <p className={anonymousPro.className}>{starting}</p>
-                )
-            }
+            <div style={{
+                    width: "100vw",
+                    height: "30vw"
+                }}>
+                {
+                    startings.map((starting) =>
+                        <p className={anonymousPro.className}>{starting}</p>
+                    )
+                }
+            </div>
         </>
     )
 }
