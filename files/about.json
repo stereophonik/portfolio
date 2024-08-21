@@ -14,19 +14,47 @@
         },
         {
             "generic": "Framework: Next.js",
-            "specifics": []
+            "specifics": [
+                "Creating App Layout",
+                "Creating App Page",
+                "Running Dev Server",
+                "Adding a static file",
+                "Route handling",
+                "Font optimizing",
+                "List rendering"
+            ]
         },
         {
             "generic": "Library: React",
-            "specifics": []
+            "specifics": [
+                "Defining a component",
+                "Using a component",
+                "Exporting and importing a component",
+                "Writing a Fragment",
+                "Writing a markup with JSX",
+                "Using JavaScript with curly braces",
+                "Using JavaScript with double curly braces",
+                "Passing and reading props",
+                "Implementing useState",
+                "Implementing useEffect"
+            ]
         },
         {
             "generic": "Version Control: Git",
-            "specifics": []
+            "specifics": [
+                "Cloning a repository",
+                "Git statusing",
+                "Git adding",
+                "Git committing",
+                "Git pushing",
+                "Creating Git Ignore"
+            ]
         },
         {
             "generic": "Programming Language: JavaScript",
-            "specifics": []
+            "specifics": [
+                "Defining a function"
+            ]
         }
     ],
     "endings": [

@@ -7,7 +7,16 @@ const anonymousPro = Anonymous_Pro({
 
 export default function TechnicalSkills({ technicalSkills }) {
     const genericTechnicalSkills = technicalSkills.map((technicalSkill) =>
-        <li className={anonymousPro.className} key={technicalSkills.indexOf(technicalSkill)}>{technicalSkill.generic}</li>
+        <li className={anonymousPro.className} key={technicalSkills.indexOf(technicalSkill)}>
+            {technicalSkill.generic}
+            <ul className={anonymousPro.className}>
+                {technicalSkill.specifics.map((technicalSkillSpecific) =>
+                    <li className={anonymousPro.className} key={technicalSkill.specifics.indexOf(technicalSkillSpecific)}>
+                        {technicalSkillSpecific}
+                    </li>
+                )}
+            </ul>
+        </li>
     );
 
     return (
