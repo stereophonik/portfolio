@@ -21,11 +21,13 @@ export default function Profile({ src, alt, h1, h2 }) {
                     columnGap: "1%",
                     gridTemplateColumns: "5% 25% 70%",
                     width: "100vw",
-                    height: "25vw"
+                    height: "25vw",
+                    textAlign: "center"
                 }}>
                 <div style={{
-                    height: "100%"
-                }}></div>
+                        gridColumn: "1",
+                        height: "100%"
+                    }}></div>
                 <img className="profileImg" src={src} alt={alt} style={{
                     gridColumn: "2",
                     width: "auto",
@@ -35,8 +37,8 @@ export default function Profile({ src, alt, h1, h2 }) {
                 }}/>
                 <div>
                 <div style={{
-                    height: "30%"
-                }}></div>
+                        height: "30%"
+                    }}></div>
                     <h1 className={robotoMono.className} style={{
                         gridColumn: "3"
                     }}>{h1}</h1>

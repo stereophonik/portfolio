@@ -7,10 +7,16 @@ export default function About({ startings, tableBringings, technicalSkills, endi
     return (
         <>
             <div style={{
+                    overflow: "hidden",
+                    width: "100vw",
+                    height: "20vw",
                     backgroundColor: "white",
                     color: "#0464ff",
-                    textAlign: "right"
+                    textAlign: "center"
                 }}>
+                <div style={{
+                        height: "10%"
+                    }}></div>
                 <Startings
                     startings={startings}
                 />
@@ -27,10 +33,16 @@ export default function About({ startings, tableBringings, technicalSkills, endi
                 />
             </div>
             <div style={{
+                    overflow: "hidden",
+                    width: "100vw",
+                    height: "20vw",
                     backgroundColor: "white",
                     color: "#0464ff",
-                    textAlign: "right"
+                    textAlign: "center"
                 }}>
+                <div style={{
+                        height: "10%"
+                    }}></div>
                 <Endings
                     endings={endings}
                  />

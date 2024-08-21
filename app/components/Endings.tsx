@@ -8,8 +8,8 @@ const anonymousPro = Anonymous_Pro({
 export default function Endings({ endings }) {
     return (
         <>
-            <p className={anonymousPro.className}>{endings[0]}</p>
-            <p className={anonymousPro.className}>{endings[1]}<br />{endings[2]}</p>
+            <h2 className={anonymousPro.className}>{endings[0]}</h2>
+            <h2 className={anonymousPro.className}>{endings[1]}<br />{endings[2]}</h2>
         </>
     )
 }
