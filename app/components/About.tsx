@@ -22,9 +22,16 @@ export default function About({ startings, tableBringings, technicalSkills, endi
                 />
             </div>
             <div style={{
+                    overflow: "hidden",
+                    width: "100vw",
+                    height: "30vw",
                     backgroundColor: "#0464ff",
-                    color: "white"
+                    color: "white",
+                    textAlign: "center"
                 }}>
+                <div style={{
+                        height: "10%"
+                    }}></div>
                 <TableBringings
                     tableBringings={tableBringings}
                 />
@@ -35,7 +42,7 @@ export default function About({ startings, tableBringings, technicalSkills, endi
             <div style={{
                     overflow: "hidden",
                     width: "100vw",
-                    height: "20vw",
+                    height: "15vw",
                     backgroundColor: "white",
                     color: "#0464ff",
                     textAlign: "center"
