@@ -6,6 +6,7 @@ import Profile from "./components/Profile";
 import About from "./components/About";
 
 export default function Page() {
+    const [isSmall, setIsSmall] = useState(false);
     const [profileSrc, setProfileSrc] = useState("");
     const [profileAlt, setProfileAlt] = useState("");
     const [profileH1, setProfileH1] = useState("");
@@ -16,6 +17,8 @@ export default function Page() {
     const [aboutEndings, setAboutEndings] = useState([]);
 
     useEffect(() => {
+        setIsSmall(window.innerWidth <= 480);
+
         fetch("/api?fileName=profile", {
             method: "GET"
         })
@@ -42,12 +45,14 @@ export default function Page() {
     return (
         <>
             <Profile
+                isSmall={isSmall}
                 src={profileSrc}
                 alt={profileAlt}
                 h1={profileH1}
                 h2={profileH2}
             />
             <About
+                isSmall={isSmall}
                 startings={aboutStartings}
                 tableBringings={aboutTableBringings}
                 technicalSkills={aboutTechnicalSkills}

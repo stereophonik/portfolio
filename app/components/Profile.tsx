@@ -11,12 +11,11 @@ const robotoMono = Roboto_Mono({
     subsets: ["latin"]
 })
 
-const isSmall = window.innerWidth <= 480;
-const height = isSmall ? "50vw" : "25vw"
-const h1FontSize = isSmall ? "1rem" : "3rem"
-const h2FontSize = isSmall ? "0.75rem" : "2rem"
+export default function Profile({ isSmall, src, alt, h1, h2 }) {
+    const height = isSmall ? "50vw" : "25vw";
+    const h1FontSize = isSmall ? "1rem" : "3rem";
+    const h2FontSize = isSmall ? "0.75rem" : "2rem";
 
-export default function Profile({ src, alt, h1, h2 }) {
     return (
         <>
             <div style={{

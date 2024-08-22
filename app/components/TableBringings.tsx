@@ -11,11 +11,10 @@ const robotoMono = Roboto_Mono({
     subsets: ["latin"]
 })
 
-const isSmall = window.innerWidth <= 480;
-const h1FontSize = isSmall ? "1rem" : "3rem"
-const h2FontSize = isSmall ? "0.75rem" : "2rem"
+export default function TableBringings({ isSmall, tableBringings }) {
+    const h1FontSize = isSmall ? "1rem" : "3rem";
+    const h2FontSize = isSmall ? "0.75rem" : "2rem";
 
-export default function TableBringings({ tableBringings }) {
     return (
         <>
             <h1 className={robotoMono.className} style={{

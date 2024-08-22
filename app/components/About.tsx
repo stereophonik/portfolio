@@ -3,14 +3,13 @@ import Startings from "./Startings";
 import TableBringings from "./TableBringings";
 import TechnicalSkills from "./TechnicalSkills";
 
-const isSmall = window.innerWidth <= 480;
-const heights = [
-    isSmall ? "40vw" : "20vw",
-    isSmall ? "70vw" : "30vw",
-    isSmall ? "30vw" : "15vw"
-]
+export default function About({ isSmall, startings, tableBringings, technicalSkills, endings }) {
+    const heights = [
+        isSmall ? "40vw" : "20vw",
+        isSmall ? "70vw" : "30vw",
+        isSmall ? "30vw" : "15vw"
+    ]
 
-export default function About({ startings, tableBringings, technicalSkills, endings }) {
     return (
         <>
             <div style={{
@@ -25,6 +24,7 @@ export default function About({ startings, tableBringings, technicalSkills, endi
                         height: "10%"
                     }}></div>
                 <Startings
+                    isSmall={isSmall}
                     startings={startings}
                 />
             </div>
@@ -40,9 +40,11 @@ export default function About({ startings, tableBringings, technicalSkills, endi
                         height: "10%"
                     }}></div>
                 <TableBringings
+                    isSmall={isSmall}
                     tableBringings={tableBringings}
                 />
                 <TechnicalSkills
+                    isSmall={isSmall}
                     technicalSkills={technicalSkills}
                 />
             </div>
@@ -58,6 +60,7 @@ export default function About({ startings, tableBringings, technicalSkills, endi
                         height: "10%"
                     }}></div>
                 <Endings
+                    isSmall={isSmall}
                     endings={endings}
                  />
             </div>

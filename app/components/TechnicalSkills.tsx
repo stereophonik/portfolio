@@ -11,11 +11,10 @@ const robotoMono = Roboto_Mono({
     subsets: ["latin"]
 })
 
-const isSmall = window.innerWidth <= 480;
-const h1FontSize = isSmall ? "1rem" : "3rem"
-const h2FontSize = isSmall ? "0.75rem" : "2rem"
+export default function TechnicalSkills({ isSmall, technicalSkills }) {
+    const h1FontSize = isSmall ? "1rem" : "3rem";
+    const h2FontSize = isSmall ? "0.75rem" : "2rem";
 
-export default function TechnicalSkills({ technicalSkills }) {
     const genericTechnicalSkills = technicalSkills.map((technicalSkill) =>
         <li className={anonymousPro.className} key={technicalSkills.indexOf(technicalSkill)}>
             {technicalSkill.generic}

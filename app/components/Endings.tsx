@@ -5,10 +5,9 @@ const anonymousPro = Anonymous_Pro({
     subsets: ["latin"]
 })
 
-const isSmall = window.innerWidth <= 480;
-const h2FontSize = isSmall ? "0.75rem" : "2rem"
+export default function Endings({ isSmall, endings }) {
+    const h2FontSize = isSmall ? "0.75rem" : "2rem";
 
-export default function Endings({ endings }) {
     return (
         <>
             <h2 className={anonymousPro.className} style={{
