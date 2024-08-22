@@ -43,6 +43,12 @@
             ]
         },
         {
+            "generic": "Testing: Cypress",
+            "specifics": [
+                "Writing a test"
+            ]
+        },
+        {
             "generic": "Version Control: Git",
             "specifics": [
                 "Cloning a repository",

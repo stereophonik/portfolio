@@ -49,13 +49,13 @@ export default function Profile({ isSmall, src, alt, h1, h2 }) {
                 <div style={{
                         height: "30%"
                     }}></div>
-                    <h1 className={robotoMono.className} style={{
+                    <h1 id="profileH1" className={robotoMono.className} style={{
                             gridColumn: "3",
                             fontSize: h1FontSize
                         }}>
                         {h1}
                     </h1>
-                    <h2 className={anonymousPro.className} style={{
+                    <h2 id="profileH2" className={anonymousPro.className} style={{
                             gridColumn: "3",
                             fontSize: h2FontSize
                         }}>
