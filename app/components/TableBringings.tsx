@@ -11,7 +11,7 @@ const robotoMono = Roboto_Mono({
     subsets: ["latin"]
 })
 
-export default function TableBringings({ isSmall, tableBringings }) {
+export default function TableBringings({ isSmall, labelTableBringings, tableBringings }) {
     const h1FontSize = isSmall ? "1rem" : "3rem";
     const h2FontSize = isSmall ? "0.75rem" : "2rem";
 
@@ -20,7 +20,7 @@ export default function TableBringings({ isSmall, tableBringings }) {
             <h1 className={robotoMono.className} style={{
                     fontSize: h1FontSize
                 }}>
-                What I bring to the table:
+                {labelTableBringings}
             </h1>
             <ul className={anonymousPro.className} style={{
                     listStyleType: "none"

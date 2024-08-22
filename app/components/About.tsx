@@ -3,7 +3,7 @@ import Startings from "./Startings";
 import TableBringings from "./TableBringings";
 import TechnicalSkills from "./TechnicalSkills";
 
-export default function About({ isSmall, startings, tableBringings, technicalSkills, endings }) {
+export default function About({ isSmall, startings, labelTableBringings, tableBringings, labelTechnicalSkills, technicalSkills, endings }) {
     const heights = [
         isSmall ? "40vw" : "20vw",
         isSmall ? "70vw" : "30vw",
@@ -41,10 +41,12 @@ export default function About({ isSmall, startings, tableBringings, technicalSki
                     }}></div>
                 <TableBringings
                     isSmall={isSmall}
+                    labelTableBringings={labelTableBringings}
                     tableBringings={tableBringings}
                 />
                 <TechnicalSkills
                     isSmall={isSmall}
+                    labelTechnicalSkills={labelTechnicalSkills}
                     technicalSkills={technicalSkills}
                 />
             </div>

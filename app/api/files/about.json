@@ -3,10 +3,12 @@
         "Are you looking to have a website created or edited for your small business?",
         "I'm here to assist! With 6 years of experience transitioning from quality testing to front-end development, I bring a unique perspective to streamline your workflows and enhance your web applications."
     ],
+    "labelTableBringings": "What I bring to the table:",
     "tableBringings": [
         "Expertise in technology for front-end development",
         "Selecting and applying concepts tailored for front-end applications"
     ],
+    "labelTechnicalSkills": "Technical Skills:",
     "technicalSkills": [
         {
             "generic": "Platform: WordPress",

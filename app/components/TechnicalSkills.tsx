@@ -11,7 +11,7 @@ const robotoMono = Roboto_Mono({
     subsets: ["latin"]
 })
 
-export default function TechnicalSkills({ isSmall, technicalSkills }) {
+export default function TechnicalSkills({ isSmall, labelTechnicalSkills, technicalSkills }) {
     const h1FontSize = isSmall ? "1rem" : "3rem";
     const h2FontSize = isSmall ? "0.75rem" : "2rem";
 
@@ -26,7 +26,7 @@ export default function TechnicalSkills({ isSmall, technicalSkills }) {
             <h1 className={robotoMono.className} style={{
                     fontSize: h1FontSize
                 }}>
-                Technical Skills:
+                {labelTechnicalSkills}
             </h1>
                 <ul className={anonymousPro.className} style={{
                         listStyleType: "none"
