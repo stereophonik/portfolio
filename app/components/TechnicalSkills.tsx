@@ -24,7 +24,7 @@ export default function TechnicalSkills({ isSmall, labelTechnicalSkills, technic
 
     const genericTechnicalSkills = technicalSkills.map((technicalSkill) =>
         <li className={anonymousPro.className} key={technicalSkills.indexOf(technicalSkill)}>
-            {technicalSkill.generic} <ForClicking onClick={() => alert(createFromArray(technicalSkill.specifics))}>Click for specifics</ForClicking>
+            {technicalSkill.generic} <ForClicking isSmall={isSmall} onClick={() => alert(createFromArray(technicalSkill.specifics))}>Click for specifics</ForClicking>
         </li>
     );
 

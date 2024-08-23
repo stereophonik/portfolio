@@ -5,12 +5,15 @@ const anonymousPro = Anonymous_Pro({
     subsets: ["latin"]
 })
 
-export default function ForClicking({ onClick, children }) {
+export default function ForClicking({ isSmall, onClick, children }) {
+    const buttonFontSize = isSmall ? "0.75rem" : "2rem";
+
     return (
         <button className={anonymousPro.className} onClick={onClick}
             style={{
                 backgroundColor: "white",
-                color: "#0464ff"
+                color: "#0464ff",
+                fontSize: buttonFontSize
             }}>
             {children}
         </button>
