@@ -6,5 +6,13 @@ const anonymousPro = Anonymous_Pro({
 })
 
 export default function ForClicking({ onClick, children }) {
-    return <button className={anonymousPro.className} onClick={onClick}>{children}</button>
+    return (
+        <button className={anonymousPro.className} onClick={onClick}
+            style={{
+                backgroundColor: "white",
+                color: "#0464ff"
+            }}>
+            {children}
+        </button>
+    );
 }
