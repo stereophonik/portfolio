@@ -1,5 +1,6 @@
 import { Anonymous_Pro } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
+import ForClicking from "./ForClicking";
 
 const anonymousPro = Anonymous_Pro({
     weight: "400",
@@ -15,9 +16,15 @@ export default function TechnicalSkills({ isSmall, labelTechnicalSkills, technic
     const h1FontSize = isSmall ? "1rem" : "3rem";
     const h2FontSize = isSmall ? "0.75rem" : "2rem";
 
+    function createFromArray(array) {
+        let string = "";
+        array.map((element) => string += `${element}\n`);
+        return string;
+    }
+
     const genericTechnicalSkills = technicalSkills.map((technicalSkill) =>
         <li className={anonymousPro.className} key={technicalSkills.indexOf(technicalSkill)}>
-            {technicalSkill.generic}
+            {technicalSkill.generic} <ForClicking onClick={() => alert(createFromArray(technicalSkill.specifics))}>Click for specifics</ForClicking>
         </li>
     );
 

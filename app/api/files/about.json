@@ -39,7 +39,8 @@
                 "Using JavaScript with double curly braces",
                 "Passing and reading props",
                 "Implementing useState",
-                "Implementing useEffect"
+                "Implementing useEffect",
+                "Event responding"
             ]
         },
         {
