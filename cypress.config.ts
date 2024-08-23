@@ -7,6 +7,6 @@ export default defineConfig({
     },
   },
   env: {
-    base_url: "http://localhost:3000"
+    base_url: "https://portfolio-kappa-lime-76.vercel.app"
   }
 });
