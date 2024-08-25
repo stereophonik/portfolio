@@ -6,7 +6,7 @@ import TechnicalSkills from "./TechnicalSkills";
 export default function About({ isSmall, startings, labelTableBringings, tableBringings, labelTechnicalSkills, technicalSkills, endings }) {
     const heights = [
         isSmall ? "40vw" : "20vw",
-        isSmall ? "70vw" : "50vw",
+        isSmall ? "90vw" : "50vw",
         isSmall ? "30vw" : "15vw"
     ]
 
