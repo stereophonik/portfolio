@@ -1,6 +1,6 @@
-import ForClicking from "./ForClicking";
+import ForClickingComponent from "./ForClicking";
 
-export default function TechnicalSkills({ isSmall, labelTechnicalSkills, technicalSkills, h1ClassName, h2ClassName }) {
+export default function TechnicalSkillsComponent({ isSmall, labelTechnicalSkills, technicalSkills, h1ClassName, h2ClassName }) {
     const h1FontSize = isSmall ? "1rem" : "3rem";
     const h2FontSize = isSmall ? "0.75rem" : "2rem";
 
@@ -12,7 +12,7 @@ export default function TechnicalSkills({ isSmall, labelTechnicalSkills, technic
 
     const genericTechnicalSkills = technicalSkills.map((technicalSkill) =>
         <li key={technicalSkills.indexOf(technicalSkill)}>
-            {technicalSkill.generic} <ForClicking isSmall={isSmall} onClick={() => alert(createFromArray(technicalSkill.specifics))}>Click for specifics</ForClicking>
+            {technicalSkill.generic} <ForClickingComponent isSmall={isSmall} onClick={() => alert(createFromArray(technicalSkill.specifics))}>Click for specifics</ForClickingComponent>
         </li>
     );
 

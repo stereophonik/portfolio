@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import { Anonymous_Pro } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
 
-import Profile from "./Profile";
-import About from "./About";
+import ProfileComponent from "./Profile";
+import AboutComponent from "./About";
 
 import { SizeContext } from "../contexts/Size";
 import { ProfileContext } from "../contexts/Profile";
@@ -20,7 +20,7 @@ const robotoMono = Roboto_Mono({
     subsets: ["latin"]
 })
 
-export default function Main() {
+export default function MainComponent() {
     const [isSmall, setIsSmall] = useState(false);
     const [profileSrc, setProfileSrc] = useState("");
     const [profileAlt, setProfileAlt] = useState("");
@@ -71,12 +71,12 @@ export default function Main() {
                         h1: profileH1,
                         h2: profileH2
                     }}>
-                        <Profile
+                        <ProfileComponent
                             h1ClassName={robotoMono.className}
                             h2ClassName={anonymousPro.className}
                         />
                     </ProfileContext.Provider>
-                    <About
+                    <AboutComponent
                         startings={aboutStartings}
                         labelTableBringings={aboutLabelTableBringings}
                         tableBringings={aboutTableBringings}

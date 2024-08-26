@@ -4,7 +4,7 @@ import { ProfileContext } from "../contexts/Profile";
 
 import Image from "next/image";
 
-export default function Profile({ h1ClassName, h2ClassName }) {
+export default function ProfileComponent({ h1ClassName, h2ClassName }) {
     const sizeContext = useContext(SizeContext);
     const profileContext = useContext(ProfileContext);
     const height = sizeContext["isSmall"] ? "50vw" : "25vw";

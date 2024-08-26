@@ -5,7 +5,7 @@ const anonymousPro = Anonymous_Pro({
     subsets: ["latin"]
 })
 
-export default function Endings({ isSmall, endings }) {
+export default function EndingsComponent({ isSmall, endings }) {
     const h2FontSize = isSmall ? "0.75rem" : "2rem";
 
     return (

@@ -5,7 +5,7 @@ const anonymousPro = Anonymous_Pro({
     subsets: ["latin"]
 })
 
-export default function Startings({ isSmall, startings }) {
+export default function StartingsComponent({ isSmall, startings }) {
     const h2FontSize = isSmall ? "0.75rem" : "2rem";
 
     return (

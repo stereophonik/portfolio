@@ -5,7 +5,7 @@ const anonymousPro = Anonymous_Pro({
     subsets: ["latin"]
 })
 
-export default function ForClicking({ isSmall, onClick, children }) {
+export default function ForClickingComponent({ isSmall, onClick, children }) {
     const buttonFontSize = isSmall ? "0.75rem" : "2rem";
 
     return (

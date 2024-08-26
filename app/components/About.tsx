@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import { SizeContext } from "../contexts/Size";
 
-import Endings from "./Endings";
-import Startings from "./Startings";
-import TableBringings from "./TableBringings";
-import TechnicalSkills from "./TechnicalSkills";
+import EndingsComponent from "./Endings";
+import StartingsComponent from "./Startings";
+import TableBringingsComponent from "./TableBringings";
+import TechnicalSkillsComponent from "./TechnicalSkills";
 
-export default function About({
+export default function AboutComponent({
     startings,
     labelTableBringings,
     tableBringings,
@@ -36,7 +36,7 @@ export default function About({
                 <div style={{
                         height: "10%"
                     }}></div>
-                <Startings
+                <StartingsComponent
                     isSmall={sizeContext["isSmall"]}
                     startings={startings}
                 />
@@ -52,14 +52,14 @@ export default function About({
                 <div style={{
                         height: "10%"
                     }}></div>
-                <TableBringings
+                <TableBringingsComponent
                     isSmall={sizeContext["isSmall"]}
                     labelTableBringings={labelTableBringings}
                     tableBringings={tableBringings}
                     h1ClassName={h1ClassName}
                     h2ClassName={h2ClassName}
                 />
-                <TechnicalSkills
+                <TechnicalSkillsComponent
                     isSmall={sizeContext["isSmall"]}
                     labelTechnicalSkills={labelTechnicalSkills}
                     technicalSkills={technicalSkills}
@@ -78,7 +78,7 @@ export default function About({
                 <div style={{
                         height: "10%"
                     }}></div>
-                <Endings
+                <EndingsComponent
                     isSmall={sizeContext["isSmall"]}
                     endings={endings}
                  />

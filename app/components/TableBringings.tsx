@@ -1,4 +1,4 @@
-export default function TableBringings({ isSmall, labelTableBringings, tableBringings, h1ClassName, h2ClassName }) {
+export default function TableBringingsComponent({ isSmall, labelTableBringings, tableBringings, h1ClassName, h2ClassName }) {
     const h1FontSize = isSmall ? "1rem" : "3rem";
     const h2FontSize = isSmall ? "0.75rem" : "2rem";
 
