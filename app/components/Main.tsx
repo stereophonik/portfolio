@@ -10,6 +10,7 @@ import AboutComponent from "./About";
 import { SizeContext } from "../contexts/Size";
 import { ClassNameContext } from "../contexts/ClassName";
 import { ProfileContext } from "../contexts/Profile";
+import { AboutContext } from "../contexts/About";
 
 const anonymousPro = Anonymous_Pro({
     weight: "400",
@@ -78,14 +79,16 @@ export default function MainComponent() {
                         }}>
                             <ProfileComponent />
                         </ProfileContext.Provider>
-                        <AboutComponent
-                            startings={aboutStartings}
-                            labelTableBringings={aboutLabelTableBringings}
-                            tableBringings={aboutTableBringings}
-                            labelTechnicalSkills={aboutLabelTechnicalSkills}
-                            technicalSkills={aboutTechnicalSkills}
-                            endings={aboutEndings}
-                        />
+                        <AboutContext.Provider value={{
+                            startings: aboutStartings,
+                            labelTableBringings: aboutLabelTableBringings,
+                            tableBringings: aboutTableBringings,
+                            labelTechnicalSkills: aboutLabelTechnicalSkills,
+                            technicalSkills: aboutTechnicalSkills,
+                            endings: aboutEndings
+                        }}>
+                            <AboutComponent />
+                        </AboutContext.Provider>
                     </ClassNameContext.Provider>
                 </SizeContext.Provider>
             </main>

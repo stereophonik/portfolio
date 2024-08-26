@@ -1,22 +1,17 @@
 import { useContext } from "react";
 import { SizeContext } from "../contexts/Size";
 import { ClassNameContext } from "../contexts/ClassName";
+import { AboutContext } from "../contexts/About";
 
 import EndingsComponent from "./Endings";
 import StartingsComponent from "./Startings";
 import TableBringingsComponent from "./TableBringings";
 import TechnicalSkillsComponent from "./TechnicalSkills";
 
-export default function AboutComponent({
-    startings,
-    labelTableBringings,
-    tableBringings,
-    labelTechnicalSkills,
-    technicalSkills,
-    endings
-}) {
+export default function AboutComponent() {
     const sizeContext = useContext(SizeContext);
     const classNameContext = useContext(ClassNameContext);
+    const aboutContext = useContext(AboutContext);
     const heights = [
         sizeContext["isSmall"] ? "40vw" : "20vw",
         sizeContext["isSmall"] ? "90vw" : "50vw",
@@ -38,7 +33,7 @@ export default function AboutComponent({
                     }}></div>
                 <StartingsComponent
                     isSmall={sizeContext["isSmall"]}
-                    startings={startings}
+                    startings={aboutContext["startings"]}
                 />
             </div>
             <div style={{
@@ -54,15 +49,15 @@ export default function AboutComponent({
                     }}></div>
                 <TableBringingsComponent
                     isSmall={sizeContext["isSmall"]}
-                    labelTableBringings={labelTableBringings}
-                    tableBringings={tableBringings}
+                    labelTableBringings={aboutContext["labelTableBringings"]}
+                    tableBringings={aboutContext["tableBringings"]}
                     h1ClassName={classNameContext["h1ClassName"]}
                     h2ClassName={classNameContext["h2ClassName"]}
                 />
                 <TechnicalSkillsComponent
                     isSmall={sizeContext["isSmall"]}
-                    labelTechnicalSkills={labelTechnicalSkills}
-                    technicalSkills={technicalSkills}
+                    labelTechnicalSkills={aboutContext["labelTechnicalSkills"]}
+                    technicalSkills={aboutContext["technicalSkills"]}
                     h1ClassName={classNameContext["h1ClassName"]}
                     h2ClassName={classNameContext["h2ClassName"]}
                 />
@@ -80,7 +75,7 @@ export default function AboutComponent({
                     }}></div>
                 <EndingsComponent
                     isSmall={sizeContext["isSmall"]}
-                    endings={endings}
+                    endings={aboutContext["endings"]}
                  />
             </div>
         </>
