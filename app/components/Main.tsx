@@ -8,6 +8,7 @@ import ProfileComponent from "./Profile";
 import AboutComponent from "./About";
 
 import { SizeContext } from "../contexts/Size";
+import { ClassNameContext } from "../contexts/ClassName";
 import { ProfileContext } from "../contexts/Profile";
 
 const anonymousPro = Anonymous_Pro({
@@ -65,27 +66,27 @@ export default function MainComponent() {
         <>
             <main className="main">
                 <SizeContext.Provider value={{isSmall: isSmall}}>
-                    <ProfileContext.Provider value={{
-                        src: profileSrc,
-                        alt: profileAlt,
-                        h1: profileH1,
-                        h2: profileH2
+                    <ClassNameContext.Provider value={{
+                        h1ClassName: robotoMono.className,
+                        h2ClassName: anonymousPro.className
                     }}>
-                        <ProfileComponent
-                            h1ClassName={robotoMono.className}
-                            h2ClassName={anonymousPro.className}
+                        <ProfileContext.Provider value={{
+                            src: profileSrc,
+                            alt: profileAlt,
+                            h1: profileH1,
+                            h2: profileH2
+                        }}>
+                            <ProfileComponent />
+                        </ProfileContext.Provider>
+                        <AboutComponent
+                            startings={aboutStartings}
+                            labelTableBringings={aboutLabelTableBringings}
+                            tableBringings={aboutTableBringings}
+                            labelTechnicalSkills={aboutLabelTechnicalSkills}
+                            technicalSkills={aboutTechnicalSkills}
+                            endings={aboutEndings}
                         />
-                    </ProfileContext.Provider>
-                    <AboutComponent
-                        startings={aboutStartings}
-                        labelTableBringings={aboutLabelTableBringings}
-                        tableBringings={aboutTableBringings}
-                        labelTechnicalSkills={aboutLabelTechnicalSkills}
-                        technicalSkills={aboutTechnicalSkills}
-                        endings={aboutEndings}
-                        h1ClassName={robotoMono.className}
-                        h2ClassName={anonymousPro.className}
-                    />
+                    </ClassNameContext.Provider>
                 </SizeContext.Provider>
             </main>
         </>

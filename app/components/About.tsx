@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { SizeContext } from "../contexts/Size";
+import { ClassNameContext } from "../contexts/ClassName";
 
 import EndingsComponent from "./Endings";
 import StartingsComponent from "./Startings";
@@ -12,11 +13,10 @@ export default function AboutComponent({
     tableBringings,
     labelTechnicalSkills,
     technicalSkills,
-    endings,
-    h1ClassName,
-    h2ClassName
+    endings
 }) {
     const sizeContext = useContext(SizeContext);
+    const classNameContext = useContext(ClassNameContext);
     const heights = [
         sizeContext["isSmall"] ? "40vw" : "20vw",
         sizeContext["isSmall"] ? "90vw" : "50vw",
@@ -56,15 +56,15 @@ export default function AboutComponent({
                     isSmall={sizeContext["isSmall"]}
                     labelTableBringings={labelTableBringings}
                     tableBringings={tableBringings}
-                    h1ClassName={h1ClassName}
-                    h2ClassName={h2ClassName}
+                    h1ClassName={classNameContext["h1ClassName"]}
+                    h2ClassName={classNameContext["h2ClassName"]}
                 />
                 <TechnicalSkillsComponent
                     isSmall={sizeContext["isSmall"]}
                     labelTechnicalSkills={labelTechnicalSkills}
                     technicalSkills={technicalSkills}
-                    h1ClassName={h1ClassName}
-                    h2ClassName={h2ClassName}
+                    h1ClassName={classNameContext["h1ClassName"]}
+                    h2ClassName={classNameContext["h2ClassName"]}
                 />
             </div>
             <div style={{

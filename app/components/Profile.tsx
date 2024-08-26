@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import { SizeContext } from "../contexts/Size";
+import { ClassNameContext } from "../contexts/ClassName";
 import { ProfileContext } from "../contexts/Profile";
 
 import Image from "next/image";
 
-export default function ProfileComponent({ h1ClassName, h2ClassName }) {
+export default function ProfileComponent() {
     const sizeContext = useContext(SizeContext);
+    const classNameContext = useContext(ClassNameContext);
     const profileContext = useContext(ProfileContext);
     const height = sizeContext["isSmall"] ? "50vw" : "25vw";
     const h1FontSize = sizeContext["isSmall"] ? "1rem" : "3rem";
@@ -43,13 +45,13 @@ export default function ProfileComponent({ h1ClassName, h2ClassName }) {
                 <div style={{
                         height: "30%"
                     }}></div>
-                    <h1 id="profileH1" className={h1ClassName} style={{
+                    <h1 id="profileH1" className={classNameContext["h1ClassName"]} style={{
                             gridColumn: "3",
                             fontSize: h1FontSize
                         }}>
                         {profileContext["h1"]}
                     </h1>
-                    <h2 id="profileH2" className={h2ClassName} style={{
+                    <h2 id="profileH2" className={classNameContext["h2ClassName"]} style={{
                             gridColumn: "3",
                             fontSize: h2FontSize
                         }}>
