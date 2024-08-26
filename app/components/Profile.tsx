@@ -1,21 +1,9 @@
 import { useContext } from "react";
 import { IsSmall } from "../contexts/IsSmall";
 
-import { Anonymous_Pro } from "next/font/google";
-import { Roboto_Mono } from "next/font/google";
 import Image from "next/image";
 
-const anonymousPro = Anonymous_Pro({
-    weight: "400",
-    subsets: ["latin"]
-})
-
-const robotoMono = Roboto_Mono({
-    weight: "700",
-    subsets: ["latin"]
-})
-
-export default function Profile({ src, alt, h1, h2 }) {
+export default function Profile({ src, alt, h1, h2, h1ClassName, h2ClassName }) {
     const isSmall = useContext(IsSmall);
     const height = isSmall ? "50vw" : "25vw";
     const h1FontSize = isSmall ? "1rem" : "3rem";
@@ -53,13 +41,13 @@ export default function Profile({ src, alt, h1, h2 }) {
                 <div style={{
                         height: "30%"
                     }}></div>
-                    <h1 id="profileH1" className={robotoMono.className} style={{
+                    <h1 id="profileH1" className={h1ClassName} style={{
                             gridColumn: "3",
                             fontSize: h1FontSize
                         }}>
                         {h1}
                     </h1>
-                    <h2 id="profileH2" className={anonymousPro.className} style={{
+                    <h2 id="profileH2" className={h2ClassName} style={{
                             gridColumn: "3",
                             fontSize: h2FontSize
                         }}>

@@ -1,10 +1,22 @@
 "use client"
 
 import { useState, useEffect } from "react";
+import { Anonymous_Pro } from "next/font/google";
+import { Roboto_Mono } from "next/font/google";
 
 import Profile from "./components/Profile";
 import About from "./components/About";
 import Main from "./components/Main";
+
+const anonymousPro = Anonymous_Pro({
+    weight: "400",
+    subsets: ["latin"]
+})
+
+const robotoMono = Roboto_Mono({
+    weight: "700",
+    subsets: ["latin"]
+})
 
 export default function Page() {
     const [isSmall, setIsSmall] = useState(false);
@@ -55,6 +67,8 @@ export default function Page() {
                     alt={profileAlt}
                     h1={profileH1}
                     h2={profileH2}
+                    h1ClassName={robotoMono.className}
+                    h2ClassName={anonymousPro.className}
                 />
                 <About
                     startings={aboutStartings}
@@ -63,6 +77,8 @@ export default function Page() {
                     labelTechnicalSkills={aboutLabelTechnicalSkills}
                     technicalSkills={aboutTechnicalSkills}
                     endings={aboutEndings}
+                    h1ClassName={robotoMono.className}
+                    h2ClassName={anonymousPro.className}
                 />
             </Main>
         </>

@@ -6,7 +6,16 @@ import Startings from "./Startings";
 import TableBringings from "./TableBringings";
 import TechnicalSkills from "./TechnicalSkills";
 
-export default function About({ startings, labelTableBringings, tableBringings, labelTechnicalSkills, technicalSkills, endings }) {
+export default function About({
+    startings,
+    labelTableBringings,
+    tableBringings,
+    labelTechnicalSkills,
+    technicalSkills,
+    endings,
+    h1ClassName,
+    h2ClassName
+}) {
     const isSmall = useContext(IsSmall);
     const heights = [
         isSmall ? "40vw" : "20vw",
@@ -47,11 +56,15 @@ export default function About({ startings, labelTableBringings, tableBringings, 
                     isSmall={isSmall}
                     labelTableBringings={labelTableBringings}
                     tableBringings={tableBringings}
+                    h1ClassName={h1ClassName}
+                    h2ClassName={h2ClassName}
                 />
                 <TechnicalSkills
                     isSmall={isSmall}
                     labelTechnicalSkills={labelTechnicalSkills}
                     technicalSkills={technicalSkills}
+                    h1ClassName={h1ClassName}
+                    h2ClassName={h2ClassName}
                 />
             </div>
             <div style={{

@@ -1,18 +1,6 @@
-import { Anonymous_Pro } from "next/font/google";
-import { Roboto_Mono } from "next/font/google";
 import ForClicking from "./ForClicking";
 
-const anonymousPro = Anonymous_Pro({
-    weight: "400",
-    subsets: ["latin"]
-})
-
-const robotoMono = Roboto_Mono({
-    weight: "700",
-    subsets: ["latin"]
-})
-
-export default function TechnicalSkills({ isSmall, labelTechnicalSkills, technicalSkills }) {
+export default function TechnicalSkills({ isSmall, labelTechnicalSkills, technicalSkills, h1ClassName, h2ClassName }) {
     const h1FontSize = isSmall ? "1rem" : "3rem";
     const h2FontSize = isSmall ? "0.75rem" : "2rem";
 
@@ -23,22 +11,22 @@ export default function TechnicalSkills({ isSmall, labelTechnicalSkills, technic
     }
 
     const genericTechnicalSkills = technicalSkills.map((technicalSkill) =>
-        <li className={anonymousPro.className} key={technicalSkills.indexOf(technicalSkill)}>
+        <li key={technicalSkills.indexOf(technicalSkill)}>
             {technicalSkill.generic} <ForClicking isSmall={isSmall} onClick={() => alert(createFromArray(technicalSkill.specifics))}>Click for specifics</ForClicking>
         </li>
     );
 
     return (
         <>
-            <h1 className={robotoMono.className} style={{
+            <h1 className={h1ClassName} style={{
                     fontSize: h1FontSize
                 }}>
                 {labelTechnicalSkills}
             </h1>
-                <ul className={anonymousPro.className} style={{
+                <ul style={{
                         listStyleType: "none"
                     }}>
-                    <h2 style={{
+                    <h2 className={h2ClassName} style={{
                             fontSize: h2FontSize
                         }}>
                         {genericTechnicalSkills}</h2>
