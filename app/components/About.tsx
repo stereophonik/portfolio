@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { IsSmall } from "../contexts/IsSmall";
+import { SizeContext } from "../contexts/Size";
 
 import Endings from "./Endings";
 import Startings from "./Startings";
@@ -16,11 +16,11 @@ export default function About({
     h1ClassName,
     h2ClassName
 }) {
-    const isSmall = useContext(IsSmall);
+    const sizeContext = useContext(SizeContext);
     const heights = [
-        isSmall ? "40vw" : "20vw",
-        isSmall ? "90vw" : "50vw",
-        isSmall ? "30vw" : "15vw"
+        sizeContext["isSmall"] ? "40vw" : "20vw",
+        sizeContext["isSmall"] ? "90vw" : "50vw",
+        sizeContext["isSmall"] ? "30vw" : "15vw"
     ]
 
     return (
@@ -37,7 +37,7 @@ export default function About({
                         height: "10%"
                     }}></div>
                 <Startings
-                    isSmall={isSmall}
+                    isSmall={sizeContext["isSmall"]}
                     startings={startings}
                 />
             </div>
@@ -53,14 +53,14 @@ export default function About({
                         height: "10%"
                     }}></div>
                 <TableBringings
-                    isSmall={isSmall}
+                    isSmall={sizeContext["isSmall"]}
                     labelTableBringings={labelTableBringings}
                     tableBringings={tableBringings}
                     h1ClassName={h1ClassName}
                     h2ClassName={h2ClassName}
                 />
                 <TechnicalSkills
-                    isSmall={isSmall}
+                    isSmall={sizeContext["isSmall"]}
                     labelTechnicalSkills={labelTechnicalSkills}
                     technicalSkills={technicalSkills}
                     h1ClassName={h1ClassName}
@@ -79,7 +79,7 @@ export default function About({
                         height: "10%"
                     }}></div>
                 <Endings
-                    isSmall={isSmall}
+                    isSmall={sizeContext["isSmall"]}
                     endings={endings}
                  />
             </div>

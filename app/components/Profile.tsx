@@ -1,15 +1,17 @@
 import { useContext } from "react";
-import { IsSmall } from "../contexts/IsSmall";
+import { SizeContext } from "../contexts/Size";
+import { ProfileContext } from "../contexts/Profile";
 
 import Image from "next/image";
 
-export default function Profile({ src, alt, h1, h2, h1ClassName, h2ClassName }) {
-    const isSmall = useContext(IsSmall);
-    const height = isSmall ? "50vw" : "25vw";
-    const h1FontSize = isSmall ? "1rem" : "3rem";
-    const h2FontSize = isSmall ? "0.75rem" : "2rem";
-    const imageWidth = isSmall ? 87 : 261
-    const imageHeight = isSmall ? 116 : 349
+export default function Profile({ h1ClassName, h2ClassName }) {
+    const sizeContext = useContext(SizeContext);
+    const profileContext = useContext(ProfileContext);
+    const height = sizeContext["isSmall"] ? "50vw" : "25vw";
+    const h1FontSize = sizeContext["isSmall"] ? "1rem" : "3rem";
+    const h2FontSize = sizeContext["isSmall"] ? "0.75rem" : "2rem";
+    const imageWidth = sizeContext["isSmall"] ? 87 : 261
+    const imageHeight = sizeContext["isSmall"] ? 116 : 349
 
     return (
         <>
@@ -28,8 +30,8 @@ export default function Profile({ src, alt, h1, h2, h1ClassName, h2ClassName }) 
                         height: "100%"
                     }}></div>
                 <Image className="profileImg"
-                    src={src}
-                    alt={alt}
+                    src={profileContext["src"]}
+                    alt={profileContext["alt"]}
                     width={imageWidth}
                     height={imageHeight}
                     style={{
@@ -45,13 +47,13 @@ export default function Profile({ src, alt, h1, h2, h1ClassName, h2ClassName }) 
                             gridColumn: "3",
                             fontSize: h1FontSize
                         }}>
-                        {h1}
+                        {profileContext["h1"]}
                     </h1>
                     <h2 id="profileH2" className={h2ClassName} style={{
                             gridColumn: "3",
                             fontSize: h2FontSize
                         }}>
-                        {h2}
+                        {profileContext["h2"]}
                     </h2>
                 </div>
             </div>

@@ -7,7 +7,8 @@ import { Roboto_Mono } from "next/font/google";
 import Profile from "./Profile";
 import About from "./About";
 
-import { IsSmall } from "../contexts/IsSmall";
+import { SizeContext } from "../contexts/Size";
+import { ProfileContext } from "../contexts/Profile";
 
 const anonymousPro = Anonymous_Pro({
     weight: "400",
@@ -63,15 +64,18 @@ export default function Main() {
     return (
         <>
             <main className="main">
-                <IsSmall.Provider value={isSmall}>
-                    <Profile
-                        src={profileSrc}
-                        alt={profileAlt}
-                        h1={profileH1}
-                        h2={profileH2}
-                        h1ClassName={robotoMono.className}
-                        h2ClassName={anonymousPro.className}
-                    />
+                <SizeContext.Provider value={{isSmall: isSmall}}>
+                    <ProfileContext.Provider value={{
+                        src: profileSrc,
+                        alt: profileAlt,
+                        h1: profileH1,
+                        h2: profileH2
+                    }}>
+                        <Profile
+                            h1ClassName={robotoMono.className}
+                            h2ClassName={anonymousPro.className}
+                        />
+                    </ProfileContext.Provider>
                     <About
                         startings={aboutStartings}
                         labelTableBringings={aboutLabelTableBringings}
@@ -82,7 +86,7 @@ export default function Main() {
                         h1ClassName={robotoMono.className}
                         h2ClassName={anonymousPro.className}
                     />
-                </IsSmall.Provider>
+                </SizeContext.Provider>
             </main>
         </>
     );
