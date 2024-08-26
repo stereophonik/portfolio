@@ -61,27 +61,29 @@ export default function Main() {
     }, []);
 
     return (
-        <main className="main">
-            <IsSmall.Provider value={isSmall}>
-                <Profile
-                    src={profileSrc}
-                    alt={profileAlt}
-                    h1={profileH1}
-                    h2={profileH2}
-                    h1ClassName={robotoMono.className}
-                    h2ClassName={anonymousPro.className}
-                />
-                <About
-                    startings={aboutStartings}
-                    labelTableBringings={aboutLabelTableBringings}
-                    tableBringings={aboutTableBringings}
-                    labelTechnicalSkills={aboutLabelTechnicalSkills}
-                    technicalSkills={aboutTechnicalSkills}
-                    endings={aboutEndings}
-                    h1ClassName={robotoMono.className}
-                    h2ClassName={anonymousPro.className}
-                />
-            </IsSmall.Provider>
-        </main>
+        <>
+            <main className="main">
+                <IsSmall.Provider value={isSmall}>
+                    <Profile
+                        src={profileSrc}
+                        alt={profileAlt}
+                        h1={profileH1}
+                        h2={profileH2}
+                        h1ClassName={robotoMono.className}
+                        h2ClassName={anonymousPro.className}
+                    />
+                    <About
+                        startings={aboutStartings}
+                        labelTableBringings={aboutLabelTableBringings}
+                        tableBringings={aboutTableBringings}
+                        labelTechnicalSkills={aboutLabelTechnicalSkills}
+                        technicalSkills={aboutTechnicalSkills}
+                        endings={aboutEndings}
+                        h1ClassName={robotoMono.className}
+                        h2ClassName={anonymousPro.className}
+                    />
+                </IsSmall.Provider>
+            </main>
+        </>
     );
 }
