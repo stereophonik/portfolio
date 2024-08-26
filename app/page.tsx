@@ -57,7 +57,6 @@ export default function Page() {
                     h2={profileH2}
                 />
                 <About
-                    isSmall={isSmall}
                     startings={aboutStartings}
                     labelTableBringings={aboutLabelTableBringings}
                     tableBringings={aboutTableBringings}

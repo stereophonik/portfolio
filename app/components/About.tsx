@@ -1,9 +1,13 @@
+import { useContext } from "react";
+import { IsSmall } from "../contexts/IsSmall";
+
 import Endings from "./Endings";
 import Startings from "./Startings";
 import TableBringings from "./TableBringings";
 import TechnicalSkills from "./TechnicalSkills";
 
-export default function About({ isSmall, startings, labelTableBringings, tableBringings, labelTechnicalSkills, technicalSkills, endings }) {
+export default function About({ startings, labelTableBringings, tableBringings, labelTechnicalSkills, technicalSkills, endings }) {
+    const isSmall = useContext(IsSmall);
     const heights = [
         isSmall ? "40vw" : "20vw",
         isSmall ? "90vw" : "50vw",
