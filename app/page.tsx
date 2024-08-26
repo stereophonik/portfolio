@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 import Profile from "./components/Profile";
 import About from "./components/About";
+import Main from "./components/Main";
 
 export default function Page() {
     const [isSmall, setIsSmall] = useState(false);
@@ -48,22 +49,23 @@ export default function Page() {
 
     return (
         <>
-            <Profile
-                isSmall={isSmall}
-                src={profileSrc}
-                alt={profileAlt}
-                h1={profileH1}
-                h2={profileH2}
-            />
-            <About
-                isSmall={isSmall}
-                startings={aboutStartings}
-                labelTableBringings={aboutLabelTableBringings}
-                tableBringings={aboutTableBringings}
-                labelTechnicalSkills={aboutLabelTechnicalSkills}
-                technicalSkills={aboutTechnicalSkills}
-                endings={aboutEndings}
-            />
+            <Main isSmall={isSmall}>
+                <Profile
+                    src={profileSrc}
+                    alt={profileAlt}
+                    h1={profileH1}
+                    h2={profileH2}
+                />
+                <About
+                    isSmall={isSmall}
+                    startings={aboutStartings}
+                    labelTableBringings={aboutLabelTableBringings}
+                    tableBringings={aboutTableBringings}
+                    labelTechnicalSkills={aboutLabelTechnicalSkills}
+                    technicalSkills={aboutTechnicalSkills}
+                    endings={aboutEndings}
+                />
+            </Main>
         </>
     );
 }

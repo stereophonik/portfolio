@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { IsSmall } from "../contexts/IsSmall";
+
 import { Anonymous_Pro } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
 import Image from "next/image";
@@ -12,7 +15,8 @@ const robotoMono = Roboto_Mono({
     subsets: ["latin"]
 })
 
-export default function Profile({ isSmall, src, alt, h1, h2 }) {
+export default function Profile({ src, alt, h1, h2 }) {
+    const isSmall = useContext(IsSmall);
     const height = isSmall ? "50vw" : "25vw";
     const h1FontSize = isSmall ? "1rem" : "3rem";
     const h2FontSize = isSmall ? "0.75rem" : "2rem";
