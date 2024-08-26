@@ -40,7 +40,8 @@
                 "Passing and reading props",
                 "Implementing useState",
                 "Implementing useEffect",
-                "Event responding"
+                "Event responding",
+                "Context datum passing"
             ]
         },
         {
