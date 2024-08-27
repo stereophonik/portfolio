@@ -1,13 +1,13 @@
 import { useContext } from "react";
 
-import { SizeContext } from "../../contexts/Size";
-import { ClassNameContext } from "../../contexts/ClassName";
+import { SizingContext } from "../../contexts/Sizing";
+import { ClassNamingContext } from "../../contexts/ClassNaming";
 import { NonSpecificContext } from "../../contexts/NonSpecific";
 
 export default function HeadingsProfileComponent() {
-    const sizeContext = useContext(SizeContext);
+    const sizeContext = useContext(SizingContext);
     const nonSpecificContext = useContext(NonSpecificContext);
-    const classNameContext = useContext(ClassNameContext);
+    const classNameContext = useContext(ClassNamingContext);
 
     return (
         <div style={nonSpecificContext["headingsStyle"]}>

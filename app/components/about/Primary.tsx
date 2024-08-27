@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import { SizeContext } from "../../contexts/Size";
+import { SizingContext } from "../../contexts/Sizing";
 
 import EndingsAboutComponent from "./Endings";
 import StartingsAboutComponent from "./Startings";
 import MiddlesAboutComponent from "./Middles";
 
 export default function PrimaryAboutComponent() {
-    const sizeContext = useContext(SizeContext);
+    const sizeContext = useContext(SizingContext);
 
     return (
         <>

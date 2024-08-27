@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import { SizeContext } from "../contexts/Size";
-import { ClassNameContext } from "../contexts/ClassName";
+import { SizingContext } from "../contexts/Sizing";
+import { ClassNamingContext } from "../contexts/ClassNaming";
 
 export default function ForClickingComponent({ onClick, children }) {
-    const sizeContext = useContext(SizeContext);
-    const classNameContext = useContext(ClassNameContext);
+    const sizeContext = useContext(SizingContext);
+    const classNameContext = useContext(ClassNamingContext);
 
     return (
         <button className={classNameContext["buttonClassName"]} onClick={onClick}

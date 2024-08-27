@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { useContext } from "react";
 
-import { SizeContext } from "../../contexts/Size";
+import { SizingContext } from "../../contexts/Sizing";
 import { NonSpecificContext } from "../../contexts/NonSpecific";
 
 export default function ImageProfileComponent() {
-    const sizeContext = useContext(SizeContext);
+    const sizeContext = useContext(SizingContext);
     const nonSpecificContext = useContext(NonSpecificContext);
 
     return (

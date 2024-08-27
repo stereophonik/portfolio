@@ -4,10 +4,10 @@ import DivProfileComponent from "./Div";
 import ImageProfileComponent from "./Image";
 import HeadingsProfileComponent from "./Headings";
 
-import { StyleContext } from "../../contexts/Style";
+import { StylingContext } from "../../contexts/Styling";
 
 export default function PrimaryProfileComponent() {
-    const styleContext = useContext(StyleContext);
+    const styleContext = useContext(StylingContext);
 
     return (
         <div style={styleContext["profile"]}>

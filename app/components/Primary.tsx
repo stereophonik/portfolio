@@ -7,9 +7,9 @@ import { Roboto_Mono } from "next/font/google";
 import PrimaryProfileComponent from "./profile/Primary";
 import PrimaryAboutComponent from "./about/Primary";
 
-import { SizeContext } from "../contexts/Size";
-import { ClassNameContext } from "../contexts/ClassName";
-import { StyleContext } from "../contexts/Style";
+import { SizingContext } from "../contexts/Sizing";
+import { ClassNamingContext } from "../contexts/ClassNaming";
+import { StylingContext } from "../contexts/Styling";
 import { NonSpecificContext } from "../contexts/NonSpecific";
 
 const anonymousPro = Anonymous_Pro({
@@ -96,19 +96,19 @@ export default function PrimaryComponent() {
 
     return (
         <>
-            <SizeContext.Provider value={{
+            <SizingContext.Provider value={{
                     h1FontSize: h1FontSize,
                     h2FontSize: h2FontSize,
                     buttonFontSize: buttonFontSize,
                     image: imageSize,
                     about: aboutSizing
                 }}>
-                <ClassNameContext.Provider value={{
+                <ClassNamingContext.Provider value={{
                         h1ClassName: h1ClassName,
                         h2ClassName: h2ClassName,
                         buttonClassName: buttonClassName
                     }}>
-                    <StyleContext.Provider value={{
+                    <StylingContext.Provider value={{
                         profile: profileStyle
                     }}>
                         <NonSpecificContext.Provider value={{
@@ -128,9 +128,9 @@ export default function PrimaryComponent() {
                             <PrimaryProfileComponent />
                             <PrimaryAboutComponent />
                         </NonSpecificContext.Provider>
-                    </StyleContext.Provider>
-                </ClassNameContext.Provider>
-            </SizeContext.Provider>
+                    </StylingContext.Provider>
+                </ClassNamingContext.Provider>
+            </SizingContext.Provider>
         </>
     );
 }
