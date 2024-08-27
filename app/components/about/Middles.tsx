@@ -24,39 +24,48 @@ export default function MiddlesAboutComponent() {
     return (
         <>
             <div style={{
+                    overflow: "hidden",
+                    width: "100vw",
+                    height: sizingContext["about"]["heights"][1],
+                    backgroundColor: "#0464ff",
+                    color: "white",
+                    textAlign: "center"
+                }}>
+                <div style={{
                     height: "10%"
                 }}></div>
-            <h1 className={classNamingContext["h1"]} style={{
-                    fontSize: sizingContext["h1Font"]
-                }}>
-                {nonSpecificContext["tableBringingsLabel"]}
-            </h1>
-            <ul style={{
-                    listStyleType: "none"
-                }}>
-                <h2 className={classNamingContext["h2"]} style={{
-                        fontSize: sizingContext["h2Font"]
+                <h1 className={classNamingContext["h1"]} style={{
+                        fontSize: sizingContext["h1Font"]
                     }}>
-                    {
-                        nonSpecificContext["tableBringingsContent"].map((tableBringing) =>
-                            <li>{tableBringing}</li>
-                        )
-                    }
-                </h2>
-            </ul>
-            <h1 className={classNamingContext["h1"]} style={{
-                    fontSize: sizingContext["h1Font"]
-                }}>
-                {nonSpecificContext["technicalSkillsLabel"]}
-            </h1>
-            <ul style={{
-                    listStyleType: "none"
-                }}>
-                <h2 className={classNamingContext["h2"]} style={{
-                        fontSize: sizingContext["h2Font"]
+                    {nonSpecificContext["tableBringingsLabel"]}
+                </h1>
+                <ul style={{
+                        listStyleType: "none"
                     }}>
-                    {genericTechnicalSkills}</h2>
-            </ul>
+                    <h2 className={classNamingContext["h2"]} style={{
+                            fontSize: sizingContext["h2Font"]
+                        }}>
+                        {
+                            nonSpecificContext["tableBringingsContent"].map((tableBringing) =>
+                                <li>{tableBringing}</li>
+                            )
+                        }
+                    </h2>
+                </ul>
+                <h1 className={classNamingContext["h1"]} style={{
+                        fontSize: sizingContext["h1Font"]
+                    }}>
+                    {nonSpecificContext["technicalSkillsLabel"]}
+                </h1>
+                <ul style={{
+                        listStyleType: "none"
+                    }}>
+                    <h2 className={classNamingContext["h2"]} style={{
+                            fontSize: sizingContext["h2Font"]
+                        }}>
+                        {genericTechnicalSkills}</h2>
+                </ul>
+            </div>
         </>
     )
 }
