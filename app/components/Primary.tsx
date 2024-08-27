@@ -9,6 +9,7 @@ import PrimaryAboutComponent from "./about/Primary";
 
 import { SizeContext } from "../contexts/Size";
 import { ClassNameContext } from "../contexts/ClassName";
+import { StyleContext } from "../contexts/Style";
 import { NonSpecificContext } from "../contexts/NonSpecific";
 
 const anonymousPro = Anonymous_Pro({
@@ -63,40 +64,71 @@ export default function PrimaryComponent() {
             });
     }, []);
 
+    const profileStyle = {
+        overflow: "hidden",
+        display: "grid",
+        rowGap: "0",
+        columnGap: "1%",
+        gridTemplateColumns: "5% 25% 70%",
+        width: "100vw",
+        height: isSmall ? "50vw" : "25vw",
+        textAlign: "center"
+    }
+
+    const h1ClassName = robotoMono.className;
+    const h2ClassName = anonymousPro.className;
+    const buttonClassName = anonymousPro.className;
+
     const h1FontSize = isSmall ? "1rem" : "3rem";
     const h2FontSize = isSmall ? "0.75rem" : "2rem";
     const buttonFontSize = isSmall ? "0.75rem" : "2rem";
+    const imageSize = {
+        width: isSmall ? 87 : 261,
+        height: isSmall ? 116 : 349
+    }
+    const aboutSizing = {
+        heights: [
+            isSmall ? "40vw" : "20vw",
+            isSmall ? "90vw" : "50vw",
+            isSmall ? "30vw" : "15vw"
+        ]
+    }
 
     return (
         <>
             <SizeContext.Provider value={{
-                    isSmall: isSmall,
                     h1FontSize: h1FontSize,
                     h2FontSize: h2FontSize,
-                    buttonFontSize: buttonFontSize
+                    buttonFontSize: buttonFontSize,
+                    image: imageSize,
+                    about: aboutSizing
                 }}>
                 <ClassNameContext.Provider value={{
-                        h1ClassName: robotoMono.className,
-                        h2ClassName: anonymousPro.className,
-                        buttonClassName: anonymousPro.className
+                        h1ClassName: h1ClassName,
+                        h2ClassName: h2ClassName,
+                        buttonClassName: buttonClassName
                     }}>
-                    <NonSpecificContext.Provider value={{
-                            divStyle: profile["divStyle"],
-                            imageSrc: profile["imageSrc"],
-                            imageAlt: profile["imageAlt"],
-                            imageStyle: profile["imageStyle"],
-                            headingsH1: profile["headingsH1"],
-                            headingsH2: profile["headingsH2"],
-                            startings: aboutStartings,
-                            tableBringingsLabel: aboutTableBringingsLabel,
-                            tableBringingsContent: aboutTableBringingsContent,
-                            technicalSkillsLabel: aboutTechnicalSkillsLabel,
-                            technicalSkillsContent: aboutTechnicalSkillsContent,
-                            endings: aboutEndings
-                        }}>
-                        <PrimaryProfileComponent />
-                        <PrimaryAboutComponent />
-                    </NonSpecificContext.Provider>
+                    <StyleContext.Provider value={{
+                        profile: profileStyle
+                    }}>
+                        <NonSpecificContext.Provider value={{
+                                divStyle: profile["divStyle"],
+                                imageSrc: profile["imageSrc"],
+                                imageAlt: profile["imageAlt"],
+                                imageStyle: profile["imageStyle"],
+                                headingsH1: profile["headingsH1"],
+                                headingsH2: profile["headingsH2"],
+                                startings: aboutStartings,
+                                tableBringingsLabel: aboutTableBringingsLabel,
+                                tableBringingsContent: aboutTableBringingsContent,
+                                technicalSkillsLabel: aboutTechnicalSkillsLabel,
+                                technicalSkillsContent: aboutTechnicalSkillsContent,
+                                endings: aboutEndings
+                            }}>
+                            <PrimaryProfileComponent />
+                            <PrimaryAboutComponent />
+                        </NonSpecificContext.Provider>
+                    </StyleContext.Provider>
                 </ClassNameContext.Provider>
             </SizeContext.Provider>
         </>

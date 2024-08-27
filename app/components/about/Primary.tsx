@@ -7,18 +7,13 @@ import MiddlesAboutComponent from "./Middles";
 
 export default function PrimaryAboutComponent() {
     const sizeContext = useContext(SizeContext);
-    const heights = [
-        sizeContext["isSmall"] ? "40vw" : "20vw",
-        sizeContext["isSmall"] ? "90vw" : "50vw",
-        sizeContext["isSmall"] ? "30vw" : "15vw"
-    ]
 
     return (
         <>
             <div style={{
                     overflow: "hidden",
                     width: "100vw",
-                    height: heights[0],
+                    height: sizeContext["about"]["heights"][0],
                     backgroundColor: "white",
                     color: "#0464ff",
                     textAlign: "center"
@@ -31,7 +26,7 @@ export default function PrimaryAboutComponent() {
             <div style={{
                     overflow: "hidden",
                     width: "100vw",
-                    height: heights[1],
+                    height: sizeContext["about"]["heights"][1],
                     backgroundColor: "#0464ff",
                     color: "white",
                     textAlign: "center"
@@ -44,7 +39,7 @@ export default function PrimaryAboutComponent() {
             <div style={{
                     overflow: "hidden",
                     width: "100vw",
-                    height: heights[2],
+                    height: sizeContext["about"]["heights"][2],
                     backgroundColor: "white",
                     color: "#0464ff",
                     textAlign: "center"

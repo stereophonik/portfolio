@@ -4,28 +4,16 @@ import DivProfileComponent from "./Div";
 import ImageProfileComponent from "./Image";
 import HeadingsProfileComponent from "./Headings";
 
-import { SizeContext } from "../../contexts/Size";
+import { StyleContext } from "../../contexts/Style";
 
 export default function PrimaryProfileComponent() {
-    const sizeContext = useContext(SizeContext);
-    const divHeight = sizeContext["isSmall"] ? "50vw" : "25vw";
+    const styleContext = useContext(StyleContext);
 
     return (
-        <>
-            <div style={{
-                    overflow: "hidden",
-                    display: "grid",
-                    rowGap: "0",
-                    columnGap: "1%",
-                    gridTemplateColumns: "5% 25% 70%",
-                    width: "100vw",
-                    height: divHeight,
-                    textAlign: "center"
-                }}>
-                <DivProfileComponent />
-                <ImageProfileComponent />
-                <HeadingsProfileComponent />
-            </div>
-        </>
+        <div style={styleContext["profile"]}>
+            <DivProfileComponent />
+            <ImageProfileComponent />
+            <HeadingsProfileComponent />
+        </div>
     );
 }
