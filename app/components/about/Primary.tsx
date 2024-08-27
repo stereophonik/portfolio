@@ -1,14 +1,12 @@
 import { useContext } from "react";
-import { SizeContext } from "../contexts/Size";
-import { NonSpecificContext } from "../contexts/NonSpecific";
+import { SizeContext } from "../../contexts/Size";
 
-import EndingsComponent from "./Endings";
-import StartingsComponent from "./Startings";
-import MiddlesComponent from "./Middles";
+import EndingsComponent from "../Endings";
+import StartingsComponent from "../Startings";
+import MiddlesComponent from "../Middles";
 
-export default function AboutComponent() {
+export default function PrimaryAboutComponent() {
     const sizeContext = useContext(SizeContext);
-    const nonSpecificContext = useContext(NonSpecificContext);
     const heights = [
         sizeContext["isSmall"] ? "40vw" : "20vw",
         sizeContext["isSmall"] ? "90vw" : "50vw",
@@ -28,9 +26,7 @@ export default function AboutComponent() {
                 <div style={{
                         height: "10%"
                     }}></div>
-                <StartingsComponent
-                    startings={nonSpecificContext["startings"]}
-                />
+                <StartingsComponent />
             </div>
             <div style={{
                     overflow: "hidden",
@@ -43,13 +39,7 @@ export default function AboutComponent() {
                 <div style={{
                         height: "10%"
                     }}></div>
-                <MiddlesComponent
-                    isSmall={sizeContext["isSmall"]}
-                    tableBringingsLabel={nonSpecificContext["tableBringingsLabel"]}
-                    tableBringingsContent={nonSpecificContext["tableBringingsContent"]}
-                    technicalSkillsLabel={nonSpecificContext["technicalSkillsLabel"]}
-                    technicalSkillsContent={nonSpecificContext["technicalSkillsContent"]}
-                />
+                <MiddlesComponent isSmall={sizeContext["isSmall"]} />
             </div>
             <div style={{
                     overflow: "hidden",
@@ -62,9 +52,7 @@ export default function AboutComponent() {
                 <div style={{
                         height: "10%"
                     }}></div>
-                <EndingsComponent
-                    endings={nonSpecificContext["endings"]}
-                 />
+                <EndingsComponent />
             </div>
         </>
     );

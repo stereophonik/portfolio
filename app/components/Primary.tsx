@@ -5,7 +5,7 @@ import { Anonymous_Pro } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
 
 import PrimaryProfileComponent from "./profile/Primary";
-import AboutComponent from "./About";
+import PrimaryAboutComponent from "./about/Primary";
 
 import { SizeContext } from "../contexts/Size";
 import { ClassNameContext } from "../contexts/ClassName";
@@ -87,7 +87,7 @@ export default function PrimaryComponent() {
                             endings: aboutEndings
                         }}>
                         <PrimaryProfileComponent />
-                        <AboutComponent />
+                        <PrimaryAboutComponent />
                     </NonSpecificContext.Provider>
                 </ClassNameContext.Provider>
             </SizeContext.Provider>

@@ -1,15 +1,11 @@
 import { useContext } from "react";
 import { ClassNameContext } from "../contexts/ClassName";
+import { NonSpecificContext } from "../contexts/NonSpecific";
 import ForClickingComponent from "./ForClicking";
 
-export default function MiddlesComponent({
-    isSmall,
-    tableBringingsLabel,
-    tableBringingsContent,
-    technicalSkillsLabel,
-    technicalSkillsContent
-}) {
+export default function MiddlesComponent({ isSmall }) {
     const classNameContext = useContext(ClassNameContext);
+    const nonSpecificContext = useContext(NonSpecificContext);
     const h1FontSize = isSmall ? "1rem" : "3rem";
     const h2FontSize = isSmall ? "0.75rem" : "2rem";
 
@@ -19,8 +15,8 @@ export default function MiddlesComponent({
         return string;
     }
 
-    const genericTechnicalSkills = technicalSkillsContent.map((technicalSkill) =>
-        <li key={technicalSkillsContent.indexOf(technicalSkill)}>
+    const genericTechnicalSkills = nonSpecificContext["technicalSkillsContent"].map((technicalSkill) =>
+        <li key={nonSpecificContext["technicalSkillsContent"].indexOf(technicalSkill)}>
             {technicalSkill.generic} <ForClickingComponent isSmall={isSmall} onClick={() => alert(createFromArray(technicalSkill.specifics))}>Click for specifics</ForClickingComponent>
         </li>
     );
@@ -30,7 +26,7 @@ export default function MiddlesComponent({
             <h1 className={classNameContext["h1ClassName"]} style={{
                     fontSize: h1FontSize
                 }}>
-                {tableBringingsLabel}
+                {nonSpecificContext["tableBringingsLabel"]}
             </h1>
             <ul style={{
                     listStyleType: "none"
@@ -39,7 +35,7 @@ export default function MiddlesComponent({
                         fontSize: h2FontSize
                     }}>
                     {
-                        tableBringingsContent.map((tableBringing) =>
+                        nonSpecificContext["tableBringingsContent"].map((tableBringing) =>
                             <li>{tableBringing}</li>
                         )
                     }
@@ -48,7 +44,7 @@ export default function MiddlesComponent({
             <h1 className={classNameContext["h1ClassName"]} style={{
                     fontSize: h1FontSize
                 }}>
-                {technicalSkillsLabel}
+                {nonSpecificContext["technicalSkillsLabel"]}
             </h1>
             <ul style={{
                     listStyleType: "none"
