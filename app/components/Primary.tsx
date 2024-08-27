@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Anonymous_Pro } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
 
-import ProfileComponent from "./Profile";
+import PrimaryProfileComponent from "./profile/Primary";
 import AboutComponent from "./About";
 
 import { SizeContext } from "../contexts/Size";
@@ -81,7 +81,7 @@ export default function PrimaryComponent() {
                             headingsH1: profile["headingsH1"],
                             headingsH2: profile["headingsH2"]
                         }}>
-                        <ProfileComponent />
+                        <PrimaryProfileComponent />
                     </ProfileContext.Provider>
                     <AboutContext.Provider value={{
                             startings: aboutStartings,

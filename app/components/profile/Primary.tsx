@@ -1,12 +1,12 @@
 import { useContext } from "react";
 
-import DivProfileComponent from "./profile/Div";
-import ImageProfileComponent from "./profile/Image";
-import HeadingsProfileComponent from "./profile/Headings";
+import DivProfileComponent from "./Div";
+import ImageProfileComponent from "./Image";
+import HeadingsProfileComponent from "./Headings";
 
-import { SizeContext } from "../contexts/Size";
+import { SizeContext } from "../../contexts/Size";
 
-export default function ProfileComponent() {
+export default function PrimaryProfileComponent() {
     const sizeContext = useContext(SizeContext);
     const divHeight = sizeContext["isSmall"] ? "50vw" : "25vw";
 
