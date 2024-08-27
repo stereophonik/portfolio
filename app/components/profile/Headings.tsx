@@ -1,10 +1,10 @@
 import { useContext } from "react";
 
-import { SizeContext } from "../contexts/Size";
-import { ClassNameContext } from "../contexts/ClassName";
-import { ProfileContext } from "../contexts/Profile";
+import { SizeContext } from "../../contexts/Size";
+import { ClassNameContext } from "../../contexts/ClassName";
+import { ProfileContext } from "../../contexts/Profile";
 
-export default function ProfileHeadingsComponent() {
+export default function HeadingsProfileComponent() {
     const sizeContext = useContext(SizeContext);
     const profileContext = useContext(ProfileContext);
     const classNameContext = useContext(ClassNameContext);

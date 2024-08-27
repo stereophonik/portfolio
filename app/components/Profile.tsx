@@ -1,7 +1,8 @@
 import { useContext } from "react";
 
-import ProfileImageComponent from "./ProfileImage";
-import ProfileHeadingsComponent from "./ProfileHeadings";
+import DivProfileComponent from "./profile/Div";
+import ImageProfileComponent from "./profile/Image";
+import HeadingsProfileComponent from "./profile/Headings";
 
 import { SizeContext } from "../contexts/Size";
 
@@ -21,12 +22,9 @@ export default function ProfileComponent() {
                     height: divHeight,
                     textAlign: "center"
                 }}>
-                <div style={{
-                        gridColumn: "1",
-                        height: "100%"
-                    }}></div>
-                <ProfileImageComponent />
-                <ProfileHeadingsComponent />
+                <DivProfileComponent />
+                <ImageProfileComponent />
+                <HeadingsProfileComponent />
             </div>
         </>
     );

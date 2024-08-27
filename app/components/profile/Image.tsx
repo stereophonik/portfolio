@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { useContext } from "react";
 
-import { SizeContext } from "../contexts/Size";
-import { ProfileContext } from "../contexts/Profile";
+import { SizeContext } from "../../contexts/Size";
+import { ProfileContext } from "../../contexts/Profile";
 
-export default function ProfileImageComponent() {
+export default function ImageProfileComponent() {
     const sizeContext = useContext(SizeContext);
     const profileContext = useContext(ProfileContext);
     const width = sizeContext["isSmall"] ? 87 : 261
