@@ -66,27 +66,29 @@ export default function MainComponent() {
     return (
         <>
             <main className="main">
-                <SizeContext.Provider value={{isSmall: isSmall}}>
-                    <ClassNameContext.Provider value={{
-                        h1ClassName: robotoMono.className,
-                        h2ClassName: anonymousPro.className
+                <SizeContext.Provider value={{
+                        isSmall: isSmall
                     }}>
-                        <ProfileContext.Provider value={{
-                            src: profileSrc,
-                            alt: profileAlt,
-                            h1: profileH1,
-                            h2: profileH2
+                    <ClassNameContext.Provider value={{
+                            h1ClassName: robotoMono.className,
+                            h2ClassName: anonymousPro.className
                         }}>
+                        <ProfileContext.Provider value={{
+                                src: profileSrc,
+                                alt: profileAlt,
+                                h1: profileH1,
+                                h2: profileH2
+                            }}>
                             <ProfileComponent />
                         </ProfileContext.Provider>
                         <AboutContext.Provider value={{
-                            startings: aboutStartings,
-                            labelTableBringings: aboutLabelTableBringings,
-                            tableBringings: aboutTableBringings,
-                            labelTechnicalSkills: aboutLabelTechnicalSkills,
-                            technicalSkills: aboutTechnicalSkills,
-                            endings: aboutEndings
-                        }}>
+                                startings: aboutStartings,
+                                labelTableBringings: aboutLabelTableBringings,
+                                tableBringings: aboutTableBringings,
+                                labelTechnicalSkills: aboutLabelTechnicalSkills,
+                                technicalSkills: aboutTechnicalSkills,
+                                endings: aboutEndings
+                            }}>
                             <AboutComponent />
                         </AboutContext.Provider>
                     </ClassNameContext.Provider>

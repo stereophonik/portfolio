@@ -34,17 +34,17 @@ export default function ProfileComponent() {
                         height: "100%"
                     }}></div>
                 <ImageContext.Provider value={{
-                    className: "profileImg",
-                    src: profileContext["src"],
-                    alt: profileContext["alt"],
-                    width: imageWidth,
-                    height: imageHeight,
-                    style: {
-                        gridColumn: "2",
-                        maxWidth: "100%",
-                        maxHeight: "100%"
-                    }
-                }}>
+                        className: "profileImg",
+                        src: profileContext["src"],
+                        alt: profileContext["alt"],
+                        width: imageWidth,
+                        height: imageHeight,
+                        style: {
+                            gridColumn: "2",
+                            maxWidth: "100%",
+                            maxHeight: "100%"
+                        }
+                    }}>
                     <ImageComponent />
                 </ImageContext.Provider>
                 <div>
