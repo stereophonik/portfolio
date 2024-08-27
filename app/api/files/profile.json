@@ -1,4 +1,8 @@
 {
+    "divStyle": {
+        "gridColumn": "1",
+        "height": "100%"
+    },
     "imageSrc": "/picture.jpg",
     "imageAlt": "Nikolai Reyes",
     "imageStyle": {
@@ -6,8 +10,8 @@
         "maxWidth": "100%",
         "maxHeight": "100%"
     },
-    "heading1": "Nikolai R. - Portfolio",
-    "heading2": "Wordpress Developer | Front-end Developer | Quality Tester",
+    "headingsH1": "Nikolai R. - Portfolio",
+    "headingsH2": "Wordpress Developer | Front-end Developer | Quality Tester",
     "headingsStyle": {
         "gridColumn": "3"
     }

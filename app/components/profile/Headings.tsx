@@ -20,13 +20,13 @@ export default function HeadingsProfileComponent() {
                     gridColumn: "3",
                     fontSize: h1FontSize
                 }}>
-                {profileContext["heading1"]}
+                {profileContext["headingsH1"]}
             </h1>
             <h2 id="profileH2" className={classNameContext["h2ClassName"]} style={{
                     gridColumn: "3",
                     fontSize: h2FontSize
                 }}>
-                {profileContext["heading2"]}
+                {profileContext["headingsH2"]}
             </h2>
         </div>
     );

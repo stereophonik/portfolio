@@ -41,11 +41,12 @@ export default function PrimaryComponent() {
             .then(profileFile => profileFile.json())
             .then(jsonProfileFile => {
                 setProfile({
+                    divStyle: jsonProfileFile.divStyle,
                     imageSrc: jsonProfileFile.imageSrc,
                     imageAlt: jsonProfileFile.imageAlt,
                     imageStyle: jsonProfileFile.imageStyle,
-                    heading1: jsonProfileFile.heading1,
-                    heading2: jsonProfileFile.heading2
+                    headingsH1: jsonProfileFile.headingsH1,
+                    headingsH2: jsonProfileFile.headingsH2
                 });
             });
 
@@ -73,11 +74,12 @@ export default function PrimaryComponent() {
                         h2ClassName: anonymousPro.className
                     }}>
                     <ProfileContext.Provider value={{
+                            divStyle: profile["divStyle"],
                             imageSrc: profile["imageSrc"],
                             imageAlt: profile["imageAlt"],
                             imageStyle: profile["imageStyle"],
-                            heading1: profile["heading1"],
-                            heading2: profile["heading2"]
+                            headingsH1: profile["headingsH1"],
+                            headingsH2: profile["headingsH2"]
                         }}>
                         <ProfileComponent />
                     </ProfileContext.Provider>
