@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { SizeContext } from "../../contexts/Size";
 
-import EndingsComponent from "../Endings";
-import StartingsComponent from "../Startings";
-import MiddlesComponent from "../Middles";
+import EndingsAboutComponent from "./Endings";
+import StartingsAboutComponent from "./Startings";
+import MiddlesAboutComponent from "./Middles";
 
 export default function PrimaryAboutComponent() {
     const sizeContext = useContext(SizeContext);
@@ -26,7 +26,7 @@ export default function PrimaryAboutComponent() {
                 <div style={{
                         height: "10%"
                     }}></div>
-                <StartingsComponent />
+                <StartingsAboutComponent />
             </div>
             <div style={{
                     overflow: "hidden",
@@ -39,7 +39,7 @@ export default function PrimaryAboutComponent() {
                 <div style={{
                         height: "10%"
                     }}></div>
-                <MiddlesComponent isSmall={sizeContext["isSmall"]} />
+                <MiddlesAboutComponent isSmall={sizeContext["isSmall"]} />
             </div>
             <div style={{
                     overflow: "hidden",
@@ -52,7 +52,7 @@ export default function PrimaryAboutComponent() {
                 <div style={{
                         height: "10%"
                     }}></div>
-                <EndingsComponent />
+                <EndingsAboutComponent />
             </div>
         </>
     );

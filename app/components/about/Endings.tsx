@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { SizeContext } from "../contexts/Size";
-import { ClassNameContext } from "../contexts/ClassName";
-import { NonSpecificContext } from "../contexts/NonSpecific";
+import { SizeContext } from "../../contexts/Size";
+import { ClassNameContext } from "../../contexts/ClassName";
+import { NonSpecificContext } from "../../contexts/NonSpecific";
 
-export default function EndingsComponent() {
+export default function EndingsAboutComponent() {
     const sizeContext = useContext(SizeContext);
     const classNameContext = useContext(ClassNameContext);
     const nonSpecificContext = useContext(NonSpecificContext);

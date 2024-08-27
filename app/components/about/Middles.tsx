@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { ClassNameContext } from "../contexts/ClassName";
-import { NonSpecificContext } from "../contexts/NonSpecific";
-import ForClickingComponent from "./ForClicking";
+import { ClassNameContext } from "../../contexts/ClassName";
+import { NonSpecificContext } from "../../contexts/NonSpecific";
+import ForClickingComponent from "../ForClicking";
 
-export default function MiddlesComponent({ isSmall }) {
+export default function MiddlesAboutComponent({ isSmall }) {
     const classNameContext = useContext(ClassNameContext);
     const nonSpecificContext = useContext(NonSpecificContext);
     const h1FontSize = isSmall ? "1rem" : "3rem";
