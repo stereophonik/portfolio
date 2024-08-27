@@ -7,10 +7,10 @@ import HeadingsProfileComponent from "./Headings";
 import { StylingContext } from "../../contexts/Styling";
 
 export default function PrimaryProfileComponent() {
-    const styleContext = useContext(StylingContext);
+    const stylingContext = useContext(StylingContext);
 
     return (
-        <div style={styleContext["profile"]}>
+        <div style={stylingContext["profile"]}>
             <DivProfileComponent />
             <ImageProfileComponent />
             <HeadingsProfileComponent />

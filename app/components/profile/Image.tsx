@@ -5,7 +5,7 @@ import { SizingContext } from "../../contexts/Sizing";
 import { NonSpecificContext } from "../../contexts/NonSpecific";
 
 export default function ImageProfileComponent() {
-    const sizeContext = useContext(SizingContext);
+    const sizingContext = useContext(SizingContext);
     const nonSpecificContext = useContext(NonSpecificContext);
 
     return (
@@ -13,8 +13,8 @@ export default function ImageProfileComponent() {
             src={nonSpecificContext["imageSrc"]}
             alt={nonSpecificContext["imageAlt"]}
             style={nonSpecificContext["imageStyle"]}
-            width={sizeContext["image"]["width"]}
-            height={sizeContext["image"]["height"]}
+            width={sizingContext["image"]["width"]}
+            height={sizingContext["image"]["height"]}
         />
     );
 }

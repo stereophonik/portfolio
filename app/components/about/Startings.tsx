@@ -4,8 +4,8 @@ import { ClassNamingContext } from "../../contexts/ClassNaming";
 import { NonSpecificContext } from "../../contexts/NonSpecific";
 
 export default function StartingsAboutComponent() {
-    const sizeContext = useContext(SizingContext);
-    const classNameContext = useContext(ClassNamingContext);
+    const sizingContext = useContext(SizingContext);
+    const classNamingContext = useContext(ClassNamingContext);
     const nonSpecificContext = useContext(NonSpecificContext);
 
     return (
@@ -13,8 +13,8 @@ export default function StartingsAboutComponent() {
             <div>
                 {
                     nonSpecificContext["startings"].map((starting) =>
-                        <h2 className={classNameContext["h2ClassName"]} style={{
-                                fontSize: sizeContext["h2FontSize"]
+                        <h2 className={classNamingContext["h2ClassName"]} style={{
+                                fontSize: sizingContext["h2FontSize"]
                             }}>
                             {starting}
                         </h2>

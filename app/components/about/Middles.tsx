@@ -5,8 +5,8 @@ import { NonSpecificContext } from "../../contexts/NonSpecific";
 import ForClickingComponent from "../ForClicking";
 
 export default function MiddlesAboutComponent() {
-    const sizeContext = useContext(SizingContext);
-    const classNameContext = useContext(ClassNamingContext);
+    const sizingContext = useContext(SizingContext);
+    const classNamingContext = useContext(ClassNamingContext);
     const nonSpecificContext = useContext(NonSpecificContext);
 
     function createFromArray(array) {
@@ -23,16 +23,16 @@ export default function MiddlesAboutComponent() {
 
     return (
         <>
-            <h1 className={classNameContext["h1ClassName"]} style={{
-                    fontSize: sizeContext["h1FontSize"]
+            <h1 className={classNamingContext["h1ClassName"]} style={{
+                    fontSize: sizingContext["h1FontSize"]
                 }}>
                 {nonSpecificContext["tableBringingsLabel"]}
             </h1>
             <ul style={{
                     listStyleType: "none"
                 }}>
-                <h2 className={classNameContext["h2ClassName"]} style={{
-                        fontSize: sizeContext["h2FontSize"]
+                <h2 className={classNamingContext["h2ClassName"]} style={{
+                        fontSize: sizingContext["h2FontSize"]
                     }}>
                     {
                         nonSpecificContext["tableBringingsContent"].map((tableBringing) =>
@@ -41,16 +41,16 @@ export default function MiddlesAboutComponent() {
                     }
                 </h2>
             </ul>
-            <h1 className={classNameContext["h1ClassName"]} style={{
-                    fontSize: sizeContext["h1FontSize"]
+            <h1 className={classNamingContext["h1ClassName"]} style={{
+                    fontSize: sizingContext["h1FontSize"]
                 }}>
                 {nonSpecificContext["technicalSkillsLabel"]}
             </h1>
             <ul style={{
                     listStyleType: "none"
                 }}>
-                <h2 className={classNameContext["h2ClassName"]} style={{
-                        fontSize: sizeContext["h2FontSize"]
+                <h2 className={classNamingContext["h2ClassName"]} style={{
+                        fontSize: sizingContext["h2FontSize"]
                     }}>
                     {genericTechnicalSkills}</h2>
             </ul>

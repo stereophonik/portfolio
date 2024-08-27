@@ -6,14 +6,14 @@ import StartingsAboutComponent from "./Startings";
 import MiddlesAboutComponent from "./Middles";
 
 export default function PrimaryAboutComponent() {
-    const sizeContext = useContext(SizingContext);
+    const sizingContext = useContext(SizingContext);
 
     return (
         <>
             <div style={{
                     overflow: "hidden",
                     width: "100vw",
-                    height: sizeContext["about"]["heights"][0],
+                    height: sizingContext["about"]["heights"][0],
                     backgroundColor: "white",
                     color: "#0464ff",
                     textAlign: "center"
@@ -26,7 +26,7 @@ export default function PrimaryAboutComponent() {
             <div style={{
                     overflow: "hidden",
                     width: "100vw",
-                    height: sizeContext["about"]["heights"][1],
+                    height: sizingContext["about"]["heights"][1],
                     backgroundColor: "#0464ff",
                     color: "white",
                     textAlign: "center"
@@ -39,7 +39,7 @@ export default function PrimaryAboutComponent() {
             <div style={{
                     overflow: "hidden",
                     width: "100vw",
-                    height: sizeContext["about"]["heights"][2],
+                    height: sizingContext["about"]["heights"][2],
                     backgroundColor: "white",
                     color: "#0464ff",
                     textAlign: "center"
