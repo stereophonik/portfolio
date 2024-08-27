@@ -7,5 +7,8 @@
         "maxHeight": "100%"
     },
     "heading1": "Nikolai R. - Portfolio",
-    "heading2": "Wordpress Developer | Front-end Developer | Quality Tester"
+    "heading2": "Wordpress Developer | Front-end Developer | Quality Tester",
+    "headingsStyle": {
+        "gridColumn": "3"
+    }
 }

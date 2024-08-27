@@ -22,7 +22,7 @@ const robotoMono = Roboto_Mono({
     subsets: ["latin"]
 })
 
-export default function MainComponent() {
+export default function PrimaryComponent() {
     const [isSmall, setIsSmall] = useState(false);
     const [profile, setProfile] = useState({});
     const [aboutStartings, setAboutStartings] = useState([]);
@@ -65,36 +65,34 @@ export default function MainComponent() {
 
     return (
         <>
-            <main>
-                <SizeContext.Provider value={{
-                        isSmall: isSmall
+            <SizeContext.Provider value={{
+                    isSmall: isSmall
+                }}>
+                <ClassNameContext.Provider value={{
+                        h1ClassName: robotoMono.className,
+                        h2ClassName: anonymousPro.className
                     }}>
-                    <ClassNameContext.Provider value={{
-                            h1ClassName: robotoMono.className,
-                            h2ClassName: anonymousPro.className
+                    <ProfileContext.Provider value={{
+                            imageSrc: profile["imageSrc"],
+                            imageAlt: profile["imageAlt"],
+                            imageStyle: profile["imageStyle"],
+                            heading1: profile["heading1"],
+                            heading2: profile["heading2"]
                         }}>
-                        <ProfileContext.Provider value={{
-                                imageSrc: profile["imageSrc"],
-                                imageAlt: profile["imageAlt"],
-                                imageStyle: profile["imageStyle"],
-                                heading1: profile["heading1"],
-                                heading2: profile["heading2"]
-                            }}>
-                            <ProfileComponent />
-                        </ProfileContext.Provider>
-                        <AboutContext.Provider value={{
-                                startings: aboutStartings,
-                                tableBringingsLabel: aboutTableBringingsLabel,
-                                tableBringingsContent: aboutTableBringingsContent,
-                                technicalSkillsLabel: aboutTechnicalSkillsLabel,
-                                technicalSkillsContent: aboutTechnicalSkillsContent,
-                                endings: aboutEndings
-                            }}>
-                            <AboutComponent />
-                        </AboutContext.Provider>
-                    </ClassNameContext.Provider>
-                </SizeContext.Provider>
-            </main>
+                        <ProfileComponent />
+                    </ProfileContext.Provider>
+                    <AboutContext.Provider value={{
+                            startings: aboutStartings,
+                            tableBringingsLabel: aboutTableBringingsLabel,
+                            tableBringingsContent: aboutTableBringingsContent,
+                            technicalSkillsLabel: aboutTechnicalSkillsLabel,
+                            technicalSkillsContent: aboutTechnicalSkillsContent,
+                            endings: aboutEndings
+                        }}>
+                        <AboutComponent />
+                    </AboutContext.Provider>
+                </ClassNameContext.Provider>
+            </SizeContext.Provider>
         </>
     );
 }
