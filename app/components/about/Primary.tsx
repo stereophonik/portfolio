@@ -39,7 +39,7 @@ export default function PrimaryAboutComponent() {
                 <div style={{
                         height: "10%"
                     }}></div>
-                <MiddlesAboutComponent isSmall={sizeContext["isSmall"]} />
+                <MiddlesAboutComponent />
             </div>
             <div style={{
                     overflow: "hidden",

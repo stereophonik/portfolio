@@ -1,13 +1,15 @@
 import { useContext } from "react";
+import { SizeContext } from "../../contexts/Size";
 import { ClassNameContext } from "../../contexts/ClassName";
 import { NonSpecificContext } from "../../contexts/NonSpecific";
 import ForClickingComponent from "../ForClicking";
 
-export default function MiddlesAboutComponent({ isSmall }) {
+export default function MiddlesAboutComponent() {
+    const sizeContext = useContext(SizeContext);
     const classNameContext = useContext(ClassNameContext);
     const nonSpecificContext = useContext(NonSpecificContext);
-    const h1FontSize = isSmall ? "1rem" : "3rem";
-    const h2FontSize = isSmall ? "0.75rem" : "2rem";
+    const h1FontSize = sizeContext["isSmall"] ? "1rem" : "3rem";
+    const h2FontSize = sizeContext["isSmall"] ? "0.75rem" : "2rem";
 
     function createFromArray(array) {
         let string = "";
@@ -17,7 +19,7 @@ export default function MiddlesAboutComponent({ isSmall }) {
 
     const genericTechnicalSkills = nonSpecificContext["technicalSkillsContent"].map((technicalSkill) =>
         <li key={nonSpecificContext["technicalSkillsContent"].indexOf(technicalSkill)}>
-            {technicalSkill.generic} <ForClickingComponent isSmall={isSmall} onClick={() => alert(createFromArray(technicalSkill.specifics))}>Click for specifics</ForClickingComponent>
+            {technicalSkill.generic} <ForClickingComponent isSmall={sizeContext["isSmall"]} onClick={() => alert(createFromArray(technicalSkill.specifics))}>Click for specifics</ForClickingComponent>
         </li>
     );
 
