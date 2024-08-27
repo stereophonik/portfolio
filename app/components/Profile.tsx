@@ -1,19 +1,16 @@
 import { useContext } from "react";
 
 import ProfileImageComponent from "./ProfileImage";
+import ProfileHeadingsComponent from "./ProfileHeadings";
 
 import { SizeContext } from "../contexts/Size";
-import { ClassNameContext } from "../contexts/ClassName";
 import { ProfileContext } from "../contexts/Profile";
 import { ProfileImageContext } from "../contexts/ProfileImage";
 
 export default function ProfileComponent() {
     const sizeContext = useContext(SizeContext);
-    const classNameContext = useContext(ClassNameContext);
     const profileContext = useContext(ProfileContext);
     const height = sizeContext["isSmall"] ? "50vw" : "25vw";
-    const h1FontSize = sizeContext["isSmall"] ? "1rem" : "3rem";
-    const h2FontSize = sizeContext["isSmall"] ? "0.75rem" : "2rem";
     const profileImageWidth = sizeContext["isSmall"] ? 87 : 261
     const profileImageHeight = sizeContext["isSmall"] ? 116 : 349
 
@@ -48,21 +45,10 @@ export default function ProfileComponent() {
                     <ProfileImageComponent />
                 </ProfileImageContext.Provider>
                 <div>
-                <div style={{
-                        height: "30%"
-                    }}></div>
-                    <h1 id="profileH1" className={classNameContext["h1ClassName"]} style={{
-                            gridColumn: "3",
-                            fontSize: h1FontSize
-                        }}>
-                        {profileContext["h1"]}
-                    </h1>
-                    <h2 id="profileH2" className={classNameContext["h2ClassName"]} style={{
-                            gridColumn: "3",
-                            fontSize: h2FontSize
-                        }}>
-                        {profileContext["h2"]}
-                    </h2>
+                    <div style={{
+                            height: "30%"
+                        }}></div>
+                    <ProfileHeadingsComponent />
                 </div>
             </div>
         </>
