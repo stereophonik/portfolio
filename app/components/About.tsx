@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { SizeContext } from "../contexts/Size";
-import { ClassNameContext } from "../contexts/ClassName";
 import { AboutContext } from "../contexts/About";
 
 import EndingsComponent from "./Endings";
@@ -9,7 +8,6 @@ import MiddlesComponent from "./Middles";
 
 export default function AboutComponent() {
     const sizeContext = useContext(SizeContext);
-    const classNameContext = useContext(ClassNameContext);
     const aboutContext = useContext(AboutContext);
     const heights = [
         sizeContext["isSmall"] ? "40vw" : "20vw",
@@ -31,7 +29,6 @@ export default function AboutComponent() {
                         height: "10%"
                     }}></div>
                 <StartingsComponent
-                    isSmall={sizeContext["isSmall"]}
                     startings={aboutContext["startings"]}
                 />
             </div>
@@ -52,8 +49,6 @@ export default function AboutComponent() {
                     tableBringingsContent={aboutContext["tableBringingsContent"]}
                     technicalSkillsLabel={aboutContext["technicalSkillsLabel"]}
                     technicalSkillsContent={aboutContext["technicalSkillsContent"]}
-                    h1ClassName={classNameContext["h1ClassName"]}
-                    h2ClassName={classNameContext["h2ClassName"]}
                 />
             </div>
             <div style={{
@@ -68,7 +63,6 @@ export default function AboutComponent() {
                         height: "10%"
                     }}></div>
                 <EndingsComponent
-                    isSmall={sizeContext["isSmall"]}
                     endings={aboutContext["endings"]}
                  />
             </div>

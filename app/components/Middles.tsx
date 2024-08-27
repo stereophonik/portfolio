@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { ClassNameContext } from "../contexts/ClassName";
 import ForClickingComponent from "./ForClicking";
 
 export default function MiddlesComponent({
@@ -5,10 +7,9 @@ export default function MiddlesComponent({
     tableBringingsLabel,
     tableBringingsContent,
     technicalSkillsLabel,
-    technicalSkillsContent,
-    h1ClassName,
-    h2ClassName
+    technicalSkillsContent
 }) {
+    const classNameContext = useContext(ClassNameContext);
     const h1FontSize = isSmall ? "1rem" : "3rem";
     const h2FontSize = isSmall ? "0.75rem" : "2rem";
 
@@ -26,7 +27,7 @@ export default function MiddlesComponent({
 
     return (
         <>
-            <h1 className={h1ClassName} style={{
+            <h1 className={classNameContext["h1ClassName"]} style={{
                     fontSize: h1FontSize
                 }}>
                 {tableBringingsLabel}
@@ -34,7 +35,7 @@ export default function MiddlesComponent({
             <ul style={{
                     listStyleType: "none"
                 }}>
-                <h2 className={h2ClassName} style={{
+                <h2 className={classNameContext["h2ClassName"]} style={{
                         fontSize: h2FontSize
                     }}>
                     {
@@ -44,7 +45,7 @@ export default function MiddlesComponent({
                     }
                 </h2>
             </ul>
-            <h1 className={h1ClassName} style={{
+            <h1 className={classNameContext["h1ClassName"]} style={{
                     fontSize: h1FontSize
                 }}>
                 {technicalSkillsLabel}
@@ -52,7 +53,7 @@ export default function MiddlesComponent({
             <ul style={{
                     listStyleType: "none"
                 }}>
-                <h2 className={h2ClassName} style={{
+                <h2 className={classNameContext["h2ClassName"]} style={{
                         fontSize: h2FontSize
                     }}>
                     {genericTechnicalSkills}</h2>
