@@ -11,22 +11,20 @@ export default function EndingsAboutComponent() {
     const nonSpecificContext = useContext(NonSpecificContext);
 
     return (
-        <>
-            <div style={stylingContext["endingsAbout"]}>
-                <div style={{
-                    height: "10%"
-                }}></div>
-                <h2 className={classNamingContext["h2"]} style={{
-                        fontSize: sizingContext["h2Font"]
-                    }}>
-                    {nonSpecificContext["endings"][0]}
-                </h2>
-                <h2 className={classNamingContext["h2"]} style={{
-                        fontSize: sizingContext["h2Font"]
-                    }}>
-                    {nonSpecificContext["endings"][1]}<br />{nonSpecificContext["endings"][2]}
-                </h2>
-            </div>
-        </>
+        <div style={stylingContext["endingsAbout"]}>
+            <div style={{
+                height: "10%"
+            }}></div>
+            <h2 className={classNamingContext["h2"]} style={{
+                    fontSize: sizingContext["h2Font"]
+                }}>
+                {nonSpecificContext["endings"][0]}
+            </h2>
+            <h2 className={classNamingContext["h2"]} style={{
+                    fontSize: sizingContext["h2Font"]
+                }}>
+                {nonSpecificContext["endings"][1]}<br />{nonSpecificContext["endings"][2]}
+            </h2>
+        </div>
     )
 }
