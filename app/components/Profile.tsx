@@ -1,9 +1,11 @@
 import { useContext } from "react";
+
+import ImageComponent from "./Image";
+
 import { SizeContext } from "../contexts/Size";
 import { ClassNameContext } from "../contexts/ClassName";
 import { ProfileContext } from "../contexts/Profile";
-
-import Image from "next/image";
+import { ImageContext } from "../contexts/Image";
 
 export default function ProfileComponent() {
     const sizeContext = useContext(SizeContext);
@@ -31,16 +33,20 @@ export default function ProfileComponent() {
                         gridColumn: "1",
                         height: "100%"
                     }}></div>
-                <Image className="profileImg"
-                    src={profileContext["src"]}
-                    alt={profileContext["alt"]}
-                    width={imageWidth}
-                    height={imageHeight}
-                    style={{
+                <ImageContext.Provider value={{
+                    className: "profileImg",
+                    src: profileContext["src"],
+                    alt: profileContext["alt"],
+                    width: imageWidth,
+                    height: imageHeight,
+                    style: {
                         gridColumn: "2",
                         maxWidth: "100%",
                         maxHeight: "100%"
-                    }}/>
+                    }
+                }}>
+                    <ImageComponent />
+                </ImageContext.Provider>
                 <div>
                 <div style={{
                         height: "30%"
