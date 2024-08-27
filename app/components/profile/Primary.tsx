@@ -1,5 +1,6 @@
 import { useContext } from "react";
 
+import DivComponent from "../Div";
 import DivProfileComponent from "./Div";
 import ImageProfileComponent from "./Image";
 import HeadingsProfileComponent from "./Headings";
@@ -10,10 +11,10 @@ export default function PrimaryProfileComponent() {
     const stylingContext = useContext(StylingContext);
 
     return (
-        <div style={stylingContext["profile"]}>
+        <DivComponent style={stylingContext["profile"]}>
             <DivProfileComponent />
             <ImageProfileComponent />
             <HeadingsProfileComponent />
-        </div>
+        </DivComponent>
     );
 }

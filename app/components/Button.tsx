@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { SizingContext } from "../contexts/Sizing";
 import { ClassNamingContext } from "../contexts/ClassNaming";
 
-export default function ForClickingComponent({ onClick, children }) {
+export default function ButtonComponent({ onClick, children }) {
     const sizingContext = useContext(SizingContext);
     const classNamingContext = useContext(ClassNamingContext);
 

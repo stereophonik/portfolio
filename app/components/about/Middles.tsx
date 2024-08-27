@@ -1,9 +1,12 @@
 import { useContext } from "react";
+
+import DivComponent from "../Div";
+
 import { SizingContext } from "../../contexts/Sizing";
 import { ClassNamingContext } from "../../contexts/ClassNaming";
 import { StylingContext } from "../../contexts/Styling";
 import { NonSpecificContext } from "../../contexts/NonSpecific";
-import ForClickingComponent from "../ForClicking";
+import ButtonComponent from "../Button";
 
 export default function MiddlesAboutComponent() {
     const sizingContext = useContext(SizingContext);
@@ -19,15 +22,15 @@ export default function MiddlesAboutComponent() {
 
     const genericTechnicalSkills = nonSpecificContext["technicalSkillsContent"].map((technicalSkill) =>
         <li key={nonSpecificContext["technicalSkillsContent"].indexOf(technicalSkill)}>
-            {technicalSkill.generic} <ForClickingComponent onClick={() => alert(createFromArray(technicalSkill.specifics))}>Click for specifics</ForClickingComponent>
+            {technicalSkill.generic} <ButtonComponent onClick={() => alert(createFromArray(technicalSkill.specifics))}>Click for specifics</ButtonComponent>
         </li>
     );
 
     return (
-        <div style={stylingContext["middlesAbout"]}>
-            <div style={{
+        <DivComponent style={stylingContext["middlesAbout"]}>
+            <DivComponent style={{
                 height: "10%"
-            }}></div>
+            }}> </DivComponent>
             <h1 className={classNamingContext["h1"]} style={{
                     fontSize: sizingContext["h1Font"]
                 }}>
@@ -59,6 +62,6 @@ export default function MiddlesAboutComponent() {
                     }}>
                     {genericTechnicalSkills}</h2>
             </ul>
-        </div>
+        </DivComponent>
     )
 }

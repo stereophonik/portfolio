@@ -1,4 +1,7 @@
 import { useContext } from "react";
+
+import DivComponent from "../Div";
+
 import { SizingContext } from "../../contexts/Sizing";
 import { ClassNamingContext } from "../../contexts/ClassNaming";
 import { StylingContext } from "../../contexts/Styling";
@@ -11,11 +14,11 @@ export default function StartingsAboutComponent() {
     const nonSpecificContext = useContext(NonSpecificContext);
 
     return (
-        <div style={stylingContext["startingsAbout"]}>
-            <div style={{
+        <DivComponent style={stylingContext["startingsAbout"]}>
+            <DivComponent style={{
                 height: "10%"
-            }}></div>
-            <div>
+            }}> </DivComponent>
+            <DivComponent style={{}}>
                 {
                     nonSpecificContext["startings"].map((starting) =>
                         <h2 className={classNamingContext["h2"]} style={{
@@ -25,7 +28,7 @@ export default function StartingsAboutComponent() {
                         </h2>
                     )
                 }
-            </div>
-        </div>
+            </DivComponent>
+        </DivComponent>
     )
 }
