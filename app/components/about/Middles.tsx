@@ -1,12 +1,14 @@
 import { useContext } from "react";
 import { SizingContext } from "../../contexts/Sizing";
 import { ClassNamingContext } from "../../contexts/ClassNaming";
+import { StylingContext } from "../../contexts/Styling";
 import { NonSpecificContext } from "../../contexts/NonSpecific";
 import ForClickingComponent from "../ForClicking";
 
 export default function MiddlesAboutComponent() {
     const sizingContext = useContext(SizingContext);
     const classNamingContext = useContext(ClassNamingContext);
+    const stylingContext = useContext(StylingContext);
     const nonSpecificContext = useContext(NonSpecificContext);
 
     function createFromArray(array) {
@@ -23,14 +25,7 @@ export default function MiddlesAboutComponent() {
 
     return (
         <>
-            <div style={{
-                    overflow: "hidden",
-                    width: "100vw",
-                    height: sizingContext["about"]["heights"][1],
-                    backgroundColor: "#0464ff",
-                    color: "white",
-                    textAlign: "center"
-                }}>
+            <div style={stylingContext["middlesAbout"]}>
                 <div style={{
                     height: "10%"
                 }}></div>

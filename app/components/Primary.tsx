@@ -75,6 +75,33 @@ export default function PrimaryComponent() {
         textAlign: "center"
     }
 
+    const startingsAboutStyle = {
+        overflow: "hidden",
+        width: "100vw",
+        height: isSmall ? "40vw" : "20vw",
+        backgroundColor: "white",
+        color: "#0464ff",
+        textAlign: "center"
+    }
+
+    const middlesAboutStyle = {
+        overflow: "hidden",
+        width: "100vw",
+        height: isSmall ? "90vw" : "50vw",
+        backgroundColor: "#0464ff",
+        color: "white",
+        textAlign: "center"
+    }
+
+    const endingsAboutStyle = {
+        overflow: "hidden",
+        width: "100vw",
+        height: isSmall ? "30vw" : "15vw",
+        backgroundColor: "white",
+        color: "#0464ff",
+        textAlign: "center"
+    }
+
     const h1ClassName = robotoMono.className;
     const h2ClassName = anonymousPro.className;
     const buttonClassName = anonymousPro.className;
@@ -86,13 +113,6 @@ export default function PrimaryComponent() {
         width: isSmall ? 87 : 261,
         height: isSmall ? 116 : 349
     }
-    const aboutSizing = {
-        heights: [
-            isSmall ? "40vw" : "20vw",
-            isSmall ? "90vw" : "50vw",
-            isSmall ? "30vw" : "15vw"
-        ]
-    }
 
     return (
         <>
@@ -100,8 +120,7 @@ export default function PrimaryComponent() {
                     h1Font: h1FontSize,
                     h2Font: h2FontSize,
                     buttonFont: buttonFontSize,
-                    image: imageSizing,
-                    about: aboutSizing
+                    image: imageSizing
                 }}>
                 <ClassNamingContext.Provider value={{
                         h1: h1ClassName,
@@ -109,7 +128,10 @@ export default function PrimaryComponent() {
                         button: buttonClassName
                     }}>
                     <StylingContext.Provider value={{
-                        profile: profileStyle
+                        profile: profileStyle,
+                        startingsAbout: startingsAboutStyle,
+                        middlesAbout: middlesAboutStyle,
+                        endingsAbout: endingsAboutStyle
                     }}>
                         <NonSpecificContext.Provider value={{
                                 divStyle: profile["divStyle"],

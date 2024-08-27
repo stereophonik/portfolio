@@ -1,23 +1,18 @@
 import { useContext } from "react";
 import { SizingContext } from "../../contexts/Sizing";
 import { ClassNamingContext } from "../../contexts/ClassNaming";
+import { StylingContext } from "../../contexts/Styling";
 import { NonSpecificContext } from "../../contexts/NonSpecific";
 
 export default function StartingsAboutComponent() {
     const sizingContext = useContext(SizingContext);
     const classNamingContext = useContext(ClassNamingContext);
+    const stylingContext = useContext(StylingContext);
     const nonSpecificContext = useContext(NonSpecificContext);
 
     return (
         <>
-            <div style={{
-                    overflow: "hidden",
-                    width: "100vw",
-                    height: sizingContext["about"]["heights"][0],
-                    backgroundColor: "white",
-                    color: "#0464ff",
-                    textAlign: "center"
-                }}>
+            <div style={stylingContext["startingsAbout"]}>
                 <div style={{
                     height: "10%"
                 }}></div>
