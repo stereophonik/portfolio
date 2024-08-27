@@ -10,13 +10,16 @@ export default function EndingsAboutComponent() {
 
     return (
         <>
-            <h2 className={classNamingContext["h2ClassName"]} style={{
-                    fontSize: sizingContext["h2FontSize"]
+            <div style={{
+                    height: "10%"
+                }}></div>
+            <h2 className={classNamingContext["h2"]} style={{
+                    fontSize: sizingContext["h2Font"]
                 }}>
                 {nonSpecificContext["endings"][0]}
             </h2>
-            <h2 className={classNamingContext["h2ClassName"]} style={{
-                    fontSize: sizingContext["h2FontSize"]
+            <h2 className={classNamingContext["h2"]} style={{
+                    fontSize: sizingContext["h2Font"]
                 }}>
                 {nonSpecificContext["endings"][1]}<br />{nonSpecificContext["endings"][2]}
             </h2>

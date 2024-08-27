@@ -82,7 +82,7 @@ export default function PrimaryComponent() {
     const h1FontSize = isSmall ? "1rem" : "3rem";
     const h2FontSize = isSmall ? "0.75rem" : "2rem";
     const buttonFontSize = isSmall ? "0.75rem" : "2rem";
-    const imageSize = {
+    const imageSizing = {
         width: isSmall ? 87 : 261,
         height: isSmall ? 116 : 349
     }
@@ -97,16 +97,16 @@ export default function PrimaryComponent() {
     return (
         <>
             <SizingContext.Provider value={{
-                    h1FontSize: h1FontSize,
-                    h2FontSize: h2FontSize,
-                    buttonFontSize: buttonFontSize,
-                    image: imageSize,
+                    h1Font: h1FontSize,
+                    h2Font: h2FontSize,
+                    buttonFont: buttonFontSize,
+                    image: imageSizing,
                     about: aboutSizing
                 }}>
                 <ClassNamingContext.Provider value={{
-                        h1ClassName: h1ClassName,
-                        h2ClassName: h2ClassName,
-                        buttonClassName: buttonClassName
+                        h1: h1ClassName,
+                        h2: h2ClassName,
+                        button: buttonClassName
                     }}>
                     <StylingContext.Provider value={{
                         profile: profileStyle

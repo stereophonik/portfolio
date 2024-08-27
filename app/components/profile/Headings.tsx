@@ -14,15 +14,15 @@ export default function HeadingsProfileComponent() {
             <div style={{
                     height: "30%"
                 }}></div>
-            <h1 id="profileH1" className={classNamingContext["h1ClassName"]} style={{
+            <h1 id="profileH1" className={classNamingContext["h1"]} style={{
                     gridColumn: "3",
-                    fontSize: sizingContext["h1FontSize"]
+                    fontSize: sizingContext["h1Font"]
                 }}>
                 {nonSpecificContext["headingsH1"]}
             </h1>
-            <h2 id="profileH2" className={classNamingContext["h2ClassName"]} style={{
+            <h2 id="profileH2" className={classNamingContext["h2"]} style={{
                     gridColumn: "3",
-                    fontSize: sizingContext["h2FontSize"]
+                    fontSize: sizingContext["h2Font"]
                 }}>
                 {nonSpecificContext["headingsH2"]}
             </h2>

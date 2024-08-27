@@ -23,16 +23,19 @@ export default function MiddlesAboutComponent() {
 
     return (
         <>
-            <h1 className={classNamingContext["h1ClassName"]} style={{
-                    fontSize: sizingContext["h1FontSize"]
+            <div style={{
+                    height: "10%"
+                }}></div>
+            <h1 className={classNamingContext["h1"]} style={{
+                    fontSize: sizingContext["h1Font"]
                 }}>
                 {nonSpecificContext["tableBringingsLabel"]}
             </h1>
             <ul style={{
                     listStyleType: "none"
                 }}>
-                <h2 className={classNamingContext["h2ClassName"]} style={{
-                        fontSize: sizingContext["h2FontSize"]
+                <h2 className={classNamingContext["h2"]} style={{
+                        fontSize: sizingContext["h2Font"]
                     }}>
                     {
                         nonSpecificContext["tableBringingsContent"].map((tableBringing) =>
@@ -41,16 +44,16 @@ export default function MiddlesAboutComponent() {
                     }
                 </h2>
             </ul>
-            <h1 className={classNamingContext["h1ClassName"]} style={{
-                    fontSize: sizingContext["h1FontSize"]
+            <h1 className={classNamingContext["h1"]} style={{
+                    fontSize: sizingContext["h1Font"]
                 }}>
                 {nonSpecificContext["technicalSkillsLabel"]}
             </h1>
             <ul style={{
                     listStyleType: "none"
                 }}>
-                <h2 className={classNamingContext["h2ClassName"]} style={{
-                        fontSize: sizingContext["h2FontSize"]
+                <h2 className={classNamingContext["h2"]} style={{
+                        fontSize: sizingContext["h2Font"]
                     }}>
                     {genericTechnicalSkills}</h2>
             </ul>

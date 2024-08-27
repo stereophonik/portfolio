@@ -18,9 +18,6 @@ export default function PrimaryAboutComponent() {
                     color: "#0464ff",
                     textAlign: "center"
                 }}>
-                <div style={{
-                        height: "10%"
-                    }}></div>
                 <StartingsAboutComponent />
             </div>
             <div style={{
@@ -31,9 +28,6 @@ export default function PrimaryAboutComponent() {
                     color: "white",
                     textAlign: "center"
                 }}>
-                <div style={{
-                        height: "10%"
-                    }}></div>
                 <MiddlesAboutComponent />
             </div>
             <div style={{
@@ -44,9 +38,6 @@ export default function PrimaryAboutComponent() {
                     color: "#0464ff",
                     textAlign: "center"
                 }}>
-                <div style={{
-                        height: "10%"
-                    }}></div>
                 <EndingsAboutComponent />
             </div>
         </>

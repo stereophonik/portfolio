@@ -7,11 +7,11 @@ export default function ForClickingComponent({ onClick, children }) {
     const classNamingContext = useContext(ClassNamingContext);
 
     return (
-        <button className={classNamingContext["buttonClassName"]} onClick={onClick}
+        <button className={classNamingContext["button"]} onClick={onClick}
             style={{
                 backgroundColor: "white",
                 color: "#0464ff",
-                fontSize: sizingContext["buttonFontSize"]
+                fontSize: sizingContext["buttonFont"]
             }}>
             {children}
         </button>
