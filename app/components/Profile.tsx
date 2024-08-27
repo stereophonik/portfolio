@@ -1,11 +1,11 @@
 import { useContext } from "react";
 
-import ImageComponent from "./Image";
+import ProfileImageComponent from "./ProfileImage";
 
 import { SizeContext } from "../contexts/Size";
 import { ClassNameContext } from "../contexts/ClassName";
 import { ProfileContext } from "../contexts/Profile";
-import { ImageContext } from "../contexts/Image";
+import { ProfileImageContext } from "../contexts/ProfileImage";
 
 export default function ProfileComponent() {
     const sizeContext = useContext(SizeContext);
@@ -14,8 +14,8 @@ export default function ProfileComponent() {
     const height = sizeContext["isSmall"] ? "50vw" : "25vw";
     const h1FontSize = sizeContext["isSmall"] ? "1rem" : "3rem";
     const h2FontSize = sizeContext["isSmall"] ? "0.75rem" : "2rem";
-    const imageWidth = sizeContext["isSmall"] ? 87 : 261
-    const imageHeight = sizeContext["isSmall"] ? 116 : 349
+    const profileImageWidth = sizeContext["isSmall"] ? 87 : 261
+    const profileImageHeight = sizeContext["isSmall"] ? 116 : 349
 
     return (
         <>
@@ -33,20 +33,20 @@ export default function ProfileComponent() {
                         gridColumn: "1",
                         height: "100%"
                     }}></div>
-                <ImageContext.Provider value={{
+                <ProfileImageContext.Provider value={{
                         className: "profileImg",
                         src: profileContext["src"],
                         alt: profileContext["alt"],
-                        width: imageWidth,
-                        height: imageHeight,
+                        width: profileImageWidth,
+                        height: profileImageHeight,
                         style: {
                             gridColumn: "2",
                             maxWidth: "100%",
                             maxHeight: "100%"
                         }
                     }}>
-                    <ImageComponent />
-                </ImageContext.Provider>
+                    <ProfileImageComponent />
+                </ProfileImageContext.Provider>
                 <div>
                 <div style={{
                         height: "30%"

@@ -65,7 +65,7 @@ export default function MainComponent() {
 
     return (
         <>
-            <main className="main">
+            <main>
                 <SizeContext.Provider value={{
                         isSmall: isSmall
                     }}>
