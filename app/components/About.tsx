@@ -5,8 +5,7 @@ import { AboutContext } from "../contexts/About";
 
 import EndingsComponent from "./Endings";
 import StartingsComponent from "./Startings";
-import TableBringingsComponent from "./TableBringings";
-import TechnicalSkillsComponent from "./TechnicalSkills";
+import MiddlesComponent from "./Middles";
 
 export default function AboutComponent() {
     const sizeContext = useContext(SizeContext);
@@ -47,17 +46,12 @@ export default function AboutComponent() {
                 <div style={{
                         height: "10%"
                     }}></div>
-                <TableBringingsComponent
+                <MiddlesComponent
                     isSmall={sizeContext["isSmall"]}
-                    labelTableBringings={aboutContext["labelTableBringings"]}
-                    tableBringings={aboutContext["tableBringings"]}
-                    h1ClassName={classNameContext["h1ClassName"]}
-                    h2ClassName={classNameContext["h2ClassName"]}
-                />
-                <TechnicalSkillsComponent
-                    isSmall={sizeContext["isSmall"]}
-                    labelTechnicalSkills={aboutContext["labelTechnicalSkills"]}
-                    technicalSkills={aboutContext["technicalSkills"]}
+                    tableBringingsLabel={aboutContext["tableBringingsLabel"]}
+                    tableBringingsContent={aboutContext["tableBringingsContent"]}
+                    technicalSkillsLabel={aboutContext["technicalSkillsLabel"]}
+                    technicalSkillsContent={aboutContext["technicalSkillsContent"]}
                     h1ClassName={classNameContext["h1ClassName"]}
                     h2ClassName={classNameContext["h2ClassName"]}
                 />

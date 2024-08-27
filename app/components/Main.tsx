@@ -29,10 +29,10 @@ export default function MainComponent() {
     const [profileH1, setProfileH1] = useState("");
     const [profileH2, setProfileH2] = useState("");
     const [aboutStartings, setAboutStartings] = useState([]);
-    const [aboutLabelTableBringings, setAboutLabelTableBringings] = useState("");
-    const [aboutTableBringings, setAboutTableBringings] = useState([]);
-    const [aboutLabelTechnicalSkills, setAboutLabelTechnicalSkills] = useState("");
-    const [aboutTechnicalSkills, setAboutTechnicalSkills] = useState([]);
+    const [aboutTableBringingsLabel, setAboutTableBringingsLabel] = useState("");
+    const [aboutTableBringingsContent, setAboutTableBringingsContent] = useState([]);
+    const [aboutTechnicalSkillsLabel, setAboutTechnicalSkillsLabel] = useState("");
+    const [aboutTechnicalSkillsContent, setAboutTechnicalSkillsContent] = useState([]);
     const [aboutEndings, setAboutEndings] = useState([]);
 
     useEffect(() => {
@@ -55,10 +55,10 @@ export default function MainComponent() {
             .then(aboutFile => aboutFile.json())
             .then(jsonAboutFile => {
                 setAboutStartings(jsonAboutFile.startings);
-                setAboutLabelTableBringings(jsonAboutFile.labelTableBringings);
-                setAboutTableBringings(jsonAboutFile.tableBringings);
-                setAboutLabelTechnicalSkills(jsonAboutFile.labelTechnicalSkills);
-                setAboutTechnicalSkills(jsonAboutFile.technicalSkills);
+                setAboutTableBringingsLabel(jsonAboutFile.tableBringingsLabel);
+                setAboutTableBringingsContent(jsonAboutFile.tableBringingsContent);
+                setAboutTechnicalSkillsLabel(jsonAboutFile.technicalSkillsLabel);
+                setAboutTechnicalSkillsContent(jsonAboutFile.technicalSkillsContent);
                 setAboutEndings(jsonAboutFile.endings);
             });
     }, []);
@@ -83,10 +83,10 @@ export default function MainComponent() {
                         </ProfileContext.Provider>
                         <AboutContext.Provider value={{
                                 startings: aboutStartings,
-                                labelTableBringings: aboutLabelTableBringings,
-                                tableBringings: aboutTableBringings,
-                                labelTechnicalSkills: aboutLabelTechnicalSkills,
-                                technicalSkills: aboutTechnicalSkills,
+                                tableBringingsLabel: aboutTableBringingsLabel,
+                                tableBringingsContent: aboutTableBringingsContent,
+                                technicalSkillsLabel: aboutTechnicalSkillsLabel,
+                                technicalSkillsContent: aboutTechnicalSkillsContent,
                                 endings: aboutEndings
                             }}>
                             <AboutComponent />
