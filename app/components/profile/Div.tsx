@@ -1,11 +1,11 @@
 import { useContext } from "react";
 
-import { ProfileContext } from "../../contexts/Profile";
+import { NonSpecificContext } from "../../contexts/NonSpecific";
 
 export default function DivProfileComponent() {
-    const profileContext = useContext(ProfileContext);
+    const nonSpecificContext = useContext(NonSpecificContext);
 
     return (
-        <div style={profileContext["divStyle"]}></div>
+        <div style={nonSpecificContext["divStyle"]}></div>
     );
 }

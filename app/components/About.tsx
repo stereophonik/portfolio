@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { SizeContext } from "../contexts/Size";
-import { AboutContext } from "../contexts/About";
+import { NonSpecificContext } from "../contexts/NonSpecific";
 
 import EndingsComponent from "./Endings";
 import StartingsComponent from "./Startings";
@@ -8,7 +8,7 @@ import MiddlesComponent from "./Middles";
 
 export default function AboutComponent() {
     const sizeContext = useContext(SizeContext);
-    const aboutContext = useContext(AboutContext);
+    const nonSpecificContext = useContext(NonSpecificContext);
     const heights = [
         sizeContext["isSmall"] ? "40vw" : "20vw",
         sizeContext["isSmall"] ? "90vw" : "50vw",
@@ -29,7 +29,7 @@ export default function AboutComponent() {
                         height: "10%"
                     }}></div>
                 <StartingsComponent
-                    startings={aboutContext["startings"]}
+                    startings={nonSpecificContext["startings"]}
                 />
             </div>
             <div style={{
@@ -45,10 +45,10 @@ export default function AboutComponent() {
                     }}></div>
                 <MiddlesComponent
                     isSmall={sizeContext["isSmall"]}
-                    tableBringingsLabel={aboutContext["tableBringingsLabel"]}
-                    tableBringingsContent={aboutContext["tableBringingsContent"]}
-                    technicalSkillsLabel={aboutContext["technicalSkillsLabel"]}
-                    technicalSkillsContent={aboutContext["technicalSkillsContent"]}
+                    tableBringingsLabel={nonSpecificContext["tableBringingsLabel"]}
+                    tableBringingsContent={nonSpecificContext["tableBringingsContent"]}
+                    technicalSkillsLabel={nonSpecificContext["technicalSkillsLabel"]}
+                    technicalSkillsContent={nonSpecificContext["technicalSkillsContent"]}
                 />
             </div>
             <div style={{
@@ -63,7 +63,7 @@ export default function AboutComponent() {
                         height: "10%"
                     }}></div>
                 <EndingsComponent
-                    endings={aboutContext["endings"]}
+                    endings={nonSpecificContext["endings"]}
                  />
             </div>
         </>

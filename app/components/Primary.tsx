@@ -9,8 +9,7 @@ import AboutComponent from "./About";
 
 import { SizeContext } from "../contexts/Size";
 import { ClassNameContext } from "../contexts/ClassName";
-import { ProfileContext } from "../contexts/Profile";
-import { AboutContext } from "../contexts/About";
+import { NonSpecificContext } from "../contexts/NonSpecific";
 
 const anonymousPro = Anonymous_Pro({
     weight: "400",
@@ -73,17 +72,13 @@ export default function PrimaryComponent() {
                         h1ClassName: robotoMono.className,
                         h2ClassName: anonymousPro.className
                     }}>
-                    <ProfileContext.Provider value={{
+                    <NonSpecificContext.Provider value={{
                             divStyle: profile["divStyle"],
                             imageSrc: profile["imageSrc"],
                             imageAlt: profile["imageAlt"],
                             imageStyle: profile["imageStyle"],
                             headingsH1: profile["headingsH1"],
-                            headingsH2: profile["headingsH2"]
-                        }}>
-                        <PrimaryProfileComponent />
-                    </ProfileContext.Provider>
-                    <AboutContext.Provider value={{
+                            headingsH2: profile["headingsH2"],
                             startings: aboutStartings,
                             tableBringingsLabel: aboutTableBringingsLabel,
                             tableBringingsContent: aboutTableBringingsContent,
@@ -91,8 +86,9 @@ export default function PrimaryComponent() {
                             technicalSkillsContent: aboutTechnicalSkillsContent,
                             endings: aboutEndings
                         }}>
+                        <PrimaryProfileComponent />
                         <AboutComponent />
-                    </AboutContext.Provider>
+                    </NonSpecificContext.Provider>
                 </ClassNameContext.Provider>
             </SizeContext.Provider>
         </>
