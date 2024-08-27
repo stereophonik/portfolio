@@ -9,19 +9,14 @@ export default function ProfileImageComponent() {
     const profileContext = useContext(ProfileContext);
     const width = sizeContext["isSmall"] ? 87 : 261
     const height = sizeContext["isSmall"] ? 116 : 349
-    const style = {
-        gridColumn: "2",
-        maxWidth: "100%",
-        maxHeight: "100%"
-    }
 
     return (
         <Image
             src={profileContext["imageSrc"]}
             alt={profileContext["imageAlt"]}
+            style={profileContext["imageStyle"]}
             width={width}
             height={height}
-            style={style}
         />
     );
 }

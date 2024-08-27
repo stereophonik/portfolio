@@ -24,10 +24,7 @@ const robotoMono = Roboto_Mono({
 
 export default function MainComponent() {
     const [isSmall, setIsSmall] = useState(false);
-    const [profileSrc, setProfileSrc] = useState("");
-    const [profileAlt, setProfileAlt] = useState("");
-    const [profileH1, setProfileH1] = useState("");
-    const [profileH2, setProfileH2] = useState("");
+    const [profile, setProfile] = useState({});
     const [aboutStartings, setAboutStartings] = useState([]);
     const [aboutTableBringingsLabel, setAboutTableBringingsLabel] = useState("");
     const [aboutTableBringingsContent, setAboutTableBringingsContent] = useState([]);
@@ -43,10 +40,13 @@ export default function MainComponent() {
         })
             .then(profileFile => profileFile.json())
             .then(jsonProfileFile => {
-                setProfileSrc(jsonProfileFile.src);
-                setProfileAlt(jsonProfileFile.alt);
-                setProfileH1(jsonProfileFile.h1);
-                setProfileH2(jsonProfileFile.h2);
+                setProfile({
+                    imageSrc: jsonProfileFile.imageSrc,
+                    imageAlt: jsonProfileFile.imageAlt,
+                    imageStyle: jsonProfileFile.imageStyle,
+                    heading1: jsonProfileFile.heading1,
+                    heading2: jsonProfileFile.heading2
+                });
             });
 
         fetch("/api?fileName=about", {
@@ -74,10 +74,11 @@ export default function MainComponent() {
                             h2ClassName: anonymousPro.className
                         }}>
                         <ProfileContext.Provider value={{
-                                imageSrc: profileSrc,
-                                imageAlt: profileAlt,
-                                heading1: profileH1,
-                                heading2: profileH2
+                                imageSrc: profile["imageSrc"],
+                                imageAlt: profile["imageAlt"],
+                                imageStyle: profile["imageStyle"],
+                                heading1: profile["heading1"],
+                                heading2: profile["heading2"]
                             }}>
                             <ProfileComponent />
                         </ProfileContext.Provider>
