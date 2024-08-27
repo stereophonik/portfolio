@@ -1,19 +1,27 @@
 import Image from "next/image";
 import { useContext } from "react";
 
-import { ProfileImageContext } from "../contexts/ProfileImage";
+import { SizeContext } from "../contexts/Size";
+import { ProfileContext } from "../contexts/Profile";
 
 export default function ProfileImageComponent() {
-    const profileImageContext = useContext(ProfileImageContext);
+    const sizeContext = useContext(SizeContext);
+    const profileContext = useContext(ProfileContext);
+    const width = sizeContext["isSmall"] ? 87 : 261
+    const height = sizeContext["isSmall"] ? 116 : 349
+    const style = {
+        gridColumn: "2",
+        maxWidth: "100%",
+        maxHeight: "100%"
+    }
 
     return (
         <Image
-            className={profileImageContext["className"]}
-            src={profileImageContext["src"]}
-            alt={profileImageContext["alt"]}
-            width={profileImageContext["width"]}
-            height={profileImageContext["height"]}
-            style={profileImageContext["style"]}
+            src={profileContext["imageSrc"]}
+            alt={profileContext["imageAlt"]}
+            width={width}
+            height={height}
+            style={style}
         />
     );
 }

@@ -74,10 +74,10 @@ export default function MainComponent() {
                             h2ClassName: anonymousPro.className
                         }}>
                         <ProfileContext.Provider value={{
-                                src: profileSrc,
-                                alt: profileAlt,
-                                h1: profileH1,
-                                h2: profileH2
+                                imageSrc: profileSrc,
+                                imageAlt: profileAlt,
+                                heading1: profileH1,
+                                heading2: profileH2
                             }}>
                             <ProfileComponent />
                         </ProfileContext.Provider>
