@@ -1,19 +1,17 @@
-import { Anonymous_Pro } from "next/font/google";
+import { useContext } from "react";
+import { SizeContext } from "../contexts/Size";
+import { ClassNameContext } from "../contexts/ClassName";
 
-const anonymousPro = Anonymous_Pro({
-    weight: "400",
-    subsets: ["latin"]
-})
-
-export default function ForClickingComponent({ isSmall, onClick, children }) {
-    const buttonFontSize = isSmall ? "0.75rem" : "2rem";
+export default function ForClickingComponent({ onClick, children }) {
+    const sizeContext = useContext(SizeContext);
+    const classNameContext = useContext(ClassNameContext);
 
     return (
-        <button className={anonymousPro.className} onClick={onClick}
+        <button className={classNameContext["buttonClassName"]} onClick={onClick}
             style={{
                 backgroundColor: "white",
                 color: "#0464ff",
-                fontSize: buttonFontSize
+                fontSize: sizeContext["buttonFontSize"]
             }}>
             {children}
         </button>

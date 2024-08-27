@@ -8,8 +8,6 @@ export default function MiddlesAboutComponent() {
     const sizeContext = useContext(SizeContext);
     const classNameContext = useContext(ClassNameContext);
     const nonSpecificContext = useContext(NonSpecificContext);
-    const h1FontSize = sizeContext["isSmall"] ? "1rem" : "3rem";
-    const h2FontSize = sizeContext["isSmall"] ? "0.75rem" : "2rem";
 
     function createFromArray(array) {
         let string = "";
@@ -19,14 +17,14 @@ export default function MiddlesAboutComponent() {
 
     const genericTechnicalSkills = nonSpecificContext["technicalSkillsContent"].map((technicalSkill) =>
         <li key={nonSpecificContext["technicalSkillsContent"].indexOf(technicalSkill)}>
-            {technicalSkill.generic} <ForClickingComponent isSmall={sizeContext["isSmall"]} onClick={() => alert(createFromArray(technicalSkill.specifics))}>Click for specifics</ForClickingComponent>
+            {technicalSkill.generic} <ForClickingComponent onClick={() => alert(createFromArray(technicalSkill.specifics))}>Click for specifics</ForClickingComponent>
         </li>
     );
 
     return (
         <>
             <h1 className={classNameContext["h1ClassName"]} style={{
-                    fontSize: h1FontSize
+                    fontSize: sizeContext["h1FontSize"]
                 }}>
                 {nonSpecificContext["tableBringingsLabel"]}
             </h1>
@@ -34,7 +32,7 @@ export default function MiddlesAboutComponent() {
                     listStyleType: "none"
                 }}>
                 <h2 className={classNameContext["h2ClassName"]} style={{
-                        fontSize: h2FontSize
+                        fontSize: sizeContext["h2FontSize"]
                     }}>
                     {
                         nonSpecificContext["tableBringingsContent"].map((tableBringing) =>
@@ -44,7 +42,7 @@ export default function MiddlesAboutComponent() {
                 </h2>
             </ul>
             <h1 className={classNameContext["h1ClassName"]} style={{
-                    fontSize: h1FontSize
+                    fontSize: sizeContext["h1FontSize"]
                 }}>
                 {nonSpecificContext["technicalSkillsLabel"]}
             </h1>
@@ -52,7 +50,7 @@ export default function MiddlesAboutComponent() {
                     listStyleType: "none"
                 }}>
                 <h2 className={classNameContext["h2ClassName"]} style={{
-                        fontSize: h2FontSize
+                        fontSize: sizeContext["h2FontSize"]
                     }}>
                     {genericTechnicalSkills}</h2>
             </ul>

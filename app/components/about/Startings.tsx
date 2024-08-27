@@ -7,7 +7,6 @@ export default function StartingsAboutComponent() {
     const sizeContext = useContext(SizeContext);
     const classNameContext = useContext(ClassNameContext);
     const nonSpecificContext = useContext(NonSpecificContext);
-    const h2FontSize = sizeContext["isSmall"] ? "0.75rem" : "2rem";
 
     return (
         <>
@@ -15,7 +14,7 @@ export default function StartingsAboutComponent() {
                 {
                     nonSpecificContext["startings"].map((starting) =>
                         <h2 className={classNameContext["h2ClassName"]} style={{
-                                fontSize: h2FontSize
+                                fontSize: sizeContext["h2FontSize"]
                             }}>
                             {starting}
                         </h2>

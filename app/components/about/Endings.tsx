@@ -7,17 +7,16 @@ export default function EndingsAboutComponent() {
     const sizeContext = useContext(SizeContext);
     const classNameContext = useContext(ClassNameContext);
     const nonSpecificContext = useContext(NonSpecificContext);
-    const h2FontSize = sizeContext["isSmall"] ? "0.75rem" : "2rem";
 
     return (
         <>
             <h2 className={classNameContext["h2ClassName"]} style={{
-                    fontSize: h2FontSize
+                    fontSize: sizeContext["h2FontSize"]
                 }}>
                 {nonSpecificContext["endings"][0]}
             </h2>
             <h2 className={classNameContext["h2ClassName"]} style={{
-                    fontSize: h2FontSize
+                    fontSize: sizeContext["h2FontSize"]
                 }}>
                 {nonSpecificContext["endings"][1]}<br />{nonSpecificContext["endings"][2]}
             </h2>

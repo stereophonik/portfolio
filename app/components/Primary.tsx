@@ -63,14 +63,22 @@ export default function PrimaryComponent() {
             });
     }, []);
 
+    const h1FontSize = isSmall ? "1rem" : "3rem";
+    const h2FontSize = isSmall ? "0.75rem" : "2rem";
+    const buttonFontSize = isSmall ? "0.75rem" : "2rem";
+
     return (
         <>
             <SizeContext.Provider value={{
-                    isSmall: isSmall
+                    isSmall: isSmall,
+                    h1FontSize: h1FontSize,
+                    h2FontSize: h2FontSize,
+                    buttonFontSize: buttonFontSize
                 }}>
                 <ClassNameContext.Provider value={{
                         h1ClassName: robotoMono.className,
-                        h2ClassName: anonymousPro.className
+                        h2ClassName: anonymousPro.className,
+                        buttonClassName: anonymousPro.className
                     }}>
                     <NonSpecificContext.Provider value={{
                             divStyle: profile["divStyle"],
