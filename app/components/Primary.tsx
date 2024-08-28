@@ -156,7 +156,7 @@ export default function PrimaryComponent() {
                         startingsAbout: startingsAboutStyle,
                         middlesAbout: middlesAboutStyle,
                         endingsAbout: endingsAboutStyle
-                    }}>
+                        }}>
                         <NonSpecificContext.Provider value={{
                                 divStyle: profile["divStyle"],
                                 imageSrc: profile["imageSrc"],
