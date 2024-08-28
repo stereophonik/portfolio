@@ -24,6 +24,7 @@ const robotoMono = Roboto_Mono({
 
 export default function PrimaryComponent() {
     const [isSmall, setIsSmall] = useState(false);
+    const [isMedium, setIsMedium] = useState(false);
     const [profile, setProfile] = useState({});
     const [aboutStartings, setAboutStartings] = useState([]);
     const [aboutTableBringingsLabel, setAboutTableBringingsLabel] = useState("");
@@ -34,6 +35,7 @@ export default function PrimaryComponent() {
 
     useEffect(() => {
         setIsSmall(window.innerWidth <= 600);
+        setIsMedium(window.innerWidth > 600 && window.innerWidth <= 810)
 
         fetch("/api?fileName=profile", {
             method: "GET"
@@ -64,6 +66,12 @@ export default function PrimaryComponent() {
             });
     }, []);
 
+    function checkInnerWidth(isSmall, isMedium, ifSmall, ifMedium, ifLarge) {
+        return isSmall ? ifSmall
+            : isMedium ? ifMedium
+            : ifLarge;
+    }
+
     const profileStyle = {
         overflow: "hidden",
         display: "grid",
@@ -71,14 +79,14 @@ export default function PrimaryComponent() {
         columnGap: "1%",
         gridTemplateColumns: "5% 25% 70%",
         width: "100vw",
-        height: isSmall ? "50vw" : "25vw",
+        height: checkInnerWidth(isSmall, isMedium, "50vw", "30vw", "25vw"),
         textAlign: "center"
     }
 
     const startingsAboutStyle = {
         overflow: "hidden",
         width: "100vw",
-        height: isSmall ? "40vw" : "20vw",
+        height: checkInnerWidth(isSmall, isMedium, "40vw", "20vw", "20vw"),
         backgroundColor: "white",
         color: "#0464ff",
         textAlign: "center"
@@ -87,7 +95,7 @@ export default function PrimaryComponent() {
     const middlesAboutStyle = {
         overflow: "hidden",
         width: "100vw",
-        height: isSmall ? "90vw" : "50vw",
+        height: checkInnerWidth(isSmall, isMedium, "90vw", "50vw", "50vw"),
         backgroundColor: "#0464ff",
         color: "white",
         textAlign: "center"
@@ -96,7 +104,7 @@ export default function PrimaryComponent() {
     const endingsAboutStyle = {
         overflow: "hidden",
         width: "100vw",
-        height: isSmall ? "30vw" : "15vw",
+        height: checkInnerWidth(isSmall, isMedium, "30vw", "15vw", "15vw"),
         backgroundColor: "white",
         color: "#0464ff",
         textAlign: "center"
@@ -106,12 +114,12 @@ export default function PrimaryComponent() {
     const h2ClassName = anonymousPro.className;
     const buttonClassName = anonymousPro.className;
 
-    const h1FontSize = isSmall ? "1rem" : "3rem";
-    const h2FontSize = isSmall ? "0.75rem" : "2rem";
-    const buttonFontSize = isSmall ? "0.75rem" : "2rem";
+    const h1FontSize = checkInnerWidth(isSmall, isMedium, "1rem", "2rem", "3rem");
+    const h2FontSize = checkInnerWidth(isSmall, isMedium, "0.75rem", "1rem", "2rem");
+    const buttonFontSize = checkInnerWidth(isSmall, isMedium, "0.75rem", "1rem", "2rem");
     const imageSizing = {
-        width: isSmall ? 87 : 261,
-        height: isSmall ? 116 : 349
+        width: checkInnerWidth(isSmall, isMedium, 87, 174, 261),
+        height: checkInnerWidth(isSmall, isMedium, 116, 233, 349)
     }
 
     return (
