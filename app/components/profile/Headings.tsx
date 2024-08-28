@@ -16,13 +16,13 @@ export default function HeadingsProfileComponent() {
             <DivComponent style={{
                     height: "30%"
                 }}> </DivComponent>
-            <h1 id="profileH1" className={classNamingContext["h1"]} style={{
+            <h1 id="headingsH1" className={classNamingContext["h1"]} style={{
                     gridColumn: "3",
                     fontSize: sizingContext["h1Font"]
                 }}>
                 {nonSpecificContext["headingsH1"]}
             </h1>
-            <h2 id="profileH2" className={classNamingContext["h2"]} style={{
+            <h2 id="headingsH2" className={classNamingContext["h2"]} style={{
                     gridColumn: "3",
                     fontSize: sizingContext["h2Font"]
                 }}>

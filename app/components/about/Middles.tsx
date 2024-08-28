@@ -31,7 +31,7 @@ export default function MiddlesAboutComponent() {
             <DivComponent style={{
                 height: "10%"
             }}> </DivComponent>
-            <h1 className={classNamingContext["h1"]} style={{
+            <h1 id="tbMiddlesH1" className={classNamingContext["h1"]} style={{
                     fontSize: sizingContext["h1Font"]
                 }}>
                 {nonSpecificContext["tableBringingsLabel"]}
@@ -39,7 +39,7 @@ export default function MiddlesAboutComponent() {
             <ul style={{
                     listStyleType: "none"
                 }}>
-                <h2 className={classNamingContext["h2"]} style={{
+                <h2 id="tbMiddlesH2" className={classNamingContext["h2"]} style={{
                         fontSize: sizingContext["h2Font"]
                     }}>
                     {
@@ -51,7 +51,7 @@ export default function MiddlesAboutComponent() {
                     }
                 </h2>
             </ul>
-            <h1 className={classNamingContext["h1"]} style={{
+            <h1 id="tsMiddlesH1" className={classNamingContext["h1"]} style={{
                     fontSize: sizingContext["h1Font"]
                 }}>
                 {nonSpecificContext["technicalSkillsLabel"]}
@@ -59,7 +59,7 @@ export default function MiddlesAboutComponent() {
             <ul style={{
                     listStyleType: "none"
                 }}>
-                <h2 className={classNamingContext["h2"]} style={{
+                <h2 id="tsMiddlesH2" className={classNamingContext["h2"]} style={{
                         fontSize: sizingContext["h2Font"]
                     }}>
                     {genericTechnicalSkills}</h2>
