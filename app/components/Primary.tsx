@@ -95,12 +95,8 @@ export default function PrimaryComponent() {
 
     const profileStyle = {
         overflow: "hidden",
-        display: "grid",
-        rowGap: "0",
-        columnGap: "1%",
-        gridTemplateColumns: "5% 25% 70%",
         width: "100vw",
-        height: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "50vw", "35vw", "35vw", "30vw", "25vw"),
+        height: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "80vw", "35vw", "35vw", "30vw", "25vw"),
         textAlign: "center"
     }
 
@@ -109,7 +105,7 @@ export default function PrimaryComponent() {
         width: "100vw",
         height: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "40vw", "25vw", "25vw", "25vw", "20vw"),
         backgroundColor: "white",
-        color: "#0464ff",
+        color: "#006400",
         textAlign: "center"
     }
 
@@ -117,7 +113,7 @@ export default function PrimaryComponent() {
         overflow: "hidden",
         width: "100vw",
         height: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "90vw", "60vw", "60vw", "55vw", "50vw"),
-        backgroundColor: "#0464ff",
+        backgroundColor: "#006400",
         color: "white",
         textAlign: "center"
     }
@@ -127,7 +123,7 @@ export default function PrimaryComponent() {
         width: "100vw",
         height: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "30vw", "20vw", "20vw", "20vw", "15vw"),
         backgroundColor: "white",
-        color: "#0464ff",
+        color: "#006400",
         textAlign: "center"
     }
 
@@ -139,8 +135,8 @@ export default function PrimaryComponent() {
     const h2FontSize = checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "0.75rem", "1rem", "1.5rem", "2rem", "2rem");
     const buttonFontSize = checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "0.75rem", "1rem", "1.5rem", "2rem", "2rem");
     const imageSizing = {
-        width: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, 87, 174, 218, 240, 261),
-        height: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, 116, 233, 291, 320, 349)
+        width: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, 174, 174, 218, 240, 261),
+        height: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, 233, 233, 291, 320, 349)
     }
 
     return (
