@@ -23,6 +23,7 @@ const robotoMono = Roboto_Mono({
 })
 
 export default function PrimaryComponent() {
+    const [isSize00, setIsSize00] = useState(false);
     const [isSize01, setIsSize01] = useState(false);
     const [isSize02, setIsSize02] = useState(false);
     const [isSize03, setIsSize03] = useState(false);
@@ -34,6 +35,7 @@ export default function PrimaryComponent() {
     const [isSize09, setIsSize09] = useState(false);
     const [isSize10, setIsSize10] = useState(false);
     const [isSize11, setIsSize11] = useState(false);
+    const [isSize12, setIsSize12] = useState(false);
     const [profile, setProfile] = useState({});
     const [aboutStartings, setAboutStartings] = useState([]);
     const [aboutTableBringingsLabel, setAboutTableBringingsLabel] = useState("");
@@ -44,7 +46,8 @@ export default function PrimaryComponent() {
 
     useEffect(() => {
         function setIsSize0x() {
-            setIsSize01(window.innerWidth <= 440);
+            setIsSize00(window.innerWidth <= 360);
+            setIsSize01(window.innerWidth > 360 && window.innerWidth <= 440);
             setIsSize02(window.innerWidth > 440 && window.innerWidth <= 520);
             setIsSize03(window.innerWidth > 520 && window.innerWidth <= 600);
             setIsSize04(window.innerWidth > 600 && window.innerWidth <= 680);
@@ -55,6 +58,7 @@ export default function PrimaryComponent() {
             setIsSize09(window.innerWidth > 1000 && window.innerWidth <= 1080);
             setIsSize10(window.innerWidth > 1080 && window.innerWidth <= 1160);
             setIsSize11(window.innerWidth > 1160 && window.innerWidth <= 1240);
+            setIsSize12(window.innerWidth > 1240 && window.innerWidth <= 1320);
         }
 
         setIsSize0x();
@@ -90,6 +94,7 @@ export default function PrimaryComponent() {
     }, []);
 
     function checkInnerWidth(
+        isSize00,
         isSize01,
         isSize02,
         isSize03,
@@ -101,6 +106,8 @@ export default function PrimaryComponent() {
         isSize09,
         isSize10,
         isSize11,
+        isSize12,
+        ifSize00,
         ifSize01,
         ifSize02,
         ifSize03,
@@ -112,9 +119,11 @@ export default function PrimaryComponent() {
         ifSize09,
         ifSize10,
         ifSize11,
-        ifSize12
+        ifSize12,
+        ifSize13
     ) {
-        return isSize01 ? ifSize01
+        return isSize00 ? ifSize00
+            : isSize01 ? ifSize01
             : isSize02 ? ifSize02
             : isSize03 ? ifSize03
             : isSize04? ifSize04
@@ -125,17 +134,18 @@ export default function PrimaryComponent() {
             : isSize09? ifSize09
             : isSize10? ifSize10
             : isSize11? ifSize11
-            : ifSize12;
+            : isSize12? ifSize12
+            : ifSize13;
     }
 
     const profileStyle = {
         overflow: "hidden",
         width: "100vw",
         height: checkInnerWidth(
-            isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
-            isSize07, isSize08, isSize09, isSize10, isSize11,
-            "90vw", "75vw", "60vw", "55vw", "60vw", "60vw",
-            "60vw", "60vw", "60vw", "60vw", "60vw", "60vw"
+            isSize00, isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
+            isSize07, isSize08, isSize09, isSize10, isSize11, isSize12,
+            "95vw", "90vw", "75vw", "60vw", "55vw", "60vw", "60vw",
+            "60vw", "60vw", "60vw", "60vw", "55vw", "50vw", "45vw"
         ),
         textAlign: "center"
     }
@@ -144,10 +154,10 @@ export default function PrimaryComponent() {
         overflow: "hidden",
         width: "100vw",
         height: checkInnerWidth(
-            isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
-            isSize07, isSize08, isSize09, isSize10, isSize11,
-            "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
-            "55vw", "55vw", "55vw", "55vw", "55vw", "55vw"
+            isSize00, isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
+            isSize07, isSize08, isSize09, isSize10, isSize11, isSize12,
+            "90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
+            "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"
         ),
         backgroundColor: "white",
         color: "#006400",
@@ -158,10 +168,10 @@ export default function PrimaryComponent() {
         overflow: "hidden",
         width: "100vw",
         height: checkInnerWidth(
-            isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
-            isSize07, isSize08, isSize09, isSize10, isSize11,
-            "135vw", "110vw", "90vw", "75vw", "90vw", "90vw",
-            "90vw", "90vw", "90vw", "90vw", "90vw", "90vw"
+            isSize00, isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
+            isSize07, isSize08, isSize09, isSize10, isSize11, isSize12,
+            "145vw", "135vw", "110vw", "90vw", "75vw", "90vw", "90vw",
+            "90vw", "90vw", "90vw", "90vw", "80vw", "75vw", "60vw"
         ),
         backgroundColor: "#006400",
         color: "white",
@@ -172,10 +182,10 @@ export default function PrimaryComponent() {
         overflow: "hidden",
         width: "100vw",
         height: checkInnerWidth(
-            isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
-            isSize07, isSize08, isSize09, isSize10, isSize11,
-            "55vw", "45vw", "35vw", "30vw", "35vw", "35vw",
-            "35vw", "35vw", "40vw", "40vw", "40vw", "40vw"
+            isSize00, isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
+            isSize07, isSize08, isSize09, isSize10, isSize11, isSize12,
+            "65vw", "55vw", "45vw", "35vw", "30vw", "35vw", "35vw",
+            "35vw", "35vw", "40vw", "40vw", "35vw", "30vw", "25vw"
         ),
         backgroundColor: "white",
         color: "#006400",
@@ -187,35 +197,35 @@ export default function PrimaryComponent() {
     const buttonClassName = anonymousPro.className;
 
     const h1FontSize = checkInnerWidth(
-        isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
-        isSize07, isSize08, isSize09, isSize10, isSize11,
-        "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-        "3.75rem", "4rem", "4.25rem", "4.25rem", "4.25rem", "4.25rem"
+        isSize00, isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
+        isSize07, isSize08, isSize09, isSize10, isSize11, isSize12,
+        "2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"
     );
     const h2FontSize = checkInnerWidth(
-        isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
-        isSize07, isSize08, isSize09, isSize10, isSize11,
-        "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-        "2.25rem", "2.5rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem"
+        isSize00, isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
+        isSize07, isSize08, isSize09, isSize10, isSize11, isSize12,
+        "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"
     );
     const buttonFontSize = checkInnerWidth(
-        isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
-        isSize07, isSize08, isSize09, isSize10, isSize11,
-        "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-        "2.25rem", "2.5rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem"
+        isSize00, isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
+        isSize07, isSize08, isSize09, isSize10, isSize11, isSize12,
+        "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"
     );
     const imageSizing = {
         width: checkInnerWidth(
-            isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
-            isSize07, isSize08, isSize09, isSize10, isSize11,
-            130, 130, 130, 130, 160, 180,
-            200, 220, 240, 240, 240, 240
+            isSize00, isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
+            isSize07, isSize08, isSize09, isSize10, isSize11, isSize12,
+            130, 130, 130, 130, 130, 160, 180,
+            200, 220, 240, 260, 260, 260, 260
         ),
         height: checkInnerWidth(
-            isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
-            isSize07, isSize08, isSize09, isSize10, isSize11,
-            175, 175, 175, 175, 214, 241,
-            267, 294, 321, 321, 321, 321
+            isSize00, isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
+            isSize07, isSize08, isSize09, isSize10, isSize11, isSize12,
+            175, 175, 175, 175, 175, 214, 241,
+            267, 294, 321, 348, 348, 348, 348
         )
     }
 
