@@ -9,6 +9,7 @@ export default function ButtonComponent({ onClick, children }) {
     return (
         <button className={classNamingContext["button"]} onClick={onClick}
             style={{
+                margin: 0,
                 backgroundColor: "white",
                 color: "#006400",
                 fontSize: sizingContext["buttonFont"]

@@ -37,8 +37,8 @@ export default function PrimaryComponent() {
 
     useEffect(() => {
         function setIsSize0x() {
-            setIsSize01(window.innerWidth <= 600);
-            setIsSize02(window.innerWidth > 600 && window.innerWidth <= 1000);
+            setIsSize01(window.innerWidth <= 440);
+            setIsSize02(window.innerWidth > 440 && window.innerWidth <= 1000);
             setIsSize03(window.innerWidth > 1000 && window.innerWidth <= 1100);
             setIsSize04(window.innerWidth > 1100 && window.innerWidth <= 1300);
         }
@@ -96,14 +96,14 @@ export default function PrimaryComponent() {
     const profileStyle = {
         overflow: "hidden",
         width: "100vw",
-        height: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "80vw", "35vw", "35vw", "30vw", "25vw"),
+        height: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "90vw", "75vw", "35vw", "30vw", "25vw"),
         textAlign: "center"
     }
 
     const startingsAboutStyle = {
         overflow: "hidden",
         width: "100vw",
-        height: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "40vw", "25vw", "25vw", "25vw", "20vw"),
+        height: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "85vw", "70vw", "25vw", "25vw", "20vw"),
         backgroundColor: "white",
         color: "#006400",
         textAlign: "center"
@@ -112,7 +112,7 @@ export default function PrimaryComponent() {
     const middlesAboutStyle = {
         overflow: "hidden",
         width: "100vw",
-        height: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "90vw", "60vw", "60vw", "55vw", "50vw"),
+        height: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "135vw", "110vw", "60vw", "55vw", "50vw"),
         backgroundColor: "#006400",
         color: "white",
         textAlign: "center"
@@ -121,7 +121,7 @@ export default function PrimaryComponent() {
     const endingsAboutStyle = {
         overflow: "hidden",
         width: "100vw",
-        height: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "30vw", "20vw", "20vw", "20vw", "15vw"),
+        height: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "55vw", "45vw", "20vw", "20vw", "15vw"),
         backgroundColor: "white",
         color: "#006400",
         textAlign: "center"
@@ -131,12 +131,12 @@ export default function PrimaryComponent() {
     const h2ClassName = anonymousPro.className;
     const buttonClassName = anonymousPro.className;
 
-    const h1FontSize = checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "1rem", "2rem", "2.5rem", "3rem", "3rem");
-    const h2FontSize = checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "0.75rem", "1rem", "1.5rem", "2rem", "2rem");
-    const buttonFontSize = checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "0.75rem", "1rem", "1.5rem", "2rem", "2rem");
+    const h1FontSize = checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "2.75rem", "2.75rem", "2.5rem", "3rem", "3rem");
+    const h2FontSize = checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "1.25rem", "1.25rem", "1.5rem", "2rem", "2rem");
+    const buttonFontSize = checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "1.25rem", "1.25rem", "1.5rem", "2rem", "2rem");
     const imageSizing = {
-        width: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, 174, 174, 218, 240, 261),
-        height: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, 233, 233, 291, 320, 349)
+        width: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, 130, 130, 218, 240, 261),
+        height: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, 175, 175, 291, 320, 349)
     }
 
     return (
