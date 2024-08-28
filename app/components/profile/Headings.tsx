@@ -1,6 +1,7 @@
 import { useContext } from "react";
 
 import DivComponent from "../Div";
+import H1Component from "../H1";
 
 import { SizingContext } from "../../contexts/Sizing";
 import { ClassNamingContext } from "../../contexts/ClassNaming";
@@ -16,12 +17,12 @@ export default function HeadingsProfileComponent() {
             <DivComponent style={{
                     height: "30%"
                 }}> </DivComponent>
-            <h1 id="headingsH1" className={classNamingContext["h1"]} style={{
+            <H1Component id="headingsH1" className={classNamingContext["h1"]} style={{
                     gridColumn: "3",
                     fontSize: sizingContext["h1Font"]
                 }}>
                 {nonSpecificContext["headingsH1"]}
-            </h1>
+            </H1Component>
             <h2 id="headingsH2" className={classNamingContext["h2"]} style={{
                     gridColumn: "3",
                     fontSize: sizingContext["h2Font"]

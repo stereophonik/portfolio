@@ -1,6 +1,10 @@
 import { useContext } from "react";
 
 import DivComponent from "../Div";
+import H1Component from "../H1";
+import H2Component from "../H2";
+import UlComponent from "../Ul";
+import LiComponent from "../Li";
 
 import { SizingContext } from "../../contexts/Sizing";
 import { ClassNamingContext } from "../../contexts/ClassNaming";
@@ -21,9 +25,9 @@ export default function MiddlesAboutComponent() {
     }
 
     const genericTechnicalSkills = nonSpecificContext["technicalSkillsContent"].map((technicalSkill) =>
-        <li key={nonSpecificContext["technicalSkillsContent"].indexOf(technicalSkill)}>
+        <LiComponent key={nonSpecificContext["technicalSkillsContent"].indexOf(technicalSkill)}>
             <ButtonComponent onClick={() => alert(createFromArray(technicalSkill.specifics))}>{technicalSkill.generic}</ButtonComponent>
-        </li>
+        </LiComponent>
     );
 
     return (
@@ -31,39 +35,39 @@ export default function MiddlesAboutComponent() {
             <DivComponent style={{
                 height: "10%"
             }}> </DivComponent>
-            <h1 id="tbMiddlesH1" className={classNamingContext["h1"]} style={{
+            <H1Component id="tbMiddlesH1" className={classNamingContext["h1"]} style={{
                     fontSize: sizingContext["h1Font"]
                 }}>
                 {nonSpecificContext["tableBringingsLabel"]}
-            </h1>
-            <ul style={{
+            </H1Component>
+            <UlComponent style={{
                     listStyleType: "none"
                 }}>
-                <h2 id="tbMiddlesH2" className={classNamingContext["h2"]} style={{
+                <H2Component id="tbMiddlesH2" className={classNamingContext["h2"]} style={{
                         fontSize: sizingContext["h2Font"]
                     }}>
                     {
                         nonSpecificContext["tableBringingsContent"].map((tableBringing) =>
-                            <li key={nonSpecificContext["tableBringingsContent"].indexOf(tableBringing)}>
+                            <LiComponent key={nonSpecificContext["tableBringingsContent"].indexOf(tableBringing)}>
                                 {tableBringing}
-                            </li>
+                            </LiComponent>
                         )
                     }
-                </h2>
-            </ul>
-            <h1 id="tsMiddlesH1" className={classNamingContext["h1"]} style={{
+                </H2Component>
+            </UlComponent>
+            <H1Component id="tsMiddlesH1" className={classNamingContext["h1"]} style={{
                     fontSize: sizingContext["h1Font"]
                 }}>
                 {nonSpecificContext["technicalSkillsLabel"]}
-            </h1>
-            <ul style={{
+            </H1Component>
+            <UlComponent style={{
                     listStyleType: "none"
                 }}>
-                <h2 id="tsMiddlesH2" className={classNamingContext["h2"]} style={{
+                <H2Component id="tsMiddlesH2" className={classNamingContext["h2"]} style={{
                         fontSize: sizingContext["h2Font"]
                     }}>
-                    {genericTechnicalSkills}</h2>
-            </ul>
+                    {genericTechnicalSkills}</H2Component>
+            </UlComponent>
         </DivComponent>
     )
 }

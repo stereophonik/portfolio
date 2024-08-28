@@ -1,6 +1,7 @@
 import { useContext } from "react";
 
 import DivComponent from "../Div";
+import H2Component from "../H2";
 
 import { SizingContext } from "../../contexts/Sizing";
 import { ClassNamingContext } from "../../contexts/ClassNaming";
@@ -18,16 +19,16 @@ export default function EndingsAboutComponent() {
             <DivComponent style={{
                 height: "10%"
             }}> </DivComponent>
-            <h2 className={classNamingContext["h2"]} style={{
+            <H2Component id="endingsH201" className={classNamingContext["h2"]} style={{
                     fontSize: sizingContext["h2Font"]
                 }}>
                 {nonSpecificContext["endings"][0]}
-            </h2>
-            <h2 className={classNamingContext["h2"]} style={{
+            </H2Component>
+            <H2Component id="endingsH202" className={classNamingContext["h2"]} style={{
                     fontSize: sizingContext["h2Font"]
                 }}>
                 {nonSpecificContext["endings"][1]}<br />{nonSpecificContext["endings"][2]}
-            </h2>
+            </H2Component>
         </DivComponent>
     )
 }

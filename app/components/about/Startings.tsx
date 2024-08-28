@@ -1,6 +1,7 @@
 import { useContext } from "react";
 
 import DivComponent from "../Div";
+import H2Component from "../H2";
 
 import { SizingContext } from "../../contexts/Sizing";
 import { ClassNamingContext } from "../../contexts/ClassNaming";
@@ -21,11 +22,11 @@ export default function StartingsAboutComponent() {
             <DivComponent style={{}}>
                 {
                     nonSpecificContext["startings"].map((starting) =>
-                        <h2 className={classNamingContext["h2"]} style={{
+                        <H2Component id="startingsH2" className={classNamingContext["h2"]} style={{
                                 fontSize: sizingContext["h2Font"]
                             }}>
                             {starting}
-                        </h2>
+                        </H2Component>
                     )
                 }
             </DivComponent>
