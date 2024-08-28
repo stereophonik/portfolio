@@ -36,10 +36,15 @@ export default function PrimaryComponent() {
     const [aboutEndings, setAboutEndings] = useState([]);
 
     useEffect(() => {
-        setIsSize01(window.innerWidth <= 600);
-        setIsSize02(window.innerWidth > 600 && window.innerWidth <= 1000);
-        setIsSize03(window.innerWidth > 1000 && window.innerWidth <= 1100);
-        setIsSize04(window.innerWidth > 1100 && window.innerWidth <= 1300);
+        function setIsSize0x() {
+            setIsSize01(window.innerWidth <= 600);
+            setIsSize02(window.innerWidth > 600 && window.innerWidth <= 1000);
+            setIsSize03(window.innerWidth > 1000 && window.innerWidth <= 1100);
+            setIsSize04(window.innerWidth > 1100 && window.innerWidth <= 1300);
+        }
+
+        setIsSize0x();
+        window.onresize = setIsSize0x;
 
         fetch("/api?fileName=profile", {
             method: "GET"
