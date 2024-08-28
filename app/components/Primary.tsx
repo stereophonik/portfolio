@@ -23,10 +23,10 @@ const robotoMono = Roboto_Mono({
 })
 
 export default function PrimaryComponent() {
-    const [isSmall, setIsSmall] = useState(false);
-    const [isMedium, setIsMedium] = useState(false);
-    const [isLarge, setIsLarge] = useState(false);
-    const [isXLarge, setIsXLarge] = useState(false);
+    const [isSize01, setIsSize01] = useState(false);
+    const [isSize02, setIsSize02] = useState(false);
+    const [isSize03, setIsSize03] = useState(false);
+    const [isSize04, setIsSize04] = useState(false);
     const [profile, setProfile] = useState({});
     const [aboutStartings, setAboutStartings] = useState([]);
     const [aboutTableBringingsLabel, setAboutTableBringingsLabel] = useState("");
@@ -36,10 +36,10 @@ export default function PrimaryComponent() {
     const [aboutEndings, setAboutEndings] = useState([]);
 
     useEffect(() => {
-        setIsSmall(window.innerWidth <= 600);
-        setIsMedium(window.innerWidth > 600 && window.innerWidth <= 1000);
-        setIsLarge(window.innerWidth > 1000 && window.innerWidth <= 1100);
-        setIsXLarge(window.innerWidth > 1100 && window.innerWidth <= 1300);
+        setIsSize01(window.innerWidth <= 600);
+        setIsSize02(window.innerWidth > 600 && window.innerWidth <= 1000);
+        setIsSize03(window.innerWidth > 1000 && window.innerWidth <= 1100);
+        setIsSize04(window.innerWidth > 1100 && window.innerWidth <= 1300);
 
         fetch("/api?fileName=profile", {
             method: "GET"
@@ -71,20 +71,21 @@ export default function PrimaryComponent() {
     }, []);
 
     function checkInnerWidth(
-        isSmall,
-        isMedium,
-        isLarge,
-        isXLarge,
-        ifSmall,
-        ifMedium,
-        ifLarge,
-        ifXLarge,
-        ifXXLarge) {
-        return isSmall ? ifSmall
-            : isMedium ? ifMedium
-            : isLarge ? ifLarge
-            : isXLarge? ifXLarge
-            : ifXXLarge;
+        isSize01,
+        isSize02,
+        isSize03,
+        isSize04,
+        ifSize01,
+        ifSize02,
+        ifSize03,
+        ifSize04,
+        ifSize05
+    ) {
+        return isSize01 ? ifSize01
+            : isSize02 ? ifSize02
+            : isSize03 ? ifSize03
+            : isSize04? ifSize04
+            : ifSize05;
     }
 
     const profileStyle = {
@@ -94,14 +95,14 @@ export default function PrimaryComponent() {
         columnGap: "1%",
         gridTemplateColumns: "5% 25% 70%",
         width: "100vw",
-        height: checkInnerWidth(isSmall, isMedium, isLarge, isXLarge, "50vw", "35vw", "35vw", "30vw", "25vw"),
+        height: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "50vw", "35vw", "35vw", "30vw", "25vw"),
         textAlign: "center"
     }
 
     const startingsAboutStyle = {
         overflow: "hidden",
         width: "100vw",
-        height: checkInnerWidth(isSmall, isMedium, isLarge, isXLarge, "40vw", "25vw", "25vw", "25vw", "20vw"),
+        height: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "40vw", "25vw", "25vw", "25vw", "20vw"),
         backgroundColor: "white",
         color: "#0464ff",
         textAlign: "center"
@@ -110,7 +111,7 @@ export default function PrimaryComponent() {
     const middlesAboutStyle = {
         overflow: "hidden",
         width: "100vw",
-        height: checkInnerWidth(isSmall, isMedium, isLarge, isXLarge, "90vw", "60vw", "60vw", "55vw", "50vw"),
+        height: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "90vw", "60vw", "60vw", "55vw", "50vw"),
         backgroundColor: "#0464ff",
         color: "white",
         textAlign: "center"
@@ -119,7 +120,7 @@ export default function PrimaryComponent() {
     const endingsAboutStyle = {
         overflow: "hidden",
         width: "100vw",
-        height: checkInnerWidth(isSmall, isMedium, isLarge, isXLarge, "30vw", "20vw", "20vw", "20vw", "15vw"),
+        height: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "30vw", "20vw", "20vw", "20vw", "15vw"),
         backgroundColor: "white",
         color: "#0464ff",
         textAlign: "center"
@@ -129,12 +130,12 @@ export default function PrimaryComponent() {
     const h2ClassName = anonymousPro.className;
     const buttonClassName = anonymousPro.className;
 
-    const h1FontSize = checkInnerWidth(isSmall, isMedium, isLarge, isXLarge, "1rem", "2rem", "2.5rem", "3rem", "3rem");
-    const h2FontSize = checkInnerWidth(isSmall, isMedium, isLarge, isXLarge, "0.75rem", "1rem", "1.5rem", "2rem", "2rem");
-    const buttonFontSize = checkInnerWidth(isSmall, isMedium, isLarge, isXLarge, "0.75rem", "1rem", "1.5rem", "2rem", "2rem");
+    const h1FontSize = checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "1rem", "2rem", "2.5rem", "3rem", "3rem");
+    const h2FontSize = checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "0.75rem", "1rem", "1.5rem", "2rem", "2rem");
+    const buttonFontSize = checkInnerWidth(isSize01, isSize02, isSize03, isSize04, "0.75rem", "1rem", "1.5rem", "2rem", "2rem");
     const imageSizing = {
-        width: checkInnerWidth(isSmall, isMedium, isLarge, isXLarge, 87, 174, 218, 240, 261),
-        height: checkInnerWidth(isSmall, isMedium, isLarge, isXLarge, 116, 233, 291, 320, 349)
+        width: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, 87, 174, 218, 240, 261),
+        height: checkInnerWidth(isSize01, isSize02, isSize03, isSize04, 116, 233, 291, 320, 349)
     }
 
     return (
