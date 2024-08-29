@@ -79,7 +79,8 @@ export default function MiddlesAboutComponent() {
                         margin: 0,
                         fontSize: sizingContext["h2Font"]
                     }}>
-                    {genericTechnicalSkills}</H2Component>
+                    {genericTechnicalSkills}
+                </H2Component>
             </UlComponent>
         </DivComponent>
     )

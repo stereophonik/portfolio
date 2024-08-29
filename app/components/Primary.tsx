@@ -139,6 +139,13 @@ export default function PrimaryComponent() {
             : ifSize13;
     }
 
+    const navStyle = {
+        overflow: "hidden",
+        backgroundColor: "white",
+        color: "#006400",
+        textAlign: "center"
+    }
+
     const profileStyle = {
         overflow: "hidden",
         width: "100vw",
@@ -244,6 +251,7 @@ export default function PrimaryComponent() {
                         button: buttonClassName
                     }}>
                     <StylingContext.Provider value={{
+                        nav: navStyle,
                         profile: profileStyle,
                         startingsAbout: startingsAboutStyle,
                         middlesAbout: middlesAboutStyle,
