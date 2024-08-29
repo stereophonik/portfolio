@@ -1,7 +1,9 @@
 import { useContext } from "react";
 
 import NavComponent from "../Nav";
+import UlComponent from "../Ul";
 import H2Component from "../H2";
+import LiComponent from "../Li";
 
 import { SizingContext } from "../../contexts/Sizing";
 import { ClassNamingContext } from "../../contexts/ClassNaming";
@@ -14,40 +16,40 @@ export default function PrimaryNavComponent() {
 
     return (
         <NavComponent className="" style={stylingContext["nav"]}>
-            <ul style={{paddingInlineStart: "0"}}>
+            <UlComponent style={{paddingInlineStart: "0"}}>
                 <H2Component id="tbMiddlesH2" className={classNamingContext["h2"]} style={{
                     margin: 0,
                     fontSize: sizingContext["h2Font"]
                 }}>
-                    <li style={{
+                    <LiComponent key="0" style={{
                         display: "inline-block"
                     }}>
                         <a href="#startings">Intro</a>
-                    </li>
-                    <li style={{
+                    </LiComponent>
+                    <LiComponent key="1" style={{
                         color: "white",
                         display: "inline-block"
                     }}>
                         ---
-                    </li>
-                    <li style={{
+                    </LiComponent>
+                    <LiComponent key="2" style={{
                         display: "inline-block"
                     }}>
                         <a href="#middles">Main</a>
-                    </li>
-                    <li style={{
+                    </LiComponent>
+                    <LiComponent key="3" style={{
                         color: "white",
                         display: "inline-block"
                     }}>
                         ---
-                    </li>
-                    <li style={{
+                    </LiComponent>
+                    <LiComponent key="4" style={{
                         display: "inline-block"
                     }}>
                         <a href="#endings">Outro</a>
-                    </li>
+                    </LiComponent>
                 </H2Component>
-            </ul>
+            </UlComponent>
         </NavComponent>
     );
 }

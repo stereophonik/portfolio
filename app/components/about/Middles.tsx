@@ -25,7 +25,9 @@ export default function MiddlesAboutComponent() {
     }
 
     const genericTechnicalSkills = nonSpecificContext["technicalSkillsContent"].map((technicalSkill) =>
-        <LiComponent key={nonSpecificContext["technicalSkillsContent"].indexOf(technicalSkill)}>
+        <LiComponent key={
+                nonSpecificContext["technicalSkillsContent"].indexOf(technicalSkill)
+            } style={{}}>
             <ButtonComponent className={classNamingContext["button"]} onClick={
                     () => alert(createFromArray(technicalSkill.specifics))
                 } style={{
@@ -60,7 +62,9 @@ export default function MiddlesAboutComponent() {
                     }}>
                     {
                         nonSpecificContext["tableBringingsContent"].map((tableBringing) =>
-                            <LiComponent key={nonSpecificContext["tableBringingsContent"].indexOf(tableBringing)}>
+                            <LiComponent key={
+                                    nonSpecificContext["tableBringingsContent"].indexOf(tableBringing)
+                                } style={{}}>
                                 {tableBringing}
                             </LiComponent>
                         )
