@@ -28,7 +28,7 @@ export default function PrimaryNavComponent() {
                         color: "white",
                         display: "inline-block"
                     }}>
-                        -------
+                        ---
                     </li>
                     <li style={{
                         display: "inline-block"
@@ -39,7 +39,7 @@ export default function PrimaryNavComponent() {
                         color: "white",
                         display: "inline-block"
                     }}>
-                        -------
+                        ---
                     </li>
                     <li style={{
                         display: "inline-block"
