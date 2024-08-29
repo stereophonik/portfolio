@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Anonymous_Pro } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
 
+import PrimaryNavComponent from "./nav/Primary";
 import PrimaryProfileComponent from "./profile/Primary";
 import PrimaryAboutComponent from "./about/Primary";
 
@@ -262,6 +263,7 @@ export default function PrimaryComponent() {
                                 technicalSkillsContent: aboutTechnicalSkillsContent,
                                 endings: aboutEndings
                             }}>
+                            <PrimaryNavComponent />
                             <PrimaryProfileComponent />
                             <PrimaryAboutComponent />
                         </NonSpecificContext.Provider>

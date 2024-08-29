@@ -16,8 +16,8 @@ export default function EndingsAboutComponent() {
     const nonSpecificContext = useContext(NonSpecificContext);
 
     return (
-        <DivComponent style={stylingContext["endingsAbout"]}>
-            <DivComponent style={{
+        <DivComponent id="endings" style={stylingContext["endingsAbout"]}>
+            <DivComponent id="subEndings" style={{
                 height: "10%"
             }}> </DivComponent>
             <H1Component id="endingsH1" className={classNamingContext["h1"]} style={{

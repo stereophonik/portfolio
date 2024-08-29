@@ -10,8 +10,8 @@ export default function PrimaryProfileComponent() {
     const stylingContext = useContext(StylingContext);
 
     return (
-        <DivComponent style={stylingContext["profile"]}>
-            <DivComponent style={{
+        <DivComponent id="profile" style={stylingContext["profile"]}>
+            <DivComponent id="subProfile" style={{
                     height: "10%"
                 }}> </DivComponent>
             <ImageProfileComponent />

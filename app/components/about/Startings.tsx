@@ -16,11 +16,11 @@ export default function StartingsAboutComponent() {
     const nonSpecificContext = useContext(NonSpecificContext);
 
     return (
-        <DivComponent style={stylingContext["startingsAbout"]}>
-            <DivComponent style={{
+        <DivComponent id="startings" style={stylingContext["startingsAbout"]}>
+            <DivComponent id="subStartings01" style={{
                 height: "10%"
             }}> </DivComponent>
-            <DivComponent style={{}}>
+            <DivComponent id="subStartings02" style={{}}>
                 <H1Component id="headingsH1" className={classNamingContext["h1"]} style={{
                         margin: 0,
                         fontSize: sizingContext["h1Font"]

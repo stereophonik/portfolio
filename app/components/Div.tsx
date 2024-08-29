@@ -1,3 +1,3 @@
-export default function DivComponent({ style, children }) {
-    return <div style={style}>{children}</div>;
+export default function DivComponent({ id, style, children }) {
+    return <div id={id} style={style}>{children}</div>;
 }

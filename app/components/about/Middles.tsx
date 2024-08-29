@@ -40,8 +40,8 @@ export default function MiddlesAboutComponent() {
     );
 
     return (
-        <DivComponent style={stylingContext["middlesAbout"]}>
-            <DivComponent style={{
+        <DivComponent id="middles" style={stylingContext["middlesAbout"]}>
+            <DivComponent id="subMiddles" style={{
                 height: "10%"
             }}> </DivComponent>
             <H1Component id="tbMiddlesH1" className={classNamingContext["h1"]} style={{

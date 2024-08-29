@@ -14,7 +14,7 @@ export default function HeadingsProfileComponent() {
     const classNamingContext = useContext(ClassNamingContext);
 
     return (
-        <DivComponent style={nonSpecificContext["headingsStyle"]}>
+        <DivComponent id="headings" style={nonSpecificContext["headingsStyle"]}>
             <H1Component id="headingsH1" className={classNamingContext["h1"]} style={{
                     margin: 0,
                     fontSize: sizingContext["h1Font"]
