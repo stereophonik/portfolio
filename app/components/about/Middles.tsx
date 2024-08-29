@@ -10,7 +10,7 @@ import { SizingContext } from "../../contexts/Sizing";
 import { ClassNamingContext } from "../../contexts/ClassNaming";
 import { StylingContext } from "../../contexts/Styling";
 import { NonSpecificContext } from "../../contexts/NonSpecific";
-import ButtonComponent from "../Button";
+import LinkComponent from "../Link";
 
 export default function MiddlesAboutComponent() {
     const sizingContext = useContext(SizingContext);
@@ -18,26 +18,13 @@ export default function MiddlesAboutComponent() {
     const stylingContext = useContext(StylingContext);
     const nonSpecificContext = useContext(NonSpecificContext);
 
-    function createFromArray(array) {
-        let string = "";
-        array.map((element) => string += `${element}\n`);
-        return string;
-    }
-
     const genericTechnicalSkills = nonSpecificContext["technicalSkillsContent"].map((technicalSkill) =>
         <LiComponent key={
                 nonSpecificContext["technicalSkillsContent"].indexOf(technicalSkill)
             } style={{}}>
-            <ButtonComponent className={classNamingContext["button"]} onClick={
-                    () => alert(createFromArray(technicalSkill.specifics))
-                } style={{
-                    margin: 0,
-                    backgroundColor: "#2677D9",
-                    color: "#2BC1AF",
-                    fontSize: sizingContext["buttonFont"]
-                }}>
+            <LinkComponent href={technicalSkill.location}>
                 {technicalSkill.generic}
-            </ButtonComponent>
+            </LinkComponent>
         </LiComponent>
     );
 

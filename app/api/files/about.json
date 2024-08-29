@@ -12,61 +12,27 @@
     "technicalSkillsContent": [
         {
             "generic": "Platform: WordPress",
-            "specifics": []
+            "location": "/platform-skills"
         },
         {
             "generic": "Framework: Next.js",
-            "specifics": [
-                "Creating App Layout",
-                "Creating App Page",
-                "Running Dev Server",
-                "Adding a static file",
-                "Route handling",
-                "Font optimizing",
-                "List rendering",
-                "Image optimizing",
-                "Implementing Link"
-            ]
+            "location": "/framework-skills"
         },
         {
             "generic": "Library: React",
-            "specifics": [
-                "Defining a component",
-                "Using a component",
-                "Exporting and importing a component",
-                "Writing a Fragment",
-                "Writing a markup with JSX",
-                "Using JavaScript with curly braces",
-                "Using JavaScript with double curly braces",
-                "Passing and reading props",
-                "Implementing useState",
-                "Implementing useEffect",
-                "Event responding",
-                "Context datum passing"
-            ]
+            "location": "/library-skills"
         },
         {
             "generic": "Testing: Cypress",
-            "specifics": [
-                "Writing an E2E test"
-            ]
+            "location": "/testing-skills"
         },
         {
             "generic": "Version Control: Git",
-            "specifics": [
-                "Cloning a repository",
-                "Git statusing",
-                "Git adding",
-                "Git committing",
-                "Git pushing",
-                "Creating Git Ignore"
-            ]
+            "location": "/version-control-skills"
         },
         {
             "generic": "Language: JavaScript",
-            "specifics": [
-                "Defining a function"
-            ]
+            "location": "/language-skills"
         }
     ],
     "endings": [
