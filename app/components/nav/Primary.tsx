@@ -4,6 +4,7 @@ import NavComponent from "../Nav";
 import UlComponent from "../Ul";
 import H2Component from "../H2";
 import LiComponent from "../Li";
+import LinkComponent from "../Link";
 
 import { SizingContext } from "../../contexts/Sizing";
 import { ClassNamingContext } from "../../contexts/ClassNaming";
@@ -24,7 +25,7 @@ export default function PrimaryNavComponent() {
                     <LiComponent key="0" style={{
                         display: "inline-block"
                     }}>
-                        <a href="#startings">Intro</a>
+                        <LinkComponent href="#startings">Intro</LinkComponent>
                     </LiComponent>
                     <LiComponent key="1" style={{
                         color: "white",
@@ -35,7 +36,7 @@ export default function PrimaryNavComponent() {
                     <LiComponent key="2" style={{
                         display: "inline-block"
                     }}>
-                        <a href="#middles">Main</a>
+                        <LinkComponent href="#middles">Main</LinkComponent>
                     </LiComponent>
                     <LiComponent key="3" style={{
                         color: "white",
@@ -46,7 +47,7 @@ export default function PrimaryNavComponent() {
                     <LiComponent key="4" style={{
                         display: "inline-block"
                     }}>
-                        <a href="#endings">Outro</a>
+                        <LinkComponent href="#endings">Outro</LinkComponent>
                     </LiComponent>
                 </H2Component>
             </UlComponent>
