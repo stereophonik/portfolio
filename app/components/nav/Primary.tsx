@@ -14,7 +14,7 @@ export default function PrimaryNavComponent() {
 
     return (
         <NavComponent className="" style={stylingContext["nav"]}>
-            <ul>
+            <ul style={{paddingInlineStart: "0"}}>
                 <H2Component id="tbMiddlesH2" className={classNamingContext["h2"]} style={{
                     margin: 0,
                     fontSize: sizingContext["h2Font"]
@@ -22,7 +22,7 @@ export default function PrimaryNavComponent() {
                     <li style={{
                         display: "inline-block"
                     }}>
-                        <a href="#startings">Startings</a>
+                        <a href="#startings">Intro</a>
                     </li>
                     <li style={{
                         color: "white",
@@ -33,7 +33,7 @@ export default function PrimaryNavComponent() {
                     <li style={{
                         display: "inline-block"
                     }}>
-                        <a href="#middles">Middles</a>
+                        <a href="#middles">Main</a>
                     </li>
                     <li style={{
                         color: "white",
@@ -44,7 +44,7 @@ export default function PrimaryNavComponent() {
                     <li style={{
                         display: "inline-block"
                     }}>
-                        <a href="#endings">Endings</a>
+                        <a href="#endings">Outro</a>
                     </li>
                 </H2Component>
             </ul>

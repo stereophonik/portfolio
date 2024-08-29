@@ -51,6 +51,7 @@ export default function MiddlesAboutComponent() {
                 {nonSpecificContext["tableBringingsLabel"]}
             </H1Component>
             <UlComponent style={{
+                    paddingInlineStart: "0",
                     listStyleType: "none"
                 }}>
                 <H2Component id="tbMiddlesH2" className={classNamingContext["h2"]} style={{
@@ -73,6 +74,7 @@ export default function MiddlesAboutComponent() {
                 {nonSpecificContext["technicalSkillsLabel"]}
             </H1Component>
             <UlComponent style={{
+                    paddingInlineStart: "0",
                     listStyleType: "none"
                 }}>
                 <H2Component id="tsMiddlesH2" className={classNamingContext["h2"]} style={{
