@@ -32,8 +32,8 @@ export default function MiddlesAboutComponent() {
                     () => alert(createFromArray(technicalSkill.specifics))
                 } style={{
                     margin: 0,
-                    backgroundColor: "white",
-                    color: "#006400",
+                    backgroundColor: "#2677D9",
+                    color: "#2BC1AF",
                     fontSize: sizingContext["buttonFont"]
                 }}>
                 {technicalSkill.generic}

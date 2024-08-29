@@ -28,7 +28,7 @@ export default function PrimaryNavComponent() {
                         <LinkComponent href="#startings">Intro</LinkComponent>
                     </LiComponent>
                     <LiComponent key="1" style={{
-                        color: "white",
+                        color: "#2677D9",
                         display: "inline-block"
                     }}>
                         ---
@@ -39,7 +39,7 @@ export default function PrimaryNavComponent() {
                         <LinkComponent href="#middles">Main</LinkComponent>
                     </LiComponent>
                     <LiComponent key="3" style={{
-                        color: "white",
+                        color: "#2677D9",
                         display: "inline-block"
                     }}>
                         ---

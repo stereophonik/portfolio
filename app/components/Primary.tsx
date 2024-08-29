@@ -141,8 +141,8 @@ export default function PrimaryComponent() {
 
     const navStyle = {
         overflow: "hidden",
-        backgroundColor: "white",
-        color: "#006400",
+        backgroundColor: "#2677D9",
+        color: "#2BC1AF",
         textAlign: "center"
     }
 
@@ -167,8 +167,8 @@ export default function PrimaryComponent() {
             "90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
             "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"
         ),
-        backgroundColor: "white",
-        color: "#006400",
+        backgroundColor: "#2677D9",
+        color: "#2BC1AF",
         textAlign: "center"
     }
 
@@ -181,8 +181,8 @@ export default function PrimaryComponent() {
             "145vw", "135vw", "110vw", "90vw", "75vw", "90vw", "90vw",
             "90vw", "90vw", "90vw", "90vw", "80vw", "75vw", "60vw"
         ),
-        backgroundColor: "#006400",
-        color: "white",
+        backgroundColor: "#2BC1AF",
+        color: "#2677D9",
         textAlign: "center"
     }
 
@@ -195,8 +195,8 @@ export default function PrimaryComponent() {
             "65vw", "55vw", "45vw", "35vw", "30vw", "35vw", "35vw",
             "35vw", "35vw", "40vw", "40vw", "35vw", "30vw", "25vw"
         ),
-        backgroundColor: "white",
-        color: "#006400",
+        backgroundColor: "#2677D9",
+        color: "#2BC1AF",
         textAlign: "center"
     }
 
