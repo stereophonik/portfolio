@@ -12,6 +12,7 @@ import { SizingContext } from "../contexts/Sizing";
 import { ClassNamingContext } from "../contexts/ClassNaming";
 import { StylingContext } from "../contexts/Styling";
 import { NonSpecificContext } from "../contexts/NonSpecific";
+import {ProfileContext} from "../contexts/Profile";
 
 const anonymousPro = Anonymous_Pro({
     weight: "400",
@@ -211,7 +212,11 @@ export default function PrimaryComponent() {
                                 outro: outroAbout
                             }}>
                             <PrimaryNavComponent />
-                            <PrimaryProfileComponent />
+                            <ProfileContext.Provider value={{
+
+                                }}>
+                                <PrimaryProfileComponent />
+                            </ProfileContext.Provider>
                             <PrimaryAboutComponent />
                         </NonSpecificContext.Provider>
                     </StylingContext.Provider>
