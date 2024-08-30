@@ -8,11 +8,11 @@ import PrimaryNavComponent from "./nav/Primary";
 import PrimaryProfileComponent from "./profile/Primary";
 import PrimaryAboutComponent from "./about/Primary";
 
-import { SizingContext } from "../contexts/Sizing";
-import { ClassNamingContext } from "../contexts/ClassNaming";
 import { StylingContext } from "../contexts/Styling";
 import { NonSpecificContext } from "../contexts/NonSpecific";
-import {ProfileContext} from "../contexts/Profile";
+import { NavContext } from "../contexts/Nav";
+import { ProfileContext } from "../contexts/Profile";
+import { AboutContext } from "../contexts/About";
 
 const anonymousPro = Anonymous_Pro({
     weight: "400",
@@ -95,11 +95,20 @@ export default function PrimaryComponent() {
             : sizes[13];
     }
 
-    const styleNav = {
+    const styleNavNav = {
         overflow: "hidden",
         backgroundColor: "#2677D9",
         color: "#2BC1AF",
         textAlign: "center"
+    }
+
+    const h2Nav = {
+        fontSize: checkInnerWidth(
+            areSizes,
+            ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+        ),
+        className: anonymousPro.className
     }
 
     const styleProfileProfile = {
@@ -158,6 +167,24 @@ export default function PrimaryComponent() {
         textAlign: "center"
     }
 
+    const h1IntroAbout = {
+        fontSize: checkInnerWidth(
+            areSizes,
+            ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+        ),
+        className: robotoMono.className
+    }
+
+    const h2IntroAbout = {
+        fontSize: checkInnerWidth(
+            areSizes,
+            ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+        ),
+        className: anonymousPro.className
+    }
+
     const styleMainAbout = {
         overflow: "hidden",
         width: "100vw",
@@ -169,6 +196,24 @@ export default function PrimaryComponent() {
         backgroundColor: "#2BC1AF",
         color: "#2677D9",
         textAlign: "center"
+    }
+
+    const h1MainAbout = {
+        fontSize: checkInnerWidth(
+            areSizes,
+            ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+        ),
+        className: robotoMono.className
+    }
+
+    const h2MainAbout = {
+        fontSize: checkInnerWidth(
+            areSizes,
+            ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+        ),
+        className: anonymousPro.className
     }
 
     const styleOutroAbout = {
@@ -184,49 +229,74 @@ export default function PrimaryComponent() {
         textAlign: "center"
     }
 
+    const h1OutroAbout = {
+        fontSize: checkInnerWidth(
+            areSizes,
+            ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+        ),
+        className: robotoMono.className
+    }
+
+    const h2OutroAbout = {
+        fontSize: checkInnerWidth(
+            areSizes,
+            ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+        ),
+        className: anonymousPro.className
+    }
+
     return (
         <>
-            <SizingContext.Provider value={{
+            <StylingContext.Provider value={{
                 }}>
-                <ClassNamingContext.Provider value={{
+                <NonSpecificContext.Provider value={{
+                        labelServings: labelServingsAbout,
+                        servings: servingsAbout,
+                        labelSkills: labelSkillsAbout,
+                        skills: skillsAbout,
+                        outro: outroAbout
                     }}>
-                    <StylingContext.Provider value={{
-                        nav: styleNav,
-                        introAbout: styleIntroAbout,
-                        mainAbout: styleMainAbout,
-                        outroAbout: styleOutroAbout
+                    <NavContext.Provider value={{
+                            styleNav: styleNavNav,
+                            h2: h2Nav
                         }}>
-                        <NonSpecificContext.Provider value={{
-                                intro: introAbout,
-                                labelServings: labelServingsAbout,
-                                servings: servingsAbout,
-                                labelSkills: labelSkillsAbout,
-                                skills: skillsAbout,
-                                outro: outroAbout
-                            }}>
-                            <PrimaryNavComponent />
-                            <ProfileContext.Provider value={{
-                                    styleProfile: styleProfileProfile,
-                                    div: divProfile,
-                                    srcImage: profile["srcImage"],
-                                    altImage: profile["altImage"],
-                                    styleImage: profile["styleImage"],
-                                    widthImage: widthImageProfile,
-                                    heightImage: heightImageProfile,
-                                    fontSizeH1Headings: fontSizeH1HeadingsProfile,
-                                    fontSizeH2Headings: fontSizeH2HeadingsProfile,
-                                    classNameH1Headings: classNameH1HeadingsProfile,
-                                    classNameH2Headings: classNameH2HeadingsProfile,
-                                    h1Headings: profile["h1Headings"],
-                                    h2Headings: profile["h2Headings"]
-                                }}>
-                                <PrimaryProfileComponent />
-                            </ProfileContext.Provider>
-                            <PrimaryAboutComponent />
-                        </NonSpecificContext.Provider>
-                    </StylingContext.Provider>
-                </ClassNamingContext.Provider>
-            </SizingContext.Provider>
+                        <PrimaryNavComponent />
+                    </NavContext.Provider>
+                    <ProfileContext.Provider value={{
+                            styleProfile: styleProfileProfile,
+                            div: divProfile,
+                            srcImage: profile["srcImage"],
+                            altImage: profile["altImage"],
+                            styleImage: profile["styleImage"],
+                            widthImage: widthImageProfile,
+                            heightImage: heightImageProfile,
+                            fontSizeH1Headings: fontSizeH1HeadingsProfile,
+                            fontSizeH2Headings: fontSizeH2HeadingsProfile,
+                            classNameH1Headings: classNameH1HeadingsProfile,
+                            classNameH2Headings: classNameH2HeadingsProfile,
+                            h1Headings: profile["h1Headings"],
+                            h2Headings: profile["h2Headings"]
+                        }}>
+                        <PrimaryProfileComponent />
+                    </ProfileContext.Provider>
+                    <AboutContext.Provider value={{
+                            styleIntro: styleIntroAbout,
+                            h1Intro: h1IntroAbout,
+                            h2Intro: h2IntroAbout,
+                            intro: introAbout,
+                            styleMain: styleMainAbout,
+                            h1Main: h1MainAbout,
+                            h2Main: h2MainAbout,
+                            styleOutro: styleOutroAbout,
+                            h1Outro: h1OutroAbout,
+                            h2Outro: h2OutroAbout
+                        }}>
+                        <PrimaryAboutComponent />
+                    </AboutContext.Provider>
+                </NonSpecificContext.Provider>
+            </StylingContext.Provider>
         </>
     );
 }

@@ -6,21 +6,17 @@ import H2Component from "../H2";
 import LiComponent from "../Li";
 import LinkComponent from "../Link";
 
-import { SizingContext } from "../../contexts/Sizing";
-import { ClassNamingContext } from "../../contexts/ClassNaming";
-import { StylingContext } from "../../contexts/Styling";
+import { NavContext } from "../../contexts/Nav";
 
 export default function PrimaryNavComponent() {
-    const sizingContext = useContext(SizingContext);
-    const classNamingContext = useContext(ClassNamingContext);
-    const stylingContext = useContext(StylingContext);
+    const navContext = useContext(NavContext);
 
     return (
-        <NavComponent className="" style={stylingContext["nav"]}>
+        <NavComponent className="" style={navContext["styleNav"]}>
             <UlComponent style={{paddingInlineStart: "0"}}>
-                <H2Component id="tbMainH2" className={classNamingContext["classNameH2"]} style={{
+                <H2Component id="tbMainH2" className={navContext["h2"]["className"]} style={{
                     margin: 0,
-                    fontSize: sizingContext["fontSizeH2"]
+                    fontSize: navContext["h2"]["fontSize"]
                 }}>
                     <LiComponent key="0" style={{
                         display: "inline-block"

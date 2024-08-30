@@ -5,17 +5,13 @@ import H1Component from "../H1";
 import H2Component from "../H2";
 import UlComponent from "../Ul";
 import LiComponent from "../Li";
-
-import { SizingContext } from "../../contexts/Sizing";
-import { ClassNamingContext } from "../../contexts/ClassNaming";
-import { StylingContext } from "../../contexts/Styling";
-import { NonSpecificContext } from "../../contexts/NonSpecific";
 import LinkComponent from "../Link";
 
+import { NonSpecificContext } from "../../contexts/NonSpecific";
+import { AboutContext } from "../../contexts/About";
+
 export default function MainAboutComponent() {
-    const sizingContext = useContext(SizingContext);
-    const classNamingContext = useContext(ClassNamingContext);
-    const stylingContext = useContext(StylingContext);
+    const aboutContext = useContext(AboutContext);
     const nonSpecificContext = useContext(NonSpecificContext);
 
     const genericSkills = nonSpecificContext["skills"].map((skill) =>
@@ -29,13 +25,13 @@ export default function MainAboutComponent() {
     );
 
     return (
-        <DivComponent id="main" style={stylingContext["mainAbout"]}>
+        <DivComponent id="main" style={aboutContext["styleMain"]}>
             <DivComponent id="subMain" style={{
                 height: "10%"
             }}> </DivComponent>
-            <H1Component id="tbMainH1" className={classNamingContext["classNameH1"]} style={{
+            <H1Component id="tbMainH1" className={aboutContext["h1Main"]["className"]} style={{
                     margin: 0,
-                    fontSize: sizingContext["fontSizeH1"]
+                    fontSize: aboutContext["h1Main"]["fontSize"]
                 }}>
                 {nonSpecificContext["labelServings"]}
             </H1Component>
@@ -43,9 +39,9 @@ export default function MainAboutComponent() {
                     paddingInlineStart: "0",
                     listStyleType: "none"
                 }}>
-                <H2Component id="tbMainH2" className={classNamingContext["classNameH2"]} style={{
+                <H2Component id="tbMainH2" className={aboutContext["h2Main"]["className"]} style={{
                         margin: 0,
-                        fontSize: sizingContext["fontSizeH2"]
+                        fontSize: aboutContext["h2Main"]["fontSize"]
                     }}>
                     {
                         nonSpecificContext["servings"].map((serving) =>
@@ -58,9 +54,9 @@ export default function MainAboutComponent() {
                     }
                 </H2Component>
             </UlComponent>
-            <H1Component id="tsMainH1" className={classNamingContext["classNameH1"]} style={{
+            <H1Component id="tsMainH1" className={aboutContext["h1Main"]["className"]} style={{
                     margin: 0,
-                    fontSize: sizingContext["fontSizeH1"]
+                    fontSize: aboutContext["h1Main"]["fontSize"]
                 }}>
                 {nonSpecificContext["labelSkills"]}
             </H1Component>
@@ -68,9 +64,9 @@ export default function MainAboutComponent() {
                     paddingInlineStart: "0",
                     listStyleType: "none"
                 }}>
-                <H2Component id="tsMainH2" className={classNamingContext["classNameH2"]} style={{
+                <H2Component id="tsMainH2" className={aboutContext["h2Main"]["className"]} style={{
                         margin: 0,
-                        fontSize: sizingContext["fontSizeH2"]
+                        fontSize: aboutContext["h2Main"]["fontSize"]
                     }}>
                     {genericSkills}
                 </H2Component>
