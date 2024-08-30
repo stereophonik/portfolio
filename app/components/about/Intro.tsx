@@ -23,7 +23,7 @@ export default function IntroAboutComponent() {
             <DivComponent id="subIntro02" style={{}}>
                 <H1Component id="h1Headings" className={classNamingContext["h1"]} style={{
                         margin: 0,
-                        fontSize: sizingContext["h1Font"]
+                        fontSize: sizingContext["fontSizeH1"]
                     }}>
                     Hello!
                 </H1Component>
@@ -31,7 +31,7 @@ export default function IntroAboutComponent() {
                     nonSpecificContext["intro"].map((intro) =>
                         <H2Component id="introH2" className={classNamingContext["h2"]} style={{
                                 margin: 0,
-                                fontSize: sizingContext["h2Font"]
+                                fontSize: sizingContext["fontSizeH2"]
                             }}>
                             {intro}
                         </H2Component>

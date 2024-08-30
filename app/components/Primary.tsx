@@ -154,7 +154,6 @@ export default function PrimaryComponent() {
 
     const classNameH1 = robotoMono.className;
     const classNameH2 = anonymousPro.className;
-    const classNameButton = anonymousPro.className;
 
     const fontSizeH1 = checkInnerWidth(
         areSizes,
@@ -163,12 +162,6 @@ export default function PrimaryComponent() {
     );
 
     const fontSizeH2 = checkInnerWidth(
-        areSizes,
-        ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-    );
-
-    const fontSizeButton = checkInnerWidth(
         areSizes,
         ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
         "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
@@ -187,16 +180,14 @@ export default function PrimaryComponent() {
     return (
         <>
             <SizingContext.Provider value={{
-                    h1Font: fontSizeH1,
-                    h2Font: fontSizeH2,
-                    buttonFont: fontSizeButton,
+                    fontSizeH1: fontSizeH1,
+                    fontSizeH2: fontSizeH2,
                     widthImage: widthImage,
                     heightImage: heightImage
                 }}>
                 <ClassNamingContext.Provider value={{
                         h1: classNameH1,
-                        h2: classNameH2,
-                        button: classNameButton
+                        h2: classNameH2
                     }}>
                     <StylingContext.Provider value={{
                         nav: styleNav,

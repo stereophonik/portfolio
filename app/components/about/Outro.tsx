@@ -22,13 +22,13 @@ export default function OutroAboutComponent() {
             }}> </DivComponent>
             <H1Component id="outroH1" className={classNamingContext["h1"]} style={{
                     margin: 0,
-                    fontSize: sizingContext["h1Font"]
+                    fontSize: sizingContext["fontSizeH1"]
                 }}>
                 Btw...
             </H1Component>
             <H2Component id="outroH2" className={classNamingContext["h2"]} style={{
                     margin: 0,
-                    fontSize: sizingContext["h2Font"]
+                    fontSize: sizingContext["fontSizeH2"]
                 }}>
                 {nonSpecificContext["outro"]}
             </H2Component>

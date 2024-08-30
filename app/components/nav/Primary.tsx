@@ -20,7 +20,7 @@ export default function PrimaryNavComponent() {
             <UlComponent style={{paddingInlineStart: "0"}}>
                 <H2Component id="tbMainH2" className={classNamingContext["h2"]} style={{
                     margin: 0,
-                    fontSize: sizingContext["h2Font"]
+                    fontSize: sizingContext["fontSizeH2"]
                 }}>
                     <LiComponent key="0" style={{
                         display: "inline-block"

@@ -35,7 +35,7 @@ export default function MainAboutComponent() {
             }}> </DivComponent>
             <H1Component id="tbMainH1" className={classNamingContext["h1"]} style={{
                     margin: 0,
-                    fontSize: sizingContext["h1Font"]
+                    fontSize: sizingContext["fontSizeH1"]
                 }}>
                 {nonSpecificContext["labelServings"]}
             </H1Component>
@@ -45,7 +45,7 @@ export default function MainAboutComponent() {
                 }}>
                 <H2Component id="tbMainH2" className={classNamingContext["h2"]} style={{
                         margin: 0,
-                        fontSize: sizingContext["h2Font"]
+                        fontSize: sizingContext["fontSizeH2"]
                     }}>
                     {
                         nonSpecificContext["servings"].map((serving) =>
@@ -60,7 +60,7 @@ export default function MainAboutComponent() {
             </UlComponent>
             <H1Component id="tsMainH1" className={classNamingContext["h1"]} style={{
                     margin: 0,
-                    fontSize: sizingContext["h1Font"]
+                    fontSize: sizingContext["fontSizeH1"]
                 }}>
                 {nonSpecificContext["labelSkills"]}
             </H1Component>
@@ -70,7 +70,7 @@ export default function MainAboutComponent() {
                 }}>
                 <H2Component id="tsMainH2" className={classNamingContext["h2"]} style={{
                         margin: 0,
-                        fontSize: sizingContext["h2Font"]
+                        fontSize: sizingContext["fontSizeH2"]
                     }}>
                     {genericSkills}
                 </H2Component>
