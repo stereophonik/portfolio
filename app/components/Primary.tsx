@@ -197,8 +197,6 @@ export default function PrimaryComponent() {
                         outroAbout: styleOutroAbout
                         }}>
                         <NonSpecificContext.Provider value={{
-                                h1Headings: profile["h1Headings"],
-                                h2Headings: profile["h2Headings"],
                                 intro: introAbout,
                                 labelServings: labelServingsAbout,
                                 servings: servingsAbout,
@@ -218,7 +216,9 @@ export default function PrimaryComponent() {
                                     fontSizeH1Headings: fontSizeH1HeadingsProfile,
                                     fontSizeH2Headings: fontSizeH2HeadingsProfile,
                                     classNameH1Headings: classNameH1HeadingsProfile,
-                                    classNameH2Headings: classNameH2HeadingsProfile
+                                    classNameH2Headings: classNameH2HeadingsProfile,
+                                    h1Headings: profile["h1Headings"],
+                                    h2Headings: profile["h2Headings"]
                                 }}>
                                 <PrimaryProfileComponent />
                             </ProfileContext.Provider>
