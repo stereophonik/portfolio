@@ -1,6 +1,6 @@
-import EndingsAboutComponent from "./Endings";
-import StartingsAboutComponent from "./Startings";
-import MiddlesAboutComponent from "./Middles";
+import EndingsAboutComponent from "./Outro";
+import StartingsAboutComponent from "./Intro";
+import MiddlesAboutComponent from "./Main";
 
 export default function PrimaryAboutComponent() {
     return (
