@@ -1,13 +1,13 @@
-import EndingsAboutComponent from "./Outro";
-import StartingsAboutComponent from "./Intro";
-import MiddlesAboutComponent from "./Main";
+import OutroAboutComponent from "./Outro";
+import IntroAboutComponent from "./Intro";
+import MainAboutComponent from "./Main";
 
 export default function PrimaryAboutComponent() {
     return (
         <>
-            <StartingsAboutComponent />
-            <MiddlesAboutComponent />
-            <EndingsAboutComponent />
+            <IntroAboutComponent />
+            <MainAboutComponent />
+            <OutroAboutComponent />
         </>
     );
 }

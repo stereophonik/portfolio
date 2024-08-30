@@ -9,18 +9,18 @@ import { ClassNamingContext } from "../../contexts/ClassNaming";
 import { StylingContext } from "../../contexts/Styling";
 import { NonSpecificContext } from "../../contexts/NonSpecific";
 
-export default function StartingsAboutComponent() {
+export default function IntroAboutComponent() {
     const sizingContext = useContext(SizingContext);
     const classNamingContext = useContext(ClassNamingContext);
     const stylingContext = useContext(StylingContext);
     const nonSpecificContext = useContext(NonSpecificContext);
 
     return (
-        <DivComponent id="startings" style={stylingContext["startingsAbout"]}>
-            <DivComponent id="subStartings01" style={{
+        <DivComponent id="intro" style={stylingContext["introAbout"]}>
+            <DivComponent id="subIntro01" style={{
                 height: "10%"
             }}> </DivComponent>
-            <DivComponent id="subStartings02" style={{}}>
+            <DivComponent id="subIntro02" style={{}}>
                 <H1Component id="headingsH1" className={classNamingContext["h1"]} style={{
                         margin: 0,
                         fontSize: sizingContext["h1Font"]
@@ -28,8 +28,8 @@ export default function StartingsAboutComponent() {
                     Hello!
                 </H1Component>
                 {
-                    nonSpecificContext["startings"].map((starting) =>
-                        <H2Component id="startingsH2" className={classNamingContext["h2"]} style={{
+                    nonSpecificContext["intro"].map((starting) =>
+                        <H2Component id="introH2" className={classNamingContext["h2"]} style={{
                                 margin: 0,
                                 fontSize: sizingContext["h2Font"]
                             }}>

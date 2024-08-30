@@ -38,12 +38,12 @@ export default function PrimaryComponent() {
     const [isSize11, setIsSize11] = useState(false);
     const [isSize12, setIsSize12] = useState(false);
     const [profile, setProfile] = useState({});
-    const [aboutStartings, setAboutStartings] = useState([]);
-    const [aboutTableBringingsLabel, setAboutTableBringingsLabel] = useState("");
-    const [aboutTableBringingsContent, setAboutTableBringingsContent] = useState([]);
-    const [aboutTechnicalSkillsLabel, setAboutTechnicalSkillsLabel] = useState("");
-    const [aboutTechnicalSkillsContent, setAboutTechnicalSkillsContent] = useState([]);
-    const [aboutEndings, setAboutEndings] = useState([]);
+    const [introAbout, setIntroAbout] = useState([]);
+    const [tableBringingsLabelAbout, setTableBringingsLabelAbout] = useState("");
+    const [tableBringingsContentAbout, setTableBringingsContentAbout] = useState([]);
+    const [technicalSkillsLabelAbout, setTechnicalSkillsLabelAbout] = useState("");
+    const [technicalSkillsContentAbout, setTechnicalSkillsContentAbout] = useState([]);
+    const [outroAbout, setOutroAbout] = useState([]);
 
     useEffect(() => {
         function setIsSize0x() {
@@ -85,12 +85,12 @@ export default function PrimaryComponent() {
         })
             .then(aboutFile => aboutFile.json())
             .then(jsonAboutFile => {
-                setAboutStartings(jsonAboutFile.startings);
-                setAboutTableBringingsLabel(jsonAboutFile.tableBringingsLabel);
-                setAboutTableBringingsContent(jsonAboutFile.tableBringingsContent);
-                setAboutTechnicalSkillsLabel(jsonAboutFile.technicalSkillsLabel);
-                setAboutTechnicalSkillsContent(jsonAboutFile.technicalSkillsContent);
-                setAboutEndings(jsonAboutFile.endings);
+                setIntroAbout(jsonAboutFile.intro);
+                setTableBringingsLabelAbout(jsonAboutFile.tableBringingsLabel);
+                setTableBringingsContentAbout(jsonAboutFile.tableBringingsContent);
+                setTechnicalSkillsLabelAbout(jsonAboutFile.technicalSkillsLabel);
+                setTechnicalSkillsContentAbout(jsonAboutFile.technicalSkillsContent);
+                setOutroAbout(jsonAboutFile.outro);
             });
     }, []);
 
@@ -158,7 +158,7 @@ export default function PrimaryComponent() {
         textAlign: "center"
     }
 
-    const startingsAboutStyle = {
+    const introAboutStyle = {
         overflow: "hidden",
         width: "100vw",
         height: checkInnerWidth(
@@ -172,7 +172,7 @@ export default function PrimaryComponent() {
         textAlign: "center"
     }
 
-    const middlesAboutStyle = {
+    const mainAboutStyle = {
         overflow: "hidden",
         width: "100vw",
         height: checkInnerWidth(
@@ -186,7 +186,7 @@ export default function PrimaryComponent() {
         textAlign: "center"
     }
 
-    const endingsAboutStyle = {
+    const outroAboutStyle = {
         overflow: "hidden",
         width: "100vw",
         height: checkInnerWidth(
@@ -253,9 +253,9 @@ export default function PrimaryComponent() {
                     <StylingContext.Provider value={{
                         nav: navStyle,
                         profile: profileStyle,
-                        startingsAbout: startingsAboutStyle,
-                        middlesAbout: middlesAboutStyle,
-                        endingsAbout: endingsAboutStyle
+                        introAbout: introAboutStyle,
+                        mainAbout: mainAboutStyle,
+                        outroAbout: outroAboutStyle
                         }}>
                         <NonSpecificContext.Provider value={{
                                 divStyle: profile["divStyle"],
@@ -264,12 +264,12 @@ export default function PrimaryComponent() {
                                 imageStyle: profile["imageStyle"],
                                 headingsH1: profile["headingsH1"],
                                 headingsH2: profile["headingsH2"],
-                                startings: aboutStartings,
-                                tableBringingsLabel: aboutTableBringingsLabel,
-                                tableBringingsContent: aboutTableBringingsContent,
-                                technicalSkillsLabel: aboutTechnicalSkillsLabel,
-                                technicalSkillsContent: aboutTechnicalSkillsContent,
-                                endings: aboutEndings
+                                intro: introAbout,
+                                tableBringingsLabel: tableBringingsLabelAbout,
+                                tableBringingsContent: tableBringingsContentAbout,
+                                technicalSkillsLabel: technicalSkillsLabelAbout,
+                                technicalSkillsContent: technicalSkillsContentAbout,
+                                outro: outroAbout
                             }}>
                             <PrimaryNavComponent />
                             <PrimaryProfileComponent />

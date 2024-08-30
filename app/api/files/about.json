@@ -1,5 +1,5 @@
 {
-    "startings": [
+    "intro": [
         "Are you looking to have a website created or edited for your small business?",
         "I'm here to assist! With 6 years of experience transitioning from quality testing to front-end development, I bring a unique perspective to streamline your workflows and enhance your web applications."
     ],
@@ -35,7 +35,7 @@
             "location": "/language-skills"
         }
     ],
-    "endings": [
+    "outro": [
         "I understand it's a bit technical, but let's discuss your specific needs. Together, we can achieve your dream website. Looking forward to chatting soon!",
         "Best regards,",
         "Nik"

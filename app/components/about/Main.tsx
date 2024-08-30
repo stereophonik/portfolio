@@ -12,7 +12,7 @@ import { StylingContext } from "../../contexts/Styling";
 import { NonSpecificContext } from "../../contexts/NonSpecific";
 import LinkComponent from "../Link";
 
-export default function MiddlesAboutComponent() {
+export default function MainAboutComponent() {
     const sizingContext = useContext(SizingContext);
     const classNamingContext = useContext(ClassNamingContext);
     const stylingContext = useContext(StylingContext);
@@ -29,11 +29,11 @@ export default function MiddlesAboutComponent() {
     );
 
     return (
-        <DivComponent id="middles" style={stylingContext["middlesAbout"]}>
-            <DivComponent id="subMiddles" style={{
+        <DivComponent id="main" style={stylingContext["mainAbout"]}>
+            <DivComponent id="subMain" style={{
                 height: "10%"
             }}> </DivComponent>
-            <H1Component id="tbMiddlesH1" className={classNamingContext["h1"]} style={{
+            <H1Component id="tbMainH1" className={classNamingContext["h1"]} style={{
                     margin: 0,
                     fontSize: sizingContext["h1Font"]
                 }}>
@@ -43,7 +43,7 @@ export default function MiddlesAboutComponent() {
                     paddingInlineStart: "0",
                     listStyleType: "none"
                 }}>
-                <H2Component id="tbMiddlesH2" className={classNamingContext["h2"]} style={{
+                <H2Component id="tbMainH2" className={classNamingContext["h2"]} style={{
                         margin: 0,
                         fontSize: sizingContext["h2Font"]
                     }}>
@@ -58,7 +58,7 @@ export default function MiddlesAboutComponent() {
                     }
                 </H2Component>
             </UlComponent>
-            <H1Component id="tsMiddlesH1" className={classNamingContext["h1"]} style={{
+            <H1Component id="tsMainH1" className={classNamingContext["h1"]} style={{
                     margin: 0,
                     fontSize: sizingContext["h1Font"]
                 }}>
@@ -68,7 +68,7 @@ export default function MiddlesAboutComponent() {
                     paddingInlineStart: "0",
                     listStyleType: "none"
                 }}>
-                <H2Component id="tsMiddlesH2" className={classNamingContext["h2"]} style={{
+                <H2Component id="tsMainH2" className={classNamingContext["h2"]} style={{
                         margin: 0,
                         fontSize: sizingContext["h2Font"]
                     }}>
