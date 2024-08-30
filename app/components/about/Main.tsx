@@ -76,5 +76,5 @@ export default function MainAboutComponent() {
                 </H2Component>
             </UlComponent>
         </DivComponent>
-    )
+    );
 }

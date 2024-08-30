@@ -39,5 +39,5 @@ export default function IntroAboutComponent() {
                 }
             </DivComponent>
         </DivComponent>
-    )
+    );
 }

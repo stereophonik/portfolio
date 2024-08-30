@@ -16,12 +16,12 @@ import { NonSpecificContext } from "../contexts/NonSpecific";
 const anonymousPro = Anonymous_Pro({
     weight: "400",
     subsets: ["latin"]
-})
+});
 
 const robotoMono = Roboto_Mono({
     weight: "700",
     subsets: ["latin"]
-})
+});
 
 export default function PrimaryComponent() {
     const [isSize00, setIsSize00] = useState(false);

@@ -33,5 +33,5 @@ export default function OutroAboutComponent() {
                 {nonSpecificContext["outro"][0]}
             </H2Component>
         </DivComponent>
-    )
+    );
 }
