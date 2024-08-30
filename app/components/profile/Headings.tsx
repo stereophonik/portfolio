@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import DivComponent from "../Div";
+import HeadingsComponent from "../Headings";
 import H1Component from "../H1";
 import H2Component from "../H2";
 
@@ -10,7 +10,7 @@ export default function HeadingsProfileComponent() {
     const profileContext = useContext(ProfileContext);
 
     return (
-        <DivComponent id="headings" style={profileContext["styleHeadings"]}>
+        <HeadingsComponent style={profileContext["styleHeadings"]}>
             <H1Component id="h1Headings" className={profileContext["classNameH1Headings"]} style={{
                     margin: 0,
                     fontSize: profileContext["fontSizeH1Headings"]
@@ -23,6 +23,6 @@ export default function HeadingsProfileComponent() {
                 }}>
                 {profileContext["h2Headings"]}
             </H2Component>
-        </DivComponent>
+        </HeadingsComponent>
     );
 }

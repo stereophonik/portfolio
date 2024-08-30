@@ -7,22 +7,10 @@ import UlComponent from "../Ul";
 import LiComponent from "../Li";
 import LinkComponent from "../Link";
 
-import { NonSpecificContext } from "../../contexts/NonSpecific";
 import { AboutContext } from "../../contexts/About";
 
 export default function MainAboutComponent() {
     const aboutContext = useContext(AboutContext);
-    const nonSpecificContext = useContext(NonSpecificContext);
-
-    const genericSkills = nonSpecificContext["skills"].map((skill) =>
-        <LiComponent key={
-                nonSpecificContext["skills"].indexOf(skill)
-            } style={{}}>
-            <LinkComponent href={skill.location}>
-                {skill.generic}
-            </LinkComponent>
-        </LiComponent>
-    );
 
     return (
         <DivComponent id="main" style={aboutContext["styleMain"]}>
@@ -33,7 +21,7 @@ export default function MainAboutComponent() {
                     margin: 0,
                     fontSize: aboutContext["h1Main"]["fontSize"]
                 }}>
-                {nonSpecificContext["labelServings"]}
+                {aboutContext["labelServingsMain"]}
             </H1Component>
             <UlComponent style={{
                     paddingInlineStart: "0",
@@ -44,11 +32,11 @@ export default function MainAboutComponent() {
                         fontSize: aboutContext["h2Main"]["fontSize"]
                     }}>
                     {
-                        nonSpecificContext["servings"].map((serving) =>
+                        aboutContext["servingsMain"].map((servingMain) =>
                             <LiComponent key={
-                                    nonSpecificContext["servings"].indexOf(serving)
+                                    aboutContext["servingsMain"].indexOf(servingMain)
                                 } style={{}}>
-                                {serving}
+                                {servingMain}
                             </LiComponent>
                         )
                     }
@@ -58,7 +46,7 @@ export default function MainAboutComponent() {
                     margin: 0,
                     fontSize: aboutContext["h1Main"]["fontSize"]
                 }}>
-                {nonSpecificContext["labelSkills"]}
+                {aboutContext["labelSkillsMain"]}
             </H1Component>
             <UlComponent style={{
                     paddingInlineStart: "0",
@@ -68,7 +56,17 @@ export default function MainAboutComponent() {
                         margin: 0,
                         fontSize: aboutContext["h2Main"]["fontSize"]
                     }}>
-                    {genericSkills}
+                    {
+                        aboutContext["skillsMain"].map((skillMain) =>
+                            <LiComponent key={
+                                aboutContext["skillsMain"].indexOf(skillMain)
+                            } style={{}}>
+                                <LinkComponent href={skillMain.location}>
+                                    {skillMain.generic}
+                                </LinkComponent>
+                            </LiComponent>
+                        )
+                    }
                 </H2Component>
             </UlComponent>
         </DivComponent>

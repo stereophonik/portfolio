@@ -4,11 +4,9 @@ import DivComponent from "../Div";
 import H1Component from "../H1";
 import H2Component from "../H2";
 
-import { NonSpecificContext } from "../../contexts/NonSpecific";
 import { AboutContext } from "../../contexts/About";
 
 export default function OutroAboutComponent() {
-    const nonSpecificContext = useContext(NonSpecificContext);
     const aboutContext = useContext(AboutContext);
 
     return (
@@ -26,7 +24,7 @@ export default function OutroAboutComponent() {
                     margin: 0,
                     fontSize: aboutContext["h2Outro"]["fontSize"]
                 }}>
-                {nonSpecificContext["outro"]}
+                {aboutContext["outro"]}
             </H2Component>
         </DivComponent>
     );

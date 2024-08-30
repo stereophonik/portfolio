@@ -8,8 +8,6 @@ import PrimaryNavComponent from "./nav/Primary";
 import PrimaryProfileComponent from "./profile/Primary";
 import PrimaryAboutComponent from "./about/Primary";
 
-import { StylingContext } from "../contexts/Styling";
-import { NonSpecificContext } from "../contexts/NonSpecific";
 import { NavContext } from "../contexts/Nav";
 import { ProfileContext } from "../contexts/Profile";
 import { AboutContext } from "../contexts/About";
@@ -28,10 +26,10 @@ export default function PrimaryComponent() {
     const [areSizes, setAreSizes] = useState([]);
     const [profile, setProfile] = useState({});
     const [introAbout, setIntroAbout] = useState([]);
-    const [labelServingsAbout, setLabelServingsAbout] = useState("");
-    const [servingsAbout, setServingsAbout] = useState([]);
-    const [labelSkillsAbout, setLabelSkillsAbout] = useState("");
-    const [skillsAbout, setSkillsAbout] = useState([]);
+    const [labelServingsMainAbout, setLabelServingsMainAbout] = useState("");
+    const [servingsMainAbout, setServingsMainAbout] = useState([]);
+    const [labelSkillsMainAbout, setLabelSkillsMainAbout] = useState("");
+    const [skillsMainAbout, setSkillsMainAbout] = useState([]);
     const [outroAbout, setOutroAbout] = useState([]);
 
     useEffect(() => {
@@ -70,10 +68,10 @@ export default function PrimaryComponent() {
             .then(fileAbout => fileAbout.json())
             .then(parsedFileAbout => {
                 setIntroAbout(parsedFileAbout.intro);
-                setLabelServingsAbout(parsedFileAbout.labelServings);
-                setServingsAbout(parsedFileAbout.servings);
-                setLabelSkillsAbout(parsedFileAbout.labelSkills);
-                setSkillsAbout(parsedFileAbout.skills);
+                setLabelServingsMainAbout(parsedFileAbout.labelServingsMain);
+                setServingsMainAbout(parsedFileAbout.servingsMain);
+                setLabelSkillsMainAbout(parsedFileAbout.labelSkillsMain);
+                setSkillsMainAbout(parsedFileAbout.skillsMain);
                 setOutroAbout(parsedFileAbout.outro);
             });
     }, []);
@@ -249,54 +247,48 @@ export default function PrimaryComponent() {
 
     return (
         <>
-            <StylingContext.Provider value={{
+            <NavContext.Provider value={{
+                    styleNav: styleNavNav,
+                    h2: h2Nav
                 }}>
-                <NonSpecificContext.Provider value={{
-                        labelServings: labelServingsAbout,
-                        servings: servingsAbout,
-                        labelSkills: labelSkillsAbout,
-                        skills: skillsAbout,
-                        outro: outroAbout
-                    }}>
-                    <NavContext.Provider value={{
-                            styleNav: styleNavNav,
-                            h2: h2Nav
-                        }}>
-                        <PrimaryNavComponent />
-                    </NavContext.Provider>
-                    <ProfileContext.Provider value={{
-                            styleProfile: styleProfileProfile,
-                            div: divProfile,
-                            srcImage: profile["srcImage"],
-                            altImage: profile["altImage"],
-                            styleImage: profile["styleImage"],
-                            widthImage: widthImageProfile,
-                            heightImage: heightImageProfile,
-                            fontSizeH1Headings: fontSizeH1HeadingsProfile,
-                            fontSizeH2Headings: fontSizeH2HeadingsProfile,
-                            classNameH1Headings: classNameH1HeadingsProfile,
-                            classNameH2Headings: classNameH2HeadingsProfile,
-                            h1Headings: profile["h1Headings"],
-                            h2Headings: profile["h2Headings"]
-                        }}>
-                        <PrimaryProfileComponent />
-                    </ProfileContext.Provider>
-                    <AboutContext.Provider value={{
-                            styleIntro: styleIntroAbout,
-                            h1Intro: h1IntroAbout,
-                            h2Intro: h2IntroAbout,
-                            intro: introAbout,
-                            styleMain: styleMainAbout,
-                            h1Main: h1MainAbout,
-                            h2Main: h2MainAbout,
-                            styleOutro: styleOutroAbout,
-                            h1Outro: h1OutroAbout,
-                            h2Outro: h2OutroAbout
-                        }}>
-                        <PrimaryAboutComponent />
-                    </AboutContext.Provider>
-                </NonSpecificContext.Provider>
-            </StylingContext.Provider>
+                <PrimaryNavComponent />
+            </NavContext.Provider>
+            <ProfileContext.Provider value={{
+                    styleProfile: styleProfileProfile,
+                    div: divProfile,
+                    srcImage: profile["srcImage"],
+                    altImage: profile["altImage"],
+                    styleImage: profile["styleImage"],
+                    widthImage: widthImageProfile,
+                    heightImage: heightImageProfile,
+                    fontSizeH1Headings: fontSizeH1HeadingsProfile,
+                    fontSizeH2Headings: fontSizeH2HeadingsProfile,
+                    classNameH1Headings: classNameH1HeadingsProfile,
+                    classNameH2Headings: classNameH2HeadingsProfile,
+                    h1Headings: profile["h1Headings"],
+                    h2Headings: profile["h2Headings"]
+                }}>
+                <PrimaryProfileComponent />
+            </ProfileContext.Provider>
+            <AboutContext.Provider value={{
+                    styleIntro: styleIntroAbout,
+                    h1Intro: h1IntroAbout,
+                    h2Intro: h2IntroAbout,
+                    intro: introAbout,
+                    styleMain: styleMainAbout,
+                    h1Main: h1MainAbout,
+                    h2Main: h2MainAbout,
+                    labelServingsMain: labelServingsMainAbout,
+                    servingsMain: servingsMainAbout,
+                    labelSkillsMain: labelSkillsMainAbout,
+                    skillsMain: skillsMainAbout,
+                    styleOutro: styleOutroAbout,
+                    h1Outro: h1OutroAbout,
+                    h2Outro: h2OutroAbout,
+                    outro: outroAbout
+                }}>
+                <PrimaryAboutComponent />
+            </AboutContext.Provider>
         </>
     );
 }
