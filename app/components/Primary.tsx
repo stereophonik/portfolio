@@ -27,10 +27,10 @@ export default function PrimaryComponent() {
     const [areSizes, setAreSizes] = useState([]);
     const [profile, setProfile] = useState({});
     const [introAbout, setIntroAbout] = useState([]);
-    const [servingsLabelAbout, setServingsLabelAbout] = useState("");
-    const [servingsContentAbout, setServingsContentAbout] = useState([]);
-    const [skillsLabelAbout, setSkillsLabelAbout] = useState("");
-    const [skillsContentAbout, setSkillsContentAbout] = useState([]);
+    const [labelServingsAbout, setLabelServingsAbout] = useState("");
+    const [servingsAbout, setServingsAbout] = useState([]);
+    const [labelSkillsAbout, setLabelSkillsAbout] = useState("");
+    const [skillsAbout, setSkillsAbout] = useState([]);
     const [outroAbout, setOutroAbout] = useState([]);
 
     useEffect(() => {
@@ -70,10 +70,10 @@ export default function PrimaryComponent() {
             .then(aboutFile => aboutFile.json())
             .then(jsonAboutFile => {
                 setIntroAbout(jsonAboutFile.intro);
-                setServingsLabelAbout(jsonAboutFile.servingsLabel);
-                setServingsContentAbout(jsonAboutFile.servingsContent);
-                setSkillsLabelAbout(jsonAboutFile.skillsLabel);
-                setSkillsContentAbout(jsonAboutFile.skillsContent);
+                setLabelServingsAbout(jsonAboutFile.labelServings);
+                setServingsAbout(jsonAboutFile.servings);
+                setLabelSkillsAbout(jsonAboutFile.labelSkills);
+                setSkillsAbout(jsonAboutFile.skills);
                 setOutroAbout(jsonAboutFile.outro);
             });
     }, []);
@@ -212,10 +212,10 @@ export default function PrimaryComponent() {
                                 headingsH1: profile["headingsH1"],
                                 headingsH2: profile["headingsH2"],
                                 intro: introAbout,
-                                servingsLabel: servingsLabelAbout,
-                                servingsContent: servingsContentAbout,
-                                skillsLabel: skillsLabelAbout,
-                                skillsContent: skillsContentAbout,
+                                labelServings: labelServingsAbout,
+                                servings: servingsAbout,
+                                labelSkills: labelSkillsAbout,
+                                skills: skillsAbout,
                                 outro: outroAbout
                             }}>
                             <PrimaryNavComponent />

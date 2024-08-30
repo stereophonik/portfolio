@@ -18,9 +18,9 @@ export default function MainAboutComponent() {
     const stylingContext = useContext(StylingContext);
     const nonSpecificContext = useContext(NonSpecificContext);
 
-    const genericSkills = nonSpecificContext["skillsContent"].map((skill) =>
+    const genericSkills = nonSpecificContext["skills"].map((skill) =>
         <LiComponent key={
-                nonSpecificContext["skillsContent"].indexOf(skill)
+                nonSpecificContext["skills"].indexOf(skill)
             } style={{}}>
             <LinkComponent href={skill.location}>
                 {skill.generic}
@@ -37,7 +37,7 @@ export default function MainAboutComponent() {
                     margin: 0,
                     fontSize: sizingContext["h1Font"]
                 }}>
-                {nonSpecificContext["servingsLabel"]}
+                {nonSpecificContext["labelServings"]}
             </H1Component>
             <UlComponent style={{
                     paddingInlineStart: "0",
@@ -48,9 +48,9 @@ export default function MainAboutComponent() {
                         fontSize: sizingContext["h2Font"]
                     }}>
                     {
-                        nonSpecificContext["servingsContent"].map((serving) =>
+                        nonSpecificContext["servings"].map((serving) =>
                             <LiComponent key={
-                                    nonSpecificContext["servingsContent"].indexOf(serving)
+                                    nonSpecificContext["servings"].indexOf(serving)
                                 } style={{}}>
                                 {serving}
                             </LiComponent>
@@ -62,7 +62,7 @@ export default function MainAboutComponent() {
                     margin: 0,
                     fontSize: sizingContext["h1Font"]
                 }}>
-                {nonSpecificContext["skillsLabel"]}
+                {nonSpecificContext["labelSkills"]}
             </H1Component>
             <UlComponent style={{
                     paddingInlineStart: "0",
