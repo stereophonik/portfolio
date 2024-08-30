@@ -56,7 +56,6 @@ export default function PrimaryComponent() {
             .then(fileProfile => fileProfile.json())
             .then(parsedFileProfile => {
                 setProfile({
-                    styleDiv: parsedFileProfile.styleDiv,
                     srcImage: parsedFileProfile.srcImage,
                     altImage: parsedFileProfile.altImage,
                     styleImage: parsedFileProfile.styleImage,
@@ -103,7 +102,7 @@ export default function PrimaryComponent() {
         textAlign: "center"
     }
 
-    const styleProfile = {
+    const styleProfileProfile = {
         overflow: "hidden",
         width: "100vw",
         height: checkInnerWidth(
@@ -113,6 +112,38 @@ export default function PrimaryComponent() {
         ),
         textAlign: "center"
     }
+
+    const divProfile = {
+        id: "divProfile",
+        style: {
+            height: "10%"
+        }
+    }
+
+    const widthImageProfile = checkInnerWidth(
+        areSizes,
+        [130, 130, 130, 130, 130, 160, 180, 200, 220, 240, 260, 260, 260, 260]
+    );
+
+    const heightImageProfile = checkInnerWidth(
+        areSizes,
+        [175, 175, 175, 175, 175, 214, 241, 267, 294, 321, 348, 348, 348, 348]
+    );
+
+    const fontSizeH1HeadingsProfile = checkInnerWidth(
+        areSizes,
+        ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+            "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+    );
+
+    const fontSizeH2HeadingsProfile = checkInnerWidth(
+        areSizes,
+        ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+            "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+    );
+
+    const classNameH1HeadingsProfile = robotoMono.className;
+    const classNameH2HeadingsProfile = anonymousPro.className;
 
     const styleIntroAbout = {
         overflow: "hidden",
@@ -153,55 +184,19 @@ export default function PrimaryComponent() {
         textAlign: "center"
     }
 
-    const classNameH1 = robotoMono.className;
-    const classNameH2 = anonymousPro.className;
-
-    const fontSizeH1 = checkInnerWidth(
-        areSizes,
-        ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-    );
-
-    const fontSizeH2 = checkInnerWidth(
-        areSizes,
-        ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-    );
-
-    const widthImage = checkInnerWidth(
-        areSizes,
-        [130, 130, 130, 130, 130, 160, 180, 200, 220, 240, 260, 260, 260, 260]
-    );
-
-    const heightImage = checkInnerWidth(
-        areSizes,
-        [175, 175, 175, 175, 175, 214, 241, 267, 294, 321, 348, 348, 348, 348]
-    );
-
     return (
         <>
             <SizingContext.Provider value={{
-                    fontSizeH1: fontSizeH1,
-                    fontSizeH2: fontSizeH2,
-                    widthImage: widthImage,
-                    heightImage: heightImage
                 }}>
                 <ClassNamingContext.Provider value={{
-                        h1: classNameH1,
-                        h2: classNameH2
                     }}>
                     <StylingContext.Provider value={{
                         nav: styleNav,
-                        profile: styleProfile,
                         introAbout: styleIntroAbout,
                         mainAbout: styleMainAbout,
                         outroAbout: styleOutroAbout
                         }}>
                         <NonSpecificContext.Provider value={{
-                                styleDiv: profile["styleDiv"],
-                                srcImage: profile["srcImage"],
-                                altImage: profile["altImage"],
-                                styleImage: profile["styleImage"],
                                 h1Headings: profile["h1Headings"],
                                 h2Headings: profile["h2Headings"],
                                 intro: introAbout,
@@ -213,7 +208,17 @@ export default function PrimaryComponent() {
                             }}>
                             <PrimaryNavComponent />
                             <ProfileContext.Provider value={{
-
+                                    styleProfile: styleProfileProfile,
+                                    div: divProfile,
+                                    srcImage: profile["srcImage"],
+                                    altImage: profile["altImage"],
+                                    styleImage: profile["styleImage"],
+                                    widthImage: widthImageProfile,
+                                    heightImage: heightImageProfile,
+                                    fontSizeH1Headings: fontSizeH1HeadingsProfile,
+                                    fontSizeH2Headings: fontSizeH2HeadingsProfile,
+                                    classNameH1Headings: classNameH1HeadingsProfile,
+                                    classNameH2Headings: classNameH2HeadingsProfile
                                 }}>
                                 <PrimaryProfileComponent />
                             </ProfileContext.Provider>

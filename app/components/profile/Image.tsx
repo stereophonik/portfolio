@@ -2,18 +2,16 @@ import { useContext } from "react";
 
 import ImageComponent from "../Image";
 
-import { SizingContext } from "../../contexts/Sizing";
-import { NonSpecificContext } from "../../contexts/NonSpecific";
+import { ProfileContext } from "../../contexts/Profile";
 
 export default function ImageProfileComponent() {
-    const sizingContext = useContext(SizingContext);
-    const nonSpecificContext = useContext(NonSpecificContext);
+    const profileContext = useContext(ProfileContext);
 
     return <ImageComponent
-            src={nonSpecificContext["srcImage"]}
-            alt={nonSpecificContext["altImage"]}
-            style={nonSpecificContext["styleImage"]}
-            width={sizingContext["widthImage"]}
-            height={sizingContext["heightImage"]}
+            src={profileContext["srcImage"]}
+            alt={profileContext["altImage"]}
+            style={profileContext["styleImage"]}
+            width={profileContext["widthImage"]}
+            height={profileContext["heightImage"]}
     />;
 }

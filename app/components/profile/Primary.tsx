@@ -5,16 +5,16 @@ import DivComponent from "../Div";
 import ImageProfileComponent from "./Image";
 import HeadingsProfileComponent from "./Headings";
 
-import { StylingContext } from "../../contexts/Styling";
+import {ProfileContext} from "../../contexts/Profile";
 
 export default function PrimaryProfileComponent() {
-    const stylingContext = useContext(StylingContext);
+    const profileContext = useContext(ProfileContext);
 
     return (
-        <ProfileComponent style={stylingContext["profile"]}>
-            <DivComponent id="subProfile" style={{
-                    height: "10%"
-                }}> </DivComponent>
+        <ProfileComponent style={profileContext["styleProfile"]}>
+            <DivComponent id={profileContext["div"]["id"]} style={
+                    profileContext["div"]["style"]
+                }> </DivComponent>
             <ImageProfileComponent />
             <HeadingsProfileComponent />
         </ProfileComponent>

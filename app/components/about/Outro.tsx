@@ -20,13 +20,13 @@ export default function OutroAboutComponent() {
             <DivComponent id="subOutro" style={{
                 height: "10%"
             }}> </DivComponent>
-            <H1Component id="outroH1" className={classNamingContext["h1"]} style={{
+            <H1Component id="outroH1" className={classNamingContext["classNameH1"]} style={{
                     margin: 0,
                     fontSize: sizingContext["fontSizeH1"]
                 }}>
                 Btw...
             </H1Component>
-            <H2Component id="outroH2" className={classNamingContext["h2"]} style={{
+            <H2Component id="outroH2" className={classNamingContext["classNameH2"]} style={{
                     margin: 0,
                     fontSize: sizingContext["fontSizeH2"]
                 }}>

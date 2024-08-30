@@ -33,7 +33,7 @@ export default function MainAboutComponent() {
             <DivComponent id="subMain" style={{
                 height: "10%"
             }}> </DivComponent>
-            <H1Component id="tbMainH1" className={classNamingContext["h1"]} style={{
+            <H1Component id="tbMainH1" className={classNamingContext["classNameH1"]} style={{
                     margin: 0,
                     fontSize: sizingContext["fontSizeH1"]
                 }}>
@@ -43,7 +43,7 @@ export default function MainAboutComponent() {
                     paddingInlineStart: "0",
                     listStyleType: "none"
                 }}>
-                <H2Component id="tbMainH2" className={classNamingContext["h2"]} style={{
+                <H2Component id="tbMainH2" className={classNamingContext["classNameH2"]} style={{
                         margin: 0,
                         fontSize: sizingContext["fontSizeH2"]
                     }}>
@@ -58,7 +58,7 @@ export default function MainAboutComponent() {
                     }
                 </H2Component>
             </UlComponent>
-            <H1Component id="tsMainH1" className={classNamingContext["h1"]} style={{
+            <H1Component id="tsMainH1" className={classNamingContext["classNameH1"]} style={{
                     margin: 0,
                     fontSize: sizingContext["fontSizeH1"]
                 }}>
@@ -68,7 +68,7 @@ export default function MainAboutComponent() {
                     paddingInlineStart: "0",
                     listStyleType: "none"
                 }}>
-                <H2Component id="tsMainH2" className={classNamingContext["h2"]} style={{
+                <H2Component id="tsMainH2" className={classNamingContext["classNameH2"]} style={{
                         margin: 0,
                         fontSize: sizingContext["fontSizeH2"]
                     }}>

@@ -18,7 +18,7 @@ export default function PrimaryNavComponent() {
     return (
         <NavComponent className="" style={stylingContext["nav"]}>
             <UlComponent style={{paddingInlineStart: "0"}}>
-                <H2Component id="tbMainH2" className={classNamingContext["h2"]} style={{
+                <H2Component id="tbMainH2" className={classNamingContext["classNameH2"]} style={{
                     margin: 0,
                     fontSize: sizingContext["fontSizeH2"]
                 }}>
