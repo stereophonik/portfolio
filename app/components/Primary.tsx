@@ -95,14 +95,14 @@ export default function PrimaryComponent() {
             : sizes[13];
     }
 
-    const navStyle = {
+    const styleNav = {
         overflow: "hidden",
         backgroundColor: "#2677D9",
         color: "#2BC1AF",
         textAlign: "center"
     }
 
-    const profileStyle = {
+    const styleProfile = {
         overflow: "hidden",
         width: "100vw",
         height: checkInnerWidth(
@@ -113,7 +113,7 @@ export default function PrimaryComponent() {
         textAlign: "center"
     }
 
-    const introAboutStyle = {
+    const styleIntroAbout = {
         overflow: "hidden",
         width: "100vw",
         height: checkInnerWidth(
@@ -126,7 +126,7 @@ export default function PrimaryComponent() {
         textAlign: "center"
     }
 
-    const mainAboutStyle = {
+    const styleMainAbout = {
         overflow: "hidden",
         width: "100vw",
         height: checkInnerWidth(
@@ -139,7 +139,7 @@ export default function PrimaryComponent() {
         textAlign: "center"
     }
 
-    const outroAboutStyle = {
+    const styleOutroAbout = {
         overflow: "hidden",
         width: "100vw",
         height: checkInnerWidth(
@@ -152,57 +152,58 @@ export default function PrimaryComponent() {
         textAlign: "center"
     }
 
-    const h1ClassName = robotoMono.className;
-    const h2ClassName = anonymousPro.className;
-    const buttonClassName = anonymousPro.className;
+    const classNameH1 = robotoMono.className;
+    const classNameH2 = anonymousPro.className;
+    const classNameButton = anonymousPro.className;
 
-    const h1FontSize = checkInnerWidth(
+    const fontSizeH1 = checkInnerWidth(
         areSizes,
         ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
         "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
     );
-    const h2FontSize = checkInnerWidth(
+
+    const fontSizeH2 = checkInnerWidth(
         areSizes,
         ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
         "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
     );
-    const buttonFontSize = checkInnerWidth(
+
+    const fontSizeButton = checkInnerWidth(
         areSizes,
         ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
         "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
     );
-    const imageSizing = {
-        width: checkInnerWidth(
-            areSizes,
-            [130, 130, 130, 130, 130, 160, 180,
-            200, 220, 240, 260, 260, 260, 260]
-        ),
-        height: checkInnerWidth(
-            areSizes,
-            [175, 175, 175, 175, 175, 214, 241,
-            267, 294, 321, 348, 348, 348, 348]
-        )
-    }
+
+    const widthImage = checkInnerWidth(
+        areSizes,
+        [130, 130, 130, 130, 130, 160, 180, 200, 220, 240, 260, 260, 260, 260]
+    );
+
+    const heightImage = checkInnerWidth(
+        areSizes,
+        [175, 175, 175, 175, 175, 214, 241, 267, 294, 321, 348, 348, 348, 348]
+    );
 
     return (
         <>
             <SizingContext.Provider value={{
-                    h1Font: h1FontSize,
-                    h2Font: h2FontSize,
-                    buttonFont: buttonFontSize,
-                    image: imageSizing
+                    h1Font: fontSizeH1,
+                    h2Font: fontSizeH2,
+                    buttonFont: fontSizeButton,
+                    widthImage: widthImage,
+                    heightImage: heightImage
                 }}>
                 <ClassNamingContext.Provider value={{
-                        h1: h1ClassName,
-                        h2: h2ClassName,
-                        button: buttonClassName
+                        h1: classNameH1,
+                        h2: classNameH2,
+                        button: classNameButton
                     }}>
                     <StylingContext.Provider value={{
-                        nav: navStyle,
-                        profile: profileStyle,
-                        introAbout: introAboutStyle,
-                        mainAbout: mainAboutStyle,
-                        outroAbout: outroAboutStyle
+                        nav: styleNav,
+                        profile: styleProfile,
+                        introAbout: styleIntroAbout,
+                        mainAbout: styleMainAbout,
+                        outroAbout: styleOutroAbout
                         }}>
                         <NonSpecificContext.Provider value={{
                                 styleDiv: profile["styleDiv"],

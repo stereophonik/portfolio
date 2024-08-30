@@ -13,7 +13,7 @@ export default function ImageProfileComponent() {
             src={nonSpecificContext["srcImage"]}
             alt={nonSpecificContext["altImage"]}
             style={nonSpecificContext["styleImage"]}
-            width={sizingContext["image"]["width"]}
-            height={sizingContext["image"]["height"]}
+            width={sizingContext["widthImage"]}
+            height={sizingContext["heightImage"]}
     />;
 }
