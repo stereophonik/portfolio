@@ -28,12 +28,12 @@ export default function IntroAboutComponent() {
                     Hello!
                 </H1Component>
                 {
-                    nonSpecificContext["intro"].map((starting) =>
+                    nonSpecificContext["intro"].map((intro) =>
                         <H2Component id="introH2" className={classNamingContext["h2"]} style={{
                                 margin: 0,
                                 fontSize: sizingContext["h2Font"]
                             }}>
-                            {starting}
+                            {intro}
                         </H2Component>
                     )
                 }

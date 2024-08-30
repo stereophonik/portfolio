@@ -30,7 +30,7 @@ export default function OutroAboutComponent() {
                     margin: 0,
                     fontSize: sizingContext["h2Font"]
                 }}>
-                {nonSpecificContext["outro"][0]}
+                {nonSpecificContext["outro"]}
             </H2Component>
         </DivComponent>
     );

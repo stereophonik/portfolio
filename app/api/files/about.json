@@ -35,9 +35,5 @@
             "location": "/language-skills"
         }
     ],
-    "outro": [
-        "I understand it's a bit technical, but let's discuss your specific needs. Together, we can achieve your dream website. Looking forward to chatting soon!",
-        "Best regards,",
-        "Nik"
-    ]
+    "outro": "I understand it's a bit technical, but let's discuss your specific needs. Together, we can achieve your dream website. Looking forward to chatting soon!"
 }
