@@ -14,18 +14,18 @@ export default function HeadingsProfileComponent() {
     const classNamingContext = useContext(ClassNamingContext);
 
     return (
-        <DivComponent id="headings" style={nonSpecificContext["headingsStyle"]}>
-            <H1Component id="headingsH1" className={classNamingContext["h1"]} style={{
+        <DivComponent id="headings" style={nonSpecificContext["styleHeadings"]}>
+            <H1Component id="h1Headings" className={classNamingContext["h1"]} style={{
                     margin: 0,
                     fontSize: sizingContext["h1Font"]
                 }}>
-                {nonSpecificContext["headingsH1"]}
+                {nonSpecificContext["h1Headings"]}
             </H1Component>
-            <H2Component id="headingsH2" className={classNamingContext["h2"]} style={{
+            <H2Component id="h2Headings" className={classNamingContext["h2"]} style={{
                     margin: 0,
                     fontSize: sizingContext["h2Font"]
                 }}>
-                {nonSpecificContext["headingsH2"]}
+                {nonSpecificContext["h2Headings"]}
             </H2Component>
         </DivComponent>
     );

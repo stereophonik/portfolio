@@ -10,9 +10,9 @@ export default function ImageProfileComponent() {
     const nonSpecificContext = useContext(NonSpecificContext);
 
     return <ImageComponent
-            src={nonSpecificContext["imageSrc"]}
-            alt={nonSpecificContext["imageAlt"]}
-            style={nonSpecificContext["imageStyle"]}
+            src={nonSpecificContext["srcImage"]}
+            alt={nonSpecificContext["altImage"]}
+            style={nonSpecificContext["styleImage"]}
             width={sizingContext["image"]["width"]}
             height={sizingContext["image"]["height"]}
     />;

@@ -1,15 +1,15 @@
 {
-    "divStyle": {
+    "styleDiv": {
         "height": "1vw"
     },
-    "imageSrc": "/picture.jpg",
-    "imageAlt": "Nikolai Reyes",
-    "imageStyle": {
+    "srcImage": "/picture.jpg",
+    "altImage": "Nikolai Reyes",
+    "styleImage": {
         "maxWidth": "100%",
         "maxHeight": "100%"
     },
-    "headingsH1": "Nikolai Reyes",
-    "headingsH2": "Transitioning to Front-end Development",
-    "headingsStyle": {
+    "h1Headings": "Nikolai Reyes",
+    "h2Headings": "Transitioning to Front-end Development",
+    "styleHeadings": {
     }
 }

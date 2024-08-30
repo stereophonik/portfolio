@@ -21,7 +21,7 @@ export default function IntroAboutComponent() {
                 height: "10%"
             }}> </DivComponent>
             <DivComponent id="subIntro02" style={{}}>
-                <H1Component id="headingsH1" className={classNamingContext["h1"]} style={{
+                <H1Component id="h1Headings" className={classNamingContext["h1"]} style={{
                         margin: 0,
                         fontSize: sizingContext["h1Font"]
                     }}>

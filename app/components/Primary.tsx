@@ -52,29 +52,29 @@ export default function PrimaryComponent() {
         fetch("/api?fileName=profile", {
             method: "GET"
         })
-            .then(profileFile => profileFile.json())
-            .then(jsonProfileFile => {
+            .then(fileProfile => fileProfile.json())
+            .then(parsedFileProfile => {
                 setProfile({
-                    divStyle: jsonProfileFile.divStyle,
-                    imageSrc: jsonProfileFile.imageSrc,
-                    imageAlt: jsonProfileFile.imageAlt,
-                    imageStyle: jsonProfileFile.imageStyle,
-                    headingsH1: jsonProfileFile.headingsH1,
-                    headingsH2: jsonProfileFile.headingsH2
+                    styleDiv: parsedFileProfile.styleDiv,
+                    srcImage: parsedFileProfile.srcImage,
+                    altImage: parsedFileProfile.altImage,
+                    styleImage: parsedFileProfile.styleImage,
+                    h1Headings: parsedFileProfile.h1Headings,
+                    h2Headings: parsedFileProfile.h2Headings
                 });
             });
 
         fetch("/api?fileName=about", {
             method: "GET"
         })
-            .then(aboutFile => aboutFile.json())
-            .then(jsonAboutFile => {
-                setIntroAbout(jsonAboutFile.intro);
-                setLabelServingsAbout(jsonAboutFile.labelServings);
-                setServingsAbout(jsonAboutFile.servings);
-                setLabelSkillsAbout(jsonAboutFile.labelSkills);
-                setSkillsAbout(jsonAboutFile.skills);
-                setOutroAbout(jsonAboutFile.outro);
+            .then(fileAbout => fileAbout.json())
+            .then(parsedFileAbout => {
+                setIntroAbout(parsedFileAbout.intro);
+                setLabelServingsAbout(parsedFileAbout.labelServings);
+                setServingsAbout(parsedFileAbout.servings);
+                setLabelSkillsAbout(parsedFileAbout.labelSkills);
+                setSkillsAbout(parsedFileAbout.skills);
+                setOutroAbout(parsedFileAbout.outro);
             });
     }, []);
 
@@ -205,12 +205,12 @@ export default function PrimaryComponent() {
                         outroAbout: outroAboutStyle
                         }}>
                         <NonSpecificContext.Provider value={{
-                                divStyle: profile["divStyle"],
-                                imageSrc: profile["imageSrc"],
-                                imageAlt: profile["imageAlt"],
-                                imageStyle: profile["imageStyle"],
-                                headingsH1: profile["headingsH1"],
-                                headingsH2: profile["headingsH2"],
+                                styleDiv: profile["styleDiv"],
+                                srcImage: profile["srcImage"],
+                                altImage: profile["altImage"],
+                                styleImage: profile["styleImage"],
+                                h1Headings: profile["h1Headings"],
+                                h2Headings: profile["h2Headings"],
                                 intro: introAbout,
                                 labelServings: labelServingsAbout,
                                 servings: servingsAbout,
