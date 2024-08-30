@@ -18,12 +18,12 @@ export default function MainAboutComponent() {
     const stylingContext = useContext(StylingContext);
     const nonSpecificContext = useContext(NonSpecificContext);
 
-    const genericTechnicalSkills = nonSpecificContext["technicalSkillsContent"].map((technicalSkill) =>
+    const genericSkills = nonSpecificContext["skillsContent"].map((skill) =>
         <LiComponent key={
-                nonSpecificContext["technicalSkillsContent"].indexOf(technicalSkill)
+                nonSpecificContext["skillsContent"].indexOf(skill)
             } style={{}}>
-            <LinkComponent href={technicalSkill.location}>
-                {technicalSkill.generic}
+            <LinkComponent href={skill.location}>
+                {skill.generic}
             </LinkComponent>
         </LiComponent>
     );
@@ -37,7 +37,7 @@ export default function MainAboutComponent() {
                     margin: 0,
                     fontSize: sizingContext["h1Font"]
                 }}>
-                {nonSpecificContext["tableBringingsLabel"]}
+                {nonSpecificContext["servingsLabel"]}
             </H1Component>
             <UlComponent style={{
                     paddingInlineStart: "0",
@@ -48,11 +48,11 @@ export default function MainAboutComponent() {
                         fontSize: sizingContext["h2Font"]
                     }}>
                     {
-                        nonSpecificContext["tableBringingsContent"].map((tableBringing) =>
+                        nonSpecificContext["servingsContent"].map((serving) =>
                             <LiComponent key={
-                                    nonSpecificContext["tableBringingsContent"].indexOf(tableBringing)
+                                    nonSpecificContext["servingsContent"].indexOf(serving)
                                 } style={{}}>
-                                {tableBringing}
+                                {serving}
                             </LiComponent>
                         )
                     }
@@ -62,7 +62,7 @@ export default function MainAboutComponent() {
                     margin: 0,
                     fontSize: sizingContext["h1Font"]
                 }}>
-                {nonSpecificContext["technicalSkillsLabel"]}
+                {nonSpecificContext["skillsLabel"]}
             </H1Component>
             <UlComponent style={{
                     paddingInlineStart: "0",
@@ -72,7 +72,7 @@ export default function MainAboutComponent() {
                         margin: 0,
                         fontSize: sizingContext["h2Font"]
                     }}>
-                    {genericTechnicalSkills}
+                    {genericSkills}
                 </H2Component>
             </UlComponent>
         </DivComponent>

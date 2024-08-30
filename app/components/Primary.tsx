@@ -24,46 +24,30 @@ const robotoMono = Roboto_Mono({
 });
 
 export default function PrimaryComponent() {
-    const [isSize00, setIsSize00] = useState(false);
-    const [isSize01, setIsSize01] = useState(false);
-    const [isSize02, setIsSize02] = useState(false);
-    const [isSize03, setIsSize03] = useState(false);
-    const [isSize04, setIsSize04] = useState(false);
-    const [isSize05, setIsSize05] = useState(false);
-    const [isSize06, setIsSize06] = useState(false);
-    const [isSize07, setIsSize07] = useState(false);
-    const [isSize08, setIsSize08] = useState(false);
-    const [isSize09, setIsSize09] = useState(false);
-    const [isSize10, setIsSize10] = useState(false);
-    const [isSize11, setIsSize11] = useState(false);
-    const [isSize12, setIsSize12] = useState(false);
+    const [areSizes, setAreSizes] = useState([]);
     const [profile, setProfile] = useState({});
     const [introAbout, setIntroAbout] = useState([]);
-    const [tableBringingsLabelAbout, setTableBringingsLabelAbout] = useState("");
-    const [tableBringingsContentAbout, setTableBringingsContentAbout] = useState([]);
-    const [technicalSkillsLabelAbout, setTechnicalSkillsLabelAbout] = useState("");
-    const [technicalSkillsContentAbout, setTechnicalSkillsContentAbout] = useState([]);
+    const [servingsLabelAbout, setServingsLabelAbout] = useState("");
+    const [servingsContentAbout, setServingsContentAbout] = useState([]);
+    const [skillsLabelAbout, setSkillsLabelAbout] = useState("");
+    const [skillsContentAbout, setSkillsContentAbout] = useState([]);
     const [outroAbout, setOutroAbout] = useState([]);
 
     useEffect(() => {
-        function setIsSize0x() {
-            setIsSize00(window.innerWidth <= 360);
-            setIsSize01(window.innerWidth > 360 && window.innerWidth <= 440);
-            setIsSize02(window.innerWidth > 440 && window.innerWidth <= 520);
-            setIsSize03(window.innerWidth > 520 && window.innerWidth <= 600);
-            setIsSize04(window.innerWidth > 600 && window.innerWidth <= 680);
-            setIsSize05(window.innerWidth > 680 && window.innerWidth <= 760);
-            setIsSize06(window.innerWidth > 760 && window.innerWidth <= 840);
-            setIsSize07(window.innerWidth > 840 && window.innerWidth <= 920);
-            setIsSize08(window.innerWidth > 920 && window.innerWidth <= 1000);
-            setIsSize09(window.innerWidth > 1000 && window.innerWidth <= 1080);
-            setIsSize10(window.innerWidth > 1080 && window.innerWidth <= 1160);
-            setIsSize11(window.innerWidth > 1160 && window.innerWidth <= 1240);
-            setIsSize12(window.innerWidth > 1240 && window.innerWidth <= 1320);
+        function executeSetAreSizes() {
+            setAreSizes([
+                window.innerWidth <= 360, window.innerWidth > 360 && window.innerWidth <= 440,
+                window.innerWidth > 440 && window.innerWidth <= 520, window.innerWidth > 520 && window.innerWidth <= 600,
+                window.innerWidth > 600 && window.innerWidth <= 680, window.innerWidth > 680 && window.innerWidth <= 760,
+                window.innerWidth > 760 && window.innerWidth <= 840, window.innerWidth > 840 && window.innerWidth <= 920,
+                window.innerWidth > 920 && window.innerWidth <= 1000, window.innerWidth > 1000 && window.innerWidth <= 1080,
+                window.innerWidth > 1080 && window.innerWidth <= 1160, window.innerWidth > 1160 && window.innerWidth <= 1240,
+                window.innerWidth > 1240 && window.innerWidth <= 1320
+            ]);
         }
 
-        setIsSize0x();
-        window.onresize = setIsSize0x;
+        executeSetAreSizes();
+        window.onresize = executeSetAreSizes;
 
         fetch("/api?fileName=profile", {
             method: "GET"
@@ -86,57 +70,29 @@ export default function PrimaryComponent() {
             .then(aboutFile => aboutFile.json())
             .then(jsonAboutFile => {
                 setIntroAbout(jsonAboutFile.intro);
-                setTableBringingsLabelAbout(jsonAboutFile.tableBringingsLabel);
-                setTableBringingsContentAbout(jsonAboutFile.tableBringingsContent);
-                setTechnicalSkillsLabelAbout(jsonAboutFile.technicalSkillsLabel);
-                setTechnicalSkillsContentAbout(jsonAboutFile.technicalSkillsContent);
+                setServingsLabelAbout(jsonAboutFile.servingsLabel);
+                setServingsContentAbout(jsonAboutFile.servingsContent);
+                setSkillsLabelAbout(jsonAboutFile.skillsLabel);
+                setSkillsContentAbout(jsonAboutFile.skillsContent);
                 setOutroAbout(jsonAboutFile.outro);
             });
     }, []);
 
-    function checkInnerWidth(
-        isSize00,
-        isSize01,
-        isSize02,
-        isSize03,
-        isSize04,
-        isSize05,
-        isSize06,
-        isSize07,
-        isSize08,
-        isSize09,
-        isSize10,
-        isSize11,
-        isSize12,
-        ifSize00,
-        ifSize01,
-        ifSize02,
-        ifSize03,
-        ifSize04,
-        ifSize05,
-        ifSize06,
-        ifSize07,
-        ifSize08,
-        ifSize09,
-        ifSize10,
-        ifSize11,
-        ifSize12,
-        ifSize13
-    ) {
-        return isSize00 ? ifSize00
-            : isSize01 ? ifSize01
-            : isSize02 ? ifSize02
-            : isSize03 ? ifSize03
-            : isSize04? ifSize04
-            : isSize05? ifSize05
-            : isSize06? ifSize06
-            : isSize07? ifSize07
-            : isSize08? ifSize08
-            : isSize09? ifSize09
-            : isSize10? ifSize10
-            : isSize11? ifSize11
-            : isSize12? ifSize12
-            : ifSize13;
+    function checkInnerWidth(areSizes, sizes) {
+        return areSizes[0] ? sizes[0]
+            : areSizes[1] ? sizes[1]
+            : areSizes[2] ? sizes[2]
+            : areSizes[3] ? sizes[3]
+            : areSizes[4]? sizes[4]
+            : areSizes[5]? sizes[5]
+            : areSizes[6]? sizes[6]
+            : areSizes[7]? sizes[7]
+            : areSizes[8]? sizes[8]
+            : areSizes[9]? sizes[9]
+            : areSizes[10]? sizes[10]
+            : areSizes[11]? sizes[11]
+            : areSizes[12]? sizes[12]
+            : sizes[13];
     }
 
     const navStyle = {
@@ -150,10 +106,9 @@ export default function PrimaryComponent() {
         overflow: "hidden",
         width: "100vw",
         height: checkInnerWidth(
-            isSize00, isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
-            isSize07, isSize08, isSize09, isSize10, isSize11, isSize12,
-            "95vw", "90vw", "75vw", "60vw", "55vw", "60vw", "60vw",
-            "60vw", "60vw", "60vw", "60vw", "55vw", "50vw", "45vw"
+            areSizes,
+            ["95vw", "90vw", "75vw", "60vw", "55vw", "60vw", "60vw",
+            "60vw", "60vw", "60vw", "60vw", "55vw", "50vw", "45vw"]
         ),
         textAlign: "center"
     }
@@ -162,10 +117,9 @@ export default function PrimaryComponent() {
         overflow: "hidden",
         width: "100vw",
         height: checkInnerWidth(
-            isSize00, isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
-            isSize07, isSize08, isSize09, isSize10, isSize11, isSize12,
-            "90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
-            "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"
+            areSizes,
+            ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
+            "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"]
         ),
         backgroundColor: "#2677D9",
         color: "#2BC1AF",
@@ -176,10 +130,9 @@ export default function PrimaryComponent() {
         overflow: "hidden",
         width: "100vw",
         height: checkInnerWidth(
-            isSize00, isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
-            isSize07, isSize08, isSize09, isSize10, isSize11, isSize12,
-            "145vw", "135vw", "110vw", "90vw", "75vw", "90vw", "90vw",
-            "90vw", "90vw", "90vw", "90vw", "80vw", "75vw", "60vw"
+            areSizes,
+            ["145vw", "135vw", "110vw", "90vw", "75vw", "90vw", "90vw",
+            "90vw", "90vw", "90vw", "90vw", "80vw", "75vw", "60vw"]
         ),
         backgroundColor: "#2BC1AF",
         color: "#2677D9",
@@ -190,10 +143,9 @@ export default function PrimaryComponent() {
         overflow: "hidden",
         width: "100vw",
         height: checkInnerWidth(
-            isSize00, isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
-            isSize07, isSize08, isSize09, isSize10, isSize11, isSize12,
-            "65vw", "55vw", "45vw", "35vw", "30vw", "35vw", "35vw",
-            "35vw", "35vw", "40vw", "40vw", "35vw", "30vw", "25vw"
+            areSizes,
+            ["65vw", "55vw", "45vw", "35vw", "30vw", "35vw", "35vw",
+            "35vw", "35vw", "40vw", "40vw", "35vw", "30vw", "25vw"]
         ),
         backgroundColor: "#2677D9",
         color: "#2BC1AF",
@@ -205,35 +157,30 @@ export default function PrimaryComponent() {
     const buttonClassName = anonymousPro.className;
 
     const h1FontSize = checkInnerWidth(
-        isSize00, isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
-        isSize07, isSize08, isSize09, isSize10, isSize11, isSize12,
-        "2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"
+        areSizes,
+        ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
     );
     const h2FontSize = checkInnerWidth(
-        isSize00, isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
-        isSize07, isSize08, isSize09, isSize10, isSize11, isSize12,
-        "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"
+        areSizes,
+        ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
     );
     const buttonFontSize = checkInnerWidth(
-        isSize00, isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
-        isSize07, isSize08, isSize09, isSize10, isSize11, isSize12,
-        "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"
+        areSizes,
+        ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
     );
     const imageSizing = {
         width: checkInnerWidth(
-            isSize00, isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
-            isSize07, isSize08, isSize09, isSize10, isSize11, isSize12,
-            130, 130, 130, 130, 130, 160, 180,
-            200, 220, 240, 260, 260, 260, 260
+            areSizes,
+            [130, 130, 130, 130, 130, 160, 180,
+            200, 220, 240, 260, 260, 260, 260]
         ),
         height: checkInnerWidth(
-            isSize00, isSize01, isSize02, isSize03, isSize04, isSize05, isSize06,
-            isSize07, isSize08, isSize09, isSize10, isSize11, isSize12,
-            175, 175, 175, 175, 175, 214, 241,
-            267, 294, 321, 348, 348, 348, 348
+            areSizes,
+            [175, 175, 175, 175, 175, 214, 241,
+            267, 294, 321, 348, 348, 348, 348]
         )
     }
 
@@ -265,10 +212,10 @@ export default function PrimaryComponent() {
                                 headingsH1: profile["headingsH1"],
                                 headingsH2: profile["headingsH2"],
                                 intro: introAbout,
-                                tableBringingsLabel: tableBringingsLabelAbout,
-                                tableBringingsContent: tableBringingsContentAbout,
-                                technicalSkillsLabel: technicalSkillsLabelAbout,
-                                technicalSkillsContent: technicalSkillsContentAbout,
+                                servingsLabel: servingsLabelAbout,
+                                servingsContent: servingsContentAbout,
+                                skillsLabel: skillsLabelAbout,
+                                skillsContent: skillsContentAbout,
                                 outro: outroAbout
                             }}>
                             <PrimaryNavComponent />
