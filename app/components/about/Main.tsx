@@ -17,12 +17,12 @@ export default function MainAboutComponent() {
             id="main"
             style={aboutContext["styleMain"]}>
             <DivComponent
-                id="subMain"
+                id="divMain"
                 style={{
                     height: "10%"
                 }}> </DivComponent>
             <H1Component
-                id="h1Main01"
+                id="01H1Main"
                 className={aboutContext["h1Main"]["className"]}
                 style={{
                     margin: 0,
@@ -36,7 +36,7 @@ export default function MainAboutComponent() {
                     listStyleType: "none"
                 }}>
                 <H2Component
-                    id="h2Main01"
+                    id="01H2Main"
                     className={aboutContext["h2Main"]["className"]}
                     style={{
                         margin: 0,
@@ -56,7 +56,7 @@ export default function MainAboutComponent() {
                 </H2Component>
             </UlComponent>
             <H1Component
-                id="h1Main02"
+                id="02H1Main"
                 className={aboutContext["h1Main"]["className"]}
                 style={{
                     margin: 0,
@@ -70,7 +70,7 @@ export default function MainAboutComponent() {
                     listStyleType: "none"
                 }}>
                 <H2Component
-                    id="h2Main02"
+                    id="02H2Main"
                     className={aboutContext["h2Main"]["className"]}
                     style={{
                         margin: 0,

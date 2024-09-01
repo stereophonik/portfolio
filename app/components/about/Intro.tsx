@@ -14,12 +14,12 @@ export default function IntroAboutComponent() {
             id="intro"
             style={aboutContext["styleIntro"]}>
             <DivComponent
-                id="subIntro01"
+                id="01DivIntro"
                 style={{
                     height: "10%"
                 }}> </DivComponent>
             <DivComponent
-                id="subIntro02"
+                id="02DivIntro"
                 style={{}}>
                 <H1Component
                     id="h1Intro"
