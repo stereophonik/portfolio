@@ -139,20 +139,26 @@ export default function Page() {
         [175, 175, 175, 175, 175, 214, 241, 267, 294, 321, 348, 348, 348, 348]
     );
 
-    const fontSizeH1HeadingsProfile = checkInnerWidth(
-        areSizes,
-        ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-            "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-    );
-
-    const fontSizeH2HeadingsProfile = checkInnerWidth(
-        areSizes,
-        ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-            "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-    );
-
     const classNameH1HeadingsProfile = robotoMono.className;
     const classNameH2HeadingsProfile = anonymousPro.className;
+
+    const styleH1HeadingsProfile = {
+        margin: 0,
+        fontSize: checkInnerWidth(
+            areSizes,
+            ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+        )
+    }
+
+    const styleH2HeadingsProfile = {
+        margin: 0,
+        fontSize: checkInnerWidth(
+            areSizes,
+            ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+        )
+    }
 
     const styleIntroAbout = {
         overflow: "hidden",
@@ -263,8 +269,8 @@ export default function Page() {
                 styleImage: profile["styleImage"],
                 widthImage: widthImageProfile,
                 heightImage: heightImageProfile,
-                fontSizeH1Headings: fontSizeH1HeadingsProfile,
-                fontSizeH2Headings: fontSizeH2HeadingsProfile,
+                styleH1Headings: styleH1HeadingsProfile,
+                styleH2Headings: styleH2HeadingsProfile,
                 classNameH1Headings: classNameH1HeadingsProfile,
                 classNameH2Headings: classNameH2HeadingsProfile,
                 h1Headings: profile["h1Headings"],

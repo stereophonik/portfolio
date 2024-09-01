@@ -11,10 +11,11 @@ export default function PrimaryProfileComponent() {
     const profileContext = useContext(ProfileContext);
 
     return (
-        <ProfileComponent style={profileContext["styleProfile"]}>
-            <DivComponent id={profileContext["div"]["id"]} style={
-                    profileContext["div"]["style"]
-                }> </DivComponent>
+        <ProfileComponent
+            style={profileContext["styleProfile"]}>
+            <DivComponent
+                id={profileContext["div"]["id"]}
+                style={profileContext["div"]["style"]}> </DivComponent>
             <ImageProfileComponent />
             <HeadingsProfileComponent />
         </ProfileComponent>
