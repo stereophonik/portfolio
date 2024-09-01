@@ -27,7 +27,7 @@ import PrimaryComponent from "./components/Primary";
 export default function Page() {
     const [areSizes, setAreSizes] = useState([]);
     const [profile, setProfile] = useState({});
-    const [introAbout, setIntroAbout] = useState([]);
+    const [introsAbout, setIntrosAbout] = useState([]);
     const [labelServingsMainAbout, setLabelServingsMainAbout] = useState("");
     const [servingsMainAbout, setServingsMainAbout] = useState([]);
     const [labelSkillsMainAbout, setLabelSkillsMainAbout] = useState("");
@@ -69,7 +69,7 @@ export default function Page() {
         })
             .then(fileAbout => fileAbout.json())
             .then(parsedFileAbout => {
-                setIntroAbout(parsedFileAbout.intro);
+                setIntrosAbout(parsedFileAbout.intros);
                 setLabelServingsMainAbout(parsedFileAbout.labelServingsMain);
                 setServingsMainAbout(parsedFileAbout.servingsMain);
                 setLabelSkillsMainAbout(parsedFileAbout.labelSkillsMain);
@@ -174,21 +174,27 @@ export default function Page() {
     }
 
     const h1IntroAbout = {
-        fontSize: checkInnerWidth(
-            areSizes,
-            ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-        ),
-        className: robotoMono.className
+        className: robotoMono.className,
+        style: {
+            margin: 0,
+            fontSize: checkInnerWidth(
+                areSizes,
+                ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                    "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+            )
+        }
     }
 
     const h2IntroAbout = {
-        fontSize: checkInnerWidth(
-            areSizes,
-            ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-        ),
-        className: anonymousPro.className
+        className: anonymousPro.className,
+        style: {
+            margin: 0,
+            fontSize: checkInnerWidth(
+                areSizes,
+                ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                    "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+            )
+        }
     }
 
     const styleMainAbout = {
@@ -255,46 +261,49 @@ export default function Page() {
 
     return (
         <PrimaryComponent>
-            <NavContext.Provider value={{
-                styleNav: styleNavNav,
-                h2: h2Nav
-            }}>
+            <NavContext.Provider
+                value={{
+                    styleNav: styleNavNav,
+                    h2: h2Nav
+                }}>
                 <PrimaryNavComponent />
             </NavContext.Provider>
-            <ProfileContext.Provider value={{
-                styleProfile: styleProfileProfile,
-                div: divProfile,
-                srcImage: profile["srcImage"],
-                altImage: profile["altImage"],
-                styleImage: profile["styleImage"],
-                widthImage: widthImageProfile,
-                heightImage: heightImageProfile,
-                styleH1Headings: styleH1HeadingsProfile,
-                styleH2Headings: styleH2HeadingsProfile,
-                classNameH1Headings: classNameH1HeadingsProfile,
-                classNameH2Headings: classNameH2HeadingsProfile,
-                h1Headings: profile["h1Headings"],
-                h2Headings: profile["h2Headings"]
-            }}>
+            <ProfileContext.Provider
+                value={{
+                    styleProfile: styleProfileProfile,
+                    div: divProfile,
+                    srcImage: profile["srcImage"],
+                    altImage: profile["altImage"],
+                    styleImage: profile["styleImage"],
+                    widthImage: widthImageProfile,
+                    heightImage: heightImageProfile,
+                    styleH1Headings: styleH1HeadingsProfile,
+                    styleH2Headings: styleH2HeadingsProfile,
+                    classNameH1Headings: classNameH1HeadingsProfile,
+                    classNameH2Headings: classNameH2HeadingsProfile,
+                    h1Headings: profile["h1Headings"],
+                    h2Headings: profile["h2Headings"]
+                }}>
                 <PrimaryProfileComponent />
             </ProfileContext.Provider>
-            <AboutContext.Provider value={{
-                styleIntro: styleIntroAbout,
-                h1Intro: h1IntroAbout,
-                h2Intro: h2IntroAbout,
-                intro: introAbout,
-                styleMain: styleMainAbout,
-                h1Main: h1MainAbout,
-                h2Main: h2MainAbout,
-                labelServingsMain: labelServingsMainAbout,
-                servingsMain: servingsMainAbout,
-                labelSkillsMain: labelSkillsMainAbout,
-                skillsMain: skillsMainAbout,
-                styleOutro: styleOutroAbout,
-                h1Outro: h1OutroAbout,
-                h2Outro: h2OutroAbout,
-                outro: outroAbout
-            }}>
+            <AboutContext.Provider
+                value={{
+                    styleIntro: styleIntroAbout,
+                    h1Intro: h1IntroAbout,
+                    h2Intro: h2IntroAbout,
+                    intros: introsAbout,
+                    styleMain: styleMainAbout,
+                    h1Main: h1MainAbout,
+                    h2Main: h2MainAbout,
+                    labelServingsMain: labelServingsMainAbout,
+                    servingsMain: servingsMainAbout,
+                    labelSkillsMain: labelSkillsMainAbout,
+                    skillsMain: skillsMainAbout,
+                    styleOutro: styleOutroAbout,
+                    h1Outro: h1OutroAbout,
+                    h2Outro: h2OutroAbout,
+                    outro: outroAbout
+                }}>
                 <PrimaryAboutComponent />
             </AboutContext.Provider>
         </PrimaryComponent>

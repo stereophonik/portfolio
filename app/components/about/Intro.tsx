@@ -10,23 +10,29 @@ export default function IntroAboutComponent() {
     const aboutContext = useContext(AboutContext);
 
     return (
-        <DivComponent id="intro" style={aboutContext["styleIntro"]}>
-            <DivComponent id="subIntro01" style={{
-                height: "10%"
-            }}> </DivComponent>
-            <DivComponent id="subIntro02" style={{}}>
-                <H1Component id="h1Headings" className={aboutContext["h1Intro"]["className"]} style={{
-                        margin: 0,
-                        fontSize: aboutContext["h1Intro"]["fontSize"]
-                    }}>
+        <DivComponent
+            id="intro"
+            style={aboutContext["styleIntro"]}>
+            <DivComponent
+                id="subIntro01"
+                style={{
+                    height: "10%"
+                }}> </DivComponent>
+            <DivComponent
+                id="subIntro02"
+                style={{}}>
+                <H1Component
+                    id="h1Intro"
+                    className={aboutContext["h1Intro"]["className"]}
+                    style={aboutContext["h1Intro"]["style"]}>
                     Hello!
                 </H1Component>
                 {
-                    aboutContext["intro"].map((intro) =>
-                        <H2Component id="introH2" className={aboutContext["h2Intro"]["className"]} style={{
-                                margin: 0,
-                                fontSize: aboutContext["h2Intro"]["fontSize"]
-                            }}>
+                    aboutContext["intros"].map((intro) =>
+                        <H2Component
+                            id="h2Intro"
+                            className={aboutContext["h2Intro"]["className"]}
+                            style={aboutContext["h2Intro"]["style"]}>
                             {intro}
                         </H2Component>
                     )
