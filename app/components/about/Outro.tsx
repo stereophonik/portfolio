@@ -21,19 +21,13 @@ export default function OutroAboutComponent() {
             <H1Component
                 id="h1Outro"
                 className={aboutContext["h1Outro"]["className"]}
-                style={{
-                    margin: 0,
-                    fontSize: aboutContext["h1Outro"]["fontSize"]
-                }}>
+                style={aboutContext["h1Outro"]["style"]}>
                 Btw...
             </H1Component>
             <H2Component
                 id="h2Outro"
                 className={aboutContext["h2Outro"]["className"]}
-                style={{
-                    margin: 0,
-                    fontSize: aboutContext["h2Outro"]["fontSize"]
-                }}>
+                style={aboutContext["h2Outro"]["style"]}>
                 {aboutContext["outro"]}
             </H2Component>
         </DivComponent>

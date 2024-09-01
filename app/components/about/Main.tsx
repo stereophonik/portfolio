@@ -24,10 +24,7 @@ export default function MainAboutComponent() {
             <H1Component
                 id="01H1Main"
                 className={aboutContext["h1Main"]["className"]}
-                style={{
-                    margin: 0,
-                    fontSize: aboutContext["h1Main"]["fontSize"]
-                }}>
+                style={aboutContext["h1Main"]["style"]}>
                 {aboutContext["labelServingsMain"]}
             </H1Component>
             <UlComponent
@@ -38,10 +35,7 @@ export default function MainAboutComponent() {
                 <H2Component
                     id="01H2Main"
                     className={aboutContext["h2Main"]["className"]}
-                    style={{
-                        margin: 0,
-                        fontSize: aboutContext["h2Main"]["fontSize"]
-                    }}>
+                    style={aboutContext["h2Main"]["style"]}>
                     {
                         aboutContext["servingsMain"].map((servingMain) =>
                             <LiComponent
@@ -58,10 +52,7 @@ export default function MainAboutComponent() {
             <H1Component
                 id="02H1Main"
                 className={aboutContext["h1Main"]["className"]}
-                style={{
-                    margin: 0,
-                    fontSize: aboutContext["h1Main"]["fontSize"]
-                }}>
+                style={aboutContext["h1Main"]["style"]}>
                 {aboutContext["labelSkillsMain"]}
             </H1Component>
             <UlComponent
@@ -72,10 +63,7 @@ export default function MainAboutComponent() {
                 <H2Component
                     id="02H2Main"
                     className={aboutContext["h2Main"]["className"]}
-                    style={{
-                        margin: 0,
-                        fontSize: aboutContext["h2Main"]["fontSize"]
-                    }}>
+                    style={aboutContext["h2Main"]["style"]}>
                     {
                         aboutContext["skillsMain"].map((skillMain) =>
                             <LiComponent

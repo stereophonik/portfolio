@@ -211,21 +211,27 @@ export default function Page() {
     }
 
     const h1MainAbout = {
-        fontSize: checkInnerWidth(
-            areSizes,
-            ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-        ),
-        className: robotoMono.className
+        className: robotoMono.className,
+        style: {
+            margin: 0,
+            fontSize: checkInnerWidth(
+                areSizes,
+                ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                    "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+            )
+        }
     }
 
     const h2MainAbout = {
-        fontSize: checkInnerWidth(
-            areSizes,
-            ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-        ),
-        className: anonymousPro.className
+        className: anonymousPro.className,
+        style: {
+            margin: 0,
+            fontSize: checkInnerWidth(
+                areSizes,
+                ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                    "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+            )
+        }
     }
 
     const styleOutroAbout = {
@@ -242,21 +248,27 @@ export default function Page() {
     }
 
     const h1OutroAbout = {
-        fontSize: checkInnerWidth(
-            areSizes,
-            ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-        ),
-        className: robotoMono.className
+        className: robotoMono.className,
+        style: {
+            margin: 0,
+            fontSize: checkInnerWidth(
+                areSizes,
+                ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                    "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+            )
+        }
     }
 
     const h2OutroAbout = {
-        fontSize: checkInnerWidth(
-            areSizes,
-            ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-        ),
-        className: anonymousPro.className
+        className: anonymousPro.className,
+        style: {
+            margin: 0,
+            fontSize: checkInnerWidth(
+                areSizes,
+                ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                    "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+            )
+        }
     }
 
     return (
