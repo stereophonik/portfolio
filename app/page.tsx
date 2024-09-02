@@ -26,7 +26,8 @@ const robotoMono = Roboto_Mono({
 export default function Page() {
     const [areSizes, setAreSizes] = useState([]);
     const [profile, setProfile] = useState({});
-    const [contentsH2IntroAbout, setContentsH2IntroAbout] = useState([]);
+    const [aaContentH2sIntroAbout, setAaContentH2sIntroAbout] = useState("");
+    const [abContentH2sIntroAbout, setAbContentH2sIntroAbout] = useState("");
     const [labelServingsMainAbout, setLabelServingsMainAbout] = useState("");
     const [servingsMainAbout, setServingsMainAbout] = useState([]);
     const [labelSkillsMainAbout, setLabelSkillsMainAbout] = useState("");
@@ -66,7 +67,8 @@ export default function Page() {
         })
             .then(fileAbout => fileAbout.json())
             .then(parsedFileAbout => {
-                setContentsH2IntroAbout(parsedFileAbout.contentsH2Intro);
+                setAaContentH2sIntroAbout(parsedFileAbout.aaContentH2sIntro);
+                setAbContentH2sIntroAbout(parsedFileAbout.abContentH2sIntro);
                 setLabelServingsMainAbout(parsedFileAbout.labelServingsMain);
                 setServingsMainAbout(parsedFileAbout.servingsMain);
                 setLabelSkillsMainAbout(parsedFileAbout.labelSkillsMain);
@@ -294,7 +296,7 @@ export default function Page() {
                         "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
                 )
             },
-            content: contentsH2IntroAbout[0]
+            content: aaContentH2sIntroAbout
         },
         {
             id: "02h2IntroAbout",
@@ -307,7 +309,7 @@ export default function Page() {
                         "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
                 )
             },
-            content: contentsH2IntroAbout[1]
+            content: abContentH2sIntroAbout
         }
     ]
 
