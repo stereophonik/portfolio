@@ -99,7 +99,8 @@ export default function Page() {
             overflow: "hidden",
             backgroundColor: "#E2DDD1",
             color: "#B0622C",
-            textAlign: "center"
+            textAlign: "center",
+            borderRadius: "10%"
         }
     }
 
@@ -252,7 +253,8 @@ export default function Page() {
         ),
         backgroundColor: "#E2DDD1",
         color: "#B0622C",
-        textAlign: "center"
+        textAlign: "center",
+        borderRadius: "10%"
     }
 
     const h1IntroAbout = {
@@ -326,7 +328,8 @@ export default function Page() {
         ),
         backgroundColor: "#E2DDD1",
         color: "#B0622C",
-        textAlign: "center"
+        textAlign: "center",
+        borderRadius: "10%"
     }
 
     const h1OutroAbout = {
