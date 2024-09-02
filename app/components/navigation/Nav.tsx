@@ -9,60 +9,52 @@ import LinkComponent from "../Link";
 import { NavigationContext } from "../../contexts/Navigation";
 
 export default function NavNavigationComponent() {
-    const navContext = useContext(NavigationContext);
+    const navigationContext = useContext(NavigationContext);
 
     return (
         <NavComponent
-            className=""
-            style={navContext["styleNav"]}>
+            id={navigationContext["nav"]["id"]}
+            className={navigationContext["nav"]["className"]}
+            style={navigationContext["nav"]["style"]}>
             <UlComponent
-                style={{paddingInlineStart: "0"}}>
+                style={navigationContext["ul"]["style"]}>
                 <H2Component
-                    id="h2Nav"
-                    className={navContext["h2"]["className"]}
-                    style={{
-                        margin: 0,
-                        fontSize: navContext["h2"]["fontSize"]
-                    }}>
+                    id={navigationContext["h2"]["id"]}
+                    className={navigationContext["h2"]["className"]}
+                    style={navigationContext["h2"]["style"]}>
                     <LiComponent
-                        key="0"
-                        style={{
-                            display: "inline-block"
-                        }}>
+                        key={navigationContext["lis"][0]["key"]}
+                        style={navigationContext["lis"][0]["style"]}>
                         <LinkComponent
-                            href="#intro">Intro</LinkComponent>
+                            href={navigationContext["links"][0]["href"]}>
+                            {navigationContext["links"][0]["content"]}
+                        </LinkComponent>
                     </LiComponent>
                     <LiComponent
-                        key="1"
-                        style={{
-                            color: "#2677D9",
-                            display: "inline-block"
-                        }}>
-                        ---
+                        key={navigationContext["lis"][1]["key"]}
+                        style={navigationContext["lis"][1]["style"]}>
+                        {navigationContext["lis"][1]["content"]}
                     </LiComponent>
                     <LiComponent
-                        key="2"
-                        style={{
-                            display: "inline-block"
-                        }}>
+                        key={navigationContext["lis"][2]["key"]}
+                        style={navigationContext["lis"][2]["style"]}>
                         <LinkComponent
-                            href="#main">Main</LinkComponent>
+                            href={navigationContext["links"][2]["href"]}>
+                            {navigationContext["links"][2]["content"]}
+                        </LinkComponent>
                     </LiComponent>
                     <LiComponent
-                        key="3"
-                        style={{
-                            color: "#2677D9",
-                            display: "inline-block"
-                        }}>
-                        ---
+                        key={navigationContext["lis"][3]["key"]}
+                        style={navigationContext["lis"][3]["style"]}>
+                        {navigationContext["lis"][3]["content"]}
                     </LiComponent>
                     <LiComponent
-                        key="4"
-                        style={{
-                            display: "inline-block"
-                        }}>
+                        key={navigationContext["lis"][4]["key"]}
+                        style={navigationContext["lis"][4]["style"]}>
                         <LinkComponent
-                            href="#outro">Outro</LinkComponent>
+                            href={navigationContext["links"][4]["href"]}>
+                            {navigationContext["links"][4]["content"]}
+                        </LinkComponent>
                     </LiComponent>
                 </H2Component>
             </UlComponent>

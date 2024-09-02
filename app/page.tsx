@@ -94,21 +94,96 @@ export default function Page() {
                                                             : sizes[13];
     }
 
-    const styleNavNavigation = {
-        overflow: "hidden",
-        backgroundColor: "#2677D9",
-        color: "#2BC1AF",
-        textAlign: "center"
+    const navNavigation = {
+        id: "navNavigation",
+        className: "classNameNavNavigation",
+        style: {
+            overflow: "hidden",
+            backgroundColor: "#2677D9",
+            color: "#2BC1AF",
+            textAlign: "center"
+        }
+    }
+
+    const ulNavigation = {
+        style: {paddingInlineStart: "0"}
     }
 
     const h2Navigation = {
-        fontSize: checkInnerWidth(
-            areSizes,
-            ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-        ),
-        className: anonymousPro.className
+        id: "h2Navigation",
+        className: anonymousPro.className,
+        style: {
+            margin: 0,
+            fontSize: checkInnerWidth(
+                areSizes,
+                ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                    "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+            )
+        }
     }
+
+    const lisNavigation = [
+        {
+            key: 0,
+            style: {
+                display: "inline-block"
+            },
+            content: ""
+        },
+        {
+            key: 1,
+            style: {
+                color: "#2677D9",
+                display: "inline-block"
+            },
+            content: "---"
+        },
+        {
+            key: 2,
+            style: {
+                display: "inline-block"
+            },
+            content: ""
+        },
+        {
+            key: 3,
+            style: {
+                color: "#2677D9",
+                display: "inline-block"
+            },
+            content: "---"
+        },
+        {
+            key: 4,
+            style: {
+                display: "inline-block"
+            },
+            content: ""
+        }
+    ]
+
+    const linksNavigation = [
+        {
+            href: "#intro",
+            content: "Intro"
+        },
+        {
+            href: "",
+            content: ""
+        },
+        {
+            href: "#main",
+            content: "Main"
+        },
+        {
+            href: "",
+            content: ""
+        },
+        {
+            href: "#outro",
+            content: "Outro"
+        }
+    ]
 
     const styleSectionProfile = {
         overflow: "hidden",
@@ -274,8 +349,11 @@ export default function Page() {
         <MainComponent>
             <NavigationContext.Provider
                 value={{
-                    styleNav: styleNavNavigation,
-                    h2: h2Navigation
+                    nav: navNavigation,
+                    ul: ulNavigation,
+                    h2: h2Navigation,
+                    lis: lisNavigation,
+                    links: linksNavigation
                 }}>
                 <NavNavigationComponent />
             </NavigationContext.Provider>
