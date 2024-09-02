@@ -6,6 +6,7 @@ import OutroAboutComponent from "./Outro";
 export default function SectionAboutComponent() {
     return (
         <SectionComponent
+            id="sectionAbout"
             style={{}}>
             <IntroAboutComponent />
             <MainAboutComponent />

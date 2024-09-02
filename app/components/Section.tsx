@@ -1,3 +1,3 @@
-export default function SectionComponent({ style, children }) {
-    return <section style={style}>{children}</section>;
+export default function SectionComponent({ id, style, children }) {
+    return <section id={id} style={style}>{children}</section>;
 }

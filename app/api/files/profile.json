@@ -3,10 +3,7 @@
     "altImage": "Nikolai Reyes",
     "styleImage": {
         "maxWidth": "100%",
-        "maxHeight": "100%"
-    },
-    "h1Headings": "Nikolai Reyes",
-    "h2Headings": "Transitioning to Front-end Development",
-    "styleHeadings": {
+        "maxHeight": "100%",
+        "borderRadius": "10%"
     }
 }

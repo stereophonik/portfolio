@@ -11,18 +11,19 @@ export default function SectionHeadingsProfileComponent() {
 
     return (
         <SectionComponent
-            style={profileContext["styleHeadings"]}>
+            id="sectionHeadingsProfile"
+            style={{}}>
             <H1Component
-                id="h1Headings"
-                className={profileContext["classNameH1Headings"]}
-                style={profileContext["styleH1Headings"]}>
-                {profileContext["h1Headings"]}
+                id={profileContext["h1Headings"]["id"]}
+                className={profileContext["h1Headings"]["className"]}
+                style={profileContext["h1Headings"]["style"]}>
+                {profileContext["h1Headings"]["content"]}
             </H1Component>
             <H2Component
-                id="h2Headings"
-                className={profileContext["classNameH2Headings"]}
-                style={profileContext["styleH2Headings"]}>
-                {profileContext["h2Headings"]}
+                id={profileContext["h2Headings"]["id"]}
+                className={profileContext["h2Headings"]["className"]}
+                style={profileContext["h2Headings"]["style"]}>
+                {profileContext["h2Headings"]["content"]}
             </H2Component>
         </SectionComponent>
     );

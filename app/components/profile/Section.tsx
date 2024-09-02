@@ -12,10 +12,13 @@ export default function SectionProfileComponent() {
 
     return (
         <SectionComponent
-            style={profileContext["styleSection"]}>
+            id="sectionProfile"
+            style={profileContext["section"]["style"]}>
             <DivComponent
                 id={profileContext["div"]["id"]}
-                style={profileContext["div"]["style"]}> </DivComponent>
+                style={profileContext["div"]["style"]}>
+                {profileContext["div"]["content"]}
+            </DivComponent>
             <ImageProfileComponent />
             <SectionHeadingsProfileComponent />
         </SectionComponent>

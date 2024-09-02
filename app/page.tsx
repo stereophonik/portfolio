@@ -57,9 +57,7 @@ export default function Page() {
                 setProfile({
                     srcImage: parsedFileProfile.srcImage,
                     altImage: parsedFileProfile.altImage,
-                    styleImage: parsedFileProfile.styleImage,
-                    h1Headings: parsedFileProfile.h1Headings,
-                    h2Headings: parsedFileProfile.h2Headings
+                    styleImage: parsedFileProfile.styleImage
                 });
             });
 
@@ -99,8 +97,8 @@ export default function Page() {
         className: "classNameNavNavigation",
         style: {
             overflow: "hidden",
-            backgroundColor: "#2677D9",
-            color: "#2BC1AF",
+            backgroundColor: "#E2DDD1",
+            color: "#B0622C",
             textAlign: "center"
         }
     }
@@ -133,7 +131,7 @@ export default function Page() {
         {
             key: 1,
             style: {
-                color: "#2677D9",
+                color: "#E2DDD1",
                 display: "inline-block"
             },
             content: "---"
@@ -148,7 +146,7 @@ export default function Page() {
         {
             key: 3,
             style: {
-                color: "#2677D9",
+                color: "#E2DDD1",
                 display: "inline-block"
             },
             content: "---"
@@ -185,22 +183,25 @@ export default function Page() {
         }
     ]
 
-    const styleSectionProfile = {
-        overflow: "hidden",
-        width: "100vw",
-        height: checkInnerWidth(
-            areSizes,
-            ["95vw", "90vw", "75vw", "60vw", "55vw", "60vw", "60vw",
-                "60vw", "60vw", "60vw", "60vw", "55vw", "50vw", "45vw"]
-        ),
-        textAlign: "center"
+    const sectionProfile = {
+        style: {
+            overflow: "hidden",
+            width: "100vw",
+            height: checkInnerWidth(
+                areSizes,
+                ["95vw", "90vw", "75vw", "60vw", "55vw", "60vw", "60vw",
+                    "60vw", "60vw", "60vw", "60vw", "55vw", "50vw", "45vw"]
+            ),
+            textAlign: "center"
+        }
     }
 
     const divProfile = {
         id: "divProfile",
         style: {
             height: "10%"
-        }
+        },
+        content: ""
     }
 
     const widthImageProfile = checkInnerWidth(
@@ -213,25 +214,32 @@ export default function Page() {
         [175, 175, 175, 175, 175, 214, 241, 267, 294, 321, 348, 348, 348, 348]
     );
 
-    const classNameH1HeadingsProfile = robotoMono.className;
-    const classNameH2HeadingsProfile = anonymousPro.className;
-
-    const styleH1HeadingsProfile = {
-        margin: 0,
-        fontSize: checkInnerWidth(
-            areSizes,
-            ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-        )
+    const h1HeadingsProfile = {
+        id: "h1HeadingsProfile",
+        className: robotoMono.className,
+        style: {
+            margin: 0,
+            fontSize: checkInnerWidth(
+                areSizes,
+                ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                    "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+            )
+        },
+        content: "Nikolai Reyes"
     }
 
-    const styleH2HeadingsProfile = {
-        margin: 0,
-        fontSize: checkInnerWidth(
-            areSizes,
-            ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-        )
+    const h2HeadingsProfile = {
+        id: "h2HeadingsProfile",
+        className: anonymousPro.className,
+        style: {
+            margin: 0,
+            fontSize: checkInnerWidth(
+                areSizes,
+                ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                    "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+            )
+        },
+        content: "Transitioning to Front-end Development"
     }
 
     const styleIntroAbout = {
@@ -242,8 +250,8 @@ export default function Page() {
             ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
                 "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"]
         ),
-        backgroundColor: "#2677D9",
-        color: "#2BC1AF",
+        backgroundColor: "#E2DDD1",
+        color: "#B0622C",
         textAlign: "center"
     }
 
@@ -279,8 +287,8 @@ export default function Page() {
             ["145vw", "135vw", "110vw", "90vw", "75vw", "90vw", "90vw",
                 "90vw", "90vw", "90vw", "90vw", "80vw", "75vw", "60vw"]
         ),
-        backgroundColor: "#2BC1AF",
-        color: "#2677D9",
+        backgroundColor: "#B0622C",
+        color: "#E2DDD1",
         textAlign: "center"
     }
 
@@ -316,8 +324,8 @@ export default function Page() {
             ["65vw", "55vw", "45vw", "35vw", "30vw", "35vw", "35vw",
                 "35vw", "35vw", "40vw", "40vw", "35vw", "30vw", "25vw"]
         ),
-        backgroundColor: "#2677D9",
-        color: "#2BC1AF",
+        backgroundColor: "#E2DDD1",
+        color: "#B0622C",
         textAlign: "center"
     }
 
@@ -345,54 +353,56 @@ export default function Page() {
         }
     }
 
+    const valueNavigationContext = {
+        nav: navNavigation,
+        ul: ulNavigation,
+        h2: h2Navigation,
+        lis: lisNavigation,
+        links: linksNavigation
+    }
+
+    const valueProfileContext = {
+        section: sectionProfile,
+        div: divProfile,
+        srcImage: profile["srcImage"],
+        altImage: profile["altImage"],
+        styleImage: profile["styleImage"],
+        widthImage: widthImageProfile,
+        heightImage: heightImageProfile,
+        h1Headings: h1HeadingsProfile,
+        h2Headings: h2HeadingsProfile
+    }
+
+    const valueAboutContext = {
+        styleIntro: styleIntroAbout,
+        h1Intro: h1IntroAbout,
+        h2Intro: h2IntroAbout,
+        intros: introsAbout,
+        styleMain: styleMainAbout,
+        h1Main: h1MainAbout,
+        h2Main: h2MainAbout,
+        labelServingsMain: labelServingsMainAbout,
+        servingsMain: servingsMainAbout,
+        labelSkillsMain: labelSkillsMainAbout,
+        skillsMain: skillsMainAbout,
+        styleOutro: styleOutroAbout,
+        h1Outro: h1OutroAbout,
+        h2Outro: h2OutroAbout,
+        outro: outroAbout
+    }
+
     return (
         <MainComponent>
             <NavigationContext.Provider
-                value={{
-                    nav: navNavigation,
-                    ul: ulNavigation,
-                    h2: h2Navigation,
-                    lis: lisNavigation,
-                    links: linksNavigation
-                }}>
+                value={valueNavigationContext}>
                 <NavNavigationComponent />
             </NavigationContext.Provider>
             <ProfileContext.Provider
-                value={{
-                    styleSection: styleSectionProfile,
-                    div: divProfile,
-                    srcImage: profile["srcImage"],
-                    altImage: profile["altImage"],
-                    styleImage: profile["styleImage"],
-                    widthImage: widthImageProfile,
-                    heightImage: heightImageProfile,
-                    styleH1Headings: styleH1HeadingsProfile,
-                    styleH2Headings: styleH2HeadingsProfile,
-                    classNameH1Headings: classNameH1HeadingsProfile,
-                    classNameH2Headings: classNameH2HeadingsProfile,
-                    h1Headings: profile["h1Headings"],
-                    h2Headings: profile["h2Headings"]
-                }}>
+                value={valueProfileContext}>
                 <SectionProfileComponent />
             </ProfileContext.Provider>
             <AboutContext.Provider
-                value={{
-                    styleIntro: styleIntroAbout,
-                    h1Intro: h1IntroAbout,
-                    h2Intro: h2IntroAbout,
-                    intros: introsAbout,
-                    styleMain: styleMainAbout,
-                    h1Main: h1MainAbout,
-                    h2Main: h2MainAbout,
-                    labelServingsMain: labelServingsMainAbout,
-                    servingsMain: servingsMainAbout,
-                    labelSkillsMain: labelSkillsMainAbout,
-                    skillsMain: skillsMainAbout,
-                    styleOutro: styleOutroAbout,
-                    h1Outro: h1OutroAbout,
-                    h2Outro: h2OutroAbout,
-                    outro: outroAbout
-                }}>
+                value={valueAboutContext}>
                 <SectionAboutComponent />
             </AboutContext.Provider>
         </MainComponent>
