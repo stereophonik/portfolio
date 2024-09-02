@@ -94,14 +94,14 @@ export default function Page() {
                                                             : sizes[13];
     }
 
-    const styleNavNav = {
+    const styleNavNavigation = {
         overflow: "hidden",
         backgroundColor: "#2677D9",
         color: "#2BC1AF",
         textAlign: "center"
     }
 
-    const h2Nav = {
+    const h2Navigation = {
         fontSize: checkInnerWidth(
             areSizes,
             ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
@@ -110,7 +110,7 @@ export default function Page() {
         className: anonymousPro.className
     }
 
-    const styleProfileProfile = {
+    const styleSectionProfile = {
         overflow: "hidden",
         width: "100vw",
         height: checkInnerWidth(
@@ -274,14 +274,14 @@ export default function Page() {
         <MainComponent>
             <NavigationContext.Provider
                 value={{
-                    styleNav: styleNavNav,
-                    h2: h2Nav
+                    styleNav: styleNavNavigation,
+                    h2: h2Navigation
                 }}>
                 <NavNavigationComponent />
             </NavigationContext.Provider>
             <ProfileContext.Provider
                 value={{
-                    styleProfile: styleProfileProfile,
+                    styleSection: styleSectionProfile,
                     div: divProfile,
                     srcImage: profile["srcImage"],
                     altImage: profile["altImage"],
