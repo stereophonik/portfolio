@@ -1,16 +1,17 @@
 import { useContext } from "react";
 
-import DivComponent from "../Div";
-import H1Component from "../H1";
-import H2Component from "../H2";
+import SectionComponent from "../../Section";
+import DivComponent from "../../Div";
+import H1Component from "../../H1";
+import H2Component from "../../H2";
 
-import { AboutContext } from "../../contexts/About";
+import { AboutContext } from "../../../contexts/About";
 
-export default function OutroAboutComponent() {
+export default function SectionOutroAboutComponent() {
     const aboutContext = useContext(AboutContext);
 
     return (
-        <DivComponent
+        <SectionComponent
             id="outro"
             style={aboutContext["styleOutro"]}>
             <DivComponent
@@ -30,6 +31,6 @@ export default function OutroAboutComponent() {
                 style={aboutContext["h2Outro"]["style"]}>
                 {aboutContext["outro"]}
             </H2Component>
-        </DivComponent>
+        </SectionComponent>
     );
 }

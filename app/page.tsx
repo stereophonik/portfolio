@@ -26,7 +26,7 @@ const robotoMono = Roboto_Mono({
 export default function Page() {
     const [areSizes, setAreSizes] = useState([]);
     const [profile, setProfile] = useState({});
-    const [introsAbout, setIntrosAbout] = useState([]);
+    const [contentH2IntrosAbout, setContentH2IntrosAbout] = useState([]);
     const [labelServingsMainAbout, setLabelServingsMainAbout] = useState("");
     const [servingsMainAbout, setServingsMainAbout] = useState([]);
     const [labelSkillsMainAbout, setLabelSkillsMainAbout] = useState("");
@@ -66,7 +66,7 @@ export default function Page() {
         })
             .then(fileAbout => fileAbout.json())
             .then(parsedFileAbout => {
-                setIntrosAbout(parsedFileAbout.intros);
+                setContentH2IntrosAbout(parsedFileAbout.contentH2Intros);
                 setLabelServingsMainAbout(parsedFileAbout.labelServingsMain);
                 setServingsMainAbout(parsedFileAbout.servingsMain);
                 setLabelSkillsMainAbout(parsedFileAbout.labelSkillsMain);
@@ -163,7 +163,7 @@ export default function Page() {
 
     const linksNavigation = [
         {
-            href: "#intro",
+            href: "#sectionIntroAbout",
             content: "Intro"
         },
         {
@@ -243,21 +243,33 @@ export default function Page() {
         content: "Transitioning to Front-end Development"
     }
 
-    const styleIntroAbout = {
-        overflow: "hidden",
-        width: "100vw",
-        height: checkInnerWidth(
-            areSizes,
-            ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
-                "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"]
-        ),
-        backgroundColor: "#E2DDD1",
-        color: "#B0622C",
-        textAlign: "center",
-        borderRadius: "10%"
+    const sectionIntroAbout = {
+        id: "sectionIntroAbout",
+        style: {
+            overflow: "hidden",
+            width: "100vw",
+            height: checkInnerWidth(
+                areSizes,
+                ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
+                    "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"]
+            ),
+            backgroundColor: "#E2DDD1",
+            color: "#B0622C",
+            textAlign: "center",
+            borderRadius: "10%"
+        }
+    }
+
+    const divIntroAbout = {
+        id: "divIntroAbout",
+        style: {
+            height: "10%"
+        },
+        content: ""
     }
 
     const h1IntroAbout = {
+        id: "h1IntroAbout",
         className: robotoMono.className,
         style: {
             margin: 0,
@@ -266,20 +278,38 @@ export default function Page() {
                 ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
                     "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
             )
-        }
+        },
+        content: "Hello!"
     }
 
-    const h2IntroAbout = {
-        className: anonymousPro.className,
-        style: {
-            margin: 0,
-            fontSize: checkInnerWidth(
-                areSizes,
-                ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                    "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-            )
+    const h2IntrosAbout = [
+        {
+            id: "01h2IntroAbout",
+            className: anonymousPro.className,
+            style: {
+                margin: 0,
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+                )
+            },
+            content: contentH2IntrosAbout[0]
+        },
+        {
+            id: "02h2IntroAbout",
+            className: anonymousPro.className,
+            style: {
+                margin: 0,
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+                )
+            },
+            content: contentH2IntrosAbout[1]
         }
-    }
+    ]
 
     const styleMainAbout = {
         overflow: "hidden",
@@ -377,10 +407,10 @@ export default function Page() {
     }
 
     const valueAboutContext = {
-        styleIntro: styleIntroAbout,
+        sectionIntro: sectionIntroAbout,
+        divIntro: divIntroAbout,
         h1Intro: h1IntroAbout,
-        h2Intro: h2IntroAbout,
-        intros: introsAbout,
+        h2Intros: h2IntrosAbout,
         styleMain: styleMainAbout,
         h1Main: h1MainAbout,
         h2Main: h2MainAbout,

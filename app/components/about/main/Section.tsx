@@ -1,19 +1,20 @@
 import { useContext } from "react";
 
-import DivComponent from "../Div";
-import H1Component from "../H1";
-import H2Component from "../H2";
-import UlComponent from "../Ul";
-import LiComponent from "../Li";
-import LinkComponent from "../Link";
+import SectionComponent from "../../Section";
+import DivComponent from "../../Div";
+import H1Component from "../../H1";
+import H2Component from "../../H2";
+import UlComponent from "../../Ul";
+import LiComponent from "../../Li";
+import LinkComponent from "../../Link";
 
-import { AboutContext } from "../../contexts/About";
+import { AboutContext } from "../../../contexts/About";
 
-export default function MainAboutComponent() {
+export default function SectionMainAboutComponent() {
     const aboutContext = useContext(AboutContext);
 
     return (
-        <DivComponent
+        <SectionComponent
             id="main"
             style={aboutContext["styleMain"]}>
             <DivComponent
@@ -80,6 +81,6 @@ export default function MainAboutComponent() {
                     }
                 </H2Component>
             </UlComponent>
-        </DivComponent>
+        </SectionComponent>
     );
 }

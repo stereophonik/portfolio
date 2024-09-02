@@ -1,16 +1,16 @@
 import SectionComponent from "../Section";
-import IntroAboutComponent from "./Intro";
-import MainAboutComponent from "./Main";
-import OutroAboutComponent from "./Outro";
+import SectionIntroAboutComponent from "./intro/Section";
+import SectionMainAboutComponent from "./main/Section";
+import SectionOutroAboutComponent from "./outro/Section";
 
 export default function SectionAboutComponent() {
     return (
         <SectionComponent
             id="sectionAbout"
             style={{}}>
-            <IntroAboutComponent />
-            <MainAboutComponent />
-            <OutroAboutComponent />
+            <SectionIntroAboutComponent />
+            <SectionMainAboutComponent />
+            <SectionOutroAboutComponent />
         </SectionComponent>
     );
 }
