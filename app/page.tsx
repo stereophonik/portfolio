@@ -9,7 +9,7 @@ import NavNavigationComponent from "./components/navigation/Nav";
 import SectionProfileComponent from "./components/profile/Section";
 import SectionAboutComponent from "./components/about/Section";
 
-import { NavContext } from "./contexts/Nav";
+import { NavigationContext } from "./contexts/Navigation";
 import { ProfileContext } from "./contexts/Profile";
 import { AboutContext } from "./contexts/About";
 
@@ -272,13 +272,13 @@ export default function Page() {
 
     return (
         <MainComponent>
-            <NavContext.Provider
+            <NavigationContext.Provider
                 value={{
                     styleNav: styleNavNav,
                     h2: h2Nav
                 }}>
                 <NavNavigationComponent />
-            </NavContext.Provider>
+            </NavigationContext.Provider>
             <ProfileContext.Provider
                 value={{
                     styleProfile: styleProfileProfile,

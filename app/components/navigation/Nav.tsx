@@ -6,10 +6,10 @@ import H2Component from "../H2";
 import LiComponent from "../Li";
 import LinkComponent from "../Link";
 
-import { NavContext } from "../../contexts/Nav";
+import { NavigationContext } from "../../contexts/Navigation";
 
 export default function NavNavigationComponent() {
-    const navContext = useContext(NavContext);
+    const navContext = useContext(NavigationContext);
 
     return (
         <NavComponent

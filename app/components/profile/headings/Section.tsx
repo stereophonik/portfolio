@@ -1,16 +1,16 @@
 import { useContext } from "react";
 
-import HeadingsComponent from "../Headings";
-import H1Component from "../H1";
-import H2Component from "../H2";
+import SectionComponent from "../../Section";
+import H1Component from "../../H1";
+import H2Component from "../../H2";
 
-import { ProfileContext } from "../../contexts/Profile";
+import { ProfileContext } from "../../../contexts/Profile";
 
-export default function HeadingsProfileComponent() {
+export default function SectionHeadingsProfileComponent() {
     const profileContext = useContext(ProfileContext);
 
     return (
-        <HeadingsComponent
+        <SectionComponent
             style={profileContext["styleHeadings"]}>
             <H1Component
                 id="h1Headings"
@@ -24,6 +24,6 @@ export default function HeadingsProfileComponent() {
                 style={profileContext["styleH2Headings"]}>
                 {profileContext["h2Headings"]}
             </H2Component>
-        </HeadingsComponent>
+        </SectionComponent>
     );
 }

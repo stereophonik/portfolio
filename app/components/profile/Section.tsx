@@ -3,7 +3,7 @@ import { useContext } from "react";
 import SectionComponent from "../Section";
 import DivComponent from "../Div";
 import ImageProfileComponent from "./Image";
-import HeadingsProfileComponent from "./Headings";
+import SectionHeadingsProfileComponent from "./headings/Section";
 
 import {ProfileContext} from "../../contexts/Profile";
 
@@ -17,7 +17,7 @@ export default function SectionProfileComponent() {
                 id={profileContext["div"]["id"]}
                 style={profileContext["div"]["style"]}> </DivComponent>
             <ImageProfileComponent />
-            <HeadingsProfileComponent />
+            <SectionHeadingsProfileComponent />
         </SectionComponent>
     );
 }
