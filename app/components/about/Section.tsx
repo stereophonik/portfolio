@@ -1,14 +1,15 @@
-import AboutComponent from "../About";
+import SectionComponent from "../Section";
 import IntroAboutComponent from "./Intro";
 import MainAboutComponent from "./Main";
 import OutroAboutComponent from "./Outro";
 
-export default function PrimaryAboutComponent() {
+export default function SectionAboutComponent() {
     return (
-        <AboutComponent>
+        <SectionComponent
+            style={{}}>
             <IntroAboutComponent />
             <MainAboutComponent />
             <OutroAboutComponent />
-        </AboutComponent>
+        </SectionComponent>
     );
 }

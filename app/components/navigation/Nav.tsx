@@ -8,7 +8,7 @@ import LinkComponent from "../Link";
 
 import { NavContext } from "../../contexts/Nav";
 
-export default function PrimaryNavComponent() {
+export default function NavNavigationComponent() {
     const navContext = useContext(NavContext);
 
     return (

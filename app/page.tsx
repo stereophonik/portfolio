@@ -4,9 +4,10 @@ import { useState, useEffect } from "react";
 import { Anonymous_Pro } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
 
-import PrimaryNavComponent from "./components/nav/Primary";
-import PrimaryProfileComponent from "./components/profile/Primary";
-import PrimaryAboutComponent from "./components/about/Primary";
+import MainComponent from "./components/Main";
+import NavNavigationComponent from "./components/navigation/Nav";
+import SectionProfileComponent from "./components/profile/Section";
+import SectionAboutComponent from "./components/about/Section";
 
 import { NavContext } from "./contexts/Nav";
 import { ProfileContext } from "./contexts/Profile";
@@ -21,8 +22,6 @@ const robotoMono = Roboto_Mono({
     weight: "700",
     subsets: ["latin"]
 });
-
-import PrimaryComponent from "./components/Primary";
 
 export default function Page() {
     const [areSizes, setAreSizes] = useState([]);
@@ -272,13 +271,13 @@ export default function Page() {
     }
 
     return (
-        <PrimaryComponent>
+        <MainComponent>
             <NavContext.Provider
                 value={{
                     styleNav: styleNavNav,
                     h2: h2Nav
                 }}>
-                <PrimaryNavComponent />
+                <NavNavigationComponent />
             </NavContext.Provider>
             <ProfileContext.Provider
                 value={{
@@ -296,7 +295,7 @@ export default function Page() {
                     h1Headings: profile["h1Headings"],
                     h2Headings: profile["h2Headings"]
                 }}>
-                <PrimaryProfileComponent />
+                <SectionProfileComponent />
             </ProfileContext.Provider>
             <AboutContext.Provider
                 value={{
@@ -316,8 +315,8 @@ export default function Page() {
                     h2Outro: h2OutroAbout,
                     outro: outroAbout
                 }}>
-                <PrimaryAboutComponent />
+                <SectionAboutComponent />
             </AboutContext.Provider>
-        </PrimaryComponent>
+        </MainComponent>
     );
 }
