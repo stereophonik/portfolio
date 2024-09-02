@@ -26,7 +26,7 @@ const robotoMono = Roboto_Mono({
 export default function Page() {
     const [areSizes, setAreSizes] = useState([]);
     const [profile, setProfile] = useState({});
-    const [contentH2IntrosAbout, setContentH2IntrosAbout] = useState([]);
+    const [contentsH2IntroAbout, setContentsH2IntroAbout] = useState([]);
     const [labelServingsMainAbout, setLabelServingsMainAbout] = useState("");
     const [servingsMainAbout, setServingsMainAbout] = useState([]);
     const [labelSkillsMainAbout, setLabelSkillsMainAbout] = useState("");
@@ -66,7 +66,7 @@ export default function Page() {
         })
             .then(fileAbout => fileAbout.json())
             .then(parsedFileAbout => {
-                setContentH2IntrosAbout(parsedFileAbout.contentH2Intros);
+                setContentsH2IntroAbout(parsedFileAbout.contentsH2Intro);
                 setLabelServingsMainAbout(parsedFileAbout.labelServingsMain);
                 setServingsMainAbout(parsedFileAbout.servingsMain);
                 setLabelSkillsMainAbout(parsedFileAbout.labelSkillsMain);
@@ -171,7 +171,7 @@ export default function Page() {
             content: ""
         },
         {
-            href: "#main",
+            href: "#sectionMainAbout",
             content: "Main"
         },
         {
@@ -294,7 +294,7 @@ export default function Page() {
                         "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
                 )
             },
-            content: contentH2IntrosAbout[0]
+            content: contentsH2IntroAbout[0]
         },
         {
             id: "02h2IntroAbout",
@@ -307,34 +307,60 @@ export default function Page() {
                         "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
                 )
             },
-            content: contentH2IntrosAbout[1]
+            content: contentsH2IntroAbout[1]
         }
     ]
 
-    const styleMainAbout = {
-        overflow: "hidden",
-        width: "100vw",
-        height: checkInnerWidth(
-            areSizes,
-            ["145vw", "135vw", "110vw", "90vw", "75vw", "90vw", "90vw",
-                "90vw", "90vw", "90vw", "90vw", "80vw", "75vw", "60vw"]
-        ),
-        backgroundColor: "#B0622C",
-        color: "#E2DDD1",
-        textAlign: "center"
-    }
-
-    const h1MainAbout = {
-        className: robotoMono.className,
+    const sectionMainAbout = {
+        id: "sectionMainAbout",
         style: {
-            margin: 0,
-            fontSize: checkInnerWidth(
+            overflow: "hidden",
+            width: "100vw",
+            height: checkInnerWidth(
                 areSizes,
-                ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                    "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-            )
+                ["145vw", "135vw", "110vw", "90vw", "75vw", "90vw", "90vw",
+                    "90vw", "90vw", "90vw", "90vw", "80vw", "75vw", "60vw"]
+            ),
+            backgroundColor: "#B0622C",
+            color: "#E2DDD1",
+            textAlign: "center"
         }
     }
+
+    const divMainAbout = {
+        id: "divMainAbout",
+        style: {
+            height: "10%"
+        },
+        content: ""
+    }
+
+    const h1sMainAbout = [
+        {
+            id: "01H1MainAbout",
+            className: robotoMono.className,
+            style: {
+                margin: 0,
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+                )
+            }
+        },
+        {
+            id: "02H1MainAbout",
+            className: robotoMono.className,
+            style: {
+                margin: 0,
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+                )
+            }
+        }
+    ]
 
     const h2MainAbout = {
         className: anonymousPro.className,
@@ -411,8 +437,9 @@ export default function Page() {
         divIntro: divIntroAbout,
         h1Intro: h1IntroAbout,
         h2Intros: h2IntrosAbout,
-        styleMain: styleMainAbout,
-        h1Main: h1MainAbout,
+        sectionMain: sectionMainAbout,
+        divMain: divMainAbout,
+        h1sMain: h1sMainAbout,
         h2Main: h2MainAbout,
         labelServingsMain: labelServingsMainAbout,
         servingsMain: servingsMainAbout,

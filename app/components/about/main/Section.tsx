@@ -15,17 +15,17 @@ export default function SectionMainAboutComponent() {
 
     return (
         <SectionComponent
-            id="main"
-            style={aboutContext["styleMain"]}>
+            id={aboutContext["sectionMain"]["id"]}
+            style={aboutContext["sectionMain"]["style"]}>
             <DivComponent
-                id="divMain"
-                style={{
-                    height: "10%"
-                }}> </DivComponent>
+                id={aboutContext["divMain"]["id"]}
+                style={aboutContext["divMain"]["style"]}>
+                {aboutContext["divMain"]["content"]}
+            </DivComponent>
             <H1Component
-                id="01H1Main"
-                className={aboutContext["h1Main"]["className"]}
-                style={aboutContext["h1Main"]["style"]}>
+                id={aboutContext["h1sMain"][0]["id"]}
+                className={aboutContext["h1sMain"][0]["className"]}
+                style={aboutContext["h1sMain"][0]["style"]}>
                 {aboutContext["labelServingsMain"]}
             </H1Component>
             <UlComponent
@@ -51,9 +51,9 @@ export default function SectionMainAboutComponent() {
                 </H2Component>
             </UlComponent>
             <H1Component
-                id="02H1Main"
-                className={aboutContext["h1Main"]["className"]}
-                style={aboutContext["h1Main"]["style"]}>
+                id={aboutContext["h1sMain"][1]["id"]}
+                className={aboutContext["h1sMain"][1]["className"]}
+                style={aboutContext["h1sMain"][1]["style"]}>
                 {aboutContext["labelSkillsMain"]}
             </H1Component>
             <UlComponent
