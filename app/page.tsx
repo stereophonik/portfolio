@@ -28,13 +28,6 @@ export default function Page() {
     const [navigation, setNavigation] = useState({});
     const [profile, setProfile] = useState({});
     const [about, setAbout] = useState({});
-    const [contentAaH2sIntroAbout, setAaContentH2sIntroAbout] = useState("");
-    const [contentAbH2sIntroAbout, setAbContentH2sIntroAbout] = useState("");
-    const [labelServingsMainAbout, setLabelServingsMainAbout] = useState("");
-    const [servingsMainAbout, setServingsMainAbout] = useState([]);
-    const [labelSkillsMainAbout, setLabelSkillsMainAbout] = useState("");
-    const [skillsMainAbout, setSkillsMainAbout] = useState([]);
-    const [outroAbout, setOutroAbout] = useState([]);
 
     useEffect(() => {
         function executeSetAreSizes() {
@@ -74,13 +67,6 @@ export default function Page() {
             .then(fileAbout => fileAbout.json())
             .then(parsedFileAbout => {
                 setAbout(parsedFileAbout);
-                setAaContentH2sIntroAbout(parsedFileAbout.contentAaH2sIntro);
-                setAbContentH2sIntroAbout(parsedFileAbout.contentAbH2sIntro);
-                setLabelServingsMainAbout(parsedFileAbout.labelServingsMain);
-                setServingsMainAbout(parsedFileAbout.servingsMain);
-                setLabelSkillsMainAbout(parsedFileAbout.labelSkillsMain);
-                setSkillsMainAbout(parsedFileAbout.skillsMain);
-                setOutroAbout(parsedFileAbout.outro);
             });
     }, []);
 
@@ -281,7 +267,7 @@ export default function Page() {
                             "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
                     )
                 },
-                content: contentAaH2sIntroAbout
+                content: about["contentAaH2sIntro"]
             },
             {
                 id: "02h2IntroAbout",
@@ -293,33 +279,34 @@ export default function Page() {
                             "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
                     )
                 },
-                content: contentAbH2sIntroAbout
+                content: about["contentAbH2sIntro"]
             }
         ]
     }
 
-    const sectionMainAbout = {
-        id: "sectionMainAbout",
-        style: {
-            overflow: "hidden",
-            width: "100vw",
-            height: checkInnerWidth(
-                areSizes,
-                ["145vw", "135vw", "110vw", "90vw", "75vw", "90vw", "90vw",
-                    "90vw", "90vw", "90vw", "90vw", "80vw", "75vw", "60vw"]
-            ),
-            backgroundColor: "#B0622C",
-            color: "#E2DDD1",
-            textAlign: "center"
-        }
-    }
-
-    const divMainAbout = {
-        id: "divMainAbout",
-        style: {
-            height: "10%"
+    const mainAbout = {
+        section: {
+            id: "sectionMainAbout",
+            style: {
+                overflow: "hidden",
+                width: "100vw",
+                height: checkInnerWidth(
+                    areSizes,
+                    ["145vw", "135vw", "110vw", "90vw", "75vw", "90vw", "90vw",
+                        "90vw", "90vw", "90vw", "90vw", "80vw", "75vw", "60vw"]
+                ),
+                backgroundColor: "#B0622C",
+                color: "#E2DDD1",
+                textAlign: "center"
+            }
         },
-        content: ""
+        div: {
+            id: "divMainAbout",
+            style: {
+                height: "10%"
+            },
+            content: ""
+        }
     }
 
     const h1ServingsMainAbout = {
@@ -481,6 +468,9 @@ export default function Page() {
         }
     }
 
+    const contentH1OutroAbout = about["contentH1Outro"]
+    const contentH2OutroAbout = about["contentH2Outro"]
+
     const valueNavigationContext = {
         nav: navNavigation,
         ul: ulNavigation,
@@ -498,8 +488,7 @@ export default function Page() {
 
     const valueAboutContext = {
         intro: introAbout,
-        sectionMain: sectionMainAbout,
-        divMain: divMainAbout,
+        main: mainAbout,
         h1ServingsMain: h1ServingsMainAbout,
         h2ServingsMain: h2ServingsMainAbout,
         h1SkillsMain: h1SkillsMainAbout,
@@ -510,7 +499,8 @@ export default function Page() {
         styleOutro: styleOutroAbout,
         h1Outro: h1OutroAbout,
         h2Outro: h2OutroAbout,
-        outro: outroAbout
+        contentH1Outro: contentH1OutroAbout,
+        contentH2Outro: contentH2OutroAbout
     }
 
     return (

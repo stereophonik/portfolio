@@ -12,12 +12,12 @@ export default function SectionMainAboutComponent() {
 
     return (
         <SectionComponent
-            id={aboutContext["sectionMain"]["id"]}
-            style={aboutContext["sectionMain"]["style"]}>
+            id={aboutContext["main"]["section"]["id"]}
+            style={aboutContext["main"]["section"]["style"]}>
             <DivComponent
-                id={aboutContext["divMain"]["id"]}
-                style={aboutContext["divMain"]["style"]}>
-                {aboutContext["divMain"]["content"]}
+                id={aboutContext["main"]["div"]["id"]}
+                style={aboutContext["main"]["div"]["style"]}>
+                {aboutContext["main"]["div"]["content"]}
             </DivComponent>
             <SectionServingsMainAboutComponent />
             <SectionSkillsMainAboutComponent />

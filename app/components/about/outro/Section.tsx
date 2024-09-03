@@ -23,13 +23,13 @@ export default function SectionOutroAboutComponent() {
                 id="h1Outro"
                 className={aboutContext["h1Outro"]["className"]}
                 style={aboutContext["h1Outro"]["style"]}>
-                Btw...
+                {aboutContext["contentH1Outro"]}
             </H1Component>
             <H2Component
                 id="h2Outro"
                 className={aboutContext["h2Outro"]["className"]}
                 style={aboutContext["h2Outro"]["style"]}>
-                {aboutContext["outro"]}
+                {aboutContext["contentH2Outro"]}
             </H2Component>
         </SectionComponent>
     );
