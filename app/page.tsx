@@ -114,7 +114,6 @@ export default function Page() {
         id: "h2Navigation",
         className: anonymousPro.className,
         style: {
-            margin: 0,
             fontSize: checkInnerWidth(
                 areSizes,
                 ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
@@ -221,7 +220,6 @@ export default function Page() {
         id: "h1HeadingsProfile",
         className: robotoMono.className,
         style: {
-            margin: 0,
             fontSize: checkInnerWidth(
                 areSizes,
                 ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
@@ -235,7 +233,6 @@ export default function Page() {
         id: "h2HeadingsProfile",
         className: anonymousPro.className,
         style: {
-            margin: 0,
             fontSize: checkInnerWidth(
                 areSizes,
                 ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
@@ -274,7 +271,6 @@ export default function Page() {
         id: "h1IntroAbout",
         className: robotoMono.className,
         style: {
-            margin: 0,
             fontSize: checkInnerWidth(
                 areSizes,
                 ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
@@ -289,7 +285,6 @@ export default function Page() {
             id: "01h2IntroAbout",
             className: anonymousPro.className,
             style: {
-                margin: 0,
                 fontSize: checkInnerWidth(
                     areSizes,
                     ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
@@ -302,7 +297,6 @@ export default function Page() {
             id: "02h2IntroAbout",
             className: anonymousPro.className,
             style: {
-                margin: 0,
                 fontSize: checkInnerWidth(
                     areSizes,
                     ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
@@ -342,7 +336,6 @@ export default function Page() {
             id: "01H1MainAbout",
             className: robotoMono.className,
             style: {
-                margin: 0,
                 fontSize: checkInnerWidth(
                     areSizes,
                     ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
@@ -354,7 +347,6 @@ export default function Page() {
             id: "02H1MainAbout",
             className: robotoMono.className,
             style: {
-                margin: 0,
                 fontSize: checkInnerWidth(
                     areSizes,
                     ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
@@ -367,7 +359,6 @@ export default function Page() {
     const h2MainAbout = {
         className: anonymousPro.className,
         style: {
-            margin: 0,
             fontSize: checkInnerWidth(
                 areSizes,
                 ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
@@ -393,7 +384,6 @@ export default function Page() {
     const h1OutroAbout = {
         className: robotoMono.className,
         style: {
-            margin: 0,
             fontSize: checkInnerWidth(
                 areSizes,
                 ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
@@ -405,7 +395,6 @@ export default function Page() {
     const h2OutroAbout = {
         className: anonymousPro.className,
         style: {
-            margin: 0,
             fontSize: checkInnerWidth(
                 areSizes,
                 ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
