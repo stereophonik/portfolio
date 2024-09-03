@@ -310,8 +310,8 @@ export default function Page() {
     }
 
     const h1ServingsMainAbout = {
-        id: "aaH1sMainAbout",
-        content: about["contentAaH1sMain"],
+        id: "h1ServingsMainAbout",
+        content: about["contentH1ServingsMain"],
         className: robotoMono.className,
         style: {
             fontSize: checkInnerWidth(
@@ -323,7 +323,7 @@ export default function Page() {
     }
 
     const h2ServingsMainAbout = {
-        id: "aaH2sMainAbout",
+        id: "h2ServingsMainAbout",
         className: anonymousPro.className,
         style: {
             fontSize: checkInnerWidth(
@@ -335,9 +335,9 @@ export default function Page() {
     }
 
     const h1SkillsMainAbout = {
-        id: "abH1sMainAbout",
+        id: "h1SkillsMainAbout",
         className: robotoMono.className,
-        content: about["contentAbH1sMain"],
+        content: about["contentH1SkillsMain"],
         style: {
             fontSize: checkInnerWidth(
                 areSizes,
@@ -348,7 +348,7 @@ export default function Page() {
     }
 
     const h2SkillsMainAbout = {
-        id: "abH2sMainAbout",
+        id: "h2SkillsMainAbout",
         className: anonymousPro.className,
         style: {
             fontSize: checkInnerWidth(
