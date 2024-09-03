@@ -12,25 +12,25 @@ export default function SectionIntroAboutComponent() {
 
     return (
         <SectionComponent
-            id={aboutContext["sectionIntro"]["id"]}
-            style={aboutContext["sectionIntro"]["style"]}>
+            id={aboutContext["intro"]["section"]["id"]}
+            style={aboutContext["intro"]["section"]["style"]}>
             <DivComponent
-                id={aboutContext["divIntro"]["id"]}
-                style={aboutContext["divIntro"]["style"]}>
-                {aboutContext["divIntro"]["content"]}
+                id={aboutContext["intro"]["div"]["id"]}
+                style={aboutContext["intro"]["div"]["style"]}>
+                {aboutContext["intro"]["div"]["content"]}
             </DivComponent>
             <H1Component
-                id={aboutContext["h1Intro"]["id"]}
-                className={aboutContext["h1Intro"]["className"]}
-                style={aboutContext["h1Intro"]["style"]}>
-                {aboutContext["h1Intro"]["content"]}
+                id={aboutContext["intro"]["h1"]["id"]}
+                className={aboutContext["intro"]["h1"]["className"]}
+                style={aboutContext["intro"]["h1"]["style"]}>
+                {aboutContext["intro"]["h1"]["content"]}
             </H1Component>
             {
-                aboutContext["h2sIntro"].map((h2Intro) =>
+                aboutContext["intro"]["h2s"].map((h2Intro) =>
                     <H2Component
-                        id={aboutContext["h2sIntro"][aboutContext["h2sIntro"].indexOf(h2Intro)]["id"]}
-                        className={aboutContext["h2sIntro"][aboutContext["h2sIntro"].indexOf(h2Intro)]["className"]}
-                        style={aboutContext["h2sIntro"][aboutContext["h2sIntro"].indexOf(h2Intro)]["style"]}>
+                        id={aboutContext["intro"]["h2s"][aboutContext["intro"]["h2s"].indexOf(h2Intro)]["id"]}
+                        className={aboutContext["intro"]["h2s"][aboutContext["intro"]["h2s"].indexOf(h2Intro)]["className"]}
+                        style={aboutContext["intro"]["h2s"][aboutContext["intro"]["h2s"].indexOf(h2Intro)]["style"]}>
                         {h2Intro["content"]}
                     </H2Component>
                 )

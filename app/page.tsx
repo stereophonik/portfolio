@@ -232,70 +232,69 @@ export default function Page() {
         }
     }
 
-    const sectionIntroAbout = {
-        id: "sectionIntroAbout",
-        style: {
-            overflow: "hidden",
-            width: "100vw",
-            height: checkInnerWidth(
-                areSizes,
-                ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
-                    "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"]
-            ),
-            backgroundColor: "#E2DDD1",
-            color: "#B0622C",
-            textAlign: "center",
-            borderRadius: "10%"
-        }
-    }
-
-    const divIntroAbout = {
-        id: "divIntroAbout",
-        style: {
-            height: "10%"
+    const introAbout = {
+        section: {
+            id: "sectionIntroAbout",
+            style: {
+                overflow: "hidden",
+                width: "100vw",
+                height: checkInnerWidth(
+                    areSizes,
+                    ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
+                        "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"]
+                ),
+                backgroundColor: "#E2DDD1",
+                color: "#B0622C",
+                textAlign: "center",
+                borderRadius: "10%"
+            }
         },
-        content: ""
-    }
-
-    const h1IntroAbout = {
-        id: "h1IntroAbout",
-        className: robotoMono.className,
-        style: {
-            fontSize: checkInnerWidth(
-                areSizes,
-                ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                    "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-            )
+        div: {
+            id: "divIntroAbout",
+            style: {
+                height: "10%"
+            },
+            content: ""
         },
-        content: "Hello!"
-    }
-
-    const h2sIntroAbout = [
-        {
-            id: "01h2IntroAbout",
-            className: anonymousPro.className,
+        h1: {
+            id: "h1IntroAbout",
+            className: robotoMono.className,
             style: {
                 fontSize: checkInnerWidth(
                     areSizes,
-                    ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+                    ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
                 )
             },
-            content: aaContentH2sIntroAbout
+            content: "Hello!"
         },
-        {
-            id: "02h2IntroAbout",
-            className: anonymousPro.className,
-            style: {
-                fontSize: checkInnerWidth(
-                    areSizes,
-                    ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-                )
+        h2s: [
+            {
+                id: "01h2IntroAbout",
+                className: anonymousPro.className,
+                style: {
+                    fontSize: checkInnerWidth(
+                        areSizes,
+                        ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                            "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+                    )
+                },
+                content: aaContentH2sIntroAbout
             },
-            content: abContentH2sIntroAbout
-        }
-    ]
+            {
+                id: "02h2IntroAbout",
+                className: anonymousPro.className,
+                style: {
+                    fontSize: checkInnerWidth(
+                        areSizes,
+                        ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                            "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+                    )
+                },
+                content: abContentH2sIntroAbout
+            }
+        ]
+    }
 
     const sectionMainAbout = {
         id: "sectionMainAbout",
@@ -409,10 +408,7 @@ export default function Page() {
     }
 
     const valueAboutContext = {
-        sectionIntro: sectionIntroAbout,
-        divIntro: divIntroAbout,
-        h1Intro: h1IntroAbout,
-        h2sIntro: h2sIntroAbout,
+        intro: introAbout,
         sectionMain: sectionMainAbout,
         divMain: divMainAbout,
         h1sMain: h1sMainAbout,
