@@ -322,57 +322,55 @@ export default function Page() {
         content: ""
     }
 
-    const h1sMainAbout = [
-        {
-            id: "aaH1sMainAbout",
-            content: about["contentAaH1sMain"],
-            className: robotoMono.className,
-            style: {
-                fontSize: checkInnerWidth(
-                    areSizes,
-                    ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-                )
-            }
-        },
-        {
-            id: "abH1sMainAbout",
-            className: robotoMono.className,
-            content: about["contentAbH1sMain"],
-            style: {
-                fontSize: checkInnerWidth(
-                    areSizes,
-                    ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-                )
-            }
+    const h1ServingsMainAbout = {
+        id: "aaH1sMainAbout",
+        content: about["contentAaH1sMain"],
+        className: robotoMono.className,
+        style: {
+            fontSize: checkInnerWidth(
+                areSizes,
+                ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                    "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+            )
         }
-    ]
+    }
 
-    const h2sMainAbout = [
-        {
-            id: "aaH2sMainAbout",
-            className: anonymousPro.className,
-            style: {
-                fontSize: checkInnerWidth(
-                    areSizes,
-                    ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-                )
-            }
-        },
-        {
-            id: "abH2sMainAbout",
-            className: anonymousPro.className,
-            style: {
-                fontSize: checkInnerWidth(
-                    areSizes,
-                    ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-                )
-            }
+    const h2ServingsMainAbout = {
+        id: "aaH2sMainAbout",
+        className: anonymousPro.className,
+        style: {
+            fontSize: checkInnerWidth(
+                areSizes,
+                ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                    "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+            )
         }
-    ]
+    }
+
+    const h1SkillsMainAbout = {
+        id: "abH1sMainAbout",
+        className: robotoMono.className,
+        content: about["contentAbH1sMain"],
+        style: {
+            fontSize: checkInnerWidth(
+                areSizes,
+                ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                    "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+            )
+        }
+    }
+
+    const h2SkillsMainAbout = {
+        id: "abH2sMainAbout",
+        className: anonymousPro.className,
+        style: {
+            fontSize: checkInnerWidth(
+                areSizes,
+                ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                    "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+            )
+        }
+    }
 
     const lisServingsMainAbout = [
         {
@@ -502,8 +500,10 @@ export default function Page() {
         intro: introAbout,
         sectionMain: sectionMainAbout,
         divMain: divMainAbout,
-        h1sMain: h1sMainAbout,
-        h2sMain: h2sMainAbout,
+        h1ServingsMain: h1ServingsMainAbout,
+        h2ServingsMain: h2ServingsMainAbout,
+        h1SkillsMain: h1SkillsMainAbout,
+        h2SkillsMain: h2SkillsMainAbout,
         lisServingsMain: lisServingsMainAbout,
         lisSkillsMain: lisSkillsMainAbout,
         linksSkillsMain: linksSkillsMainAbout,
