@@ -14,16 +14,16 @@ export default function SectionHeadingsProfileComponent() {
             id="sectionHeadingsProfile"
             style={{}}>
             <H1Component
-                id={profileContext["h1Headings"]["id"]}
-                className={profileContext["h1Headings"]["className"]}
-                style={profileContext["h1Headings"]["style"]}>
-                {profileContext["h1Headings"]["content"]}
+                id={profileContext["headings"]["h1"]["id"]}
+                className={profileContext["headings"]["h1"]["className"]}
+                style={profileContext["headings"]["h1"]["style"]}>
+                {profileContext["headings"]["h1"]["content"]}
             </H1Component>
             <H2Component
-                id={profileContext["h2Headings"]["id"]}
-                className={profileContext["h2Headings"]["className"]}
-                style={profileContext["h2Headings"]["style"]}>
-                {profileContext["h2Headings"]["content"]}
+                id={profileContext["headings"]["h2"]["id"]}
+                className={profileContext["headings"]["h2"]["className"]}
+                style={profileContext["headings"]["h2"]["style"]}>
+                {profileContext["headings"]["h2"]["content"]}
             </H2Component>
         </SectionComponent>
     );

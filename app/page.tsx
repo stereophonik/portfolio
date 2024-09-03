@@ -205,30 +205,31 @@ export default function Page() {
         )
     }
 
-    const h1HeadingsProfile = {
-        id: "h1HeadingsProfile",
-        className: robotoMono.className,
-        style: {
-            fontSize: checkInnerWidth(
-                areSizes,
-                ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                    "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-            )
+    const headingsProfile = {
+        h1: {
+            id: profile["idH1Headings"],
+            content: profile["contentH1Headings"],
+            className: robotoMono.className,
+            style: {
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+                )
+            }
         },
-        content: "Nikolai Reyes"
-    }
-
-    const h2HeadingsProfile = {
-        id: "h2HeadingsProfile",
-        className: anonymousPro.className,
-        style: {
-            fontSize: checkInnerWidth(
-                areSizes,
-                ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                    "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-            )
-        },
-        content: "Transitioning to Front-end Development"
+        h2: {
+            id: profile["idH2Headings"],
+            content: profile["contentH2Headings"],
+            className: anonymousPro.className,
+            style: {
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+                )
+            }
+        }
     }
 
     const sectionIntroAbout = {
@@ -269,7 +270,7 @@ export default function Page() {
         content: "Hello!"
     }
 
-    const h2IntrosAbout = [
+    const h2sIntroAbout = [
         {
             id: "01h2IntroAbout",
             className: anonymousPro.className,
@@ -404,15 +405,14 @@ export default function Page() {
         section: sectionProfile,
         div: divProfile,
         image: imageProfile,
-        h1Headings: h1HeadingsProfile,
-        h2Headings: h2HeadingsProfile
+        headings: headingsProfile
     }
 
     const valueAboutContext = {
         sectionIntro: sectionIntroAbout,
         divIntro: divIntroAbout,
         h1Intro: h1IntroAbout,
-        h2Intros: h2IntrosAbout,
+        h2sIntro: h2sIntroAbout,
         sectionMain: sectionMainAbout,
         divMain: divMainAbout,
         h1sMain: h1sMainAbout,

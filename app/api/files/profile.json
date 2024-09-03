@@ -7,6 +7,10 @@
         "height": "10%"
     },
     "contentDiv": "",
+    "idH1Headings": "h1HeadingsProfile",
+    "contentH1Headings": "Nikolai Reyes",
+    "idH2Headings": "h2HeadingsProfile",
+    "contentH2Headings": "Transitioning to Front-end Development",
     "srcImage": "/picture.jpg",
     "altImage": "Nikolai Reyes",
     "styleImage": {
