@@ -25,6 +25,7 @@ const robotoMono = Roboto_Mono({
 
 export default function Page() {
     const [areSizes, setAreSizes] = useState([]);
+    const [navigation, setNavigation] = useState({});
     const [profile, setProfile] = useState({});
     const [aaContentH2sIntroAbout, setAaContentH2sIntroAbout] = useState("");
     const [abContentH2sIntroAbout, setAbContentH2sIntroAbout] = useState("");
@@ -50,16 +51,20 @@ export default function Page() {
         executeSetAreSizes();
         window.onresize = executeSetAreSizes;
 
+        fetch("/api?fileName=navigation", {
+            method: "GET"
+        })
+            .then(fileNavigation => fileNavigation.json())
+            .then(parsedFileNavigation => {
+                setNavigation(parsedFileNavigation);
+            });
+
         fetch("/api?fileName=profile", {
             method: "GET"
         })
             .then(fileProfile => fileProfile.json())
             .then(parsedFileProfile => {
-                setProfile({
-                    srcImage: parsedFileProfile.srcImage,
-                    altImage: parsedFileProfile.altImage,
-                    styleImage: parsedFileProfile.styleImage
-                });
+                setProfile(parsedFileProfile);
             });
 
         fetch("/api?fileName=about", {
@@ -95,23 +100,17 @@ export default function Page() {
     }
 
     const navNavigation = {
-        id: "navNavigation",
-        className: "classNameNavNavigation",
-        style: {
-            overflow: "hidden",
-            backgroundColor: "#E2DDD1",
-            color: "#B0622C",
-            textAlign: "center",
-            borderRadius: "10%"
-        }
+        id: navigation["idNav"],
+        className: navigation["classNameNav"],
+        style: navigation["styleNav"]
     }
 
     const ulNavigation = {
-        style: {paddingInlineStart: "0"}
+        style: navigation["styleUl"]
     }
 
     const h3Navigation = {
-        id: "h3Navigation",
+        id: navigation["idH3"],
         className: anonymousPro.className,
         style: {
             fontSize: checkInnerWidth(
@@ -124,64 +123,52 @@ export default function Page() {
 
     const lisNavigation = [
         {
-            key: 0,
-            style: {
-                display: "inline-block"
-            },
-            content: ""
+            key: navigation["keyAaLi"],
+            style: navigation["styleAaLi"],
+            content: navigation["contentAaLi"]
         },
         {
-            key: 1,
-            style: {
-                color: "#E2DDD1",
-                display: "inline-block"
-            },
-            content: "---"
+            key: navigation["keyAbLi"],
+            style: navigation["styleAbLi"],
+            content: navigation["contentAbLi"]
         },
         {
-            key: 2,
-            style: {
-                display: "inline-block"
-            },
-            content: ""
+            key: navigation["keyAcLi"],
+            style: navigation["styleAcLi"],
+            content: navigation["contentAcLi"]
         },
         {
-            key: 3,
-            style: {
-                color: "#E2DDD1",
-                display: "inline-block"
-            },
-            content: "---"
+            key: navigation["keyAdLi"],
+            style: navigation["styleAdLi"],
+            content: navigation["contentAdLi"]
         },
         {
-            key: 4,
-            style: {
-                display: "inline-block"
-            },
-            content: ""
+            key: navigation["keyAeLi"],
+            style: navigation["styleAeLi"],
+            content: navigation["contentAeLi"]
         }
     ]
 
     const linksNavigation = [
         {
-            href: "#sectionIntroAbout",
-            content: "Intro"
+            href: `${navigation["hrefAaLink"]}`,
+            content: navigation["contentAaLink"]
         },
         {
-            href: "",
-            content: ""
+            href: navigation["hrefAbLink"],
+            content: navigation["contentAbLink"]
         },
         {
-            href: "#sectionMainAbout",
-            content: "Main"
+            href: `${navigation["hrefAcLink"]}`,
+            content: navigation["contentAcLink"]
         },
         {
-            href: "",
-            content: ""
+            href: navigation["hrefAdLink"],
+            content: navigation["contentAdLink"]
         },
         {
-            href: "#outro",
-            content: "Outro"
+            href: `${navigation["hrefAeLink"]}`,
+            content: navigation["contentAeLink"]
         }
     ]
 

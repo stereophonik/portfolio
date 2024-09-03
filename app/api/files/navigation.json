@@ -1,0 +1,52 @@
+{
+  "idNav": "navNavigation",
+  "classNameNav": "classNameNavNavigation",
+  "styleNav": {
+    "overflow": "hidden",
+    "backgroundColor": "#E2DDD1",
+    "color": "#B0622C",
+    "textAlign": "center",
+    "borderRadius": "10%"
+  },
+  "styleUl": {
+    "paddingInlineStart": "0"
+  },
+  "idH3": "h3Navigation",
+  "keyAaLi": 0,
+  "styleAaLi": {
+    "display": "inline-block"
+  },
+  "contentAaLi": "",
+  "keyAbLi": 1,
+  "styleAbLi": {
+    "color": "#E2DDD1",
+    "display": "inline-block"
+  },
+  "contentAbLi": "---",
+  "keyAcLi": 2,
+  "styleAcLi": {
+    "display": "inline-block"
+  },
+  "contentAcLi": "",
+  "keyAdLi": 3,
+  "styleAdLi": {
+    "color": "#E2DDD1",
+    "display": "inline-block"
+  },
+  "contentAdLi": "---",
+  "keyAeLi": 4,
+  "styleAeLi": {
+    "display": "inline-block"
+  },
+  "contentAeLi": "",
+  "hrefAaLink": "#sectionIntroAbout",
+  "contentAaLink": "Intro",
+  "hrefAbLink": "",
+  "contentAbLink": "",
+  "hrefAcLink": "#sectionMainAbout",
+  "contentAcLink": "Main",
+  "hrefAdLink": "",
+  "contentAdLink": "",
+  "hrefAeLink": "#sectionOutroAbout",
+  "contentAeLink": "Outro"
+}

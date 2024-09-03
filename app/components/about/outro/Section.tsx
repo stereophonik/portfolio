@@ -12,7 +12,7 @@ export default function SectionOutroAboutComponent() {
 
     return (
         <SectionComponent
-            id="outro"
+            id="sectionOutroAbout"
             style={aboutContext["styleOutro"]}>
             <DivComponent
                 id="divOutro"
