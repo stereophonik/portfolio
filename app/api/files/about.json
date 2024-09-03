@@ -1,37 +1,31 @@
 {
-    "aaContentH2sIntro": "Are you looking to have a website created or edited for your small business?",
-    "abContentH2sIntro": "I'm here to assist! With 6 years of experience transitioning from quality testing to front-end development, I bring a unique perspective to streamline your workflows and enhance your web applications.",
-    "labelServingsMain": "Servings:",
-    "servingsMain": [
-        "Expertise in technology for front-end development",
-        "Selecting and applying concepts tailored for front-end applications"
-    ],
-    "labelSkillsMain": "Skills:",
-    "skillsMain": [
-        {
-            "generic": "Platform: WordPress",
-            "location": "/platform-skills"
-        },
-        {
-            "generic": "Framework: Next.js",
-            "location": "/framework-skills"
-        },
-        {
-            "generic": "Library: React",
-            "location": "/library-skills"
-        },
-        {
-            "generic": "Testing: Cypress",
-            "location": "/testing-skills"
-        },
-        {
-            "generic": "Version Control: Git",
-            "location": "/version-control-skills"
-        },
-        {
-            "generic": "Language: JavaScript",
-            "location": "/language-skills"
-        }
-    ],
+    "contentAaH2sIntro": "Are you looking to have a website created or edited for your small business?",
+    "contentAbH2sIntro": "I'm here to assist! With 6 years of experience transitioning from quality testing to front-end development, I bring a unique perspective to streamline your workflows and enhance your web applications.",
+    "contentAaH1sMain": "Servings:",
+    "contentAbH1sMain": "Skills:",
+    "contentAaLisMain": "Expertise in technology for front-end development",
+    "contentAbLisMain": "Selecting and applying concepts tailored for front-end applications",
+    "contentAcLisMain": "Platform: WordPress",
+    "contentAdLisMain": "Framework: Next.js",
+    "contentAeLisMain": "Library: React",
+    "contentAfLisMain": "Testing: Cypress",
+    "contentAgLisMain": "Version Control: Git",
+    "contentAhLisMain": "Language: JavaScript",
+    "hrefAaLinksMain": "",
+    "hrefAbLinksMain": "",
+    "hrefAcLinksMain": "/platform-skills",
+    "hrefAdLinksMain": "/framework-skills",
+    "hrefAeLinksMain": "/library-skills",
+    "hrefAfLinksMain": "/testing-skills",
+    "hrefAgLinksMain": "/version-control-skills",
+    "hrefAhLinksMain": "/language-skills",
+    "contentAaLinksMain": "Expertise in technology for front-end development",
+    "contentAbLinksMain": "Selecting and applying concepts tailored for front-end applications",
+    "contentAcLinksMain": "Platform: WordPress",
+    "contentAdLinksMain": "Framework: Next.js",
+    "contentAeLinksMain": "Library: React",
+    "contentAfLinksMain": "Testing: Cypress",
+    "contentAgLinksMain": "Version Control: Git",
+    "contentAhLinksMain": "Language: JavaScript",
     "outro": "I understand it's a bit technical, but let's discuss your specific needs. Together, we can achieve your dream website. Looking forward to chatting soon!"
 }

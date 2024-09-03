@@ -27,8 +27,9 @@ export default function Page() {
     const [areSizes, setAreSizes] = useState([]);
     const [navigation, setNavigation] = useState({});
     const [profile, setProfile] = useState({});
-    const [aaContentH2sIntroAbout, setAaContentH2sIntroAbout] = useState("");
-    const [abContentH2sIntroAbout, setAbContentH2sIntroAbout] = useState("");
+    const [about, setAbout] = useState({});
+    const [contentAaH2sIntroAbout, setAaContentH2sIntroAbout] = useState("");
+    const [contentAbH2sIntroAbout, setAbContentH2sIntroAbout] = useState("");
     const [labelServingsMainAbout, setLabelServingsMainAbout] = useState("");
     const [servingsMainAbout, setServingsMainAbout] = useState([]);
     const [labelSkillsMainAbout, setLabelSkillsMainAbout] = useState("");
@@ -72,8 +73,9 @@ export default function Page() {
         })
             .then(fileAbout => fileAbout.json())
             .then(parsedFileAbout => {
-                setAaContentH2sIntroAbout(parsedFileAbout.aaContentH2sIntro);
-                setAbContentH2sIntroAbout(parsedFileAbout.abContentH2sIntro);
+                setAbout(parsedFileAbout);
+                setAaContentH2sIntroAbout(parsedFileAbout.contentAaH2sIntro);
+                setAbContentH2sIntroAbout(parsedFileAbout.contentAbH2sIntro);
                 setLabelServingsMainAbout(parsedFileAbout.labelServingsMain);
                 setServingsMainAbout(parsedFileAbout.servingsMain);
                 setLabelSkillsMainAbout(parsedFileAbout.labelSkillsMain);
@@ -279,7 +281,7 @@ export default function Page() {
                             "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
                     )
                 },
-                content: aaContentH2sIntroAbout
+                content: contentAaH2sIntroAbout
             },
             {
                 id: "02h2IntroAbout",
@@ -291,7 +293,7 @@ export default function Page() {
                             "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
                     )
                 },
-                content: abContentH2sIntroAbout
+                content: contentAbH2sIntroAbout
             }
         ]
     }
@@ -322,7 +324,8 @@ export default function Page() {
 
     const h1sMainAbout = [
         {
-            id: "01H1MainAbout",
+            id: "aaH1sMainAbout",
+            content: about["contentAaH1sMain"],
             className: robotoMono.className,
             style: {
                 fontSize: checkInnerWidth(
@@ -333,8 +336,9 @@ export default function Page() {
             }
         },
         {
-            id: "02H1MainAbout",
+            id: "abH1sMainAbout",
             className: robotoMono.className,
+            content: about["contentAbH1sMain"],
             style: {
                 fontSize: checkInnerWidth(
                     areSizes,
@@ -345,16 +349,108 @@ export default function Page() {
         }
     ]
 
-    const h2MainAbout = {
-        className: anonymousPro.className,
-        style: {
-            fontSize: checkInnerWidth(
-                areSizes,
-                ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                    "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-            )
+    const h2sMainAbout = [
+        {
+            id: "aaH2sMainAbout",
+            className: anonymousPro.className,
+            style: {
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+                )
+            }
+        },
+        {
+            id: "abH2sMainAbout",
+            className: anonymousPro.className,
+            style: {
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+                )
+            }
         }
-    }
+    ]
+
+    const lisMainAbout = [
+        {
+            key: 1,
+            style: {},
+            content: about["contentAaLisMain"]
+        },
+        {
+            key: 2,
+            style: {},
+            content: about["contentAbLisMain"]
+        },
+        {
+            key: 3,
+            style: {},
+            content: about["contentAcLisMain"]
+        },
+        {
+            key: 4,
+            style: {},
+            content: about["contentAdLisMain"]
+        },
+        {
+            key: 5,
+            style: {},
+            content: about["contentAeLisMain"]
+        },
+        {
+            key: 6,
+            style: {},
+            content: about["contentAfLisMain"]
+        },
+        {
+            key: 7,
+            style: {},
+            content: about["contentAgLisMain"]
+        },
+        {
+            key: 8,
+            style: {},
+            content: about["contentAhLisMain"]
+        }
+    ]
+
+    const linksMainAbout = [
+        {
+            href: `${about["hrefAaLinksMain"]}`,
+            content: about["contentAaLinksMain"]
+        },
+        {
+            href: `${about["hrefAbLinksMain"]}`,
+            content: about["contentAbLinksMain"]
+        },
+        {
+            href: `${about["hrefAcLinksMain"]}`,
+            content: about["contentAcLinksMain"]
+        },
+        {
+            href: `${about["hrefAdLinksMain"]}`,
+            content: about["contentAdLinksMain"]
+        },
+        {
+            href: `${about["hrefAeLinksMain"]}`,
+            content: about["contentAeLinksMain"]
+        },
+        {
+            href: `${about["hrefAfLinksMain"]}`,
+            content: about["contentAfLinksMain"]
+        },
+        {
+            href: `${about["hrefAgLinksMain"]}`,
+            content: about["contentAgLinksMain"]
+        },
+        {
+            href: `${about["hrefAhLinksMain"]}`,
+            content: about["contentAhLinksMain"]
+        }
+    ]
 
     const styleOutroAbout = {
         overflow: "hidden",
@@ -412,11 +508,9 @@ export default function Page() {
         sectionMain: sectionMainAbout,
         divMain: divMainAbout,
         h1sMain: h1sMainAbout,
-        h2Main: h2MainAbout,
-        labelServingsMain: labelServingsMainAbout,
-        servingsMain: servingsMainAbout,
-        labelSkillsMain: labelSkillsMainAbout,
-        skillsMain: skillsMainAbout,
+        h2sMain: h2sMainAbout,
+        lisMain: lisMainAbout,
+        linksMain: linksMainAbout,
         styleOutro: styleOutroAbout,
         h1Outro: h1OutroAbout,
         h2Outro: h2OutroAbout,
