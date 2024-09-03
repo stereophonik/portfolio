@@ -110,14 +110,14 @@ export default function Page() {
         style: {paddingInlineStart: "0"}
     }
 
-    const h2Navigation = {
-        id: "h2Navigation",
+    const h3Navigation = {
+        id: "h3Navigation",
         className: anonymousPro.className,
         style: {
             fontSize: checkInnerWidth(
                 areSizes,
-                ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                    "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+                ["0.75rem", "0.75rem", "0.75rem", "0.75rem", "0.75rem", "1.25rem", "1.5rem",
+                    "1.75rem", "2rem", "2.25rem", "2.5rem", "2.5rem", "2.5rem", "2.5rem"]
             )
         }
     }
@@ -406,7 +406,7 @@ export default function Page() {
     const valueNavigationContext = {
         nav: navNavigation,
         ul: ulNavigation,
-        h2: h2Navigation,
+        h3: h3Navigation,
         lis: lisNavigation,
         links: linksNavigation
     }

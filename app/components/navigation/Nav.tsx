@@ -2,7 +2,7 @@ import { useContext } from "react";
 
 import NavComponent from "../Nav";
 import UlComponent from "../Ul";
-import H2Component from "../H2";
+import H3Component from "../H3";
 import LiComponent from "../Li";
 import LinkComponent from "../Link";
 
@@ -18,10 +18,10 @@ export default function NavNavigationComponent() {
             style={navigationContext["nav"]["style"]}>
             <UlComponent
                 style={navigationContext["ul"]["style"]}>
-                <H2Component
-                    id={navigationContext["h2"]["id"]}
-                    className={navigationContext["h2"]["className"]}
-                    style={navigationContext["h2"]["style"]}>
+                <H3Component
+                    id={navigationContext["h3"]["id"]}
+                    className={navigationContext["h3"]["className"]}
+                    style={navigationContext["h3"]["style"]}>
                     <LiComponent
                         key={navigationContext["lis"][0]["key"]}
                         style={navigationContext["lis"][0]["style"]}>
@@ -56,7 +56,7 @@ export default function NavNavigationComponent() {
                             {navigationContext["links"][4]["content"]}
                         </LinkComponent>
                     </LiComponent>
-                </H2Component>
+                </H3Component>
             </UlComponent>
         </NavComponent>
     );
