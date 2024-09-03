@@ -8,10 +8,10 @@ export default function ImageProfileComponent() {
     const profileContext = useContext(ProfileContext);
 
     return <ImageComponent
-            src={profileContext["srcImage"]}
-            alt={profileContext["altImage"]}
-            style={profileContext["styleImage"]}
-            width={profileContext["widthImage"]}
-            height={profileContext["heightImage"]}
+            src={profileContext["image"]["src"]}
+            alt={profileContext["image"]["alt"]}
+            style={profileContext["image"]["style"]}
+            width={profileContext["image"]["width"]}
+            height={profileContext["image"]["height"]}
     />;
 }

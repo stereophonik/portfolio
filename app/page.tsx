@@ -174,34 +174,36 @@ export default function Page() {
 
     const sectionProfile = {
         style: {
-            overflow: "hidden",
-            width: "100vw",
+            overflow: profile["overflowStyleSection"],
+            width: profile["widthStyleSection"],
+            textAlign: profile["textAlignStyleSection"],
             height: checkInnerWidth(
                 areSizes,
                 ["95vw", "90vw", "75vw", "60vw", "55vw", "60vw", "60vw",
                     "60vw", "60vw", "60vw", "60vw", "55vw", "50vw", "45vw"]
-            ),
-            textAlign: "center"
+            )
         }
     }
 
     const divProfile = {
-        id: "divProfile",
-        style: {
-            height: "10%"
-        },
-        content: ""
+        id: profile["idDiv"],
+        style: profile["styleDiv"],
+        content: profile["contentDiv"]
     }
 
-    const widthImageProfile = checkInnerWidth(
-        areSizes,
-        [130, 130, 130, 130, 130, 160, 180, 200, 220, 240, 260, 260, 260, 260]
-    );
-
-    const heightImageProfile = checkInnerWidth(
-        areSizes,
-        [175, 175, 175, 175, 175, 214, 241, 267, 294, 321, 348, 348, 348, 348]
-    );
+    const imageProfile = {
+        src: profile["srcImage"],
+        alt: profile["altImage"],
+        style: profile["styleImage"],
+        width: checkInnerWidth(
+            areSizes,
+            [130, 130, 130, 130, 130, 160, 180, 200, 220, 240, 260, 260, 260, 260]
+        ),
+        height: checkInnerWidth(
+            areSizes,
+            [175, 175, 175, 175, 175, 214, 241, 267, 294, 321, 348, 348, 348, 348]
+        )
+    }
 
     const h1HeadingsProfile = {
         id: "h1HeadingsProfile",
@@ -401,11 +403,7 @@ export default function Page() {
     const valueProfileContext = {
         section: sectionProfile,
         div: divProfile,
-        srcImage: profile["srcImage"],
-        altImage: profile["altImage"],
-        styleImage: profile["styleImage"],
-        widthImage: widthImageProfile,
-        heightImage: heightImageProfile,
+        image: imageProfile,
         h1Headings: h1HeadingsProfile,
         h2Headings: h2HeadingsProfile
     }

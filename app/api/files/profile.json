@@ -1,4 +1,12 @@
 {
+    "overflowStyleSection": "hidden",
+    "widthStyleSection": "100vw",
+    "textAlignStyleSection": "center",
+    "idDiv": "divProfile",
+    "styleDiv": {
+        "height": "10%"
+    },
+    "contentDiv": "",
     "srcImage": "/picture.jpg",
     "altImage": "Nikolai Reyes",
     "styleImage": {
