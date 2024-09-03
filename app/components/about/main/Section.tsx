@@ -2,11 +2,8 @@ import { useContext } from "react";
 
 import SectionComponent from "../../Section";
 import DivComponent from "../../Div";
-import H1Component from "../../H1";
-import H2Component from "../../H2";
-import UlComponent from "../../Ul";
-import LiComponent from "../../Li";
-import LinkComponent from "../../Link";
+import SectionServingsMainAboutComponent from "./servings/Section";
+import SectionSkillsMainAboutComponent from "./skills/Section";
 
 import { AboutContext } from "../../../contexts/About";
 
@@ -22,61 +19,8 @@ export default function SectionMainAboutComponent() {
                 style={aboutContext["divMain"]["style"]}>
                 {aboutContext["divMain"]["content"]}
             </DivComponent>
-            <H1Component
-                id={aboutContext["h1sMain"][0]["id"]}
-                className={aboutContext["h1sMain"][0]["className"]}
-                style={aboutContext["h1sMain"][0]["style"]}>
-                {aboutContext["h1sMain"][0]["content"]}
-            </H1Component>
-            <UlComponent
-                style={{
-                    paddingInlineStart: "0",
-                    listStyleType: "none"
-                }}>
-                <H2Component
-                    id={aboutContext["h2sMain"][0]["id"]}
-                    className={aboutContext["h2sMain"][0]["className"]}
-                    style={aboutContext["h2sMain"][0]["style"]}>
-                    {
-                        aboutContext["lisMain"].map((liMain) =>
-                            <LiComponent
-                                key={liMain["key"]}
-                                style={liMain["style"]}>
-                                {liMain["content"]}
-                            </LiComponent>
-                        )
-                    }
-                </H2Component>
-            </UlComponent>
-            <H1Component
-                id={aboutContext["h1sMain"][1]["id"]}
-                className={aboutContext["h1sMain"][1]["className"]}
-                style={aboutContext["h1sMain"][1]["style"]}>
-                {aboutContext["h1sMain"][1]["content"]}
-            </H1Component>
-            <UlComponent
-                style={{
-                    paddingInlineStart: "0",
-                    listStyleType: "none"
-                }}>
-                <H2Component
-                    id={aboutContext["h2sMain"][1]["id"]}
-                    className={aboutContext["h2sMain"][1]["className"]}
-                    style={aboutContext["h2sMain"][1]["style"]}>
-                    {
-                        aboutContext["lisMain"].map((liMain) =>
-                            <LiComponent
-                                key={liMain["key"]}
-                                style={liMain["style"]}>
-                                <LinkComponent
-                                    href={aboutContext["linksMain"][aboutContext["lisMain"].indexOf(liMain)]["href"]}>
-                                    {aboutContext["linksMain"][aboutContext["lisMain"].indexOf(liMain)]["content"]}
-                                </LinkComponent>
-                            </LiComponent>
-                        )
-                    }
-                </H2Component>
-            </UlComponent>
+            <SectionServingsMainAboutComponent />
+            <SectionSkillsMainAboutComponent />
         </SectionComponent>
     );
 }
