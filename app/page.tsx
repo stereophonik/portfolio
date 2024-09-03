@@ -378,12 +378,12 @@ export default function Page() {
         {
             key: 1,
             style: {},
-            content: about["contentAaLisMain"]
+            content: about["contentAaLisServingsMain"]
         },
         {
             key: 2,
             style: {},
-            content: about["contentAbLisMain"]
+            content: about["contentAbLisServingsMain"]
         }
     ]
 
@@ -391,59 +391,59 @@ export default function Page() {
         {
             key: 1,
             style: {},
-            content: about["contentAcLisMain"]
+            content: about["contentAaLisSkillsMain"]
         },
         {
             key: 2,
             style: {},
-            content: about["contentAdLisMain"]
+            content: about["contentAbLisSkillsMain"]
         },
         {
             key: 3,
             style: {},
-            content: about["contentAeLisMain"]
+            content: about["contentAcLisSkillsMain"]
         },
         {
             key: 4,
             style: {},
-            content: about["contentAfLisMain"]
+            content: about["contentAdLisSkillsMain"]
         },
         {
             key: 5,
             style: {},
-            content: about["contentAgLisMain"]
+            content: about["contentAeLisSkillsMain"]
         },
         {
             key: 6,
             style: {},
-            content: about["contentAhLisMain"]
+            content: about["contentAfLisSkillsMain"]
         }
     ]
 
     const linksSkillsMainAbout = [
         {
-            href: `${about["hrefAcLinksMain"]}`,
-            content: about["contentAcLinksMain"]
+            href: `${about["hrefAaLinksSkillsMain"]}`,
+            content: about["contentAaLinksSkillsMain"]
         },
         {
-            href: `${about["hrefAdLinksMain"]}`,
-            content: about["contentAdLinksMain"]
+            href: `${about["hrefAbLinksSkillsMain"]}`,
+            content: about["contentAbLinksSkillsMain"]
         },
         {
-            href: `${about["hrefAeLinksMain"]}`,
-            content: about["contentAeLinksMain"]
+            href: `${about["hrefAcLinksSkillsMain"]}`,
+            content: about["contentAcLinksSkillsMain"]
         },
         {
-            href: `${about["hrefAfLinksMain"]}`,
-            content: about["contentAfLinksMain"]
+            href: `${about["hrefAdLinksSkillsMain"]}`,
+            content: about["contentAdLinksSkillsMain"]
         },
         {
-            href: `${about["hrefAgLinksMain"]}`,
-            content: about["contentAgLinksMain"]
+            href: `${about["hrefAeLinksSkillsMain"]}`,
+            content: about["contentAeLinksSkillsMain"]
         },
         {
-            href: `${about["hrefAhLinksMain"]}`,
-            content: about["contentAhLinksMain"]
+            href: `${about["hrefAfLinksSkillsMain"]}`,
+            content: about["contentAfLinksSkillsMain"]
         }
     ]
 
