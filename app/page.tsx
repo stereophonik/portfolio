@@ -374,7 +374,7 @@ export default function Page() {
         }
     ]
 
-    const lisMainAbout = [
+    const lisServingsMainAbout = [
         {
             key: 1,
             style: {},
@@ -384,48 +384,43 @@ export default function Page() {
             key: 2,
             style: {},
             content: about["contentAbLisMain"]
-        },
+        }
+    ]
+
+    const lisSkillsMainAbout = [
         {
-            key: 3,
+            key: 1,
             style: {},
             content: about["contentAcLisMain"]
         },
         {
-            key: 4,
+            key: 2,
             style: {},
             content: about["contentAdLisMain"]
         },
         {
-            key: 5,
+            key: 3,
             style: {},
             content: about["contentAeLisMain"]
         },
         {
-            key: 6,
+            key: 4,
             style: {},
             content: about["contentAfLisMain"]
         },
         {
-            key: 7,
+            key: 5,
             style: {},
             content: about["contentAgLisMain"]
         },
         {
-            key: 8,
+            key: 6,
             style: {},
             content: about["contentAhLisMain"]
         }
     ]
 
-    const linksMainAbout = [
-        {
-            href: `${about["hrefAaLinksMain"]}`,
-            content: about["contentAaLinksMain"]
-        },
-        {
-            href: `${about["hrefAbLinksMain"]}`,
-            content: about["contentAbLinksMain"]
-        },
+    const linksSkillsMainAbout = [
         {
             href: `${about["hrefAcLinksMain"]}`,
             content: about["contentAcLinksMain"]
@@ -509,8 +504,9 @@ export default function Page() {
         divMain: divMainAbout,
         h1sMain: h1sMainAbout,
         h2sMain: h2sMainAbout,
-        lisMain: lisMainAbout,
-        linksMain: linksMainAbout,
+        lisServingsMain: lisServingsMainAbout,
+        lisSkillsMain: lisSkillsMainAbout,
+        linksSkillsMain: linksSkillsMainAbout,
         styleOutro: styleOutroAbout,
         h1Outro: h1OutroAbout,
         h2Outro: h2OutroAbout,

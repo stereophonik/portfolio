@@ -31,11 +31,11 @@ export default function SectionServingsMainAboutComponent() {
                     className={aboutContext["h2sMain"][0]["className"]}
                     style={aboutContext["h2sMain"][0]["style"]}>
                     {
-                        aboutContext["lisMain"].map((liMain) =>
+                        aboutContext["lisServingsMain"].map((liServingsMain) =>
                             <LiComponent
-                                key={liMain["key"]}
-                                style={liMain["style"]}>
-                                {liMain["content"]}
+                                key={liServingsMain["key"]}
+                                style={liServingsMain["style"]}>
+                                {liServingsMain["content"]}
                             </LiComponent>
                         )
                     }
