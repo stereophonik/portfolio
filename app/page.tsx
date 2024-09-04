@@ -232,64 +232,62 @@ export default function Page() {
 
     const introAbout = {
         section: {
-            id: "sectionIntroAbout",
+            id: about["idSectionIntro"],
             style: {
-                overflow: "hidden",
-                width: "100vw",
+                overflow: about["overflowStyleSectionIntro"],
+                width: about["widthStyleSectionIntro"],
+                backgroundColor: about["backgroundColorStyleSectionIntro"],
+                color: about["colorStyleSectionIntro"],
+                textAlign: about["textAlignStyleSectionIntro"],
+                borderRadius: about["borderRadiusStyleSectionIntro"],
                 height: checkInnerWidth(
                     areSizes,
                     ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
                         "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"]
-                ),
-                backgroundColor: "#E2DDD1",
-                color: "#B0622C",
-                textAlign: "center",
-                borderRadius: "10%"
+                )
             }
         },
         div: {
-            id: "divIntroAbout",
-            style: {
-                height: "10%"
-            },
-            content: ""
+            id: about["idDivIntro"],
+            style: about["styleDivIntro"],
+            content: about["contentDivIntro"]
         },
         h1: {
             id: "h1IntroAbout",
             className: robotoMono.className,
+            content: "Hello!",
             style: {
                 fontSize: checkInnerWidth(
                     areSizes,
                     ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
                         "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
                 )
-            },
-            content: "Hello!"
+            }
         },
         h2s: [
             {
-                id: "01h2IntroAbout",
+                id: "aah2sIntroAbout",
                 className: anonymousPro.className,
+                content: about["contentAaH2sIntro"],
                 style: {
                     fontSize: checkInnerWidth(
                         areSizes,
                         ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
                             "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
                     )
-                },
-                content: about["contentAaH2sIntro"]
+                }
             },
             {
-                id: "02h2IntroAbout",
+                id: "abh2sIntroAbout",
                 className: anonymousPro.className,
+                content: about["contentAbH2sIntro"],
                 style: {
                     fontSize: checkInnerWidth(
                         areSizes,
                         ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
                             "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
                     )
-                },
-                content: about["contentAbH2sIntro"]
+                }
             }
         ]
     }
