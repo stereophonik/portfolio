@@ -318,6 +318,10 @@ export default function Page() {
             content: ""
         },
         servings: {
+            section: {
+                id: "sectionServingsMainAbout",
+                style: {}
+            },
             h1: {
                 id: "h1ServingsMainAbout",
                 content: about["contentH1ServingsMain"],
@@ -328,6 +332,12 @@ export default function Page() {
                         ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
                             "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
                     )
+                }
+            },
+            ul: {
+                style: {
+                    paddingInlineStart: "0",
+                    listStyleType: "none"
                 }
             },
             h2: {
@@ -355,6 +365,10 @@ export default function Page() {
             ]
         },
         skills: {
+            section: {
+                id: "sectionSkillsMainAbout",
+                style: {}
+            },
             h1: {
                 id: "h1SkillsMainAbout",
                 className: robotoMono.className,
@@ -366,6 +380,10 @@ export default function Page() {
                             "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
                     )
                 }
+            },
+            ul: {
+                paddingInlineStart: "0",
+                listStyleType: "none"
             },
             h2: {
                 id: "h2SkillsMainAbout",

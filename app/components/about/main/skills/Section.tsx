@@ -14,8 +14,8 @@ export default function SectionSkillsMainAboutComponent() {
 
     return (
         <SectionComponent
-            id=""
-            style={{}}>
+            id={aboutContext["main"]["skills"]["section"]["id"]}
+            style={aboutContext["main"]["skills"]["section"]["style"]}>
             <H1Component
                 id={aboutContext["main"]["skills"]["h1"]["id"]}
                 className={aboutContext["main"]["skills"]["h1"]["className"]}
@@ -23,10 +23,7 @@ export default function SectionSkillsMainAboutComponent() {
                 {aboutContext["main"]["skills"]["h1"]["content"]}
             </H1Component>
             <UlComponent
-                style={{
-                    paddingInlineStart: "0",
-                    listStyleType: "none"
-                }}>
+                style={aboutContext["main"]["skills"]["ul"]["style"]}>
                 <H2Component
                     id={aboutContext["main"]["skills"]["h2"]["id"]}
                     className={aboutContext["main"]["skills"]["h2"]["className"]}

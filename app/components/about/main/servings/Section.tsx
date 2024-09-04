@@ -13,8 +13,8 @@ export default function SectionServingsMainAboutComponent() {
 
     return (
         <SectionComponent
-            id=""
-            style={{}}>
+            id={aboutContext["main"]["servings"]["section"]["id"]}
+            style={aboutContext["main"]["servings"]["section"]["style"]}>
             <H1Component
                 id={aboutContext["main"]["servings"]["h1"]["id"]}
                 className={aboutContext["main"]["servings"]["h1"]["className"]}
@@ -22,10 +22,7 @@ export default function SectionServingsMainAboutComponent() {
                 {aboutContext["main"]["servings"]["h1"]["content"]}
             </H1Component>
             <UlComponent
-                style={{
-                    paddingInlineStart: "0",
-                    listStyleType: "none"
-                }}>
+                style={aboutContext["main"]["servings"]["ul"]["style"]}>
                 <H2Component
                     id={aboutContext["main"]["servings"]["h2"]["id"]}
                     className={aboutContext["main"]["servings"]["h2"]["className"]}
