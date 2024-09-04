@@ -17,10 +17,10 @@ export default function SectionSkillsMainAboutComponent() {
             id=""
             style={{}}>
             <H1Component
-                id={aboutContext["h1SkillsMain"]["id"]}
-                className={aboutContext["h1SkillsMain"]["className"]}
-                style={aboutContext["h1SkillsMain"]["style"]}>
-                {aboutContext["h1SkillsMain"]["content"]}
+                id={aboutContext["skillsMain"]["h1"]["id"]}
+                className={aboutContext["skillsMain"]["h1"]["className"]}
+                style={aboutContext["skillsMain"]["h1"]["style"]}>
+                {aboutContext["skillsMain"]["h1"]["content"]}
             </H1Component>
             <UlComponent
                 style={{
@@ -28,17 +28,17 @@ export default function SectionSkillsMainAboutComponent() {
                     listStyleType: "none"
                 }}>
                 <H2Component
-                    id={aboutContext["h2SkillsMain"]["id"]}
-                    className={aboutContext["h2SkillsMain"]["className"]}
-                    style={aboutContext["h2SkillsMain"]["style"]}>
+                    id={aboutContext["skillsMain"]["h2"]["id"]}
+                    className={aboutContext["skillsMain"]["h2"]["className"]}
+                    style={aboutContext["skillsMain"]["h2"]["style"]}>
                     {
-                        aboutContext["lisSkillsMain"].map((li) =>
+                        aboutContext["skillsMain"]["lis"].map((li) =>
                             <LiComponent
                                 key={li["key"]}
                                 style={li["style"]}>
                                 <LinkComponent
-                                    href={aboutContext["linksSkillsMain"][aboutContext["lisSkillsMain"].indexOf(li)]["href"]}>
-                                    {aboutContext["linksSkillsMain"][aboutContext["lisSkillsMain"].indexOf(li)]["content"]}
+                                    href={aboutContext["skillsMain"]["links"][aboutContext["skillsMain"]["lis"].indexOf(li)]["href"]}>
+                                    {aboutContext["skillsMain"]["links"][aboutContext["skillsMain"]["lis"].indexOf(li)]["content"]}
                                 </LinkComponent>
                             </LiComponent>
                         )

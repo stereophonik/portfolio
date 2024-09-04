@@ -309,167 +309,165 @@ export default function Page() {
         }
     }
 
-    const h1ServingsMainAbout = {
-        id: "h1ServingsMainAbout",
-        content: about["contentH1ServingsMain"],
-        className: robotoMono.className,
+    const servingsMainAbout = {
+        h1: {
+            id: "h1ServingsMainAbout",
+            content: about["contentH1ServingsMain"],
+            className: robotoMono.className,
+            style: {
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+                )
+            }
+        },
+        h2: {
+            id: "h2ServingsMainAbout",
+            className: anonymousPro.className,
+            style: {
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+                )
+            }
+        },
+        lis: [
+            {
+                key: 1,
+                style: {},
+                content: about["contentAaLisServingsMain"]
+            },
+            {
+                key: 2,
+                style: {},
+                content: about["contentAbLisServingsMain"]
+            }
+        ]
+    }
+
+    const skillsMainAbout = {
+        h1: {
+            id: "h1SkillsMainAbout",
+            className: robotoMono.className,
+            content: about["contentH1SkillsMain"],
+            style: {
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+                )
+            }
+        },
+        h2: {
+            id: "h2SkillsMainAbout",
+            className: anonymousPro.className,
+            style: {
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+                )
+            }
+        },
+        lis: [
+            {
+                key: 1,
+                style: {},
+                content: about["contentAaLisSkillsMain"]
+            },
+            {
+                key: 2,
+                style: {},
+                content: about["contentAbLisSkillsMain"]
+            },
+            {
+                key: 3,
+                style: {},
+                content: about["contentAcLisSkillsMain"]
+            },
+            {
+                key: 4,
+                style: {},
+                content: about["contentAdLisSkillsMain"]
+            },
+            {
+                key: 5,
+                style: {},
+                content: about["contentAeLisSkillsMain"]
+            },
+            {
+                key: 6,
+                style: {},
+                content: about["contentAfLisSkillsMain"]
+            }
+        ],
+        links: [
+            {
+                href: `${about["hrefAaLinksSkillsMain"]}`,
+                content: about["contentAaLinksSkillsMain"]
+            },
+            {
+                href: `${about["hrefAbLinksSkillsMain"]}`,
+                content: about["contentAbLinksSkillsMain"]
+            },
+            {
+                href: `${about["hrefAcLinksSkillsMain"]}`,
+                content: about["contentAcLinksSkillsMain"]
+            },
+            {
+                href: `${about["hrefAdLinksSkillsMain"]}`,
+                content: about["contentAdLinksSkillsMain"]
+            },
+            {
+                href: `${about["hrefAeLinksSkillsMain"]}`,
+                content: about["contentAeLinksSkillsMain"]
+            },
+            {
+                href: `${about["hrefAfLinksSkillsMain"]}`,
+                content: about["contentAfLinksSkillsMain"]
+            }
+        ]
+    }
+
+    const outroAbout = {
         style: {
-            fontSize: checkInnerWidth(
+            overflow: "hidden",
+            width: "100vw",
+            height: checkInnerWidth(
                 areSizes,
-                ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                    "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-            )
+                ["65vw", "55vw", "45vw", "35vw", "30vw", "35vw", "35vw",
+                    "35vw", "35vw", "40vw", "40vw", "35vw", "30vw", "25vw"]
+            ),
+            backgroundColor: "#E2DDD1",
+            color: "#B0622C",
+            textAlign: "center",
+            borderRadius: "10%"
+        },
+        h1: {
+            className: robotoMono.className,
+            style: {
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+                )
+            },
+            content: about["contentH1Outro"]
+        },
+        h2: {
+            className: anonymousPro.className,
+            style: {
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+                )
+            },
+            content: about["contentH2Outro"]
         }
     }
-
-    const h2ServingsMainAbout = {
-        id: "h2ServingsMainAbout",
-        className: anonymousPro.className,
-        style: {
-            fontSize: checkInnerWidth(
-                areSizes,
-                ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                    "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-            )
-        }
-    }
-
-    const h1SkillsMainAbout = {
-        id: "h1SkillsMainAbout",
-        className: robotoMono.className,
-        content: about["contentH1SkillsMain"],
-        style: {
-            fontSize: checkInnerWidth(
-                areSizes,
-                ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                    "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-            )
-        }
-    }
-
-    const h2SkillsMainAbout = {
-        id: "h2SkillsMainAbout",
-        className: anonymousPro.className,
-        style: {
-            fontSize: checkInnerWidth(
-                areSizes,
-                ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                    "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-            )
-        }
-    }
-
-    const lisServingsMainAbout = [
-        {
-            key: 1,
-            style: {},
-            content: about["contentAaLisServingsMain"]
-        },
-        {
-            key: 2,
-            style: {},
-            content: about["contentAbLisServingsMain"]
-        }
-    ]
-
-    const lisSkillsMainAbout = [
-        {
-            key: 1,
-            style: {},
-            content: about["contentAaLisSkillsMain"]
-        },
-        {
-            key: 2,
-            style: {},
-            content: about["contentAbLisSkillsMain"]
-        },
-        {
-            key: 3,
-            style: {},
-            content: about["contentAcLisSkillsMain"]
-        },
-        {
-            key: 4,
-            style: {},
-            content: about["contentAdLisSkillsMain"]
-        },
-        {
-            key: 5,
-            style: {},
-            content: about["contentAeLisSkillsMain"]
-        },
-        {
-            key: 6,
-            style: {},
-            content: about["contentAfLisSkillsMain"]
-        }
-    ]
-
-    const linksSkillsMainAbout = [
-        {
-            href: `${about["hrefAaLinksSkillsMain"]}`,
-            content: about["contentAaLinksSkillsMain"]
-        },
-        {
-            href: `${about["hrefAbLinksSkillsMain"]}`,
-            content: about["contentAbLinksSkillsMain"]
-        },
-        {
-            href: `${about["hrefAcLinksSkillsMain"]}`,
-            content: about["contentAcLinksSkillsMain"]
-        },
-        {
-            href: `${about["hrefAdLinksSkillsMain"]}`,
-            content: about["contentAdLinksSkillsMain"]
-        },
-        {
-            href: `${about["hrefAeLinksSkillsMain"]}`,
-            content: about["contentAeLinksSkillsMain"]
-        },
-        {
-            href: `${about["hrefAfLinksSkillsMain"]}`,
-            content: about["contentAfLinksSkillsMain"]
-        }
-    ]
-
-    const styleOutroAbout = {
-        overflow: "hidden",
-        width: "100vw",
-        height: checkInnerWidth(
-            areSizes,
-            ["65vw", "55vw", "45vw", "35vw", "30vw", "35vw", "35vw",
-                "35vw", "35vw", "40vw", "40vw", "35vw", "30vw", "25vw"]
-        ),
-        backgroundColor: "#E2DDD1",
-        color: "#B0622C",
-        textAlign: "center",
-        borderRadius: "10%"
-    }
-
-    const h1OutroAbout = {
-        className: robotoMono.className,
-        style: {
-            fontSize: checkInnerWidth(
-                areSizes,
-                ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                    "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-            )
-        }
-    }
-
-    const h2OutroAbout = {
-        className: anonymousPro.className,
-        style: {
-            fontSize: checkInnerWidth(
-                areSizes,
-                ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                    "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-            )
-        }
-    }
-
-    const contentH1OutroAbout = about["contentH1Outro"]
-    const contentH2OutroAbout = about["contentH2Outro"]
 
     const valueNavigationContext = {
         nav: navNavigation,
@@ -489,18 +487,9 @@ export default function Page() {
     const valueAboutContext = {
         intro: introAbout,
         main: mainAbout,
-        h1ServingsMain: h1ServingsMainAbout,
-        h2ServingsMain: h2ServingsMainAbout,
-        h1SkillsMain: h1SkillsMainAbout,
-        h2SkillsMain: h2SkillsMainAbout,
-        lisServingsMain: lisServingsMainAbout,
-        lisSkillsMain: lisSkillsMainAbout,
-        linksSkillsMain: linksSkillsMainAbout,
-        styleOutro: styleOutroAbout,
-        h1Outro: h1OutroAbout,
-        h2Outro: h2OutroAbout,
-        contentH1Outro: contentH1OutroAbout,
-        contentH2Outro: contentH2OutroAbout
+        servingsMain: servingsMainAbout,
+        skillsMain: skillsMainAbout,
+        outro: outroAbout
     }
 
     return (

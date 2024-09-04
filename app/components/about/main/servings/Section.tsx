@@ -16,10 +16,10 @@ export default function SectionServingsMainAboutComponent() {
             id=""
             style={{}}>
             <H1Component
-                id={aboutContext["h1ServingsMain"]["id"]}
-                className={aboutContext["h1ServingsMain"]["className"]}
-                style={aboutContext["h1ServingsMain"]["style"]}>
-                {aboutContext["h1ServingsMain"]["content"]}
+                id={aboutContext["servingsMain"]["h1"]["id"]}
+                className={aboutContext["servingsMain"]["h1"]["className"]}
+                style={aboutContext["servingsMain"]["h1"]["style"]}>
+                {aboutContext["servingsMain"]["h1"]["content"]}
             </H1Component>
             <UlComponent
                 style={{
@@ -27,11 +27,11 @@ export default function SectionServingsMainAboutComponent() {
                     listStyleType: "none"
                 }}>
                 <H2Component
-                    id={aboutContext["h2ServingsMain"]["id"]}
-                    className={aboutContext["h2ServingsMain"]["className"]}
-                    style={aboutContext["h2ServingsMain"]["style"]}>
+                    id={aboutContext["servingsMain"]["h2"]["id"]}
+                    className={aboutContext["servingsMain"]["h2"]["className"]}
+                    style={aboutContext["servingsMain"]["h2"]["style"]}>
                     {
-                        aboutContext["lisServingsMain"].map((li) =>
+                        aboutContext["servingsMain"]["lis"].map((li) =>
                             <LiComponent
                                 key={li["key"]}
                                 style={li["style"]}>

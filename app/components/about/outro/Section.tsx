@@ -13,7 +13,7 @@ export default function SectionOutroAboutComponent() {
     return (
         <SectionComponent
             id="sectionOutroAbout"
-            style={aboutContext["styleOutro"]}>
+            style={aboutContext["outro"]["style"]}>
             <DivComponent
                 id="divOutro"
                 style={{
@@ -21,15 +21,15 @@ export default function SectionOutroAboutComponent() {
                 }}> </DivComponent>
             <H1Component
                 id="h1Outro"
-                className={aboutContext["h1Outro"]["className"]}
-                style={aboutContext["h1Outro"]["style"]}>
-                {aboutContext["contentH1Outro"]}
+                className={aboutContext["outro"]["h1"]["className"]}
+                style={aboutContext["outro"]["h1"]["style"]}>
+                {aboutContext["outro"]["h1"]["content"]}
             </H1Component>
             <H2Component
                 id="h2Outro"
-                className={aboutContext["h2Outro"]["className"]}
-                style={aboutContext["h2Outro"]["style"]}>
-                {aboutContext["contentH2Outro"]}
+                className={aboutContext["outro"]["h2"]["className"]}
+                style={aboutContext["outro"]["h2"]["style"]}>
+                {aboutContext["outro"]["h2"]["content"]}
             </H2Component>
         </SectionComponent>
     );
