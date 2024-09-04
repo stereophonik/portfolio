@@ -26,12 +26,12 @@ export default function SectionIntroAboutComponent() {
                 {aboutContext["intro"]["h1"]["content"]}
             </H1Component>
             {
-                aboutContext["intro"]["h2s"].map((h2Intro) =>
+                aboutContext["intro"]["h2s"].map((h2) =>
                     <H2Component
-                        id={aboutContext["intro"]["h2s"][aboutContext["intro"]["h2s"].indexOf(h2Intro)]["id"]}
-                        className={aboutContext["intro"]["h2s"][aboutContext["intro"]["h2s"].indexOf(h2Intro)]["className"]}
-                        style={aboutContext["intro"]["h2s"][aboutContext["intro"]["h2s"].indexOf(h2Intro)]["style"]}>
-                        {h2Intro["content"]}
+                        id={h2["id"]}
+                        className={h2["className"]}
+                        style={h2["style"]}>
+                        {h2["content"]}
                     </H2Component>
                 )
             }

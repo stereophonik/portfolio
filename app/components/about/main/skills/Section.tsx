@@ -32,13 +32,13 @@ export default function SectionSkillsMainAboutComponent() {
                     className={aboutContext["h2SkillsMain"]["className"]}
                     style={aboutContext["h2SkillsMain"]["style"]}>
                     {
-                        aboutContext["lisSkillsMain"].map((liSkillsMain) =>
+                        aboutContext["lisSkillsMain"].map((li) =>
                             <LiComponent
-                                key={liSkillsMain["key"]}
-                                style={liSkillsMain["style"]}>
+                                key={li["key"]}
+                                style={li["style"]}>
                                 <LinkComponent
-                                    href={aboutContext["linksSkillsMain"][aboutContext["lisSkillsMain"].indexOf(liSkillsMain)]["href"]}>
-                                    {aboutContext["linksSkillsMain"][aboutContext["lisSkillsMain"].indexOf(liSkillsMain)]["content"]}
+                                    href={aboutContext["linksSkillsMain"][aboutContext["lisSkillsMain"].indexOf(li)]["href"]}>
+                                    {aboutContext["linksSkillsMain"][aboutContext["lisSkillsMain"].indexOf(li)]["content"]}
                                 </LinkComponent>
                             </LiComponent>
                         )
