@@ -2,6 +2,8 @@
     "idSection": "sectionProfile",
     "overflowStyleSection": "hidden",
     "widthStyleSection": "100vw",
+    "backgroundColorStyleSection": "#B0622C",
+    "colorStyleSection": "#E2DDD1",
     "textAlignStyleSection": "center",
     "idDiv": "divProfile",
     "styleDiv": {

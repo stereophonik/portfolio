@@ -165,6 +165,8 @@ export default function Page() {
         style: {
             overflow: profile["overflowStyleSection"],
             width: profile["widthStyleSection"],
+            backgroundColor: profile["backgroundColorStyleSection"],
+            color: profile["colorStyleSection"],
             textAlign: profile["textAlignStyleSection"],
             height: checkInnerWidth(
                 areSizes,
@@ -294,34 +296,32 @@ export default function Page() {
 
     const mainAbout = {
         section: {
-            id: "sectionMainAbout",
+            id: about["idSectionMain"],
             style: {
-                overflow: "hidden",
-                width: "100vw",
+                overflow: about["overflowStyleSectionMain"],
+                width: about["widthStyleSectionMain"],
+                backgroundColor: about["backgroundColorStyleSectionMain"],
+                color: about["colorStyleSectionMain"],
+                textAlign: about["textAlignStyleSectionMain"],
                 height: checkInnerWidth(
                     areSizes,
                     ["145vw", "135vw", "110vw", "90vw", "75vw", "90vw", "90vw",
                         "90vw", "90vw", "90vw", "90vw", "80vw", "75vw", "60vw"]
-                ),
-                backgroundColor: "#B0622C",
-                color: "#E2DDD1",
-                textAlign: "center"
+                )
             }
         },
         div: {
-            id: "divMainAbout",
-            style: {
-                height: "10%"
-            },
-            content: ""
+            id: about["idDivMain"],
+            style: about["styleDivMain"],
+            content: about["contentDivMain"]
         },
         servings: {
             section: {
-                id: "sectionServingsMainAbout",
-                style: {}
+                id: about["idSectionServingsMain"],
+                style: about["styleSectionServingsMain"]
             },
             h1: {
-                id: "h1ServingsMainAbout",
+                id: about["idH1ServingsMain"],
                 content: about["contentH1ServingsMain"],
                 className: robotoMono.className,
                 style: {
@@ -333,13 +333,10 @@ export default function Page() {
                 }
             },
             ul: {
-                style: {
-                    paddingInlineStart: "0",
-                    listStyleType: "none"
-                }
+                style: about["styleUlServingsMain"]
             },
             h2: {
-                id: "h2ServingsMainAbout",
+                id: about["idH2ServingsMain"],
                 className: anonymousPro.className,
                 style: {
                     fontSize: checkInnerWidth(
@@ -351,13 +348,13 @@ export default function Page() {
             },
             lis: [
                 {
-                    key: 1,
-                    style: {},
+                    key: about["keyAaLisServingsMain"],
+                    style: about["styleAaLisServingsMain"],
                     content: about["contentAaLisServingsMain"]
                 },
                 {
-                    key: 2,
-                    style: {},
+                    key: about["keyAbLisServingsMain"],
+                    style: about["styleAbLisServingsMain"],
                     content: about["contentAbLisServingsMain"]
                 }
             ]
