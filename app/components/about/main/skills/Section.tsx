@@ -5,9 +5,9 @@ import H1Component from "../../../H1";
 import UlComponent from "../../../Ul";
 import H2Component from "../../../H2";
 import LiComponent from "../../../Li";
+import LinkComponent from "../../../Link";
 
 import { AboutContext } from "../../../../contexts/About";
-import LinkComponent from "../../../Link";
 
 export default function SectionSkillsMainAboutComponent() {
     const aboutContext = useContext(AboutContext);

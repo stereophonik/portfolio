@@ -382,8 +382,10 @@ export default function Page() {
                 }
             },
             ul: {
-                paddingInlineStart: "0",
-                listStyleType: "none"
+                style: {
+                    paddingInlineStart: "0",
+                    listStyleType: "none"
+                }
             },
             h2: {
                 id: "h2SkillsMainAbout",
@@ -458,20 +460,31 @@ export default function Page() {
     }
 
     const outroAbout = {
-        style: {
-            overflow: "hidden",
-            width: "100vw",
-            height: checkInnerWidth(
-                areSizes,
-                ["65vw", "55vw", "45vw", "35vw", "30vw", "35vw", "35vw",
-                    "35vw", "35vw", "40vw", "40vw", "35vw", "30vw", "25vw"]
-            ),
-            backgroundColor: "#E2DDD1",
-            color: "#B0622C",
-            textAlign: "center",
-            borderRadius: "10%"
+        section: {
+            id: "sectionOutroAbout",
+            style: {
+                overflow: "hidden",
+                width: "100vw",
+                height: checkInnerWidth(
+                    areSizes,
+                    ["65vw", "55vw", "45vw", "35vw", "30vw", "35vw", "35vw",
+                        "35vw", "35vw", "40vw", "40vw", "35vw", "30vw", "25vw"]
+                ),
+                backgroundColor: "#E2DDD1",
+                color: "#B0622C",
+                textAlign: "center",
+                borderRadius: "10%"
+            }
+        },
+        div: {
+            id: "divOutroAbout",
+            style: {
+                height: "10%"
+            },
+            content: ""
         },
         h1: {
+            id: "h1OutroAbout",
             className: robotoMono.className,
             style: {
                 fontSize: checkInnerWidth(
@@ -483,6 +496,7 @@ export default function Page() {
             content: about["contentH1Outro"]
         },
         h2: {
+            id: "h2OutroAbout",
             className: anonymousPro.className,
             style: {
                 fontSize: checkInnerWidth(

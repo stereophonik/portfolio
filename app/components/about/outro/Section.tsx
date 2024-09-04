@@ -12,21 +12,21 @@ export default function SectionOutroAboutComponent() {
 
     return (
         <SectionComponent
-            id="sectionOutroAbout"
-            style={aboutContext["outro"]["style"]}>
+            id={aboutContext["outro"]["section"]["id"]}
+            style={aboutContext["outro"]["section"]["style"]}>
             <DivComponent
-                id="divOutro"
-                style={{
-                    height: "10%"
-                }}> </DivComponent>
+                id={aboutContext["outro"]["div"]["id"]}
+                style={aboutContext["outro"]["div"]["style"]}>
+                {aboutContext["outro"]["div"]["content"]}
+            </DivComponent>
             <H1Component
-                id="h1Outro"
+                id={aboutContext["outro"]["h1"]["id"]}
                 className={aboutContext["outro"]["h1"]["className"]}
                 style={aboutContext["outro"]["h1"]["style"]}>
                 {aboutContext["outro"]["h1"]["content"]}
             </H1Component>
             <H2Component
-                id="h2Outro"
+                id={aboutContext["outro"]["h2"]["id"]}
                 className={aboutContext["outro"]["h2"]["className"]}
                 style={aboutContext["outro"]["h2"]["style"]}>
                 {aboutContext["outro"]["h2"]["content"]}
