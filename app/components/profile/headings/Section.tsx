@@ -11,8 +11,8 @@ export default function SectionHeadingsProfileComponent() {
 
     return (
         <SectionComponent
-            id="sectionHeadingsProfile"
-            style={{}}>
+            id={profileContext["headings"]["section"]["id"]}
+            style={profileContext["headings"]["section"]["style"]}>
             <H1Component
                 id={profileContext["headings"]["h1"]["id"]}
                 className={profileContext["headings"]["h1"]["className"]}

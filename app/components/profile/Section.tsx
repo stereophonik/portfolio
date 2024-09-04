@@ -12,7 +12,7 @@ export default function SectionProfileComponent() {
 
     return (
         <SectionComponent
-            id="sectionProfile"
+            id={profileContext["section"]["id"]}
             style={profileContext["section"]["style"]}>
             <DivComponent
                 id={profileContext["div"]["id"]}

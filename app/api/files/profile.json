@@ -1,4 +1,5 @@
 {
+    "idSection": "sectionProfile",
     "overflowStyleSection": "hidden",
     "widthStyleSection": "100vw",
     "textAlignStyleSection": "center",
@@ -7,6 +8,8 @@
         "height": "10%"
     },
     "contentDiv": "",
+    "idSectionHeadings": "sectionHeadingsProfile",
+    "styleSectionHeadings": {},
     "idH1Headings": "h1HeadingsProfile",
     "contentH1Headings": "Nikolai Reyes",
     "idH2Headings": "h2HeadingsProfile",

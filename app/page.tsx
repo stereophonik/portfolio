@@ -161,6 +161,7 @@ export default function Page() {
     ]
 
     const sectionProfile = {
+        id: profile["idSection"],
         style: {
             overflow: profile["overflowStyleSection"],
             width: profile["widthStyleSection"],
@@ -194,6 +195,10 @@ export default function Page() {
     }
 
     const headingsProfile = {
+        section: {
+            id: profile["idSectionHeadings"],
+            style: profile["styleSectionHeadings"]
+        },
         h1: {
             id: profile["idH1Headings"],
             content: profile["contentH1Headings"],
