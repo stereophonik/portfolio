@@ -306,129 +306,127 @@ export default function Page() {
                 height: "10%"
             },
             content: ""
+        },
+        servings: {
+            h1: {
+                id: "h1ServingsMainAbout",
+                content: about["contentH1ServingsMain"],
+                className: robotoMono.className,
+                style: {
+                    fontSize: checkInnerWidth(
+                        areSizes,
+                        ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                            "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+                    )
+                }
+            },
+            h2: {
+                id: "h2ServingsMainAbout",
+                className: anonymousPro.className,
+                style: {
+                    fontSize: checkInnerWidth(
+                        areSizes,
+                        ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                            "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+                    )
+                }
+            },
+            lis: [
+                {
+                    key: 1,
+                    style: {},
+                    content: about["contentAaLisServingsMain"]
+                },
+                {
+                    key: 2,
+                    style: {},
+                    content: about["contentAbLisServingsMain"]
+                }
+            ]
+        },
+        skills: {
+            h1: {
+                id: "h1SkillsMainAbout",
+                className: robotoMono.className,
+                content: about["contentH1SkillsMain"],
+                style: {
+                    fontSize: checkInnerWidth(
+                        areSizes,
+                        ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                            "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+                    )
+                }
+            },
+            h2: {
+                id: "h2SkillsMainAbout",
+                className: anonymousPro.className,
+                style: {
+                    fontSize: checkInnerWidth(
+                        areSizes,
+                        ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                            "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+                    )
+                }
+            },
+            lis: [
+                {
+                    key: 1,
+                    style: {},
+                    content: about["contentAaLisSkillsMain"]
+                },
+                {
+                    key: 2,
+                    style: {},
+                    content: about["contentAbLisSkillsMain"]
+                },
+                {
+                    key: 3,
+                    style: {},
+                    content: about["contentAcLisSkillsMain"]
+                },
+                {
+                    key: 4,
+                    style: {},
+                    content: about["contentAdLisSkillsMain"]
+                },
+                {
+                    key: 5,
+                    style: {},
+                    content: about["contentAeLisSkillsMain"]
+                },
+                {
+                    key: 6,
+                    style: {},
+                    content: about["contentAfLisSkillsMain"]
+                }
+            ],
+            links: [
+                {
+                    href: `${about["hrefAaLinksSkillsMain"]}`,
+                    content: about["contentAaLinksSkillsMain"]
+                },
+                {
+                    href: `${about["hrefAbLinksSkillsMain"]}`,
+                    content: about["contentAbLinksSkillsMain"]
+                },
+                {
+                    href: `${about["hrefAcLinksSkillsMain"]}`,
+                    content: about["contentAcLinksSkillsMain"]
+                },
+                {
+                    href: `${about["hrefAdLinksSkillsMain"]}`,
+                    content: about["contentAdLinksSkillsMain"]
+                },
+                {
+                    href: `${about["hrefAeLinksSkillsMain"]}`,
+                    content: about["contentAeLinksSkillsMain"]
+                },
+                {
+                    href: `${about["hrefAfLinksSkillsMain"]}`,
+                    content: about["contentAfLinksSkillsMain"]
+                }
+            ]
         }
-    }
-
-    const servingsMainAbout = {
-        h1: {
-            id: "h1ServingsMainAbout",
-            content: about["contentH1ServingsMain"],
-            className: robotoMono.className,
-            style: {
-                fontSize: checkInnerWidth(
-                    areSizes,
-                    ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-                )
-            }
-        },
-        h2: {
-            id: "h2ServingsMainAbout",
-            className: anonymousPro.className,
-            style: {
-                fontSize: checkInnerWidth(
-                    areSizes,
-                    ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-                )
-            }
-        },
-        lis: [
-            {
-                key: 1,
-                style: {},
-                content: about["contentAaLisServingsMain"]
-            },
-            {
-                key: 2,
-                style: {},
-                content: about["contentAbLisServingsMain"]
-            }
-        ]
-    }
-
-    const skillsMainAbout = {
-        h1: {
-            id: "h1SkillsMainAbout",
-            className: robotoMono.className,
-            content: about["contentH1SkillsMain"],
-            style: {
-                fontSize: checkInnerWidth(
-                    areSizes,
-                    ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-                )
-            }
-        },
-        h2: {
-            id: "h2SkillsMainAbout",
-            className: anonymousPro.className,
-            style: {
-                fontSize: checkInnerWidth(
-                    areSizes,
-                    ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-                )
-            }
-        },
-        lis: [
-            {
-                key: 1,
-                style: {},
-                content: about["contentAaLisSkillsMain"]
-            },
-            {
-                key: 2,
-                style: {},
-                content: about["contentAbLisSkillsMain"]
-            },
-            {
-                key: 3,
-                style: {},
-                content: about["contentAcLisSkillsMain"]
-            },
-            {
-                key: 4,
-                style: {},
-                content: about["contentAdLisSkillsMain"]
-            },
-            {
-                key: 5,
-                style: {},
-                content: about["contentAeLisSkillsMain"]
-            },
-            {
-                key: 6,
-                style: {},
-                content: about["contentAfLisSkillsMain"]
-            }
-        ],
-        links: [
-            {
-                href: `${about["hrefAaLinksSkillsMain"]}`,
-                content: about["contentAaLinksSkillsMain"]
-            },
-            {
-                href: `${about["hrefAbLinksSkillsMain"]}`,
-                content: about["contentAbLinksSkillsMain"]
-            },
-            {
-                href: `${about["hrefAcLinksSkillsMain"]}`,
-                content: about["contentAcLinksSkillsMain"]
-            },
-            {
-                href: `${about["hrefAdLinksSkillsMain"]}`,
-                content: about["contentAdLinksSkillsMain"]
-            },
-            {
-                href: `${about["hrefAeLinksSkillsMain"]}`,
-                content: about["contentAeLinksSkillsMain"]
-            },
-            {
-                href: `${about["hrefAfLinksSkillsMain"]}`,
-                content: about["contentAfLinksSkillsMain"]
-            }
-        ]
     }
 
     const outroAbout = {
@@ -469,41 +467,45 @@ export default function Page() {
         }
     }
 
-    const valueNavigationContext = {
-        nav: navNavigation,
-        ul: ulNavigation,
-        h3: h3Navigation,
-        lis: lisNavigation,
-        links: linksNavigation
+    const navigationContext = {
+        value: {
+            nav: navNavigation,
+            ul: ulNavigation,
+            h3: h3Navigation,
+            lis: lisNavigation,
+            links: linksNavigation
+        }
     }
 
-    const valueProfileContext = {
-        section: sectionProfile,
-        div: divProfile,
-        image: imageProfile,
-        headings: headingsProfile
+    const profileContext = {
+        value: {
+            section: sectionProfile,
+            div: divProfile,
+            image: imageProfile,
+            headings: headingsProfile
+        }
     }
 
-    const valueAboutContext = {
-        intro: introAbout,
-        main: mainAbout,
-        servingsMain: servingsMainAbout,
-        skillsMain: skillsMainAbout,
-        outro: outroAbout
+    const aboutContext = {
+        value: {
+            intro: introAbout,
+            main: mainAbout,
+            outro: outroAbout
+        }
     }
 
     return (
         <MainComponent>
             <NavigationContext.Provider
-                value={valueNavigationContext}>
+                value={navigationContext["value"]}>
                 <NavNavigationComponent />
             </NavigationContext.Provider>
             <ProfileContext.Provider
-                value={valueProfileContext}>
+                value={profileContext["value"]}>
                 <SectionProfileComponent />
             </ProfileContext.Provider>
             <AboutContext.Provider
-                value={valueAboutContext}>
+                value={aboutContext["value"]}>
                 <SectionAboutComponent />
             </AboutContext.Provider>
         </MainComponent>
