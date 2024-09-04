@@ -253,9 +253,9 @@ export default function Page() {
             content: about["contentDivIntro"]
         },
         h1: {
-            id: "h1IntroAbout",
+            id: about["idH1Intro"],
+            content: about["contentH1Intro"],
             className: robotoMono.className,
-            content: "Hello!",
             style: {
                 fontSize: checkInnerWidth(
                     areSizes,
@@ -266,9 +266,9 @@ export default function Page() {
         },
         h2s: [
             {
-                id: "aah2sIntroAbout",
-                className: anonymousPro.className,
+                id: about["idAaH2sIntro"],
                 content: about["contentAaH2sIntro"],
+                className: anonymousPro.className,
                 style: {
                     fontSize: checkInnerWidth(
                         areSizes,
@@ -278,9 +278,9 @@ export default function Page() {
                 }
             },
             {
-                id: "abh2sIntroAbout",
-                className: anonymousPro.className,
+                id: about["idAbH2sIntro"],
                 content: about["contentAbH2sIntro"],
+                className: anonymousPro.className,
                 style: {
                     fontSize: checkInnerWidth(
                         areSizes,

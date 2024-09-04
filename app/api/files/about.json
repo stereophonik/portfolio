@@ -13,6 +13,10 @@
         "height": "10%"
     },
     "contentDivIntro": "",
+    "idH1Intro": "h1IntroAbout",
+    "contentH1Intro": "Hello!",
+    "idAaH2sIntro": "aaH2sIntroAbout",
+    "idAbH2sIntro": "abH2sIntroAbout",
     "contentAaH2sIntro": "Are you looking to have a website created or edited for your small business?",
     "contentAbH2sIntro": "I'm here to assist! With 6 years of experience transitioning from quality testing to front-end development, I bring a unique perspective to streamline your workflows and enhance your web applications.",
     "contentH1ServingsMain": "Servings:",
