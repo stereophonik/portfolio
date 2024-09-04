@@ -225,6 +225,11 @@ export default function Page() {
         }
     }
 
+    const sectionAbout = {
+        id: about["idSection"],
+        style: about["styleSection"]
+    }
+
     const introAbout = {
         section: {
             id: "sectionIntroAbout",
@@ -493,6 +498,7 @@ export default function Page() {
 
     const aboutContext = {
         value: {
+            section: sectionAbout,
             intro: introAbout,
             main: mainAbout,
             outro: outroAbout
