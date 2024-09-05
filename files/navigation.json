@@ -3,8 +3,8 @@
   "classNameNav": "classNameNavNavigation",
   "styleNav": {
     "overflow": "hidden",
-    "backgroundColor": "#E2DDD1",
-    "color": "#B0622C",
+    "backgroundColor": "#5A6064",
+    "color": "#061933",
     "textAlign": "center",
     "borderRadius": "10%"
   },
@@ -19,7 +19,7 @@
   "contentAaLi": "",
   "keyAbLi": 2,
   "styleAbLi": {
-    "color": "#E2DDD1",
+    "color": "#5A6064",
     "display": "inline-block"
   },
   "contentAbLi": "---",
@@ -30,7 +30,7 @@
   "contentAcLi": "",
   "keyAdLi": 4,
   "styleAdLi": {
-    "color": "#E2DDD1",
+    "color": "#5A6064",
     "display": "inline-block"
   },
   "contentAdLi": "---",

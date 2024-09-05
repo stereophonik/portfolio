@@ -6,8 +6,8 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     const style = {
-        backgroundColor: "#B0622C",
-        color: "#E2DDD1"
+        backgroundColor: "#061933",
+        color: "#5A6064"
     }
 
     return (
