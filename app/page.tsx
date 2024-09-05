@@ -23,6 +23,10 @@ import SectionProfileInterface from "./interfaces/profile/Section";
 import DivProfileInterface from "./interfaces/profile/Div";
 import ImageProfileInterface from "./interfaces/profile/Image";
 import HeadingsProfileInterface from "./interfaces/profile/Headings";
+import SectionAboutInterface from "./interfaces/about/Section";
+import IntroAboutInterface from "./interfaces/about/Intro";
+import MainAboutInterface from "./interfaces/about/Main";
+import OutroAboutInterface from "./interfaces/about/Outro";
 
 const anonymousPro: NextFont = Anonymous_Pro({
     weight: "400",
@@ -238,33 +242,12 @@ export default function Page(): React.ReactElement {
         }
     }
 
-    const sectionAbout: { id: any; style: any; } = {
+    const sectionAbout: SectionAboutInterface = {
         id: about["idSection"],
         style: about["styleSection"]
     }
 
-    const introAbout: {
-        div: { style: any; id: any; content: any };
-        h2s: ({ className: string; style: { fontSize: any }; id: any; content: any } | {
-            className: string;
-            style: { fontSize: any };
-            id: any;
-            content: any
-        })[];
-        h1: { className: string; style: { fontSize: any }; id: any; content: any };
-        section: {
-            style: {
-                backgroundColor: any;
-                overflow: any;
-                color: any;
-                borderRadius: any;
-                textAlign: any;
-                width: any;
-                height: any
-            };
-            id: any
-        }
-    } = {
+    const introAbout: IntroAboutInterface = {
         section: {
             id: about["idSectionIntro"],
             style: {
@@ -326,51 +309,7 @@ export default function Page(): React.ReactElement {
         ]
     }
 
-    const mainAbout: {
-        skills: {
-            div: { style: any; id: any; content: any };
-            ul: { style: any };
-            lis: ({ style: any; key: any; content: any } | { style: any; key: any; content: any } | {
-                style: any;
-                key: any;
-                content: any
-            } | { style: any; key: any; content: any } | { style: any; key: any; content: any } | {
-                style: any;
-                key: any;
-                content: any
-            })[];
-            h1: { className: string; style: { fontSize: any }; id: any; content: any };
-            section: {
-                style: {
-                    backgroundColor: any;
-                    overflow: any;
-                    color: any;
-                    borderRadius: any;
-                    textAlign: any;
-                    width: any;
-                    height: any
-                };
-                id: any
-            };
-            h2: { className: string; style: { fontSize: any }; id: any };
-            links: ({ href: string; content: any } | { href: string; content: any } | { href: string; content: any } | {
-                href: string;
-                content: any
-            } | { href: string; content: any } | { href: string; content: any })[]
-        };
-        servings: {
-            div: { style: any; id: any; content: any };
-            ul: { style: any };
-            lis: ({ style: any; key: any; content: any } | { style: any; key: any; content: any })[];
-            h1: { className: string; style: { fontSize: any }; id: any; content: any };
-            section: {
-                style: { backgroundColor: any; overflow: any; color: any; textAlign: any; width: any; height: any };
-                id: any
-            };
-            h2: { className: string; style: { fontSize: any }; id: any }
-        };
-        section: { style: any; id: any }
-    } = {
+    const mainAbout: MainAboutInterface = {
         section: {
             id: about["idSectionMain"],
             style: about["styleSectionMain"]
@@ -544,15 +483,7 @@ export default function Page(): React.ReactElement {
         }
     }
 
-    const outroAbout: {
-        div: { style: any; id: any; content: any };
-        h1: { className: string; style: { fontSize: any }; id: any; content: any };
-        section: {
-            style: { backgroundColor: any; overflow: any; color: any; textAlign: any; width: any; height: any };
-            id: any
-        };
-        h2: { className: string; style: { fontSize: any }; id: any; content: any }
-    } = {
+    const outroAbout: OutroAboutInterface = {
         section: {
             id: about["idSectionOutro"],
             style: {
