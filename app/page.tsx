@@ -1,6 +1,7 @@
 "use client"
 
-import { useState, useEffect } from "react";
+import {useState, useEffect, Dispatch, SetStateAction} from "react";
+import { NextFont } from "next/dist/compiled/@next/font";
 import { Anonymous_Pro } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
 
@@ -13,24 +14,24 @@ import { NavigationContext } from "./contexts/Navigation";
 import { ProfileContext } from "./contexts/Profile";
 import { AboutContext } from "./contexts/About";
 
-const anonymousPro = Anonymous_Pro({
+const anonymousPro: NextFont = Anonymous_Pro({
     weight: "400",
     subsets: ["latin"]
 });
 
-const robotoMono = Roboto_Mono({
+const robotoMono: NextFont = Roboto_Mono({
     weight: "700",
     subsets: ["latin"]
 });
 
-export default function Page() {
-    const [areSizes, setAreSizes] = useState([]);
-    const [navigation, setNavigation] = useState({});
-    const [profile, setProfile] = useState({});
-    const [about, setAbout] = useState({});
+export default function Page(): React.ReactElement {
+    const [areSizes, setAreSizes]: [any[], Dispatch<SetStateAction<any[]>>] = useState([]);
+    const [navigation, setNavigation]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
+    const [profile, setProfile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
+    const [about, setAbout]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
 
     useEffect(() => {
-        function executeSetAreSizes() {
+        function executeSetAreSizes(): void {
             setAreSizes([
                 window.innerWidth <= 360, window.innerWidth > 360 && window.innerWidth <= 440,
                 window.innerWidth > 440 && window.innerWidth <= 520, window.innerWidth > 520 && window.innerWidth <= 600,
@@ -70,7 +71,7 @@ export default function Page() {
             });
     }, []);
 
-    function checkInnerWidth(areSizes, sizes) {
+    function checkInnerWidth(areSizes: any, sizes: any): any {
         return areSizes[0] ? sizes[0]
             : areSizes[1] ? sizes[1]
                 : areSizes[2] ? sizes[2]
@@ -87,17 +88,17 @@ export default function Page() {
                                                             : sizes[13];
     }
 
-    const navNavigation = {
+    const navNavigation: { id: any; className: any; style: any; } = {
         id: navigation["idNav"],
         className: navigation["classNameNav"],
         style: navigation["styleNav"]
     }
 
-    const ulNavigation = {
+    const ulNavigation: { style: any; } = {
         style: navigation["styleUl"]
     }
 
-    const h3Navigation = {
+    const h3Navigation: { id: any; className: string; style: { fontSize: any; }; } = {
         id: navigation["idH3"],
         className: anonymousPro.className,
         style: {
@@ -109,7 +110,7 @@ export default function Page() {
         }
     }
 
-    const lisNavigation = [
+    const lisNavigation: { key: any; style: any; content: any; }[] = [
         {
             key: navigation["keyAaLi"],
             style: navigation["styleAaLi"],
@@ -137,7 +138,7 @@ export default function Page() {
         }
     ]
 
-    const linksNavigation = [
+    const linksNavigation: { href: any; content: any; }[] = [
         {
             href: `${navigation["hrefAaLink"]}`,
             content: navigation["contentAaLink"]
@@ -160,7 +161,7 @@ export default function Page() {
         }
     ]
 
-    const sectionProfile = {
+    const sectionProfile: { id: any; style: { overflow: any; width: any; backgroundColor: any; color: any; textAlign: any; height: any; }; } = {
         id: profile["idSection"],
         style: {
             overflow: profile["overflowStyleSection"],
@@ -176,13 +177,13 @@ export default function Page() {
         }
     }
 
-    const divProfile = {
+    const divProfile: { id: any; style: any; content: any; } = {
         id: profile["idDiv"],
         style: profile["styleDiv"],
         content: profile["contentDiv"]
     }
 
-    const imageProfile = {
+    const imageProfile: { src: any; alt: any; style: any; width: any; height: any; } = {
         src: profile["srcImage"],
         alt: profile["altImage"],
         style: profile["styleImage"],
@@ -196,7 +197,7 @@ export default function Page() {
         )
     }
 
-    const headingsProfile = {
+    const headingsProfile: { section: { id: any; style: any; }; h1: { id: any; content: any; className: string; style: { fontSize: any; }; }; h2: { id: any; content: any; className: string; style: { fontSize: any; }; }; } = {
         section: {
             id: profile["idSectionHeadings"],
             style: profile["styleSectionHeadings"]
