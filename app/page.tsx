@@ -19,6 +19,10 @@ import UlNavigationInterface from "./interfaces/navigation/Ul";
 import H3NavigationInterface from "./interfaces/navigation/H3";
 import LisNavigationInterface from "./interfaces/navigation/Lis";
 import LinksNavigationInterface from "./interfaces/navigation/Links";
+import SectionProfileInterface from "./interfaces/profile/Section";
+import DivProfileInterface from "./interfaces/profile/Div";
+import ImageProfileInterface from "./interfaces/profile/Image";
+import HeadingsProfileInterface from "./interfaces/profile/Headings";
 
 const anonymousPro: NextFont = Anonymous_Pro({
     weight: "400",
@@ -167,7 +171,7 @@ export default function Page(): React.ReactElement {
         }
     ]
 
-    const sectionProfile: { id: any; style: { overflow: any; width: any; backgroundColor: any; color: any; textAlign: any; height: any; }; } = {
+    const sectionProfile: SectionProfileInterface = {
         id: profile["idSection"],
         style: {
             overflow: profile["overflowStyleSection"],
@@ -183,13 +187,13 @@ export default function Page(): React.ReactElement {
         }
     }
 
-    const divProfile: { id: any; style: any; content: any; } = {
+    const divProfile: DivProfileInterface = {
         id: profile["idDiv"],
         style: profile["styleDiv"],
         content: profile["contentDiv"]
     }
 
-    const imageProfile: { src: any; alt: any; style: any; width: any; height: any; } = {
+    const imageProfile: ImageProfileInterface = {
         src: profile["srcImage"],
         alt: profile["altImage"],
         style: profile["styleImage"],
@@ -203,7 +207,7 @@ export default function Page(): React.ReactElement {
         )
     }
 
-    const headingsProfile: { section: { id: any; style: any; }; h1: { id: any; content: any; className: string; style: { fontSize: any; }; }; h2: { id: any; content: any; className: string; style: { fontSize: any; }; }; } = {
+    const headingsProfile: HeadingsProfileInterface = {
         section: {
             id: profile["idSectionHeadings"],
             style: profile["styleSectionHeadings"]
