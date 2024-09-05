@@ -14,11 +14,6 @@ export default function SectionMainAboutComponent() {
         <SectionComponent
             id={aboutContext["main"]["section"]["id"]}
             style={aboutContext["main"]["section"]["style"]}>
-            <DivComponent
-                id={aboutContext["main"]["div"]["id"]}
-                style={aboutContext["main"]["div"]["style"]}>
-                {aboutContext["main"]["div"]["content"]}
-            </DivComponent>
             <SectionServingsMainAboutComponent />
             <SectionSkillsMainAboutComponent />
         </SectionComponent>

@@ -8,6 +8,7 @@ import LiComponent from "../../../Li";
 import LinkComponent from "../../../Link";
 
 import { AboutContext } from "../../../../contexts/About";
+import DivComponent from "../../../Div";
 
 export default function SectionSkillsMainAboutComponent() {
     const aboutContext = useContext(AboutContext);
@@ -16,6 +17,11 @@ export default function SectionSkillsMainAboutComponent() {
         <SectionComponent
             id={aboutContext["main"]["skills"]["section"]["id"]}
             style={aboutContext["main"]["skills"]["section"]["style"]}>
+            <DivComponent
+                id={aboutContext["main"]["skills"]["div"]["id"]}
+                style={aboutContext["main"]["skills"]["div"]["style"]}>
+                {aboutContext["main"]["skills"]["div"]["content"]}
+            </DivComponent>
             <H1Component
                 id={aboutContext["main"]["skills"]["h1"]["id"]}
                 className={aboutContext["main"]["skills"]["h1"]["className"]}

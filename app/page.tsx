@@ -297,28 +297,28 @@ export default function Page() {
     const mainAbout = {
         section: {
             id: about["idSectionMain"],
-            style: {
-                overflow: about["overflowStyleSectionMain"],
-                width: about["widthStyleSectionMain"],
-                backgroundColor: about["backgroundColorStyleSectionMain"],
-                color: about["colorStyleSectionMain"],
-                textAlign: about["textAlignStyleSectionMain"],
-                height: checkInnerWidth(
-                    areSizes,
-                    ["145vw", "135vw", "110vw", "90vw", "75vw", "90vw", "90vw",
-                        "90vw", "90vw", "90vw", "90vw", "80vw", "75vw", "60vw"]
-                )
-            }
-        },
-        div: {
-            id: about["idDivMain"],
-            style: about["styleDivMain"],
-            content: about["contentDivMain"]
+            style: about["styleSectionMain"]
         },
         servings: {
             section: {
                 id: about["idSectionServingsMain"],
-                style: about["styleSectionServingsMain"]
+                style: {
+                    overflow: about["overflowStyleSectionServingsMain"],
+                    width: about["widthStyleSectionServingsMain"],
+                    backgroundColor: about["backgroundColorStyleSectionServingsMain"],
+                    color: about["colorStyleSectionServingsMain"],
+                    textAlign: about["textAlignStyleSectionServingsMain"],
+                    height: checkInnerWidth(
+                        areSizes,
+                        ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
+                            "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"]
+                    )
+                }
+            },
+            div: {
+                id: about["idDivServingsMain"],
+                style: about["styleDivServingsMain"],
+                content: about["contentDivServingsMain"]
             },
             h1: {
                 id: about["idH1ServingsMain"],
@@ -362,7 +362,24 @@ export default function Page() {
         skills: {
             section: {
                 id: about["idSectionSkillsMain"],
-                style: about["styleSectionSkillsMain"]
+                style: {
+                    overflow: about["overflowStyleSectionSkillsMain"],
+                    width: about["widthStyleSectionSkillsMain"],
+                    backgroundColor: about["backgroundColorStyleSectionSkillsMain"],
+                    color: about["colorStyleSectionSkillsMain"],
+                    textAlign: about["textAlignStyleSectionSkillsMain"],
+                    borderRadius: about["borderRadiusStyleSectionSkillsMain"],
+                    height: checkInnerWidth(
+                        areSizes,
+                        ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
+                            "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"]
+                    )
+                }
+            },
+            div: {
+                id: about["idDivSkillsMain"],
+                style: about["styleDivSkillsMain"],
+                content: about["contentDivSkillsMain"]
             },
             h1: {
                 id: about["idH1SkillsMain"],
@@ -460,7 +477,6 @@ export default function Page() {
                 backgroundColor: about["backgroundColorStyleSectionOutro"],
                 color: about["colorStyleSectionOutro"],
                 textAlign: about["textAlignStyleSectionOutro"],
-                borderRadius: about["borderRadiusStyleSectionOutro"],
                 height: checkInnerWidth(
                     areSizes,
                     ["65vw", "55vw", "45vw", "35vw", "30vw", "35vw", "35vw",

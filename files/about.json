@@ -20,18 +20,18 @@
     "contentAaH2sIntro": "Are you looking to have a website created or edited for your small business?",
     "contentAbH2sIntro": "I'm here to assist! With 6 years of experience transitioning from quality testing to front-end development, I bring a unique perspective to streamline your workflows and enhance your web applications.",
     "idSectionMain": "sectionMainAbout",
-    "overflowStyleSectionMain": "hidden",
-    "widthStyleSectionMain": "100vw",
-    "backgroundColorStyleSectionMain": "#061933",
-    "colorStyleSectionMain": "#5A6064",
-    "textAlignStyleSectionMain": "center",
-    "idDivMain": "divMainAbout",
-    "styleDivMain": {
+    "styleSectionMain": {},
+    "idSectionServingsMain": "sectionServingsMainAbout",
+    "overflowStyleSectionServingsMain": "hidden",
+    "widthStyleSectionServingsMain": "100vw",
+    "backgroundColorStyleSectionServingsMain": "#061933",
+    "colorStyleSectionServingsMain": "#5A6064",
+    "textAlignStyleSectionServingsMain": "center",
+    "idDivServingsMain": "divServingsMainAbout",
+    "styleDivServingsMain": {
         "height": "10%"
     },
-    "contentDivMain": "",
-    "idSectionServingsMain": "sectionServingsMainAbout",
-    "styleSectionServingsMain": {},
+    "contentDivServingsMain": "",
     "idH1ServingsMain": "h1ServingsMainAbout",
     "contentH1ServingsMain": "Servings:",
     "styleUlServingsMain": {
@@ -46,7 +46,17 @@
     "styleAbLisServingsMain": {},
     "contentAbLisServingsMain": "Selecting and applying concepts tailored for front-end applications",
     "idSectionSkillsMain": "sectionSkillsMainAbout",
-    "styleSectionSkillsMain": {},
+    "overflowStyleSectionSkillsMain": "hidden",
+    "widthStyleSectionSkillsMain": "100vw",
+    "backgroundColorStyleSectionSkillsMain": "#5A6064",
+    "colorStyleSectionSkillsMain": "#061933",
+    "textAlignStyleSectionSkillsMain": "center",
+    "borderRadiusStyleSectionSkillsMain": "10%",
+    "idDivSkillsMain": "divSkillsMainAbout",
+    "styleDivSkillsMain": {
+        "height": "10%"
+    },
+    "contentDivSkillsMain": "",
     "idH1SkillsMain": "h1SkillsMainAbout",
     "contentH1SkillsMain": "Skills:",
     "styleUlSkillsMain": {
@@ -87,10 +97,9 @@
     "idSectionOutro": "sectionOutroAbout",
     "overflowStyleSectionOutro": "hidden",
     "widthStyleSectionOutro": "100vw",
-    "backgroundColorStyleSectionOutro": "#5A6064",
-    "colorStyleSectionOutro": "#061933",
+    "backgroundColorStyleSectionOutro": "#061933",
+    "colorStyleSectionOutro": "#5A6064",
     "textAlignStyleSectionOutro": "center",
-    "borderRadiusStyleSectionOutro": "10%",
     "idDivOutro": "divOutroAbout",
     "styleDivOutro": {
         "height": "10%"
