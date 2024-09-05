@@ -185,6 +185,7 @@ export default function Page(): React.ReactElement {
             content: fromParsedFileProfile["contentDiv"]
         },
         image: {
+            id: fromParsedFileProfile["idImage"],
             src: fromParsedFileProfile["srcImage"],
             alt: fromParsedFileProfile["altImage"],
             style: fromParsedFileProfile["styleImage"],

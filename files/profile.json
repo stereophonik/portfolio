@@ -16,6 +16,7 @@
     "contentH1Headings": "Nikolai Reyes",
     "idH2Headings": "h2HeadingsProfile",
     "contentH2Headings": "Transitioning to Front-end Development",
+    "idImage": "imageProfile",
     "srcImage": "/picture.jpg",
     "altImage": "Nikolai Reyes",
     "styleImage": {

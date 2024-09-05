@@ -8,6 +8,7 @@ export default function ImageProfileComponent(): React.ReactElement {
     const profileContext: {} = useContext(ProfileContext);
 
     return <ImageComponent
+            id={profileContext["image"]["id"]}
             src={profileContext["image"]["src"]}
             alt={profileContext["image"]["alt"]}
             style={profileContext["image"]["style"]}

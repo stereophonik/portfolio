@@ -1,6 +1,6 @@
 export default interface ValueProfileInterface {
     div: { id: any; style: any; content: any };
-    image: { src: any; alt: any; style: any; width: any; height: any };
+    image: { id: any; src: any; alt: any; style: any; width: any; height: any };
     headings: {
         section: { id: any; style: any };
         h1: { id: any; content: any; className: string; style: { fontSize: any } };
