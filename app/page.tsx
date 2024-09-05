@@ -453,30 +453,29 @@ export default function Page() {
 
     const outroAbout = {
         section: {
-            id: "sectionOutroAbout",
+            id: about["idSectionOutro"],
             style: {
-                overflow: "hidden",
-                width: "100vw",
+                overflow: about["overflowStyleSectionOutro"],
+                width: about["widthStyleSectionOutro"],
+                backgroundColor: about["backgroundColorStyleSectionOutro"],
+                color: about["colorStyleSectionOutro"],
+                textAlign: about["textAlignStyleSectionOutro"],
+                borderRadius: about["borderRadiusStyleSectionOutro"],
                 height: checkInnerWidth(
                     areSizes,
                     ["65vw", "55vw", "45vw", "35vw", "30vw", "35vw", "35vw",
                         "35vw", "35vw", "40vw", "40vw", "35vw", "30vw", "25vw"]
-                ),
-                backgroundColor: "#E2DDD1",
-                color: "#B0622C",
-                textAlign: "center",
-                borderRadius: "10%"
+                )
             }
         },
         div: {
-            id: "divOutroAbout",
-            style: {
-                height: "10%"
-            },
-            content: ""
+            id: about["idDivOutro"],
+            style: about["styleDivOutro"],
+            content: about["contentDivOutro"]
         },
         h1: {
-            id: "h1OutroAbout",
+            id: about["idH1Outro"],
+            content: about["contentH1Outro"],
             className: robotoMono.className,
             style: {
                 fontSize: checkInnerWidth(
@@ -484,11 +483,11 @@ export default function Page() {
                     ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
                         "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
                 )
-            },
-            content: about["contentH1Outro"]
+            }
         },
         h2: {
-            id: "h2OutroAbout",
+            id: about["idH2Outro"],
+            content: about["contentH2Outro"],
             className: anonymousPro.className,
             style: {
                 fontSize: checkInnerWidth(
@@ -496,8 +495,7 @@ export default function Page() {
                     ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
                         "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
                 )
-            },
-            content: about["contentH2Outro"]
+            }
         }
     }
 

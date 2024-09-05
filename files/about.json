@@ -84,6 +84,20 @@
     "contentAdLinksSkillsMain": "Testing: Cypress",
     "contentAeLinksSkillsMain": "Version Control: Git",
     "contentAfLinksSkillsMain": "Language: JavaScript",
+    "idSectionOutro": "sectionOutroAbout",
+    "overflowStyleSectionOutro": "hidden",
+    "widthStyleSectionOutro": "100vw",
+    "backgroundColorStyleSectionOutro": "#E2DDD1",
+    "colorStyleSectionOutro": "#B0622C",
+    "textAlignStyleSectionOutro": "center",
+    "borderRadiusStyleSectionOutro": "10%",
+    "idDivOutro": "divOutroAbout",
+    "styleDivOutro": {
+        "height": "10%"
+    },
+    "contentDivOutro": "",
+    "idH1Outro": "h1OutroAbout",
     "contentH1Outro": "Btw...",
+    "idH2Outro": "h2OutroAbout",
     "contentH2Outro": "I understand it's a bit technical, but let's discuss your specific needs. Together, we can achieve your dream website. Looking forward to chatting soon!"
 }
