@@ -1,3 +1,3 @@
 import { createContext } from "react";
 
-export const ProfileContext = createContext({});
+export const ProfileContext: React.Context<{}> = createContext({});

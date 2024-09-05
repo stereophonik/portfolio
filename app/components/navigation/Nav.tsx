@@ -8,7 +8,7 @@ import LinkComponent from "../Link";
 
 import { NavigationContext } from "../../contexts/Navigation";
 
-export default function NavNavigationComponent() {
+export default function NavNavigationComponent(): React.ReactElement {
     const navigationContext = useContext(NavigationContext);
 
     return (

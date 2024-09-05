@@ -10,7 +10,7 @@ import LinkComponent from "../../../Link";
 import { AboutContext } from "../../../../contexts/About";
 import DivComponent from "../../../Div";
 
-export default function SectionSkillsMainAboutComponent() {
+export default function SectionSkillsMainAboutComponent(): React.ReactElement {
     const aboutContext = useContext(AboutContext);
 
     return (

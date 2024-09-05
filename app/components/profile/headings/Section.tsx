@@ -6,7 +6,7 @@ import H2Component from "../../H2";
 
 import { ProfileContext } from "../../../contexts/Profile";
 
-export default function SectionHeadingsProfileComponent() {
+export default function SectionHeadingsProfileComponent(): React.ReactElement {
     const profileContext = useContext(ProfileContext);
 
     return (

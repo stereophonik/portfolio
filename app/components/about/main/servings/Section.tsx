@@ -9,7 +9,7 @@ import LiComponent from "../../../Li";
 
 import { AboutContext } from "../../../../contexts/About";
 
-export default function SectionServingsMainAboutComponent() {
+export default function SectionServingsMainAboutComponent(): React.ReactElement {
     const aboutContext = useContext(AboutContext);
 
     return (

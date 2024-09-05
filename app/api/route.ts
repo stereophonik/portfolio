@@ -2,7 +2,7 @@ import path from "path";
 import { promises } from "fs";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(request: NextRequest) {
+export async function GET(request: NextRequest): Promise<NextResponse<any>> {
     try {
         const fileName = request.nextUrl.searchParams.get("fileName");
         const read = await promises.readFile(path.join(process.cwd() + `/files/${fileName}.json`), "utf8");

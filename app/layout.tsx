@@ -1,10 +1,6 @@
 import "./global.css"
 
-export default function RootLayout({
-    children,
-}: {
-    children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
     const style = {
         backgroundColor: "#061933",
         color: "#5A6064"
