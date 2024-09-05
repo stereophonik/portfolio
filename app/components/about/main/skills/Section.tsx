@@ -11,7 +11,7 @@ import { AboutContext } from "../../../../contexts/About";
 import DivComponent from "../../../Div";
 
 export default function SectionSkillsMainAboutComponent(): React.ReactElement {
-    const aboutContext = useContext(AboutContext);
+    const aboutContext: {} = useContext(AboutContext);
 
     return (
         <SectionComponent

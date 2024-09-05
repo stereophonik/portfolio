@@ -8,7 +8,7 @@ import SectionHeadingsProfileComponent from "./headings/Section";
 import {ProfileContext} from "../../contexts/Profile";
 
 export default function SectionProfileComponent(): React.ReactElement {
-    const profileContext = useContext(ProfileContext);
+    const profileContext: {} = useContext(ProfileContext);
 
     return (
         <SectionComponent

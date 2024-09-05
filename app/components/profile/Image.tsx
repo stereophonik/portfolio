@@ -5,7 +5,7 @@ import ImageComponent from "../Image";
 import { ProfileContext } from "../../contexts/Profile";
 
 export default function ImageProfileComponent(): React.ReactElement {
-    const profileContext = useContext(ProfileContext);
+    const profileContext: {} = useContext(ProfileContext);
 
     return <ImageComponent
             src={profileContext["image"]["src"]}

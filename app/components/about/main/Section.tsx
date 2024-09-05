@@ -8,7 +8,7 @@ import SectionSkillsMainAboutComponent from "./skills/Section";
 import { AboutContext } from "../../../contexts/About";
 
 export default function SectionMainAboutComponent(): React.ReactElement {
-    const aboutContext = useContext(AboutContext);
+    const aboutContext: {} = useContext(AboutContext);
 
     return (
         <SectionComponent

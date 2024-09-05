@@ -8,7 +8,7 @@ import H2Component from "../../H2";
 import { AboutContext } from "../../../contexts/About";
 
 export default function SectionOutroAboutComponent(): React.ReactElement {
-    const aboutContext = useContext(AboutContext);
+    const aboutContext: {} = useContext(AboutContext);
 
     return (
         <SectionComponent

@@ -8,7 +8,7 @@ import SectionOutroAboutComponent from "./outro/Section";
 import { AboutContext } from "../../contexts/About";
 
 export default function SectionAboutComponent(): React.ReactElement {
-    const aboutContext = useContext(AboutContext);
+    const aboutContext: {} = useContext(AboutContext);
 
     return (
         <SectionComponent
