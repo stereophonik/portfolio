@@ -228,12 +228,33 @@ export default function Page(): React.ReactElement {
         }
     }
 
-    const sectionAbout = {
+    const sectionAbout: { id: any; style: any; } = {
         id: about["idSection"],
         style: about["styleSection"]
     }
 
-    const introAbout = {
+    const introAbout: {
+        div: { style: any; id: any; content: any };
+        h2s: ({ className: string; style: { fontSize: any }; id: any; content: any } | {
+            className: string;
+            style: { fontSize: any };
+            id: any;
+            content: any
+        })[];
+        h1: { className: string; style: { fontSize: any }; id: any; content: any };
+        section: {
+            style: {
+                backgroundColor: any;
+                overflow: any;
+                color: any;
+                borderRadius: any;
+                textAlign: any;
+                width: any;
+                height: any
+            };
+            id: any
+        }
+    } = {
         section: {
             id: about["idSectionIntro"],
             style: {
@@ -295,7 +316,51 @@ export default function Page(): React.ReactElement {
         ]
     }
 
-    const mainAbout = {
+    const mainAbout: {
+        skills: {
+            div: { style: any; id: any; content: any };
+            ul: { style: any };
+            lis: ({ style: any; key: any; content: any } | { style: any; key: any; content: any } | {
+                style: any;
+                key: any;
+                content: any
+            } | { style: any; key: any; content: any } | { style: any; key: any; content: any } | {
+                style: any;
+                key: any;
+                content: any
+            })[];
+            h1: { className: string; style: { fontSize: any }; id: any; content: any };
+            section: {
+                style: {
+                    backgroundColor: any;
+                    overflow: any;
+                    color: any;
+                    borderRadius: any;
+                    textAlign: any;
+                    width: any;
+                    height: any
+                };
+                id: any
+            };
+            h2: { className: string; style: { fontSize: any }; id: any };
+            links: ({ href: string; content: any } | { href: string; content: any } | { href: string; content: any } | {
+                href: string;
+                content: any
+            } | { href: string; content: any } | { href: string; content: any })[]
+        };
+        servings: {
+            div: { style: any; id: any; content: any };
+            ul: { style: any };
+            lis: ({ style: any; key: any; content: any } | { style: any; key: any; content: any })[];
+            h1: { className: string; style: { fontSize: any }; id: any; content: any };
+            section: {
+                style: { backgroundColor: any; overflow: any; color: any; textAlign: any; width: any; height: any };
+                id: any
+            };
+            h2: { className: string; style: { fontSize: any }; id: any }
+        };
+        section: { style: any; id: any }
+    } = {
         section: {
             id: about["idSectionMain"],
             style: about["styleSectionMain"]
@@ -469,7 +534,15 @@ export default function Page(): React.ReactElement {
         }
     }
 
-    const outroAbout = {
+    const outroAbout: {
+        div: { style: any; id: any; content: any };
+        h1: { className: string; style: { fontSize: any }; id: any; content: any };
+        section: {
+            style: { backgroundColor: any; overflow: any; color: any; textAlign: any; width: any; height: any };
+            id: any
+        };
+        h2: { className: string; style: { fontSize: any }; id: any; content: any }
+    } = {
         section: {
             id: about["idSectionOutro"],
             style: {
@@ -516,7 +589,15 @@ export default function Page(): React.ReactElement {
         }
     }
 
-    const navigationContext = {
+    const navigationContext: {
+        value: {
+            nav: { id: any; className: any; style: any };
+            ul: { style: any };
+            lis: { key: any; style: any; content: any }[];
+            links: { href: any; content: any }[];
+            h3: { id: any; className: string; style: { fontSize: any } }
+        }
+    } = {
         value: {
             nav: navNavigation,
             ul: ulNavigation,
@@ -526,7 +607,21 @@ export default function Page(): React.ReactElement {
         }
     }
 
-    const profileContext = {
+    const profileContext: {
+        value: {
+            div: { id: any; style: any; content: any };
+            image: { src: any; alt: any; style: any; width: any; height: any };
+            headings: {
+                section: { id: any; style: any };
+                h1: { id: any; content: any; className: string; style: { fontSize: any } };
+                h2: { id: any; content: any; className: string; style: { fontSize: any } }
+            };
+            section: {
+                id: any;
+                style: { overflow: any; width: any; backgroundColor: any; color: any; textAlign: any; height: any }
+            }
+        }
+    } = {
         value: {
             section: sectionProfile,
             div: divProfile,
@@ -535,7 +630,78 @@ export default function Page(): React.ReactElement {
         }
     }
 
-    const aboutContext = {
+    const aboutContext: {
+        value: {
+            intro: {
+                div: { style: any; id: any; content: any };
+                h2s: { className: string; style: { fontSize: any }; id: any; content: any }[];
+                h1: { className: string; style: { fontSize: any }; id: any; content: any };
+                section: {
+                    style: {
+                        backgroundColor: any;
+                        overflow: any;
+                        color: any;
+                        borderRadius: any;
+                        textAlign: any;
+                        width: any;
+                        height: any
+                    };
+                    id: any
+                }
+            };
+            outro: {
+                div: { style: any; id: any; content: any };
+                h1: { className: string; style: { fontSize: any }; id: any; content: any };
+                section: {
+                    style: { backgroundColor: any; overflow: any; color: any; textAlign: any; width: any; height: any };
+                    id: any
+                };
+                h2: { className: string; style: { fontSize: any }; id: any; content: any }
+            };
+            section: { id: any; style: any };
+            main: {
+                skills: {
+                    div: { style: any; id: any; content: any };
+                    ul: { style: any };
+                    lis: { style: any; key: any; content: any }[];
+                    h1: { className: string; style: { fontSize: any }; id: any; content: any };
+                    section: {
+                        style: {
+                            backgroundColor: any;
+                            overflow: any;
+                            color: any;
+                            borderRadius: any;
+                            textAlign: any;
+                            width: any;
+                            height: any
+                        };
+                        id: any
+                    };
+                    h2: { className: string; style: { fontSize: any }; id: any };
+                    links: { href: string; content: any }[]
+                };
+                servings: {
+                    div: { style: any; id: any; content: any };
+                    ul: { style: any };
+                    lis: { style: any; key: any; content: any }[];
+                    h1: { className: string; style: { fontSize: any }; id: any; content: any };
+                    section: {
+                        style: {
+                            backgroundColor: any;
+                            overflow: any;
+                            color: any;
+                            textAlign: any;
+                            width: any;
+                            height: any
+                        };
+                        id: any
+                    };
+                    h2: { className: string; style: { fontSize: any }; id: any }
+                };
+                section: { style: any; id: any }
+            }
+        }
+    } = {
         value: {
             section: sectionAbout,
             intro: introAbout,
