@@ -14,6 +14,12 @@ import { NavigationContext } from "./contexts/Navigation";
 import { ProfileContext } from "./contexts/Profile";
 import { AboutContext } from "./contexts/About";
 
+import NavNavigationInterface from "./interfaces/navigation/Nav";
+import UlNavigationInterface from "./interfaces/navigation/Ul";
+import H3NavigationInterface from "./interfaces/navigation/H3";
+import LisNavigationInterface from "./interfaces/navigation/Lis";
+import LinksNavigationInterface from "./interfaces/navigation/Links";
+
 const anonymousPro: NextFont = Anonymous_Pro({
     weight: "400",
     subsets: ["latin"]
@@ -88,17 +94,17 @@ export default function Page(): React.ReactElement {
                                                             : sizes[13];
     }
 
-    const navNavigation: { id: any; className: any; style: any; } = {
+    const navNavigation: NavNavigationInterface = {
         id: navigation["idNav"],
         className: navigation["classNameNav"],
         style: navigation["styleNav"]
     }
 
-    const ulNavigation: { style: any; } = {
+    const ulNavigation: UlNavigationInterface = {
         style: navigation["styleUl"]
     }
 
-    const h3Navigation: { id: any; className: string; style: { fontSize: any; }; } = {
+    const h3Navigation: H3NavigationInterface = {
         id: navigation["idH3"],
         className: anonymousPro.className,
         style: {
@@ -110,7 +116,7 @@ export default function Page(): React.ReactElement {
         }
     }
 
-    const lisNavigation: { key: any; style: any; content: any; }[] = [
+    const lisNavigation: LisNavigationInterface[] = [
         {
             key: navigation["keyAaLi"],
             style: navigation["styleAaLi"],
@@ -138,7 +144,7 @@ export default function Page(): React.ReactElement {
         }
     ]
 
-    const linksNavigation: { href: any; content: any; }[] = [
+    const linksNavigation: LinksNavigationInterface[] = [
         {
             href: `${navigation["hrefAaLink"]}`,
             content: navigation["contentAaLink"]
