@@ -35,7 +35,7 @@ export default function SectionSkillsMainAboutComponent(): React.ReactElement {
                     className={aboutContext["main"]["skills"]["h2"]["className"]}
                     style={aboutContext["main"]["skills"]["h2"]["style"]}>
                     {
-                        aboutContext["main"]["skills"]["lis"].map((li) =>
+                        aboutContext["main"]["skills"]["lis"].map((li: { [x: string]: any; }) =>
                             <LiComponent
                                 key={li["key"]}
                                 style={li["style"]}>

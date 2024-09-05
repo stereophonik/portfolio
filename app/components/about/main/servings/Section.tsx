@@ -34,7 +34,7 @@ export default function SectionServingsMainAboutComponent(): React.ReactElement 
                     className={aboutContext["main"]["servings"]["h2"]["className"]}
                     style={aboutContext["main"]["servings"]["h2"]["style"]}>
                     {
-                        aboutContext["main"]["servings"]["lis"].map((li) =>
+                        aboutContext["main"]["servings"]["lis"].map((li: { [x: string]: any; }) =>
                             <LiComponent
                                 key={li["key"]}
                                 style={li["style"]}>

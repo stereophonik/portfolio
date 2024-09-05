@@ -26,7 +26,7 @@ export default function SectionIntroAboutComponent(): React.ReactElement {
                 {aboutContext["intro"]["h1"]["content"]}
             </H1Component>
             {
-                aboutContext["intro"]["h2s"].map((h2) =>
+                aboutContext["intro"]["h2s"].map((h2: { [x: string]: any; }) =>
                     <H2Component
                         id={h2["id"]}
                         className={h2["className"]}
