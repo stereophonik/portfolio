@@ -361,13 +361,13 @@ export default function Page() {
         },
         skills: {
             section: {
-                id: "sectionSkillsMainAbout",
-                style: {}
+                id: about["idSectionSkillsMain"],
+                style: about["styleSectionSkillsMain"]
             },
             h1: {
-                id: "h1SkillsMainAbout",
-                className: robotoMono.className,
+                id: about["idH1SkillsMain"],
                 content: about["contentH1SkillsMain"],
+                className: robotoMono.className,
                 style: {
                     fontSize: checkInnerWidth(
                         areSizes,
@@ -377,13 +377,10 @@ export default function Page() {
                 }
             },
             ul: {
-                style: {
-                    paddingInlineStart: "0",
-                    listStyleType: "none"
-                }
+                style: about["styleUlSkillsMain"]
             },
             h2: {
-                id: "h2SkillsMainAbout",
+                id: about["idH2SkillsMain"],
                 className: anonymousPro.className,
                 style: {
                     fontSize: checkInnerWidth(
@@ -395,33 +392,33 @@ export default function Page() {
             },
             lis: [
                 {
-                    key: 1,
-                    style: {},
+                    key: about["keyAaLisSkillsMain"],
+                    style: about["styleAaLisSkillsMain"],
                     content: about["contentAaLisSkillsMain"]
                 },
                 {
-                    key: 2,
-                    style: {},
+                    key: about["keyAbLisSkillsMain"],
+                    style: about["styleAbLisSkillsMain"],
                     content: about["contentAbLisSkillsMain"]
                 },
                 {
-                    key: 3,
-                    style: {},
+                    key: about["keyAcLisSkillsMain"],
+                    style: about["styleAcLisSkillsMain"],
                     content: about["contentAcLisSkillsMain"]
                 },
                 {
-                    key: 4,
-                    style: {},
+                    key: about["keyAdLisSkillsMain"],
+                    style: about["styleAdLisSkillsMain"],
                     content: about["contentAdLisSkillsMain"]
                 },
                 {
-                    key: 5,
-                    style: {},
+                    key: about["keyAeLisSkillsMain"],
+                    style: about["styleAeLisSkillsMain"],
                     content: about["contentAeLisSkillsMain"]
                 },
                 {
-                    key: 6,
-                    style: {},
+                    key: about["keyAfLisSkillsMain"],
+                    style: about["styleAfLisSkillsMain"],
                     content: about["contentAfLisSkillsMain"]
                 }
             ],
