@@ -28,7 +28,8 @@ export default function SectionServingsMainAboutComponent(): React.ReactElement 
                 {aboutContext["main"]["servings"]["h1"]["content"]}
             </H1Component>
             <UlComponent
-                style={aboutContext["main"]["servings"]["ul"]["style"]}>
+                id={aboutContext["main"]["servings"]["ul"]["id"]}
+                className={aboutContext["main"]["servings"]["ul"]["className"]}>
                 <H2Component
                     id={aboutContext["main"]["servings"]["h2"]["id"]}
                     className={aboutContext["main"]["servings"]["h2"]["className"]}

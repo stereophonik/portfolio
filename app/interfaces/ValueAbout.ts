@@ -29,7 +29,7 @@ export default interface ValueAboutInterface {
     main: {
         skills: {
             div: { style: any; id: any; content: any };
-            ul: { style: any };
+            ul: { id: any; className: any };
             lis: { style: any; key: any; content: any }[];
             h1: { className: string; style: { fontSize: any }; id: any; content: any };
             section: {
@@ -49,7 +49,7 @@ export default interface ValueAboutInterface {
         };
         servings: {
             div: { style: any; id: any; content: any };
-            ul: { style: any };
+            ul: { id: any; className: any };
             lis: { style: any; key: any; content: any }[];
             h1: { className: string; style: { fontSize: any }; id: any; content: any };
             section: {

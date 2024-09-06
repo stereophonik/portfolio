@@ -29,7 +29,8 @@ export default function SectionSkillsMainAboutComponent(): React.ReactElement {
                 {aboutContext["main"]["skills"]["h1"]["content"]}
             </H1Component>
             <UlComponent
-                style={aboutContext["main"]["skills"]["ul"]["style"]}>
+                id={aboutContext["main"]["skills"]["ul"]["id"]}
+                className={aboutContext["main"]["skills"]["ul"]["className"]}>
                 <H2Component
                     id={aboutContext["main"]["skills"]["h2"]["id"]}
                     className={aboutContext["main"]["skills"]["h2"]["className"]}

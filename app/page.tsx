@@ -98,7 +98,8 @@ export default function Page(): React.ReactElement {
             className: fromParsedFileNavigation["classNameNav"]
         },
         ul: {
-            style: fromParsedFileNavigation["styleUl"]
+            id: fromParsedFileNavigation["id"],
+            className: fromParsedFileNavigation["className"]
         },
         h3: {
             id: fromParsedFileNavigation["idH3"],
@@ -334,7 +335,8 @@ export default function Page(): React.ReactElement {
                     }
                 },
                 ul: {
-                    style: fromParsedFileAbout["styleUlServingsMain"]
+                    id: fromParsedFileAbout["idUlServingsMain"],
+                    className: fromParsedFileAbout["classNameUlServingsMain"]
                 },
                 h2: {
                     id: fromParsedFileAbout["idH2ServingsMain"],
@@ -395,7 +397,8 @@ export default function Page(): React.ReactElement {
                     }
                 },
                 ul: {
-                    style: fromParsedFileAbout["styleUlSkillsMain"]
+                    id: fromParsedFileAbout["idUlSkillsMain"],
+                    className: fromParsedFileAbout["classNameUlSkillsMain"]
                 },
                 h2: {
                     id: fromParsedFileAbout["idH2SkillsMain"],

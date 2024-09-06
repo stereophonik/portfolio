@@ -34,10 +34,8 @@
     "contentDivServingsMain": "",
     "idH1ServingsMain": "h1ServingsMainAbout",
     "contentH1ServingsMain": "Servings:",
-    "styleUlServingsMain": {
-        "paddingInlineStart": "0",
-        "listStyleType": "none"
-    },
+    "idUlServingsMain": "ulServingsMainAbout",
+    "classNameUlServingsMain": "classNameUl",
     "idH2ServingsMain": "h2ServingsMainAbout",
     "keyAaLisServingsMain": 1,
     "styleAaLisServingsMain": {},
@@ -59,10 +57,8 @@
     "contentDivSkillsMain": "",
     "idH1SkillsMain": "h1SkillsMainAbout",
     "contentH1SkillsMain": "Skills:",
-    "styleUlSkillsMain": {
-        "paddingInlineStart": "0",
-        "listStyleType": "none"
-    },
+    "idUlSkillsMain": "ulSkillsMainAbout",
+    "classNameUlSkillsMain": "classNameUl",
     "idH2SkillsMain": "h2SkillsMainAbout",
     "keyAaLisSkillsMain": 1,
     "styleAaLisSkillsMain": {},

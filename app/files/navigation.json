@@ -1,9 +1,8 @@
 {
   "idNav": "navNavigation",
   "classNameNav": "classNameNav",
-  "styleUl": {
-    "paddingInlineStart": "0"
-  },
+  "idUl": "ulNavigation",
+  "classNameUl": "classNameUl",
   "idH3": "h3Navigation",
   "keyAaLi": 1,
   "styleAaLi": {
