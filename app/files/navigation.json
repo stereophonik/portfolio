@@ -1,13 +1,6 @@
 {
   "idNav": "navNavigation",
-  "classNameNav": "classNameNavNavigation",
-  "styleNav": {
-    "overflow": "hidden",
-    "backgroundColor": "#DA6E2B",
-    "color": "#2C2F37",
-    "textAlign": "center",
-    "borderRadius": "10%"
-  },
+  "classNameNav": "classNameNav",
   "styleUl": {
     "paddingInlineStart": "0"
   },

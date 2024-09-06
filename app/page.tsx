@@ -95,8 +95,7 @@ export default function Page(): React.ReactElement {
     const valueNavigation: ValueNavigationInterface = {
         nav: {
             id: fromParsedFileNavigation["idNav"],
-            className: fromParsedFileNavigation["classNameNav"],
-            style: fromParsedFileNavigation["styleNav"]
+            className: fromParsedFileNavigation["classNameNav"]
         },
         ul: {
             style: fromParsedFileNavigation["styleUl"]

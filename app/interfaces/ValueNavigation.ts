@@ -1,5 +1,5 @@
 export default interface ValueNavigationInterface {
-    nav: { id: any; className: any; style: any };
+    nav: { id: any; className: any };
     ul: { style: any };
     lis: { key: any; style: any; content: any }[];
     links: { href: any; content: any }[];

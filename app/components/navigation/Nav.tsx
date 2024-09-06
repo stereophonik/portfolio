@@ -14,8 +14,7 @@ export default function NavNavigationComponent(): React.ReactElement {
     return (
         <NavComponent
             id={navigationContext["nav"]["id"]}
-            className={navigationContext["nav"]["className"]}
-            style={navigationContext["nav"]["style"]}>
+            className={navigationContext["nav"]["className"]}>
             <UlComponent
                 style={navigationContext["ul"]["style"]}>
                 <H3Component

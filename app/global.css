@@ -15,3 +15,11 @@ a:hover {
 img {
     filter: brightness(75%);
 }
+
+.classNameNav {
+    overflow: hidden;
+    background-color: #DA6E2B;
+    color: #2C2F37;
+    text-align: center;
+    border-radius: 10%;
+}
