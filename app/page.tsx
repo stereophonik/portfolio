@@ -19,7 +19,10 @@ import { AboutContext } from "./contexts/About";
 
 import ValueNavigationInterface from "./interfaces/ValueNavigation";
 import ValueProfileInterface from "./interfaces/ValueProfile";
-import ValueAboutInterface from "./interfaces/ValueAbout";
+import ValueIntroInterface from "./interfaces/ValueIntro";
+import ValueServingsInterface from "./interfaces/ValueServings";
+import ValueSkillsInterface from "./interfaces/ValueSkills";
+import ValueOutroInterface from "./interfaces/ValueOutro";
 
 const anonymousPro: NextFont = Anonymous_Pro({
     weight: "400",
@@ -245,107 +248,44 @@ export default function Page(): React.ReactElement {
         }
     }
 
-    const valueAbout: ValueAboutInterface = {
-        intro: {
-            section: {
-                id: fromParsedFileAbout["idSectionIntro"],
-                style: {
-                    overflow: fromParsedFileAbout["overflowStyleSectionIntro"],
-                    width: fromParsedFileAbout["widthStyleSectionIntro"],
-                    backgroundColor: fromParsedFileAbout["backgroundColorStyleSectionIntro"],
-                    color: fromParsedFileAbout["colorStyleSectionIntro"],
-                    textAlign: fromParsedFileAbout["textAlignStyleSectionIntro"],
-                    borderRadius: fromParsedFileAbout["borderRadiusStyleSectionIntro"],
-                    height: checkInnerWidth(
-                        areSizes,
-                        ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
-                            "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"]
-                    )
-                }
-            },
-            div: {
-                id: fromParsedFileAbout["idDivIntro"],
-                className: fromParsedFileAbout["classNameDivIntro"],
-                content: fromParsedFileAbout["contentDivIntro"]
-            },
-            h1: {
-                id: fromParsedFileAbout["idH1Intro"],
-                content: fromParsedFileAbout["contentH1Intro"],
-                className: robotoMono.className,
-                style: {
-                    fontSize: checkInnerWidth(
-                        areSizes,
-                        ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                            "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-                    )
-                }
-            },
-            h2s: [
-                {
-                    id: fromParsedFileAbout["idAaH2sIntro"],
-                    content: fromParsedFileAbout["contentAaH2sIntro"],
-                    className: anonymousPro.className,
-                    style: {
-                        fontSize: checkInnerWidth(
-                            areSizes,
-                            ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                                "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-                        )
-                    }
-                },
-                {
-                    id: fromParsedFileAbout["idAbH2sIntro"],
-                    content: fromParsedFileAbout["contentAbH2sIntro"],
-                    className: anonymousPro.className,
-                    style: {
-                        fontSize: checkInnerWidth(
-                            areSizes,
-                            ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                                "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-                        )
-                    }
-                }
-            ]
+    const valueIntro: ValueIntroInterface = {
+        section: {
+            id: fromParsedFileAbout["idSectionIntro"],
+            style: {
+                overflow: fromParsedFileAbout["overflowStyleSectionIntro"],
+                width: fromParsedFileAbout["widthStyleSectionIntro"],
+                backgroundColor: fromParsedFileAbout["backgroundColorStyleSectionIntro"],
+                color: fromParsedFileAbout["colorStyleSectionIntro"],
+                textAlign: fromParsedFileAbout["textAlignStyleSectionIntro"],
+                borderRadius: fromParsedFileAbout["borderRadiusStyleSectionIntro"],
+                height: checkInnerWidth(
+                    areSizes,
+                    ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
+                        "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"]
+                )
+            }
         },
-        servings: {
-            section: {
-                id: fromParsedFileAbout["idSectionServings"],
-                style: {
-                    overflow: fromParsedFileAbout["overflowStyleSectionServings"],
-                    width: fromParsedFileAbout["widthStyleSectionServings"],
-                    backgroundColor: fromParsedFileAbout["backgroundColorStyleSectionServings"],
-                    color: fromParsedFileAbout["colorStyleSectionServings"],
-                    textAlign: fromParsedFileAbout["textAlignStyleSectionServings"],
-                    height: checkInnerWidth(
-                        areSizes,
-                        ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
-                            "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"]
-                    )
-                }
-            },
-            div: {
-                id: fromParsedFileAbout["idDivServings"],
-                className: fromParsedFileAbout["classNameDivServings"],
-                content: fromParsedFileAbout["contentDivServings"]
-            },
-            h1: {
-                id: fromParsedFileAbout["idH1Servings"],
-                content: fromParsedFileAbout["contentH1Servings"],
-                className: robotoMono.className,
-                style: {
-                    fontSize: checkInnerWidth(
-                        areSizes,
-                        ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                            "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-                    )
-                }
-            },
-            ul: {
-                id: fromParsedFileAbout["idUlServings"],
-                className: fromParsedFileAbout["classNameUlServings"]
-            },
-            h2: {
-                id: fromParsedFileAbout["idH2Servings"],
+        div: {
+            id: fromParsedFileAbout["idDivIntro"],
+            className: fromParsedFileAbout["classNameDivIntro"],
+            content: fromParsedFileAbout["contentDivIntro"]
+        },
+        h1: {
+            id: fromParsedFileAbout["idH1Intro"],
+            content: fromParsedFileAbout["contentH1Intro"],
+            className: robotoMono.className,
+            style: {
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+                )
+            }
+        },
+        h2s: [
+            {
+                id: fromParsedFileAbout["idAaH2sIntro"],
+                content: fromParsedFileAbout["contentAaH2sIntro"],
                 className: anonymousPro.className,
                 style: {
                     fontSize: checkInnerWidth(
@@ -355,59 +295,9 @@ export default function Page(): React.ReactElement {
                     )
                 }
             },
-            lis: [
-                {
-                    key: fromParsedFileAbout["keyAaLisServings"],
-                    style: fromParsedFileAbout["styleAaLisServings"],
-                    content: fromParsedFileAbout["contentAaLisServings"]
-                },
-                {
-                    key: fromParsedFileAbout["keyAbLisServings"],
-                    style: fromParsedFileAbout["styleAbLisServings"],
-                    content: fromParsedFileAbout["contentAbLisServings"]
-                }
-            ]
-        },
-        skills: {
-            section: {
-                id: fromParsedFileAbout["idSectionSkills"],
-                style: {
-                    overflow: fromParsedFileAbout["overflowStyleSectionSkills"],
-                    width: fromParsedFileAbout["widthStyleSectionSkills"],
-                    backgroundColor: fromParsedFileAbout["backgroundColorStyleSectionSkills"],
-                    color: fromParsedFileAbout["colorStyleSectionSkills"],
-                    textAlign: fromParsedFileAbout["textAlignStyleSectionSkills"],
-                    borderRadius: fromParsedFileAbout["borderRadiusStyleSectionSkills"],
-                    height: checkInnerWidth(
-                        areSizes,
-                        ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
-                            "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"]
-                    )
-                }
-            },
-            div: {
-                id: fromParsedFileAbout["idDivSkills"],
-                className: fromParsedFileAbout["classNameDivSkills"],
-                content: fromParsedFileAbout["contentDivSkills"]
-            },
-            h1: {
-                id: fromParsedFileAbout["idH1Skills"],
-                content: fromParsedFileAbout["contentH1Skills"],
-                className: robotoMono.className,
-                style: {
-                    fontSize: checkInnerWidth(
-                        areSizes,
-                        ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                            "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-                    )
-                }
-            },
-            ul: {
-                id: fromParsedFileAbout["idUlSkills"],
-                className: fromParsedFileAbout["classNameUlSkills"]
-            },
-            h2: {
-                id: fromParsedFileAbout["idH2Skills"],
+            {
+                id: fromParsedFileAbout["idAbH2sIntro"],
+                content: fromParsedFileAbout["contentAbH2sIntro"],
                 className: anonymousPro.className,
                 style: {
                     fontSize: checkInnerWidth(
@@ -416,110 +306,224 @@ export default function Page(): React.ReactElement {
                             "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
                     )
                 }
-            },
-            lis: [
-                {
-                    key: fromParsedFileAbout["keyAaLisSkills"],
-                    style: fromParsedFileAbout["styleAaLisSkills"],
-                    content: fromParsedFileAbout["contentAaLisSkills"]
-                },
-                {
-                    key: fromParsedFileAbout["keyAbLisSkills"],
-                    style: fromParsedFileAbout["styleAbLisSkills"],
-                    content: fromParsedFileAbout["contentAbLisSkills"]
-                },
-                {
-                    key: fromParsedFileAbout["keyAcLisSkills"],
-                    style: fromParsedFileAbout["styleAcLisSkills"],
-                    content: fromParsedFileAbout["contentAcLisSkills"]
-                },
-                {
-                    key: fromParsedFileAbout["keyAdLisSkills"],
-                    style: fromParsedFileAbout["styleAdLisSkills"],
-                    content: fromParsedFileAbout["contentAdLisSkills"]
-                },
-                {
-                    key: fromParsedFileAbout["keyAeLisSkills"],
-                    style: fromParsedFileAbout["styleAeLisSkills"],
-                    content: fromParsedFileAbout["contentAeLisSkills"]
-                },
-                {
-                    key: fromParsedFileAbout["keyAfLisSkills"],
-                    style: fromParsedFileAbout["styleAfLisSkills"],
-                    content: fromParsedFileAbout["contentAfLisSkills"]
-                }
-            ],
-            links: [
-                {
-                    href: `${fromParsedFileAbout["hrefAaLinksSkills"]}`,
-                    content: fromParsedFileAbout["contentAaLinksSkills"]
-                },
-                {
-                    href: `${fromParsedFileAbout["hrefAbLinksSkills"]}`,
-                    content: fromParsedFileAbout["contentAbLinksSkills"]
-                },
-                {
-                    href: `${fromParsedFileAbout["hrefAcLinksSkills"]}`,
-                    content: fromParsedFileAbout["contentAcLinksSkills"]
-                },
-                {
-                    href: `${fromParsedFileAbout["hrefAdLinksSkills"]}`,
-                    content: fromParsedFileAbout["contentAdLinksSkills"]
-                },
-                {
-                    href: `${fromParsedFileAbout["hrefAeLinksSkills"]}`,
-                    content: fromParsedFileAbout["contentAeLinksSkills"]
-                },
-                {
-                    href: `${fromParsedFileAbout["hrefAfLinksSkills"]}`,
-                    content: fromParsedFileAbout["contentAfLinksSkills"]
-                }
-            ]
+            }
+        ]
+    }
+
+    const valueServings: ValueServingsInterface = {
+        section: {
+            id: fromParsedFileAbout["idSectionServings"],
+            style: {
+                overflow: fromParsedFileAbout["overflowStyleSectionServings"],
+                width: fromParsedFileAbout["widthStyleSectionServings"],
+                backgroundColor: fromParsedFileAbout["backgroundColorStyleSectionServings"],
+                color: fromParsedFileAbout["colorStyleSectionServings"],
+                textAlign: fromParsedFileAbout["textAlignStyleSectionServings"],
+                height: checkInnerWidth(
+                    areSizes,
+                    ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
+                        "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"]
+                )
+            }
         },
-        outro: {
-            section: {
-                id: fromParsedFileAbout["idSectionOutro"],
-                style: {
-                    overflow: fromParsedFileAbout["overflowStyleSectionOutro"],
-                    width: fromParsedFileAbout["widthStyleSectionOutro"],
-                    backgroundColor: fromParsedFileAbout["backgroundColorStyleSectionOutro"],
-                    color: fromParsedFileAbout["colorStyleSectionOutro"],
-                    textAlign: fromParsedFileAbout["textAlignStyleSectionOutro"],
-                    height: checkInnerWidth(
-                        areSizes,
-                        ["65vw", "55vw", "45vw", "35vw", "30vw", "35vw", "35vw",
-                            "35vw", "35vw", "40vw", "40vw", "35vw", "30vw", "25vw"]
-                    )
-                }
+        div: {
+            id: fromParsedFileAbout["idDivServings"],
+            className: fromParsedFileAbout["classNameDivServings"],
+            content: fromParsedFileAbout["contentDivServings"]
+        },
+        h1: {
+            id: fromParsedFileAbout["idH1Servings"],
+            content: fromParsedFileAbout["contentH1Servings"],
+            className: robotoMono.className,
+            style: {
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+                )
+            }
+        },
+        ul: {
+            id: fromParsedFileAbout["idUlServings"],
+            className: fromParsedFileAbout["classNameUlServings"]
+        },
+        h2: {
+            id: fromParsedFileAbout["idH2Servings"],
+            className: anonymousPro.className,
+            style: {
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+                )
+            }
+        },
+        lis: [
+            {
+                key: fromParsedFileAbout["keyAaLisServings"],
+                style: fromParsedFileAbout["styleAaLisServings"],
+                content: fromParsedFileAbout["contentAaLisServings"]
             },
-            div: {
-                id: fromParsedFileAbout["idDivOutro"],
-                className: fromParsedFileAbout["classNameDivOutro"],
-                content: fromParsedFileAbout["contentDivOutro"]
+            {
+                key: fromParsedFileAbout["keyAbLisServings"],
+                style: fromParsedFileAbout["styleAbLisServings"],
+                content: fromParsedFileAbout["contentAbLisServings"]
+            }
+        ]
+    }
+
+    const valueSkills: ValueSkillsInterface = {
+        section: {
+            id: fromParsedFileAbout["idSectionSkills"],
+            style: {
+                overflow: fromParsedFileAbout["overflowStyleSectionSkills"],
+                width: fromParsedFileAbout["widthStyleSectionSkills"],
+                backgroundColor: fromParsedFileAbout["backgroundColorStyleSectionSkills"],
+                color: fromParsedFileAbout["colorStyleSectionSkills"],
+                textAlign: fromParsedFileAbout["textAlignStyleSectionSkills"],
+                borderRadius: fromParsedFileAbout["borderRadiusStyleSectionSkills"],
+                height: checkInnerWidth(
+                    areSizes,
+                    ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
+                        "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"]
+                )
+            }
+        },
+        div: {
+            id: fromParsedFileAbout["idDivSkills"],
+            className: fromParsedFileAbout["classNameDivSkills"],
+            content: fromParsedFileAbout["contentDivSkills"]
+        },
+        h1: {
+            id: fromParsedFileAbout["idH1Skills"],
+            content: fromParsedFileAbout["contentH1Skills"],
+            className: robotoMono.className,
+            style: {
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+                )
+            }
+        },
+        ul: {
+            id: fromParsedFileAbout["idUlSkills"],
+            className: fromParsedFileAbout["classNameUlSkills"]
+        },
+        h2: {
+            id: fromParsedFileAbout["idH2Skills"],
+            className: anonymousPro.className,
+            style: {
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+                )
+            }
+        },
+        lis: [
+            {
+                key: fromParsedFileAbout["keyAaLisSkills"],
+                style: fromParsedFileAbout["styleAaLisSkills"],
+                content: fromParsedFileAbout["contentAaLisSkills"]
             },
-            h1: {
-                id: fromParsedFileAbout["idH1Outro"],
-                content: fromParsedFileAbout["contentH1Outro"],
-                className: robotoMono.className,
-                style: {
-                    fontSize: checkInnerWidth(
-                        areSizes,
-                        ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                            "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-                    )
-                }
+            {
+                key: fromParsedFileAbout["keyAbLisSkills"],
+                style: fromParsedFileAbout["styleAbLisSkills"],
+                content: fromParsedFileAbout["contentAbLisSkills"]
             },
-            h2: {
-                id: fromParsedFileAbout["idH2Outro"],
-                content: fromParsedFileAbout["contentH2Outro"],
-                className: anonymousPro.className,
-                style: {
-                    fontSize: checkInnerWidth(
-                        areSizes,
-                        ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                            "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-                    )
-                }
+            {
+                key: fromParsedFileAbout["keyAcLisSkills"],
+                style: fromParsedFileAbout["styleAcLisSkills"],
+                content: fromParsedFileAbout["contentAcLisSkills"]
+            },
+            {
+                key: fromParsedFileAbout["keyAdLisSkills"],
+                style: fromParsedFileAbout["styleAdLisSkills"],
+                content: fromParsedFileAbout["contentAdLisSkills"]
+            },
+            {
+                key: fromParsedFileAbout["keyAeLisSkills"],
+                style: fromParsedFileAbout["styleAeLisSkills"],
+                content: fromParsedFileAbout["contentAeLisSkills"]
+            },
+            {
+                key: fromParsedFileAbout["keyAfLisSkills"],
+                style: fromParsedFileAbout["styleAfLisSkills"],
+                content: fromParsedFileAbout["contentAfLisSkills"]
+            }
+        ],
+        links: [
+            {
+                href: `${fromParsedFileAbout["hrefAaLinksSkills"]}`,
+                content: fromParsedFileAbout["contentAaLinksSkills"]
+            },
+            {
+                href: `${fromParsedFileAbout["hrefAbLinksSkills"]}`,
+                content: fromParsedFileAbout["contentAbLinksSkills"]
+            },
+            {
+                href: `${fromParsedFileAbout["hrefAcLinksSkills"]}`,
+                content: fromParsedFileAbout["contentAcLinksSkills"]
+            },
+            {
+                href: `${fromParsedFileAbout["hrefAdLinksSkills"]}`,
+                content: fromParsedFileAbout["contentAdLinksSkills"]
+            },
+            {
+                href: `${fromParsedFileAbout["hrefAeLinksSkills"]}`,
+                content: fromParsedFileAbout["contentAeLinksSkills"]
+            },
+            {
+                href: `${fromParsedFileAbout["hrefAfLinksSkills"]}`,
+                content: fromParsedFileAbout["contentAfLinksSkills"]
+            }
+        ]
+    }
+
+    const valueOutro: ValueOutroInterface = {
+        section: {
+            id: fromParsedFileAbout["idSectionOutro"],
+            style: {
+                overflow: fromParsedFileAbout["overflowStyleSectionOutro"],
+                width: fromParsedFileAbout["widthStyleSectionOutro"],
+                backgroundColor: fromParsedFileAbout["backgroundColorStyleSectionOutro"],
+                color: fromParsedFileAbout["colorStyleSectionOutro"],
+                textAlign: fromParsedFileAbout["textAlignStyleSectionOutro"],
+                height: checkInnerWidth(
+                    areSizes,
+                    ["65vw", "55vw", "45vw", "35vw", "30vw", "35vw", "35vw",
+                        "35vw", "35vw", "40vw", "40vw", "35vw", "30vw", "25vw"]
+                )
+            }
+        },
+        div: {
+            id: fromParsedFileAbout["idDivOutro"],
+            className: fromParsedFileAbout["classNameDivOutro"],
+            content: fromParsedFileAbout["contentDivOutro"]
+        },
+        h1: {
+            id: fromParsedFileAbout["idH1Outro"],
+            content: fromParsedFileAbout["contentH1Outro"],
+            className: robotoMono.className,
+            style: {
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+                )
+            }
+        },
+        h2: {
+            id: fromParsedFileAbout["idH2Outro"],
+            content: fromParsedFileAbout["contentH2Outro"],
+            className: anonymousPro.className,
+            style: {
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+                )
             }
         }
     }
@@ -535,7 +539,12 @@ export default function Page(): React.ReactElement {
                 <SectionProfileComponent />
             </ProfileContext.Provider>
             <AboutContext.Provider
-                value={valueAbout}>
+                value={{
+                    intro: valueIntro,
+                    servings: valueServings,
+                    skills: valueSkills,
+                    outro: valueOutro
+                }}>
                 <SectionIntroComponent />
                 <SectionServingsComponent />
                 <SectionSkillsComponent />
