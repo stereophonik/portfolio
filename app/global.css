@@ -1,3 +1,17 @@
 * {
     margin: 0;
 }
+
+a {
+    color: #061933;
+    text-decoration: none;
+    border-radius: 10%;
+}
+
+a:hover {
+    color: black;
+}
+
+img {
+    filter: brightness(50%);
+}
