@@ -5,31 +5,31 @@ import DivComponent from "../Div";
 import H1Component from "../H1";
 import H2Component from "../H2";
 
-import { AboutContext } from "../../contexts/About";
+import { OutroContext } from "../../contexts/Outro";
 
 export default function SectionOutroComponent(): React.ReactElement {
-    const aboutContext: {} = useContext(AboutContext);
+    const outroContext: {} = useContext(OutroContext);
 
     return (
         <SectionComponent
-            id={aboutContext["outro"]["section"]["id"]}
-            style={aboutContext["outro"]["section"]["style"]}>
+            id={outroContext["section"]["id"]}
+            style={outroContext["section"]["style"]}>
             <DivComponent
-                id={aboutContext["outro"]["div"]["id"]}
-                className={aboutContext["outro"]["div"]["className"]}>
-                {aboutContext["outro"]["div"]["content"]}
+                id={outroContext["div"]["id"]}
+                className={outroContext["div"]["className"]}>
+                {outroContext["div"]["content"]}
             </DivComponent>
             <H1Component
-                id={aboutContext["outro"]["h1"]["id"]}
-                className={aboutContext["outro"]["h1"]["className"]}
-                style={aboutContext["outro"]["h1"]["style"]}>
-                {aboutContext["outro"]["h1"]["content"]}
+                id={outroContext["h1"]["id"]}
+                className={outroContext["h1"]["className"]}
+                style={outroContext["h1"]["style"]}>
+                {outroContext["h1"]["content"]}
             </H1Component>
             <H2Component
-                id={aboutContext["outro"]["h2"]["id"]}
-                className={aboutContext["outro"]["h2"]["className"]}
-                style={aboutContext["outro"]["h2"]["style"]}>
-                {aboutContext["outro"]["h2"]["content"]}
+                id={outroContext["h2"]["id"]}
+                className={outroContext["h2"]["className"]}
+                style={outroContext["h2"]["style"]}>
+                {outroContext["h2"]["content"]}
             </H2Component>
         </SectionComponent>
     );

@@ -7,35 +7,35 @@ import UlComponent from "../Ul";
 import H2Component from "../H2";
 import LiComponent from "../Li";
 
-import { AboutContext } from "../../contexts/About";
+import { ServingsContext } from "../../contexts/Servings";
 
 export default function SectionServingsComponent(): React.ReactElement {
-    const aboutContext: {} = useContext(AboutContext);
+    const servingsContext: {} = useContext(ServingsContext);
 
     return (
         <SectionComponent
-            id={aboutContext["servings"]["section"]["id"]}
-            style={aboutContext["servings"]["section"]["style"]}>
+            id={servingsContext["section"]["id"]}
+            style={servingsContext["section"]["style"]}>
             <DivComponent
-                id={aboutContext["servings"]["div"]["id"]}
-                className={aboutContext["servings"]["div"]["className"]}>
-                {aboutContext["servings"]["div"]["content"]}
+                id={servingsContext["div"]["id"]}
+                className={servingsContext["div"]["className"]}>
+                {servingsContext["div"]["content"]}
             </DivComponent>
             <H1Component
-                id={aboutContext["servings"]["h1"]["id"]}
-                className={aboutContext["servings"]["h1"]["className"]}
-                style={aboutContext["servings"]["h1"]["style"]}>
-                {aboutContext["servings"]["h1"]["content"]}
+                id={servingsContext["h1"]["id"]}
+                className={servingsContext["h1"]["className"]}
+                style={servingsContext["h1"]["style"]}>
+                {servingsContext["h1"]["content"]}
             </H1Component>
             <UlComponent
-                id={aboutContext["servings"]["ul"]["id"]}
-                className={aboutContext["servings"]["ul"]["className"]}>
+                id={servingsContext["ul"]["id"]}
+                className={servingsContext["ul"]["className"]}>
                 <H2Component
-                    id={aboutContext["servings"]["h2"]["id"]}
-                    className={aboutContext["servings"]["h2"]["className"]}
-                    style={aboutContext["servings"]["h2"]["style"]}>
+                    id={servingsContext["h2"]["id"]}
+                    className={servingsContext["h2"]["className"]}
+                    style={servingsContext["h2"]["style"]}>
                     {
-                        aboutContext["servings"]["lis"].map((li: { [x: string]: any; }) =>
+                        servingsContext["lis"].map((li: { [x: string]: any; }) =>
                             <LiComponent
                                 key={li["key"]}
                                 style={li["style"]}>

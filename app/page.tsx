@@ -15,7 +15,10 @@ import SectionOutroComponent from "./components/outro/Section";
 
 import { NavigationContext } from "./contexts/Navigation";
 import { ProfileContext } from "./contexts/Profile";
-import { AboutContext } from "./contexts/About";
+import { IntroContext } from "./contexts/Intro";
+import { ServingsContext } from "./contexts/Servings";
+import { SkillsContext } from "./contexts/Skills";
+import { OutroContext } from "./contexts/Outro";
 
 import ValueNavigationInterface from "./interfaces/ValueNavigation";
 import ValueProfileInterface from "./interfaces/ValueProfile";
@@ -538,18 +541,22 @@ export default function Page(): React.ReactElement {
                 value={valueProfile}>
                 <SectionProfileComponent />
             </ProfileContext.Provider>
-            <AboutContext.Provider
-                value={{
-                    intro: valueIntro,
-                    servings: valueServings,
-                    skills: valueSkills,
-                    outro: valueOutro
-                }}>
+            <IntroContext.Provider
+                value={valueIntro}>
                 <SectionIntroComponent />
+            </IntroContext.Provider>
+            <ServingsContext.Provider
+                value={valueServings}>
                 <SectionServingsComponent />
+            </ServingsContext.Provider>
+            <SkillsContext.Provider
+                value={valueSkills}>
                 <SectionSkillsComponent />
+            </SkillsContext.Provider>
+            <OutroContext.Provider
+                value={valueOutro}>
                 <SectionOutroComponent />
-            </AboutContext.Provider>
+            </OutroContext.Provider>
         </MainComponent>
     );
 }

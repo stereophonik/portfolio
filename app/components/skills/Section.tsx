@@ -8,41 +8,41 @@ import H2Component from "../H2";
 import LiComponent from "../Li";
 import LinkComponent from "../Link";
 
-import { AboutContext } from "../../contexts/About";
+import { SkillsContext } from "../../contexts/Skills";
 
 export default function SectionSkillsComponent(): React.ReactElement {
-    const aboutContext: {} = useContext(AboutContext);
+    const skillsContext: {} = useContext(SkillsContext);
 
     return (
         <SectionComponent
-            id={aboutContext["skills"]["section"]["id"]}
-            style={aboutContext["skills"]["section"]["style"]}>
+            id={skillsContext["section"]["id"]}
+            style={skillsContext["section"]["style"]}>
             <DivComponent
-                id={aboutContext["skills"]["div"]["id"]}
-                className={aboutContext["skills"]["div"]["className"]}>
-                {aboutContext["skills"]["div"]["content"]}
+                id={skillsContext["div"]["id"]}
+                className={skillsContext["div"]["className"]}>
+                {skillsContext["div"]["content"]}
             </DivComponent>
             <H1Component
-                id={aboutContext["skills"]["h1"]["id"]}
-                className={aboutContext["skills"]["h1"]["className"]}
-                style={aboutContext["skills"]["h1"]["style"]}>
-                {aboutContext["skills"]["h1"]["content"]}
+                id={skillsContext["h1"]["id"]}
+                className={skillsContext["h1"]["className"]}
+                style={skillsContext["h1"]["style"]}>
+                {skillsContext["h1"]["content"]}
             </H1Component>
             <UlComponent
-                id={aboutContext["skills"]["ul"]["id"]}
-                className={aboutContext["skills"]["ul"]["className"]}>
+                id={skillsContext["ul"]["id"]}
+                className={skillsContext["ul"]["className"]}>
                 <H2Component
-                    id={aboutContext["skills"]["h2"]["id"]}
-                    className={aboutContext["skills"]["h2"]["className"]}
-                    style={aboutContext["skills"]["h2"]["style"]}>
+                    id={skillsContext["h2"]["id"]}
+                    className={skillsContext["h2"]["className"]}
+                    style={skillsContext["h2"]["style"]}>
                     {
-                        aboutContext["skills"]["lis"].map((li: { [x: string]: any; }) =>
+                        skillsContext["lis"].map((li: { [x: string]: any; }) =>
                             <LiComponent
                                 key={li["key"]}
                                 style={li["style"]}>
                                 <LinkComponent
-                                    href={aboutContext["skills"]["links"][aboutContext["skills"]["lis"].indexOf(li)]["href"]}>
-                                    {aboutContext["skills"]["links"][aboutContext["skills"]["lis"].indexOf(li)]["content"]}
+                                    href={skillsContext["links"][skillsContext["lis"].indexOf(li)]["href"]}>
+                                    {skillsContext["links"][skillsContext["lis"].indexOf(li)]["content"]}
                                 </LinkComponent>
                             </LiComponent>
                         )
