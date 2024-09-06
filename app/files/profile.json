@@ -5,15 +5,10 @@
     "backgroundColorStyleSection": "#2C2F37",
     "colorStyleSection": "#DA6E2B",
     "textAlignStyleSection": "center",
+    "styleSection": {},
     "idDiv": "divProfile",
     "classNameDiv": "classNameDiv",
     "contentDiv": "",
-    "idSectionHeadings": "sectionHeadingsProfile",
-    "styleSectionHeadings": {},
-    "idH1Headings": "h1HeadingsProfile",
-    "contentH1Headings": "Nikolai Reyes",
-    "idH2Headings": "h2HeadingsProfile",
-    "contentH2Headings": "Transitioning to Front-end Development",
     "idImage": "imageProfile",
     "srcImage": "/picture.jpg",
     "altImage": "Nikolai Reyes",
@@ -21,5 +16,9 @@
         "maxWidth": "100%",
         "maxHeight": "100%",
         "borderRadius": "10%"
-    }
+    },
+    "idH1": "h1Profile",
+    "contentH1": "Nikolai Reyes",
+    "idH2": "h2Profile",
+    "contentH2": "Transitioning to Front-end Development"
 }

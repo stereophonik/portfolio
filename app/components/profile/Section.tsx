@@ -2,10 +2,11 @@ import { useContext } from "react";
 
 import SectionComponent from "../Section";
 import DivComponent from "../Div";
-import ImageProfileComponent from "./Image";
-import SectionHeadingsProfileComponent from "./headings/Section";
 
-import {ProfileContext} from "../../contexts/Profile";
+import { ProfileContext } from "../../contexts/Profile";
+import ImageComponent from "../Image";
+import H1Component from "../H1";
+import H2Component from "../H2";
 
 export default function SectionProfileComponent(): React.ReactElement {
     const profileContext: {} = useContext(ProfileContext);
@@ -19,8 +20,26 @@ export default function SectionProfileComponent(): React.ReactElement {
                 className={profileContext["div"]["className"]}>
                 {profileContext["div"]["content"]}
             </DivComponent>
-            <ImageProfileComponent />
-            <SectionHeadingsProfileComponent />
+            <ImageComponent
+                id={profileContext["image"]["id"]}
+                src={profileContext["image"]["src"]}
+                alt={profileContext["image"]["alt"]}
+                style={profileContext["image"]["style"]}
+                width={profileContext["image"]["width"]}
+                height={profileContext["image"]["height"]}
+            />
+            <H1Component
+                id={profileContext["h1"]["id"]}
+                className={profileContext["h1"]["className"]}
+                style={profileContext["h1"]["style"]}>
+                {profileContext["h1"]["content"]}
+            </H1Component>
+            <H2Component
+                id={profileContext["h2"]["id"]}
+                className={profileContext["h2"]["className"]}
+                style={profileContext["h2"]["style"]}>
+                {profileContext["h2"]["content"]}
+            </H2Component>
         </SectionComponent>
     );
 }

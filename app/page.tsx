@@ -198,34 +198,28 @@ export default function Page(): React.ReactElement {
                 [175, 175, 175, 175, 175, 214, 241, 267, 294, 321, 348, 348, 348, 348]
             )
         },
-        headings: {
-            section: {
-                id: fromParsedFileProfile["idSectionHeadings"],
-                style: fromParsedFileProfile["styleSectionHeadings"]
-            },
-            h1: {
-                id: fromParsedFileProfile["idH1Headings"],
-                content: fromParsedFileProfile["contentH1Headings"],
-                className: robotoMono.className,
-                style: {
-                    fontSize: checkInnerWidth(
-                        areSizes,
-                        ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                            "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-                    )
-                }
-            },
-            h2: {
-                id: fromParsedFileProfile["idH2Headings"],
-                content: fromParsedFileProfile["contentH2Headings"],
-                className: anonymousPro.className,
-                style: {
-                    fontSize: checkInnerWidth(
-                        areSizes,
-                        ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                            "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-                    )
-                }
+        h1: {
+            id: fromParsedFileProfile["idH1"],
+            content: fromParsedFileProfile["contentH1"],
+            className: robotoMono.className,
+            style: {
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+                )
+            }
+        },
+        h2: {
+            id: fromParsedFileProfile["idH2"],
+            content: fromParsedFileProfile["contentH2"],
+            className: anonymousPro.className,
+            style: {
+                fontSize: checkInnerWidth(
+                    areSizes,
+                    ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+                )
             }
         }
     }
