@@ -9,9 +9,7 @@
     "textAlignStyleSectionIntro": "center",
     "borderRadiusStyleSectionIntro": "10%",
     "idDivIntro": "divIntroAbout",
-    "styleDivIntro": {
-        "height": "10%"
-    },
+    "classNameDivIntro": "classNameDiv",
     "contentDivIntro": "",
     "idH1Intro": "h1IntroAbout",
     "contentH1Intro": "Hello!",
@@ -28,9 +26,7 @@
     "colorStyleSectionServingsMain": "#DA6E2B",
     "textAlignStyleSectionServingsMain": "center",
     "idDivServingsMain": "divServingsMainAbout",
-    "styleDivServingsMain": {
-        "height": "10%"
-    },
+    "classNameDivServingsMain": "classNameDiv",
     "contentDivServingsMain": "",
     "idH1ServingsMain": "h1ServingsMainAbout",
     "contentH1ServingsMain": "Servings:",
@@ -51,9 +47,7 @@
     "textAlignStyleSectionSkillsMain": "center",
     "borderRadiusStyleSectionSkillsMain": "10%",
     "idDivSkillsMain": "divSkillsMainAbout",
-    "styleDivSkillsMain": {
-        "height": "10%"
-    },
+    "classNameDivSkillsMain": "classNameDiv",
     "contentDivSkillsMain": "",
     "idH1SkillsMain": "h1SkillsMainAbout",
     "contentH1SkillsMain": "Skills:",
@@ -97,9 +91,7 @@
     "colorStyleSectionOutro": "#DA6E2B",
     "textAlignStyleSectionOutro": "center",
     "idDivOutro": "divOutroAbout",
-    "styleDivOutro": {
-        "height": "10%"
-    },
+    "classNameDivOutro": "classNameDiv",
     "contentDivOutro": "",
     "idH1Outro": "h1OutroAbout",
     "contentH1Outro": "Btw...",

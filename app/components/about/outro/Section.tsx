@@ -16,7 +16,7 @@ export default function SectionOutroAboutComponent(): React.ReactElement {
             style={aboutContext["outro"]["section"]["style"]}>
             <DivComponent
                 id={aboutContext["outro"]["div"]["id"]}
-                style={aboutContext["outro"]["div"]["style"]}>
+                className={aboutContext["outro"]["div"]["className"]}>
                 {aboutContext["outro"]["div"]["content"]}
             </DivComponent>
             <H1Component

@@ -16,7 +16,7 @@ export default function SectionProfileComponent(): React.ReactElement {
             style={profileContext["section"]["style"]}>
             <DivComponent
                 id={profileContext["div"]["id"]}
-                style={profileContext["div"]["style"]}>
+                className={profileContext["div"]["className"]}>
                 {profileContext["div"]["content"]}
             </DivComponent>
             <ImageProfileComponent />

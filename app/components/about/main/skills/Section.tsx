@@ -19,7 +19,7 @@ export default function SectionSkillsMainAboutComponent(): React.ReactElement {
             style={aboutContext["main"]["skills"]["section"]["style"]}>
             <DivComponent
                 id={aboutContext["main"]["skills"]["div"]["id"]}
-                style={aboutContext["main"]["skills"]["div"]["style"]}>
+                className={aboutContext["main"]["skills"]["div"]["className"]}>
                 {aboutContext["main"]["skills"]["div"]["content"]}
             </DivComponent>
             <H1Component

@@ -6,9 +6,7 @@
     "colorStyleSection": "#DA6E2B",
     "textAlignStyleSection": "center",
     "idDiv": "divProfile",
-    "styleDiv": {
-        "height": "10%"
-    },
+    "classNameDiv": "classNameDiv",
     "contentDiv": "",
     "idSectionHeadings": "sectionHeadingsProfile",
     "styleSectionHeadings": {},

@@ -25,6 +25,10 @@ img {
     border-radius: 10%;
 }
 
+.classNameDiv {
+    height: 10%;
+}
+
 .classNameUl {
     padding-inline-start: 0;
     list-style-type: none;

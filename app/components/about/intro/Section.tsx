@@ -16,7 +16,7 @@ export default function SectionIntroAboutComponent(): React.ReactElement {
             style={aboutContext["intro"]["section"]["style"]}>
             <DivComponent
                 id={aboutContext["intro"]["div"]["id"]}
-                style={aboutContext["intro"]["div"]["style"]}>
+                className={aboutContext["intro"]["div"]["className"]}>
                 {aboutContext["intro"]["div"]["content"]}
             </DivComponent>
             <H1Component

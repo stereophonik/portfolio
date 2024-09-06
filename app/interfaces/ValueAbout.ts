@@ -1,6 +1,6 @@
 export default interface ValueAboutInterface {
     intro: {
-        div: { style: any; id: any; content: any };
+        div: { id: any; className: any; content: any };
         h2s: { className: string; style: { fontSize: any }; id: any; content: any }[];
         h1: { className: string; style: { fontSize: any }; id: any; content: any };
         section: {
@@ -17,7 +17,7 @@ export default interface ValueAboutInterface {
         }
     };
     outro: {
-        div: { style: any; id: any; content: any };
+        div: { id: any; className: any; content: any };
         h1: { className: string; style: { fontSize: any }; id: any; content: any };
         section: {
             style: { backgroundColor: any; overflow: any; color: any; textAlign: any; width: any; height: any };
@@ -28,7 +28,7 @@ export default interface ValueAboutInterface {
     section: { id: any; style: any };
     main: {
         skills: {
-            div: { style: any; id: any; content: any };
+            div: { id: any; className: any; content: any };
             ul: { id: any; className: any };
             lis: { style: any; key: any; content: any }[];
             h1: { className: string; style: { fontSize: any }; id: any; content: any };
@@ -48,7 +48,7 @@ export default interface ValueAboutInterface {
             links: { href: string; content: any }[]
         };
         servings: {
-            div: { style: any; id: any; content: any };
+            div: { id: any; className: any; content: any };
             ul: { id: any; className: any };
             lis: { style: any; key: any; content: any }[];
             h1: { className: string; style: { fontSize: any }; id: any; content: any };

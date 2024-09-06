@@ -18,7 +18,7 @@ export default function SectionServingsMainAboutComponent(): React.ReactElement 
             style={aboutContext["main"]["servings"]["section"]["style"]}>
             <DivComponent
                 id={aboutContext["main"]["servings"]["div"]["id"]}
-                style={aboutContext["main"]["servings"]["div"]["style"]}>
+                className={aboutContext["main"]["servings"]["div"]["className"]}>
                 {aboutContext["main"]["servings"]["div"]["content"]}
             </DivComponent>
             <H1Component

@@ -181,7 +181,7 @@ export default function Page(): React.ReactElement {
         },
         div: {
             id: fromParsedFileProfile["idDiv"],
-            style: fromParsedFileProfile["styleDiv"],
+            className: fromParsedFileProfile["classNameDiv"],
             content: fromParsedFileProfile["contentDiv"]
         },
         image: {
@@ -254,7 +254,7 @@ export default function Page(): React.ReactElement {
             },
             div: {
                 id: fromParsedFileAbout["idDivIntro"],
-                style: fromParsedFileAbout["styleDivIntro"],
+                className: fromParsedFileAbout["classNameDivIntro"],
                 content: fromParsedFileAbout["contentDivIntro"]
             },
             h1: {
@@ -319,7 +319,7 @@ export default function Page(): React.ReactElement {
                 },
                 div: {
                     id: fromParsedFileAbout["idDivServingsMain"],
-                    style: fromParsedFileAbout["styleDivServingsMain"],
+                    className: fromParsedFileAbout["classNameDivServingsMain"],
                     content: fromParsedFileAbout["contentDivServingsMain"]
                 },
                 h1: {
@@ -381,7 +381,7 @@ export default function Page(): React.ReactElement {
                 },
                 div: {
                     id: fromParsedFileAbout["idDivSkillsMain"],
-                    style: fromParsedFileAbout["styleDivSkillsMain"],
+                    className: fromParsedFileAbout["classNameDivSkillsMain"],
                     content: fromParsedFileAbout["contentDivSkillsMain"]
                 },
                 h1: {
@@ -489,7 +489,7 @@ export default function Page(): React.ReactElement {
             },
             div: {
                 id: fromParsedFileAbout["idDivOutro"],
-                style: fromParsedFileAbout["styleDivOutro"],
+                className: fromParsedFileAbout["classNameDivOutro"],
                 content: fromParsedFileAbout["contentDivOutro"]
             },
             h1: {
