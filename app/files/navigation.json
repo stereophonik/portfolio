@@ -30,15 +30,29 @@
   "styleAeLi": {
     "display": "inline-block"
   },
+  "keyAfLi": 6,
+  "styleAfLi": {
+    "color": "#DA6E2B",
+    "display": "inline-block"
+  },
+  "contentAfLi": "---",
+  "keyAgLi": 7,
+  "styleAgLi": {
+    "display": "inline-block"
+  },
   "contentAeLi": "",
   "hrefAaLink": "#sectionIntroAbout",
   "contentAaLink": "Intro",
   "hrefAbLink": "",
   "contentAbLink": "",
-  "hrefAcLink": "#sectionMainAbout",
-  "contentAcLink": "Main",
+  "hrefAcLink": "#sectionServingsAbout",
+  "contentAcLink": "Servings",
   "hrefAdLink": "",
   "contentAdLink": "",
-  "hrefAeLink": "#sectionOutroAbout",
-  "contentAeLink": "Outro"
+  "hrefAeLink": "#sectionSkillsAbout",
+  "contentAeLink": "Skills",
+  "hrefAfLink": "",
+  "contentAfLink": "",
+  "hrefAgLink": "#sectionOutroAbout",
+  "contentAgLink": "Outro"
 }

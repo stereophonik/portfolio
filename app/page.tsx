@@ -137,6 +137,16 @@ export default function Page(): React.ReactElement {
                 key: fromParsedFileNavigation["keyAeLi"],
                 style: fromParsedFileNavigation["styleAeLi"],
                 content: fromParsedFileNavigation["contentAeLi"]
+            },
+            {
+                key: fromParsedFileNavigation["keyAfLi"],
+                style: fromParsedFileNavigation["styleAfLi"],
+                content: fromParsedFileNavigation["contentAfLi"]
+            },
+            {
+                key: fromParsedFileNavigation["keyAgLi"],
+                style: fromParsedFileNavigation["styleAgLi"],
+                content: fromParsedFileNavigation["contentAgLi"]
             }
         ],
         links: [
@@ -159,6 +169,14 @@ export default function Page(): React.ReactElement {
             {
                 href: `${fromParsedFileNavigation["hrefAeLink"]}`,
                 content: fromParsedFileNavigation["contentAeLink"]
+            },
+            {
+                href: `${fromParsedFileNavigation["hrefAfLink"]}`,
+                content: fromParsedFileNavigation["contentAfLink"]
+            },
+            {
+                href: `${fromParsedFileNavigation["hrefAgLink"]}`,
+                content: fromParsedFileNavigation["contentAgLink"]
             }
         ]
     }

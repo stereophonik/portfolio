@@ -56,6 +56,19 @@ export default function NavNavigationComponent(): React.ReactElement {
                             {navigationContext["links"][4]["content"]}
                         </LinkComponent>
                     </LiComponent>
+                    <LiComponent
+                        key={navigationContext["lis"][5]["key"]}
+                        style={navigationContext["lis"][5]["style"]}>
+                        {navigationContext["lis"][5]["content"]}
+                    </LiComponent>
+                    <LiComponent
+                        key={navigationContext["lis"][6]["key"]}
+                        style={navigationContext["lis"][6]["style"]}>
+                        <LinkComponent
+                            href={navigationContext["links"][6]["href"]}>
+                            {navigationContext["links"][6]["content"]}
+                        </LinkComponent>
+                    </LiComponent>
                 </H3Component>
             </UlComponent>
         </NavComponent>
