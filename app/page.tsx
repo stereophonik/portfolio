@@ -290,180 +290,174 @@ export default function Page(): React.ReactElement {
                 }
             ]
         },
-        main: {
+        servings: {
             section: {
-                id: fromParsedFileAbout["idSectionMain"],
-                style: fromParsedFileAbout["styleSectionMain"]
+                id: fromParsedFileAbout["idSectionServings"],
+                style: {
+                    overflow: fromParsedFileAbout["overflowStyleSectionServings"],
+                    width: fromParsedFileAbout["widthStyleSectionServings"],
+                    backgroundColor: fromParsedFileAbout["backgroundColorStyleSectionServings"],
+                    color: fromParsedFileAbout["colorStyleSectionServings"],
+                    textAlign: fromParsedFileAbout["textAlignStyleSectionServings"],
+                    height: checkInnerWidth(
+                        areSizes,
+                        ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
+                            "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"]
+                    )
+                }
             },
-            servings: {
-                section: {
-                    id: fromParsedFileAbout["idSectionServingsMain"],
-                    style: {
-                        overflow: fromParsedFileAbout["overflowStyleSectionServingsMain"],
-                        width: fromParsedFileAbout["widthStyleSectionServingsMain"],
-                        backgroundColor: fromParsedFileAbout["backgroundColorStyleSectionServingsMain"],
-                        color: fromParsedFileAbout["colorStyleSectionServingsMain"],
-                        textAlign: fromParsedFileAbout["textAlignStyleSectionServingsMain"],
-                        height: checkInnerWidth(
-                            areSizes,
-                            ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
-                                "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"]
-                        )
-                    }
-                },
-                div: {
-                    id: fromParsedFileAbout["idDivServingsMain"],
-                    className: fromParsedFileAbout["classNameDivServingsMain"],
-                    content: fromParsedFileAbout["contentDivServingsMain"]
-                },
-                h1: {
-                    id: fromParsedFileAbout["idH1ServingsMain"],
-                    content: fromParsedFileAbout["contentH1ServingsMain"],
-                    className: robotoMono.className,
-                    style: {
-                        fontSize: checkInnerWidth(
-                            areSizes,
-                            ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                                "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-                        )
-                    }
-                },
-                ul: {
-                    id: fromParsedFileAbout["idUlServingsMain"],
-                    className: fromParsedFileAbout["classNameUlServingsMain"]
-                },
-                h2: {
-                    id: fromParsedFileAbout["idH2ServingsMain"],
-                    className: anonymousPro.className,
-                    style: {
-                        fontSize: checkInnerWidth(
-                            areSizes,
-                            ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                                "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-                        )
-                    }
-                },
-                lis: [
-                    {
-                        key: fromParsedFileAbout["keyAaLisServingsMain"],
-                        style: fromParsedFileAbout["styleAaLisServingsMain"],
-                        content: fromParsedFileAbout["contentAaLisServingsMain"]
-                    },
-                    {
-                        key: fromParsedFileAbout["keyAbLisServingsMain"],
-                        style: fromParsedFileAbout["styleAbLisServingsMain"],
-                        content: fromParsedFileAbout["contentAbLisServingsMain"]
-                    }
-                ]
+            div: {
+                id: fromParsedFileAbout["idDivServings"],
+                className: fromParsedFileAbout["classNameDivServings"],
+                content: fromParsedFileAbout["contentDivServings"]
             },
-            skills: {
-                section: {
-                    id: fromParsedFileAbout["idSectionSkillsMain"],
-                    style: {
-                        overflow: fromParsedFileAbout["overflowStyleSectionSkillsMain"],
-                        width: fromParsedFileAbout["widthStyleSectionSkillsMain"],
-                        backgroundColor: fromParsedFileAbout["backgroundColorStyleSectionSkillsMain"],
-                        color: fromParsedFileAbout["colorStyleSectionSkillsMain"],
-                        textAlign: fromParsedFileAbout["textAlignStyleSectionSkillsMain"],
-                        borderRadius: fromParsedFileAbout["borderRadiusStyleSectionSkillsMain"],
-                        height: checkInnerWidth(
-                            areSizes,
-                            ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
-                                "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"]
-                        )
-                    }
+            h1: {
+                id: fromParsedFileAbout["idH1Servings"],
+                content: fromParsedFileAbout["contentH1Servings"],
+                className: robotoMono.className,
+                style: {
+                    fontSize: checkInnerWidth(
+                        areSizes,
+                        ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                            "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+                    )
+                }
+            },
+            ul: {
+                id: fromParsedFileAbout["idUlServings"],
+                className: fromParsedFileAbout["classNameUlServings"]
+            },
+            h2: {
+                id: fromParsedFileAbout["idH2Servings"],
+                className: anonymousPro.className,
+                style: {
+                    fontSize: checkInnerWidth(
+                        areSizes,
+                        ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                            "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+                    )
+                }
+            },
+            lis: [
+                {
+                    key: fromParsedFileAbout["keyAaLisServings"],
+                    style: fromParsedFileAbout["styleAaLisServings"],
+                    content: fromParsedFileAbout["contentAaLisServings"]
                 },
-                div: {
-                    id: fromParsedFileAbout["idDivSkillsMain"],
-                    className: fromParsedFileAbout["classNameDivSkillsMain"],
-                    content: fromParsedFileAbout["contentDivSkillsMain"]
+                {
+                    key: fromParsedFileAbout["keyAbLisServings"],
+                    style: fromParsedFileAbout["styleAbLisServings"],
+                    content: fromParsedFileAbout["contentAbLisServings"]
+                }
+            ]
+        },
+        skills: {
+            section: {
+                id: fromParsedFileAbout["idSectionSkills"],
+                style: {
+                    overflow: fromParsedFileAbout["overflowStyleSectionSkills"],
+                    width: fromParsedFileAbout["widthStyleSectionSkills"],
+                    backgroundColor: fromParsedFileAbout["backgroundColorStyleSectionSkills"],
+                    color: fromParsedFileAbout["colorStyleSectionSkills"],
+                    textAlign: fromParsedFileAbout["textAlignStyleSectionSkills"],
+                    borderRadius: fromParsedFileAbout["borderRadiusStyleSectionSkills"],
+                    height: checkInnerWidth(
+                        areSizes,
+                        ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
+                            "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"]
+                    )
+                }
+            },
+            div: {
+                id: fromParsedFileAbout["idDivSkills"],
+                className: fromParsedFileAbout["classNameDivSkills"],
+                content: fromParsedFileAbout["contentDivSkills"]
+            },
+            h1: {
+                id: fromParsedFileAbout["idH1Skills"],
+                content: fromParsedFileAbout["contentH1Skills"],
+                className: robotoMono.className,
+                style: {
+                    fontSize: checkInnerWidth(
+                        areSizes,
+                        ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
+                            "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
+                    )
+                }
+            },
+            ul: {
+                id: fromParsedFileAbout["idUlSkills"],
+                className: fromParsedFileAbout["classNameUlSkills"]
+            },
+            h2: {
+                id: fromParsedFileAbout["idH2Skills"],
+                className: anonymousPro.className,
+                style: {
+                    fontSize: checkInnerWidth(
+                        areSizes,
+                        ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
+                            "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
+                    )
+                }
+            },
+            lis: [
+                {
+                    key: fromParsedFileAbout["keyAaLisSkills"],
+                    style: fromParsedFileAbout["styleAaLisSkills"],
+                    content: fromParsedFileAbout["contentAaLisSkills"]
                 },
-                h1: {
-                    id: fromParsedFileAbout["idH1SkillsMain"],
-                    content: fromParsedFileAbout["contentH1SkillsMain"],
-                    className: robotoMono.className,
-                    style: {
-                        fontSize: checkInnerWidth(
-                            areSizes,
-                            ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                                "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-                        )
-                    }
+                {
+                    key: fromParsedFileAbout["keyAbLisSkills"],
+                    style: fromParsedFileAbout["styleAbLisSkills"],
+                    content: fromParsedFileAbout["contentAbLisSkills"]
                 },
-                ul: {
-                    id: fromParsedFileAbout["idUlSkillsMain"],
-                    className: fromParsedFileAbout["classNameUlSkillsMain"]
+                {
+                    key: fromParsedFileAbout["keyAcLisSkills"],
+                    style: fromParsedFileAbout["styleAcLisSkills"],
+                    content: fromParsedFileAbout["contentAcLisSkills"]
                 },
-                h2: {
-                    id: fromParsedFileAbout["idH2SkillsMain"],
-                    className: anonymousPro.className,
-                    style: {
-                        fontSize: checkInnerWidth(
-                            areSizes,
-                            ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                                "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-                        )
-                    }
+                {
+                    key: fromParsedFileAbout["keyAdLisSkills"],
+                    style: fromParsedFileAbout["styleAdLisSkills"],
+                    content: fromParsedFileAbout["contentAdLisSkills"]
                 },
-                lis: [
-                    {
-                        key: fromParsedFileAbout["keyAaLisSkillsMain"],
-                        style: fromParsedFileAbout["styleAaLisSkillsMain"],
-                        content: fromParsedFileAbout["contentAaLisSkillsMain"]
-                    },
-                    {
-                        key: fromParsedFileAbout["keyAbLisSkillsMain"],
-                        style: fromParsedFileAbout["styleAbLisSkillsMain"],
-                        content: fromParsedFileAbout["contentAbLisSkillsMain"]
-                    },
-                    {
-                        key: fromParsedFileAbout["keyAcLisSkillsMain"],
-                        style: fromParsedFileAbout["styleAcLisSkillsMain"],
-                        content: fromParsedFileAbout["contentAcLisSkillsMain"]
-                    },
-                    {
-                        key: fromParsedFileAbout["keyAdLisSkillsMain"],
-                        style: fromParsedFileAbout["styleAdLisSkillsMain"],
-                        content: fromParsedFileAbout["contentAdLisSkillsMain"]
-                    },
-                    {
-                        key: fromParsedFileAbout["keyAeLisSkillsMain"],
-                        style: fromParsedFileAbout["styleAeLisSkillsMain"],
-                        content: fromParsedFileAbout["contentAeLisSkillsMain"]
-                    },
-                    {
-                        key: fromParsedFileAbout["keyAfLisSkillsMain"],
-                        style: fromParsedFileAbout["styleAfLisSkillsMain"],
-                        content: fromParsedFileAbout["contentAfLisSkillsMain"]
-                    }
-                ],
-                links: [
-                    {
-                        href: `${fromParsedFileAbout["hrefAaLinksSkillsMain"]}`,
-                        content: fromParsedFileAbout["contentAaLinksSkillsMain"]
-                    },
-                    {
-                        href: `${fromParsedFileAbout["hrefAbLinksSkillsMain"]}`,
-                        content: fromParsedFileAbout["contentAbLinksSkillsMain"]
-                    },
-                    {
-                        href: `${fromParsedFileAbout["hrefAcLinksSkillsMain"]}`,
-                        content: fromParsedFileAbout["contentAcLinksSkillsMain"]
-                    },
-                    {
-                        href: `${fromParsedFileAbout["hrefAdLinksSkillsMain"]}`,
-                        content: fromParsedFileAbout["contentAdLinksSkillsMain"]
-                    },
-                    {
-                        href: `${fromParsedFileAbout["hrefAeLinksSkillsMain"]}`,
-                        content: fromParsedFileAbout["contentAeLinksSkillsMain"]
-                    },
-                    {
-                        href: `${fromParsedFileAbout["hrefAfLinksSkillsMain"]}`,
-                        content: fromParsedFileAbout["contentAfLinksSkillsMain"]
-                    }
-                ]
-            }
+                {
+                    key: fromParsedFileAbout["keyAeLisSkills"],
+                    style: fromParsedFileAbout["styleAeLisSkills"],
+                    content: fromParsedFileAbout["contentAeLisSkills"]
+                },
+                {
+                    key: fromParsedFileAbout["keyAfLisSkills"],
+                    style: fromParsedFileAbout["styleAfLisSkills"],
+                    content: fromParsedFileAbout["contentAfLisSkills"]
+                }
+            ],
+            links: [
+                {
+                    href: `${fromParsedFileAbout["hrefAaLinksSkills"]}`,
+                    content: fromParsedFileAbout["contentAaLinksSkills"]
+                },
+                {
+                    href: `${fromParsedFileAbout["hrefAbLinksSkills"]}`,
+                    content: fromParsedFileAbout["contentAbLinksSkills"]
+                },
+                {
+                    href: `${fromParsedFileAbout["hrefAcLinksSkills"]}`,
+                    content: fromParsedFileAbout["contentAcLinksSkills"]
+                },
+                {
+                    href: `${fromParsedFileAbout["hrefAdLinksSkills"]}`,
+                    content: fromParsedFileAbout["contentAdLinksSkills"]
+                },
+                {
+                    href: `${fromParsedFileAbout["hrefAeLinksSkills"]}`,
+                    content: fromParsedFileAbout["contentAeLinksSkills"]
+                },
+                {
+                    href: `${fromParsedFileAbout["hrefAfLinksSkills"]}`,
+                    content: fromParsedFileAbout["contentAfLinksSkills"]
+                }
+            ]
         },
         outro: {
             section: {
