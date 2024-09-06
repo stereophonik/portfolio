@@ -50,7 +50,7 @@ export default function Page(): React.ReactElement {
         executeSetAreSizes();
         window.onresize = executeSetAreSizes;
 
-        fetch("/api?fileName=navigation", {
+        fetch("/files?fileName=navigation", {
             method: "GET"
         })
             .then(fileNavigation => fileNavigation.json())
@@ -58,7 +58,7 @@ export default function Page(): React.ReactElement {
                 setFromParsedFileNavigation(parsedFileNavigation);
             });
 
-        fetch("/api?fileName=profile", {
+        fetch("/files?fileName=profile", {
             method: "GET"
         })
             .then(fileProfile => fileProfile.json())
@@ -66,7 +66,7 @@ export default function Page(): React.ReactElement {
                 setFromParsedFileProfile(parsedFileProfile);
             });
 
-        fetch("/api?fileName=about", {
+        fetch("/files?fileName=about", {
             method: "GET"
         })
             .then(fileAbout => fileAbout.json())
