@@ -1,7 +1,6 @@
 import { useContext } from "react";
 
 import SectionComponent from "../../Section";
-import DivComponent from "../../Div";
 import SectionServingsMainAboutComponent from "./servings/Section";
 import SectionSkillsMainAboutComponent from "./skills/Section";
 
