@@ -1,0 +1,18 @@
+{
+  "idSection": "sectionIntro",
+  "overflowStyleSection": "hidden",
+  "widthStyleSection": "100vw",
+  "backgroundColorStyleSection": "#DA6E2B",
+  "colorStyleSection": "#2C2F37",
+  "textAlignStyleSection": "center",
+  "borderRadiusStyleSection": "10%",
+  "idDiv": "divIntro",
+  "classNameDiv": "classNameDiv",
+  "contentDiv": "",
+  "idH1": "h1Intro",
+  "contentH1": "Hello!",
+  "idAaH2s": "aaH2sIntro",
+  "idAbH2s": "abH2sIntro",
+  "contentAaH2s": "Are you looking to have a website created or edited for your small business?",
+  "contentAbH2s": "I'm here to assist! With 6 years of experience transitioning from quality testing to front-end development, I bring a unique perspective to streamline your workflows and enhance your web applications."
+}

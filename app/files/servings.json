@@ -1,0 +1,22 @@
+{
+  "idSection": "sectionServings",
+  "overflowStyleSection": "hidden",
+  "widthStyleSection": "100vw",
+  "backgroundColorStyleSection": "#2C2F37",
+  "colorStyleSection": "#DA6E2B",
+  "textAlignStyleSection": "center",
+  "idDiv": "divServings",
+  "classNameDiv": "classNameDiv",
+  "contentDiv": "",
+  "idH1": "h1Servings",
+  "contentH1": "Servings:",
+  "idUl": "ulServings",
+  "classNameUl": "classNameUl",
+  "idH2": "h2Servings",
+  "keyAaLis": 1,
+  "styleAaLis": {},
+  "contentAaLis": "Expertise in technology for front-end development",
+  "keyAbLis": 2,
+  "styleAbLis": {},
+  "contentAbLis": "Selecting and applying concepts tailored for front-end applications"
+}

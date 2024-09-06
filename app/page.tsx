@@ -39,9 +39,12 @@ const robotoMono: NextFont = Roboto_Mono({
 
 export default function Page(): React.ReactElement {
     const [areSizes, setAreSizes]: [any[], Dispatch<SetStateAction<any[]>>] = useState([]);
-    const [fromParsedFileNavigation, setFromParsedFileNavigation]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
-    const [fromParsedFileProfile, setFromParsedFileProfile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
-    const [fromParsedFileAbout, setFromParsedFileAbout]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
+    const [navigationParsedFromFile, setNavigationParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
+    const [profileParsedFromFile, setProfileParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
+    const [introParsedFromFile, setIntroParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
+    const [servingsParsedFromFile, setServingsParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
+    const [skillsParsedFromFile, setSkillsParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
+    const [outroParsedFromFile, setOutroParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
 
     useEffect(() => {
         function executeSetAreSizes(): void {
@@ -62,25 +65,49 @@ export default function Page(): React.ReactElement {
         fetch("/files?fileName=navigation", {
             method: "GET"
         })
-            .then(fileNavigation => fileNavigation.json())
-            .then(parsedFileNavigation => {
-                setFromParsedFileNavigation(parsedFileNavigation);
+            .then(fromFile => fromFile.json())
+            .then(parsedFromFile => {
+                setNavigationParsedFromFile(parsedFromFile);
             });
 
         fetch("/files?fileName=profile", {
             method: "GET"
         })
-            .then(fileProfile => fileProfile.json())
-            .then(parsedFileProfile => {
-                setFromParsedFileProfile(parsedFileProfile);
+            .then(fromFile => fromFile.json())
+            .then(parsedFromFile => {
+                setProfileParsedFromFile(parsedFromFile);
             });
 
-        fetch("/files?fileName=about", {
+        fetch("/files?fileName=intro", {
             method: "GET"
         })
-            .then(fileAbout => fileAbout.json())
-            .then(parsedFileAbout => {
-                setFromParsedFileAbout(parsedFileAbout);
+            .then(fromFile => fromFile.json())
+            .then(parsedFromFile => {
+                setIntroParsedFromFile(parsedFromFile);
+            });
+
+        fetch("/files?fileName=servings", {
+            method: "GET"
+        })
+            .then(fromFile => fromFile.json())
+            .then(parsedFromFile => {
+                setServingsParsedFromFile(parsedFromFile);
+            });
+
+        fetch("/files?fileName=skills", {
+            method: "GET"
+        })
+            .then(fromFile => fromFile.json())
+            .then(parsedFromFile => {
+                setSkillsParsedFromFile(parsedFromFile);
+            });
+
+        fetch("/files?fileName=outro", {
+            method: "GET"
+        })
+            .then(fromFile => fromFile.json())
+            .then(parsedFromFile => {
+                setOutroParsedFromFile(parsedFromFile);
             });
     }, []);
 
@@ -103,15 +130,15 @@ export default function Page(): React.ReactElement {
 
     const valueNavigation: ValueNavigationInterface = {
         nav: {
-            id: fromParsedFileNavigation["idNav"],
-            className: fromParsedFileNavigation["classNameNav"]
+            id: navigationParsedFromFile["idNav"],
+            className: navigationParsedFromFile["classNameNav"]
         },
         ul: {
-            id: fromParsedFileNavigation["id"],
-            className: fromParsedFileNavigation["className"]
+            id: navigationParsedFromFile["id"],
+            className: navigationParsedFromFile["className"]
         },
         h3: {
-            id: fromParsedFileNavigation["idH3"],
+            id: navigationParsedFromFile["idH3"],
             className: anonymousPro.className,
             style: {
                 fontSize: checkInnerWidth(
@@ -123,82 +150,82 @@ export default function Page(): React.ReactElement {
         },
         lis: [
             {
-                key: fromParsedFileNavigation["keyAaLi"],
-                style: fromParsedFileNavigation["styleAaLi"],
-                content: fromParsedFileNavigation["contentAaLi"]
+                key: navigationParsedFromFile["keyAaLi"],
+                style: navigationParsedFromFile["styleAaLi"],
+                content: navigationParsedFromFile["contentAaLi"]
             },
             {
-                key: fromParsedFileNavigation["keyAbLi"],
-                style: fromParsedFileNavigation["styleAbLi"],
-                content: fromParsedFileNavigation["contentAbLi"]
+                key: navigationParsedFromFile["keyAbLi"],
+                style: navigationParsedFromFile["styleAbLi"],
+                content: navigationParsedFromFile["contentAbLi"]
             },
             {
-                key: fromParsedFileNavigation["keyAcLi"],
-                style: fromParsedFileNavigation["styleAcLi"],
-                content: fromParsedFileNavigation["contentAcLi"]
+                key: navigationParsedFromFile["keyAcLi"],
+                style: navigationParsedFromFile["styleAcLi"],
+                content: navigationParsedFromFile["contentAcLi"]
             },
             {
-                key: fromParsedFileNavigation["keyAdLi"],
-                style: fromParsedFileNavigation["styleAdLi"],
-                content: fromParsedFileNavigation["contentAdLi"]
+                key: navigationParsedFromFile["keyAdLi"],
+                style: navigationParsedFromFile["styleAdLi"],
+                content: navigationParsedFromFile["contentAdLi"]
             },
             {
-                key: fromParsedFileNavigation["keyAeLi"],
-                style: fromParsedFileNavigation["styleAeLi"],
-                content: fromParsedFileNavigation["contentAeLi"]
+                key: navigationParsedFromFile["keyAeLi"],
+                style: navigationParsedFromFile["styleAeLi"],
+                content: navigationParsedFromFile["contentAeLi"]
             },
             {
-                key: fromParsedFileNavigation["keyAfLi"],
-                style: fromParsedFileNavigation["styleAfLi"],
-                content: fromParsedFileNavigation["contentAfLi"]
+                key: navigationParsedFromFile["keyAfLi"],
+                style: navigationParsedFromFile["styleAfLi"],
+                content: navigationParsedFromFile["contentAfLi"]
             },
             {
-                key: fromParsedFileNavigation["keyAgLi"],
-                style: fromParsedFileNavigation["styleAgLi"],
-                content: fromParsedFileNavigation["contentAgLi"]
+                key: navigationParsedFromFile["keyAgLi"],
+                style: navigationParsedFromFile["styleAgLi"],
+                content: navigationParsedFromFile["contentAgLi"]
             }
         ],
         links: [
             {
-                href: `${fromParsedFileNavigation["hrefAaLink"]}`,
-                content: fromParsedFileNavigation["contentAaLink"]
+                href: `${navigationParsedFromFile["hrefAaLink"]}`,
+                content: navigationParsedFromFile["contentAaLink"]
             },
             {
-                href: fromParsedFileNavigation["hrefAbLink"],
-                content: fromParsedFileNavigation["contentAbLink"]
+                href: navigationParsedFromFile["hrefAbLink"],
+                content: navigationParsedFromFile["contentAbLink"]
             },
             {
-                href: `${fromParsedFileNavigation["hrefAcLink"]}`,
-                content: fromParsedFileNavigation["contentAcLink"]
+                href: `${navigationParsedFromFile["hrefAcLink"]}`,
+                content: navigationParsedFromFile["contentAcLink"]
             },
             {
-                href: fromParsedFileNavigation["hrefAdLink"],
-                content: fromParsedFileNavigation["contentAdLink"]
+                href: navigationParsedFromFile["hrefAdLink"],
+                content: navigationParsedFromFile["contentAdLink"]
             },
             {
-                href: `${fromParsedFileNavigation["hrefAeLink"]}`,
-                content: fromParsedFileNavigation["contentAeLink"]
+                href: `${navigationParsedFromFile["hrefAeLink"]}`,
+                content: navigationParsedFromFile["contentAeLink"]
             },
             {
-                href: `${fromParsedFileNavigation["hrefAfLink"]}`,
-                content: fromParsedFileNavigation["contentAfLink"]
+                href: `${navigationParsedFromFile["hrefAfLink"]}`,
+                content: navigationParsedFromFile["contentAfLink"]
             },
             {
-                href: `${fromParsedFileNavigation["hrefAgLink"]}`,
-                content: fromParsedFileNavigation["contentAgLink"]
+                href: `${navigationParsedFromFile["hrefAgLink"]}`,
+                content: navigationParsedFromFile["contentAgLink"]
             }
         ]
     }
 
     const valueProfile: ValueProfileInterface = {
         section: {
-            id: fromParsedFileProfile["idSection"],
+            id: profileParsedFromFile["idSection"],
             style: {
-                overflow: fromParsedFileProfile["overflowStyleSection"],
-                width: fromParsedFileProfile["widthStyleSection"],
-                backgroundColor: fromParsedFileProfile["backgroundColorStyleSection"],
-                color: fromParsedFileProfile["colorStyleSection"],
-                textAlign: fromParsedFileProfile["textAlignStyleSection"],
+                overflow: profileParsedFromFile["overflowStyleSection"],
+                width: profileParsedFromFile["widthStyleSection"],
+                backgroundColor: profileParsedFromFile["backgroundColorStyleSection"],
+                color: profileParsedFromFile["colorStyleSection"],
+                textAlign: profileParsedFromFile["textAlignStyleSection"],
                 height: checkInnerWidth(
                     areSizes,
                     ["95vw", "90vw", "75vw", "60vw", "55vw", "60vw", "60vw",
@@ -207,15 +234,15 @@ export default function Page(): React.ReactElement {
             }
         },
         div: {
-            id: fromParsedFileProfile["idDiv"],
-            className: fromParsedFileProfile["classNameDiv"],
-            content: fromParsedFileProfile["contentDiv"]
+            id: profileParsedFromFile["idDiv"],
+            className: profileParsedFromFile["classNameDiv"],
+            content: profileParsedFromFile["contentDiv"]
         },
         image: {
-            id: fromParsedFileProfile["idImage"],
-            src: fromParsedFileProfile["srcImage"],
-            alt: fromParsedFileProfile["altImage"],
-            style: fromParsedFileProfile["styleImage"],
+            id: profileParsedFromFile["idImage"],
+            src: profileParsedFromFile["srcImage"],
+            alt: profileParsedFromFile["altImage"],
+            style: profileParsedFromFile["styleImage"],
             width: checkInnerWidth(
                 areSizes,
                 [130, 130, 130, 130, 130, 160, 180, 200, 220, 240, 260, 260, 260, 260]
@@ -226,8 +253,8 @@ export default function Page(): React.ReactElement {
             )
         },
         h1: {
-            id: fromParsedFileProfile["idH1"],
-            content: fromParsedFileProfile["contentH1"],
+            id: profileParsedFromFile["idH1"],
+            content: profileParsedFromFile["contentH1"],
             className: robotoMono.className,
             style: {
                 fontSize: checkInnerWidth(
@@ -238,8 +265,8 @@ export default function Page(): React.ReactElement {
             }
         },
         h2: {
-            id: fromParsedFileProfile["idH2"],
-            content: fromParsedFileProfile["contentH2"],
+            id: profileParsedFromFile["idH2"],
+            content: profileParsedFromFile["contentH2"],
             className: anonymousPro.className,
             style: {
                 fontSize: checkInnerWidth(
@@ -253,14 +280,14 @@ export default function Page(): React.ReactElement {
 
     const valueIntro: ValueIntroInterface = {
         section: {
-            id: fromParsedFileAbout["idSectionIntro"],
+            id: introParsedFromFile["idSection"],
             style: {
-                overflow: fromParsedFileAbout["overflowStyleSectionIntro"],
-                width: fromParsedFileAbout["widthStyleSectionIntro"],
-                backgroundColor: fromParsedFileAbout["backgroundColorStyleSectionIntro"],
-                color: fromParsedFileAbout["colorStyleSectionIntro"],
-                textAlign: fromParsedFileAbout["textAlignStyleSectionIntro"],
-                borderRadius: fromParsedFileAbout["borderRadiusStyleSectionIntro"],
+                overflow: introParsedFromFile["overflowStyleSection"],
+                width: introParsedFromFile["widthStyleSection"],
+                backgroundColor: introParsedFromFile["backgroundColorStyleSection"],
+                color: introParsedFromFile["colorStyleSection"],
+                textAlign: introParsedFromFile["textAlignStyleSection"],
+                borderRadius: introParsedFromFile["borderRadiusStyleSection"],
                 height: checkInnerWidth(
                     areSizes,
                     ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
@@ -269,13 +296,13 @@ export default function Page(): React.ReactElement {
             }
         },
         div: {
-            id: fromParsedFileAbout["idDivIntro"],
-            className: fromParsedFileAbout["classNameDivIntro"],
-            content: fromParsedFileAbout["contentDivIntro"]
+            id: introParsedFromFile["idDiv"],
+            className: introParsedFromFile["classNameDiv"],
+            content: introParsedFromFile["contentDiv"]
         },
         h1: {
-            id: fromParsedFileAbout["idH1Intro"],
-            content: fromParsedFileAbout["contentH1Intro"],
+            id: introParsedFromFile["idH1"],
+            content: introParsedFromFile["contentH1"],
             className: robotoMono.className,
             style: {
                 fontSize: checkInnerWidth(
@@ -287,8 +314,8 @@ export default function Page(): React.ReactElement {
         },
         h2s: [
             {
-                id: fromParsedFileAbout["idAaH2sIntro"],
-                content: fromParsedFileAbout["contentAaH2sIntro"],
+                id: introParsedFromFile["idAaH2s"],
+                content: introParsedFromFile["contentAaH2s"],
                 className: anonymousPro.className,
                 style: {
                     fontSize: checkInnerWidth(
@@ -299,8 +326,8 @@ export default function Page(): React.ReactElement {
                 }
             },
             {
-                id: fromParsedFileAbout["idAbH2sIntro"],
-                content: fromParsedFileAbout["contentAbH2sIntro"],
+                id: introParsedFromFile["idAbH2s"],
+                content: introParsedFromFile["contentAbH2s"],
                 className: anonymousPro.className,
                 style: {
                     fontSize: checkInnerWidth(
@@ -315,13 +342,13 @@ export default function Page(): React.ReactElement {
 
     const valueServings: ValueServingsInterface = {
         section: {
-            id: fromParsedFileAbout["idSectionServings"],
+            id: servingsParsedFromFile["idSection"],
             style: {
-                overflow: fromParsedFileAbout["overflowStyleSectionServings"],
-                width: fromParsedFileAbout["widthStyleSectionServings"],
-                backgroundColor: fromParsedFileAbout["backgroundColorStyleSectionServings"],
-                color: fromParsedFileAbout["colorStyleSectionServings"],
-                textAlign: fromParsedFileAbout["textAlignStyleSectionServings"],
+                overflow: servingsParsedFromFile["overflowStyleSection"],
+                width: servingsParsedFromFile["widthStyleSection"],
+                backgroundColor: servingsParsedFromFile["backgroundColorStyleSection"],
+                color: servingsParsedFromFile["colorStyleSection"],
+                textAlign: servingsParsedFromFile["textAlignStyleSection"],
                 height: checkInnerWidth(
                     areSizes,
                     ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
@@ -330,13 +357,13 @@ export default function Page(): React.ReactElement {
             }
         },
         div: {
-            id: fromParsedFileAbout["idDivServings"],
-            className: fromParsedFileAbout["classNameDivServings"],
-            content: fromParsedFileAbout["contentDivServings"]
+            id: servingsParsedFromFile["idDiv"],
+            className: servingsParsedFromFile["classNameDiv"],
+            content: servingsParsedFromFile["contentDiv"]
         },
         h1: {
-            id: fromParsedFileAbout["idH1Servings"],
-            content: fromParsedFileAbout["contentH1Servings"],
+            id: servingsParsedFromFile["idH1"],
+            content: servingsParsedFromFile["contentH1"],
             className: robotoMono.className,
             style: {
                 fontSize: checkInnerWidth(
@@ -347,11 +374,11 @@ export default function Page(): React.ReactElement {
             }
         },
         ul: {
-            id: fromParsedFileAbout["idUlServings"],
-            className: fromParsedFileAbout["classNameUlServings"]
+            id: servingsParsedFromFile["idUl"],
+            className: servingsParsedFromFile["classNameUl"]
         },
         h2: {
-            id: fromParsedFileAbout["idH2Servings"],
+            id: servingsParsedFromFile["idH2"],
             className: anonymousPro.className,
             style: {
                 fontSize: checkInnerWidth(
@@ -363,28 +390,28 @@ export default function Page(): React.ReactElement {
         },
         lis: [
             {
-                key: fromParsedFileAbout["keyAaLisServings"],
-                style: fromParsedFileAbout["styleAaLisServings"],
-                content: fromParsedFileAbout["contentAaLisServings"]
+                key: servingsParsedFromFile["keyAaLis"],
+                style: servingsParsedFromFile["styleAaLis"],
+                content: servingsParsedFromFile["contentAaLis"]
             },
             {
-                key: fromParsedFileAbout["keyAbLisServings"],
-                style: fromParsedFileAbout["styleAbLisServings"],
-                content: fromParsedFileAbout["contentAbLisServings"]
+                key: servingsParsedFromFile["keyAbLis"],
+                style: servingsParsedFromFile["styleAbLis"],
+                content: servingsParsedFromFile["contentAbLis"]
             }
         ]
     }
 
     const valueSkills: ValueSkillsInterface = {
         section: {
-            id: fromParsedFileAbout["idSectionSkills"],
+            id: skillsParsedFromFile["idSection"],
             style: {
-                overflow: fromParsedFileAbout["overflowStyleSectionSkills"],
-                width: fromParsedFileAbout["widthStyleSectionSkills"],
-                backgroundColor: fromParsedFileAbout["backgroundColorStyleSectionSkills"],
-                color: fromParsedFileAbout["colorStyleSectionSkills"],
-                textAlign: fromParsedFileAbout["textAlignStyleSectionSkills"],
-                borderRadius: fromParsedFileAbout["borderRadiusStyleSectionSkills"],
+                overflow: skillsParsedFromFile["overflowStyleSection"],
+                width: skillsParsedFromFile["widthStyleSection"],
+                backgroundColor: skillsParsedFromFile["backgroundColorStyleSection"],
+                color: skillsParsedFromFile["colorStyleSection"],
+                textAlign: skillsParsedFromFile["textAlignStyleSection"],
+                borderRadius: skillsParsedFromFile["borderRadiusStyleSection"],
                 height: checkInnerWidth(
                     areSizes,
                     ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
@@ -393,13 +420,13 @@ export default function Page(): React.ReactElement {
             }
         },
         div: {
-            id: fromParsedFileAbout["idDivSkills"],
-            className: fromParsedFileAbout["classNameDivSkills"],
-            content: fromParsedFileAbout["contentDivSkills"]
+            id: skillsParsedFromFile["idDiv"],
+            className: skillsParsedFromFile["classNameDiv"],
+            content: skillsParsedFromFile["contentDiv"]
         },
         h1: {
-            id: fromParsedFileAbout["idH1Skills"],
-            content: fromParsedFileAbout["contentH1Skills"],
+            id: skillsParsedFromFile["idH1"],
+            content: skillsParsedFromFile["contentH1"],
             className: robotoMono.className,
             style: {
                 fontSize: checkInnerWidth(
@@ -410,11 +437,11 @@ export default function Page(): React.ReactElement {
             }
         },
         ul: {
-            id: fromParsedFileAbout["idUlSkills"],
-            className: fromParsedFileAbout["classNameUlSkills"]
+            id: skillsParsedFromFile["idUl"],
+            className: skillsParsedFromFile["classNameUl"]
         },
         h2: {
-            id: fromParsedFileAbout["idH2Skills"],
+            id: skillsParsedFromFile["idH2"],
             className: anonymousPro.className,
             style: {
                 fontSize: checkInnerWidth(
@@ -426,73 +453,73 @@ export default function Page(): React.ReactElement {
         },
         lis: [
             {
-                key: fromParsedFileAbout["keyAaLisSkills"],
-                style: fromParsedFileAbout["styleAaLisSkills"],
-                content: fromParsedFileAbout["contentAaLisSkills"]
+                key: skillsParsedFromFile["keyAaLis"],
+                style: skillsParsedFromFile["styleAaLis"],
+                content: skillsParsedFromFile["contentAaLis"]
             },
             {
-                key: fromParsedFileAbout["keyAbLisSkills"],
-                style: fromParsedFileAbout["styleAbLisSkills"],
-                content: fromParsedFileAbout["contentAbLisSkills"]
+                key: skillsParsedFromFile["keyAbLis"],
+                style: skillsParsedFromFile["styleAbLis"],
+                content: skillsParsedFromFile["contentAbLis"]
             },
             {
-                key: fromParsedFileAbout["keyAcLisSkills"],
-                style: fromParsedFileAbout["styleAcLisSkills"],
-                content: fromParsedFileAbout["contentAcLisSkills"]
+                key: skillsParsedFromFile["keyAcLis"],
+                style: skillsParsedFromFile["styleAcLis"],
+                content: skillsParsedFromFile["contentAcLis"]
             },
             {
-                key: fromParsedFileAbout["keyAdLisSkills"],
-                style: fromParsedFileAbout["styleAdLisSkills"],
-                content: fromParsedFileAbout["contentAdLisSkills"]
+                key: skillsParsedFromFile["keyAdLis"],
+                style: skillsParsedFromFile["styleAdLis"],
+                content: skillsParsedFromFile["contentAdLis"]
             },
             {
-                key: fromParsedFileAbout["keyAeLisSkills"],
-                style: fromParsedFileAbout["styleAeLisSkills"],
-                content: fromParsedFileAbout["contentAeLisSkills"]
+                key: skillsParsedFromFile["keyAeLis"],
+                style: skillsParsedFromFile["styleAeLis"],
+                content: skillsParsedFromFile["contentAeLis"]
             },
             {
-                key: fromParsedFileAbout["keyAfLisSkills"],
-                style: fromParsedFileAbout["styleAfLisSkills"],
-                content: fromParsedFileAbout["contentAfLisSkills"]
+                key: skillsParsedFromFile["keyAfLis"],
+                style: skillsParsedFromFile["styleAfLis"],
+                content: skillsParsedFromFile["contentAfLis"]
             }
         ],
         links: [
             {
-                href: `${fromParsedFileAbout["hrefAaLinksSkills"]}`,
-                content: fromParsedFileAbout["contentAaLinksSkills"]
+                href: `${skillsParsedFromFile["hrefAaLinks"]}`,
+                content: skillsParsedFromFile["contentAaLinks"]
             },
             {
-                href: `${fromParsedFileAbout["hrefAbLinksSkills"]}`,
-                content: fromParsedFileAbout["contentAbLinksSkills"]
+                href: `${skillsParsedFromFile["hrefAbLinks"]}`,
+                content: skillsParsedFromFile["contentAbLinks"]
             },
             {
-                href: `${fromParsedFileAbout["hrefAcLinksSkills"]}`,
-                content: fromParsedFileAbout["contentAcLinksSkills"]
+                href: `${skillsParsedFromFile["hrefAcLinks"]}`,
+                content: skillsParsedFromFile["contentAcLinks"]
             },
             {
-                href: `${fromParsedFileAbout["hrefAdLinksSkills"]}`,
-                content: fromParsedFileAbout["contentAdLinksSkills"]
+                href: `${skillsParsedFromFile["hrefAdLinks"]}`,
+                content: skillsParsedFromFile["contentAdLinks"]
             },
             {
-                href: `${fromParsedFileAbout["hrefAeLinksSkills"]}`,
-                content: fromParsedFileAbout["contentAeLinksSkills"]
+                href: `${skillsParsedFromFile["hrefAeLinks"]}`,
+                content: skillsParsedFromFile["contentAeLinks"]
             },
             {
-                href: `${fromParsedFileAbout["hrefAfLinksSkills"]}`,
-                content: fromParsedFileAbout["contentAfLinksSkills"]
+                href: `${skillsParsedFromFile["hrefAfLinks"]}`,
+                content: skillsParsedFromFile["contentAfLinks"]
             }
         ]
     }
 
     const valueOutro: ValueOutroInterface = {
         section: {
-            id: fromParsedFileAbout["idSectionOutro"],
+            id: outroParsedFromFile["idSection"],
             style: {
-                overflow: fromParsedFileAbout["overflowStyleSectionOutro"],
-                width: fromParsedFileAbout["widthStyleSectionOutro"],
-                backgroundColor: fromParsedFileAbout["backgroundColorStyleSectionOutro"],
-                color: fromParsedFileAbout["colorStyleSectionOutro"],
-                textAlign: fromParsedFileAbout["textAlignStyleSectionOutro"],
+                overflow: outroParsedFromFile["overflowStyleSection"],
+                width: outroParsedFromFile["widthStyleSection"],
+                backgroundColor: outroParsedFromFile["backgroundColorStyleSection"],
+                color: outroParsedFromFile["colorStyleSection"],
+                textAlign: outroParsedFromFile["textAlignStyleSection"],
                 height: checkInnerWidth(
                     areSizes,
                     ["65vw", "55vw", "45vw", "35vw", "30vw", "35vw", "35vw",
@@ -501,13 +528,13 @@ export default function Page(): React.ReactElement {
             }
         },
         div: {
-            id: fromParsedFileAbout["idDivOutro"],
-            className: fromParsedFileAbout["classNameDivOutro"],
-            content: fromParsedFileAbout["contentDivOutro"]
+            id: outroParsedFromFile["idDiv"],
+            className: outroParsedFromFile["classNameDiv"],
+            content: outroParsedFromFile["contentDiv"]
         },
         h1: {
-            id: fromParsedFileAbout["idH1Outro"],
-            content: fromParsedFileAbout["contentH1Outro"],
+            id: outroParsedFromFile["idH1"],
+            content: outroParsedFromFile["contentH1"],
             className: robotoMono.className,
             style: {
                 fontSize: checkInnerWidth(
@@ -518,8 +545,8 @@ export default function Page(): React.ReactElement {
             }
         },
         h2: {
-            id: fromParsedFileAbout["idH2Outro"],
-            content: fromParsedFileAbout["contentH2Outro"],
+            id: outroParsedFromFile["idH2"],
+            content: outroParsedFromFile["contentH2"],
             className: anonymousPro.className,
             style: {
                 fontSize: checkInnerWidth(
