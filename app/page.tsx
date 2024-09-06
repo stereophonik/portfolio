@@ -8,7 +8,10 @@ import { Roboto_Mono } from "next/font/google";
 import MainComponent from "./components/Main";
 import NavNavigationComponent from "./components/navigation/Nav";
 import SectionProfileComponent from "./components/profile/Section";
-import SectionAboutComponent from "./components/about/Section";
+import SectionIntroComponent from "./components/intro/Section";
+import SectionServingsComponent from "./components/servings/Section";
+import SectionSkillsComponent from "./components/skills/Section";
+import SectionOutroComponent from "./components/outro/Section";
 
 import { NavigationContext } from "./contexts/Navigation";
 import { ProfileContext } from "./contexts/Profile";
@@ -243,10 +246,6 @@ export default function Page(): React.ReactElement {
     }
 
     const valueAbout: ValueAboutInterface = {
-        section: {
-            id: fromParsedFileAbout["idSection"],
-            style: fromParsedFileAbout["styleSection"]
-        },
         intro: {
             section: {
                 id: fromParsedFileAbout["idSectionIntro"],
@@ -537,7 +536,10 @@ export default function Page(): React.ReactElement {
             </ProfileContext.Provider>
             <AboutContext.Provider
                 value={valueAbout}>
-                <SectionAboutComponent />
+                <SectionIntroComponent />
+                <SectionServingsComponent />
+                <SectionSkillsComponent />
+                <SectionOutroComponent />
             </AboutContext.Provider>
         </MainComponent>
     );

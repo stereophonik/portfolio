@@ -1,15 +1,15 @@
 import { useContext } from "react";
 
-import SectionComponent from "../../Section";
-import DivComponent from "../../Div";
-import H1Component from "../../H1";
-import UlComponent from "../../Ul";
-import H2Component from "../../H2";
-import LiComponent from "../../Li";
+import SectionComponent from "../Section";
+import DivComponent from "../Div";
+import H1Component from "../H1";
+import UlComponent from "../Ul";
+import H2Component from "../H2";
+import LiComponent from "../Li";
 
-import { AboutContext } from "../../../contexts/About";
+import { AboutContext } from "../../contexts/About";
 
-export default function SectionServingsAboutComponent(): React.ReactElement {
+export default function SectionServingsComponent(): React.ReactElement {
     const aboutContext: {} = useContext(AboutContext);
 
     return (

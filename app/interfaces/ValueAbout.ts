@@ -63,5 +63,4 @@ export default interface ValueAboutInterface {
         };
         h2: { className: string; style: { fontSize: any }; id: any; content: any }
     };
-    section: { id: any; style: any };
 }
