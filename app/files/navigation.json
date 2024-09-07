@@ -4,30 +4,18 @@
   "idUl": "ulNavigation",
   "classNameUl": "classNameUl",
   "idH3": "h3Navigation",
-  "keyAaLi": 1,
-  "styleAaLi": {
-    "display": "inline-block",
-    "padding": "2vw"
-  },
-  "contentAaLi": "",
-  "keyAbLi": 2,
-  "styleAbLi": {
-    "display": "inline-block",
-    "padding": "2vw"
-  },
-  "contentAbLi": "",
-  "keyAcLi": 3,
-  "styleAcLi": {
-    "display": "inline-block",
-    "padding": "2vw"
-  },
-  "contentAcLi": "",
-  "keyAdLi": 4,
-  "styleAdLi": {
-    "display": "inline-block",
-    "padding": "2vw"
-  },
-  "contentAdLi": "",
+  "classNameAaLis": "classNameHorizontalLi",
+  "keyAaLis": 1,
+  "contentAaLis": "",
+  "classNameAbLis": "classNameHorizontalLi",
+  "keyAbLis": 2,
+  "contentAbLis": "",
+  "classNameAcLis": "classNameHorizontalLi",
+  "keyAcLis": 3,
+  "contentAcLis": "",
+  "classNameAdLis": "classNameHorizontalLi",
+  "keyAdLis": 4,
+  "contentAdLis": "",
   "hrefAaLink": "#sectionIntro",
   "contentAaLink": "Intro",
   "hrefAbLink": "#sectionServings",

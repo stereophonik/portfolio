@@ -150,24 +150,24 @@ export default function Page(): React.ReactElement {
         },
         lis: [
             {
-                key: navigationParsedFromFile["keyAaLi"],
-                style: navigationParsedFromFile["styleAaLi"],
-                content: navigationParsedFromFile["contentAaLi"]
+                className: navigationParsedFromFile["classNameAaLis"],
+                key: navigationParsedFromFile["keyAaLis"],
+                content: navigationParsedFromFile["contentAaLis"]
             },
             {
-                key: navigationParsedFromFile["keyAbLi"],
-                style: navigationParsedFromFile["styleAbLi"],
-                content: navigationParsedFromFile["contentAbLi"]
+                className: navigationParsedFromFile["classNameAbLis"],
+                key: navigationParsedFromFile["keyAbLis"],
+                content: navigationParsedFromFile["contentAbLis"]
             },
             {
-                key: navigationParsedFromFile["keyAcLi"],
-                style: navigationParsedFromFile["styleAcLi"],
-                content: navigationParsedFromFile["contentAcLi"]
+                className: navigationParsedFromFile["classNameAcLis"],
+                key: navigationParsedFromFile["keyAcLis"],
+                content: navigationParsedFromFile["contentAcLis"]
             },
             {
-                key: navigationParsedFromFile["keyAdLi"],
-                style: navigationParsedFromFile["styleAdLi"],
-                content: navigationParsedFromFile["contentAdLi"]
+                className: navigationParsedFromFile["classNameAdLis"],
+                key: navigationParsedFromFile["keyAdLis"],
+                content: navigationParsedFromFile["contentAdLis"]
             }
         ],
         links: [
@@ -350,13 +350,13 @@ export default function Page(): React.ReactElement {
         },
         lis: [
             {
+                className: servingsParsedFromFile["classNameAaLis"],
                 key: servingsParsedFromFile["keyAaLis"],
-                style: servingsParsedFromFile["styleAaLis"],
                 content: servingsParsedFromFile["contentAaLis"]
             },
             {
+                className: servingsParsedFromFile["classNameAbLis"],
                 key: servingsParsedFromFile["keyAbLis"],
-                style: servingsParsedFromFile["styleAbLis"],
                 content: servingsParsedFromFile["contentAbLis"]
             }
         ]
@@ -408,33 +408,33 @@ export default function Page(): React.ReactElement {
         },
         lis: [
             {
+                className: skillsParsedFromFile["classNameAaLis"],
                 key: skillsParsedFromFile["keyAaLis"],
-                style: skillsParsedFromFile["styleAaLis"],
                 content: skillsParsedFromFile["contentAaLis"]
             },
             {
+                className: skillsParsedFromFile["classNameAbLis"],
                 key: skillsParsedFromFile["keyAbLis"],
-                style: skillsParsedFromFile["styleAbLis"],
                 content: skillsParsedFromFile["contentAbLis"]
             },
             {
+                className: skillsParsedFromFile["classNameAcLis"],
                 key: skillsParsedFromFile["keyAcLis"],
-                style: skillsParsedFromFile["styleAcLis"],
                 content: skillsParsedFromFile["contentAcLis"]
             },
             {
+                className: skillsParsedFromFile["classNameAdLis"],
                 key: skillsParsedFromFile["keyAdLis"],
-                style: skillsParsedFromFile["styleAdLis"],
                 content: skillsParsedFromFile["contentAdLis"]
             },
             {
+                className: skillsParsedFromFile["classNameAeLis"],
                 key: skillsParsedFromFile["keyAeLis"],
-                style: skillsParsedFromFile["styleAeLis"],
                 content: skillsParsedFromFile["contentAeLis"]
             },
             {
+                className: skillsParsedFromFile["classNameAfLis"],
                 key: skillsParsedFromFile["keyAfLis"],
-                style: skillsParsedFromFile["styleAfLis"],
                 content: skillsParsedFromFile["contentAfLis"]
             }
         ],

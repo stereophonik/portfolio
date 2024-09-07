@@ -1,3 +1,3 @@
-export default function LiComponent({ key, style, children }): React.ReactElement {
-    return <li key={key} style={style}>{children}</li>
+export default function LiComponent({ key, className, children }): React.ReactElement {
+    return <li className={className} key={key}>{children}</li>
 }

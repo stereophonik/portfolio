@@ -1,8 +1,8 @@
 export default interface ValueSkillsInterface {
-    div: { id: any; className: any; content: any };
-    ul: { id: any; className: any };
-    lis: { style: any; key: any; content: any }[];
-    h1: { className: string; style: { fontSize: any }; id: any; content: any };
+    div: { id: any; className: any; content: any; };
+    ul: { id: any; className: any; };
+    lis: { className: any; key: any; content: any; }[];
+    h1: { className: string; style: { fontSize: any; }; id: any; content: any; };
     section: {
         id: any;
         className: any;
@@ -10,6 +10,6 @@ export default interface ValueSkillsInterface {
             height: any;
         };
     };
-    h2: { className: string; style: { fontSize: any }; id: any };
-    links: { href: string; content: any }[]
+    h2: { className: string; style: { fontSize: any; }; id: any; };
+    links: { href: string; content: any; }[]
 }

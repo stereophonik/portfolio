@@ -38,8 +38,8 @@ export default function SectionServingsComponent(): React.ReactElement {
                     {
                         servingsContext["lis"].map((li: { [x: string]: any; }) =>
                             <LiComponent
-                                key={li["key"]}
-                                style={li["style"]}>
+                                className={li["className"]}
+                                key={li["key"]}>
                                 {li["content"]}
                             </LiComponent>
                         )

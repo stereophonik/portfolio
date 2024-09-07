@@ -39,8 +39,8 @@ export default function SectionSkillsComponent(): React.ReactElement {
                     {
                         skillsContext["lis"].map((li: { [x: string]: any; }) =>
                             <LiComponent
-                                key={li["key"]}
-                                style={li["style"]}>
+                                className={li["className"]}
+                                key={li["key"]}>
                                 <LinkComponent
                                     href={skillsContext["links"][skillsContext["lis"].indexOf(li)]["href"]}>
                                     {skillsContext["links"][skillsContext["lis"].indexOf(li)]["content"]}

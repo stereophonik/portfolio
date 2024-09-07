@@ -25,8 +25,8 @@ export default function NavNavigationComponent(): React.ReactElement {
                     {
                         navigationContext["lis"].map((li: { [x: string]: any; }) =>
                             <LiComponent
-                                key={li["key"]}
-                                style={li["style"]}>
+                                className={li["className"]}
+                                key={li["key"]}>
                                 <LinkComponent
                                     href={navigationContext["links"][navigationContext["lis"].indexOf(li)]["href"]}>
                                     {navigationContext["links"][navigationContext["lis"].indexOf(li)]["content"]}
