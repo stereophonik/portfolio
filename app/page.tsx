@@ -168,21 +168,6 @@ export default function Page(): React.ReactElement {
                 key: navigationParsedFromFile["keyAdLi"],
                 style: navigationParsedFromFile["styleAdLi"],
                 content: navigationParsedFromFile["contentAdLi"]
-            },
-            {
-                key: navigationParsedFromFile["keyAeLi"],
-                style: navigationParsedFromFile["styleAeLi"],
-                content: navigationParsedFromFile["contentAeLi"]
-            },
-            {
-                key: navigationParsedFromFile["keyAfLi"],
-                style: navigationParsedFromFile["styleAfLi"],
-                content: navigationParsedFromFile["contentAfLi"]
-            },
-            {
-                key: navigationParsedFromFile["keyAgLi"],
-                style: navigationParsedFromFile["styleAgLi"],
-                content: navigationParsedFromFile["contentAgLi"]
             }
         ],
         links: [
@@ -191,7 +176,7 @@ export default function Page(): React.ReactElement {
                 content: navigationParsedFromFile["contentAaLink"]
             },
             {
-                href: navigationParsedFromFile["hrefAbLink"],
+                href: `${navigationParsedFromFile["hrefAbLink"]}`,
                 content: navigationParsedFromFile["contentAbLink"]
             },
             {
@@ -199,20 +184,8 @@ export default function Page(): React.ReactElement {
                 content: navigationParsedFromFile["contentAcLink"]
             },
             {
-                href: navigationParsedFromFile["hrefAdLink"],
+                href: `${navigationParsedFromFile["hrefAdLink"]}`,
                 content: navigationParsedFromFile["contentAdLink"]
-            },
-            {
-                href: `${navigationParsedFromFile["hrefAeLink"]}`,
-                content: navigationParsedFromFile["contentAeLink"]
-            },
-            {
-                href: `${navigationParsedFromFile["hrefAfLink"]}`,
-                content: navigationParsedFromFile["contentAfLink"]
-            },
-            {
-                href: `${navigationParsedFromFile["hrefAgLink"]}`,
-                content: navigationParsedFromFile["contentAgLink"]
             }
         ]
     }

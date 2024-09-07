@@ -6,53 +6,34 @@
   "idH3": "h3Navigation",
   "keyAaLi": 1,
   "styleAaLi": {
-    "display": "inline-block"
+    "display": "inline-block",
+    "padding": "2vw"
   },
   "contentAaLi": "",
   "keyAbLi": 2,
   "styleAbLi": {
-    "color": "#2C2F37",
-    "display": "inline-block"
+    "display": "inline-block",
+    "padding": "2vw"
   },
-  "contentAbLi": "---",
+  "contentAbLi": "",
   "keyAcLi": 3,
   "styleAcLi": {
-    "display": "inline-block"
+    "display": "inline-block",
+    "padding": "2vw"
   },
   "contentAcLi": "",
   "keyAdLi": 4,
   "styleAdLi": {
-    "color": "#2C2F37",
-    "display": "inline-block"
+    "display": "inline-block",
+    "padding": "2vw"
   },
-  "contentAdLi": "---",
-  "keyAeLi": 5,
-  "styleAeLi": {
-    "display": "inline-block"
-  },
-  "keyAfLi": 6,
-  "styleAfLi": {
-    "color": "#2C2F37",
-    "display": "inline-block"
-  },
-  "contentAfLi": "---",
-  "keyAgLi": 7,
-  "styleAgLi": {
-    "display": "inline-block"
-  },
-  "contentAeLi": "",
+  "contentAdLi": "",
   "hrefAaLink": "#sectionIntro",
   "contentAaLink": "Intro",
-  "hrefAbLink": "",
-  "contentAbLink": "",
-  "hrefAcLink": "#sectionServings",
-  "contentAcLink": "Servings",
-  "hrefAdLink": "",
-  "contentAdLink": "",
-  "hrefAeLink": "#sectionSkills",
-  "contentAeLink": "Skills",
-  "hrefAfLink": "",
-  "contentAfLink": "",
-  "hrefAgLink": "#sectionOutro",
-  "contentAgLink": "Outro"
+  "hrefAbLink": "#sectionServings",
+  "contentAbLink": "Servings",
+  "hrefAcLink": "#sectionSkills",
+  "contentAcLink": "Skills",
+  "hrefAdLink": "#sectionOutro",
+  "contentAdLink": "Outro"
 }
