@@ -41,18 +41,18 @@
     "display": "inline-block"
   },
   "contentAeLi": "",
-  "hrefAaLink": "#sectionIntroAbout",
+  "hrefAaLink": "#sectionIntro",
   "contentAaLink": "Intro",
   "hrefAbLink": "",
   "contentAbLink": "",
-  "hrefAcLink": "#sectionServingsAbout",
+  "hrefAcLink": "#sectionServings",
   "contentAcLink": "Servings",
   "hrefAdLink": "",
   "contentAdLink": "",
-  "hrefAeLink": "#sectionSkillsAbout",
+  "hrefAeLink": "#sectionSkills",
   "contentAeLink": "Skills",
   "hrefAfLink": "",
   "contentAfLink": "",
-  "hrefAgLink": "#sectionOutroAbout",
+  "hrefAgLink": "#sectionOutro",
   "contentAgLink": "Outro"
 }
