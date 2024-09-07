@@ -1,10 +1,6 @@
 {
   "idSection": "sectionServings",
-  "overflowStyleSection": "hidden",
-  "widthStyleSection": "100vw",
-  "backgroundColorStyleSection": "#2C2F37",
-  "colorStyleSection": "#DA6E2B",
-  "textAlignStyleSection": "center",
+  "classNameSection": "classNameSection",
   "idDiv": "divServings",
   "classNameDiv": "classNameDiv",
   "contentDiv": "",

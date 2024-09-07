@@ -13,6 +13,7 @@ export default function SectionOutroComponent(): React.ReactElement {
     return (
         <SectionComponent
             id={outroContext["section"]["id"]}
+            className={outroContext["section"]["className"]}
             style={outroContext["section"]["style"]}>
             <DivComponent
                 id={outroContext["div"]["id"]}

@@ -334,12 +334,8 @@ export default function Page(): React.ReactElement {
     const valueServings: ValueServingsInterface = {
         section: {
             id: servingsParsedFromFile["idSection"],
+            className: servingsParsedFromFile["classNameSection"],
             style: {
-                overflow: servingsParsedFromFile["overflowStyleSection"],
-                width: servingsParsedFromFile["widthStyleSection"],
-                backgroundColor: servingsParsedFromFile["backgroundColorStyleSection"],
-                color: servingsParsedFromFile["colorStyleSection"],
-                textAlign: servingsParsedFromFile["textAlignStyleSection"],
                 height: checkInnerWidth(
                     areSizes,
                     ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
@@ -396,13 +392,8 @@ export default function Page(): React.ReactElement {
     const valueSkills: ValueSkillsInterface = {
         section: {
             id: skillsParsedFromFile["idSection"],
+            className: skillsParsedFromFile["classNameSection"],
             style: {
-                overflow: skillsParsedFromFile["overflowStyleSection"],
-                width: skillsParsedFromFile["widthStyleSection"],
-                backgroundColor: skillsParsedFromFile["backgroundColorStyleSection"],
-                color: skillsParsedFromFile["colorStyleSection"],
-                textAlign: skillsParsedFromFile["textAlignStyleSection"],
-                borderRadius: skillsParsedFromFile["borderRadiusStyleSection"],
                 height: checkInnerWidth(
                     areSizes,
                     ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
@@ -505,12 +496,8 @@ export default function Page(): React.ReactElement {
     const valueOutro: ValueOutroInterface = {
         section: {
             id: outroParsedFromFile["idSection"],
+            className: outroParsedFromFile["classNameSection"],
             style: {
-                overflow: outroParsedFromFile["overflowStyleSection"],
-                width: outroParsedFromFile["widthStyleSection"],
-                backgroundColor: outroParsedFromFile["backgroundColorStyleSection"],
-                color: outroParsedFromFile["colorStyleSection"],
-                textAlign: outroParsedFromFile["textAlignStyleSection"],
                 height: checkInnerWidth(
                     areSizes,
                     ["65vw", "55vw", "45vw", "35vw", "30vw", "35vw", "35vw",

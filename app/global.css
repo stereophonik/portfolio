@@ -1,6 +1,12 @@
 * {
     margin: 0;
     padding: 0;
+    text-align: center;
+}
+
+main {
+    background-color: black;
+    color: white;
 }
 
 a {
@@ -24,7 +30,6 @@ a:hover {
     overflow: hidden;
     background-color: #2C2F37;
     color: #DA6E2B;
-    text-align: center;
 }
 
 .classNameSection {
@@ -32,7 +37,6 @@ a:hover {
     width: 100vw;
     background-color: #2C2F37;
     color: #DA6E2B;
-    text-align: center;
 }
 
 .classNameDiv {

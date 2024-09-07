@@ -15,6 +15,7 @@ export default function SectionServingsComponent(): React.ReactElement {
     return (
         <SectionComponent
             id={servingsContext["section"]["id"]}
+            className={servingsContext["section"]["className"]}
             style={servingsContext["section"]["style"]}>
             <DivComponent
                 id={servingsContext["div"]["id"]}

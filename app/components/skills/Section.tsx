@@ -16,6 +16,7 @@ export default function SectionSkillsComponent(): React.ReactElement {
     return (
         <SectionComponent
             id={skillsContext["section"]["id"]}
+            className={skillsContext["section"]["className"]}
             style={skillsContext["section"]["style"]}>
             <DivComponent
                 id={skillsContext["div"]["id"]}
