@@ -240,9 +240,9 @@ export default function Page(): React.ReactElement {
         },
         image: {
             id: profileParsedFromFile["idImage"],
+            className: profileParsedFromFile["classNameImage"],
             src: profileParsedFromFile["srcImage"],
             alt: profileParsedFromFile["altImage"],
-            style: profileParsedFromFile["styleImage"],
             width: checkInnerWidth(
                 areSizes,
                 [130, 130, 130, 130, 130, 160, 180, 200, 220, 240, 260, 260, 260, 260]

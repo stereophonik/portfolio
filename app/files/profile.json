@@ -9,13 +9,9 @@
     "classNameDiv": "classNameDiv",
     "contentDiv": "",
     "idImage": "imageProfile",
+    "classNameImage": "classNameImage",
     "srcImage": "/picture.jpg",
     "altImage": "Nikolai Reyes",
-    "styleImage": {
-        "maxWidth": "100%",
-        "maxHeight": "100%",
-        "borderRadius": "10%"
-    },
     "idH1": "h1Profile",
     "contentH1": "Nikolai Reyes",
     "idH2": "h2Profile",

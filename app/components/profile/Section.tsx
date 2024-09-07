@@ -22,9 +22,9 @@ export default function SectionProfileComponent(): React.ReactElement {
             </DivComponent>
             <ImageComponent
                 id={profileContext["image"]["id"]}
+                className={profileContext["image"]["className"]}
                 src={profileContext["image"]["src"]}
                 alt={profileContext["image"]["alt"]}
-                style={profileContext["image"]["style"]}
                 width={profileContext["image"]["width"]}
                 height={profileContext["image"]["height"]}
             />

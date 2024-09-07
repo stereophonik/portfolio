@@ -1,11 +1,11 @@
 import Image from "next/image";
 
-export default function ImageComponent({ id, src, alt, style, width, height }): React.ReactElement {
+export default function ImageComponent({ id, className, src, alt, width, height }): React.ReactElement {
     return <Image
         id={id}
+        className={className}
         src={src}
         alt={alt}
-        style={style}
         width={width}
         height={height}
     />;
