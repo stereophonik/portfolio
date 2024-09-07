@@ -4,7 +4,7 @@
 }
 
 a {
-    color: #2C2F37;
+    color: #DA6E2B;
     text-decoration: none;
     border-radius: 10%;
 }
@@ -22,10 +22,17 @@ a:hover {
 
 .classNameNav {
     overflow: hidden;
-    background-color: #DA6E2B;
-    color: #2C2F37;
+    background-color: #2C2F37;
+    color: #DA6E2B;
     text-align: center;
-    border-radius: 10%;
+}
+
+.classNameSection {
+    overflow: hidden;
+    width: 100vw;
+    background-color: #2C2F37;
+    color: #DA6E2B;
+    text-align: center;
 }
 
 .classNameDiv {

@@ -3,15 +3,10 @@ export default interface ValueIntroInterface {
     h2s: { className: string; style: { fontSize: any }; id: any; content: any }[];
     h1: { className: string; style: { fontSize: any }; id: any; content: any };
     section: {
+        id: any;
+        className: any;
         style: {
-            backgroundColor: any;
-            overflow: any;
-            color: any;
-            borderRadius: any;
-            textAlign: any;
-            width: any;
-            height: any
+            height: any;
         };
-        id: any
     }
 }

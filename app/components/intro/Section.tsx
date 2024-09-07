@@ -13,6 +13,7 @@ export default function SectionIntroComponent(): React.ReactElement {
     return (
         <SectionComponent
             id={introContext["section"]["id"]}
+            className={introContext["section"]["className"]}
             style={introContext["section"]["style"]}>
             <DivComponent
                 id={introContext["div"]["id"]}

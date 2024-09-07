@@ -220,12 +220,8 @@ export default function Page(): React.ReactElement {
     const valueProfile: ValueProfileInterface = {
         section: {
             id: profileParsedFromFile["idSection"],
+            className: profileParsedFromFile["classNameSection"],
             style: {
-                overflow: profileParsedFromFile["overflowStyleSection"],
-                width: profileParsedFromFile["widthStyleSection"],
-                backgroundColor: profileParsedFromFile["backgroundColorStyleSection"],
-                color: profileParsedFromFile["colorStyleSection"],
-                textAlign: profileParsedFromFile["textAlignStyleSection"],
                 height: checkInnerWidth(
                     areSizes,
                     ["95vw", "90vw", "75vw", "60vw", "55vw", "60vw", "60vw",
@@ -281,13 +277,8 @@ export default function Page(): React.ReactElement {
     const valueIntro: ValueIntroInterface = {
         section: {
             id: introParsedFromFile["idSection"],
+            className: introParsedFromFile["classNameSection"],
             style: {
-                overflow: introParsedFromFile["overflowStyleSection"],
-                width: introParsedFromFile["widthStyleSection"],
-                backgroundColor: introParsedFromFile["backgroundColorStyleSection"],
-                color: introParsedFromFile["colorStyleSection"],
-                textAlign: introParsedFromFile["textAlignStyleSection"],
-                borderRadius: introParsedFromFile["borderRadiusStyleSection"],
                 height: checkInnerWidth(
                     areSizes,
                     ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",

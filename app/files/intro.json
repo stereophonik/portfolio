@@ -1,11 +1,6 @@
 {
   "idSection": "sectionIntro",
-  "overflowStyleSection": "hidden",
-  "widthStyleSection": "100vw",
-  "backgroundColorStyleSection": "#DA6E2B",
-  "colorStyleSection": "#2C2F37",
-  "textAlignStyleSection": "center",
-  "borderRadiusStyleSection": "10%",
+  "classNameSection": "classNameSection",
   "idDiv": "divIntro",
   "classNameDiv": "classNameDiv",
   "contentDiv": "",

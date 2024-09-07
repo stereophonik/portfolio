@@ -14,6 +14,7 @@ export default function SectionProfileComponent(): React.ReactElement {
     return (
         <SectionComponent
             id={profileContext["section"]["id"]}
+            className={profileContext["section"]["className"]}
             style={profileContext["section"]["style"]}>
             <DivComponent
                 id={profileContext["div"]["id"]}
