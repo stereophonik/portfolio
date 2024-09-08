@@ -2,7 +2,6 @@ export default interface ValueProfileInterface {
     section: {
         id: any;
         className: any;
-        style: { height: any; }
     };
     div: { id: any; className: any; content: any; };
     image: { id: any; className: any; src: any; alt: any; width: any; height: any; };

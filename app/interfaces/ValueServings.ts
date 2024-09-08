@@ -6,9 +6,6 @@ export default interface ValueServingsInterface {
     section: {
         id: any;
         className: any;
-        style: {
-            height: any;
-        };
     };
     h2: { className: string; style: { fontSize: any; }; id: any; }
 }

@@ -5,8 +5,5 @@ export default interface ValueIntroInterface {
     section: {
         id: any;
         className: any;
-        style: {
-            height: any;
-        };
     }
 }

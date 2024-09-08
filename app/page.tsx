@@ -196,14 +196,7 @@ export default function Page(): React.ReactElement {
     const valueProfile: ValueProfileInterface = {
         section: {
             id: profileParsedFromFile["idSection"],
-            className: profileParsedFromFile["classNameSection"],
-            style: {
-                height: checkInnerWidth(
-                    areSizes,
-                    ["95vw", "90vw", "75vw", "60vw", "55vw", "60vw", "60vw",
-                        "60vw", "60vw", "60vw", "60vw", "55vw", "50vw", "45vw"]
-                )
-            }
+            className: profileParsedFromFile["classNameSection"]
         },
         div: {
             id: profileParsedFromFile["idDiv"],
@@ -253,14 +246,7 @@ export default function Page(): React.ReactElement {
     const valueIntro: ValueIntroInterface = {
         section: {
             id: introParsedFromFile["idSection"],
-            className: introParsedFromFile["classNameSection"],
-            style: {
-                height: checkInnerWidth(
-                    areSizes,
-                    ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
-                        "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"]
-                )
-            }
+            className: introParsedFromFile["classNameSection"]
         },
         div: {
             id: introParsedFromFile["idDiv"],
@@ -310,14 +296,7 @@ export default function Page(): React.ReactElement {
     const valueServings: ValueServingsInterface = {
         section: {
             id: servingsParsedFromFile["idSection"],
-            className: servingsParsedFromFile["classNameSection"],
-            style: {
-                height: checkInnerWidth(
-                    areSizes,
-                    ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
-                        "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"]
-                )
-            }
+            className: servingsParsedFromFile["classNameSection"]
         },
         div: {
             id: servingsParsedFromFile["idDiv"],
@@ -373,14 +352,7 @@ export default function Page(): React.ReactElement {
     const valueSkills: ValueSkillsInterface = {
         section: {
             id: skillsParsedFromFile["idSection"],
-            className: skillsParsedFromFile["classNameSection"],
-            style: {
-                height: checkInnerWidth(
-                    areSizes,
-                    ["90vw", "85vw", "70vw", "50vw", "40vw", "50vw", "50vw",
-                        "55vw", "55vw", "55vw", "55vw", "50vw", "45vw", "40vw"]
-                )
-            }
+            className: skillsParsedFromFile["classNameSection"]
         },
         div: {
             id: skillsParsedFromFile["idDiv"],
@@ -450,14 +422,7 @@ export default function Page(): React.ReactElement {
     const valueOutro: ValueOutroInterface = {
         section: {
             id: outroParsedFromFile["idSection"],
-            className: outroParsedFromFile["classNameSection"],
-            style: {
-                height: checkInnerWidth(
-                    areSizes,
-                    ["65vw", "55vw", "45vw", "35vw", "30vw", "35vw", "35vw",
-                        "35vw", "35vw", "40vw", "40vw", "35vw", "30vw", "25vw"]
-                )
-            }
+            className: outroParsedFromFile["classNameSection"]
         },
         div: {
             id: outroParsedFromFile["idDiv"],
