@@ -11,8 +11,11 @@
   "idH2": "h2Servings",
   "classNameAaLis": "classNameVerticalLi",
   "keyAaLis": 1,
-  "contentAaLis": "Expertise in technology for front-end development",
+  "contentAaLis": "Platform webpage building experience set",
   "keyAbLis": 2,
   "classNameAbLis": "classNameVerticalLi",
-  "contentAbLis": "Selecting and applying concepts tailored for front-end applications"
+  "contentAbLis": "Framework & Library skill sets for building web applications",
+  "keyAcLis": 3,
+  "classNameAcLis": "classNameVerticalLi",
+  "contentAcLis": "Testing experience set from various companies"
 }

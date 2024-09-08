@@ -25,7 +25,7 @@ export default function SectionLibraryComponent(): React.ReactElement {
                 id={skillsContext["h1"]["id"]}
                 className={skillsContext["h1"]["className"]}
                 style={skillsContext["h1"]["style"]}>
-                Library Skill Set:
+                Library:
             </H1Component>
             <H2Component
                 id={skillsContext["h2"]["id"]}

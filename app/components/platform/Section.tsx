@@ -25,7 +25,7 @@ export default function SectionPlatformComponent(): React.ReactElement {
                 id={skillsContext["h1"]["id"]}
                 className={skillsContext["h1"]["className"]}
                 style={skillsContext["h1"]["style"]}>
-                Platform Skill Set:
+                Platform:
             </H1Component>
             <H2Component
                 id={skillsContext["h2"]["id"]}

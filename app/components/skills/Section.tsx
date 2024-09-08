@@ -5,6 +5,7 @@ import DivComponent from "../Div";
 import H1Component from "../H1";
 import UlComponent from "../Ul";
 import H2Component from "../H2";
+import BrComponent from "../Br";
 import LiComponent from "../Li";
 import LinkComponent from "../Link";
 
@@ -36,6 +37,9 @@ export default function SectionSkillsComponent(): React.ReactElement {
                     id={skillsContext["h2"]["id"]}
                     className={skillsContext["h2"]["className"]}
                     style={skillsContext["h2"]["style"]}>
+                    Feel free to scroll down below with regards to my skill sets or via these links:
+                    <BrComponent />
+                    <BrComponent />
                     {
                         skillsContext["lis"].map((li: { [x: string]: any; }) =>
                             <LiComponent

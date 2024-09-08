@@ -25,7 +25,7 @@ export default function SectionFrameworkComponent(): React.ReactElement {
                 id={skillsContext["h1"]["id"]}
                 className={skillsContext["h1"]["className"]}
                 style={skillsContext["h1"]["style"]}>
-                Framework Skill Set:
+                Framework:
             </H1Component>
             <H2Component
                 id={skillsContext["h2"]["id"]}

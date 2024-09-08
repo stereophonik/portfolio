@@ -361,6 +361,11 @@ export default function Page(): React.ReactElement {
                 className: servingsParsedFromFile["classNameAbLis"],
                 key: servingsParsedFromFile["keyAbLis"],
                 content: servingsParsedFromFile["contentAbLis"]
+            },
+            {
+                className: servingsParsedFromFile["classNameAcLis"],
+                key: servingsParsedFromFile["keyAcLis"],
+                content: servingsParsedFromFile["contentAcLis"]
             }
         ]
     }
