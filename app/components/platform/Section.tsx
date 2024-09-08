@@ -5,6 +5,8 @@ import {useContext} from "react";
 import DivComponent from "../Div";
 import H1Component from "../H1";
 import H2Component from "../H2";
+import BrComponent from "../Br";
+import LinkComponent from "../Link";
 
 export default function SectionPlatformComponent(): React.ReactElement {
     const skillsContext: {} = useContext(SkillsContext);
@@ -30,15 +32,15 @@ export default function SectionPlatformComponent(): React.ReactElement {
                 className={skillsContext["h2"]["className"]}
                 style={skillsContext["h2"]["style"]}>
                 I have an experience in WordPress page creating. Please refer to the page below.
-                <br />
-                <br />
-                <a
+                <BrComponent />
+                <BrComponent />
+                <LinkComponent
                     href="https://classconstructions.com.au/class-constructions-blogs"
                 >
                     Class Constructions Blogs Page
-                </a>
-                <br />
-                <br />
+                </LinkComponent>
+                <BrComponent />
+                <BrComponent />
                 If you need someone to create a WordPress site for you, get me for the opportunity!
             </H2Component>
         </SectionComponent>
