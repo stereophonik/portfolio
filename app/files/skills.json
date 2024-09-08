@@ -33,10 +33,10 @@
   "hrefAdLinks": "/testing-skills",
   "hrefAeLinks": "/version-control-skills",
   "hrefAfLinks": "/language-skills",
-  "contentAaLinks": "Platform Skills",
-  "contentAbLinks": "Framework Skills",
-  "contentAcLinks": "Library Skills",
-  "contentAdLinks": "Testing Skills",
-  "contentAeLinks": "Version Control Skills",
-  "contentAfLinks": "Language Skills"
+  "contentAaLinks": "Platform ",
+  "contentAbLinks": "Framework ",
+  "contentAcLinks": "Library ",
+  "contentAdLinks": "Testing ",
+  "contentAeLinks": "Version Control ",
+  "contentAfLinks": "Language "
 }
