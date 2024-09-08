@@ -25,19 +25,19 @@ export default function SectionFrameworkComponent(): React.ReactElement {
                 id={skillsContext["h1"]["id"]}
                 className={skillsContext["h1"]["className"]}
                 style={skillsContext["h1"]["style"]}>
-                Framework:
+                Framework Skill Set:
             </H1Component>
             <H2Component
                 id={skillsContext["h2"]["id"]}
                 className={skillsContext["h2"]["className"]}
                 style={skillsContext["h2"]["style"]}>
-                This app has been built via Next.js. This has been built even though I don't any Next.js work experience. Please refer to the repo below for code checking.
+                This app has been built via Next.js. This has been built even though I don't any Next.js work experience. You may refer to my portfolio application below.
                 <BrComponent />
                 <BrComponent />
                 <LinkComponent
-                    href="https://github.com/stereophonik/portfolio"
+                    href="https://github.com/stereophonik/portfolio/tree/main/app"
                 >
-                    My Portfolio Repository
+                    My Portfolio Application
                 </LinkComponent>
             </H2Component>
         </SectionComponent>

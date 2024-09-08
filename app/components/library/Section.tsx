@@ -8,12 +8,12 @@ import H2Component from "../H2";
 import BrComponent from "../Br";
 import LinkComponent from "../Link";
 
-export default function SectionPlatformComponent(): React.ReactElement {
+export default function SectionLibraryComponent(): React.ReactElement {
     const skillsContext: {} = useContext(SkillsContext);
 
     return (
         <SectionComponent
-            id="sectionPlatform"
+            id="sectionLibrary"
             className="classNameClassBSection"
             style={skillsContext["section"]["style"]}>
             <DivComponent
@@ -25,23 +25,26 @@ export default function SectionPlatformComponent(): React.ReactElement {
                 id={skillsContext["h1"]["id"]}
                 className={skillsContext["h1"]["className"]}
                 style={skillsContext["h1"]["style"]}>
-                Platform Skill Set:
+                Library Skill Set:
             </H1Component>
             <H2Component
                 id={skillsContext["h2"]["id"]}
                 className={skillsContext["h2"]["className"]}
                 style={skillsContext["h2"]["style"]}>
-                I have an experience in WordPress page creating. Please refer to the page below.
+                If you are familiar with Next.js, you probably know that it's built on top of the React library. This app has certain React implementations in it, including components and contexts.
                 <BrComponent />
                 <BrComponent />
                 <LinkComponent
-                    href="https://classconstructions.com.au/class-constructions-blogs"
+                    href="https://github.com/stereophonik/portfolio/tree/main/app/components"
                 >
-                    Class Constructions Blogs Page
+                    My Portfolio Application Components
                 </LinkComponent>
                 <BrComponent />
-                <BrComponent />
-                If you need someone to create a WordPress site for you, get me for the opportunity!
+                <LinkComponent
+                    href="https://github.com/stereophonik/portfolio/tree/main/app/contexts"
+                >
+                    My Portfolio Application Contexts
+                </LinkComponent>
             </H2Component>
         </SectionComponent>
     );

@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
 main {
@@ -10,13 +9,13 @@ main {
 }
 
 a {
-    color: #DA6E2B;
+    color: wheat;
     text-decoration: none;
     border-radius: 10%;
 }
 
 a:hover {
-    color: wheat;
+    color: darkgray;
 }
 
 .classNameImage {
@@ -30,13 +29,23 @@ a:hover {
     overflow: hidden;
     background-color: #2C2F37;
     color: #DA6E2B;
+    text-align: center;
 }
 
-.classNameSection {
+.classNameClassASection {
     overflow: hidden;
     width: 100vw;
     background-color: #2C2F37;
     color: #DA6E2B;
+    text-align: right;
+}
+
+.classNameClassBSection {
+    overflow: hidden;
+    width: 100vw;
+    background-color: #DA6E2B;
+    color: #2C2F37;
+    text-align: left;
 }
 
 .classNameDiv {

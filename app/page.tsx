@@ -13,6 +13,7 @@ import SectionServingsComponent from "./components/servings/Section";
 import SectionSkillsComponent from "./components/skills/Section";
 import SectionPlatformComponent from "./components/platform/Section";
 import SectionFrameworkComponent from "./components/framework/Section";
+import SectionLibraryComponent from "./components/library/Section";
 import SectionOutroComponent from "./components/outro/Section";
 
 import { NavigationContext } from "./contexts/Navigation";
@@ -423,21 +424,6 @@ export default function Page(): React.ReactElement {
                 className: skillsParsedFromFile["classNameAcLis"],
                 key: skillsParsedFromFile["keyAcLis"],
                 content: skillsParsedFromFile["contentAcLis"]
-            },
-            {
-                className: skillsParsedFromFile["classNameAdLis"],
-                key: skillsParsedFromFile["keyAdLis"],
-                content: skillsParsedFromFile["contentAdLis"]
-            },
-            {
-                className: skillsParsedFromFile["classNameAeLis"],
-                key: skillsParsedFromFile["keyAeLis"],
-                content: skillsParsedFromFile["contentAeLis"]
-            },
-            {
-                className: skillsParsedFromFile["classNameAfLis"],
-                key: skillsParsedFromFile["keyAfLis"],
-                content: skillsParsedFromFile["contentAfLis"]
             }
         ],
         links: [
@@ -452,18 +438,6 @@ export default function Page(): React.ReactElement {
             {
                 href: `${skillsParsedFromFile["hrefAcLinks"]}`,
                 content: skillsParsedFromFile["contentAcLinks"]
-            },
-            {
-                href: `${skillsParsedFromFile["hrefAdLinks"]}`,
-                content: skillsParsedFromFile["contentAdLinks"]
-            },
-            {
-                href: `${skillsParsedFromFile["hrefAeLinks"]}`,
-                content: skillsParsedFromFile["contentAeLinks"]
-            },
-            {
-                href: `${skillsParsedFromFile["hrefAfLinks"]}`,
-                content: skillsParsedFromFile["contentAfLinks"]
             }
         ]
     }
@@ -534,6 +508,7 @@ export default function Page(): React.ReactElement {
                 <SectionSkillsComponent />
                 <SectionPlatformComponent />
                 <SectionFrameworkComponent />
+                <SectionLibraryComponent />
             </SkillsContext.Provider>
             <OutroContext.Provider
                 value={valueOutro}>
