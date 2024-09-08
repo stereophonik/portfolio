@@ -12,6 +12,7 @@ import SectionIntroComponent from "./components/intro/Section";
 import SectionServingsComponent from "./components/servings/Section";
 import SectionSkillsComponent from "./components/skills/Section";
 import SectionPlatformComponent from "./components/platform/Section";
+import SectionFrameworkComponent from "./components/framework/Section";
 import SectionOutroComponent from "./components/outro/Section";
 
 import { NavigationContext } from "./contexts/Navigation";
@@ -532,6 +533,7 @@ export default function Page(): React.ReactElement {
                 value={valueSkills}>
                 <SectionSkillsComponent />
                 <SectionPlatformComponent />
+                <SectionFrameworkComponent />
             </SkillsContext.Provider>
             <OutroContext.Provider
                 value={valueOutro}>
