@@ -1,15 +1,15 @@
 {
-    "idSection": "sectionProfile",
+    "idSection": "idSectionProfile",
     "classNameSection": "classNameClassBSection",
-    "idDiv": "divProfile",
+    "idDiv": "idDivProfile",
     "classNameDiv": "classNameDiv",
     "contentDiv": "",
-    "idImage": "imageProfile",
+    "idImage": "idImageProfile",
     "classNameImage": "classNameImage",
     "srcImage": "/picture.jpg",
     "altImage": "Nikolai Reyes",
-    "idH1": "h1Profile",
+    "idH1": "idH1Profile",
     "contentH1": "Nikolai Reyes",
-    "idH2": "h2Profile",
+    "idH2": "idH2Profile",
     "contentH2": "Transitioning to Front-end Development"
 }

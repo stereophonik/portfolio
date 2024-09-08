@@ -13,7 +13,7 @@ export default function SectionFrameworkComponent(): React.ReactElement {
 
     return (
         <SectionComponent
-            id="sectionFramework"
+            id="idSectionFramework"
             className={skillsContext["section"]["className"]}
             style={skillsContext["section"]["style"]}>
             <DivComponent

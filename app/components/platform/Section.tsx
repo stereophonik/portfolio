@@ -13,7 +13,7 @@ export default function SectionPlatformComponent(): React.ReactElement {
 
     return (
         <SectionComponent
-            id="sectionPlatform"
+            id="idSectionPlatform"
             className="classNameClassBSection"
             style={skillsContext["section"]["style"]}>
             <DivComponent

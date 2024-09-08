@@ -13,7 +13,7 @@ export default function SectionLibraryComponent(): React.ReactElement {
 
     return (
         <SectionComponent
-            id="sectionLibrary"
+            id="idSectionLibrary"
             className="classNameClassBSection"
             style={skillsContext["section"]["style"]}>
             <DivComponent

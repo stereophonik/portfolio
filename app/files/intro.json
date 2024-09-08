@@ -1,13 +1,13 @@
 {
-  "idSection": "sectionIntro",
+  "idSection": "idSectionIntro",
   "classNameSection": "classNameClassASection",
-  "idDiv": "divIntro",
+  "idDiv": "idDivIntro",
   "classNameDiv": "classNameDiv",
   "contentDiv": "",
-  "idH1": "h1Intro",
+  "idH1": "idH1Intro",
   "contentH1": "Hello!",
-  "idAaH2s": "aaH2sIntro",
-  "idAbH2s": "abH2sIntro",
+  "idAaH2s": "idAaH2sIntro",
+  "idAbH2s": "idAbH2sIntro",
   "contentAaH2s": "Are you looking to have a website created or edited for your small business?",
   "contentAbH2s": "I'm here to assist! With 6 years of experience transitioning from quality testing to front-end development, I bring a unique perspective to streamline your workflows and enhance your web applications."
 }
