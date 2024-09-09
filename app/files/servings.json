@@ -1,9 +1,6 @@
 {
   "idSection": "idSectionServings",
   "classNameSection": "classNameClassBSection",
-  "idDiv": "idDivServings",
-  "classNameDiv": "classNameDiv",
-  "contentDiv": "",
   "idH1": "idH1Servings",
   "contentH1": "Servings:",
   "idUl": "idUlServings",

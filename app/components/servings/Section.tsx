@@ -1,7 +1,6 @@
 import { useContext } from "react";
 
 import SectionComponent from "../Section";
-import DivComponent from "../Div";
 import H1Component from "../H1";
 import UlComponent from "../Ul";
 import H2Component from "../H2";
@@ -17,11 +16,6 @@ export default function SectionServingsComponent(): React.ReactElement {
             id={servingsContext["section"]["id"]}
             className={servingsContext["section"]["className"]}
             style={servingsContext["section"]["style"]}>
-            <DivComponent
-                id={servingsContext["div"]["id"]}
-                className={servingsContext["div"]["className"]}>
-                {servingsContext["div"]["content"]}
-            </DivComponent>
             <H1Component
                 id={servingsContext["h1"]["id"]}
                 className={servingsContext["h1"]["className"]}

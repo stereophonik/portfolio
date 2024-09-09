@@ -1,9 +1,6 @@
 {
   "idSection": "idSectionSkills",
   "classNameSection": "classNameClassASection",
-  "idDiv": "idDivSkills",
-  "classNameDiv": "classNameDiv",
-  "contentDiv": "",
   "idH1": "idH1Skills",
   "contentH1": "Skill Sets:",
   "idUl": "idUlSkills",

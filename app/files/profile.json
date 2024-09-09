@@ -1,9 +1,6 @@
 {
     "idSection": "idSectionProfile",
     "classNameSection": "classNameClassBSection",
-    "idDiv": "idDivProfile",
-    "classNameDiv": "classNameDiv",
-    "contentDiv": "",
     "idImg": "idImageProfile",
     "classNameImg": "classNameImage",
     "srcImg": "/picture.jpeg",

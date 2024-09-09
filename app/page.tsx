@@ -141,11 +141,6 @@ export default function Page(): React.ReactElement {
             id: profileParsedFromFile["idSection"],
             className: profileParsedFromFile["classNameSection"]
         },
-        div: {
-            id: profileParsedFromFile["idDiv"],
-            className: profileParsedFromFile["classNameDiv"],
-            content: profileParsedFromFile["contentDiv"]
-        },
         img: {
             id: profileParsedFromFile["idImg"],
             className: profileParsedFromFile["classNameImg"],
@@ -168,11 +163,6 @@ export default function Page(): React.ReactElement {
         section: {
             id: introParsedFromFile["idSection"],
             className: introParsedFromFile["classNameSection"]
-        },
-        div: {
-            id: introParsedFromFile["idDiv"],
-            className: introParsedFromFile["classNameDiv"],
-            content: introParsedFromFile["contentDiv"]
         },
         h1: {
             id: introParsedFromFile["idH1"],
@@ -197,11 +187,6 @@ export default function Page(): React.ReactElement {
         section: {
             id: servingsParsedFromFile["idSection"],
             className: servingsParsedFromFile["classNameSection"]
-        },
-        div: {
-            id: servingsParsedFromFile["idDiv"],
-            className: servingsParsedFromFile["classNameDiv"],
-            content: servingsParsedFromFile["contentDiv"]
         },
         h1: {
             id: servingsParsedFromFile["idH1"],
@@ -239,11 +224,6 @@ export default function Page(): React.ReactElement {
         section: {
             id: skillsParsedFromFile["idSection"],
             className: skillsParsedFromFile["classNameSection"]
-        },
-        div: {
-            id: skillsParsedFromFile["idDiv"],
-            className: skillsParsedFromFile["classNameDiv"],
-            content: skillsParsedFromFile["contentDiv"]
         },
         h1: {
             id: skillsParsedFromFile["idH1"],
@@ -295,11 +275,6 @@ export default function Page(): React.ReactElement {
         section: {
             id: outroParsedFromFile["idSection"],
             className: outroParsedFromFile["classNameSection"]
-        },
-        div: {
-            id: outroParsedFromFile["idDiv"],
-            className: outroParsedFromFile["classNameDiv"],
-            content: outroParsedFromFile["contentDiv"]
         },
         h1: {
             id: outroParsedFromFile["idH1"],

@@ -1,7 +1,6 @@
 import { useContext } from "react";
 
 import SectionComponent from "../Section";
-import DivComponent from "../Div";
 
 import { ProfileContext } from "../../contexts/Profile";
 import ImgComponent from "../Img";
@@ -16,11 +15,6 @@ export default function SectionProfileComponent(): React.ReactElement {
             id={profileContext["section"]["id"]}
             className={profileContext["section"]["className"]}
             style={profileContext["section"]["style"]}>
-            <DivComponent
-                id={profileContext["div"]["id"]}
-                className={profileContext["div"]["className"]}>
-                {profileContext["div"]["content"]}
-            </DivComponent>
             <ImgComponent
                 id={profileContext["img"]["id"]}
                 className={profileContext["img"]["className"]}

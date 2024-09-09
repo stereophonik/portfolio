@@ -2,7 +2,6 @@ import SectionComponent from "../Section";
 
 import { SkillsContext } from "../../contexts/Skills";
 import {useContext} from "react";
-import DivComponent from "../Div";
 import H1Component from "../H1";
 import H2Component from "../H2";
 import BrComponent from "../Br";
@@ -16,11 +15,6 @@ export default function SectionLibraryComponent(): React.ReactElement {
             id="idSectionLibrary"
             className="classNameClassBSection"
             style={skillsContext["section"]["style"]}>
-            <DivComponent
-                id={skillsContext["div"]["id"]}
-                className={skillsContext["div"]["className"]}>
-                {skillsContext["div"]["content"]}
-            </DivComponent>
             <H1Component
                 id={skillsContext["h1"]["id"]}
                 className={skillsContext["h1"]["className"]}

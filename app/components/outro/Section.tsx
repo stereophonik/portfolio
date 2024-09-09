@@ -1,7 +1,6 @@
 import { useContext } from "react";
 
 import SectionComponent from "../Section";
-import DivComponent from "../Div";
 import H1Component from "../H1";
 import H2Component from "../H2";
 
@@ -15,11 +14,6 @@ export default function SectionOutroComponent(): React.ReactElement {
             id={outroContext["section"]["id"]}
             className={outroContext["section"]["className"]}
             style={outroContext["section"]["style"]}>
-            <DivComponent
-                id={outroContext["div"]["id"]}
-                className={outroContext["div"]["className"]}>
-                {outroContext["div"]["content"]}
-            </DivComponent>
             <H1Component
                 id={outroContext["h1"]["id"]}
                 className={outroContext["h1"]["className"]}
