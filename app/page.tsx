@@ -116,22 +116,22 @@ export default function Page(): React.ReactElement {
                 content: navigationParsedFromFile["contentAdLis"]
             }
         ],
-        links: [
+        as: [
             {
-                href: `${navigationParsedFromFile["hrefAaLink"]}`,
-                content: navigationParsedFromFile["contentAaLink"]
+                href: `${navigationParsedFromFile["hrefAaAs"]}`,
+                content: navigationParsedFromFile["contentAaAs"]
             },
             {
-                href: `${navigationParsedFromFile["hrefAbLink"]}`,
-                content: navigationParsedFromFile["contentAbLink"]
+                href: `${navigationParsedFromFile["hrefAbAs"]}`,
+                content: navigationParsedFromFile["contentAbAs"]
             },
             {
-                href: `${navigationParsedFromFile["hrefAcLink"]}`,
-                content: navigationParsedFromFile["contentAcLink"]
+                href: `${navigationParsedFromFile["hrefAcAs"]}`,
+                content: navigationParsedFromFile["contentAcAs"]
             },
             {
-                href: `${navigationParsedFromFile["hrefAdLink"]}`,
-                content: navigationParsedFromFile["contentAdLink"]
+                href: `${navigationParsedFromFile["hrefAdAs"]}`,
+                content: navigationParsedFromFile["contentAdAs"]
             }
         ]
     }
@@ -147,10 +147,10 @@ export default function Page(): React.ReactElement {
             content: profileParsedFromFile["contentDiv"]
         },
         img: {
-            id: profileParsedFromFile["idImage"],
-            className: profileParsedFromFile["classNameImage"],
-            src: profileParsedFromFile["srcImage"],
-            alt: profileParsedFromFile["altImage"]
+            id: profileParsedFromFile["idImg"],
+            className: profileParsedFromFile["classNameImg"],
+            src: profileParsedFromFile["srcImg"],
+            alt: profileParsedFromFile["altImg"]
         },
         h1: {
             id: profileParsedFromFile["idH1"],
@@ -275,18 +275,18 @@ export default function Page(): React.ReactElement {
                 content: skillsParsedFromFile["contentAcLis"]
             }
         ],
-        links: [
+        as: [
             {
-                href: `${skillsParsedFromFile["hrefAaLinks"]}`,
-                content: skillsParsedFromFile["contentAaLinks"]
+                href: `${skillsParsedFromFile["hrefAaAs"]}`,
+                content: skillsParsedFromFile["contentAaAs"]
             },
             {
-                href: `${skillsParsedFromFile["hrefAbLinks"]}`,
-                content: skillsParsedFromFile["contentAbLinks"]
+                href: `${skillsParsedFromFile["hrefAbAs"]}`,
+                content: skillsParsedFromFile["contentAbAs"]
             },
             {
-                href: `${skillsParsedFromFile["hrefAcLinks"]}`,
-                content: skillsParsedFromFile["contentAcLinks"]
+                href: `${skillsParsedFromFile["hrefAcAs"]}`,
+                content: skillsParsedFromFile["contentAcAs"]
             }
         ]
     }

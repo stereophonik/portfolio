@@ -23,8 +23,8 @@ export default function NavNavigationComponent(): React.ReactElement {
                             className={li["className"]}
                             key={li["key"]}>
                             <AComponent
-                                href={navigationContext["links"][navigationContext["lis"].indexOf(li)]["href"]}>
-                                {navigationContext["links"][navigationContext["lis"].indexOf(li)]["content"]}
+                                href={navigationContext["as"][navigationContext["lis"].indexOf(li)]["href"]}>
+                                {navigationContext["as"][navigationContext["lis"].indexOf(li)]["content"]}
                             </AComponent>
                         </LiComponent>
                     )

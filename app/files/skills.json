@@ -18,10 +18,10 @@
   "classNameAcLis": "classNameVerticalLi",
   "keyAcLis": 3,
   "contentAcLis": "",
-  "hrefAaLinks": "#idSectionPlatform",
-  "hrefAbLinks": "#idSectionFramework",
-  "hrefAcLinks": "#idSectionLibrary",
-  "contentAaLinks": "Platform",
-  "contentAbLinks": "Framework",
-  "contentAcLinks": "Library"
+  "hrefAaAs": "#idSectionPlatform",
+  "hrefAbAs": "#idSectionFramework",
+  "hrefAcAs": "#idSectionLibrary",
+  "contentAaAs": "Platform",
+  "contentAbAs": "Framework",
+  "contentAcAs": "Library"
 }

@@ -47,8 +47,8 @@ export default function SectionSkillsComponent(): React.ReactElement {
                                 className={li["className"]}
                                 key={li["key"]}>
                                 <AComponent
-                                    href={skillsContext["links"][skillsContext["lis"].indexOf(li)]["href"]}>
-                                    {skillsContext["links"][skillsContext["lis"].indexOf(li)]["content"]}
+                                    href={skillsContext["as"][skillsContext["lis"].indexOf(li)]["href"]}>
+                                    {skillsContext["as"][skillsContext["lis"].indexOf(li)]["content"]}
                                 </AComponent>
                             </LiComponent>
                         )

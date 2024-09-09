@@ -16,12 +16,12 @@
   "classNameAdLis": "classNameHorizontalLi",
   "keyAdLis": 4,
   "contentAdLis": "",
-  "hrefAaLink": "#idSectionIntro",
-  "contentAaLink": "Intro",
-  "hrefAbLink": "#idSectionServings",
-  "contentAbLink": "Servings",
-  "hrefAcLink": "#idSectionSkills",
-  "contentAcLink": "Skill Sets",
-  "hrefAdLink": "#idSectionOutro",
-  "contentAdLink": "Outro"
+  "hrefAaAs": "#idSectionIntro",
+  "contentAaAs": "Intro",
+  "hrefAbAs": "#idSectionServings",
+  "contentAbAs": "Servings",
+  "hrefAcAs": "#idSectionSkills",
+  "contentAcAs": "Skill Sets",
+  "hrefAdAs": "#idSectionOutro",
+  "contentAdAs": "Outro"
 }
