@@ -27,7 +27,7 @@ export default function SectionSkillsComponent(): React.ReactElement {
                 id={skillsContext["h2"]["id"]}
                 className={skillsContext["h2"]["className"]}
                 style={skillsContext["h2"]["style"]}>
-                Feel free to scroll down below with regards to my skill sets or via these links:
+                {skillsContext["h2"]["content"]}
             </H2Component>
             <UlComponent
                 id={skillsContext["ul"]["id"]}

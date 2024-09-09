@@ -149,13 +149,13 @@ export default function Page(): React.ReactElement {
         },
         h1: {
             id: profileParsedFromFile["idH1"],
-            content: profileParsedFromFile["contentH1"],
-            className: "classNameH1"
+            className: profileParsedFromFile["classNameH1"],
+            content: profileParsedFromFile["contentH1"]
         },
         h2: {
             id: profileParsedFromFile["idH2"],
-            content: profileParsedFromFile["contentH2"],
-            className: "classNameH2"
+            className: profileParsedFromFile["classNameH2"],
+            content: profileParsedFromFile["contentH2"]
         }
     }
 
@@ -166,13 +166,13 @@ export default function Page(): React.ReactElement {
         },
         h1: {
             id: introParsedFromFile["idH1"],
-            content: introParsedFromFile["contentH1"],
-            className: "classNameH1"
+            className: introParsedFromFile["classNameH1"],
+            content: introParsedFromFile["contentH1"]
         },
         h2: {
             id: introParsedFromFile["idH2"],
-            content: introParsedFromFile["contentH2"],
-            className: "classNameH2"
+            className: introParsedFromFile["classNameH2"],
+            content: introParsedFromFile["contentH2"]
         },
         ul: {
             id: introParsedFromFile["idUl"],
@@ -199,8 +199,8 @@ export default function Page(): React.ReactElement {
         },
         h1: {
             id: servingsParsedFromFile["idH1"],
-            content: servingsParsedFromFile["contentH1"],
-            className: "classNameH1"
+            className: servingsParsedFromFile["classNameH1"],
+            content: servingsParsedFromFile["contentH1"]
         },
         ul: {
             id: servingsParsedFromFile["idUl"],
@@ -208,8 +208,8 @@ export default function Page(): React.ReactElement {
         },
         h2: {
             id: servingsParsedFromFile["idH2"],
-            content: servingsParsedFromFile["contentH2"],
-            className: "classNameH2"
+            className: servingsParsedFromFile["classNameH2"],
+            content: servingsParsedFromFile["contentH2"]
         },
         lis: [
             {
@@ -237,16 +237,17 @@ export default function Page(): React.ReactElement {
         },
         h1: {
             id: skillsParsedFromFile["idH1"],
-            content: skillsParsedFromFile["contentH1"],
-            className: "classNameH1"
+            className: skillsParsedFromFile["classNameH1"],
+            content: skillsParsedFromFile["contentH1"]
+        },
+        h2: {
+            id: skillsParsedFromFile["idH2"],
+            className: skillsParsedFromFile["classNameH2"],
+            content: skillsParsedFromFile["contentH2"]
         },
         ul: {
             id: skillsParsedFromFile["idUl"],
             className: skillsParsedFromFile["classNameUl"]
-        },
-        h2: {
-            id: skillsParsedFromFile["idH2"],
-            className: "classNameH2"
         },
         lis: [
             {
@@ -288,13 +289,13 @@ export default function Page(): React.ReactElement {
         },
         h1: {
             id: outroParsedFromFile["idH1"],
-            content: outroParsedFromFile["contentH1"],
-            className: "classNameH1"
+            className: outroParsedFromFile["classNameH1"],
+            content: outroParsedFromFile["contentH1"]
         },
         h2: {
             id: outroParsedFromFile["idH2"],
-            content: outroParsedFromFile["contentH2"],
-            className: "classNameH2"
+            className: outroParsedFromFile["classNameH2"],
+            content: outroParsedFromFile["contentH2"]
         }
     }
 

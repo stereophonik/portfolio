@@ -6,6 +6,6 @@ export default interface ValueSkillsInterface {
         id: any;
         className: any;
     };
-    h2: { id: any; className: string; };
+    h2: { id: any; className: string; content: any; };
     as: { href: string; content: any; }[]
 }

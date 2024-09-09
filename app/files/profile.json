@@ -6,7 +6,9 @@
     "srcImg": "/picture.jpeg",
     "altImg": "Nikolai Reyes",
     "idH1": "idH1Profile",
+    "classNameH1": "classNameH1",
     "contentH1": "Nikolai Reyes",
     "idH2": "idH2Profile",
+    "classNameH2": "classNameH2",
     "contentH2": "Transitioning to Front-end Development"
 }
