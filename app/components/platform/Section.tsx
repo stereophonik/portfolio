@@ -1,6 +1,6 @@
 import SectionComponent from "../Section";
 
-import { SkillsContext } from "../../contexts/Skills";
+import { SkillSetsContext } from "../../contexts/SkillSets";
 import {useContext} from "react";
 import H1Component from "../H1";
 import H2Component from "../H2";
@@ -9,28 +9,28 @@ import LiComponent from "../Li";
 import AComponent from "../A";
 
 export default function SectionPlatformComponent(): React.ReactElement {
-    const skillsContext: {} = useContext(SkillsContext);
+    const skillSetsContext: {} = useContext(SkillSetsContext);
 
     return (
         <SectionComponent
             id="idSectionPlatform"
             className="classNameClassBSection"
-            style={skillsContext["section"]["style"]}>
+            style={skillSetsContext["section"]["style"]}>
             <H1Component
-                id={skillsContext["h1"]["id"]}
-                className={skillsContext["h1"]["className"]}
-                style={skillsContext["h1"]["style"]}>
+                id={skillSetsContext["h1"]["id"]}
+                className={skillSetsContext["h1"]["className"]}
+                style={skillSetsContext["h1"]["style"]}>
                 Platform
             </H1Component>
             <H2Component
-                id={skillsContext["h2"]["id"]}
-                className={skillsContext["h2"]["className"]}
-                style={skillsContext["h2"]["style"]}>
+                id={skillSetsContext["h2"]["id"]}
+                className={skillSetsContext["h2"]["className"]}
+                style={skillSetsContext["h2"]["style"]}>
                 If you need someone to create a WordPress site for you, get me for the opportunity! I have an experience in WordPress page creating. Please refer to the page below.
             </H2Component>
             <UlComponent
-                id={skillsContext["ul"]["id"]}
-                className={skillsContext["ul"]["className"]}>
+                id={skillSetsContext["ul"]["id"]}
+                className={skillSetsContext["ul"]["className"]}>
                 <LiComponent
                     className="classNameVerticalLi"
                     key="1">

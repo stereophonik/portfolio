@@ -7,7 +7,7 @@ import NavNavigationComponent from "./components/navigation/Nav";
 import SectionProfileComponent from "./components/profile/Section";
 import SectionIntroComponent from "./components/intro/Section";
 import SectionServingsComponent from "./components/servings/Section";
-import SectionSkillsComponent from "./components/skills/Section";
+import SectionSkillSetsComponent from "./components/skillSets/Section";
 import SectionPlatformComponent from "./components/platform/Section";
 import SectionFrameworkComponent from "./components/framework/Section";
 import SectionLibraryComponent from "./components/library/Section";
@@ -17,14 +17,14 @@ import { NavigationContext } from "./contexts/Navigation";
 import { ProfileContext } from "./contexts/Profile";
 import { IntroContext } from "./contexts/Intro";
 import { ServingsContext } from "./contexts/Servings";
-import { SkillsContext } from "./contexts/Skills";
+import { SkillSetsContext } from "./contexts/SkillSets";
 import { OutroContext } from "./contexts/Outro";
 
 import ValueNavigationInterface from "./interfaces/ValueNavigation";
 import ValueProfileInterface from "./interfaces/ValueProfile";
 import ValueIntroInterface from "./interfaces/ValueIntro";
 import ValueServingsInterface from "./interfaces/ValueServings";
-import ValueSkillsInterface from "./interfaces/ValueSkills";
+import ValueSkillSetsInterface from "./interfaces/ValueSkillSets";
 import ValueOutroInterface from "./interfaces/ValueOutro";
 
 export default function Page(): React.ReactElement {
@@ -32,7 +32,7 @@ export default function Page(): React.ReactElement {
     const [profileParsedFromFile, setProfileParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [introParsedFromFile, setIntroParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [servingsParsedFromFile, setServingsParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
-    const [skillsParsedFromFile, setSkillsParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
+    const [skillSetsParsedFromFile, setSkillSetsParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [outroParsedFromFile, setOutroParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
 
     useEffect(() => {
@@ -68,12 +68,12 @@ export default function Page(): React.ReactElement {
                 setServingsParsedFromFile(parsedFromFile);
             });
 
-        fetch("/files?fileName=skills", {
+        fetch("/files?fileName=skillSets", {
             method: "GET"
         })
             .then(fromFile => fromFile.json())
             .then(parsedFromFile => {
-                setSkillsParsedFromFile(parsedFromFile);
+                setSkillSetsParsedFromFile(parsedFromFile);
             });
 
         fetch("/files?fileName=outro", {
@@ -230,54 +230,54 @@ export default function Page(): React.ReactElement {
         ]
     }
 
-    const valueSkills: ValueSkillsInterface = {
+    const valueSkillSets: ValueSkillSetsInterface = {
         section: {
-            id: skillsParsedFromFile["idSection"],
-            className: skillsParsedFromFile["classNameSection"]
+            id: skillSetsParsedFromFile["idSection"],
+            className: skillSetsParsedFromFile["classNameSection"]
         },
         h1: {
-            id: skillsParsedFromFile["idH1"],
-            className: skillsParsedFromFile["classNameH1"],
-            content: skillsParsedFromFile["contentH1"]
+            id: skillSetsParsedFromFile["idH1"],
+            className: skillSetsParsedFromFile["classNameH1"],
+            content: skillSetsParsedFromFile["contentH1"]
         },
         h2: {
-            id: skillsParsedFromFile["idH2"],
-            className: skillsParsedFromFile["classNameH2"],
-            content: skillsParsedFromFile["contentH2"]
+            id: skillSetsParsedFromFile["idH2"],
+            className: skillSetsParsedFromFile["classNameH2"],
+            content: skillSetsParsedFromFile["contentH2"]
         },
         ul: {
-            id: skillsParsedFromFile["idUl"],
-            className: skillsParsedFromFile["classNameUl"]
+            id: skillSetsParsedFromFile["idUl"],
+            className: skillSetsParsedFromFile["classNameUl"]
         },
         lis: [
             {
-                className: skillsParsedFromFile["classNameAaLis"],
-                key: skillsParsedFromFile["keyAaLis"],
-                content: skillsParsedFromFile["contentAaLis"]
+                className: skillSetsParsedFromFile["classNameAaLis"],
+                key: skillSetsParsedFromFile["keyAaLis"],
+                content: skillSetsParsedFromFile["contentAaLis"]
             },
             {
-                className: skillsParsedFromFile["classNameAbLis"],
-                key: skillsParsedFromFile["keyAbLis"],
-                content: skillsParsedFromFile["contentAbLis"]
+                className: skillSetsParsedFromFile["classNameAbLis"],
+                key: skillSetsParsedFromFile["keyAbLis"],
+                content: skillSetsParsedFromFile["contentAbLis"]
             },
             {
-                className: skillsParsedFromFile["classNameAcLis"],
-                key: skillsParsedFromFile["keyAcLis"],
-                content: skillsParsedFromFile["contentAcLis"]
+                className: skillSetsParsedFromFile["classNameAcLis"],
+                key: skillSetsParsedFromFile["keyAcLis"],
+                content: skillSetsParsedFromFile["contentAcLis"]
             }
         ],
         as: [
             {
-                href: `${skillsParsedFromFile["hrefAaAs"]}`,
-                content: skillsParsedFromFile["contentAaAs"]
+                href: `${skillSetsParsedFromFile["hrefAaAs"]}`,
+                content: skillSetsParsedFromFile["contentAaAs"]
             },
             {
-                href: `${skillsParsedFromFile["hrefAbAs"]}`,
-                content: skillsParsedFromFile["contentAbAs"]
+                href: `${skillSetsParsedFromFile["hrefAbAs"]}`,
+                content: skillSetsParsedFromFile["contentAbAs"]
             },
             {
-                href: `${skillsParsedFromFile["hrefAcAs"]}`,
-                content: skillsParsedFromFile["contentAcAs"]
+                href: `${skillSetsParsedFromFile["hrefAcAs"]}`,
+                content: skillSetsParsedFromFile["contentAcAs"]
             }
         ]
     }
@@ -317,13 +317,13 @@ export default function Page(): React.ReactElement {
                 value={valueServings}>
                 <SectionServingsComponent />
             </ServingsContext.Provider>
-            <SkillsContext.Provider
-                value={valueSkills}>
-                <SectionSkillsComponent />
+            <SkillSetsContext.Provider
+                value={valueSkillSets}>
+                <SectionSkillSetsComponent />
                 <SectionPlatformComponent />
                 <SectionFrameworkComponent />
                 <SectionLibraryComponent />
-            </SkillsContext.Provider>
+            </SkillSetsContext.Provider>
             <OutroContext.Provider
                 value={valueOutro}>
                 <SectionOutroComponent />

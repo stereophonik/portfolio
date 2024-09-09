@@ -1,4 +1,4 @@
-export default interface ValueSkillsInterface {
+export default interface ValueSkillSetsInterface {
     ul: { id: any; className: any; };
     lis: { className: any; key: any; content: any; }[];
     h1: { id: any; className: string; content: any; };
