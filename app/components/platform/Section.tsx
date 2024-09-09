@@ -4,8 +4,6 @@ import { SkillSetsContext } from "../../contexts/SkillSets";
 import {useContext} from "react";
 import H1Component from "../H1";
 import H2Component from "../H2";
-import UlComponent from "../Ul";
-import LiComponent from "../Li";
 import AComponent from "../A";
 
 export default function SectionPlatformComponent(): React.ReactElement {
@@ -28,19 +26,14 @@ export default function SectionPlatformComponent(): React.ReactElement {
                 style={skillSetsContext["h2"]["style"]}>
                 If you need someone to create a WordPress site for you, get me for the opportunity! I have an experience in WordPress page creating. Please refer to the page below.
             </H2Component>
-            <UlComponent
-                id={skillSetsContext["ul"]["id"]}
-                className={skillSetsContext["ul"]["className"]}>
-                <LiComponent
-                    className="classNameVerticalLi"
-                    key="1">
-                    <AComponent
-                        href="https://classconstructions.com.au/class-constructions-blogs"
-                    >
-                        Class Constructions Blogs Page
-                    </AComponent>
-                </LiComponent>
-            </UlComponent>
+            <span
+                className="classNameSpan">
+                <AComponent
+                    href="https://classconstructions.com.au/class-constructions-blogs"
+                >
+                    Class Constructions Blogs Page
+                </AComponent>
+            </span>
         </SectionComponent>
     );
 }

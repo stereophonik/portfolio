@@ -4,8 +4,6 @@ import { SkillSetsContext } from "../../contexts/SkillSets";
 import {useContext} from "react";
 import H1Component from "../H1";
 import H2Component from "../H2";
-import UlComponent from "../Ul";
-import LiComponent from "../Li";
 import AComponent from "../A";
 
 export default function SectionFrameworkComponent(): React.ReactElement {
@@ -28,19 +26,14 @@ export default function SectionFrameworkComponent(): React.ReactElement {
                 style={skillSetsContext["h2"]["style"]}>
                 This app has been built via Next.js. This has been built even though I don't any Next.js work experience. You may refer to my portfolio application below.
             </H2Component>
-            <UlComponent
-                id={skillSetsContext["ul"]["id"]}
-                className={skillSetsContext["ul"]["className"]}>
-                <LiComponent
-                    className="classNameVerticalLi"
-                    key="1">
-                    <AComponent
-                        href="https://github.com/stereophonik/portfolio/tree/main/app"
-                    >
-                        My Portfolio Application
-                    </AComponent>
-                </LiComponent>
-            </UlComponent>
+            <span
+                className="classNameSpan">
+                <AComponent
+                    href="https://github.com/stereophonik/portfolio/tree/main/app"
+                >
+                    My Portfolio Application
+                </AComponent>
+            </span>
         </SectionComponent>
     );
 }
