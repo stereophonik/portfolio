@@ -1,3 +1,15 @@
+@font-face {
+    font-family: "Anonymous Pro";
+    src: url("../fonts/AnonymousPro-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("../fonts/RobotoMono-VariableFont_wght.ttf") format("truetype");
+    font-weight: 700;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -55,6 +67,22 @@ a:hover {
     height: 10%;
 }
 
+.classNameH1 {
+    padding: 0.25vw;
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 4.5rem;
+}
+
+.classNameH2 {
+    padding: 1vw;
+    font-family: "Anonymous Pro", sans-serif;
+    font-size: 3rem;
+}
+
+.classNameH3 {
+    font-family: "Anonymous Pro", sans-serif;
+}
+
 .classNameUl {
     padding-inline-start: 0;
     list-style-type: none;
@@ -63,8 +91,12 @@ a:hover {
 .classNameHorizontalLi {
     display: inline-block;
     padding: 2vw;
+    font-family: "Anonymous Pro", sans-serif;
+    font-size: 2.5rem;
 }
 
 .classNameVerticalLi {
     padding: 0.5vw;
+    font-family: "Anonymous Pro", sans-serif;
+    font-size: 3rem;
 }

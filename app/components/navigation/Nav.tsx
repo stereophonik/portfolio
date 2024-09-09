@@ -2,7 +2,6 @@ import { useContext } from "react";
 
 import NavComponent from "../Nav";
 import UlComponent from "../Ul";
-import H3Component from "../H3";
 import LiComponent from "../Li";
 import LinkComponent from "../Link";
 
@@ -18,23 +17,18 @@ export default function NavNavigationComponent(): React.ReactElement {
             <UlComponent
                 id={navigationContext["ul"]["id"]}
                 className={navigationContext["ul"]["className"]}>
-                <H3Component
-                    id={navigationContext["h3"]["id"]}
-                    className={navigationContext["h3"]["className"]}
-                    style={navigationContext["h3"]["style"]}>
-                    {
-                        navigationContext["lis"].map((li: { [x: string]: any; }) =>
-                            <LiComponent
-                                className={li["className"]}
-                                key={li["key"]}>
-                                <LinkComponent
-                                    href={navigationContext["links"][navigationContext["lis"].indexOf(li)]["href"]}>
-                                    {navigationContext["links"][navigationContext["lis"].indexOf(li)]["content"]}
-                                </LinkComponent>
-                            </LiComponent>
-                        )
-                    }
-                </H3Component>
+                {
+                    navigationContext["lis"].map((li: { [x: string]: any; }) =>
+                        <LiComponent
+                            className={li["className"]}
+                            key={li["key"]}>
+                            <LinkComponent
+                                href={navigationContext["links"][navigationContext["lis"].indexOf(li)]["href"]}>
+                                {navigationContext["links"][navigationContext["lis"].indexOf(li)]["content"]}
+                            </LinkComponent>
+                        </LiComponent>
+                    )
+                }
             </UlComponent>
         </NavComponent>
     );

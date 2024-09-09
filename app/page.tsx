@@ -1,9 +1,6 @@
 "use client"
 
 import {useState, useEffect, Dispatch, SetStateAction} from "react";
-import { NextFont } from "next/dist/compiled/@next/font";
-import { Anonymous_Pro } from "next/font/google";
-import { Roboto_Mono } from "next/font/google";
 
 import MainComponent from "./components/Main";
 import NavNavigationComponent from "./components/navigation/Nav";
@@ -30,18 +27,7 @@ import ValueServingsInterface from "./interfaces/ValueServings";
 import ValueSkillsInterface from "./interfaces/ValueSkills";
 import ValueOutroInterface from "./interfaces/ValueOutro";
 
-const anonymousPro: NextFont = Anonymous_Pro({
-    weight: "400",
-    subsets: ["latin"]
-});
-
-const robotoMono: NextFont = Roboto_Mono({
-    weight: "700",
-    subsets: ["latin"]
-});
-
 export default function Page(): React.ReactElement {
-    const [areSizes, setAreSizes]: [any[], Dispatch<SetStateAction<any[]>>] = useState([]);
     const [navigationParsedFromFile, setNavigationParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [profileParsedFromFile, setProfileParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [introParsedFromFile, setIntroParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
@@ -50,21 +36,6 @@ export default function Page(): React.ReactElement {
     const [outroParsedFromFile, setOutroParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
 
     useEffect(() => {
-        function executeSetAreSizes(): void {
-            setAreSizes([
-                window.innerWidth <= 360, window.innerWidth > 360 && window.innerWidth <= 440,
-                window.innerWidth > 440 && window.innerWidth <= 520, window.innerWidth > 520 && window.innerWidth <= 600,
-                window.innerWidth > 600 && window.innerWidth <= 680, window.innerWidth > 680 && window.innerWidth <= 760,
-                window.innerWidth > 760 && window.innerWidth <= 840, window.innerWidth > 840 && window.innerWidth <= 920,
-                window.innerWidth > 920 && window.innerWidth <= 1000, window.innerWidth > 1000 && window.innerWidth <= 1080,
-                window.innerWidth > 1080 && window.innerWidth <= 1160, window.innerWidth > 1160 && window.innerWidth <= 1240,
-                window.innerWidth > 1240 && window.innerWidth <= 1320
-            ]);
-        }
-
-        executeSetAreSizes();
-        window.onresize = executeSetAreSizes;
-
         fetch("/files?fileName=navigation", {
             method: "GET"
         })
@@ -114,23 +85,6 @@ export default function Page(): React.ReactElement {
             });
     }, []);
 
-    function checkInnerWidth(areSizes: any, sizes: any): any {
-        return areSizes[0] ? sizes[0]
-            : areSizes[1] ? sizes[1]
-                : areSizes[2] ? sizes[2]
-                    : areSizes[3] ? sizes[3]
-                        : areSizes[4]? sizes[4]
-                            : areSizes[5]? sizes[5]
-                                : areSizes[6]? sizes[6]
-                                    : areSizes[7]? sizes[7]
-                                        : areSizes[8]? sizes[8]
-                                            : areSizes[9]? sizes[9]
-                                                : areSizes[10]? sizes[10]
-                                                    : areSizes[11]? sizes[11]
-                                                        : areSizes[12]? sizes[12]
-                                                            : sizes[13];
-    }
-
     const valueNavigation: ValueNavigationInterface = {
         nav: {
             id: navigationParsedFromFile["idNav"],
@@ -139,18 +93,6 @@ export default function Page(): React.ReactElement {
         ul: {
             id: navigationParsedFromFile["id"],
             className: navigationParsedFromFile["className"]
-        },
-        h3: {
-            id: navigationParsedFromFile["idH3"],
-            className: anonymousPro.className,
-            style: {
-                padding: "2vw",
-                fontSize: checkInnerWidth(
-                    areSizes,
-                    ["0.75rem", "0.75rem", "0.75rem", "0.75rem", "0.75rem", "1.25rem", "1.5rem",
-                        "1.75rem", "2rem", "2.25rem", "2.5rem", "2.5rem", "2.5rem", "2.5rem"]
-                )
-            }
         },
         lis: [
             {
@@ -209,40 +151,18 @@ export default function Page(): React.ReactElement {
             className: profileParsedFromFile["classNameImage"],
             src: profileParsedFromFile["srcImage"],
             alt: profileParsedFromFile["altImage"],
-            width: checkInnerWidth(
-                areSizes,
-                [190, 190, 190, 190, 190, 220, 240, 260, 280, 300, 320, 320, 320, 320]
-            ),
-            height: checkInnerWidth(
-                areSizes,
-                [291, 291, 291, 291, 291, 337, 367, 398, 428, 459, 489, 489, 489, 489]
-            )
+            width: 320,
+            height: 489
         },
         h1: {
             id: profileParsedFromFile["idH1"],
             content: profileParsedFromFile["contentH1"],
-            className: robotoMono.className,
-            style: {
-                padding: "0.25vw",
-                fontSize: checkInnerWidth(
-                    areSizes,
-                    ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-                )
-            }
+            className: "classNameH1"
         },
         h2: {
             id: profileParsedFromFile["idH2"],
             content: profileParsedFromFile["contentH2"],
-            className: anonymousPro.className,
-            style: {
-                padding: "1vw",
-                fontSize: checkInnerWidth(
-                    areSizes,
-                    ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-                )
-            }
+            className: "classNameH2"
         }
     }
 
@@ -259,42 +179,18 @@ export default function Page(): React.ReactElement {
         h1: {
             id: introParsedFromFile["idH1"],
             content: introParsedFromFile["contentH1"],
-            className: robotoMono.className,
-            style: {
-                padding: "0.25vw",
-                fontSize: checkInnerWidth(
-                    areSizes,
-                    ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-                )
-            }
+            className: "classNameH1"
         },
         h2s: [
             {
                 id: introParsedFromFile["idAaH2s"],
                 content: introParsedFromFile["contentAaH2s"],
-                className: anonymousPro.className,
-                style: {
-                    padding: "0.5vw",
-                    fontSize: checkInnerWidth(
-                        areSizes,
-                        ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                            "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-                    )
-                }
+                className: "classNameH2"
             },
             {
                 id: introParsedFromFile["idAbH2s"],
                 content: introParsedFromFile["contentAbH2s"],
-                className: anonymousPro.className,
-                style: {
-                    padding: "0.5vw",
-                    fontSize: checkInnerWidth(
-                        areSizes,
-                        ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                            "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-                    )
-                }
+                className: "classNameH2"
             }
         ]
     }
@@ -312,15 +208,7 @@ export default function Page(): React.ReactElement {
         h1: {
             id: servingsParsedFromFile["idH1"],
             content: servingsParsedFromFile["contentH1"],
-            className: robotoMono.className,
-            style: {
-                padding: "0.25vw",
-                fontSize: checkInnerWidth(
-                    areSizes,
-                    ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-                )
-            }
+            className: "classNameH1"
         },
         ul: {
             id: servingsParsedFromFile["idUl"],
@@ -328,15 +216,7 @@ export default function Page(): React.ReactElement {
         },
         h2: {
             id: servingsParsedFromFile["idH2"],
-            className: anonymousPro.className,
-            style: {
-                padding: "1vw",
-                fontSize: checkInnerWidth(
-                    areSizes,
-                    ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-                )
-            }
+            className: "classNameH2"
         },
         lis: [
             {
@@ -370,15 +250,7 @@ export default function Page(): React.ReactElement {
         h1: {
             id: skillsParsedFromFile["idH1"],
             content: skillsParsedFromFile["contentH1"],
-            className: robotoMono.className,
-            style: {
-                padding: "0.25vw",
-                fontSize: checkInnerWidth(
-                    areSizes,
-                    ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-                )
-            }
+            className: "classNameH1"
         },
         ul: {
             id: skillsParsedFromFile["idUl"],
@@ -386,15 +258,7 @@ export default function Page(): React.ReactElement {
         },
         h2: {
             id: skillsParsedFromFile["idH2"],
-            className: anonymousPro.className,
-            style: {
-                padding: "1vw",
-                fontSize: checkInnerWidth(
-                    areSizes,
-                    ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-                )
-            }
+            className: "classNameH2"
         },
         lis: [
             {
@@ -442,28 +306,12 @@ export default function Page(): React.ReactElement {
         h1: {
             id: outroParsedFromFile["idH1"],
             content: outroParsedFromFile["contentH1"],
-            className: robotoMono.className,
-            style: {
-                padding: "0.25vw",
-                fontSize: checkInnerWidth(
-                    areSizes,
-                    ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
-                        "3.75rem", "4rem", "4.25rem", "4.5rem", "4.5rem", "4.5rem", "4.5rem"]
-                )
-            }
+            className: "classNameH1"
         },
         h2: {
             id: outroParsedFromFile["idH2"],
             content: outroParsedFromFile["contentH2"],
-            className: anonymousPro.className,
-            style: {
-                padding: "1vw",
-                fontSize: checkInnerWidth(
-                    areSizes,
-                    ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
-                        "2.25rem", "2.5rem", "2.75rem", "3rem", "3rem", "3rem", "3rem"]
-                )
-            }
+            className: "classNameH2"
         }
     }
 

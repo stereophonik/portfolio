@@ -30,16 +30,17 @@ export default function SectionSkillsComponent(): React.ReactElement {
                 style={skillsContext["h1"]["style"]}>
                 {skillsContext["h1"]["content"]}
             </H1Component>
+            <H2Component
+                id={skillsContext["h2"]["id"]}
+                className={skillsContext["h2"]["className"]}
+                style={skillsContext["h2"]["style"]}>
+                Feel free to scroll down below with regards to my skill sets or via these links:
+                <BrComponent />
+                <BrComponent />
+            </H2Component>
             <UlComponent
                 id={skillsContext["ul"]["id"]}
                 className={skillsContext["ul"]["className"]}>
-                <H2Component
-                    id={skillsContext["h2"]["id"]}
-                    className={skillsContext["h2"]["className"]}
-                    style={skillsContext["h2"]["style"]}>
-                    Feel free to scroll down below with regards to my skill sets or via these links:
-                    <BrComponent />
-                    <BrComponent />
                     {
                         skillsContext["lis"].map((li: { [x: string]: any; }) =>
                             <LiComponent
@@ -52,7 +53,6 @@ export default function SectionSkillsComponent(): React.ReactElement {
                             </LiComponent>
                         )
                     }
-                </H2Component>
             </UlComponent>
         </SectionComponent>
     );
