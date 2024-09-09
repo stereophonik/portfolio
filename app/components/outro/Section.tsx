@@ -26,6 +26,11 @@ export default function SectionOutroComponent(): React.ReactElement {
                 style={outroContext["h2"]["style"]}>
                 {outroContext["h2"]["content"]}
             </H2Component>
+            <div className="classNameDiv">
+                <a href="#idNavNavigation">
+                    Go to Navigation
+                </a>
+            </div>
         </SectionComponent>
     );
 }

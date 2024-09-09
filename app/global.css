@@ -55,10 +55,6 @@ a:hover {
     height: auto;
 }
 
-.classNameDiv {
-    height: 10%;
-}
-
 .classNameUl {
     padding-inline-start: 0;
     list-style-type: none;
@@ -99,6 +95,13 @@ a:hover {
     font-size: 2.75rem;
 }
 
+.classNameDiv {
+    padding: 0.75vw 0.5vw;
+    font-family: "Anonymous Pro", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
 @media screen and (max-width: 1080px) {
     .classNameImage {
         width: 290px;
@@ -119,6 +122,10 @@ a:hover {
 
     .classNameVerticalLi {
         font-size: 2.25rem;
+    }
+
+    .classNameDiv {
+        font-size: 1.75rem;
     }
 }
 
@@ -143,6 +150,10 @@ a:hover {
     .classNameVerticalLi {
         font-size: 1.75rem;
     }
+
+    .classNameDiv {
+        font-size: 1.25rem;
+    }
 }
 
 @media screen and (max-width: 760px) {
@@ -165,6 +176,10 @@ a:hover {
 
     .classNameVerticalLi {
         font-size: 1.25rem;
+    }
+
+    .classNameDiv {
+        font-size: 0.75rem;
     }
 }
 
@@ -189,6 +204,10 @@ a:hover {
     .classNameVerticalLi {
         font-size: 1.25rem;
     }
+
+    .classNameDiv {
+        font-size: 0.75rem;
+    }
 }
 
 @media screen and (max-width: 520px) {
@@ -212,6 +231,10 @@ a:hover {
     .classNameVerticalLi {
         font-size: 0.75rem;
     }
+
+    .classNameDiv {
+        font-size: 0.5rem;
+    }
 }
 
 @media screen and (max-width: 440px) {
@@ -225,7 +248,7 @@ a:hover {
     }
 
     .classNameH2 {
-        font-size: 0.75rem;
+        font-size: 1rem;
     }
 
     .classNameHorizontalLi {
@@ -233,6 +256,10 @@ a:hover {
     }
 
     .classNameVerticalLi {
+        font-size: 0.75rem;
+    }
+
+    .classNameDiv {
         font-size: 0.5rem;
     }
 }
