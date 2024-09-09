@@ -5,6 +5,8 @@ import H1Component from "../H1";
 import H2Component from "../H2";
 
 import { IntroContext } from "../../contexts/Intro";
+import LiComponent from "../Li";
+import UlComponent from "../Ul";
 
 export default function SectionIntroComponent(): React.ReactElement {
     const introContext: {} = useContext(IntroContext);
@@ -20,16 +22,25 @@ export default function SectionIntroComponent(): React.ReactElement {
                 style={introContext["h1"]["style"]}>
                 {introContext["h1"]["content"]}
             </H1Component>
-            {
-                introContext["h2s"].map((h2: { [x: string]: any; }) =>
-                    <H2Component
-                        id={h2["id"]}
-                        className={h2["className"]}
-                        style={h2["style"]}>
-                        {h2["content"]}
-                    </H2Component>
-                )
-            }
+            <H2Component
+                id={introContext["h2"]["id"]}
+                className={introContext["h2"]["className"]}
+                style={introContext["h2"]["style"]}>
+                {introContext["h2"]["content"]}
+            </H2Component>
+            <UlComponent
+                id={introContext["ul"]["id"]}
+                className={introContext["ul"]["className"]}>
+                {
+                    introContext["lis"].map((li: { [x: string]: any; }) =>
+                        <LiComponent
+                            className={li["className"]}
+                            key={li["key"]}>
+                            {li["content"]}
+                        </LiComponent>
+                    )
+                }
+            </UlComponent>
         </SectionComponent>
     );
 }

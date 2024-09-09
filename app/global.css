@@ -75,13 +75,13 @@ a:hover {
 }
 
 .classNameH1 {
-    padding: 0.25vw;
+    padding: 0.5vw;
     font-family: "Roboto Mono", sans-serif;
     font-size: 4.5rem;
 }
 
 .classNameH2 {
-    padding: 1vw;
+    padding: 0.5vw;
     font-family: "Anonymous Pro", sans-serif;
     font-size: 3rem;
 }
@@ -96,7 +96,7 @@ a:hover {
 .classNameVerticalLi {
     padding: 0.5vw;
     font-family: "Anonymous Pro", sans-serif;
-    font-size: 3rem;
+    font-size: 2.75rem;
 }
 
 @media screen and (max-width: 1080px) {
@@ -118,7 +118,7 @@ a:hover {
     }
 
     .classNameVerticalLi {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
     }
 }
 
@@ -141,7 +141,7 @@ a:hover {
     }
 
     .classNameVerticalLi {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 }
 
@@ -164,7 +164,7 @@ a:hover {
     }
 
     .classNameVerticalLi {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 }
 
@@ -187,7 +187,7 @@ a:hover {
     }
 
     .classNameVerticalLi {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 }
 
@@ -210,7 +210,7 @@ a:hover {
     }
 
     .classNameVerticalLi {
-        font-size: 1rem;
+        font-size: 0.75rem;
     }
 }
 
@@ -233,6 +233,6 @@ a:hover {
     }
 
     .classNameVerticalLi {
-        font-size: 0.75rem;
+        font-size: 0.5rem;
     }
 }

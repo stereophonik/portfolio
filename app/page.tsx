@@ -169,16 +169,25 @@ export default function Page(): React.ReactElement {
             content: introParsedFromFile["contentH1"],
             className: "classNameH1"
         },
-        h2s: [
+        h2: {
+            id: introParsedFromFile["idH2"],
+            content: introParsedFromFile["contentH2"],
+            className: "classNameH2"
+        },
+        ul: {
+            id: introParsedFromFile["idUl"],
+            className: introParsedFromFile["classNameUl"]
+        },
+        lis: [
             {
-                id: introParsedFromFile["idAaH2s"],
-                content: introParsedFromFile["contentAaH2s"],
-                className: "classNameH2"
+                className: introParsedFromFile["classNameAaLis"],
+                key: introParsedFromFile["keyAaLis"],
+                content: introParsedFromFile["contentAaLis"]
             },
             {
-                id: introParsedFromFile["idAbH2s"],
-                content: introParsedFromFile["contentAbH2s"],
-                className: "classNameH2"
+                className: introParsedFromFile["classNameAbLis"],
+                key: introParsedFromFile["keyAbLis"],
+                content: introParsedFromFile["contentAbLis"]
             }
         ]
     }
@@ -199,6 +208,7 @@ export default function Page(): React.ReactElement {
         },
         h2: {
             id: servingsParsedFromFile["idH2"],
+            content: servingsParsedFromFile["contentH2"],
             className: "classNameH2"
         },
         lis: [

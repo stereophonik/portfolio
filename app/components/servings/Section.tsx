@@ -22,23 +22,24 @@ export default function SectionServingsComponent(): React.ReactElement {
                 style={servingsContext["h1"]["style"]}>
                 {servingsContext["h1"]["content"]}
             </H1Component>
+            <H2Component
+                id={servingsContext["h2"]["id"]}
+                className={servingsContext["h2"]["className"]}
+                style={servingsContext["h2"]["style"]}>
+                {servingsContext["h2"]["content"]}
+            </H2Component>
             <UlComponent
                 id={servingsContext["ul"]["id"]}
                 className={servingsContext["ul"]["className"]}>
-                <H2Component
-                    id={servingsContext["h2"]["id"]}
-                    className={servingsContext["h2"]["className"]}
-                    style={servingsContext["h2"]["style"]}>
-                    {
-                        servingsContext["lis"].map((li: { [x: string]: any; }) =>
-                            <LiComponent
-                                className={li["className"]}
-                                key={li["key"]}>
-                                {li["content"]}
-                            </LiComponent>
-                        )
-                    }
-                </H2Component>
+                {
+                    servingsContext["lis"].map((li: { [x: string]: any; }) =>
+                        <LiComponent
+                            className={li["className"]}
+                            key={li["key"]}>
+                            {li["content"]}
+                        </LiComponent>
+                    )
+                }
             </UlComponent>
         </SectionComponent>
     );

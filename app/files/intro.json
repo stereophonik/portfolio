@@ -3,8 +3,14 @@
   "classNameSection": "classNameClassASection",
   "idH1": "idH1Intro",
   "contentH1": "Hello!",
-  "idAaH2s": "idAaH2sIntro",
-  "idAbH2s": "idAbH2sIntro",
-  "contentAaH2s": "Are you looking to have a website created or edited for your small business?",
-  "contentAbH2s": "I'm here to assist! With 6 years of experience transitioning from quality testing to front-end development, I bring a unique perspective to streamline your workflows and enhance your web applications."
+  "idH2": "idH2Intro",
+  "contentH2": "Are you looking to have a website created or edited for your small business?",
+  "idUl": "idUlIntro",
+  "classNameUl": "classNameUl",
+  "keyAaLis": 1,
+  "classNameAaLis": "classNameVerticalLi",
+  "contentAaLis": "If yes, contact me to assist!",
+  "keyAbLis": 2,
+  "classNameAbLis": "classNameVerticalLi",
+  "contentAbLis": "With 6 years of experience transitioning from quality testing to front-end development, I bring a unique perspective to streamline your workflows and enhance your web applications."
 }
