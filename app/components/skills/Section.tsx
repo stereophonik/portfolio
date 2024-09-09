@@ -4,7 +4,6 @@ import SectionComponent from "../Section";
 import H1Component from "../H1";
 import UlComponent from "../Ul";
 import H2Component from "../H2";
-import BrComponent from "../Br";
 import LiComponent from "../Li";
 import AComponent from "../A";
 
@@ -30,7 +29,6 @@ export default function SectionSkillsComponent(): React.ReactElement {
                 style={skillsContext["h2"]["style"]}>
                 Feel free to scroll down below with regards to my skill sets or via these links:
             </H2Component>
-            <BrComponent />
             <UlComponent
                 id={skillsContext["ul"]["id"]}
                 className={skillsContext["ul"]["className"]}>

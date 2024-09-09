@@ -4,7 +4,6 @@ import { SkillsContext } from "../../contexts/Skills";
 import {useContext} from "react";
 import H1Component from "../H1";
 import H2Component from "../H2";
-import BrComponent from "../Br";
 import UlComponent from "../Ul";
 import LiComponent from "../Li";
 import AComponent from "../A";
@@ -29,7 +28,6 @@ export default function SectionLibraryComponent(): React.ReactElement {
                 style={skillsContext["h2"]["style"]}>
                 If you are familiar with Next.js, you probably know that it's built on top of the React library. This app has certain React implementations in it, including components and contexts.
             </H2Component>
-            <BrComponent />
             <UlComponent
                 id={skillsContext["ul"]["id"]}
                 className={skillsContext["ul"]["className"]}>

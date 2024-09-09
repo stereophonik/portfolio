@@ -7,7 +7,6 @@ import H2Component from "../H2";
 import LiComponent from "../Li";
 
 import { ServingsContext } from "../../contexts/Servings";
-import BrComponent from "../Br";
 
 export default function SectionServingsComponent(): React.ReactElement {
     const servingsContext: {} = useContext(ServingsContext);
@@ -29,7 +28,6 @@ export default function SectionServingsComponent(): React.ReactElement {
                 style={servingsContext["h2"]["style"]}>
                 {servingsContext["h2"]["content"]}
             </H2Component>
-            <BrComponent />
             <UlComponent
                 id={servingsContext["ul"]["id"]}
                 className={servingsContext["ul"]["className"]}>

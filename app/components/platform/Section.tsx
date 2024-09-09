@@ -4,7 +4,6 @@ import { SkillsContext } from "../../contexts/Skills";
 import {useContext} from "react";
 import H1Component from "../H1";
 import H2Component from "../H2";
-import BrComponent from "../Br";
 import UlComponent from "../Ul";
 import LiComponent from "../Li";
 import AComponent from "../A";
@@ -29,7 +28,6 @@ export default function SectionPlatformComponent(): React.ReactElement {
                 style={skillsContext["h2"]["style"]}>
                 If you need someone to create a WordPress site for you, get me for the opportunity! I have an experience in WordPress page creating. Please refer to the page below.
             </H2Component>
-            <BrComponent />
             <UlComponent
                 id={skillsContext["ul"]["id"]}
                 className={skillsContext["ul"]["className"]}>
