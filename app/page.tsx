@@ -144,6 +144,7 @@ export default function Page(): React.ReactElement {
             id: navigationParsedFromFile["idH3"],
             className: anonymousPro.className,
             style: {
+                padding: "2vw",
                 fontSize: checkInnerWidth(
                     areSizes,
                     ["0.75rem", "0.75rem", "0.75rem", "0.75rem", "0.75rem", "1.25rem", "1.5rem",
@@ -210,11 +211,11 @@ export default function Page(): React.ReactElement {
             alt: profileParsedFromFile["altImage"],
             width: checkInnerWidth(
                 areSizes,
-                [130, 130, 130, 130, 130, 160, 180, 200, 220, 240, 260, 260, 260, 260]
+                [190, 190, 190, 190, 190, 220, 240, 260, 280, 300, 320, 320, 320, 320]
             ),
             height: checkInnerWidth(
                 areSizes,
-                [175, 175, 175, 175, 175, 214, 241, 267, 294, 321, 348, 348, 348, 348]
+                [291, 291, 291, 291, 291, 337, 367, 398, 428, 459, 489, 489, 489, 489]
             )
         },
         h1: {
@@ -222,6 +223,7 @@ export default function Page(): React.ReactElement {
             content: profileParsedFromFile["contentH1"],
             className: robotoMono.className,
             style: {
+                padding: "0.25vw",
                 fontSize: checkInnerWidth(
                     areSizes,
                     ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
@@ -234,6 +236,7 @@ export default function Page(): React.ReactElement {
             content: profileParsedFromFile["contentH2"],
             className: anonymousPro.className,
             style: {
+                padding: "1vw",
                 fontSize: checkInnerWidth(
                     areSizes,
                     ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
@@ -258,6 +261,7 @@ export default function Page(): React.ReactElement {
             content: introParsedFromFile["contentH1"],
             className: robotoMono.className,
             style: {
+                padding: "0.25vw",
                 fontSize: checkInnerWidth(
                     areSizes,
                     ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
@@ -271,6 +275,7 @@ export default function Page(): React.ReactElement {
                 content: introParsedFromFile["contentAaH2s"],
                 className: anonymousPro.className,
                 style: {
+                    padding: "0.5vw",
                     fontSize: checkInnerWidth(
                         areSizes,
                         ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
@@ -283,6 +288,7 @@ export default function Page(): React.ReactElement {
                 content: introParsedFromFile["contentAbH2s"],
                 className: anonymousPro.className,
                 style: {
+                    padding: "0.5vw",
                     fontSize: checkInnerWidth(
                         areSizes,
                         ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
@@ -308,6 +314,7 @@ export default function Page(): React.ReactElement {
             content: servingsParsedFromFile["contentH1"],
             className: robotoMono.className,
             style: {
+                padding: "0.25vw",
                 fontSize: checkInnerWidth(
                     areSizes,
                     ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
@@ -323,6 +330,7 @@ export default function Page(): React.ReactElement {
             id: servingsParsedFromFile["idH2"],
             className: anonymousPro.className,
             style: {
+                padding: "1vw",
                 fontSize: checkInnerWidth(
                     areSizes,
                     ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
@@ -364,6 +372,7 @@ export default function Page(): React.ReactElement {
             content: skillsParsedFromFile["contentH1"],
             className: robotoMono.className,
             style: {
+                padding: "0.25vw",
                 fontSize: checkInnerWidth(
                     areSizes,
                     ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
@@ -379,6 +388,7 @@ export default function Page(): React.ReactElement {
             id: skillsParsedFromFile["idH2"],
             className: anonymousPro.className,
             style: {
+                padding: "1vw",
                 fontSize: checkInnerWidth(
                     areSizes,
                     ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
@@ -434,6 +444,7 @@ export default function Page(): React.ReactElement {
             content: outroParsedFromFile["contentH1"],
             className: robotoMono.className,
             style: {
+                padding: "0.25vw",
                 fontSize: checkInnerWidth(
                     areSizes,
                     ["2.75rem", "2.75rem", "2.75rem", "2.75rem", "2.75rem", "3.25rem", "3.5rem",
@@ -446,6 +457,7 @@ export default function Page(): React.ReactElement {
             content: outroParsedFromFile["contentH2"],
             className: anonymousPro.className,
             style: {
+                padding: "1vw",
                 fontSize: checkInnerWidth(
                     areSizes,
                     ["1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.25rem", "1.75rem", "2rem",
