@@ -4,7 +4,7 @@ import SectionComponent from "../Section";
 import DivComponent from "../Div";
 
 import { ProfileContext } from "../../contexts/Profile";
-import ImageComponent from "../Image";
+import ImgComponent from "../Img";
 import H1Component from "../H1";
 import H2Component from "../H2";
 
@@ -21,13 +21,11 @@ export default function SectionProfileComponent(): React.ReactElement {
                 className={profileContext["div"]["className"]}>
                 {profileContext["div"]["content"]}
             </DivComponent>
-            <ImageComponent
-                id={profileContext["image"]["id"]}
-                className={profileContext["image"]["className"]}
-                src={profileContext["image"]["src"]}
-                alt={profileContext["image"]["alt"]}
-                width={profileContext["image"]["width"]}
-                height={profileContext["image"]["height"]}
+            <ImgComponent
+                id={profileContext["img"]["id"]}
+                className={profileContext["img"]["className"]}
+                src={profileContext["img"]["src"]}
+                alt={profileContext["img"]["alt"]}
             />
             <H1Component
                 id={profileContext["h1"]["id"]}

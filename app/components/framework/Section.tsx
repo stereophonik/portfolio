@@ -6,7 +6,7 @@ import DivComponent from "../Div";
 import H1Component from "../H1";
 import H2Component from "../H2";
 import BrComponent from "../Br";
-import LinkComponent from "../Link";
+import AComponent from "../A";
 
 export default function SectionFrameworkComponent(): React.ReactElement {
     const skillsContext: {} = useContext(SkillsContext);
@@ -34,11 +34,11 @@ export default function SectionFrameworkComponent(): React.ReactElement {
                 This app has been built via Next.js. This has been built even though I don't any Next.js work experience. You may refer to my portfolio application below.
                 <BrComponent />
                 <BrComponent />
-                <LinkComponent
+                <AComponent
                     href="https://github.com/stereophonik/portfolio/tree/main/app"
                 >
                     My Portfolio Application
-                </LinkComponent>
+                </AComponent>
             </H2Component>
         </SectionComponent>
     );

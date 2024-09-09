@@ -6,7 +6,7 @@ import DivComponent from "../Div";
 import H1Component from "../H1";
 import H2Component from "../H2";
 import BrComponent from "../Br";
-import LinkComponent from "../Link";
+import AComponent from "../A";
 
 export default function SectionPlatformComponent(): React.ReactElement {
     const skillsContext: {} = useContext(SkillsContext);
@@ -34,11 +34,11 @@ export default function SectionPlatformComponent(): React.ReactElement {
                 I have an experience in WordPress page creating. Please refer to the page below.
                 <BrComponent />
                 <BrComponent />
-                <LinkComponent
+                <AComponent
                     href="https://classconstructions.com.au/class-constructions-blogs"
                 >
                     Class Constructions Blogs Page
-                </LinkComponent>
+                </AComponent>
                 <BrComponent />
                 <BrComponent />
                 If you need someone to create a WordPress site for you, get me for the opportunity!

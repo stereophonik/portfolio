@@ -7,7 +7,7 @@ import UlComponent from "../Ul";
 import H2Component from "../H2";
 import BrComponent from "../Br";
 import LiComponent from "../Li";
-import LinkComponent from "../Link";
+import AComponent from "../A";
 
 import { SkillsContext } from "../../contexts/Skills";
 
@@ -46,10 +46,10 @@ export default function SectionSkillsComponent(): React.ReactElement {
                             <LiComponent
                                 className={li["className"]}
                                 key={li["key"]}>
-                                <LinkComponent
+                                <AComponent
                                     href={skillsContext["links"][skillsContext["lis"].indexOf(li)]["href"]}>
                                     {skillsContext["links"][skillsContext["lis"].indexOf(li)]["content"]}
-                                </LinkComponent>
+                                </AComponent>
                             </LiComponent>
                         )
                     }

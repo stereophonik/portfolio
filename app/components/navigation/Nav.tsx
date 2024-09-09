@@ -3,7 +3,7 @@ import { useContext } from "react";
 import NavComponent from "../Nav";
 import UlComponent from "../Ul";
 import LiComponent from "../Li";
-import LinkComponent from "../Link";
+import AComponent from "../A";
 
 import { NavigationContext } from "../../contexts/Navigation";
 
@@ -22,10 +22,10 @@ export default function NavNavigationComponent(): React.ReactElement {
                         <LiComponent
                             className={li["className"]}
                             key={li["key"]}>
-                            <LinkComponent
+                            <AComponent
                                 href={navigationContext["links"][navigationContext["lis"].indexOf(li)]["href"]}>
                                 {navigationContext["links"][navigationContext["lis"].indexOf(li)]["content"]}
-                            </LinkComponent>
+                            </AComponent>
                         </LiComponent>
                     )
                 }

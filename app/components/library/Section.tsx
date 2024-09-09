@@ -6,7 +6,7 @@ import DivComponent from "../Div";
 import H1Component from "../H1";
 import H2Component from "../H2";
 import BrComponent from "../Br";
-import LinkComponent from "../Link";
+import AComponent from "../A";
 
 export default function SectionLibraryComponent(): React.ReactElement {
     const skillsContext: {} = useContext(SkillsContext);
@@ -34,17 +34,17 @@ export default function SectionLibraryComponent(): React.ReactElement {
                 If you are familiar with Next.js, you probably know that it's built on top of the React library. This app has certain React implementations in it, including components and contexts.
                 <BrComponent />
                 <BrComponent />
-                <LinkComponent
+                <AComponent
                     href="https://github.com/stereophonik/portfolio/tree/main/app/components"
                 >
                     My Portfolio Application Components
-                </LinkComponent>
+                </AComponent>
                 <BrComponent />
-                <LinkComponent
+                <AComponent
                     href="https://github.com/stereophonik/portfolio/tree/main/app/contexts"
                 >
                     My Portfolio Application Contexts
-                </LinkComponent>
+                </AComponent>
             </H2Component>
         </SectionComponent>
     );

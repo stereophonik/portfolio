@@ -146,13 +146,11 @@ export default function Page(): React.ReactElement {
             className: profileParsedFromFile["classNameDiv"],
             content: profileParsedFromFile["contentDiv"]
         },
-        image: {
+        img: {
             id: profileParsedFromFile["idImage"],
             className: profileParsedFromFile["classNameImage"],
             src: profileParsedFromFile["srcImage"],
-            alt: profileParsedFromFile["altImage"],
-            width: 320,
-            height: 489
+            alt: profileParsedFromFile["altImage"]
         },
         h1: {
             id: profileParsedFromFile["idH1"],
