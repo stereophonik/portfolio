@@ -30,15 +30,6 @@ a:hover {
     color: darkgray;
 }
 
-.classNameImage {
-    filter: brightness(75%);
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 10%;
-    padding: 0.5vw;
-    width: 320px;
-    height: 489px;
-}
 
 .classNameNav {
     overflow: hidden;
@@ -69,6 +60,21 @@ a:hover {
     height: 10%;
 }
 
+.classNameUl {
+    padding-inline-start: 0;
+    list-style-type: none;
+}
+
+.classNameImage {
+    filter: brightness(75%);
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10%;
+    padding: 0.5vw;
+    width: 320px;
+    height: 489px;
+}
+
 .classNameH1 {
     padding: 0.25vw;
     font-family: "Roboto Mono", sans-serif;
@@ -79,15 +85,6 @@ a:hover {
     padding: 1vw;
     font-family: "Anonymous Pro", sans-serif;
     font-size: 3rem;
-}
-
-.classNameH3 {
-    font-family: "Anonymous Pro", sans-serif;
-}
-
-.classNameUl {
-    padding-inline-start: 0;
-    list-style-type: none;
 }
 
 .classNameHorizontalLi {
@@ -101,4 +98,50 @@ a:hover {
     padding: 0.5vw;
     font-family: "Anonymous Pro", sans-serif;
     font-size: 3rem;
+}
+
+@media screen and (max-width: 1080px) {
+    .classNameImage {
+        width: 290px;
+        height: 444px;
+    }
+
+    .classNameH1 {
+        font-size: 4rem;
+    }
+
+    .classNameH2 {
+        font-size: 2.5rem;
+    }
+
+    .classNameHorizontalLi {
+        font-size: 2rem;
+    }
+
+    .classNameVerticalLi {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .classNameImage {
+        width: 260px;
+        height: 398px;
+    }
+
+    .classNameH1 {
+        font-size: 3.5rem;
+    }
+
+    .classNameH2 {
+        font-size: 2rem;
+    }
+
+    .classNameHorizontalLi {
+        font-size: 1.5rem;
+    }
+
+    .classNameVerticalLi {
+        font-size: 2rem;
+    }
 }
