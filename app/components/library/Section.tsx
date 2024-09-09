@@ -30,7 +30,6 @@ export default function SectionLibraryComponent(): React.ReactElement {
                 If you are familiar with Next.js, you probably know that it's built on top of the React library. This app has certain React implementations in it, including components and contexts.
             </H2Component>
             <BrComponent />
-            <BrComponent />
             <UlComponent
                 id={skillsContext["ul"]["id"]}
                 className={skillsContext["ul"]["className"]}>

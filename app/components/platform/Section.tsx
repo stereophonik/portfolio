@@ -30,7 +30,6 @@ export default function SectionPlatformComponent(): React.ReactElement {
                 If you need someone to create a WordPress site for you, get me for the opportunity! I have an experience in WordPress page creating. Please refer to the page below.
             </H2Component>
             <BrComponent />
-            <BrComponent />
             <UlComponent
                 id={skillsContext["ul"]["id"]}
                 className={skillsContext["ul"]["className"]}>

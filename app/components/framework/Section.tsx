@@ -30,7 +30,6 @@ export default function SectionFrameworkComponent(): React.ReactElement {
                 This app has been built via Next.js. This has been built even though I don't any Next.js work experience. You may refer to my portfolio application below.
             </H2Component>
             <BrComponent />
-            <BrComponent />
             <UlComponent
                 id={skillsContext["ul"]["id"]}
                 className={skillsContext["ul"]["className"]}>

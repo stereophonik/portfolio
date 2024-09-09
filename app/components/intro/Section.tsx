@@ -7,6 +7,7 @@ import H2Component from "../H2";
 import { IntroContext } from "../../contexts/Intro";
 import LiComponent from "../Li";
 import UlComponent from "../Ul";
+import BrComponent from "../Br";
 
 export default function SectionIntroComponent(): React.ReactElement {
     const introContext: {} = useContext(IntroContext);
@@ -28,6 +29,7 @@ export default function SectionIntroComponent(): React.ReactElement {
                 style={introContext["h2"]["style"]}>
                 {introContext["h2"]["content"]}
             </H2Component>
+            <BrComponent />
             <UlComponent
                 id={introContext["ul"]["id"]}
                 className={introContext["ul"]["className"]}>

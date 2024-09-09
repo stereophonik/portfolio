@@ -29,24 +29,23 @@ export default function SectionSkillsComponent(): React.ReactElement {
                 className={skillsContext["h2"]["className"]}
                 style={skillsContext["h2"]["style"]}>
                 Feel free to scroll down below with regards to my skill sets or via these links:
-                <BrComponent />
-                <BrComponent />
             </H2Component>
+            <BrComponent />
             <UlComponent
                 id={skillsContext["ul"]["id"]}
                 className={skillsContext["ul"]["className"]}>
-                    {
-                        skillsContext["lis"].map((li: { [x: string]: any; }) =>
-                            <LiComponent
-                                className={li["className"]}
-                                key={li["key"]}>
-                                <AComponent
-                                    href={skillsContext["as"][skillsContext["lis"].indexOf(li)]["href"]}>
-                                    {skillsContext["as"][skillsContext["lis"].indexOf(li)]["content"]}
-                                </AComponent>
-                            </LiComponent>
-                        )
-                    }
+                {
+                    skillsContext["lis"].map((li: { [x: string]: any; }) =>
+                        <LiComponent
+                            className={li["className"]}
+                            key={li["key"]}>
+                            <AComponent
+                                href={skillsContext["as"][skillsContext["lis"].indexOf(li)]["href"]}>
+                                {skillsContext["as"][skillsContext["lis"].indexOf(li)]["content"]}
+                            </AComponent>
+                        </LiComponent>
+                    )
+                }
             </UlComponent>
         </SectionComponent>
     );
