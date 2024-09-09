@@ -145,3 +145,95 @@ a:hover {
         font-size: 2rem;
     }
 }
+
+@media screen and (max-width: 760px) {
+    .classNameImage {
+        width: 230px;
+        height: 352px;
+    }
+
+    .classNameH1 {
+        font-size: 3rem;
+    }
+
+    .classNameH2 {
+        font-size: 1.5rem;
+    }
+
+    .classNameHorizontalLi {
+        font-size: 1rem;
+    }
+
+    .classNameVerticalLi {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .classNameImage {
+        width: 200px;
+        height: 306px;
+    }
+
+    .classNameH1 {
+        font-size: 2rem;
+    }
+
+    .classNameH2 {
+        font-size: 1.5rem;
+    }
+
+    .classNameHorizontalLi {
+        font-size: 1rem;
+    }
+
+    .classNameVerticalLi {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .classNameImage {
+        width: 110px;
+        height: 168px;
+    }
+
+    .classNameH1 {
+        font-size: 1.5rem;
+    }
+
+    .classNameH2 {
+        font-size: 1rem;
+    }
+
+    .classNameHorizontalLi {
+        font-size: 1rem;
+    }
+
+    .classNameVerticalLi {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .classNameImage {
+        width: 80px;
+        height: 122px;
+    }
+
+    .classNameH1 {
+        font-size: 1.25rem;
+    }
+
+    .classNameH2 {
+        font-size: 0.75rem;
+    }
+
+    .classNameHorizontalLi {
+        font-size: 0.75rem;
+    }
+
+    .classNameVerticalLi {
+        font-size: 0.75rem;
+    }
+}
