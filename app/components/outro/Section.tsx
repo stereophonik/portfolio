@@ -3,6 +3,7 @@ import { useContext } from "react";
 import SectionComponent from "../Section";
 import H1Component from "../H1";
 import H2Component from "../H2";
+import AComponent from "../A";
 
 import { OutroContext } from "../../contexts/Outro";
 
@@ -27,9 +28,9 @@ export default function SectionOutroComponent(): React.ReactElement {
                 {outroContext["h2"]["content"]}
             </H2Component>
             <div className="classNameDiv">
-                <a href="#idNavNavigation">
+                <AComponent href="#idNavNavigation">
                     Go to Navigation
-                </a>
+                </AComponent>
             </div>
         </SectionComponent>
     );
