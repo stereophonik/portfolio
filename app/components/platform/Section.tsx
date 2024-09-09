@@ -5,6 +5,8 @@ import {useContext} from "react";
 import H1Component from "../H1";
 import H2Component from "../H2";
 import BrComponent from "../Br";
+import UlComponent from "../Ul";
+import LiComponent from "../Li";
 import AComponent from "../A";
 
 export default function SectionPlatformComponent(): React.ReactElement {
@@ -25,18 +27,23 @@ export default function SectionPlatformComponent(): React.ReactElement {
                 id={skillsContext["h2"]["id"]}
                 className={skillsContext["h2"]["className"]}
                 style={skillsContext["h2"]["style"]}>
-                I have an experience in WordPress page creating. Please refer to the page below.
-                <BrComponent />
-                <BrComponent />
-                <AComponent
-                    href="https://classconstructions.com.au/class-constructions-blogs"
-                >
-                    Class Constructions Blogs Page
-                </AComponent>
-                <BrComponent />
-                <BrComponent />
-                If you need someone to create a WordPress site for you, get me for the opportunity!
+                If you need someone to create a WordPress site for you, get me for the opportunity! I have an experience in WordPress page creating. Please refer to the page below.
             </H2Component>
+            <BrComponent />
+            <BrComponent />
+            <UlComponent
+                id={skillsContext["ul"]["id"]}
+                className={skillsContext["ul"]["className"]}>
+                <LiComponent
+                    className="classNameVerticalLi"
+                    key="1">
+                    <AComponent
+                        href="https://classconstructions.com.au/class-constructions-blogs"
+                    >
+                        Class Constructions Blogs Page
+                    </AComponent>
+                </LiComponent>
+            </UlComponent>
         </SectionComponent>
     );
 }
