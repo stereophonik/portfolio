@@ -1,6 +1,6 @@
 "use client"
 
-import {useState, useEffect, Dispatch, SetStateAction} from "react";
+import { useState, useEffect, Dispatch, SetStateAction } from "react";
 
 import MainComponent from "./components/Main";
 import NavNavigationComponent from "./components/navigation/Nav";
