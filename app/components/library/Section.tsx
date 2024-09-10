@@ -1,6 +1,6 @@
 import SectionComponent from "../Section";
 
-import { SkillSetsContext } from "../../contexts/SkillSets";
+import { LibraryContext } from "../../contexts/Library";
 import {useContext} from "react";
 import H1Component from "../H1";
 import H2Component from "../H2";
@@ -9,43 +9,37 @@ import LiComponent from "../Li";
 import AComponent from "../A";
 
 export default function SectionLibraryComponent(): React.ReactElement {
-    const skillSetsContext: {} = useContext(SkillSetsContext);
+    const libraryContext: {} = useContext(LibraryContext);
 
     return (
         <SectionComponent
-            id="idSectionLibrary"
-            className="classNameClassBSection">
+            id={libraryContext["section"]["id"]}
+            className={libraryContext["section"]["className"]}>
             <H1Component
-                id={skillSetsContext["h1"]["id"]}
-                className={skillSetsContext["h1"]["className"]}>
-                Library
+                id={libraryContext["h1"]["id"]}
+                className={libraryContext["h1"]["className"]}>
+                {libraryContext["h1"]["content"]}
             </H1Component>
             <H2Component
-                id={skillSetsContext["h2"]["id"]}
-                className={skillSetsContext["h2"]["className"]}>
-                If you are familiar with Next.js, you probably know that it's built on top of the React library. This app has certain React implementations in it, including components and contexts.
+                id={libraryContext["h2"]["id"]}
+                className={libraryContext["h2"]["className"]}>
+                {libraryContext["h2"]["content"]}
             </H2Component>
             <UlComponent
-                id={skillSetsContext["ul"]["id"]}
-                className={skillSetsContext["ul"]["className"]}>
-                <LiComponent
-                    className="classNameVerticalLi"
-                    key="1">
-                    <AComponent
-                        href="https://github.com/stereophonik/portfolio/tree/main/app/components"
-                    >
-                        My Portfolio Application Components
-                    </AComponent>
-                </LiComponent>
-                <LiComponent
-                    className="classNameVerticalLi"
-                    key="2">
-                    <AComponent
-                        href="https://github.com/stereophonik/portfolio/tree/main/app/contexts"
-                    >
-                        My Portfolio Application Contexts
-                    </AComponent>
-                </LiComponent>
+                id={libraryContext["ul"]["id"]}
+                className={libraryContext["ul"]["className"]}>
+                {
+                    libraryContext["lis"].map((li: { [x: string]: any; }) =>
+                        <LiComponent
+                            className={li["className"]}
+                            key={li["key"]}>
+                            <AComponent
+                                href={libraryContext["as"][libraryContext["lis"].indexOf(li)]["href"]}>
+                                {libraryContext["as"][libraryContext["lis"].indexOf(li)]["content"]}
+                            </AComponent>
+                        </LiComponent>
+                    )
+                }
             </UlComponent>
         </SectionComponent>
     );
