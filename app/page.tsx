@@ -424,6 +424,15 @@ export default function Page(): React.ReactElement {
             id: outroParsedFromFile["idH2"],
             className: outroParsedFromFile["classNameH2"],
             content: outroParsedFromFile["contentH2"]
+        },
+        div: {
+            id: outroParsedFromFile["idDiv"],
+            className: outroParsedFromFile["classNameDiv"],
+            content: outroParsedFromFile["contentDiv"]
+        },
+        a: {
+            href: `${outroParsedFromFile["hrefA"]}`,
+            content: outroParsedFromFile["contentA"]
         }
     }
 
