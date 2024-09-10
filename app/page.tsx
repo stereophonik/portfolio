@@ -19,6 +19,7 @@ import { IntroContext } from "./contexts/Intro";
 import { ServingsContext } from "./contexts/Servings";
 import { SkillSetsContext } from "./contexts/SkillSets";
 import { PlatformContext } from "./contexts/Platform";
+import { FrameworkContext } from "./contexts/Framework";
 import { OutroContext } from "./contexts/Outro";
 
 import ValueNavigationInterface from "./interfaces/ValueNavigation";
@@ -27,6 +28,7 @@ import ValueIntroInterface from "./interfaces/ValueIntro";
 import ValueServingsInterface from "./interfaces/ValueServings";
 import ValueSkillSetsInterface from "./interfaces/ValueSkillSets";
 import ValuePlatformInterface from "./interfaces/ValuePlatform";
+import ValueFrameworkInterface from "./interfaces/ValueFramework";
 import ValueOutroInterface from "./interfaces/ValueOutro";
 
 export default function Page(): React.ReactElement {
@@ -36,6 +38,7 @@ export default function Page(): React.ReactElement {
     const [servingsParsedFromFile, setServingsParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [skillSetsParsedFromFile, setSkillSetsParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [platformParsedFromFile, setPlatformParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
+    const [frameworkParsedFromFile, setFrameworkParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [outroParsedFromFile, setOutroParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
 
     useEffect(() => {
@@ -85,6 +88,14 @@ export default function Page(): React.ReactElement {
             .then(fromFile => fromFile.json())
             .then(parsedFromFile => {
                 setPlatformParsedFromFile(parsedFromFile);
+            });
+
+        fetch("/files?fileName=framework", {
+            method: "GET"
+        })
+            .then(fromFile => fromFile.json())
+            .then(parsedFromFile => {
+                setFrameworkParsedFromFile(parsedFromFile);
             });
 
         fetch("/files?fileName=outro", {
@@ -319,6 +330,32 @@ export default function Page(): React.ReactElement {
         }
     }
 
+    const valueFramework: ValueFrameworkInterface = {
+        section: {
+            id: frameworkParsedFromFile["idSection"],
+            className: frameworkParsedFromFile["classNameSection"]
+        },
+        h1: {
+            id: frameworkParsedFromFile["idH1"],
+            className: frameworkParsedFromFile["classNameH1"],
+            content: frameworkParsedFromFile["contentH1"]
+        },
+        h2: {
+            id: frameworkParsedFromFile["idH2"],
+            className: frameworkParsedFromFile["classNameH2"],
+            content: frameworkParsedFromFile["contentH2"]
+        },
+        span: {
+            id: frameworkParsedFromFile["idSpan"],
+            className: frameworkParsedFromFile["classNameSpan"],
+            content: frameworkParsedFromFile["contentSpan"]
+        },
+        a: {
+            href: `${frameworkParsedFromFile["hrefA"]}`,
+            content: frameworkParsedFromFile["contentA"]
+        }
+    }
+
     const valueOutro: ValueOutroInterface = {
         section: {
             id: outroParsedFromFile["idSection"],
@@ -357,13 +394,16 @@ export default function Page(): React.ReactElement {
             <SkillSetsContext.Provider
                 value={valueSkillSets}>
                 <SectionSkillSetsComponent />
-                <SectionFrameworkComponent />
                 <SectionLibraryComponent />
             </SkillSetsContext.Provider>
             <PlatformContext.Provider
                 value={valuePlatform}>
                 <SectionPlatformComponent />
             </PlatformContext.Provider>
+            <FrameworkContext.Provider
+                value={valueFramework}>
+                <SectionFrameworkComponent />
+            </FrameworkContext.Provider>
             <OutroContext.Provider
                 value={valueOutro}>
                 <SectionOutroComponent />

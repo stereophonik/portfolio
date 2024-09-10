@@ -1,36 +1,38 @@
 import SectionComponent from "../Section";
 
-import { SkillSetsContext } from "../../contexts/SkillSets";
+import { FrameworkContext } from "../../contexts/Framework";
 import {useContext} from "react";
 import H1Component from "../H1";
 import H2Component from "../H2";
+import SpanComponent from "../Span";
 import AComponent from "../A";
 
 export default function SectionFrameworkComponent(): React.ReactElement {
-    const skillSetsContext: {} = useContext(SkillSetsContext);
+    const frameworkContext: {} = useContext(FrameworkContext);
 
     return (
         <SectionComponent
-            id="idSectionFramework"
-            className={skillSetsContext["section"]["className"]}>
+            id={frameworkContext["section"]["id"]}
+            className={frameworkContext["section"]["className"]}>
             <H1Component
-                id={skillSetsContext["h1"]["id"]}
-                className={skillSetsContext["h1"]["className"]}>
-                Framework
+                id={frameworkContext["h1"]["id"]}
+                className={frameworkContext["h1"]["className"]}>
+                {frameworkContext["h1"]["content"]}
             </H1Component>
             <H2Component
-                id={skillSetsContext["h2"]["id"]}
-                className={skillSetsContext["h2"]["className"]}>
-                This app has been built via Next.js. This has been built even though I don't any Next.js work experience. You may refer to my portfolio application below.
+                id={frameworkContext["h2"]["id"]}
+                className={frameworkContext["h2"]["className"]}>
+                {frameworkContext["h2"]["content"]}
             </H2Component>
-            <span
-                className="classNameSpan">
+            <SpanComponent
+                id={frameworkContext["span"]["id"]}
+                className={frameworkContext["span"]["className"]}>
                 <AComponent
-                    href="https://github.com/stereophonik/portfolio/tree/main/app"
+                    href={frameworkContext["a"]["href"]}
                 >
-                    My Portfolio Application
+                    {frameworkContext["a"]["content"]}
                 </AComponent>
-            </span>
+            </SpanComponent>
         </SectionComponent>
     );
 }

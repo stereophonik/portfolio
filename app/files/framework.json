@@ -1,0 +1,15 @@
+{
+  "idSection": "idSectionFramework",
+  "classNameSection": "classNameClassASection",
+  "idH1": "idH1Framework",
+  "classNameH1": "classNameH1",
+  "contentH1": "Framework",
+  "idH2": "idH2Framework",
+  "classNameH2": "classNameH2",
+  "contentH2": "This app has been built via Next.js. This has been built even though I don't any Next.js work experience. You may refer to my portfolio application below.",
+  "idSpan": "idSpanFramework",
+  "classNameSpan": "classNameSpan",
+  "contentSpan": "",
+  "hrefA": "https://github.com/stereophonik/portfolio/tree/main/app",
+  "contentA": "My Portfolio Application"
+}
