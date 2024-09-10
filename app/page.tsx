@@ -124,8 +124,8 @@ export default function Page(): React.ReactElement {
             className: navigationParsedFromFile["classNameNav"]
         },
         ul: {
-            id: navigationParsedFromFile["id"],
-            className: navigationParsedFromFile["className"]
+            id: navigationParsedFromFile["idUl"],
+            className: navigationParsedFromFile["classNameUl"]
         },
         lis: [
             {
