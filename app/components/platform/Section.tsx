@@ -12,18 +12,15 @@ export default function SectionPlatformComponent(): React.ReactElement {
     return (
         <SectionComponent
             id="idSectionPlatform"
-            className="classNameClassBSection"
-            style={skillSetsContext["section"]["style"]}>
+            className="classNameClassBSection">
             <H1Component
                 id={skillSetsContext["h1"]["id"]}
-                className={skillSetsContext["h1"]["className"]}
-                style={skillSetsContext["h1"]["style"]}>
+                className={skillSetsContext["h1"]["className"]}>
                 Platform
             </H1Component>
             <H2Component
                 id={skillSetsContext["h2"]["id"]}
-                className={skillSetsContext["h2"]["className"]}
-                style={skillSetsContext["h2"]["style"]}>
+                className={skillSetsContext["h2"]["className"]}>
                 If you need someone to create a WordPress site for you, get me for the opportunity! I have an experience in WordPress page creating. Please refer to the page below.
             </H2Component>
             <span

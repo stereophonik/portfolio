@@ -14,18 +14,15 @@ export default function SectionIntroComponent(): React.ReactElement {
     return (
         <SectionComponent
             id={introContext["section"]["id"]}
-            className={introContext["section"]["className"]}
-            style={introContext["section"]["style"]}>
+            className={introContext["section"]["className"]}>
             <H1Component
                 id={introContext["h1"]["id"]}
-                className={introContext["h1"]["className"]}
-                style={introContext["h1"]["style"]}>
+                className={introContext["h1"]["className"]}>
                 {introContext["h1"]["content"]}
             </H1Component>
             <H2Component
                 id={introContext["h2"]["id"]}
-                className={introContext["h2"]["className"]}
-                style={introContext["h2"]["style"]}>
+                className={introContext["h2"]["className"]}>
                 {introContext["h2"]["content"]}
             </H2Component>
             <UlComponent

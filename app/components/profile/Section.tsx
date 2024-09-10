@@ -13,8 +13,7 @@ export default function SectionProfileComponent(): React.ReactElement {
     return (
         <SectionComponent
             id={profileContext["section"]["id"]}
-            className={profileContext["section"]["className"]}
-            style={profileContext["section"]["style"]}>
+            className={profileContext["section"]["className"]}>
             <ImgComponent
                 id={profileContext["img"]["id"]}
                 className={profileContext["img"]["className"]}
@@ -23,14 +22,12 @@ export default function SectionProfileComponent(): React.ReactElement {
             />
             <H1Component
                 id={profileContext["h1"]["id"]}
-                className={profileContext["h1"]["className"]}
-                style={profileContext["h1"]["style"]}>
+                className={profileContext["h1"]["className"]}>
                 {profileContext["h1"]["content"]}
             </H1Component>
             <H2Component
                 id={profileContext["h2"]["id"]}
-                className={profileContext["h2"]["className"]}
-                style={profileContext["h2"]["style"]}>
+                className={profileContext["h2"]["className"]}>
                 {profileContext["h2"]["content"]}
             </H2Component>
         </SectionComponent>

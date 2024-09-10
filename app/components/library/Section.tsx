@@ -14,18 +14,15 @@ export default function SectionLibraryComponent(): React.ReactElement {
     return (
         <SectionComponent
             id="idSectionLibrary"
-            className="classNameClassBSection"
-            style={skillSetsContext["section"]["style"]}>
+            className="classNameClassBSection">
             <H1Component
                 id={skillSetsContext["h1"]["id"]}
-                className={skillSetsContext["h1"]["className"]}
-                style={skillSetsContext["h1"]["style"]}>
+                className={skillSetsContext["h1"]["className"]}>
                 Library
             </H1Component>
             <H2Component
                 id={skillSetsContext["h2"]["id"]}
-                className={skillSetsContext["h2"]["className"]}
-                style={skillSetsContext["h2"]["style"]}>
+                className={skillSetsContext["h2"]["className"]}>
                 If you are familiar with Next.js, you probably know that it's built on top of the React library. This app has certain React implementations in it, including components and contexts.
             </H2Component>
             <UlComponent

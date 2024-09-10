@@ -14,18 +14,15 @@ export default function SectionServingsComponent(): React.ReactElement {
     return (
         <SectionComponent
             id={servingsContext["section"]["id"]}
-            className={servingsContext["section"]["className"]}
-            style={servingsContext["section"]["style"]}>
+            className={servingsContext["section"]["className"]}>
             <H1Component
                 id={servingsContext["h1"]["id"]}
-                className={servingsContext["h1"]["className"]}
-                style={servingsContext["h1"]["style"]}>
+                className={servingsContext["h1"]["className"]}>
                 {servingsContext["h1"]["content"]}
             </H1Component>
             <H2Component
                 id={servingsContext["h2"]["id"]}
-                className={servingsContext["h2"]["className"]}
-                style={servingsContext["h2"]["style"]}>
+                className={servingsContext["h2"]["className"]}>
                 {servingsContext["h2"]["content"]}
             </H2Component>
             <UlComponent

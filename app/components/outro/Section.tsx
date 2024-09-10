@@ -13,18 +13,15 @@ export default function SectionOutroComponent(): React.ReactElement {
     return (
         <SectionComponent
             id={outroContext["section"]["id"]}
-            className={outroContext["section"]["className"]}
-            style={outroContext["section"]["style"]}>
+            className={outroContext["section"]["className"]}>
             <H1Component
                 id={outroContext["h1"]["id"]}
-                className={outroContext["h1"]["className"]}
-                style={outroContext["h1"]["style"]}>
+                className={outroContext["h1"]["className"]}>
                 {outroContext["h1"]["content"]}
             </H1Component>
             <H2Component
                 id={outroContext["h2"]["id"]}
-                className={outroContext["h2"]["className"]}
-                style={outroContext["h2"]["style"]}>
+                className={outroContext["h2"]["className"]}>
                 {outroContext["h2"]["content"]}
             </H2Component>
             <div className="classNameDiv">

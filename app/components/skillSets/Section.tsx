@@ -15,18 +15,15 @@ export default function SectionSkillSetsComponent(): React.ReactElement {
     return (
         <SectionComponent
             id={skillSetsContext["section"]["id"]}
-            className={skillSetsContext["section"]["className"]}
-            style={skillSetsContext["section"]["style"]}>
+            className={skillSetsContext["section"]["className"]}>
             <H1Component
                 id={skillSetsContext["h1"]["id"]}
-                className={skillSetsContext["h1"]["className"]}
-                style={skillSetsContext["h1"]["style"]}>
+                className={skillSetsContext["h1"]["className"]}>
                 {skillSetsContext["h1"]["content"]}
             </H1Component>
             <H2Component
                 id={skillSetsContext["h2"]["id"]}
-                className={skillSetsContext["h2"]["className"]}
-                style={skillSetsContext["h2"]["style"]}>
+                className={skillSetsContext["h2"]["className"]}>
                 {skillSetsContext["h2"]["content"]}
             </H2Component>
             <UlComponent

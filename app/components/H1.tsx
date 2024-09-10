@@ -1,3 +1,3 @@
-export default function H1Component({ id, className, style, children }): React.ReactElement {
-    return <h1 id={id} className={className} style={style}>{children}</h1>;
+export default function H1Component({ id, className, children }): React.ReactElement {
+    return <h1 id={id} className={className}>{children}</h1>;
 }
