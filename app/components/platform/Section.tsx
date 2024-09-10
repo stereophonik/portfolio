@@ -1,36 +1,38 @@
 import SectionComponent from "../Section";
 
-import { SkillSetsContext } from "../../contexts/SkillSets";
+import { PlatformContext } from "../../contexts/Platform";
 import {useContext} from "react";
 import H1Component from "../H1";
 import H2Component from "../H2";
+import SpanComponent from "../Span";
 import AComponent from "../A";
 
 export default function SectionPlatformComponent(): React.ReactElement {
-    const skillSetsContext: {} = useContext(SkillSetsContext);
+    const platformContext: {} = useContext(PlatformContext);
 
     return (
         <SectionComponent
-            id="idSectionPlatform"
-            className="classNameClassBSection">
+            id={platformContext["section"]["id"]}
+            className={platformContext["section"]["className"]}>
             <H1Component
-                id={skillSetsContext["h1"]["id"]}
-                className={skillSetsContext["h1"]["className"]}>
-                Platform
+                id={platformContext["h1"]["id"]}
+                className={platformContext["h1"]["className"]}>
+                {platformContext["h1"]["content"]}
             </H1Component>
             <H2Component
-                id={skillSetsContext["h2"]["id"]}
-                className={skillSetsContext["h2"]["className"]}>
-                If you need someone to create a WordPress site for you, get me for the opportunity! I have an experience in WordPress page creating. Please refer to the page below.
+                id={platformContext["h2"]["id"]}
+                className={platformContext["h2"]["className"]}>
+                {platformContext["h2"]["content"]}
             </H2Component>
-            <span
-                className="classNameSpan">
+            <SpanComponent
+                id={platformContext["span"]["id"]}
+                className={platformContext["span"]["className"]}>
                 <AComponent
-                    href="https://classconstructions.com.au/class-constructions-blogs"
+                    href={platformContext["a"]["href"]}
                 >
-                    Class Constructions Blogs Page
+                    {platformContext["a"]["content"]}
                 </AComponent>
-            </span>
+            </SpanComponent>
         </SectionComponent>
     );
 }
