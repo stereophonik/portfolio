@@ -1,6 +1,6 @@
 {
   "idSection": "idSectionOutro",
-  "classNameSection": "classNameClassASection",
+  "classNameSection": "classNameClassBSection",
   "idH1": "idH1Outro",
   "classNameH1": "classNameH1",
   "contentH1": "Let’s Connect",
@@ -11,5 +11,5 @@
   "classNameDiv": "classNameDiv",
   "contentDiv": "",
   "hrefA": "#idNavNavigation",
-  "contentA": "Go to Navigation"
+  "contentA": "Back to Top"
 }

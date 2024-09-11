@@ -43,7 +43,7 @@ a:hover {
     width: 100vw;
     background-color: #DA6E2B;
     color: #2C2F37;
-    text-align: left;
+    text-align: right;
 }
 
 .classNameRightNav {
@@ -147,6 +147,13 @@ a:hover {
     padding: 0.75vw 1.5vw;
     font-family: "Anonymous Pro", sans-serif;
     font-size: 2rem;
+    text-align: center;
+}
+
+.classNameDivFooter {
+    padding: 0.25vw 1.5vw;
+    font-family: "Anonymous Pro", sans-serif;
+    font-size: 1rem;
     text-align: center;
 }
 

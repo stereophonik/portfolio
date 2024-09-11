@@ -46,7 +46,7 @@ export default function SectionFooterComponent(): React.ReactElement {
                     <AComponent
                         href="https://github.com/stereophonik/portfolio"
                         target="_blank">
-                        <img src="/github-mark.png" style={{
+                        <img src="/github.png" style={{
                             width: "30px",
                             height: "30px"
                         }}/>
@@ -58,7 +58,7 @@ export default function SectionFooterComponent(): React.ReactElement {
                     <AComponent
                         href="https://www.linkedin.com/in/nikolai-reyes"
                         target="_blank">
-                        <img src="/LI-In-Bug.png" style={{
+                        <img src="/linkedin.png" style={{
                             width: "30px",
                             height: "30px"
                         }}/>
@@ -67,8 +67,17 @@ export default function SectionFooterComponent(): React.ReactElement {
             </UlComponent>
             <DivComponent
                 id="idDivFooter"
-                className="classNameDiv">
+                className="classNameDivFooter">
                 @2024 Nikolai Reyes - All Rights Reserved
+            </DivComponent>
+            <DivComponent
+                id="idDivFooter"
+                className="classNameDivFooter">
+                <AComponent
+                    href="#idNavNavigation"
+                    target="_self">
+                    Back to Top
+                </AComponent>
             </DivComponent>
         </SectionComponent>
     );

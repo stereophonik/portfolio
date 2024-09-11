@@ -45,7 +45,7 @@ export default function NavNavigationComponent(): React.ReactElement {
                     <AComponent
                         href="https://github.com/stereophonik/portfolio"
                         target="_blank">
-                        <img src="/github-mark.png" style={{
+                        <img src="/github.png" style={{
                             width: "30px",
                             height: "30px"
                         }}/>
@@ -57,7 +57,7 @@ export default function NavNavigationComponent(): React.ReactElement {
                     <AComponent
                         href="https://www.linkedin.com/in/nikolai-reyes"
                         target="_blank">
-                        <img src="/LI-In-Bug.png" style={{
+                        <img src="/linkedin.png" style={{
                             width: "30px",
                             height: "30px"
                         }}/>

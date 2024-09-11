@@ -462,10 +462,6 @@ export default function Page(): React.ReactElement {
                 value={valueFramework}>
                 <SectionFrameworkComponent />
             </FrameworkContext.Provider>
-            <LibraryContext.Provider
-                value={valueLibrary}>
-                <SectionLibraryComponent />
-            </LibraryContext.Provider>
             <OutroContext.Provider
                 value={valueOutro}>
                 <SectionOutroComponent />

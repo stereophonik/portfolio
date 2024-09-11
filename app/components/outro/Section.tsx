@@ -25,15 +25,6 @@ export default function SectionOutroComponent(): React.ReactElement {
                 className={outroContext["h2"]["className"]}>
                 {outroContext["h2"]["content"]}
             </H2Component>
-            <DivComponent
-                id={outroContext["div"]["id"]}
-                className={outroContext["div"]["className"]}>
-                <AComponent
-                    href={outroContext["a"]["href"]}
-                    target="_self">
-                    {outroContext["a"]["content"]}
-                </AComponent>
-            </DivComponent>
         </SectionComponent>
     );
 }
