@@ -444,12 +444,11 @@ export default function Page(): React.ReactElement {
             </NavigationContext.Provider>
             <ProfileContext.Provider
                 value={valueProfile}>
-                <SectionProfileComponent />
+                <IntroContext.Provider
+                    value={valueIntro}>
+                    <SectionProfileComponent />
+                </IntroContext.Provider>
             </ProfileContext.Provider>
-            <IntroContext.Provider
-                value={valueIntro}>
-                <SectionIntroComponent />
-            </IntroContext.Provider>
             <ServingsContext.Provider
                 value={valueServings}>
                 <SectionServingsComponent />
