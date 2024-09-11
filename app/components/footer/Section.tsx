@@ -1,26 +1,27 @@
 import { useContext } from "react";
 
-import NavComponent from "../Nav";
+import SectionComponent from "../Section";
 import UlComponent from "../Ul";
 import LiComponent from "../Li";
 import AComponent from "../A";
 
 import { NavigationContext } from "../../contexts/Navigation";
+import DivComponent from "../Div";
 
-export default function NavNavigationComponent(): React.ReactElement {
+export default function SectionFooterComponent(): React.ReactElement {
     const navigationContext: {} = useContext(NavigationContext);
 
     return (
-        <NavComponent
+        <SectionComponent
             id={navigationContext["nav"]["id"]}
-            className={navigationContext["nav"]["className"]}>
+            className="classSectionFooter">
             <UlComponent
                 id={navigationContext["ul"]["id"]}
                 className={navigationContext["ul"]["className"]}>
                 {
                     navigationContext["lis"].map((li: { [x: string]: any; }) =>
                         <LiComponent
-                            className={li["className"]}
+                            className="classNameHorizontalLiFooter"
                             key={li["key"]}>
                             <AComponent
                                 href={navigationContext["as"][navigationContext["lis"].indexOf(li)]["href"]}
@@ -31,7 +32,7 @@ export default function NavNavigationComponent(): React.ReactElement {
                     )
                 }
                 <li
-                    className="classNameHorizontalLi"
+                    className="classNameHorizontalLiFooter"
                     key="5">
                     <AComponent
                         href="mailto:nikolai00reyes@outlook.ph"
@@ -40,7 +41,7 @@ export default function NavNavigationComponent(): React.ReactElement {
                     </AComponent>
                 </li>
                 <li
-                    className="classNameIconHorizontalLi"
+                    className="classNameHorizontalLiFooter"
                     key="6">
                     <AComponent
                         href="https://github.com/stereophonik/portfolio"
@@ -52,7 +53,7 @@ export default function NavNavigationComponent(): React.ReactElement {
                     </AComponent>
                 </li>
                 <li
-                    className="classNameIconHorizontalLi"
+                    className="classNameHorizontalLiFooter"
                     key="7">
                     <AComponent
                         href="https://www.linkedin.com/in/nikolai-reyes"
@@ -64,6 +65,11 @@ export default function NavNavigationComponent(): React.ReactElement {
                     </AComponent>
                 </li>
             </UlComponent>
-        </NavComponent>
+            <DivComponent
+                id="idDivFooter"
+                className="classNameDiv">
+                @2024 Nikolai Reyes - All Rights Reserved
+            </DivComponent>
+        </SectionComponent>
     );
 }

@@ -29,7 +29,8 @@ export default function SectionOutroComponent(): React.ReactElement {
                 id={outroContext["div"]["id"]}
                 className={outroContext["div"]["className"]}>
                 <AComponent
-                    href={outroContext["a"]["href"]}>
+                    href={outroContext["a"]["href"]}
+                    target="_self">
                     {outroContext["a"]["content"]}
                 </AComponent>
             </DivComponent>

@@ -29,7 +29,7 @@ export default function SectionFrameworkComponent(): React.ReactElement {
                 className={frameworkContext["span"]["className"]}>
                 <AComponent
                     href={frameworkContext["a"]["href"]}
-                >
+                    target="_blank">
                     {frameworkContext["a"]["content"]}
                 </AComponent>
             </SpanComponent>

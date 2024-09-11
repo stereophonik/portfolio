@@ -35,7 +35,8 @@ export default function SectionSkillSetsComponent(): React.ReactElement {
                             className={li["className"]}
                             key={li["key"]}>
                             <AComponent
-                                href={skillSetsContext["as"][skillSetsContext["lis"].indexOf(li)]["href"]}>
+                                href={skillSetsContext["as"][skillSetsContext["lis"].indexOf(li)]["href"]}
+                                target="_blank">
                                 {skillSetsContext["as"][skillSetsContext["lis"].indexOf(li)]["content"]}
                             </AComponent>
                         </LiComponent>

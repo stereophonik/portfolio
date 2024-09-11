@@ -12,6 +12,7 @@ import SectionPlatformComponent from "./components/platform/Section";
 import SectionFrameworkComponent from "./components/framework/Section";
 import SectionLibraryComponent from "./components/library/Section";
 import SectionOutroComponent from "./components/outro/Section";
+import SectionFooterComponent from "./components/footer/Section";
 
 import { NavigationContext } from "./contexts/Navigation";
 import { ProfileContext } from "./contexts/Profile";
@@ -469,6 +470,10 @@ export default function Page(): React.ReactElement {
                 value={valueOutro}>
                 <SectionOutroComponent />
             </OutroContext.Provider>
+            <NavigationContext.Provider
+                value={valueNavigation}>
+                <SectionFooterComponent />
+            </NavigationContext.Provider>
         </MainComponent>
     );
 }

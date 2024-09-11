@@ -38,6 +38,14 @@ a:hover {
     text-align: right;
 }
 
+.classSectionFooter {
+    overflow: hidden;
+    width: 100vw;
+    background-color: #DA6E2B;
+    color: #2C2F37;
+    text-align: left;
+}
+
 .classNameRightNav {
     overflow: hidden;
     width: 100vw;
@@ -105,6 +113,20 @@ a:hover {
 .classNameIconHorizontalLi {
     display: inline-block;
     padding-right: 1.5vw;
+    font-family: "Anonymous Pro", sans-serif;
+    font-size: 1.25rem;
+}
+
+.classNameHorizontalLiFooter {
+    display: block;
+    padding:0.5vw;
+    font-family: "Anonymous Pro", sans-serif;
+    font-size: 1.25rem;
+}
+
+.classNameIconHorizontalLiFooter {
+    display: block;
+    padding-right: 0.5vw;
     font-family: "Anonymous Pro", sans-serif;
     font-size: 1.25rem;
 }

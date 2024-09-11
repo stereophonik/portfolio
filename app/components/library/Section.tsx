@@ -34,7 +34,8 @@ export default function SectionLibraryComponent(): React.ReactElement {
                             className={li["className"]}
                             key={li["key"]}>
                             <AComponent
-                                href={libraryContext["as"][libraryContext["lis"].indexOf(li)]["href"]}>
+                                href={libraryContext["as"][libraryContext["lis"].indexOf(li)]["href"]}
+                                target="_blank">
                                 {libraryContext["as"][libraryContext["lis"].indexOf(li)]["content"]}
                             </AComponent>
                         </LiComponent>

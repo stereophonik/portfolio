@@ -1,3 +1,3 @@
-export default function AComponent({ href, children }): React.ReactElement {
-    return <a href={href}>{children}</a>
+export default function AComponent({ href, target, children }): React.ReactElement {
+    return <a href={href} target={target}>{children}</a>
 }
