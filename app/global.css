@@ -35,7 +35,15 @@ a:hover {
     width: 100vw;
     background-color: #DA6E2B;
     color: #2C2F37;
-    text-align: center;
+    text-align: right;
+}
+
+.classNameRightNav {
+    overflow: hidden;
+    width: 100vw;
+    background-color: #DA6E2B;
+    color: #2C2F37;
+    text-align: right;
 }
 
 .classNameClassASection {
@@ -89,9 +97,16 @@ a:hover {
 
 .classNameHorizontalLi {
     display: inline-block;
-    padding: 2vw;
+    padding: 2.5vw;
     font-family: "Anonymous Pro", sans-serif;
-    font-size: 2.5rem;
+    font-size: 1.25rem;
+}
+
+.classNameIconHorizontalLi {
+    display: inline-block;
+    padding-right: 1.5vw;
+    font-family: "Anonymous Pro", sans-serif;
+    font-size: 1.25rem;
 }
 
 .classNameVerticalLi {

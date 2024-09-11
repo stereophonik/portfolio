@@ -453,10 +453,6 @@ export default function Page(): React.ReactElement {
                 value={valueServings}>
                 <SectionServingsComponent />
             </ServingsContext.Provider>
-            <SkillSetsContext.Provider
-                value={valueSkillSets}>
-                <SectionSkillSetsComponent />
-            </SkillSetsContext.Provider>
             <PlatformContext.Provider
                 value={valuePlatform}>
                 <SectionPlatformComponent />

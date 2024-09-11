@@ -29,6 +29,36 @@ export default function NavNavigationComponent(): React.ReactElement {
                         </LiComponent>
                     )
                 }
+                <li
+                    className="classNameHorizontalLi"
+                    key="5">
+                    <AComponent
+                        href="mailto:nikolai00reyes@outlook.ph">
+                        Contact Me
+                    </AComponent>
+                </li>
+                <li
+                    className="classNameIconHorizontalLi"
+                    key="6">
+                    <AComponent
+                        href="https://github.com/stereophonik/portfolio">
+                        <img src="/github-mark.png" style={{
+                            width: "30px",
+                            height: "30px"
+                        }}/>
+                    </AComponent>
+                </li>
+                <li
+                    className="classNameIconHorizontalLi"
+                    key="7">
+                    <AComponent
+                        href="https://www.linkedin.com/in/nikolai-reyes">
+                        <img src="/LI-In-Bug.png" style={{
+                            width: "30px",
+                            height: "30px"
+                        }}/>
+                    </AComponent>
+                </li>
             </UlComponent>
         </NavComponent>
     );

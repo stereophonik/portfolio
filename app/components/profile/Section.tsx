@@ -55,6 +55,11 @@ export default function SectionProfileComponent(): React.ReactElement {
                             </LiComponent>
                         )
                     }
+                    <LiComponent
+                        className="classNameKeme"
+                        key="3">
+                        Simply put, I’m here to make things work smarter, not harder!
+                    </LiComponent>
                 </UlComponent>
             </div>
         </section>
