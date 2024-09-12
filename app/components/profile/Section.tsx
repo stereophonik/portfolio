@@ -32,9 +32,9 @@ export default function SectionProfileComponent(): React.ReactElement {
                     {profileContext["h1"]["content"]}
                 </H1Component>
                 <SpanComponent
-                    id={profileContext["span"]["id"]}
-                    className={profileContext["span"]["className"]}>
-                    {profileContext["span"]["content"]}
+                    id={profileContext["aaSpan"]["id"]}
+                    className={profileContext["aaSpan"]["className"]}>
+                    {profileContext["aaSpan"]["content"]}
                 </SpanComponent>
                 <H2Component
                     id={profileContext["h2"]["id"]}
@@ -44,19 +44,36 @@ export default function SectionProfileComponent(): React.ReactElement {
                 <UlComponent
                     id={profileContext["ul"]["id"]}
                     className={profileContext["ul"]["className"]}>
-                    {
-                        profileContext["lis"].map((li: { [x: string]: any; }) =>
-                            <LiComponent
-                                className="classNameVerticalLi"
-                                key={li["key"]}>
-                                {li["content"]}
-                            </LiComponent>
-                        )
-                    }
                     <LiComponent
-                        className="className02VerticalLi"
-                        key="3">
-                        Simply put, I’m here to <strong>make things work smarter</strong>, not harder!
+                        className={profileContext["lis"][0]["className"]}
+                        key={profileContext["lis"][0]["key"]}>
+                        {profileContext["lis"][0]["content"]}
+                    </LiComponent>
+                    <LiComponent
+                        className={profileContext["lis"][1]["className"]}
+                        key={profileContext["lis"][1]["key"]}>
+                        {profileContext["lis"][1]["content"]}
+                    </LiComponent>
+                    <LiComponent
+                        className={profileContext["lis"][2]["className"]}
+                        key={profileContext["lis"][2]["key"]}>
+                        <SpanComponent
+                            id={profileContext["abSpan"]["id"]}
+                            className={profileContext["abSpan"]["className"]}>
+                            {profileContext["abSpan"]["content"]}
+                        </SpanComponent>
+                        <strong>
+                            <SpanComponent
+                                id={profileContext["acSpan"]["id"]}
+                                className={profileContext["acSpan"]["className"]}>
+                                {profileContext["acSpan"]["content"]}
+                            </SpanComponent>
+                        </strong>
+                        <SpanComponent
+                            id={profileContext["adSpan"]["id"]}
+                            className={profileContext["adSpan"]["className"]}>
+                            {profileContext["adSpan"]["content"]}
+                        </SpanComponent>
                     </LiComponent>
                 </UlComponent>
             </DivComponent>

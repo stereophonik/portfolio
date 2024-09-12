@@ -174,10 +174,25 @@ export default function Page(): React.ReactElement {
             className: profileParsedFromFile["classNameH1"],
             content: profileParsedFromFile["contentH1"]
         },
-        span: {
-            id: profileParsedFromFile["idSpan"],
-            className: profileParsedFromFile["classNameSpan"],
-            content: profileParsedFromFile["contentSpan"]
+        aaSpan: {
+            id: profileParsedFromFile["idAaSpan"],
+            className: profileParsedFromFile["classNameAaSpan"],
+            content: profileParsedFromFile["contentAaSpan"]
+        },
+        abSpan: {
+            id: profileParsedFromFile["idAbSpan"],
+            className: profileParsedFromFile["classNameAbSpan"],
+            content: profileParsedFromFile["contentAbSpan"]
+        },
+        acSpan: {
+            id: profileParsedFromFile["idAcSpan"],
+            className: profileParsedFromFile["classNameAcSpan"],
+            content: profileParsedFromFile["contentAcSpan"]
+        },
+        adSpan: {
+            id: profileParsedFromFile["idAdSpan"],
+            className: profileParsedFromFile["classNameAdSpan"],
+            content: profileParsedFromFile["contentAdSpan"]
         },
         h2: {
             id: profileParsedFromFile["idH2"],
@@ -198,6 +213,11 @@ export default function Page(): React.ReactElement {
                 className: profileParsedFromFile["classNameAbLis"],
                 key: profileParsedFromFile["keyAbLis"],
                 content: profileParsedFromFile["contentAbLis"]
+            },
+            {
+                className: profileParsedFromFile["classNameAcLis"],
+                key: profileParsedFromFile["keyAcLis"],
+                content: profileParsedFromFile["contentAcLis"]
             }
         ]
     }
