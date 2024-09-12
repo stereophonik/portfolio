@@ -118,7 +118,7 @@ a:hover {
 
 .classNameHorizontalLi {
     display: inline-block;
-    padding: 2.5vw;
+    padding: 1vw 2.5vw;
     font-family: "Anonymous Pro", sans-serif;
     font-size: 1.25rem;
 }
