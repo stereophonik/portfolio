@@ -56,9 +56,9 @@ export default function SectionProfileComponent(): React.ReactElement {
                         )
                     }
                     <LiComponent
-                        className="classNameKeme"
+                        className="classNameKemeKemeKeme"
                         key="3">
-                        Simply put, I’m here to make things work smarter, not harder!
+                        Simply put, I’m here to <strong>make things work smarter</strong>, not harder!
                     </LiComponent>
                 </UlComponent>
             </div>

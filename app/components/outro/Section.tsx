@@ -23,7 +23,8 @@ export default function SectionOutroComponent(): React.ReactElement {
             <H2Component
                 id={outroContext["h2"]["id"]}
                 className={outroContext["h2"]["className"]}>
-                {outroContext["h2"]["content"]}
+                <a href="mailto:nikolai00reyes@outlook.ph"
+                   target="_blank">Contact me</a> to discuss your specific needs. Together, we can work on achieving your dream website. Looking forward to chatting soon!
             </H2Component>
         </SectionComponent>
     );
