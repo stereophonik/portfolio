@@ -8,7 +8,7 @@ import SectionProfileComponent from "./components/profile/Section";
 import SectionWhatIOfferComponent from "./components/whatIOffer/Section";
 import SectionPlatformComponent from "./components/platform/Section";
 import SectionFrameworkComponent from "./components/framework/Section";
-import SectionOutroComponent from "./components/outro/Section";
+import SectionLetsConnectComponent from "./components/letsConnect/Section";
 import SectionFooterComponent from "./components/footer/Section";
 
 import { NavigationContext } from "./contexts/Navigation";
@@ -17,7 +17,7 @@ import { IntroContext } from "./contexts/Intro";
 import { WhatIOfferContext } from "./contexts/WhatIOffer";
 import { PlatformContext } from "./contexts/Platform";
 import { FrameworkContext } from "./contexts/Framework";
-import { OutroContext } from "./contexts/Outro";
+import { LetsConnectContext } from "./contexts/LetsConnect";
 
 import ValueNavigationInterface from "./interfaces/ValueNavigation";
 import ValueProfileInterface from "./interfaces/ValueProfile";
@@ -25,7 +25,7 @@ import ValueIntroInterface from "./interfaces/ValueIntro";
 import ValueWhatIOfferInterface from "./interfaces/ValueWhatIOffer";
 import ValuePlatformInterface from "./interfaces/ValuePlatform";
 import ValueFrameworkInterface from "./interfaces/ValueFramework";
-import ValueOutroInterface from "./interfaces/ValueOutro";
+import ValueLetsConnectInterface from "./interfaces/ValueLetsConnect";
 
 export default function Page(): React.ReactElement {
     const [navigationParsedFromFile, setNavigationParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
@@ -34,7 +34,7 @@ export default function Page(): React.ReactElement {
     const [whatIOfferParsedFromFile, setWhatIOfferParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [platformParsedFromFile, setPlatformParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [frameworkParsedFromFile, setFrameworkParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
-    const [outroParsedFromFile, setOutroParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
+    const [letsConnectParsedFromFile, setLetsConnectParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
 
     useEffect(() => {
         fetch("/files?fileName=navigation", {
@@ -85,12 +85,12 @@ export default function Page(): React.ReactElement {
                 setFrameworkParsedFromFile(parsedFromFile);
             });
 
-        fetch("/files?fileName=outro", {
+        fetch("/files?fileName=letsConnect", {
             method: "GET"
         })
             .then(fromFile => fromFile.json())
             .then(parsedFromFile => {
-                setOutroParsedFromFile(parsedFromFile);
+                setLetsConnectParsedFromFile(parsedFromFile);
             });
     }, []);
 
@@ -300,29 +300,24 @@ export default function Page(): React.ReactElement {
         }
     }
 
-    const valueOutro: ValueOutroInterface = {
+    const valueLetsConnect: ValueLetsConnectInterface = {
         section: {
-            id: outroParsedFromFile["idSection"],
-            className: outroParsedFromFile["classNameSection"]
+            id: letsConnectParsedFromFile["idSection"],
+            className: letsConnectParsedFromFile["classNameSection"]
         },
         h1: {
-            id: outroParsedFromFile["idH1"],
-            className: outroParsedFromFile["classNameH1"],
-            content: outroParsedFromFile["contentH1"]
+            id: letsConnectParsedFromFile["idH1"],
+            className: letsConnectParsedFromFile["classNameH1"],
+            content: letsConnectParsedFromFile["contentH1"]
         },
         h2: {
-            id: outroParsedFromFile["idH2"],
-            className: outroParsedFromFile["classNameH2"],
-            content: outroParsedFromFile["contentH2"]
-        },
-        div: {
-            id: outroParsedFromFile["idDiv"],
-            className: outroParsedFromFile["classNameDiv"],
-            content: outroParsedFromFile["contentDiv"]
+            id: letsConnectParsedFromFile["idH2"],
+            className: letsConnectParsedFromFile["classNameH2"],
+            content: letsConnectParsedFromFile["contentH2"]
         },
         a: {
-            href: `${outroParsedFromFile["hrefA"]}`,
-            content: outroParsedFromFile["contentA"]
+            href: `${letsConnectParsedFromFile["hrefA"]}`,
+            content: letsConnectParsedFromFile["contentA"]
         }
     }
 
@@ -351,10 +346,10 @@ export default function Page(): React.ReactElement {
                 value={valueFramework}>
                 <SectionFrameworkComponent />
             </FrameworkContext.Provider>
-            <OutroContext.Provider
-                value={valueOutro}>
-                <SectionOutroComponent />
-            </OutroContext.Provider>
+            <LetsConnectContext.Provider
+                value={valueLetsConnect}>
+                <SectionLetsConnectComponent />
+            </LetsConnectContext.Provider>
             <NavigationContext.Provider
                 value={valueNavigation}>
                 <SectionFooterComponent />
