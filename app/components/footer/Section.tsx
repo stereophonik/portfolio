@@ -6,28 +6,28 @@ import LiComponent from "../Li";
 import AComponent from "../A";
 import ImgComponent from "../Img";
 
-import { NavigationContext } from "../../contexts/Navigation";
+import { FooterContext } from "../../contexts/Footer";
 import DivComponent from "../Div";
 
 export default function SectionFooterComponent(): React.ReactElement {
-    const navigationContext: {} = useContext(NavigationContext);
+    const footerContext: {} = useContext(FooterContext);
 
     return (
         <SectionComponent
-            id={navigationContext["nav"]["id"]}
-            className="classNameClassCSection">
+            id={footerContext["section"]["id"]}
+            className={footerContext["section"]["className"]}>
             <UlComponent
-                id={navigationContext["ul"]["id"]}
-                className={navigationContext["ul"]["className"]}>
+                id={footerContext["ul"]["id"]}
+                className={footerContext["ul"]["className"]}>
                 {
-                    navigationContext["lis"].map((li: { [x: string]: any; }) =>
+                    footerContext["lis"].map((li: { [x: string]: any; }) =>
                         <LiComponent
                             className="className03VerticalLi"
                             key={li["key"]}>
                             <AComponent
-                                href={navigationContext["as"][navigationContext["lis"].indexOf(li)]["href"]}
+                                href={footerContext["as"][footerContext["lis"].indexOf(li)]["href"]}
                                 target="_self">
-                                {navigationContext["as"][navigationContext["lis"].indexOf(li)]["content"]}
+                                {footerContext["as"][footerContext["lis"].indexOf(li)]["content"]}
                             </AComponent>
                         </LiComponent>
                     )

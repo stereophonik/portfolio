@@ -18,6 +18,7 @@ import { WhatIOfferContext } from "./contexts/WhatIOffer";
 import { PlatformContext } from "./contexts/Platform";
 import { FrameworkContext } from "./contexts/Framework";
 import { LetsConnectContext } from "./contexts/LetsConnect";
+import { FooterContext } from "./contexts/Footer";
 
 import ValueNavigationInterface from "./interfaces/ValueNavigation";
 import ValueProfileInterface from "./interfaces/ValueProfile";
@@ -26,6 +27,7 @@ import ValueWhatIOfferInterface from "./interfaces/ValueWhatIOffer";
 import ValuePlatformInterface from "./interfaces/ValuePlatform";
 import ValueFrameworkInterface from "./interfaces/ValueFramework";
 import ValueLetsConnectInterface from "./interfaces/ValueLetsConnect";
+import ValueFooterInterface from "./interfaces/ValueFooter";
 
 export default function Page(): React.ReactElement {
     const [navigationParsedFromFile, setNavigationParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
@@ -35,6 +37,7 @@ export default function Page(): React.ReactElement {
     const [platformParsedFromFile, setPlatformParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [frameworkParsedFromFile, setFrameworkParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [letsConnectParsedFromFile, setLetsConnectParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
+    const [footerParsedFromFile, setFooterParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
 
     useEffect(() => {
         fetch("/files?fileName=navigation", {
@@ -91,6 +94,14 @@ export default function Page(): React.ReactElement {
             .then(fromFile => fromFile.json())
             .then(parsedFromFile => {
                 setLetsConnectParsedFromFile(parsedFromFile);
+            });
+
+        fetch("/files?fileName=footer", {
+            method: "GET"
+        })
+            .then(fromFile => fromFile.json())
+            .then(parsedFromFile => {
+                setFooterParsedFromFile(parsedFromFile);
             });
     }, []);
 
@@ -321,6 +332,66 @@ export default function Page(): React.ReactElement {
         }
     }
 
+    const valueFooter: ValueFooterInterface = {
+        section: {
+            id: footerParsedFromFile["idSection"],
+            className: footerParsedFromFile["classNameSection"]
+        },
+        ul: {
+            id: footerParsedFromFile["idUl"],
+            className: footerParsedFromFile["classNameUl"]
+        },
+        lis: [
+            {
+                className: footerParsedFromFile["classNameAaLis"],
+                key: footerParsedFromFile["keyAaLis"],
+                content: footerParsedFromFile["contentAaLis"]
+            },
+            {
+                className: footerParsedFromFile["classNameAbLis"],
+                key: footerParsedFromFile["keyAbLis"],
+                content: footerParsedFromFile["contentAbLis"]
+            },
+            {
+                className: footerParsedFromFile["classNameAcLis"],
+                key: footerParsedFromFile["keyAcLis"],
+                content: footerParsedFromFile["contentAcLis"]
+            },
+            {
+                className: footerParsedFromFile["classNameAdLis"],
+                key: footerParsedFromFile["keyAdLis"],
+                content: footerParsedFromFile["contentAdLis"]
+            },
+            {
+                className: footerParsedFromFile["classNameAeLis"],
+                key: footerParsedFromFile["keyAeLis"],
+                content: footerParsedFromFile["contentAeLis"]
+            }
+        ],
+        as: [
+            {
+                href: `${footerParsedFromFile["hrefAaAs"]}`,
+                content: footerParsedFromFile["contentAaAs"]
+            },
+            {
+                href: `${footerParsedFromFile["hrefAbAs"]}`,
+                content: footerParsedFromFile["contentAbAs"]
+            },
+            {
+                href: `${footerParsedFromFile["hrefAcAs"]}`,
+                content: footerParsedFromFile["contentAcAs"]
+            },
+            {
+                href: `${footerParsedFromFile["hrefAdAs"]}`,
+                content: footerParsedFromFile["contentAdAs"]
+            },
+            {
+                href: `${footerParsedFromFile["hrefAeAs"]}`,
+                content: footerParsedFromFile["contentAeAs"]
+            }
+        ]
+    }
+
     return (
         <MainComponent>
             <NavigationContext.Provider
@@ -350,10 +421,10 @@ export default function Page(): React.ReactElement {
                 value={valueLetsConnect}>
                 <SectionLetsConnectComponent />
             </LetsConnectContext.Provider>
-            <NavigationContext.Provider
-                value={valueNavigation}>
+            <FooterContext.Provider
+                value={valueFooter}>
                 <SectionFooterComponent />
-            </NavigationContext.Provider>
+            </FooterContext.Provider>
         </MainComponent>
     );
 }
