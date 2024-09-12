@@ -4,6 +4,7 @@ import SectionComponent from "../Section";
 import UlComponent from "../Ul";
 import LiComponent from "../Li";
 import AComponent from "../A";
+import ImgComponent from "../Img";
 
 import { NavigationContext } from "../../contexts/Navigation";
 import DivComponent from "../Div";
@@ -14,7 +15,7 @@ export default function SectionFooterComponent(): React.ReactElement {
     return (
         <SectionComponent
             id={navigationContext["nav"]["id"]}
-            className="classSectionFooter">
+            className="classNameClassCSection">
             <UlComponent
                 id={navigationContext["ul"]["id"]}
                 className={navigationContext["ul"]["className"]}>
@@ -46,10 +47,11 @@ export default function SectionFooterComponent(): React.ReactElement {
                     <AComponent
                         href="https://github.com/stereophonik/portfolio"
                         target="_blank">
-                        <img src="/github.png" style={{
-                            width: "30px",
-                            height: "30px"
-                        }}/>
+                        <ImgComponent
+                            id="id0102ImageFooter"
+                            className="className02Image"
+                            src="/github.png"
+                            alt="Github PNG" />
                     </AComponent>
                 </li>
                 <li
@@ -58,10 +60,11 @@ export default function SectionFooterComponent(): React.ReactElement {
                     <AComponent
                         href="https://www.linkedin.com/in/nikolai-reyes"
                         target="_blank">
-                        <img src="/linkedin.png" style={{
-                            width: "30px",
-                            height: "30px"
-                        }}/>
+                        <ImgComponent
+                            id="id0202ImageFooter"
+                            className="className02Image"
+                            src="/linkedin.png"
+                            alt="LinkedIn PNG" />
                     </AComponent>
                 </li>
             </UlComponent>

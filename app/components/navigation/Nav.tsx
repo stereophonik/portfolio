@@ -4,6 +4,7 @@ import NavComponent from "../Nav";
 import UlComponent from "../Ul";
 import LiComponent from "../Li";
 import AComponent from "../A";
+import ImgComponent from "../Img";
 
 import { NavigationContext } from "../../contexts/Navigation";
 
@@ -45,10 +46,11 @@ export default function NavNavigationComponent(): React.ReactElement {
                     <AComponent
                         href="https://github.com/stereophonik/portfolio"
                         target="_blank">
-                        <img src="/github.png" style={{
-                            width: "30px",
-                            height: "30px"
-                        }}/>
+                        <ImgComponent
+                            id="id0102ImageNavigation"
+                            className="className02Image"
+                            src="/github.png"
+                            alt="Github PNG" />
                     </AComponent>
                 </li>
                 <li
@@ -57,10 +59,11 @@ export default function NavNavigationComponent(): React.ReactElement {
                     <AComponent
                         href="https://www.linkedin.com/in/nikolai-reyes"
                         target="_blank">
-                        <img src="/linkedin.png" style={{
-                            width: "30px",
-                            height: "30px"
-                        }}/>
+                        <ImgComponent
+                            id="id0202ImageNavigation"
+                            className="className02Image"
+                            src="/linkedin.png"
+                            alt="LinkedIn PNG" />
                     </AComponent>
                 </li>
             </UlComponent>
