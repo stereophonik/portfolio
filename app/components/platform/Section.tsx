@@ -1,11 +1,12 @@
-import SectionComponent from "../Section";
+import { useContext } from "react";
 
-import { PlatformContext } from "../../contexts/Platform";
-import {useContext} from "react";
+import SectionComponent from "../Section";
 import H1Component from "../H1";
 import H2Component from "../H2";
 import SpanComponent from "../Span";
 import AComponent from "../A";
+
+import { PlatformContext } from "../../contexts/Platform";
 
 export default function SectionPlatformComponent(): React.ReactElement {
     const platformContext: {} = useContext(PlatformContext);

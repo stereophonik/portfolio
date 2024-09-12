@@ -5,9 +5,9 @@ import UlComponent from "../Ul";
 import LiComponent from "../Li";
 import AComponent from "../A";
 import ImgComponent from "../Img";
+import DivComponent from "../Div";
 
 import { FooterContext } from "../../contexts/Footer";
-import DivComponent from "../Div";
 
 export default function SectionFooterComponent(): React.ReactElement {
     const footerContext: {} = useContext(FooterContext);

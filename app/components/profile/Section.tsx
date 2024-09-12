@@ -1,6 +1,5 @@
 import { useContext } from "react";
 
-import { ProfileContext } from "../../contexts/Profile";
 import SectionComponent from "../Section";
 import ImgComponent from "../Img";
 import DivComponent from "../Div";
@@ -9,6 +8,8 @@ import SpanComponent from "../Span";
 import H2Component from "../H2";
 import UlComponent from "../Ul";
 import LiComponent from "../Li";
+
+import { ProfileContext } from "../../contexts/Profile";
 
 export default function SectionProfileComponent(): React.ReactElement {
     const profileContext: {} = useContext(ProfileContext);

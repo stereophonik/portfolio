@@ -1,11 +1,12 @@
-import SectionComponent from "../Section";
+import { useContext } from "react";
 
-import { FrameworkContext } from "../../contexts/Framework";
-import {useContext} from "react";
+import SectionComponent from "../Section";
 import H1Component from "../H1";
 import H2Component from "../H2";
 import SpanComponent from "../Span";
 import AComponent from "../A";
+
+import { FrameworkContext } from "../../contexts/Framework";
 
 export default function SectionFrameworkComponent(): React.ReactElement {
     const frameworkContext: {} = useContext(FrameworkContext);
