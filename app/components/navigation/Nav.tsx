@@ -31,7 +31,7 @@ export default function NavNavigationComponent(): React.ReactElement {
                         </LiComponent>
                     )
                 }
-                <li
+                <LiComponent
                     className="classNameHorizontalLi"
                     key="5">
                     <AComponent
@@ -39,8 +39,8 @@ export default function NavNavigationComponent(): React.ReactElement {
                         target="_blank">
                         Contact Me
                     </AComponent>
-                </li>
-                <li
+                </LiComponent>
+                <LiComponent
                     className="classNameIconHorizontalLi"
                     key="6">
                     <AComponent
@@ -52,8 +52,8 @@ export default function NavNavigationComponent(): React.ReactElement {
                             src="/github.png"
                             alt="Github PNG" />
                     </AComponent>
-                </li>
-                <li
+                </LiComponent>
+                <LiComponent
                     className="classNameIconHorizontalLi"
                     key="7">
                     <AComponent
@@ -65,7 +65,7 @@ export default function NavNavigationComponent(): React.ReactElement {
                             src="/linkedin.png"
                             alt="LinkedIn PNG" />
                     </AComponent>
-                </li>
+                </LiComponent>
             </UlComponent>
         </NavComponent>
     );
