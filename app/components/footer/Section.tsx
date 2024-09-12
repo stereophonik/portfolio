@@ -20,7 +20,7 @@ export default function SectionFooterComponent(): React.ReactElement {
                 id={footerContext["ul"]["id"]}
                 className={footerContext["ul"]["className"]}>
                 <LiComponent
-                    className="className03VerticalLi"
+                    className={footerContext["lis"][0]["className"]}
                     key={footerContext["lis"][0]["key"]}>
                     <AComponent
                         href={footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][0])]["href"]}
@@ -29,7 +29,7 @@ export default function SectionFooterComponent(): React.ReactElement {
                     </AComponent>
                 </LiComponent>
                 <LiComponent
-                    className="className03VerticalLi"
+                    className={footerContext["lis"][1]["className"]}
                     key={footerContext["lis"][1]["key"]}>
                     <AComponent
                         href={footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][1])]["href"]}
@@ -38,7 +38,7 @@ export default function SectionFooterComponent(): React.ReactElement {
                     </AComponent>
                 </LiComponent>
                 <LiComponent
-                    className="className03VerticalLi"
+                    className={footerContext["lis"][2]["className"]}
                     key={footerContext["lis"][2]["key"]}>
                     <AComponent
                         href={footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][2])]["href"]}
@@ -47,7 +47,7 @@ export default function SectionFooterComponent(): React.ReactElement {
                     </AComponent>
                 </LiComponent>
                 <LiComponent
-                    className="className03VerticalLi"
+                    className={footerContext["lis"][3]["className"]}
                     key={footerContext["lis"][3]["key"]}>
                     <AComponent
                         href={footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][3])]["href"]}
@@ -56,7 +56,7 @@ export default function SectionFooterComponent(): React.ReactElement {
                     </AComponent>
                 </LiComponent>
                 <LiComponent
-                    className="className03VerticalLi"
+                    className={footerContext["lis"][4]["className"]}
                     key={footerContext["lis"][4]["key"]}>
                     <AComponent
                         href={footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][4])]["href"]}
@@ -65,48 +65,48 @@ export default function SectionFooterComponent(): React.ReactElement {
                     </AComponent>
                 </LiComponent>
                 <LiComponent
-                    className="className03VerticalLi"
-                    key="6">
+                    className={footerContext["lis"][5]["className"]}
+                    key={footerContext["lis"][5]["key"]}>
                     <AComponent
-                        href="mailto:nikolai00reyes@outlook.ph"
+                        href={footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][5])]["href"]}
                         target="_blank">
-                        Contact Me
+                        {footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][5])]["content"]}
                     </AComponent>
                 </LiComponent>
                 <LiComponent
-                    className="className03VerticalLi"
-                    key="7">
+                    className={footerContext["lis"][6]["className"]}
+                    key={footerContext["lis"][6]["key"]}>
                     <AComponent
-                        href="https://github.com/stereophonik/portfolio"
+                        href={footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][6])]["href"]}
                         target="_blank">
                         <ImgComponent
-                            id="idAaImageFooter"
-                            className="className02Image"
+                            id="idAaImgFooter"
+                            className="className02Img"
                             src="/github.png"
                             alt="Github PNG" />
                     </AComponent>
                 </LiComponent>
                 <LiComponent
-                    className="className03VerticalLi"
-                    key="8">
+                    className={footerContext["lis"][7]["className"]}
+                    key={footerContext["lis"][7]["key"]}>
                     <AComponent
-                        href="https://www.linkedin.com/in/nikolai-reyes"
+                        href={footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][7])]["href"]}
                         target="_blank">
                         <ImgComponent
-                            id="idAbImageFooter"
-                            className="className02Image"
+                            id="idAbImgFooter"
+                            className="className02Img"
                             src="/linkedin.png"
                             alt="LinkedIn PNG" />
                     </AComponent>
                 </LiComponent>
             </UlComponent>
             <DivComponent
-                id="id02DivFooter"
+                id="idAaDivsFooter"
                 className="className02Div">
                 @2024 Nikolai Reyes - All Rights Reserved
             </DivComponent>
             <DivComponent
-                id="id02DivFooter"
+                id="idAbDivsFooter"
                 className="className02Div">
                 <AComponent
                     href="#idNavNavigation"

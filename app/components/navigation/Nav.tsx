@@ -64,36 +64,36 @@ export default function NavNavigationComponent(): React.ReactElement {
                     </AComponent>
                 </LiComponent>
                 <LiComponent
-                    className="classNameHorizontalLi"
-                    key="6">
+                    className={navigationContext["lis"][5]["className"]}
+                    key={navigationContext["lis"][5]["key"]}>
                     <AComponent
-                        href="mailto:nikolai00reyes@outlook.ph"
+                        href={navigationContext["as"][navigationContext["lis"].indexOf(navigationContext["lis"][5])]["href"]}
                         target="_blank">
-                        Contact Me
+                        {navigationContext["as"][navigationContext["lis"].indexOf(navigationContext["lis"][5])]["content"]}
                     </AComponent>
                 </LiComponent>
                 <LiComponent
-                    className="classNameIconHorizontalLi"
-                    key="7">
+                    className={navigationContext["lis"][6]["className"]}
+                    key={navigationContext["lis"][6]["key"]}>
                     <AComponent
-                        href="https://github.com/stereophonik/portfolio"
+                        href={navigationContext["as"][navigationContext["lis"].indexOf(navigationContext["lis"][6])]["href"]}
                         target="_blank">
                         <ImgComponent
-                            id="idAaImageNavigation"
-                            className="className02Image"
+                            id="idAaImgNavigation"
+                            className="className02Img"
                             src="/github.png"
                             alt="Github PNG" />
                     </AComponent>
                 </LiComponent>
                 <LiComponent
-                    className="classNameIconHorizontalLi"
-                    key="8">
+                    className={navigationContext["lis"][7]["className"]}
+                    key={navigationContext["lis"][7]["key"]}>
                     <AComponent
-                        href="https://www.linkedin.com/in/nikolai-reyes"
+                        href={navigationContext["as"][navigationContext["lis"].indexOf(navigationContext["lis"][7])]["href"]}
                         target="_blank">
                         <ImgComponent
-                            id="idAbImageNavigation"
-                            className="className02Image"
+                            id="idAbImgNavigation"
+                            className="className02Img"
                             src="/linkedin.png"
                             alt="LinkedIn PNG" />
                     </AComponent>

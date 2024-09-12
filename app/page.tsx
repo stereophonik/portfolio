@@ -128,6 +128,21 @@ export default function Page(): React.ReactElement {
                 className: navigationParsedFromFile["classNameAeLis"],
                 key: navigationParsedFromFile["keyAeLis"],
                 content: navigationParsedFromFile["contentAeLis"]
+            },
+            {
+                className: navigationParsedFromFile["classNameAfLis"],
+                key: navigationParsedFromFile["keyAfLis"],
+                content: navigationParsedFromFile["contentAfLis"]
+            },
+            {
+                className: navigationParsedFromFile["classNameAgLis"],
+                key: navigationParsedFromFile["keyAgLis"],
+                content: navigationParsedFromFile["contentAgLis"]
+            },
+            {
+                className: navigationParsedFromFile["classNameAhLis"],
+                key: navigationParsedFromFile["keyAhLis"],
+                content: navigationParsedFromFile["contentAhLis"]
             }
         ],
         as: [
@@ -150,6 +165,18 @@ export default function Page(): React.ReactElement {
             {
                 href: `${navigationParsedFromFile["hrefAeAs"]}`,
                 content: navigationParsedFromFile["contentAeAs"]
+            },
+            {
+                href: `${navigationParsedFromFile["hrefAfAs"]}`,
+                content: navigationParsedFromFile["contentAfAs"]
+            },
+            {
+                href: `${navigationParsedFromFile["hrefAgAs"]}`,
+                content: navigationParsedFromFile["contentAgAs"]
+            },
+            {
+                href: `${navigationParsedFromFile["hrefAhAs"]}`,
+                content: navigationParsedFromFile["contentAhAs"]
             }
         ]
     }
@@ -367,6 +394,21 @@ export default function Page(): React.ReactElement {
                 className: footerParsedFromFile["classNameAeLis"],
                 key: footerParsedFromFile["keyAeLis"],
                 content: footerParsedFromFile["contentAeLis"]
+            },
+            {
+                className: footerParsedFromFile["classNameAfLis"],
+                key: footerParsedFromFile["keyAfLis"],
+                content: footerParsedFromFile["contentAfLis"]
+            },
+            {
+                className: footerParsedFromFile["classNameAgLis"],
+                key: footerParsedFromFile["keyAgLis"],
+                content: footerParsedFromFile["contentAgLis"]
+            },
+            {
+                className: footerParsedFromFile["classNameAhLis"],
+                key: footerParsedFromFile["keyAhLis"],
+                content: footerParsedFromFile["contentAhLis"]
             }
         ],
         as: [
@@ -389,6 +431,18 @@ export default function Page(): React.ReactElement {
             {
                 href: `${footerParsedFromFile["hrefAeAs"]}`,
                 content: footerParsedFromFile["contentAeAs"]
+            },
+            {
+                href: `${footerParsedFromFile["hrefAfAs"]}`,
+                content: footerParsedFromFile["contentAfAs"]
+            },
+            {
+                href: `${footerParsedFromFile["hrefAgAs"]}`,
+                content: footerParsedFromFile["contentAgAs"]
+            },
+            {
+                href: `${footerParsedFromFile["hrefAhAs"]}`,
+                content: footerParsedFromFile["contentAhAs"]
             }
         ]
     }

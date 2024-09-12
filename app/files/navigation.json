@@ -18,6 +18,15 @@
   "classNameAeLis": "classNameHorizontalLi",
   "keyAeLis": 5,
   "contentAeLis": "",
+  "classNameAfLis": "classNameHorizontalLi",
+  "keyAfLis": 6,
+  "contentAfLis": "",
+  "classNameAgLis": "classNameIconHorizontalLi",
+  "keyAgLis": 7,
+  "contentAgLis": "",
+  "classNameAhLis": "classNameIconHorizontalLi",
+  "keyAhLis": 8,
+  "contentAhLis": "",
   "hrefAaAs": "#idSectionProfile",
   "contentAaAs": "Profile",
   "hrefAbAs": "#idSectionWhatIOffer",
@@ -27,5 +36,11 @@
   "hrefAdAs": "#idSectionFramework",
   "contentAdAs": "Framework",
   "hrefAeAs": "#idSectionLetsConnect",
-  "contentAeAs": "Let's Connect"
+  "contentAeAs": "Let's Connect",
+  "hrefAfAs": "mailto:nikolai00reyes@outlook.ph",
+  "contentAfAs": "Contact Me",
+  "hrefAgAs": "https://github.com/stereophonik/portfolio",
+  "contentAgAs": "",
+  "hrefAhAs": "https://www.linkedin.com/in/nikolai-reyes",
+  "contentAhAs": ""
 }
