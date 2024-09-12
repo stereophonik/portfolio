@@ -19,22 +19,54 @@ export default function SectionFooterComponent(): React.ReactElement {
             <UlComponent
                 id={footerContext["ul"]["id"]}
                 className={footerContext["ul"]["className"]}>
-                {
-                    footerContext["lis"].map((li: { [x: string]: any; }) =>
-                        <LiComponent
-                            className="className03VerticalLi"
-                            key={li["key"]}>
-                            <AComponent
-                                href={footerContext["as"][footerContext["lis"].indexOf(li)]["href"]}
-                                target="_self">
-                                {footerContext["as"][footerContext["lis"].indexOf(li)]["content"]}
-                            </AComponent>
-                        </LiComponent>
-                    )
-                }
                 <LiComponent
                     className="className03VerticalLi"
-                    key="5">
+                    key={footerContext["lis"][0]["key"]}>
+                    <AComponent
+                        href={footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][0])]["href"]}
+                        target="_self">
+                        {footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][0])]["content"]}
+                    </AComponent>
+                </LiComponent>
+                <LiComponent
+                    className="className03VerticalLi"
+                    key={footerContext["lis"][1]["key"]}>
+                    <AComponent
+                        href={footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][1])]["href"]}
+                        target="_self">
+                        {footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][1])]["content"]}
+                    </AComponent>
+                </LiComponent>
+                <LiComponent
+                    className="className03VerticalLi"
+                    key={footerContext["lis"][2]["key"]}>
+                    <AComponent
+                        href={footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][2])]["href"]}
+                        target="_self">
+                        {footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][2])]["content"]}
+                    </AComponent>
+                </LiComponent>
+                <LiComponent
+                    className="className03VerticalLi"
+                    key={footerContext["lis"][3]["key"]}>
+                    <AComponent
+                        href={footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][3])]["href"]}
+                        target="_self">
+                        {footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][3])]["content"]}
+                    </AComponent>
+                </LiComponent>
+                <LiComponent
+                    className="className03VerticalLi"
+                    key={footerContext["lis"][4]["key"]}>
+                    <AComponent
+                        href={footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][4])]["href"]}
+                        target="_self">
+                        {footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][4])]["content"]}
+                    </AComponent>
+                </LiComponent>
+                <LiComponent
+                    className="className03VerticalLi"
+                    key="6">
                     <AComponent
                         href="mailto:nikolai00reyes@outlook.ph"
                         target="_blank">
@@ -43,7 +75,7 @@ export default function SectionFooterComponent(): React.ReactElement {
                 </LiComponent>
                 <LiComponent
                     className="className03VerticalLi"
-                    key="6">
+                    key="7">
                     <AComponent
                         href="https://github.com/stereophonik/portfolio"
                         target="_blank">
@@ -56,7 +88,7 @@ export default function SectionFooterComponent(): React.ReactElement {
                 </LiComponent>
                 <LiComponent
                     className="className03VerticalLi"
-                    key="7">
+                    key="8">
                     <AComponent
                         href="https://www.linkedin.com/in/nikolai-reyes"
                         target="_blank">
