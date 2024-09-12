@@ -1,7 +1,9 @@
 import { useContext } from "react";
 
 import { ProfileContext } from "../../contexts/Profile";
+import SectionComponent from "../Section";
 import ImgComponent from "../Img";
+import DivComponent from "../Div";
 import H1Component from "../H1";
 import SpanComponent from "../Span";
 import H2Component from "../H2";
@@ -12,10 +14,7 @@ export default function SectionProfileComponent(): React.ReactElement {
     const profileContext: {} = useContext(ProfileContext);
 
     return (
-        <section
-            style={{
-                display: "flex"
-            }}
+        <SectionComponent
             id={profileContext["section"]["id"]}
             className={profileContext["section"]["className"]}>
             <ImgComponent
@@ -24,7 +23,9 @@ export default function SectionProfileComponent(): React.ReactElement {
                 src={profileContext["img"]["src"]}
                 alt={profileContext["img"]["alt"]}
             />
-            <div>
+            <DivComponent
+                id={profileContext["div"]["id"]}
+                className={profileContext["div"]["className"]}>
                 <H1Component
                     id={profileContext["h1"]["id"]}
                     className={profileContext["h1"]["className"]}>
@@ -58,7 +59,7 @@ export default function SectionProfileComponent(): React.ReactElement {
                         Simply put, I’m here to <strong>make things work smarter</strong>, not harder!
                     </LiComponent>
                 </UlComponent>
-            </div>
-        </section>
+            </DivComponent>
+        </SectionComponent>
     );
 }

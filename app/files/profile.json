@@ -1,10 +1,12 @@
 {
     "idSection": "idSectionProfile",
-    "classNameSection": "classNameClassBSection",
+    "classNameSection": "classNameClassDSection",
     "idImg": "idImageProfile",
     "classNameImg": "classNameImage",
     "srcImg": "/picture.jpeg",
     "altImg": "Nikolai Reyes",
+    "idDiv": "idDivProfile",
+    "classNameDiv": "className03Div",
     "idH1": "idH1Profile",
     "classNameH1": "classNameH1",
     "contentH1": "Nikolai Reyes",

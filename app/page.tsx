@@ -165,6 +165,10 @@ export default function Page(): React.ReactElement {
             src: profileParsedFromFile["srcImg"],
             alt: profileParsedFromFile["altImg"]
         },
+        div: {
+            id: profileParsedFromFile["idDiv"],
+            className: profileParsedFromFile["classNameDiv"]
+        },
         h1: {
             id: profileParsedFromFile["idH1"],
             className: profileParsedFromFile["classNameH1"],
