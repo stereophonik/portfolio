@@ -5,7 +5,7 @@ import { useState, useEffect, Dispatch, SetStateAction } from "react";
 import MainComponent from "./components/Main";
 import NavNavigationComponent from "./components/navigation/Nav";
 import SectionProfileComponent from "./components/profile/Section";
-import SectionServingsComponent from "./components/servings/Section";
+import SectionWhatIOfferComponent from "./components/whatIOffer/Section";
 import SectionPlatformComponent from "./components/platform/Section";
 import SectionFrameworkComponent from "./components/framework/Section";
 import SectionOutroComponent from "./components/outro/Section";
@@ -14,7 +14,7 @@ import SectionFooterComponent from "./components/footer/Section";
 import { NavigationContext } from "./contexts/Navigation";
 import { ProfileContext } from "./contexts/Profile";
 import { IntroContext } from "./contexts/Intro";
-import { ServingsContext } from "./contexts/Servings";
+import { WhatIOfferContext } from "./contexts/WhatIOffer";
 import { PlatformContext } from "./contexts/Platform";
 import { FrameworkContext } from "./contexts/Framework";
 import { OutroContext } from "./contexts/Outro";
@@ -22,7 +22,7 @@ import { OutroContext } from "./contexts/Outro";
 import ValueNavigationInterface from "./interfaces/ValueNavigation";
 import ValueProfileInterface from "./interfaces/ValueProfile";
 import ValueIntroInterface from "./interfaces/ValueIntro";
-import ValueServingsInterface from "./interfaces/ValueServings";
+import ValueWhatIOfferInterface from "./interfaces/ValueWhatIOffer";
 import ValuePlatformInterface from "./interfaces/ValuePlatform";
 import ValueFrameworkInterface from "./interfaces/ValueFramework";
 import ValueOutroInterface from "./interfaces/ValueOutro";
@@ -31,7 +31,7 @@ export default function Page(): React.ReactElement {
     const [navigationParsedFromFile, setNavigationParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [profileParsedFromFile, setProfileParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [introParsedFromFile, setIntroParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
-    const [servingsParsedFromFile, setServingsParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
+    const [whatIOfferParsedFromFile, setWhatIOfferParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [platformParsedFromFile, setPlatformParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [frameworkParsedFromFile, setFrameworkParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [outroParsedFromFile, setOutroParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
@@ -61,12 +61,12 @@ export default function Page(): React.ReactElement {
                 setIntroParsedFromFile(parsedFromFile);
             });
 
-        fetch("/files?fileName=servings", {
+        fetch("/files?fileName=whatIOffer", {
             method: "GET"
         })
             .then(fromFile => fromFile.json())
             .then(parsedFromFile => {
-                setServingsParsedFromFile(parsedFromFile);
+                setWhatIOfferParsedFromFile(parsedFromFile);
             });
 
         fetch("/files?fileName=platform", {
@@ -210,40 +210,40 @@ export default function Page(): React.ReactElement {
         ]
     }
 
-    const valueServings: ValueServingsInterface = {
+    const valueWhatIOffer: ValueWhatIOfferInterface = {
         section: {
-            id: servingsParsedFromFile["idSection"],
-            className: servingsParsedFromFile["classNameSection"]
+            id: whatIOfferParsedFromFile["idSection"],
+            className: whatIOfferParsedFromFile["classNameSection"]
         },
         h1: {
-            id: servingsParsedFromFile["idH1"],
-            className: servingsParsedFromFile["classNameH1"],
-            content: servingsParsedFromFile["contentH1"]
+            id: whatIOfferParsedFromFile["idH1"],
+            className: whatIOfferParsedFromFile["classNameH1"],
+            content: whatIOfferParsedFromFile["contentH1"]
         },
         ul: {
-            id: servingsParsedFromFile["idUl"],
-            className: servingsParsedFromFile["classNameUl"]
+            id: whatIOfferParsedFromFile["idUl"],
+            className: whatIOfferParsedFromFile["classNameUl"]
         },
         h2: {
-            id: servingsParsedFromFile["idH2"],
-            className: servingsParsedFromFile["classNameH2"],
-            content: servingsParsedFromFile["contentH2"]
+            id: whatIOfferParsedFromFile["idH2"],
+            className: whatIOfferParsedFromFile["classNameH2"],
+            content: whatIOfferParsedFromFile["contentH2"]
         },
         lis: [
             {
-                className: servingsParsedFromFile["classNameAaLis"],
-                key: servingsParsedFromFile["keyAaLis"],
-                content: servingsParsedFromFile["contentAaLis"]
+                className: whatIOfferParsedFromFile["classNameAaLis"],
+                key: whatIOfferParsedFromFile["keyAaLis"],
+                content: whatIOfferParsedFromFile["contentAaLis"]
             },
             {
-                className: servingsParsedFromFile["classNameAbLis"],
-                key: servingsParsedFromFile["keyAbLis"],
-                content: servingsParsedFromFile["contentAbLis"]
+                className: whatIOfferParsedFromFile["classNameAbLis"],
+                key: whatIOfferParsedFromFile["keyAbLis"],
+                content: whatIOfferParsedFromFile["contentAbLis"]
             },
             {
-                className: servingsParsedFromFile["classNameAcLis"],
-                key: servingsParsedFromFile["keyAcLis"],
-                content: servingsParsedFromFile["contentAcLis"]
+                className: whatIOfferParsedFromFile["classNameAcLis"],
+                key: whatIOfferParsedFromFile["keyAcLis"],
+                content: whatIOfferParsedFromFile["contentAcLis"]
             }
         ]
     }
@@ -339,10 +339,10 @@ export default function Page(): React.ReactElement {
                     <SectionProfileComponent />
                 </IntroContext.Provider>
             </ProfileContext.Provider>
-            <ServingsContext.Provider
-                value={valueServings}>
-                <SectionServingsComponent />
-            </ServingsContext.Provider>
+            <WhatIOfferContext.Provider
+                value={valueWhatIOffer}>
+                <SectionWhatIOfferComponent />
+            </WhatIOfferContext.Provider>
             <PlatformContext.Provider
                 value={valuePlatform}>
                 <SectionPlatformComponent />
