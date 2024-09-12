@@ -1,11 +1,10 @@
 import { useContext } from "react";
 
-import SectionComponent from "../Section";
-
 import { ProfileContext } from "../../contexts/Profile";
 import { IntroContext } from "../../contexts/Intro";
 import ImgComponent from "../Img";
 import H1Component from "../H1";
+import SpanComponent from "../Span";
 import H2Component from "../H2";
 import UlComponent from "../Ul";
 import LiComponent from "../Li";
@@ -33,14 +32,14 @@ export default function SectionProfileComponent(): React.ReactElement {
                     className={profileContext["h1"]["className"]}>
                     {profileContext["h1"]["content"]}
                 </H1Component>
-                <H2Component
+                <SpanComponent
                     id={profileContext["h2"]["id"]}
-                    className="classNameKeme">
+                    className="classNameSpan">
                     {profileContext["h2"]["content"]}
-                </H2Component>
+                </SpanComponent>
                 <H2Component
                     id={introContext["h2"]["id"]}
-                    className="classNameKembular">
+                    className="className02H2">
                     {introContext["h2"]["content"]}
                 </H2Component>
                 <UlComponent
@@ -49,14 +48,14 @@ export default function SectionProfileComponent(): React.ReactElement {
                     {
                         introContext["lis"].map((li: { [x: string]: any; }) =>
                             <LiComponent
-                                className="classNameKeme"
+                                className="classNameVerticalLi"
                                 key={li["key"]}>
                                 {li["content"]}
                             </LiComponent>
                         )
                     }
                     <LiComponent
-                        className="classNameKemeKemeKeme"
+                        className="className02VerticalLi"
                         key="3">
                         Simply put, I’m here to <strong>make things work smarter</strong>, not harder!
                     </LiComponent>

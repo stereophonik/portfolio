@@ -5,7 +5,6 @@ import { useState, useEffect, Dispatch, SetStateAction } from "react";
 import MainComponent from "./components/Main";
 import NavNavigationComponent from "./components/navigation/Nav";
 import SectionProfileComponent from "./components/profile/Section";
-import SectionIntroComponent from "./components/intro/Section";
 import SectionServingsComponent from "./components/servings/Section";
 import SectionPlatformComponent from "./components/platform/Section";
 import SectionFrameworkComponent from "./components/framework/Section";

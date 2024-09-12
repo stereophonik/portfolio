@@ -21,7 +21,7 @@ export default function SectionFooterComponent(): React.ReactElement {
                 {
                     navigationContext["lis"].map((li: { [x: string]: any; }) =>
                         <LiComponent
-                            className="classNameHorizontalLiFooter"
+                            className="className03VerticalLi"
                             key={li["key"]}>
                             <AComponent
                                 href={navigationContext["as"][navigationContext["lis"].indexOf(li)]["href"]}
@@ -32,7 +32,7 @@ export default function SectionFooterComponent(): React.ReactElement {
                     )
                 }
                 <li
-                    className="classNameHorizontalLiFooter"
+                    className="className03VerticalLi"
                     key="5">
                     <AComponent
                         href="mailto:nikolai00reyes@outlook.ph"
@@ -41,7 +41,7 @@ export default function SectionFooterComponent(): React.ReactElement {
                     </AComponent>
                 </li>
                 <li
-                    className="classNameHorizontalLiFooter"
+                    className="className03VerticalLi"
                     key="6">
                     <AComponent
                         href="https://github.com/stereophonik/portfolio"
@@ -53,7 +53,7 @@ export default function SectionFooterComponent(): React.ReactElement {
                     </AComponent>
                 </li>
                 <li
-                    className="classNameHorizontalLiFooter"
+                    className="className03VerticalLi"
                     key="7">
                     <AComponent
                         href="https://www.linkedin.com/in/nikolai-reyes"
@@ -66,13 +66,13 @@ export default function SectionFooterComponent(): React.ReactElement {
                 </li>
             </UlComponent>
             <DivComponent
-                id="idDivFooter"
-                className="classNameDivFooter">
+                id="id02DivFooter"
+                className="className02Div">
                 @2024 Nikolai Reyes - All Rights Reserved
             </DivComponent>
             <DivComponent
-                id="idDivFooter"
-                className="classNameDivFooter">
+                id="id02DivFooter"
+                className="className02Div">
                 <AComponent
                     href="#idNavNavigation"
                     target="_self">

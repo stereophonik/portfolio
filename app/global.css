@@ -104,6 +104,13 @@ a:hover {
     font-weight: normal;
 }
 
+.className02H2 {
+    color: white;
+    padding: 3vw 1.5vw;
+    font-family: "Anonymous Pro", sans-serif;
+    font-size: 2.75rem;
+}
+
 .classNameHorizontalLi {
     display: inline-block;
     padding: 2.5vw;
@@ -114,13 +121,6 @@ a:hover {
 .classNameIconHorizontalLi {
     display: inline-block;
     padding-right: 1.5vw;
-    font-family: "Anonymous Pro", sans-serif;
-    font-size: 1.25rem;
-}
-
-.classNameHorizontalLiFooter {
-    display: block;
-    padding:0.5vw;
     font-family: "Anonymous Pro", sans-serif;
     font-size: 1.25rem;
 }
@@ -138,6 +138,21 @@ a:hover {
     font-size: 2rem;
 }
 
+.className02VerticalLi {
+    padding-top: 1vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    font-family: "Anonymous Pro", sans-serif;
+    font-size: 2rem;
+}
+
+.className03VerticalLi {
+    display: block;
+    padding: 0.5vw;
+    font-family: "Anonymous Pro", sans-serif;
+    font-size: 1.25rem;
+}
+
 .classNameSpan {
     padding: 0 1.5vw;
     font-family: "Anonymous Pro", sans-serif;
@@ -151,32 +166,11 @@ a:hover {
     text-align: center;
 }
 
-.classNameDivFooter {
+.className02Div {
     padding: 0.25vw 1.5vw;
     font-family: "Anonymous Pro", sans-serif;
     font-size: 1rem;
     text-align: center;
-}
-
-.classNameKeme {
-    padding: 0 1.5vw;
-    font-family: "Anonymous Pro", sans-serif;
-    font-size: 2rem;
-}
-
-.classNameKembular {
-    color: white;
-    padding: 3vw 1.5vw;
-    font-family: "Anonymous Pro", sans-serif;
-    font-size: 2.75rem;
-}
-
-.classNameKemeKemeKeme {
-    padding-top: 1vw;
-    padding-left: 1.5vw;
-    padding-right: 1.5vw;
-    font-family: "Anonymous Pro", sans-serif;
-    font-size: 2rem;
 }
 
 @media screen and (max-width: 1080px) {
@@ -190,7 +184,11 @@ a:hover {
     }
 
     .classNameH2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+
+    .className02H2 {
+        font-size: 2.75rem;
     }
 
     .classNameHorizontalLi {
@@ -198,7 +196,15 @@ a:hover {
     }
 
     .classNameVerticalLi {
-        font-size: 2.25rem;
+        font-size: 2rem;
+    }
+
+    .className02VerticalLi {
+        font-size: 2rem;
+    }
+
+    .className03VerticalLi {
+        font-size: 2rem;
     }
 
     .classNameSpan {
@@ -207,6 +213,10 @@ a:hover {
 
     .classNameDiv {
         font-size: 1.75rem;
+    }
+
+    .className02Div {
+        font-size: 1rem;
     }
 }
 
@@ -224,6 +234,10 @@ a:hover {
         font-size: 2rem;
     }
 
+    .className02H2 {
+        font-size: 2.75rem;
+    }
+
     .classNameHorizontalLi {
         font-size: 1.5rem;
     }
@@ -232,12 +246,24 @@ a:hover {
         font-size: 1.75rem;
     }
 
+    .className02VerticalLi {
+        font-size: 1.75rem;
+    }
+
+    .className03VerticalLi {
+        font-size: 1.5rem;
+    }
+
     .classNameSpan {
         font-size: 1.75rem;
     }
 
     .classNameDiv {
         font-size: 1.25rem;
+    }
+
+    .className02Div {
+        font-size: 1rem;
     }
 }
 
@@ -255,6 +281,10 @@ a:hover {
         font-size: 1.5rem;
     }
 
+    .className02H2 {
+        font-size: 2rem;
+    }
+
     .classNameHorizontalLi {
         font-size: 1rem;
     }
@@ -263,11 +293,23 @@ a:hover {
         font-size: 1.25rem;
     }
 
+    .className02VerticalLi {
+        font-size: 1.25rem;
+    }
+
+    .className03VerticalLi {
+        font-size: 1rem;
+    }
+
     .classNameSpan {
         font-size: 1.25rem;
     }
 
     .classNameDiv {
+        font-size: 0.75rem;
+    }
+
+    .className02Div {
         font-size: 0.75rem;
     }
 }
@@ -286,6 +328,10 @@ a:hover {
         font-size: 1.5rem;
     }
 
+    .className02H2 {
+        font-size: 2rem;
+    }
+
     .classNameHorizontalLi {
         font-size: 1rem;
     }
@@ -294,11 +340,23 @@ a:hover {
         font-size: 1.25rem;
     }
 
+    .className02VerticalLi {
+        font-size: 1.25rem;
+    }
+
+    .className03VerticalLi {
+        font-size: 1rem;
+    }
+
     .classNameSpan {
         font-size: 1.25rem;
     }
 
     .classNameDiv {
+        font-size: 0.75rem;
+    }
+
+    .className02Div {
         font-size: 0.75rem;
     }
 }
@@ -314,6 +372,10 @@ a:hover {
     }
 
     .classNameH2 {
+        font-size: 0.75rem;
+    }
+
+    .className02H2 {
         font-size: 1rem;
     }
 
@@ -325,11 +387,23 @@ a:hover {
         font-size: 0.75rem;
     }
 
+    .className02VerticalLi {
+        font-size: 0.75rem;
+    }
+
+    .className03VerticalLi {
+        font-size: 1rem;
+    }
+
     .classNameSpan {
         font-size: 0.75rem;
     }
 
     .classNameDiv {
+        font-size: 0.5rem;
+    }
+
+    .className02Div {
         font-size: 0.5rem;
     }
 }
@@ -345,6 +419,10 @@ a:hover {
     }
 
     .classNameH2 {
+        font-size: 0.75rem;
+    }
+
+    .className02H2 {
         font-size: 1rem;
     }
 
@@ -356,11 +434,23 @@ a:hover {
         font-size: 0.75rem;
     }
 
+    .className02VerticalLi {
+        font-size: 0.75rem;
+    }
+
+    .className03VerticalLi {
+        font-size: 0.75rem;
+    }
+
     .classNameSpan {
         font-size: 0.75rem;
     }
 
     .classNameDiv {
+        font-size: 0.5rem;
+    }
+
+    .className02Div {
         font-size: 0.5rem;
     }
 }
