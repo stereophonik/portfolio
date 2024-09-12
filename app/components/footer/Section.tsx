@@ -48,7 +48,7 @@ export default function SectionFooterComponent(): React.ReactElement {
                         href="https://github.com/stereophonik/portfolio"
                         target="_blank">
                         <ImgComponent
-                            id="id0102ImageFooter"
+                            id="idAaImageFooter"
                             className="className02Image"
                             src="/github.png"
                             alt="Github PNG" />
@@ -61,7 +61,7 @@ export default function SectionFooterComponent(): React.ReactElement {
                         href="https://www.linkedin.com/in/nikolai-reyes"
                         target="_blank">
                         <ImgComponent
-                            id="id0202ImageFooter"
+                            id="idAbImageFooter"
                             className="className02Image"
                             src="/linkedin.png"
                             alt="LinkedIn PNG" />
