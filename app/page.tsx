@@ -7,10 +7,8 @@ import NavNavigationComponent from "./components/navigation/Nav";
 import SectionProfileComponent from "./components/profile/Section";
 import SectionIntroComponent from "./components/intro/Section";
 import SectionServingsComponent from "./components/servings/Section";
-import SectionSkillSetsComponent from "./components/skillSets/Section";
 import SectionPlatformComponent from "./components/platform/Section";
 import SectionFrameworkComponent from "./components/framework/Section";
-import SectionLibraryComponent from "./components/library/Section";
 import SectionOutroComponent from "./components/outro/Section";
 import SectionFooterComponent from "./components/footer/Section";
 
@@ -18,20 +16,16 @@ import { NavigationContext } from "./contexts/Navigation";
 import { ProfileContext } from "./contexts/Profile";
 import { IntroContext } from "./contexts/Intro";
 import { ServingsContext } from "./contexts/Servings";
-import { SkillSetsContext } from "./contexts/SkillSets";
 import { PlatformContext } from "./contexts/Platform";
 import { FrameworkContext } from "./contexts/Framework";
-import { LibraryContext } from "./contexts/Library";
 import { OutroContext } from "./contexts/Outro";
 
 import ValueNavigationInterface from "./interfaces/ValueNavigation";
 import ValueProfileInterface from "./interfaces/ValueProfile";
 import ValueIntroInterface from "./interfaces/ValueIntro";
 import ValueServingsInterface from "./interfaces/ValueServings";
-import ValueSkillSetsInterface from "./interfaces/ValueSkillSets";
 import ValuePlatformInterface from "./interfaces/ValuePlatform";
 import ValueFrameworkInterface from "./interfaces/ValueFramework";
-import ValueLibraryInterface from "./interfaces/ValueLibrary";
 import ValueOutroInterface from "./interfaces/ValueOutro";
 
 export default function Page(): React.ReactElement {
@@ -39,10 +33,8 @@ export default function Page(): React.ReactElement {
     const [profileParsedFromFile, setProfileParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [introParsedFromFile, setIntroParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [servingsParsedFromFile, setServingsParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
-    const [skillSetsParsedFromFile, setSkillSetsParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [platformParsedFromFile, setPlatformParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [frameworkParsedFromFile, setFrameworkParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
-    const [libraryParsedFromFile, setLibraryParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [outroParsedFromFile, setOutroParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
 
     useEffect(() => {
@@ -78,14 +70,6 @@ export default function Page(): React.ReactElement {
                 setServingsParsedFromFile(parsedFromFile);
             });
 
-        fetch("/files?fileName=skillSets", {
-            method: "GET"
-        })
-            .then(fromFile => fromFile.json())
-            .then(parsedFromFile => {
-                setSkillSetsParsedFromFile(parsedFromFile);
-            });
-
         fetch("/files?fileName=platform", {
             method: "GET"
         })
@@ -100,14 +84,6 @@ export default function Page(): React.ReactElement {
             .then(fromFile => fromFile.json())
             .then(parsedFromFile => {
                 setFrameworkParsedFromFile(parsedFromFile);
-            });
-
-        fetch("/files?fileName=library", {
-            method: "GET"
-        })
-            .then(fromFile => fromFile.json())
-            .then(parsedFromFile => {
-                setLibraryParsedFromFile(parsedFromFile);
             });
 
         fetch("/files?fileName=outro", {
@@ -148,6 +124,11 @@ export default function Page(): React.ReactElement {
                 className: navigationParsedFromFile["classNameAdLis"],
                 key: navigationParsedFromFile["keyAdLis"],
                 content: navigationParsedFromFile["contentAdLis"]
+            },
+            {
+                className: navigationParsedFromFile["classNameAeLis"],
+                key: navigationParsedFromFile["keyAeLis"],
+                content: navigationParsedFromFile["contentAeLis"]
             }
         ],
         as: [
@@ -166,6 +147,10 @@ export default function Page(): React.ReactElement {
             {
                 href: `${navigationParsedFromFile["hrefAdAs"]}`,
                 content: navigationParsedFromFile["contentAdAs"]
+            },
+            {
+                href: `${navigationParsedFromFile["hrefAeAs"]}`,
+                content: navigationParsedFromFile["contentAeAs"]
             }
         ]
     }
@@ -264,58 +249,6 @@ export default function Page(): React.ReactElement {
         ]
     }
 
-    const valueSkillSets: ValueSkillSetsInterface = {
-        section: {
-            id: skillSetsParsedFromFile["idSection"],
-            className: skillSetsParsedFromFile["classNameSection"]
-        },
-        h1: {
-            id: skillSetsParsedFromFile["idH1"],
-            className: skillSetsParsedFromFile["classNameH1"],
-            content: skillSetsParsedFromFile["contentH1"]
-        },
-        h2: {
-            id: skillSetsParsedFromFile["idH2"],
-            className: skillSetsParsedFromFile["classNameH2"],
-            content: skillSetsParsedFromFile["contentH2"]
-        },
-        ul: {
-            id: skillSetsParsedFromFile["idUl"],
-            className: skillSetsParsedFromFile["classNameUl"]
-        },
-        lis: [
-            {
-                className: skillSetsParsedFromFile["classNameAaLis"],
-                key: skillSetsParsedFromFile["keyAaLis"],
-                content: skillSetsParsedFromFile["contentAaLis"]
-            },
-            {
-                className: skillSetsParsedFromFile["classNameAbLis"],
-                key: skillSetsParsedFromFile["keyAbLis"],
-                content: skillSetsParsedFromFile["contentAbLis"]
-            },
-            {
-                className: skillSetsParsedFromFile["classNameAcLis"],
-                key: skillSetsParsedFromFile["keyAcLis"],
-                content: skillSetsParsedFromFile["contentAcLis"]
-            }
-        ],
-        as: [
-            {
-                href: `${skillSetsParsedFromFile["hrefAaAs"]}`,
-                content: skillSetsParsedFromFile["contentAaAs"]
-            },
-            {
-                href: `${skillSetsParsedFromFile["hrefAbAs"]}`,
-                content: skillSetsParsedFromFile["contentAbAs"]
-            },
-            {
-                href: `${skillSetsParsedFromFile["hrefAcAs"]}`,
-                content: skillSetsParsedFromFile["contentAcAs"]
-            }
-        ]
-    }
-
     const valuePlatform: ValuePlatformInterface = {
         section: {
             id: platformParsedFromFile["idSection"],
@@ -366,49 +299,6 @@ export default function Page(): React.ReactElement {
             href: `${frameworkParsedFromFile["hrefA"]}`,
             content: frameworkParsedFromFile["contentA"]
         }
-    }
-
-    const valueLibrary: ValueLibraryInterface = {
-        section: {
-            id: libraryParsedFromFile["idSection"],
-            className: libraryParsedFromFile["classNameSection"]
-        },
-        h1: {
-            id: libraryParsedFromFile["idH1"],
-            className: libraryParsedFromFile["classNameH1"],
-            content: libraryParsedFromFile["contentH1"]
-        },
-        h2: {
-            id: libraryParsedFromFile["idH2"],
-            className: libraryParsedFromFile["classNameH2"],
-            content: libraryParsedFromFile["contentH2"]
-        },
-        ul: {
-            id: libraryParsedFromFile["idUl"],
-            className: libraryParsedFromFile["classNameUl"]
-        },
-        lis: [
-            {
-                className: libraryParsedFromFile["classNameAaLis"],
-                key: libraryParsedFromFile["keyAaLis"],
-                content: libraryParsedFromFile["contentAaLis"]
-            },
-            {
-                className: libraryParsedFromFile["classNameAbLis"],
-                key: libraryParsedFromFile["keyAbLis"],
-                content: libraryParsedFromFile["contentAbLis"]
-            }
-        ],
-        as: [
-            {
-                href: `${libraryParsedFromFile["hrefAaAs"]}`,
-                content: libraryParsedFromFile["contentAaAs"]
-            },
-            {
-                href: `${libraryParsedFromFile["hrefAbAs"]}`,
-                content: libraryParsedFromFile["contentAbAs"]
-            }
-        ]
     }
 
     const valueOutro: ValueOutroInterface = {
