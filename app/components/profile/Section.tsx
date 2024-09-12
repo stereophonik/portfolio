@@ -1,7 +1,6 @@
 import { useContext } from "react";
 
 import { ProfileContext } from "../../contexts/Profile";
-import { IntroContext } from "../../contexts/Intro";
 import ImgComponent from "../Img";
 import H1Component from "../H1";
 import SpanComponent from "../Span";
@@ -11,7 +10,6 @@ import LiComponent from "../Li";
 
 export default function SectionProfileComponent(): React.ReactElement {
     const profileContext: {} = useContext(ProfileContext);
-    const introContext: {} = useContext(IntroContext);
 
     return (
         <section
@@ -33,20 +31,20 @@ export default function SectionProfileComponent(): React.ReactElement {
                     {profileContext["h1"]["content"]}
                 </H1Component>
                 <SpanComponent
-                    id={profileContext["h2"]["id"]}
-                    className="classNameSpan">
-                    {profileContext["h2"]["content"]}
+                    id={profileContext["span"]["id"]}
+                    className={profileContext["span"]["className"]}>
+                    {profileContext["span"]["content"]}
                 </SpanComponent>
                 <H2Component
-                    id={introContext["h2"]["id"]}
+                    id={profileContext["h2"]["id"]}
                     className="className02H2">
-                    {introContext["h2"]["content"]}
+                    {profileContext["h2"]["content"]}
                 </H2Component>
                 <UlComponent
-                    id={introContext["ul"]["id"]}
-                    className={introContext["ul"]["className"]}>
+                    id={profileContext["ul"]["id"]}
+                    className={profileContext["ul"]["className"]}>
                     {
-                        introContext["lis"].map((li: { [x: string]: any; }) =>
+                        profileContext["lis"].map((li: { [x: string]: any; }) =>
                             <LiComponent
                                 className="classNameVerticalLi"
                                 key={li["key"]}>

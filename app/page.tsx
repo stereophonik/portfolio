@@ -13,7 +13,6 @@ import SectionFooterComponent from "./components/footer/Section";
 
 import { NavigationContext } from "./contexts/Navigation";
 import { ProfileContext } from "./contexts/Profile";
-import { IntroContext } from "./contexts/Intro";
 import { WhatIOfferContext } from "./contexts/WhatIOffer";
 import { PlatformContext } from "./contexts/Platform";
 import { FrameworkContext } from "./contexts/Framework";
@@ -22,7 +21,6 @@ import { FooterContext } from "./contexts/Footer";
 
 import ValueNavigationInterface from "./interfaces/ValueNavigation";
 import ValueProfileInterface from "./interfaces/ValueProfile";
-import ValueIntroInterface from "./interfaces/ValueIntro";
 import ValueWhatIOfferInterface from "./interfaces/ValueWhatIOffer";
 import ValuePlatformInterface from "./interfaces/ValuePlatform";
 import ValueFrameworkInterface from "./interfaces/ValueFramework";
@@ -32,7 +30,6 @@ import ValueFooterInterface from "./interfaces/ValueFooter";
 export default function Page(): React.ReactElement {
     const [navigationParsedFromFile, setNavigationParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [profileParsedFromFile, setProfileParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
-    const [introParsedFromFile, setIntroParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [whatIOfferParsedFromFile, setWhatIOfferParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [platformParsedFromFile, setPlatformParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [frameworkParsedFromFile, setFrameworkParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
@@ -54,14 +51,6 @@ export default function Page(): React.ReactElement {
             .then(fromFile => fromFile.json())
             .then(parsedFromFile => {
                 setProfileParsedFromFile(parsedFromFile);
-            });
-
-        fetch("/files?fileName=intro", {
-            method: "GET"
-        })
-            .then(fromFile => fromFile.json())
-            .then(parsedFromFile => {
-                setIntroParsedFromFile(parsedFromFile);
             });
 
         fetch("/files?fileName=whatIOffer", {
@@ -181,42 +170,30 @@ export default function Page(): React.ReactElement {
             className: profileParsedFromFile["classNameH1"],
             content: profileParsedFromFile["contentH1"]
         },
+        span: {
+            id: profileParsedFromFile["idSpan"],
+            className: profileParsedFromFile["classNameSpan"],
+            content: profileParsedFromFile["contentSpan"]
+        },
         h2: {
             id: profileParsedFromFile["idH2"],
             className: profileParsedFromFile["classNameH2"],
             content: profileParsedFromFile["contentH2"]
-        }
-    }
-
-    const valueIntro: ValueIntroInterface = {
-        section: {
-            id: introParsedFromFile["idSection"],
-            className: introParsedFromFile["classNameSection"]
-        },
-        h1: {
-            id: introParsedFromFile["idH1"],
-            className: introParsedFromFile["classNameH1"],
-            content: introParsedFromFile["contentH1"]
-        },
-        h2: {
-            id: introParsedFromFile["idH2"],
-            className: introParsedFromFile["classNameH2"],
-            content: introParsedFromFile["contentH2"]
         },
         ul: {
-            id: introParsedFromFile["idUl"],
-            className: introParsedFromFile["classNameUl"]
+            id: profileParsedFromFile["idUl"],
+            className: profileParsedFromFile["classNameUl"]
         },
         lis: [
             {
-                className: introParsedFromFile["classNameAaLis"],
-                key: introParsedFromFile["keyAaLis"],
-                content: introParsedFromFile["contentAaLis"]
+                className: profileParsedFromFile["classNameAaLis"],
+                key: profileParsedFromFile["keyAaLis"],
+                content: profileParsedFromFile["contentAaLis"]
             },
             {
-                className: introParsedFromFile["classNameAbLis"],
-                key: introParsedFromFile["keyAbLis"],
-                content: introParsedFromFile["contentAbLis"]
+                className: profileParsedFromFile["classNameAbLis"],
+                key: profileParsedFromFile["keyAbLis"],
+                content: profileParsedFromFile["contentAbLis"]
             }
         ]
     }
@@ -400,10 +377,7 @@ export default function Page(): React.ReactElement {
             </NavigationContext.Provider>
             <ProfileContext.Provider
                 value={valueProfile}>
-                <IntroContext.Provider
-                    value={valueIntro}>
-                    <SectionProfileComponent />
-                </IntroContext.Provider>
+                <SectionProfileComponent />
             </ProfileContext.Provider>
             <WhatIOfferContext.Provider
                 value={valueWhatIOffer}>

@@ -3,16 +3,5 @@
   "classNameSection": "classNameClassASection",
   "idH1": "idH1Intro",
   "classNameH1": "classNameH1",
-  "contentH1": "Hello!",
-  "idH2": "idH2Intro",
-  "classNameH2": "classNameH2",
-  "contentH2": "Hello! Are you looking to create or update your business website?",
-  "idUl": "idUlIntro",
-  "classNameUl": "classNameUl",
-  "keyAaLis": 1,
-  "classNameAaLis": "classNameVerticalLi",
-  "contentAaLis": "If yes, I'm here to help!",
-  "keyAbLis": 2,
-  "classNameAbLis": "classNameVerticalLi",
-  "contentAbLis": "I have 6 years of experience with quality testing and I'm now transitioning to front-end development, so I bring a unique perspective to streamline your workflows and enhance your web applications."
+  "contentH1": "Hello!"
 }

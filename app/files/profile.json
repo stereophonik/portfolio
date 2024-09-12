@@ -8,7 +8,18 @@
     "idH1": "idH1Profile",
     "classNameH1": "classNameH1",
     "contentH1": "Nikolai Reyes",
+    "idSpan": "idSpanProfile",
+    "classNameSpan": "classNameSpan",
+    "contentSpan": "Web Developer",
     "idH2": "idH2Profile",
     "classNameH2": "classNameH2",
-    "contentH2": "Web Developer"
+    "contentH2": "Hello! Are you looking to create or update your business website?",
+    "idUl": "idUlProfile",
+    "classNameUl": "classNameUl",
+    "keyAaLis": 1,
+    "classNameAaLis": "classNameVerticalLi",
+    "contentAaLis": "If yes, I'm here to help!",
+    "keyAbLis": 2,
+    "classNameAbLis": "classNameVerticalLi",
+    "contentAbLis": "I have 6 years of experience with quality testing and I'm now transitioning to front-end development, so I bring a unique perspective to streamline your workflows and enhance your web applications."
 }
