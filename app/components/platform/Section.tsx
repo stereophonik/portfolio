@@ -30,7 +30,7 @@ export default function SectionPlatformComponent(): React.ReactElement {
                 className={platformContext["span"]["className"]}>
                 <AComponent
                     href={platformContext["a"]["href"]}
-                    target="_blank">
+                    target={platformContext["a"]["target"]}>
                     {platformContext["a"]["content"]}
                 </AComponent>
             </SpanComponent>

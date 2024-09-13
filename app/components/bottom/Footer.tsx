@@ -24,7 +24,7 @@ export default function FooterBottomComponent(): React.ReactElement {
                     key={bottomContext["lis"][0]["key"]}>
                     <AComponent
                         href={bottomContext["as"][0]["href"]}
-                        target="_self">
+                        target={bottomContext["as"][0]["target"]}>
                         {bottomContext["as"][0]["content"]}
                     </AComponent>
                 </LiComponent>
@@ -33,7 +33,7 @@ export default function FooterBottomComponent(): React.ReactElement {
                     key={bottomContext["lis"][1]["key"]}>
                     <AComponent
                         href={bottomContext["as"][1]["href"]}
-                        target="_self">
+                        target={bottomContext["as"][1]["target"]}>
                         {bottomContext["as"][1]["content"]}
                     </AComponent>
                 </LiComponent>
@@ -42,7 +42,7 @@ export default function FooterBottomComponent(): React.ReactElement {
                     key={bottomContext["lis"][2]["key"]}>
                     <AComponent
                         href={bottomContext["as"][2]["href"]}
-                        target="_self">
+                        target={bottomContext["as"][2]["target"]}>
                         {bottomContext["as"][2]["content"]}
                     </AComponent>
                 </LiComponent>
@@ -51,7 +51,7 @@ export default function FooterBottomComponent(): React.ReactElement {
                     key={bottomContext["lis"][3]["key"]}>
                     <AComponent
                         href={bottomContext["as"][3]["href"]}
-                        target="_self">
+                        target={bottomContext["as"][3]["target"]}>
                         {bottomContext["as"][3]["content"]}
                     </AComponent>
                 </LiComponent>
@@ -60,7 +60,7 @@ export default function FooterBottomComponent(): React.ReactElement {
                     key={bottomContext["lis"][4]["key"]}>
                     <AComponent
                         href={bottomContext["as"][4]["href"]}
-                        target="_self">
+                        target={bottomContext["as"][4]["target"]}>
                         {bottomContext["as"][4]["content"]}
                     </AComponent>
                 </LiComponent>
@@ -69,7 +69,7 @@ export default function FooterBottomComponent(): React.ReactElement {
                     key={bottomContext["lis"][5]["key"]}>
                     <AComponent
                         href={bottomContext["as"][5]["href"]}
-                        target="_blank">
+                        target={bottomContext["as"][5]["target"]}>
                         {bottomContext["as"][5]["content"]}
                     </AComponent>
                 </LiComponent>
@@ -78,7 +78,7 @@ export default function FooterBottomComponent(): React.ReactElement {
                     key={bottomContext["lis"][6]["key"]}>
                     <AComponent
                         href={bottomContext["as"][6]["href"]}
-                        target="_blank">
+                        target={bottomContext["as"][6]["target"]}>
                         <ImgComponent
                             id={bottomContext["imgs"][0]["id"]}
                             className={bottomContext["imgs"][0]["className"]}
@@ -91,7 +91,7 @@ export default function FooterBottomComponent(): React.ReactElement {
                     key={bottomContext["lis"][7]["key"]}>
                     <AComponent
                         href={bottomContext["as"][7]["href"]}
-                        target="_blank">
+                        target={bottomContext["as"][7]["target"]}>
                         <ImgComponent
                             id={bottomContext["imgs"][1]["id"]}
                             className={bottomContext["imgs"][1]["className"]}
@@ -110,7 +110,7 @@ export default function FooterBottomComponent(): React.ReactElement {
                 className={bottomContext["divs"][1]["className"]}>
                 <AComponent
                     href={bottomContext["a"]["href"]}
-                    target="_self">
+                    target={bottomContext["a"]["target"]}>
                     {bottomContext["a"]["content"]}
                 </AComponent>
             </DivComponent>

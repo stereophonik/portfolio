@@ -23,7 +23,7 @@ export default function NavTopComponent(): React.ReactElement {
                     key={topContext["lis"][0]["key"]}>
                     <AComponent
                         href={topContext["as"][0]["href"]}
-                        target="_self">
+                        target={topContext["as"][0]["target"]}>
                         {topContext["as"][0]["content"]}
                     </AComponent>
                 </LiComponent>
@@ -32,7 +32,7 @@ export default function NavTopComponent(): React.ReactElement {
                     key={topContext["lis"][1]["key"]}>
                     <AComponent
                         href={topContext["as"][1]["href"]}
-                        target="_self">
+                        target={topContext["as"][1]["target"]}>
                         {topContext["as"][1]["content"]}
                     </AComponent>
                 </LiComponent>
@@ -41,7 +41,7 @@ export default function NavTopComponent(): React.ReactElement {
                     key={topContext["lis"][2]["key"]}>
                     <AComponent
                         href={topContext["as"][2]["href"]}
-                        target="_self">
+                        target={topContext["as"][2]["target"]}>
                         {topContext["as"][2]["content"]}
                     </AComponent>
                 </LiComponent>
@@ -50,7 +50,7 @@ export default function NavTopComponent(): React.ReactElement {
                     key={topContext["lis"][3]["key"]}>
                     <AComponent
                         href={topContext["as"][3]["href"]}
-                        target="_self">
+                        target={topContext["as"][3]["target"]}>
                         {topContext["as"][3]["content"]}
                     </AComponent>
                 </LiComponent>
@@ -59,7 +59,7 @@ export default function NavTopComponent(): React.ReactElement {
                     key={topContext["lis"][4]["key"]}>
                     <AComponent
                         href={topContext["as"][4]["href"]}
-                        target="_self">
+                        target={topContext["as"][4]["target"]}>
                         {topContext["as"][4]["content"]}
                     </AComponent>
                 </LiComponent>
@@ -68,7 +68,7 @@ export default function NavTopComponent(): React.ReactElement {
                     key={topContext["lis"][5]["key"]}>
                     <AComponent
                         href={topContext["as"][5]["href"]}
-                        target="_blank">
+                        target={topContext["as"][5]["target"]}>
                         {topContext["as"][5]["content"]}
                     </AComponent>
                 </LiComponent>
@@ -77,7 +77,7 @@ export default function NavTopComponent(): React.ReactElement {
                     key={topContext["lis"][6]["key"]}>
                     <AComponent
                         href={topContext["as"][6]["href"]}
-                        target="_blank">
+                        target={topContext["as"][6]["target"]}>
                         <ImgComponent
                             id={topContext["imgs"][0]["id"]}
                             className={topContext["imgs"][0]["className"]}
@@ -90,7 +90,7 @@ export default function NavTopComponent(): React.ReactElement {
                     key={topContext["lis"][7]["key"]}>
                     <AComponent
                         href={topContext["as"][7]["href"]}
-                        target="_blank">
+                        target={topContext["as"][7]["target"]}>
                         <ImgComponent
                             id={topContext["imgs"][1]["id"]}
                             className={topContext["imgs"][1]["className"]}

@@ -23,7 +23,7 @@ export default function SectionLetsConnectComponent(): React.ReactElement {
                 id={letsConnectContext["h2"]["id"]}
                 className={letsConnectContext["h2"]["className"]}>
                 <AComponent href={letsConnectContext["a"]["href"]}
-                   target="_blank">
+                   target={letsConnectContext["a"]["target"]}>
                     {letsConnectContext["a"]["content"]}
                 </AComponent>{letsConnectContext["h2"]["content"]}
             </H2Component>

@@ -148,34 +148,42 @@ export default function Page(): React.ReactElement {
         as: [
             {
                 href: `${topParsedFromFile["hrefAaAs"]}`,
+                target: topParsedFromFile["targetAaAs"],
                 content: topParsedFromFile["contentAaAs"]
             },
             {
                 href: `${topParsedFromFile["hrefAbAs"]}`,
+                target: topParsedFromFile["targetAbAs"],
                 content: topParsedFromFile["contentAbAs"]
             },
             {
                 href: `${topParsedFromFile["hrefAcAs"]}`,
+                target: topParsedFromFile["targetAcAs"],
                 content: topParsedFromFile["contentAcAs"]
             },
             {
                 href: `${topParsedFromFile["hrefAdAs"]}`,
+                target: topParsedFromFile["targetAdAs"],
                 content: topParsedFromFile["contentAdAs"]
             },
             {
                 href: `${topParsedFromFile["hrefAeAs"]}`,
+                target: topParsedFromFile["targetAeAs"],
                 content: topParsedFromFile["contentAeAs"]
             },
             {
                 href: `${topParsedFromFile["hrefAfAs"]}`,
+                target: topParsedFromFile["targetAfAs"],
                 content: topParsedFromFile["contentAfAs"]
             },
             {
                 href: `${topParsedFromFile["hrefAgAs"]}`,
+                target: topParsedFromFile["targetAgAs"],
                 content: topParsedFromFile["contentAgAs"]
             },
             {
                 href: `${topParsedFromFile["hrefAhAs"]}`,
+                target: topParsedFromFile["targetAhAs"],
                 content: topParsedFromFile["contentAhAs"]
             }
         ],
@@ -323,6 +331,7 @@ export default function Page(): React.ReactElement {
         },
         a: {
             href: `${platformParsedFromFile["hrefA"]}`,
+            target: platformParsedFromFile["targetA"],
             content: platformParsedFromFile["contentA"]
         }
     }
@@ -349,6 +358,7 @@ export default function Page(): React.ReactElement {
         },
         a: {
             href: `${frameworkParsedFromFile["hrefA"]}`,
+            target: frameworkParsedFromFile["targetA"],
             content: frameworkParsedFromFile["contentA"]
         }
     }
@@ -370,6 +380,7 @@ export default function Page(): React.ReactElement {
         },
         a: {
             href: `${letsConnectParsedFromFile["hrefA"]}`,
+            target: letsConnectParsedFromFile["targetA"],
             content: letsConnectParsedFromFile["contentA"]
         }
     }
@@ -428,34 +439,42 @@ export default function Page(): React.ReactElement {
         as: [
             {
                 href: `${bottomParsedFromFile["hrefAaAs"]}`,
+                target: bottomParsedFromFile["targetAaAs"],
                 content: bottomParsedFromFile["contentAaAs"]
             },
             {
                 href: `${bottomParsedFromFile["hrefAbAs"]}`,
+                target: bottomParsedFromFile["targetAbAs"],
                 content: bottomParsedFromFile["contentAbAs"]
             },
             {
                 href: `${bottomParsedFromFile["hrefAcAs"]}`,
+                target: bottomParsedFromFile["targetAcAs"],
                 content: bottomParsedFromFile["contentAcAs"]
             },
             {
                 href: `${bottomParsedFromFile["hrefAdAs"]}`,
+                target: bottomParsedFromFile["targetAdAs"],
                 content: bottomParsedFromFile["contentAdAs"]
             },
             {
                 href: `${bottomParsedFromFile["hrefAeAs"]}`,
+                target: bottomParsedFromFile["targetAeAs"],
                 content: bottomParsedFromFile["contentAeAs"]
             },
             {
                 href: `${bottomParsedFromFile["hrefAfAs"]}`,
+                target: bottomParsedFromFile["targetAfAs"],
                 content: bottomParsedFromFile["contentAfAs"]
             },
             {
                 href: `${bottomParsedFromFile["hrefAgAs"]}`,
+                target: bottomParsedFromFile["targetAgAs"],
                 content: bottomParsedFromFile["contentAgAs"]
             },
             {
                 href: `${bottomParsedFromFile["hrefAhAs"]}`,
+                target: bottomParsedFromFile["targetAhAs"],
                 content: bottomParsedFromFile["contentAhAs"]
             }
         ],
@@ -487,6 +506,7 @@ export default function Page(): React.ReactElement {
         ],
         a: {
             href: `${bottomParsedFromFile["hrefA"]}`,
+            target: bottomParsedFromFile["targetA"],
             content: bottomParsedFromFile["contentA"]
         }
     }
