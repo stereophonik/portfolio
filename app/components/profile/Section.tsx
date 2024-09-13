@@ -5,6 +5,7 @@ import ImgComponent from "../Img";
 import DivComponent from "../Div";
 import H1Component from "../H1";
 import SpanComponent from "../Span";
+import StrongComponent from "../Strong";
 import H2Component from "../H2";
 import UlComponent from "../Ul";
 import LiComponent from "../Li";
@@ -63,13 +64,13 @@ export default function SectionProfileComponent(): React.ReactElement {
                             className={profileContext["abSpan"]["className"]}>
                             {profileContext["abSpan"]["content"]}
                         </SpanComponent>
-                        <strong>
+                        <StrongComponent>
                             <SpanComponent
                                 id={profileContext["acSpan"]["id"]}
                                 className={profileContext["acSpan"]["className"]}>
                                 {profileContext["acSpan"]["content"]}
                             </SpanComponent>
-                        </strong>
+                        </StrongComponent>
                         <SpanComponent
                             id={profileContext["adSpan"]["id"]}
                             className={profileContext["adSpan"]["className"]}>
