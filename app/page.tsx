@@ -178,6 +178,20 @@ export default function Page(): React.ReactElement {
                 href: `${navigationParsedFromFile["hrefAhAs"]}`,
                 content: navigationParsedFromFile["contentAhAs"]
             }
+        ],
+        imgs: [
+            {
+                id: navigationParsedFromFile["idAaImgs"],
+                className: navigationParsedFromFile["classNameAaImgs"],
+                src: navigationParsedFromFile["srcAaImgs"],
+                alt: navigationParsedFromFile["altAaImgs"]
+            },
+            {
+                id: navigationParsedFromFile["idAbImgs"],
+                className: navigationParsedFromFile["classNameAbImgs"],
+                src: navigationParsedFromFile["srcAbImgs"],
+                alt: navigationParsedFromFile["altAbImgs"]
+            }
         ]
     }
 

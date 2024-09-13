@@ -23,61 +23,61 @@ export default function SectionFooterComponent(): React.ReactElement {
                     className={footerContext["lis"][0]["className"]}
                     key={footerContext["lis"][0]["key"]}>
                     <AComponent
-                        href={footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][0])]["href"]}
+                        href={footerContext["as"][0]["href"]}
                         target="_self">
-                        {footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][0])]["content"]}
+                        {footerContext["as"][0]["content"]}
                     </AComponent>
                 </LiComponent>
                 <LiComponent
                     className={footerContext["lis"][1]["className"]}
                     key={footerContext["lis"][1]["key"]}>
                     <AComponent
-                        href={footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][1])]["href"]}
+                        href={footerContext["as"][1]["href"]}
                         target="_self">
-                        {footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][1])]["content"]}
+                        {footerContext["as"][1]["content"]}
                     </AComponent>
                 </LiComponent>
                 <LiComponent
                     className={footerContext["lis"][2]["className"]}
                     key={footerContext["lis"][2]["key"]}>
                     <AComponent
-                        href={footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][2])]["href"]}
+                        href={footerContext["as"][2]["href"]}
                         target="_self">
-                        {footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][2])]["content"]}
+                        {footerContext["as"][2]["content"]}
                     </AComponent>
                 </LiComponent>
                 <LiComponent
                     className={footerContext["lis"][3]["className"]}
                     key={footerContext["lis"][3]["key"]}>
                     <AComponent
-                        href={footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][3])]["href"]}
+                        href={footerContext["as"][3]["href"]}
                         target="_self">
-                        {footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][3])]["content"]}
+                        {footerContext["as"][3]["content"]}
                     </AComponent>
                 </LiComponent>
                 <LiComponent
                     className={footerContext["lis"][4]["className"]}
                     key={footerContext["lis"][4]["key"]}>
                     <AComponent
-                        href={footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][4])]["href"]}
+                        href={footerContext["as"][4]["href"]}
                         target="_self">
-                        {footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][4])]["content"]}
+                        {footerContext["as"][4]["content"]}
                     </AComponent>
                 </LiComponent>
                 <LiComponent
                     className={footerContext["lis"][5]["className"]}
                     key={footerContext["lis"][5]["key"]}>
                     <AComponent
-                        href={footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][5])]["href"]}
+                        href={footerContext["as"][5]["href"]}
                         target="_blank">
-                        {footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][5])]["content"]}
+                        {footerContext["as"][5]["content"]}
                     </AComponent>
                 </LiComponent>
                 <LiComponent
                     className={footerContext["lis"][6]["className"]}
                     key={footerContext["lis"][6]["key"]}>
                     <AComponent
-                        href={footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][6])]["href"]}
+                        href={footerContext["as"][6]["href"]}
                         target="_blank">
                         <ImgComponent
                             id="idAaImgFooter"
@@ -90,7 +90,7 @@ export default function SectionFooterComponent(): React.ReactElement {
                     className={footerContext["lis"][7]["className"]}
                     key={footerContext["lis"][7]["key"]}>
                     <AComponent
-                        href={footerContext["as"][footerContext["lis"].indexOf(footerContext["lis"][7])]["href"]}
+                        href={footerContext["as"][7]["href"]}
                         target="_blank">
                         <ImgComponent
                             id="idAbImgFooter"
