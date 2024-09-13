@@ -80,10 +80,10 @@ export default function SectionFooterComponent(): React.ReactElement {
                         href={footerContext["as"][6]["href"]}
                         target="_blank">
                         <ImgComponent
-                            id="idAaImgFooter"
-                            className="className02Img"
-                            src="/github.png"
-                            alt="Github PNG" />
+                            id={footerContext["imgs"][0]["id"]}
+                            className={footerContext["imgs"][0]["className"]}
+                            src={footerContext["imgs"][0]["src"]}
+                            alt={footerContext["imgs"][0]["alt"]} />
                     </AComponent>
                 </LiComponent>
                 <LiComponent
@@ -93,10 +93,10 @@ export default function SectionFooterComponent(): React.ReactElement {
                         href={footerContext["as"][7]["href"]}
                         target="_blank">
                         <ImgComponent
-                            id="idAbImgFooter"
-                            className="className02Img"
-                            src="/linkedin.png"
-                            alt="LinkedIn PNG" />
+                            id={footerContext["imgs"][1]["id"]}
+                            className={footerContext["imgs"][1]["className"]}
+                            src={footerContext["imgs"][1]["src"]}
+                            alt={footerContext["imgs"][1]["alt"]} />
                     </AComponent>
                 </LiComponent>
             </UlComponent>

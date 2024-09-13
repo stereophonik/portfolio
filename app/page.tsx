@@ -459,6 +459,20 @@ export default function Page(): React.ReactElement {
                 content: footerParsedFromFile["contentAhAs"]
             }
         ],
+        imgs: [
+            {
+                id: footerParsedFromFile["idAaImgs"],
+                className: footerParsedFromFile["classNameAaImgs"],
+                src: footerParsedFromFile["srcAaImgs"],
+                alt: footerParsedFromFile["altAaImgs"]
+            },
+            {
+                id: footerParsedFromFile["idAbImgs"],
+                className: footerParsedFromFile["classNameAbImgs"],
+                src: footerParsedFromFile["srcAbImgs"],
+                alt: footerParsedFromFile["altAbImgs"]
+            }
+        ],
         divs: [
             {
                 id: footerParsedFromFile["idAaDivs"],
