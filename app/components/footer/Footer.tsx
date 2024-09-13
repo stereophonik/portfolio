@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import SectionComponent from "../Section";
+import FooterComponent from "../Footer";
 import UlComponent from "../Ul";
 import LiComponent from "../Li";
 import AComponent from "../A";
@@ -9,13 +9,13 @@ import DivComponent from "../Div";
 
 import { FooterContext } from "../../contexts/Footer";
 
-export default function SectionFooterComponent(): React.ReactElement {
+export default function FooterFooterComponent(): React.ReactElement {
     const footerContext: {} = useContext(FooterContext);
 
     return (
-        <SectionComponent
-            id={footerContext["section"]["id"]}
-            className={footerContext["section"]["className"]}>
+        <FooterComponent
+            id={footerContext["footer"]["id"]}
+            className={footerContext["footer"]["className"]}>
             <UlComponent
                 id={footerContext["ul"]["id"]}
                 className={footerContext["ul"]["className"]}>
@@ -114,6 +114,6 @@ export default function SectionFooterComponent(): React.ReactElement {
                     {footerContext["a"]["content"]}
                 </AComponent>
             </DivComponent>
-        </SectionComponent>
+        </FooterComponent>
     );
 }

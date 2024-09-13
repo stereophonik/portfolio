@@ -9,7 +9,7 @@ import SectionWhatIOfferComponent from "./components/whatIOffer/Section";
 import SectionPlatformComponent from "./components/platform/Section";
 import SectionFrameworkComponent from "./components/framework/Section";
 import SectionLetsConnectComponent from "./components/letsConnect/Section";
-import SectionFooterComponent from "./components/footer/Section";
+import FooterFooterComponent from "./components/footer/Footer";
 
 import { NavigationContext } from "./contexts/Navigation";
 import { ProfileContext } from "./contexts/Profile";
@@ -375,9 +375,9 @@ export default function Page(): React.ReactElement {
     }
 
     const valueFooter: ValueFooterInterface = {
-        section: {
-            id: footerParsedFromFile["idSection"],
-            className: footerParsedFromFile["classNameSection"]
+        footer: {
+            id: footerParsedFromFile["idFooter"],
+            className: footerParsedFromFile["classNameFooter"]
         },
         ul: {
             id: footerParsedFromFile["idUl"],
@@ -519,7 +519,7 @@ export default function Page(): React.ReactElement {
             </LetsConnectContext.Provider>
             <FooterContext.Provider
                 value={valueFooter}>
-                <SectionFooterComponent />
+                <FooterFooterComponent />
             </FooterContext.Provider>
         </MainComponent>
     );

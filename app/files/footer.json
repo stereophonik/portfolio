@@ -1,6 +1,6 @@
 {
-  "idSection": "idSectionFooter",
-  "classNameSection": "classNameClassCSection",
+  "idFooter": "idFooterFooter",
+  "classNameFooter": "classNameFooter",
   "idUl": "idUlFooter",
   "classNameUl": "classNameUl",
   "classNameAaLis": "className03VerticalLi",
