@@ -42,5 +42,13 @@
   "hrefAgAs": "https://github.com/stereophonik/portfolio",
   "contentAgAs": "",
   "hrefAhAs": "https://www.linkedin.com/in/nikolai-reyes",
-  "contentAhAs": ""
+  "contentAhAs": "",
+  "idAaDivs": "idAaDivsFooter",
+  "classNameAaDivs": "className02Div",
+  "contentAaDivs": "@2024 Nikolai Reyes - All Rights Reserved",
+  "idAbDivs": "idAbDivsFooter",
+  "classNameAbDivs": "className02Div",
+  "contentAbDivs": "",
+  "hrefA": "#idNavNavigation",
+  "contentA": "Back to Top"
 }

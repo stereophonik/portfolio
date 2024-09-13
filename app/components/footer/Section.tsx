@@ -101,17 +101,17 @@ export default function SectionFooterComponent(): React.ReactElement {
                 </LiComponent>
             </UlComponent>
             <DivComponent
-                id="idAaDivsFooter"
-                className="className02Div">
-                @2024 Nikolai Reyes - All Rights Reserved
+                id={footerContext["divs"][0]["id"]}
+                className={footerContext["divs"][0]["className"]}>
+                {footerContext["divs"][0]["content"]}
             </DivComponent>
             <DivComponent
-                id="idAbDivsFooter"
-                className="className02Div">
+                id={footerContext["divs"][1]["id"]}
+                className={footerContext["divs"][1]["className"]}>
                 <AComponent
-                    href="#idNavNavigation"
+                    href={footerContext["a"]["href"]}
                     target="_self">
-                    Back to Top
+                    {footerContext["a"]["content"]}
                 </AComponent>
             </DivComponent>
         </SectionComponent>

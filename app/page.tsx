@@ -444,7 +444,23 @@ export default function Page(): React.ReactElement {
                 href: `${footerParsedFromFile["hrefAhAs"]}`,
                 content: footerParsedFromFile["contentAhAs"]
             }
-        ]
+        ],
+        divs: [
+            {
+                id: footerParsedFromFile["idAaDivs"],
+                className: footerParsedFromFile["classNameAaDivs"],
+                content: footerParsedFromFile["contentAaDivs"]
+            },
+            {
+                id: footerParsedFromFile["idAbDivs"],
+                className: footerParsedFromFile["classNameAbDivs"],
+                content: footerParsedFromFile["contentAbDivs"]
+            }
+        ],
+        a: {
+            href: `${footerParsedFromFile["hrefA"]}`,
+            content: footerParsedFromFile["contentA"]
+        }
     }
 
     return (
