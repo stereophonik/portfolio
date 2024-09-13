@@ -1,4 +1,4 @@
-export default interface ValueNavigationInterface {
+export default interface ValueTopInterface {
     nav: { id: any; className: any; };
     ul: { id: any; className: any; };
     lis: { className: any; key: any; content: any; }[];

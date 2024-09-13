@@ -3,46 +3,46 @@
 import { useState, useEffect, Dispatch, SetStateAction } from "react";
 
 import MainComponent from "./components/Main";
-import NavNavigationComponent from "./components/navigation/Nav";
+import NavTopComponent from "./components/top/Nav";
 import SectionProfileComponent from "./components/profile/Section";
 import SectionWhatIOfferComponent from "./components/whatIOffer/Section";
 import SectionPlatformComponent from "./components/platform/Section";
 import SectionFrameworkComponent from "./components/framework/Section";
 import SectionLetsConnectComponent from "./components/letsConnect/Section";
-import FooterFooterComponent from "./components/footer/Footer";
+import FooterBottomComponent from "./components/bottom/Footer";
 
-import { NavigationContext } from "./contexts/Navigation";
+import { TopContext } from "./contexts/Top";
 import { ProfileContext } from "./contexts/Profile";
 import { WhatIOfferContext } from "./contexts/WhatIOffer";
 import { PlatformContext } from "./contexts/Platform";
 import { FrameworkContext } from "./contexts/Framework";
 import { LetsConnectContext } from "./contexts/LetsConnect";
-import { FooterContext } from "./contexts/Footer";
+import { BottomContext } from "./contexts/Bottom";
 
-import ValueNavigationInterface from "./interfaces/ValueNavigation";
+import ValueTopInterface from "./interfaces/ValueTop";
 import ValueProfileInterface from "./interfaces/ValueProfile";
 import ValueWhatIOfferInterface from "./interfaces/ValueWhatIOffer";
 import ValuePlatformInterface from "./interfaces/ValuePlatform";
 import ValueFrameworkInterface from "./interfaces/ValueFramework";
 import ValueLetsConnectInterface from "./interfaces/ValueLetsConnect";
-import ValueFooterInterface from "./interfaces/ValueFooter";
+import ValueBottomInterface from "./interfaces/ValueBottom";
 
 export default function Page(): React.ReactElement {
-    const [navigationParsedFromFile, setNavigationParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
+    const [topParsedFromFile, setTopParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [profileParsedFromFile, setProfileParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [whatIOfferParsedFromFile, setWhatIOfferParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [platformParsedFromFile, setPlatformParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [frameworkParsedFromFile, setFrameworkParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [letsConnectParsedFromFile, setLetsConnectParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
-    const [footerParsedFromFile, setFooterParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
+    const [bottomParsedFromFile, setBottomParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
 
     useEffect(() => {
-        fetch("/files?fileName=navigation", {
+        fetch("/files?fileName=top", {
             method: "GET"
         })
             .then(fromFile => fromFile.json())
             .then(parsedFromFile => {
-                setNavigationParsedFromFile(parsedFromFile);
+                setTopParsedFromFile(parsedFromFile);
             });
 
         fetch("/files?fileName=profile", {
@@ -85,112 +85,112 @@ export default function Page(): React.ReactElement {
                 setLetsConnectParsedFromFile(parsedFromFile);
             });
 
-        fetch("/files?fileName=footer", {
+        fetch("/files?fileName=bottom", {
             method: "GET"
         })
             .then(fromFile => fromFile.json())
             .then(parsedFromFile => {
-                setFooterParsedFromFile(parsedFromFile);
+                setBottomParsedFromFile(parsedFromFile);
             });
     }, []);
 
-    const valueNavigation: ValueNavigationInterface = {
+    const valueTop: ValueTopInterface = {
         nav: {
-            id: navigationParsedFromFile["idNav"],
-            className: navigationParsedFromFile["classNameNav"]
+            id: topParsedFromFile["idNav"],
+            className: topParsedFromFile["classNameNav"]
         },
         ul: {
-            id: navigationParsedFromFile["idUl"],
-            className: navigationParsedFromFile["classNameUl"]
+            id: topParsedFromFile["idUl"],
+            className: topParsedFromFile["classNameUl"]
         },
         lis: [
             {
-                className: navigationParsedFromFile["classNameAaLis"],
-                key: navigationParsedFromFile["keyAaLis"],
-                content: navigationParsedFromFile["contentAaLis"]
+                className: topParsedFromFile["classNameAaLis"],
+                key: topParsedFromFile["keyAaLis"],
+                content: topParsedFromFile["contentAaLis"]
             },
             {
-                className: navigationParsedFromFile["classNameAbLis"],
-                key: navigationParsedFromFile["keyAbLis"],
-                content: navigationParsedFromFile["contentAbLis"]
+                className: topParsedFromFile["classNameAbLis"],
+                key: topParsedFromFile["keyAbLis"],
+                content: topParsedFromFile["contentAbLis"]
             },
             {
-                className: navigationParsedFromFile["classNameAcLis"],
-                key: navigationParsedFromFile["keyAcLis"],
-                content: navigationParsedFromFile["contentAcLis"]
+                className: topParsedFromFile["classNameAcLis"],
+                key: topParsedFromFile["keyAcLis"],
+                content: topParsedFromFile["contentAcLis"]
             },
             {
-                className: navigationParsedFromFile["classNameAdLis"],
-                key: navigationParsedFromFile["keyAdLis"],
-                content: navigationParsedFromFile["contentAdLis"]
+                className: topParsedFromFile["classNameAdLis"],
+                key: topParsedFromFile["keyAdLis"],
+                content: topParsedFromFile["contentAdLis"]
             },
             {
-                className: navigationParsedFromFile["classNameAeLis"],
-                key: navigationParsedFromFile["keyAeLis"],
-                content: navigationParsedFromFile["contentAeLis"]
+                className: topParsedFromFile["classNameAeLis"],
+                key: topParsedFromFile["keyAeLis"],
+                content: topParsedFromFile["contentAeLis"]
             },
             {
-                className: navigationParsedFromFile["classNameAfLis"],
-                key: navigationParsedFromFile["keyAfLis"],
-                content: navigationParsedFromFile["contentAfLis"]
+                className: topParsedFromFile["classNameAfLis"],
+                key: topParsedFromFile["keyAfLis"],
+                content: topParsedFromFile["contentAfLis"]
             },
             {
-                className: navigationParsedFromFile["classNameAgLis"],
-                key: navigationParsedFromFile["keyAgLis"],
-                content: navigationParsedFromFile["contentAgLis"]
+                className: topParsedFromFile["classNameAgLis"],
+                key: topParsedFromFile["keyAgLis"],
+                content: topParsedFromFile["contentAgLis"]
             },
             {
-                className: navigationParsedFromFile["classNameAhLis"],
-                key: navigationParsedFromFile["keyAhLis"],
-                content: navigationParsedFromFile["contentAhLis"]
+                className: topParsedFromFile["classNameAhLis"],
+                key: topParsedFromFile["keyAhLis"],
+                content: topParsedFromFile["contentAhLis"]
             }
         ],
         as: [
             {
-                href: `${navigationParsedFromFile["hrefAaAs"]}`,
-                content: navigationParsedFromFile["contentAaAs"]
+                href: `${topParsedFromFile["hrefAaAs"]}`,
+                content: topParsedFromFile["contentAaAs"]
             },
             {
-                href: `${navigationParsedFromFile["hrefAbAs"]}`,
-                content: navigationParsedFromFile["contentAbAs"]
+                href: `${topParsedFromFile["hrefAbAs"]}`,
+                content: topParsedFromFile["contentAbAs"]
             },
             {
-                href: `${navigationParsedFromFile["hrefAcAs"]}`,
-                content: navigationParsedFromFile["contentAcAs"]
+                href: `${topParsedFromFile["hrefAcAs"]}`,
+                content: topParsedFromFile["contentAcAs"]
             },
             {
-                href: `${navigationParsedFromFile["hrefAdAs"]}`,
-                content: navigationParsedFromFile["contentAdAs"]
+                href: `${topParsedFromFile["hrefAdAs"]}`,
+                content: topParsedFromFile["contentAdAs"]
             },
             {
-                href: `${navigationParsedFromFile["hrefAeAs"]}`,
-                content: navigationParsedFromFile["contentAeAs"]
+                href: `${topParsedFromFile["hrefAeAs"]}`,
+                content: topParsedFromFile["contentAeAs"]
             },
             {
-                href: `${navigationParsedFromFile["hrefAfAs"]}`,
-                content: navigationParsedFromFile["contentAfAs"]
+                href: `${topParsedFromFile["hrefAfAs"]}`,
+                content: topParsedFromFile["contentAfAs"]
             },
             {
-                href: `${navigationParsedFromFile["hrefAgAs"]}`,
-                content: navigationParsedFromFile["contentAgAs"]
+                href: `${topParsedFromFile["hrefAgAs"]}`,
+                content: topParsedFromFile["contentAgAs"]
             },
             {
-                href: `${navigationParsedFromFile["hrefAhAs"]}`,
-                content: navigationParsedFromFile["contentAhAs"]
+                href: `${topParsedFromFile["hrefAhAs"]}`,
+                content: topParsedFromFile["contentAhAs"]
             }
         ],
         imgs: [
             {
-                id: navigationParsedFromFile["idAaImgs"],
-                className: navigationParsedFromFile["classNameAaImgs"],
-                src: navigationParsedFromFile["srcAaImgs"],
-                alt: navigationParsedFromFile["altAaImgs"]
+                id: topParsedFromFile["idAaImgs"],
+                className: topParsedFromFile["classNameAaImgs"],
+                src: topParsedFromFile["srcAaImgs"],
+                alt: topParsedFromFile["altAaImgs"]
             },
             {
-                id: navigationParsedFromFile["idAbImgs"],
-                className: navigationParsedFromFile["classNameAbImgs"],
-                src: navigationParsedFromFile["srcAbImgs"],
-                alt: navigationParsedFromFile["altAbImgs"]
+                id: topParsedFromFile["idAbImgs"],
+                className: topParsedFromFile["classNameAbImgs"],
+                src: topParsedFromFile["srcAbImgs"],
+                alt: topParsedFromFile["altAbImgs"]
             }
         ]
     }
@@ -374,129 +374,129 @@ export default function Page(): React.ReactElement {
         }
     }
 
-    const valueFooter: ValueFooterInterface = {
+    const valueBottom: ValueBottomInterface = {
         footer: {
-            id: footerParsedFromFile["idFooter"],
-            className: footerParsedFromFile["classNameFooter"]
+            id: bottomParsedFromFile["idFooter"],
+            className: bottomParsedFromFile["classNameFooter"]
         },
         ul: {
-            id: footerParsedFromFile["idUl"],
-            className: footerParsedFromFile["classNameUl"]
+            id: bottomParsedFromFile["idUl"],
+            className: bottomParsedFromFile["classNameUl"]
         },
         lis: [
             {
-                className: footerParsedFromFile["classNameAaLis"],
-                key: footerParsedFromFile["keyAaLis"],
-                content: footerParsedFromFile["contentAaLis"]
+                className: bottomParsedFromFile["classNameAaLis"],
+                key: bottomParsedFromFile["keyAaLis"],
+                content: bottomParsedFromFile["contentAaLis"]
             },
             {
-                className: footerParsedFromFile["classNameAbLis"],
-                key: footerParsedFromFile["keyAbLis"],
-                content: footerParsedFromFile["contentAbLis"]
+                className: bottomParsedFromFile["classNameAbLis"],
+                key: bottomParsedFromFile["keyAbLis"],
+                content: bottomParsedFromFile["contentAbLis"]
             },
             {
-                className: footerParsedFromFile["classNameAcLis"],
-                key: footerParsedFromFile["keyAcLis"],
-                content: footerParsedFromFile["contentAcLis"]
+                className: bottomParsedFromFile["classNameAcLis"],
+                key: bottomParsedFromFile["keyAcLis"],
+                content: bottomParsedFromFile["contentAcLis"]
             },
             {
-                className: footerParsedFromFile["classNameAdLis"],
-                key: footerParsedFromFile["keyAdLis"],
-                content: footerParsedFromFile["contentAdLis"]
+                className: bottomParsedFromFile["classNameAdLis"],
+                key: bottomParsedFromFile["keyAdLis"],
+                content: bottomParsedFromFile["contentAdLis"]
             },
             {
-                className: footerParsedFromFile["classNameAeLis"],
-                key: footerParsedFromFile["keyAeLis"],
-                content: footerParsedFromFile["contentAeLis"]
+                className: bottomParsedFromFile["classNameAeLis"],
+                key: bottomParsedFromFile["keyAeLis"],
+                content: bottomParsedFromFile["contentAeLis"]
             },
             {
-                className: footerParsedFromFile["classNameAfLis"],
-                key: footerParsedFromFile["keyAfLis"],
-                content: footerParsedFromFile["contentAfLis"]
+                className: bottomParsedFromFile["classNameAfLis"],
+                key: bottomParsedFromFile["keyAfLis"],
+                content: bottomParsedFromFile["contentAfLis"]
             },
             {
-                className: footerParsedFromFile["classNameAgLis"],
-                key: footerParsedFromFile["keyAgLis"],
-                content: footerParsedFromFile["contentAgLis"]
+                className: bottomParsedFromFile["classNameAgLis"],
+                key: bottomParsedFromFile["keyAgLis"],
+                content: bottomParsedFromFile["contentAgLis"]
             },
             {
-                className: footerParsedFromFile["classNameAhLis"],
-                key: footerParsedFromFile["keyAhLis"],
-                content: footerParsedFromFile["contentAhLis"]
+                className: bottomParsedFromFile["classNameAhLis"],
+                key: bottomParsedFromFile["keyAhLis"],
+                content: bottomParsedFromFile["contentAhLis"]
             }
         ],
         as: [
             {
-                href: `${footerParsedFromFile["hrefAaAs"]}`,
-                content: footerParsedFromFile["contentAaAs"]
+                href: `${bottomParsedFromFile["hrefAaAs"]}`,
+                content: bottomParsedFromFile["contentAaAs"]
             },
             {
-                href: `${footerParsedFromFile["hrefAbAs"]}`,
-                content: footerParsedFromFile["contentAbAs"]
+                href: `${bottomParsedFromFile["hrefAbAs"]}`,
+                content: bottomParsedFromFile["contentAbAs"]
             },
             {
-                href: `${footerParsedFromFile["hrefAcAs"]}`,
-                content: footerParsedFromFile["contentAcAs"]
+                href: `${bottomParsedFromFile["hrefAcAs"]}`,
+                content: bottomParsedFromFile["contentAcAs"]
             },
             {
-                href: `${footerParsedFromFile["hrefAdAs"]}`,
-                content: footerParsedFromFile["contentAdAs"]
+                href: `${bottomParsedFromFile["hrefAdAs"]}`,
+                content: bottomParsedFromFile["contentAdAs"]
             },
             {
-                href: `${footerParsedFromFile["hrefAeAs"]}`,
-                content: footerParsedFromFile["contentAeAs"]
+                href: `${bottomParsedFromFile["hrefAeAs"]}`,
+                content: bottomParsedFromFile["contentAeAs"]
             },
             {
-                href: `${footerParsedFromFile["hrefAfAs"]}`,
-                content: footerParsedFromFile["contentAfAs"]
+                href: `${bottomParsedFromFile["hrefAfAs"]}`,
+                content: bottomParsedFromFile["contentAfAs"]
             },
             {
-                href: `${footerParsedFromFile["hrefAgAs"]}`,
-                content: footerParsedFromFile["contentAgAs"]
+                href: `${bottomParsedFromFile["hrefAgAs"]}`,
+                content: bottomParsedFromFile["contentAgAs"]
             },
             {
-                href: `${footerParsedFromFile["hrefAhAs"]}`,
-                content: footerParsedFromFile["contentAhAs"]
+                href: `${bottomParsedFromFile["hrefAhAs"]}`,
+                content: bottomParsedFromFile["contentAhAs"]
             }
         ],
         imgs: [
             {
-                id: footerParsedFromFile["idAaImgs"],
-                className: footerParsedFromFile["classNameAaImgs"],
-                src: footerParsedFromFile["srcAaImgs"],
-                alt: footerParsedFromFile["altAaImgs"]
+                id: bottomParsedFromFile["idAaImgs"],
+                className: bottomParsedFromFile["classNameAaImgs"],
+                src: bottomParsedFromFile["srcAaImgs"],
+                alt: bottomParsedFromFile["altAaImgs"]
             },
             {
-                id: footerParsedFromFile["idAbImgs"],
-                className: footerParsedFromFile["classNameAbImgs"],
-                src: footerParsedFromFile["srcAbImgs"],
-                alt: footerParsedFromFile["altAbImgs"]
+                id: bottomParsedFromFile["idAbImgs"],
+                className: bottomParsedFromFile["classNameAbImgs"],
+                src: bottomParsedFromFile["srcAbImgs"],
+                alt: bottomParsedFromFile["altAbImgs"]
             }
         ],
         divs: [
             {
-                id: footerParsedFromFile["idAaDivs"],
-                className: footerParsedFromFile["classNameAaDivs"],
-                content: footerParsedFromFile["contentAaDivs"]
+                id: bottomParsedFromFile["idAaDivs"],
+                className: bottomParsedFromFile["classNameAaDivs"],
+                content: bottomParsedFromFile["contentAaDivs"]
             },
             {
-                id: footerParsedFromFile["idAbDivs"],
-                className: footerParsedFromFile["classNameAbDivs"],
-                content: footerParsedFromFile["contentAbDivs"]
+                id: bottomParsedFromFile["idAbDivs"],
+                className: bottomParsedFromFile["classNameAbDivs"],
+                content: bottomParsedFromFile["contentAbDivs"]
             }
         ],
         a: {
-            href: `${footerParsedFromFile["hrefA"]}`,
-            content: footerParsedFromFile["contentA"]
+            href: `${bottomParsedFromFile["hrefA"]}`,
+            content: bottomParsedFromFile["contentA"]
         }
     }
 
     return (
         <MainComponent>
-            <NavigationContext.Provider
-                value={valueNavigation}>
-                <NavNavigationComponent />
-            </NavigationContext.Provider>
+            <TopContext.Provider
+                value={valueTop}>
+                <NavTopComponent />
+            </TopContext.Provider>
             <ProfileContext.Provider
                 value={valueProfile}>
                 <SectionProfileComponent />
@@ -517,10 +517,10 @@ export default function Page(): React.ReactElement {
                 value={valueLetsConnect}>
                 <SectionLetsConnectComponent />
             </LetsConnectContext.Provider>
-            <FooterContext.Provider
-                value={valueFooter}>
-                <FooterFooterComponent />
-            </FooterContext.Provider>
+            <BottomContext.Provider
+                value={valueBottom}>
+                <FooterBottomComponent />
+            </BottomContext.Provider>
         </MainComponent>
     );
 }

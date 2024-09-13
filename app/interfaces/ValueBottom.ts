@@ -1,4 +1,4 @@
-export default interface ValueFooterInterface {
+export default interface ValueBottomInterface {
     footer: { id: any; className: any; };
     ul: { id: any; className: any; };
     lis: { className: any; key: any; content: any; }[];

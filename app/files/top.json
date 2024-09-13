@@ -1,7 +1,7 @@
 {
-  "idNav": "idNavNavigation",
+  "idNav": "idNavTop",
   "classNameNav": "classNameNav",
-  "idUl": "idUlNavigation",
+  "idUl": "idUlTop",
   "classNameUl": "classNameUl",
   "classNameAaLis": "classNameHorizontalLi",
   "keyAaLis": 1,
@@ -43,11 +43,11 @@
   "contentAgAs": "",
   "hrefAhAs": "https://www.linkedin.com/in/nikolai-reyes",
   "contentAhAs": "",
-  "idAaImgs": "idAaImgsNavigation",
+  "idAaImgs": "idAaImgsTop",
   "classNameAaImgs": "className02Img",
   "srcAaImgs": "/github.png",
   "altAaImgs": "Github PNG",
-  "idAbImgs": "idAbImgsNavigation",
+  "idAbImgs": "idAbImgsTop",
   "classNameAbImgs": "className02Img",
   "srcAbImgs": "/linkedin.png",
   "altAbImgs": "LinkedIn PNG"
