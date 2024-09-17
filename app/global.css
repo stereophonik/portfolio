@@ -1,13 +1,11 @@
 @font-face {
-    font-family: "Anonymous Pro";
-    src: url("../fonts/AnonymousPro-Regular.ttf") format("truetype");
-    font-weight: 400;
+    font-family: "Lexend Deca Regular";
+    src: url("../fonts/LexendDeca-Regular.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "Roboto Mono";
-    src: url("../fonts/RobotoMono-VariableFont_wght.ttf") format("truetype");
-    font-weight: 700;
+    font-family: "Lexend Deca Bold";
+    src: url("../fonts/LexendDeca-Bold.ttf") format("truetype");
 }
 
 * {
@@ -100,42 +98,41 @@ a:hover {
 .classNameH1 {
     color: #F3F4F6;
     padding: 0 1.5vw;
-    font-family: "Roboto Mono", sans-serif;
+    font-family: "Lexend Deca Bold", sans-serif;
     font-size: 4rem;
 }
 
 .classNameH2 {
     padding: 0.75vw 1.5vw;
-    font-family: "Anonymous Pro", sans-serif;
+    font-family: "Lexend Deca Regular", sans-serif;
     word-spacing: -0.25rem;
     font-size: 2rem;
-    font-weight: normal;
 }
 
 .className02H2 {
     color: #F3F4F6;
     padding: 3vw 1.5vw;
-    font-family: "Anonymous Pro", sans-serif;
+    font-family: "Lexend Deca Bold", sans-serif;
     font-size: 2.75rem;
 }
 
 .classNameHorizontalLi {
     display: inline-block;
     padding: 1vw 2.5vw;
-    font-family: "Anonymous Pro", sans-serif;
+    font-family: "Lexend Deca Regular", sans-serif;
     font-size: 1.25rem;
 }
 
 .classNameIconHorizontalLi {
     display: inline-block;
     padding-right: 1.5vw;
-    font-family: "Anonymous Pro", sans-serif;
+    font-family: "Lexend Deca Regular", sans-serif;
     font-size: 1.25rem;
 }
 
 .classNameVerticalLi {
     padding: 0 1.5vw;
-    font-family: "Anonymous Pro", sans-serif;
+    font-family: "Lexend Deca Regular", sans-serif;
     font-size: 2rem;
 }
 
@@ -143,20 +140,20 @@ a:hover {
     padding-top: 1vw;
     padding-left: 1.5vw;
     padding-right: 1.5vw;
-    font-family: "Anonymous Pro", sans-serif;
+    font-family: "Lexend Deca Regular", sans-serif;
     font-size: 2rem;
 }
 
 .className03VerticalLi {
     display: block;
     padding: 0.5vw;
-    font-family: "Anonymous Pro", sans-serif;
+    font-family: "Lexend Deca Regular", sans-serif;
     font-size: 1.25rem;
 }
 
 .classNameSpan {
     padding: 0 1.5vw;
-    font-family: "Anonymous Pro", sans-serif;
+    font-family: "Lexend Deca Regular", sans-serif;
     font-size: 2rem;
 }
 
@@ -164,14 +161,14 @@ a:hover {
 
 .classNameDiv {
     padding: 0.75vw 1.5vw;
-    font-family: "Anonymous Pro", sans-serif;
+    font-family: "Lexend Deca Regular", sans-serif;
     font-size: 2rem;
     text-align: center;
 }
 
 .className02Div {
     padding: 0.25vw 1.5vw;
-    font-family: "Anonymous Pro", sans-serif;
+    font-family: "Lexend Deca Regular", sans-serif;
     font-size: 1rem;
     text-align: center;
 }
