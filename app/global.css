@@ -21,36 +21,28 @@ main {
 }
 
 a {
-    color: wheat;
+    color: #9CA3AF;
     text-decoration: none;
     border-radius: 10%;
 }
 
 a:hover {
-    color: darkgray;
+    color: white;
 }
 
 .classNameNav {
     overflow: hidden;
     width: 100vw;
-    background-color: #DA6E2B;
-    color: #2C2F37;
-    text-align: right;
-}
-
-.classNameRightNav {
-    overflow: hidden;
-    width: 100vw;
-    background-color: #DA6E2B;
-    color: #2C2F37;
+    background-color: #00260F;
+    color: #6B7280;
     text-align: right;
 }
 
 .classNameClassASection {
     overflow: hidden;
     width: 100vw;
-    background-color: #DA6E2B;
-    color: #2C2F37;
+    background-color: #00260F;
+    color: #6B7280;
     text-align: right;
     height: auto;
     padding-bottom: 1vw;
@@ -59,8 +51,8 @@ a:hover {
 .classNameClassBSection {
     overflow: hidden;
     width: 100vw;
-    background-color: #2C2F37;
-    color: #DA6E2B;
+    background-color: #113826;
+    color: #6B7280;
     text-align: left;
     height: auto;
     padding-bottom: 1vw;
@@ -69,16 +61,16 @@ a:hover {
 .classNameFooter {
     overflow: hidden;
     width: 100vw;
-    background-color: #DA6E2B;
-    color: #2C2F37;
+    background-color: #00260F;
+    color: #6B7280;
     text-align: right;
 }
 
 .classNameClassDSection {
     overflow: hidden;
     width: 100vw;
-    background-color: #2C2F37;
-    color: #DA6E2B;
+    background-color: #113826;
+    color: #6B7280;
     text-align: left;
     height: auto;
     padding-bottom: 1vw;
@@ -106,7 +98,7 @@ a:hover {
 }
 
 .classNameH1 {
-    color: white;
+    color: #F3F4F6;
     padding: 0 1.5vw;
     font-family: "Roboto Mono", sans-serif;
     font-size: 4rem;
@@ -121,7 +113,7 @@ a:hover {
 }
 
 .className02H2 {
-    color: white;
+    color: #F3F4F6;
     padding: 3vw 1.5vw;
     font-family: "Anonymous Pro", sans-serif;
     font-size: 2.75rem;
