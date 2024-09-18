@@ -6,6 +6,7 @@ import H2Component from "../H2";
 import AComponent from "../A";
 
 import { LetsConnectContext } from "../../contexts/LetsConnect";
+import SpanComponent from "../Span";
 
 export default function SectionLetsConnectComponent(): React.ReactElement {
     const letsConnectContext: {} = useContext(LetsConnectContext);
@@ -17,7 +18,16 @@ export default function SectionLetsConnectComponent(): React.ReactElement {
             <H1Component
                 id={letsConnectContext["h1"]["id"]}
                 className={letsConnectContext["h1"]["className"]}>
-                {letsConnectContext["h1"]["content"]}
+                <SpanComponent
+                    id={letsConnectContext["aaSpan"]["id"]}
+                    className={letsConnectContext["aaSpan"]["className"]}>
+                    {letsConnectContext["aaSpan"]["content"]}
+                </SpanComponent>
+                <SpanComponent
+                    id={letsConnectContext["abSpan"]["id"]}
+                    className={letsConnectContext["abSpan"]["className"]}>
+                    {letsConnectContext["abSpan"]["content"]}
+                </SpanComponent>
             </H1Component>
             <H2Component
                 id={letsConnectContext["h2"]["id"]}

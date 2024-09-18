@@ -2,6 +2,7 @@ import { useContext } from "react";
 
 import SectionComponent from "../Section";
 import H1Component from "../H1";
+import SpanComponent from "../Span";
 import UlComponent from "../Ul";
 import H2Component from "../H2";
 import LiComponent from "../Li";
@@ -18,7 +19,16 @@ export default function SectionWhatIOfferComponent(): React.ReactElement {
             <H1Component
                 id={whatIOfferContext["h1"]["id"]}
                 className={whatIOfferContext["h1"]["className"]}>
-                {whatIOfferContext["h1"]["content"]}
+                <SpanComponent
+                    id={whatIOfferContext["aaSpan"]["id"]}
+                    className={whatIOfferContext["aaSpan"]["className"]}>
+                    {whatIOfferContext["aaSpan"]["content"]}
+                </SpanComponent>
+                <SpanComponent
+                    id={whatIOfferContext["abSpan"]["id"]}
+                    className={whatIOfferContext["abSpan"]["className"]}>
+                    {whatIOfferContext["abSpan"]["content"]}
+                </SpanComponent>
             </H1Component>
             <H2Component
                 id={whatIOfferContext["h2"]["id"]}

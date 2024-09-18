@@ -10,6 +10,16 @@ export const WhatIOfferContext: React.Context<{}> = createContext({
         className: "defaultValue",
         content: "defaultValue"
     },
+    aaSpan: {
+        id: "defaultValue",
+        className: "defaultValue",
+        content: "defaultValue"
+    },
+    abSpan: {
+        id: "defaultValue",
+        className: "defaultValue",
+        content: "defaultValue"
+    },
     ul: {
         id: "defaultValue",
         className: "defaultValue"

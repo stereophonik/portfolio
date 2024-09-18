@@ -222,6 +222,16 @@ export default function Page(): React.ReactElement {
             className: profileParsedFromFile["classNameH1"],
             content: profileParsedFromFile["contentH1"]
         },
+        zySpan: {
+            id: profileParsedFromFile["idZySpan"],
+            className: profileParsedFromFile["classNameZySpan"],
+            content: profileParsedFromFile["contentZySpan"]
+        },
+        zzSpan: {
+            id: profileParsedFromFile["idZzSpan"],
+            className: profileParsedFromFile["classNameZzSpan"],
+            content: profileParsedFromFile["contentZzSpan"]
+        },
         aaSpan: {
             id: profileParsedFromFile["idAaSpan"],
             className: profileParsedFromFile["classNameAaSpan"],
@@ -279,6 +289,16 @@ export default function Page(): React.ReactElement {
             id: whatIOfferParsedFromFile["idH1"],
             className: whatIOfferParsedFromFile["classNameH1"],
             content: whatIOfferParsedFromFile["contentH1"]
+        },
+        aaSpan: {
+            id: whatIOfferParsedFromFile["idAaSpan"],
+            className: whatIOfferParsedFromFile["classNameAaSpan"],
+            content: whatIOfferParsedFromFile["contentAaSpan"]
+        },
+        abSpan: {
+            id: whatIOfferParsedFromFile["idAbSpan"],
+            className: whatIOfferParsedFromFile["classNameAbSpan"],
+            content: whatIOfferParsedFromFile["contentAbSpan"]
         },
         ul: {
             id: whatIOfferParsedFromFile["idUl"],
@@ -371,6 +391,16 @@ export default function Page(): React.ReactElement {
             id: letsConnectParsedFromFile["idH1"],
             className: letsConnectParsedFromFile["classNameH1"],
             content: letsConnectParsedFromFile["contentH1"]
+        },
+        aaSpan: {
+            id: letsConnectParsedFromFile["idAaSpan"],
+            className: letsConnectParsedFromFile["classNameAaSpan"],
+            content: letsConnectParsedFromFile["contentAaSpan"]
+        },
+        abSpan: {
+            id: letsConnectParsedFromFile["idAbSpan"],
+            className: letsConnectParsedFromFile["classNameAbSpan"],
+            content: letsConnectParsedFromFile["contentAbSpan"]
         },
         h2: {
             id: letsConnectParsedFromFile["idH2"],

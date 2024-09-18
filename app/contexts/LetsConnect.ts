@@ -10,6 +10,16 @@ export const LetsConnectContext: React.Context<{}> = createContext({
         className: "defaultValue",
         content: "defaultValue"
     },
+    aaSpan: {
+        id: "defaultValue",
+        className: "defaultValue",
+        content: "defaultValue"
+    },
+    abSpan: {
+        id: "defaultValue",
+        className: "defaultValue",
+        content: "defaultValue"
+    },
     h2: {
         id: "defaultValue",
         className: "defaultValue",

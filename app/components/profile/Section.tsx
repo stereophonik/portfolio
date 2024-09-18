@@ -31,7 +31,16 @@ export default function SectionProfileComponent(): React.ReactElement {
                 <H1Component
                     id={profileContext["h1"]["id"]}
                     className={profileContext["h1"]["className"]}>
-                    {profileContext["h1"]["content"]}
+                    <SpanComponent
+                        id={profileContext["zySpan"]["id"]}
+                        className={profileContext["zySpan"]["className"]}>
+                        {profileContext["zySpan"]["content"]}
+                    </SpanComponent>
+                    <SpanComponent
+                        id={profileContext["zzSpan"]["id"]}
+                        className={profileContext["zzSpan"]["className"]}>
+                        {profileContext["zzSpan"]["content"]}
+                    </SpanComponent>
                 </H1Component>
                 <SpanComponent
                     id={profileContext["aaSpan"]["id"]}

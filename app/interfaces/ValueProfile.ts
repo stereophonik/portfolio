@@ -3,6 +3,8 @@ export default interface ValueProfileInterface {
     img: { id: any; className: any; src: any; alt: any; };
     div: { id: any; className: any; };
     h1: { id: any; className: string; content: any; };
+    zySpan: { id: any; className: string; content: any; };
+    zzSpan: { id: any; className: string; content: any; };
     aaSpan: { id: any; className: string; content: any; };
     abSpan: { id: any; className: string; content: any; };
     acSpan: { id: any; className: string; content: any; };

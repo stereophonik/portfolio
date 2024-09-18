@@ -20,6 +20,16 @@ export const ProfileContext: React.Context<{}> = createContext({
         className: "defaultValue",
         content: "defaultValue"
     },
+    zySpan: {
+        id: "defaultValue",
+        className: "defaultValue",
+        content: "defaultValue"
+    },
+    zzSpan: {
+        id: "defaultValue",
+        className: "defaultValue",
+        content: "defaultValue"
+    },
     aaSpan: {
         id: "defaultValue",
         className: "defaultValue",

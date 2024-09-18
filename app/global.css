@@ -150,13 +150,18 @@ a:hover {
     font-size: 1.25rem;
 }
 
-.classNameSpan {
+.className01Span {
+    color: #E8A117;
     padding: 0 1.5vw;
     font-family: "Lexend Deca Regular", sans-serif;
     font-size: 2rem;
 }
 
 .className02Span {}
+
+.className03Span {
+    color: #E8A117;
+}
 
 .classNameDiv {
     padding: 0.75vw 1.5vw;
@@ -213,7 +218,7 @@ a:hover {
         font-size: 1.25rem;
     }
 
-    .classNameSpan {
+    .className01Span {
         font-size: 2.25rem;
     }
 
@@ -265,7 +270,7 @@ a:hover {
         font-size: 1.25rem;
     }
 
-    .classNameSpan {
+    .className01Span {
         font-size: 1.75rem;
     }
 
@@ -317,7 +322,7 @@ a:hover {
         font-size: 1rem;
     }
 
-    .classNameSpan {
+    .className01Span {
         font-size: 1.25rem;
     }
 
@@ -369,7 +374,7 @@ a:hover {
         font-size: 1rem;
     }
 
-    .classNameSpan {
+    .className01Span {
         font-size: 1.25rem;
     }
 
@@ -421,7 +426,7 @@ a:hover {
         font-size: 1rem;
     }
 
-    .classNameSpan {
+    .className01Span {
         font-size: 0.75rem;
     }
 
@@ -473,7 +478,7 @@ a:hover {
         font-size: 0.75rem;
     }
 
-    .classNameSpan {
+    .className01Span {
         font-size: 0.75rem;
     }
 
