@@ -2,7 +2,6 @@
 
 import { useState, useEffect, Dispatch, SetStateAction } from "react";
 
-import MainComponent from "./components/Main";
 import NavTopComponent from "./components/top/Nav";
 import SectionProfileComponent from "./components/profile/Section";
 import SectionWhatIOfferComponent from "./components/whatIOffer/Section";
@@ -512,7 +511,7 @@ export default function Page(): React.ReactElement {
     }
 
     return (
-        <MainComponent>
+        <>
             <TopContext.Provider
                 value={valueTop}>
                 <NavTopComponent />
@@ -541,6 +540,6 @@ export default function Page(): React.ReactElement {
                 value={valueBottom}>
                 <FooterBottomComponent />
             </BottomContext.Provider>
-        </MainComponent>
+        </>
     );
 }
