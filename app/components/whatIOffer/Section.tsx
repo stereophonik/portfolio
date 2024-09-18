@@ -28,15 +28,21 @@ export default function SectionWhatIOfferComponent(): React.ReactElement {
             <UlComponent
                 id={whatIOfferContext["ul"]["id"]}
                 className={whatIOfferContext["ul"]["className"]}>
-                {
-                    whatIOfferContext["lis"].map((li: { [x: string]: any; }) =>
-                        <LiComponent
-                            className={li["className"]}
-                            key={li["key"]}>
-                            {li["content"]}
-                        </LiComponent>
-                    )
-                }
+                <LiComponent
+                    className={whatIOfferContext["lis"][0]["className"]}
+                    key={whatIOfferContext["lis"][0]["key"]}>
+                    {whatIOfferContext["lis"][0]["content"]}
+                </LiComponent>
+                <LiComponent
+                    className={whatIOfferContext["lis"][1]["className"]}
+                    key={whatIOfferContext["lis"][1]["key"]}>
+                    {whatIOfferContext["lis"][1]["content"]}
+                </LiComponent>
+                <LiComponent
+                    className={whatIOfferContext["lis"][2]["className"]}
+                    key={whatIOfferContext["lis"][2]["key"]}>
+                    {whatIOfferContext["lis"][2]["content"]}
+                </LiComponent>
             </UlComponent>
         </SectionComponent>
     );
