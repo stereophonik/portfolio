@@ -60,32 +60,6 @@ export default function SectionHomeComponent(): React.ReactElement {
                         keyValue={homeContext["lis"][0]["key"]}>
                         {homeContext["lis"][0]["content"]}
                     </LiComponent>
-                    <LiComponent
-                        className={homeContext["lis"][1]["className"]}
-                        keyValue={homeContext["lis"][1]["key"]}>
-                        {homeContext["lis"][1]["content"]}
-                    </LiComponent>
-                    <LiComponent
-                        className={homeContext["lis"][2]["className"]}
-                        keyValue={homeContext["lis"][2]["key"]}>
-                        <SpanComponent
-                            id={homeContext["abSpan"]["id"]}
-                            className={homeContext["abSpan"]["className"]}>
-                            {homeContext["abSpan"]["content"]}
-                        </SpanComponent>
-                        <StrongComponent>
-                            <SpanComponent
-                                id={homeContext["acSpan"]["id"]}
-                                className={homeContext["acSpan"]["className"]}>
-                                {homeContext["acSpan"]["content"]}
-                            </SpanComponent>
-                        </StrongComponent>
-                        <SpanComponent
-                            id={homeContext["adSpan"]["id"]}
-                            className={homeContext["adSpan"]["className"]}>
-                            {homeContext["adSpan"]["content"]}
-                        </SpanComponent>
-                    </LiComponent>
                 </UlComponent>
             </DivComponent>
         </SectionComponent>

@@ -4,6 +4,7 @@ import { useState, useEffect, Dispatch, SetStateAction } from "react";
 
 import NavTopComponent from "./components/top/Nav";
 import SectionHomeComponent from "./components/home/Section";
+import SectionAboutMeComponent from "./components/aboutMe/Section";
 import SectionWhatIOfferComponent from "./components/whatIOffer/Section";
 import SectionPlatformComponent from "./components/platform/Section";
 import SectionFrameworkComponent from "./components/framework/Section";
@@ -12,6 +13,7 @@ import FooterBottomComponent from "./components/bottom/Footer";
 
 import { TopContext } from "./contexts/Top";
 import { HomeContext } from "./contexts/Home";
+import { AboutMeContext } from "./contexts/AboutMe";
 import { WhatIOfferContext } from "./contexts/WhatIOffer";
 import { PlatformContext } from "./contexts/Platform";
 import { FrameworkContext } from "./contexts/Framework";
@@ -20,6 +22,7 @@ import { BottomContext } from "./contexts/Bottom";
 
 import ValueTopInterface from "./interfaces/ValueTop";
 import ValueHomeInterface from "./interfaces/ValueHome";
+import ValueAboutMeInterface from "./interfaces/ValueAboutMe";
 import ValueWhatIOfferInterface from "./interfaces/ValueWhatIOffer";
 import ValuePlatformInterface from "./interfaces/ValuePlatform";
 import ValueFrameworkInterface from "./interfaces/ValueFramework";
@@ -29,6 +32,7 @@ import ValueBottomInterface from "./interfaces/ValueBottom";
 export default function Page(): React.ReactElement {
     const [topParsedFromFile, setTopParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [homeParsedFromFile, setHomeParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
+    const [aboutMeParsedFromFile, setAboutMeParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [whatIOfferParsedFromFile, setWhatIOfferParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [platformParsedFromFile, setPlatformParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [frameworkParsedFromFile, setFrameworkParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
@@ -50,6 +54,14 @@ export default function Page(): React.ReactElement {
             .then(fromFile => fromFile.json())
             .then(parsedFromFile => {
                 setHomeParsedFromFile(parsedFromFile);
+            });
+
+        fetch("/serving/file?fileName=aboutMe", {
+            method: "GET"
+        })
+            .then(fromFile => fromFile.json())
+            .then(parsedFromFile => {
+                setAboutMeParsedFromFile(parsedFromFile);
             });
 
         fetch("/serving/file?fileName=whatIOffer", {
@@ -276,6 +288,84 @@ export default function Page(): React.ReactElement {
                 className: homeParsedFromFile["classNameAcLis"],
                 key: homeParsedFromFile["keyAcLis"],
                 content: homeParsedFromFile["contentAcLis"]
+            }
+        ]
+    }
+
+    const valueAboutMe: ValueAboutMeInterface = {
+        section: {
+            id: aboutMeParsedFromFile["idSection"],
+            className: aboutMeParsedFromFile["classNameSection"]
+        },
+        img: {
+            id: aboutMeParsedFromFile["idImg"],
+            className: aboutMeParsedFromFile["classNameImg"],
+            src: aboutMeParsedFromFile["srcImg"],
+            alt: aboutMeParsedFromFile["altImg"]
+        },
+        div: {
+            id: aboutMeParsedFromFile["idDiv"],
+            className: aboutMeParsedFromFile["classNameDiv"]
+        },
+        h1: {
+            id: aboutMeParsedFromFile["idH1"],
+            className: aboutMeParsedFromFile["classNameH1"],
+            content: aboutMeParsedFromFile["contentH1"]
+        },
+        zySpan: {
+            id: aboutMeParsedFromFile["idZySpan"],
+            className: aboutMeParsedFromFile["classNameZySpan"],
+            content: aboutMeParsedFromFile["contentZySpan"]
+        },
+        zzSpan: {
+            id: aboutMeParsedFromFile["idZzSpan"],
+            className: aboutMeParsedFromFile["classNameZzSpan"],
+            content: aboutMeParsedFromFile["contentZzSpan"]
+        },
+        aaSpan: {
+            id: aboutMeParsedFromFile["idAaSpan"],
+            className: aboutMeParsedFromFile["classNameAaSpan"],
+            content: aboutMeParsedFromFile["contentAaSpan"]
+        },
+        abSpan: {
+            id: aboutMeParsedFromFile["idAbSpan"],
+            className: aboutMeParsedFromFile["classNameAbSpan"],
+            content: aboutMeParsedFromFile["contentAbSpan"]
+        },
+        acSpan: {
+            id: aboutMeParsedFromFile["idAcSpan"],
+            className: aboutMeParsedFromFile["classNameAcSpan"],
+            content: aboutMeParsedFromFile["contentAcSpan"]
+        },
+        adSpan: {
+            id: aboutMeParsedFromFile["idAdSpan"],
+            className: aboutMeParsedFromFile["classNameAdSpan"],
+            content: aboutMeParsedFromFile["contentAdSpan"]
+        },
+        h2: {
+            id: aboutMeParsedFromFile["idH2"],
+            className: aboutMeParsedFromFile["classNameH2"],
+            content: aboutMeParsedFromFile["contentH2"]
+        },
+        ul: {
+            id: aboutMeParsedFromFile["idUl"],
+            className: aboutMeParsedFromFile["classNameUl"]
+        },
+        lis: [
+            {
+                className: aboutMeParsedFromFile["classNameAaLis"],
+                key: aboutMeParsedFromFile["keyAaLis"],
+                content: aboutMeParsedFromFile["contentAaLis"]
+            },
+            {
+                className: aboutMeParsedFromFile["classNameAbLis"],
+                key: aboutMeParsedFromFile["keyAbLis"],
+                content: aboutMeParsedFromFile["contentAbLis"]
+            },
+            {
+                className: aboutMeParsedFromFile["classNameAcLis"],
+                key: aboutMeParsedFromFile["keyAcLis"],
+                content: aboutMeParsedFromFile["contentAcLis"]
             }
         ]
     }
@@ -550,6 +640,10 @@ export default function Page(): React.ReactElement {
                 value={valueHome}>
                 <SectionHomeComponent />
             </HomeContext.Provider>
+            <AboutMeContext.Provider
+                value={valueAboutMe}>
+                <SectionAboutMeComponent />
+            </AboutMeContext.Provider>
             <WhatIOfferContext.Provider
                 value={valueWhatIOffer}>
                 <SectionWhatIOfferComponent />
