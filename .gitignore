@@ -3,6 +3,7 @@ node_modules
 .idea
 .swc
 coverage
+temp
 /test-results/
 /playwright-report/
 /blob-report/
