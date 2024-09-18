@@ -3,7 +3,7 @@
 import { useState, useEffect, Dispatch, SetStateAction } from "react";
 
 import NavTopComponent from "./components/top/Nav";
-import SectionProfileComponent from "./components/profile/Section";
+import SectionHomeComponent from "./components/home/Section";
 import SectionWhatIOfferComponent from "./components/whatIOffer/Section";
 import SectionPlatformComponent from "./components/platform/Section";
 import SectionFrameworkComponent from "./components/framework/Section";
@@ -11,7 +11,7 @@ import SectionLetsConnectComponent from "./components/letsConnect/Section";
 import FooterBottomComponent from "./components/bottom/Footer";
 
 import { TopContext } from "./contexts/Top";
-import { ProfileContext } from "./contexts/Profile";
+import { HomeContext } from "./contexts/Home";
 import { WhatIOfferContext } from "./contexts/WhatIOffer";
 import { PlatformContext } from "./contexts/Platform";
 import { FrameworkContext } from "./contexts/Framework";
@@ -19,7 +19,7 @@ import { LetsConnectContext } from "./contexts/LetsConnect";
 import { BottomContext } from "./contexts/Bottom";
 
 import ValueTopInterface from "./interfaces/ValueTop";
-import ValueProfileInterface from "./interfaces/ValueProfile";
+import ValueHomeInterface from "./interfaces/ValueHome";
 import ValueWhatIOfferInterface from "./interfaces/ValueWhatIOffer";
 import ValuePlatformInterface from "./interfaces/ValuePlatform";
 import ValueFrameworkInterface from "./interfaces/ValueFramework";
@@ -28,7 +28,7 @@ import ValueBottomInterface from "./interfaces/ValueBottom";
 
 export default function Page(): React.ReactElement {
     const [topParsedFromFile, setTopParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
-    const [profileParsedFromFile, setProfileParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
+    const [homeParsedFromFile, setHomeParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [whatIOfferParsedFromFile, setWhatIOfferParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [platformParsedFromFile, setPlatformParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [frameworkParsedFromFile, setFrameworkParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
@@ -44,12 +44,12 @@ export default function Page(): React.ReactElement {
                 setTopParsedFromFile(parsedFromFile);
             });
 
-        fetch("/serving/file?fileName=profile", {
+        fetch("/serving/file?fileName=home", {
             method: "GET"
         })
             .then(fromFile => fromFile.json())
             .then(parsedFromFile => {
-                setProfileParsedFromFile(parsedFromFile);
+                setHomeParsedFromFile(parsedFromFile);
             });
 
         fetch("/serving/file?fileName=whatIOffer", {
@@ -202,80 +202,80 @@ export default function Page(): React.ReactElement {
         ]
     }
 
-    const valueProfile: ValueProfileInterface = {
+    const valueHome: ValueHomeInterface = {
         section: {
-            id: profileParsedFromFile["idSection"],
-            className: profileParsedFromFile["classNameSection"]
+            id: homeParsedFromFile["idSection"],
+            className: homeParsedFromFile["classNameSection"]
         },
         img: {
-            id: profileParsedFromFile["idImg"],
-            className: profileParsedFromFile["classNameImg"],
-            src: profileParsedFromFile["srcImg"],
-            alt: profileParsedFromFile["altImg"]
+            id: homeParsedFromFile["idImg"],
+            className: homeParsedFromFile["classNameImg"],
+            src: homeParsedFromFile["srcImg"],
+            alt: homeParsedFromFile["altImg"]
         },
         div: {
-            id: profileParsedFromFile["idDiv"],
-            className: profileParsedFromFile["classNameDiv"]
+            id: homeParsedFromFile["idDiv"],
+            className: homeParsedFromFile["classNameDiv"]
         },
         h1: {
-            id: profileParsedFromFile["idH1"],
-            className: profileParsedFromFile["classNameH1"],
-            content: profileParsedFromFile["contentH1"]
+            id: homeParsedFromFile["idH1"],
+            className: homeParsedFromFile["classNameH1"],
+            content: homeParsedFromFile["contentH1"]
         },
         zySpan: {
-            id: profileParsedFromFile["idZySpan"],
-            className: profileParsedFromFile["classNameZySpan"],
-            content: profileParsedFromFile["contentZySpan"]
+            id: homeParsedFromFile["idZySpan"],
+            className: homeParsedFromFile["classNameZySpan"],
+            content: homeParsedFromFile["contentZySpan"]
         },
         zzSpan: {
-            id: profileParsedFromFile["idZzSpan"],
-            className: profileParsedFromFile["classNameZzSpan"],
-            content: profileParsedFromFile["contentZzSpan"]
+            id: homeParsedFromFile["idZzSpan"],
+            className: homeParsedFromFile["classNameZzSpan"],
+            content: homeParsedFromFile["contentZzSpan"]
         },
         aaSpan: {
-            id: profileParsedFromFile["idAaSpan"],
-            className: profileParsedFromFile["classNameAaSpan"],
-            content: profileParsedFromFile["contentAaSpan"]
+            id: homeParsedFromFile["idAaSpan"],
+            className: homeParsedFromFile["classNameAaSpan"],
+            content: homeParsedFromFile["contentAaSpan"]
         },
         abSpan: {
-            id: profileParsedFromFile["idAbSpan"],
-            className: profileParsedFromFile["classNameAbSpan"],
-            content: profileParsedFromFile["contentAbSpan"]
+            id: homeParsedFromFile["idAbSpan"],
+            className: homeParsedFromFile["classNameAbSpan"],
+            content: homeParsedFromFile["contentAbSpan"]
         },
         acSpan: {
-            id: profileParsedFromFile["idAcSpan"],
-            className: profileParsedFromFile["classNameAcSpan"],
-            content: profileParsedFromFile["contentAcSpan"]
+            id: homeParsedFromFile["idAcSpan"],
+            className: homeParsedFromFile["classNameAcSpan"],
+            content: homeParsedFromFile["contentAcSpan"]
         },
         adSpan: {
-            id: profileParsedFromFile["idAdSpan"],
-            className: profileParsedFromFile["classNameAdSpan"],
-            content: profileParsedFromFile["contentAdSpan"]
+            id: homeParsedFromFile["idAdSpan"],
+            className: homeParsedFromFile["classNameAdSpan"],
+            content: homeParsedFromFile["contentAdSpan"]
         },
         h2: {
-            id: profileParsedFromFile["idH2"],
-            className: profileParsedFromFile["classNameH2"],
-            content: profileParsedFromFile["contentH2"]
+            id: homeParsedFromFile["idH2"],
+            className: homeParsedFromFile["classNameH2"],
+            content: homeParsedFromFile["contentH2"]
         },
         ul: {
-            id: profileParsedFromFile["idUl"],
-            className: profileParsedFromFile["classNameUl"]
+            id: homeParsedFromFile["idUl"],
+            className: homeParsedFromFile["classNameUl"]
         },
         lis: [
             {
-                className: profileParsedFromFile["classNameAaLis"],
-                key: profileParsedFromFile["keyAaLis"],
-                content: profileParsedFromFile["contentAaLis"]
+                className: homeParsedFromFile["classNameAaLis"],
+                key: homeParsedFromFile["keyAaLis"],
+                content: homeParsedFromFile["contentAaLis"]
             },
             {
-                className: profileParsedFromFile["classNameAbLis"],
-                key: profileParsedFromFile["keyAbLis"],
-                content: profileParsedFromFile["contentAbLis"]
+                className: homeParsedFromFile["classNameAbLis"],
+                key: homeParsedFromFile["keyAbLis"],
+                content: homeParsedFromFile["contentAbLis"]
             },
             {
-                className: profileParsedFromFile["classNameAcLis"],
-                key: profileParsedFromFile["keyAcLis"],
-                content: profileParsedFromFile["contentAcLis"]
+                className: homeParsedFromFile["classNameAcLis"],
+                key: homeParsedFromFile["keyAcLis"],
+                content: homeParsedFromFile["contentAcLis"]
             }
         ]
     }
@@ -546,10 +546,10 @@ export default function Page(): React.ReactElement {
                 value={valueTop}>
                 <NavTopComponent />
             </TopContext.Provider>
-            <ProfileContext.Provider
-                value={valueProfile}>
-                <SectionProfileComponent />
-            </ProfileContext.Provider>
+            <HomeContext.Provider
+                value={valueHome}>
+                <SectionHomeComponent />
+            </HomeContext.Provider>
             <WhatIOfferContext.Provider
                 value={valueWhatIOffer}>
                 <SectionWhatIOfferComponent />

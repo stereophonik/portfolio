@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-export const ProfileContext: React.Context<{}> = createContext({
+export const HomeContext: React.Context<{}> = createContext({
     section: {
         id: "defaultValue",
         className: "defaultValue"

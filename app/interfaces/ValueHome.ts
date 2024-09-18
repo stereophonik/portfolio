@@ -1,4 +1,4 @@
-export default interface ValueProfileInterface {
+export default interface ValueHomeInterface {
     section: { id: any; className: any; };
     img: { id: any; className: any; src: any; alt: any; };
     div: { id: any; className: any; };
