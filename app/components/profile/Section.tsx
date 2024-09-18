@@ -48,17 +48,17 @@ export default function SectionProfileComponent(): React.ReactElement {
                     className={profileContext["ul"]["className"]}>
                     <LiComponent
                         className={profileContext["lis"][0]["className"]}
-                        key={profileContext["lis"][0]["key"]}>
+                        keyValue={profileContext["lis"][0]["key"]}>
                         {profileContext["lis"][0]["content"]}
                     </LiComponent>
                     <LiComponent
                         className={profileContext["lis"][1]["className"]}
-                        key={profileContext["lis"][1]["key"]}>
+                        keyValue={profileContext["lis"][1]["key"]}>
                         {profileContext["lis"][1]["content"]}
                     </LiComponent>
                     <LiComponent
                         className={profileContext["lis"][2]["className"]}
-                        key={profileContext["lis"][2]["key"]}>
+                        keyValue={profileContext["lis"][2]["key"]}>
                         <SpanComponent
                             id={profileContext["abSpan"]["id"]}
                             className={profileContext["abSpan"]["className"]}>

@@ -21,7 +21,7 @@ export default function FooterBottomComponent(): React.ReactElement {
                 className={bottomContext["ul"]["className"]}>
                 <LiComponent
                     className={bottomContext["lis"][0]["className"]}
-                    key={bottomContext["lis"][0]["key"]}>
+                    keyValue={bottomContext["lis"][0]["key"]}>
                     <AComponent
                         href={bottomContext["as"][0]["href"]}
                         target={bottomContext["as"][0]["target"]}>
@@ -30,7 +30,7 @@ export default function FooterBottomComponent(): React.ReactElement {
                 </LiComponent>
                 <LiComponent
                     className={bottomContext["lis"][1]["className"]}
-                    key={bottomContext["lis"][1]["key"]}>
+                    keyValue={bottomContext["lis"][1]["key"]}>
                     <AComponent
                         href={bottomContext["as"][1]["href"]}
                         target={bottomContext["as"][1]["target"]}>
@@ -39,7 +39,7 @@ export default function FooterBottomComponent(): React.ReactElement {
                 </LiComponent>
                 <LiComponent
                     className={bottomContext["lis"][2]["className"]}
-                    key={bottomContext["lis"][2]["key"]}>
+                    keyValue={bottomContext["lis"][2]["key"]}>
                     <AComponent
                         href={bottomContext["as"][2]["href"]}
                         target={bottomContext["as"][2]["target"]}>
@@ -48,7 +48,7 @@ export default function FooterBottomComponent(): React.ReactElement {
                 </LiComponent>
                 <LiComponent
                     className={bottomContext["lis"][3]["className"]}
-                    key={bottomContext["lis"][3]["key"]}>
+                    keyValue={bottomContext["lis"][3]["key"]}>
                     <AComponent
                         href={bottomContext["as"][3]["href"]}
                         target={bottomContext["as"][3]["target"]}>
@@ -57,7 +57,7 @@ export default function FooterBottomComponent(): React.ReactElement {
                 </LiComponent>
                 <LiComponent
                     className={bottomContext["lis"][4]["className"]}
-                    key={bottomContext["lis"][4]["key"]}>
+                    keyValue={bottomContext["lis"][4]["key"]}>
                     <AComponent
                         href={bottomContext["as"][4]["href"]}
                         target={bottomContext["as"][4]["target"]}>
@@ -66,7 +66,7 @@ export default function FooterBottomComponent(): React.ReactElement {
                 </LiComponent>
                 <LiComponent
                     className={bottomContext["lis"][5]["className"]}
-                    key={bottomContext["lis"][5]["key"]}>
+                    keyValue={bottomContext["lis"][5]["key"]}>
                     <AComponent
                         href={bottomContext["as"][5]["href"]}
                         target={bottomContext["as"][5]["target"]}>
@@ -75,7 +75,7 @@ export default function FooterBottomComponent(): React.ReactElement {
                 </LiComponent>
                 <LiComponent
                     className={bottomContext["lis"][6]["className"]}
-                    key={bottomContext["lis"][6]["key"]}>
+                    keyValue={bottomContext["lis"][6]["key"]}>
                     <AComponent
                         href={bottomContext["as"][6]["href"]}
                         target={bottomContext["as"][6]["target"]}>
@@ -88,7 +88,7 @@ export default function FooterBottomComponent(): React.ReactElement {
                 </LiComponent>
                 <LiComponent
                     className={bottomContext["lis"][7]["className"]}
-                    key={bottomContext["lis"][7]["key"]}>
+                    keyValue={bottomContext["lis"][7]["key"]}>
                     <AComponent
                         href={bottomContext["as"][7]["href"]}
                         target={bottomContext["as"][7]["target"]}>
