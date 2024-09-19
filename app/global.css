@@ -61,7 +61,7 @@ a:hover {
     width: 100vw;
     background-color: #113826;
     color: #6B7280;
-    text-align: left;
+    text-align: center;
 }
 
 .className03Section {
@@ -138,7 +138,7 @@ a:hover {
 
 .classNameHorizontalLi {
     display: inline-block;
-    padding: 1vw 2.5vw;
+    padding: 1vw 1.5vw;
     font-family: "Lexend Deca Regular", sans-serif;
     font-size: 1.25rem;
 }
@@ -165,7 +165,7 @@ a:hover {
 }
 
 .className03VerticalLi {
-    display: block;
+    display: inline-block;
     padding: 0.5vw;
     font-family: "Lexend Deca Regular", sans-serif;
     font-size: 1.25rem;

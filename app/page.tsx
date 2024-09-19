@@ -144,16 +144,6 @@ export default function Page(): React.ReactElement {
                 className: topParsedFromFile["classNameAfLis"],
                 key: topParsedFromFile["keyAfLis"],
                 content: topParsedFromFile["contentAfLis"]
-            },
-            {
-                className: topParsedFromFile["classNameAgLis"],
-                key: topParsedFromFile["keyAgLis"],
-                content: topParsedFromFile["contentAgLis"]
-            },
-            {
-                className: topParsedFromFile["classNameAhLis"],
-                key: topParsedFromFile["keyAhLis"],
-                content: topParsedFromFile["contentAhLis"]
             }
         ],
         as: [
@@ -186,30 +176,6 @@ export default function Page(): React.ReactElement {
                 href: `${topParsedFromFile["hrefAfAs"]}`,
                 target: topParsedFromFile["targetAfAs"],
                 content: topParsedFromFile["contentAfAs"]
-            },
-            {
-                href: `${topParsedFromFile["hrefAgAs"]}`,
-                target: topParsedFromFile["targetAgAs"],
-                content: topParsedFromFile["contentAgAs"]
-            },
-            {
-                href: `${topParsedFromFile["hrefAhAs"]}`,
-                target: topParsedFromFile["targetAhAs"],
-                content: topParsedFromFile["contentAhAs"]
-            }
-        ],
-        imgs: [
-            {
-                id: topParsedFromFile["idAaImgs"],
-                className: topParsedFromFile["classNameAaImgs"],
-                src: topParsedFromFile["srcAaImgs"],
-                alt: topParsedFromFile["altAaImgs"]
-            },
-            {
-                id: topParsedFromFile["idAbImgs"],
-                className: topParsedFromFile["classNameAbImgs"],
-                src: topParsedFromFile["srcAbImgs"],
-                alt: topParsedFromFile["altAbImgs"]
             }
         ]
     }
@@ -507,36 +473,6 @@ export default function Page(): React.ReactElement {
                 className: bottomParsedFromFile["classNameAbLis"],
                 key: bottomParsedFromFile["keyAbLis"],
                 content: bottomParsedFromFile["contentAbLis"]
-            },
-            {
-                className: bottomParsedFromFile["classNameAcLis"],
-                key: bottomParsedFromFile["keyAcLis"],
-                content: bottomParsedFromFile["contentAcLis"]
-            },
-            {
-                className: bottomParsedFromFile["classNameAdLis"],
-                key: bottomParsedFromFile["keyAdLis"],
-                content: bottomParsedFromFile["contentAdLis"]
-            },
-            {
-                className: bottomParsedFromFile["classNameAeLis"],
-                key: bottomParsedFromFile["keyAeLis"],
-                content: bottomParsedFromFile["contentAeLis"]
-            },
-            {
-                className: bottomParsedFromFile["classNameAfLis"],
-                key: bottomParsedFromFile["keyAfLis"],
-                content: bottomParsedFromFile["contentAfLis"]
-            },
-            {
-                className: bottomParsedFromFile["classNameAgLis"],
-                key: bottomParsedFromFile["keyAgLis"],
-                content: bottomParsedFromFile["contentAgLis"]
-            },
-            {
-                className: bottomParsedFromFile["classNameAhLis"],
-                key: bottomParsedFromFile["keyAhLis"],
-                content: bottomParsedFromFile["contentAhLis"]
             }
         ],
         as: [
@@ -549,36 +485,6 @@ export default function Page(): React.ReactElement {
                 href: `${bottomParsedFromFile["hrefAbAs"]}`,
                 target: bottomParsedFromFile["targetAbAs"],
                 content: bottomParsedFromFile["contentAbAs"]
-            },
-            {
-                href: `${bottomParsedFromFile["hrefAcAs"]}`,
-                target: bottomParsedFromFile["targetAcAs"],
-                content: bottomParsedFromFile["contentAcAs"]
-            },
-            {
-                href: `${bottomParsedFromFile["hrefAdAs"]}`,
-                target: bottomParsedFromFile["targetAdAs"],
-                content: bottomParsedFromFile["contentAdAs"]
-            },
-            {
-                href: `${bottomParsedFromFile["hrefAeAs"]}`,
-                target: bottomParsedFromFile["targetAeAs"],
-                content: bottomParsedFromFile["contentAeAs"]
-            },
-            {
-                href: `${bottomParsedFromFile["hrefAfAs"]}`,
-                target: bottomParsedFromFile["targetAfAs"],
-                content: bottomParsedFromFile["contentAfAs"]
-            },
-            {
-                href: `${bottomParsedFromFile["hrefAgAs"]}`,
-                target: bottomParsedFromFile["targetAgAs"],
-                content: bottomParsedFromFile["contentAgAs"]
-            },
-            {
-                href: `${bottomParsedFromFile["hrefAhAs"]}`,
-                target: bottomParsedFromFile["targetAhAs"],
-                content: bottomParsedFromFile["contentAhAs"]
             }
         ],
         imgs: [

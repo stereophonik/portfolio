@@ -25,60 +25,6 @@ export default function FooterBottomComponent(): React.ReactElement {
                     <AComponent
                         href={bottomContext["as"][0]["href"]}
                         target={bottomContext["as"][0]["target"]}>
-                        {bottomContext["as"][0]["content"]}
-                    </AComponent>
-                </LiComponent>
-                <LiComponent
-                    className={bottomContext["lis"][1]["className"]}
-                    keyValue={bottomContext["lis"][1]["key"]}>
-                    <AComponent
-                        href={bottomContext["as"][1]["href"]}
-                        target={bottomContext["as"][1]["target"]}>
-                        {bottomContext["as"][1]["content"]}
-                    </AComponent>
-                </LiComponent>
-                <LiComponent
-                    className={bottomContext["lis"][2]["className"]}
-                    keyValue={bottomContext["lis"][2]["key"]}>
-                    <AComponent
-                        href={bottomContext["as"][2]["href"]}
-                        target={bottomContext["as"][2]["target"]}>
-                        {bottomContext["as"][2]["content"]}
-                    </AComponent>
-                </LiComponent>
-                <LiComponent
-                    className={bottomContext["lis"][3]["className"]}
-                    keyValue={bottomContext["lis"][3]["key"]}>
-                    <AComponent
-                        href={bottomContext["as"][3]["href"]}
-                        target={bottomContext["as"][3]["target"]}>
-                        {bottomContext["as"][3]["content"]}
-                    </AComponent>
-                </LiComponent>
-                <LiComponent
-                    className={bottomContext["lis"][4]["className"]}
-                    keyValue={bottomContext["lis"][4]["key"]}>
-                    <AComponent
-                        href={bottomContext["as"][4]["href"]}
-                        target={bottomContext["as"][4]["target"]}>
-                        {bottomContext["as"][4]["content"]}
-                    </AComponent>
-                </LiComponent>
-                <LiComponent
-                    className={bottomContext["lis"][5]["className"]}
-                    keyValue={bottomContext["lis"][5]["key"]}>
-                    <AComponent
-                        href={bottomContext["as"][5]["href"]}
-                        target={bottomContext["as"][5]["target"]}>
-                        {bottomContext["as"][5]["content"]}
-                    </AComponent>
-                </LiComponent>
-                <LiComponent
-                    className={bottomContext["lis"][6]["className"]}
-                    keyValue={bottomContext["lis"][6]["key"]}>
-                    <AComponent
-                        href={bottomContext["as"][6]["href"]}
-                        target={bottomContext["as"][6]["target"]}>
                         <ImgComponent
                             id={bottomContext["imgs"][0]["id"]}
                             className={bottomContext["imgs"][0]["className"]}
@@ -87,11 +33,11 @@ export default function FooterBottomComponent(): React.ReactElement {
                     </AComponent>
                 </LiComponent>
                 <LiComponent
-                    className={bottomContext["lis"][7]["className"]}
-                    keyValue={bottomContext["lis"][7]["key"]}>
+                    className={bottomContext["lis"][1]["className"]}
+                    keyValue={bottomContext["lis"][1]["key"]}>
                     <AComponent
-                        href={bottomContext["as"][7]["href"]}
-                        target={bottomContext["as"][7]["target"]}>
+                        href={bottomContext["as"][1]["href"]}
+                        target={bottomContext["as"][1]["target"]}>
                         <ImgComponent
                             id={bottomContext["imgs"][1]["id"]}
                             className={bottomContext["imgs"][1]["className"]}

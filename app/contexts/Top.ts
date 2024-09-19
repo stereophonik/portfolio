@@ -39,16 +39,6 @@ export const TopContext: React.Context<{}> = createContext({
             className: "defaultValue",
             key: "defaultValue",
             content: "defaultValue"
-        },
-        {
-            className: "defaultValue",
-            key: "defaultValue",
-            content: "defaultValue"
-        },
-        {
-            className: "defaultValue",
-            key: "defaultValue",
-            content: "defaultValue"
         }
     ],
     as: [
@@ -75,28 +65,6 @@ export const TopContext: React.Context<{}> = createContext({
         {
             href: "defaultValue",
             content: "defaultValue"
-        },
-        {
-            href: "defaultValue",
-            content: "defaultValue"
-        },
-        {
-            href: "defaultValue",
-            content: "defaultValue"
-        }
-    ],
-    imgs: [
-        {
-            id: "defaultValue",
-            className: "defaultValue",
-            src: "defaultValue",
-            alt: "defaultValue"
-        },
-        {
-            id: "defaultValue",
-            className: "defaultValue",
-            src: "defaultValue",
-            alt: "defaultValue"
         }
     ]
 });

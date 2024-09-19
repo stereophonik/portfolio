@@ -72,32 +72,6 @@ export default function NavTopComponent(): React.ReactElement {
                         {topContext["as"][5]["content"]}
                     </AComponent>
                 </LiComponent>
-                <LiComponent
-                    className={topContext["lis"][6]["className"]}
-                    keyValue={topContext["lis"][6]["key"]}>
-                    <AComponent
-                        href={topContext["as"][6]["href"]}
-                        target={topContext["as"][6]["target"]}>
-                        <ImgComponent
-                            id={topContext["imgs"][0]["id"]}
-                            className={topContext["imgs"][0]["className"]}
-                            src={topContext["imgs"][0]["src"]}
-                            alt={topContext["imgs"][0]["alt"]} />
-                    </AComponent>
-                </LiComponent>
-                <LiComponent
-                    className={topContext["lis"][7]["className"]}
-                    keyValue={topContext["lis"][7]["key"]}>
-                    <AComponent
-                        href={topContext["as"][7]["href"]}
-                        target={topContext["as"][7]["target"]}>
-                        <ImgComponent
-                            id={topContext["imgs"][1]["id"]}
-                            className={topContext["imgs"][1]["className"]}
-                            src={topContext["imgs"][1]["src"]}
-                            alt={topContext["imgs"][1]["alt"]} />
-                    </AComponent>
-                </LiComponent>
             </UlComponent>
         </NavComponent>
     );
