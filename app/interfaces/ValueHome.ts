@@ -11,4 +11,6 @@ export default interface ValueHomeInterface {
     adSpan: { id: any; className: string; content: any; };
     aaH2: { id: any; className: string; content: any; };
     abH2: { id: any; className: string; content: any; };
+    button: { id: any; className: string; content: any; };
+    openWindow: { url: any; target: any; };
 }

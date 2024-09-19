@@ -41,5 +41,10 @@
     "contentAbLis": "I have more than 6 years of experience with quality testing and I'm now transitioning to front-end development, so I bring a unique perspective to streamline your workflows and enhance your web applications.",
     "keyAcLis": 3,
     "classNameAcLis": "className02VerticalLi",
-    "contentAcLis": ""
+    "contentAcLis": "",
+    "idButton": "idButtonAboutMe",
+    "classNameButton": "classNameButton",
+    "contentButton": "Contact me",
+    "urlOpenWindow": "mailto:nikolai00reyes@outlook.ph",
+    "targetOpenWindow": "_blank"
 }

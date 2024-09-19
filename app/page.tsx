@@ -239,6 +239,15 @@ export default function Page(): React.ReactElement {
             id: homeParsedFromFile["idAbH2"],
             className: homeParsedFromFile["classNameAbH2"],
             content: homeParsedFromFile["contentAbH2"]
+        },
+        button: {
+            id: homeParsedFromFile["idButton"],
+            className: homeParsedFromFile["classNameButton"],
+            content: homeParsedFromFile["contentButton"]
+        },
+        openWindow: {
+            url: homeParsedFromFile["urlOpenWindow"],
+            target: homeParsedFromFile["targetOpenWindow"]
         }
     }
 
@@ -317,7 +326,16 @@ export default function Page(): React.ReactElement {
                 key: aboutMeParsedFromFile["keyAcLis"],
                 content: aboutMeParsedFromFile["contentAcLis"]
             }
-        ]
+        ],
+        button: {
+            id: aboutMeParsedFromFile["idButton"],
+            className: aboutMeParsedFromFile["classNameButton"],
+            content: aboutMeParsedFromFile["contentButton"]
+        },
+        openWindow: {
+            url: aboutMeParsedFromFile["urlOpenWindow"],
+            target: aboutMeParsedFromFile["targetOpenWindow"]
+        }
     }
 
     const valueWhatIOffer: ValueWhatIOfferInterface = {

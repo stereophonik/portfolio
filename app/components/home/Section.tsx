@@ -6,6 +6,7 @@ import DivComponent from "../Div";
 import H1Component from "../H1";
 import SpanComponent from "../Span";
 import H2Component from "../H2";
+import ButtonComponent from "../Button";
 
 import { HomeContext } from "../../contexts/Home";
 
@@ -54,6 +55,14 @@ export default function SectionHomeComponent(): React.ReactElement {
                     className={homeContext["abH2"]["className"]}>
                     {homeContext["abH2"]["content"]}
                 </H2Component>
+                <ButtonComponent
+                    id={homeContext["button"]["id"]}
+                    className={homeContext["button"]["className"]}
+                    onClick={() => window.open(
+                        homeContext["openWindow"]["url"],
+                        homeContext["openWindow"]["target"])}>
+                    {homeContext["button"]["content"]}
+                </ButtonComponent>
             </DivComponent>
         </SectionComponent>
     );

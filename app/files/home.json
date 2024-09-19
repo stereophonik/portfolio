@@ -33,5 +33,10 @@
     "contentAaH2": "Hello! Are you looking to create or update your business website?",
     "idAbH2": "idAbH2Home",
     "classNameAbH2": "className02H2",
-    "contentAbH2": "If yes, I'm here to help!"
+    "contentAbH2": "If yes, I'm here to help!",
+    "idButton": "idButtonHome",
+    "classNameButton": "classNameButton",
+    "contentButton": "Contact me",
+    "urlOpenWindow": "mailto:nikolai00reyes@outlook.ph",
+    "targetOpenWindow": "_blank"
 }

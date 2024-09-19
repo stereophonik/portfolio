@@ -12,4 +12,6 @@ export default interface ValueAboutMeInterface {
     h2: { id: any; className: string; content: any; };
     ul: { id: any; className: any; };
     lis: { className: any; key: any; content: any; }[];
+    button: { id: any; className: string; content: any; };
+    openWindow: { url: any; target: any; };
 }

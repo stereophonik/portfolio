@@ -59,5 +59,14 @@ export const HomeContext: React.Context<{}> = createContext({
         id: "defaultValue",
         className: "defaultValue",
         content: "defaultValue"
+    },
+    button: {
+        id: "defaultValue",
+        className: "defaultValue",
+        content: "defaultValue"
+    },
+    openWindow: {
+        url: "defaultValue",
+        target: "defaultValue"
     }
 });

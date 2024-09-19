@@ -75,5 +75,14 @@ export const AboutMeContext: React.Context<{}> = createContext({
             key: "defaultValue",
             content: "defaultValue"
         }
-    ]
+    ],
+    button: {
+        id: "defaultValue",
+        className: "defaultValue",
+        content: "defaultValue"
+    },
+    openWindow: {
+        url: "defaultValue",
+        target: "defaultValue"
+    }
 });

@@ -13,11 +13,6 @@
     padding: 0;
 }
 
-main {
-    background-color: black;
-    color: white;
-}
-
 a {
     color: #9CA3AF;
     text-decoration: none;
@@ -199,6 +194,15 @@ a:hover {
 }
 
 .className03Div {}
+
+.classNameButton {
+    margin: 1.5vw;
+    padding: 0.75vw 1.5vw;
+    font-family: "Lexend Deca Regular", sans-serif;
+    font-size: 2rem;
+    border-radius: 10px;
+    background-color: #E8A117;
+}
 
 @media screen and (max-width: 1080px) {
     .classNameImg {

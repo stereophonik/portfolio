@@ -6,72 +6,80 @@ import DivComponent from "../Div";
 import H1Component from "../H1";
 import SpanComponent from "../Span";
 import StrongComponent from "../Strong";
-import H2Component from "../H2";
 import UlComponent from "../Ul";
 import LiComponent from "../Li";
+import ButtonComponent from "../Button";
 
 import { AboutMeContext } from "../../contexts/AboutMe";
 
 export default function SectionAboutMeComponent(): React.ReactElement {
-    const homeContext: {} = useContext(AboutMeContext);
+    const aboutMeContext: {} = useContext(AboutMeContext);
 
     return (
         <SectionComponent
-            id={homeContext["section"]["id"]}
-            className={homeContext["section"]["className"]}>
+            id={aboutMeContext["section"]["id"]}
+            className={aboutMeContext["section"]["className"]}>
             <DivComponent
-                id={homeContext["div"]["id"]}
-                className={homeContext["div"]["className"]}>
+                id={aboutMeContext["div"]["id"]}
+                className={aboutMeContext["div"]["className"]}>
                 <H1Component
-                    id={homeContext["h1"]["id"]}
-                    className={homeContext["h1"]["className"]}>
+                    id={aboutMeContext["h1"]["id"]}
+                    className={aboutMeContext["h1"]["className"]}>
                     <SpanComponent
-                        id={homeContext["zySpan"]["id"]}
-                        className={homeContext["zySpan"]["className"]}>
-                        {homeContext["zySpan"]["content"]}
+                        id={aboutMeContext["zySpan"]["id"]}
+                        className={aboutMeContext["zySpan"]["className"]}>
+                        {aboutMeContext["zySpan"]["content"]}
                     </SpanComponent>
                     <SpanComponent
-                        id={homeContext["zzSpan"]["id"]}
-                        className={homeContext["zzSpan"]["className"]}>
-                        {homeContext["zzSpan"]["content"]}
+                        id={aboutMeContext["zzSpan"]["id"]}
+                        className={aboutMeContext["zzSpan"]["className"]}>
+                        {aboutMeContext["zzSpan"]["content"]}
                     </SpanComponent>
                 </H1Component>
                 <UlComponent
-                    id={homeContext["ul"]["id"]}
-                    className={homeContext["ul"]["className"]}>
+                    id={aboutMeContext["ul"]["id"]}
+                    className={aboutMeContext["ul"]["className"]}>
                     <LiComponent
-                        className={homeContext["lis"][1]["className"]}
-                        keyValue={homeContext["lis"][1]["key"]}>
-                        {homeContext["lis"][1]["content"]}
+                        className={aboutMeContext["lis"][1]["className"]}
+                        keyValue={aboutMeContext["lis"][1]["key"]}>
+                        {aboutMeContext["lis"][1]["content"]}
                     </LiComponent>
                     <LiComponent
-                        className={homeContext["lis"][2]["className"]}
-                        keyValue={homeContext["lis"][2]["key"]}>
+                        className={aboutMeContext["lis"][2]["className"]}
+                        keyValue={aboutMeContext["lis"][2]["key"]}>
                         <SpanComponent
-                            id={homeContext["abSpan"]["id"]}
-                            className={homeContext["abSpan"]["className"]}>
-                            {homeContext["abSpan"]["content"]}
+                            id={aboutMeContext["abSpan"]["id"]}
+                            className={aboutMeContext["abSpan"]["className"]}>
+                            {aboutMeContext["abSpan"]["content"]}
                         </SpanComponent>
                         <StrongComponent>
                             <SpanComponent
-                                id={homeContext["acSpan"]["id"]}
-                                className={homeContext["acSpan"]["className"]}>
-                                {homeContext["acSpan"]["content"]}
+                                id={aboutMeContext["acSpan"]["id"]}
+                                className={aboutMeContext["acSpan"]["className"]}>
+                                {aboutMeContext["acSpan"]["content"]}
                             </SpanComponent>
                         </StrongComponent>
                         <SpanComponent
-                            id={homeContext["adSpan"]["id"]}
-                            className={homeContext["adSpan"]["className"]}>
-                            {homeContext["adSpan"]["content"]}
+                            id={aboutMeContext["adSpan"]["id"]}
+                            className={aboutMeContext["adSpan"]["className"]}>
+                            {aboutMeContext["adSpan"]["content"]}
                         </SpanComponent>
                     </LiComponent>
                 </UlComponent>
+                <ButtonComponent
+                    id={aboutMeContext["button"]["id"]}
+                    className={aboutMeContext["button"]["className"]}
+                    onClick={() => window.open(
+                        aboutMeContext["openWindow"]["url"],
+                        aboutMeContext["openWindow"]["target"])}>
+                    {aboutMeContext["button"]["content"]}
+                </ButtonComponent>
             </DivComponent>
             <ImgComponent
-                id={homeContext["img"]["id"]}
-                className={homeContext["img"]["className"]}
-                src={homeContext["img"]["src"]}
-                alt={homeContext["img"]["alt"]}
+                id={aboutMeContext["img"]["id"]}
+                className={aboutMeContext["img"]["className"]}
+                src={aboutMeContext["img"]["src"]}
+                alt={aboutMeContext["img"]["alt"]}
             />
         </SectionComponent>
     );
