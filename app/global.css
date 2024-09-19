@@ -51,14 +51,6 @@ a:hover {
     padding-bottom: 1vw;
 }
 
-.classNameFooter {
-    overflow: hidden;
-    width: 100vw;
-    background-color: #113826;
-    color: #6B7280;
-    text-align: center;
-}
-
 .className03Section {
     overflow: hidden;
     width: 100vw;
@@ -81,12 +73,20 @@ a:hover {
     display: flex;
 }
 
+.classNameFooter {
+    overflow: hidden;
+    width: 100vw;
+    background-color: #113826;
+    color: #6B7280;
+    text-align: center;
+}
+
 .classNameUl {
     padding-inline-start: 0;
     list-style-type: none;
 }
 
-.classNameImg {
+.className01Img {
     filter: brightness(75%);
     max-width: 100%;
     max-height: 100%;
@@ -118,7 +118,7 @@ a:hover {
     font-size: 4rem;
 }
 
-.classNameH2 {
+.className01H2 {
     padding: 0.75vw 1.5vw;
     font-family: "Lexend Deca Regular", sans-serif;
     font-size: 2rem;
@@ -138,14 +138,7 @@ a:hover {
     font-size: 1.25rem;
 }
 
-.classNameIconHorizontalLi {
-    display: inline-block;
-    padding-right: 1.5vw;
-    font-family: "Lexend Deca Regular", sans-serif;
-    font-size: 1.25rem;
-}
-
-.classNameVerticalLi {
+.className01VerticalLi {
     padding: 0 1.5vw;
     font-family: "Lexend Deca Regular", sans-serif;
     font-size: 2rem;
@@ -179,7 +172,7 @@ a:hover {
     color: #E8A117;
 }
 
-.classNameDiv {
+.className01Div {
     padding: 0.75vw 1.5vw;
     font-family: "Lexend Deca Regular", sans-serif;
     font-size: 2rem;
@@ -205,7 +198,7 @@ a:hover {
 }
 
 @media screen and (max-width: 1080px) {
-    .classNameImg {
+    .className01Img {
         width: 290px;
         height: 444px;
     }
@@ -224,7 +217,7 @@ a:hover {
         font-size: 3.5rem;
     }
 
-    .classNameH2 {
+    .className01H2 {
         font-size: 2rem;
     }
 
@@ -236,7 +229,7 @@ a:hover {
         font-size: 1.25rem;
     }
 
-    .classNameVerticalLi {
+    .className01VerticalLi {
         font-size: 2rem;
     }
 
@@ -252,7 +245,7 @@ a:hover {
         font-size: 2rem;
     }
 
-    .classNameDiv {
+    .className01Div {
         font-size: 1.75rem;
     }
 
@@ -266,7 +259,7 @@ a:hover {
 }
 
 @media screen and (max-width: 920px) {
-    .classNameImg {
+    .className01Img {
         width: 260px;
         height: 398px;
     }
@@ -285,7 +278,7 @@ a:hover {
         font-size: 3.25rem;
     }
 
-    .classNameH2 {
+    .className01H2 {
         font-size: 2rem;
     }
 
@@ -297,7 +290,7 @@ a:hover {
         font-size: 1.25rem;
     }
 
-    .classNameVerticalLi {
+    .className01VerticalLi {
         font-size: 1.75rem;
     }
 
@@ -313,7 +306,7 @@ a:hover {
         font-size: 1.75rem;
     }
 
-    .classNameDiv {
+    .className01Div {
         font-size: 1.25rem;
     }
 
@@ -327,7 +320,7 @@ a:hover {
 }
 
 @media screen and (max-width: 760px) {
-    .classNameImg {
+    .className01Img {
         width: 230px;
         height: 352px;
     }
@@ -346,7 +339,7 @@ a:hover {
         font-size: 2.75rem;
     }
 
-    .classNameH2 {
+    .className01H2 {
         font-size: 1.5rem;
     }
 
@@ -358,7 +351,7 @@ a:hover {
         font-size: 1rem;
     }
 
-    .classNameVerticalLi {
+    .className01VerticalLi {
         font-size: 1.25rem;
     }
 
@@ -374,7 +367,7 @@ a:hover {
         font-size: 1.25rem;
     }
 
-    .classNameDiv {
+    .className01Div {
         font-size: 0.75rem;
     }
 
@@ -388,7 +381,7 @@ a:hover {
 }
 
 @media screen and (max-width: 600px) {
-    .classNameImg {
+    .className01Img {
         width: 200px;
         height: 306px;
     }
@@ -407,7 +400,7 @@ a:hover {
         font-size: 2.5rem;
     }
 
-    .classNameH2 {
+    .className01H2 {
         font-size: 1.5rem;
     }
 
@@ -419,7 +412,7 @@ a:hover {
         font-size: 1rem;
     }
 
-    .classNameVerticalLi {
+    .className01VerticalLi {
         font-size: 1.25rem;
     }
 
@@ -435,7 +428,7 @@ a:hover {
         font-size: 1.25rem;
     }
 
-    .classNameDiv {
+    .className01Div {
         font-size: 0.75rem;
     }
 
@@ -449,7 +442,7 @@ a:hover {
 }
 
 @media screen and (max-width: 520px) {
-    .classNameImg {
+    .className01Img {
         width: 110px;
         height: 168px;
     }
@@ -468,7 +461,7 @@ a:hover {
         font-size: 1.25rem;
     }
 
-    .classNameH2 {
+    .className01H2 {
         font-size: 0.75rem;
     }
 
@@ -480,7 +473,7 @@ a:hover {
         font-size: 1rem;
     }
 
-    .classNameVerticalLi {
+    .className01VerticalLi {
         font-size: 0.75rem;
     }
 
@@ -496,7 +489,7 @@ a:hover {
         font-size: 0.75rem;
     }
 
-    .classNameDiv {
+    .className01Div {
         font-size: 0.5rem;
     }
 
@@ -510,7 +503,7 @@ a:hover {
 }
 
 @media screen and (max-width: 440px) {
-    .classNameImg {
+    .className01Img {
         width: 80px;
         height: 122px;
     }
@@ -529,7 +522,7 @@ a:hover {
         font-size: 1.25rem;
     }
 
-    .classNameH2 {
+    .className01H2 {
         font-size: 0.75rem;
     }
 
@@ -541,7 +534,7 @@ a:hover {
         font-size: 0.75rem;
     }
 
-    .classNameVerticalLi {
+    .className01VerticalLi {
         font-size: 0.75rem;
     }
 
@@ -557,7 +550,7 @@ a:hover {
         font-size: 0.75rem;
     }
 
-    .classNameDiv {
+    .className01Div {
         font-size: 0.5rem;
     }
 
