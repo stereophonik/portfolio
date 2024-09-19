@@ -249,7 +249,7 @@ a:hover {
     }
 
     .className01Span {
-        font-size: 2.25rem;
+        font-size: 2rem;
     }
 
     .classNameDiv {
@@ -258,6 +258,10 @@ a:hover {
 
     .className02Div {
         font-size: 1rem;
+    }
+
+    .classNameButton {
+        font-size: 2rem;
     }
 }
 
@@ -316,6 +320,10 @@ a:hover {
     .className02Div {
         font-size: 1rem;
     }
+
+    .classNameButton {
+        font-size: 1.75rem;
+    }
 }
 
 @media screen and (max-width: 760px) {
@@ -372,6 +380,10 @@ a:hover {
 
     .className02Div {
         font-size: 0.75rem;
+    }
+
+    .classNameButton {
+        font-size: 1.25rem;
     }
 }
 
@@ -430,6 +442,10 @@ a:hover {
     .className02Div {
         font-size: 0.75rem;
     }
+
+    .classNameButton {
+        font-size: 1.25rem;
+    }
 }
 
 @media screen and (max-width: 520px) {
@@ -487,6 +503,10 @@ a:hover {
     .className02Div {
         font-size: 0.5rem;
     }
+
+    .classNameButton {
+        font-size: 0.75rem;
+    }
 }
 
 @media screen and (max-width: 440px) {
@@ -543,5 +563,9 @@ a:hover {
 
     .className02Div {
         font-size: 0.5rem;
+    }
+
+    .classNameButton {
+        font-size: 0.75rem;
     }
 }
