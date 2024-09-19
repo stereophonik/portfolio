@@ -2,11 +2,12 @@ import { useContext } from "react";
 
 import SectionComponent from "../Section";
 import H1Component from "../H1";
+import SpanComponent from "../Span";
 import H2Component from "../H2";
 import AComponent from "../A";
+import ButtonComponent from "../Button";
 
 import { LetsConnectContext } from "../../contexts/LetsConnect";
-import SpanComponent from "../Span";
 
 export default function SectionLetsConnectComponent(): React.ReactElement {
     const letsConnectContext: {} = useContext(LetsConnectContext);
@@ -37,6 +38,14 @@ export default function SectionLetsConnectComponent(): React.ReactElement {
                     {letsConnectContext["a"]["content"]}
                 </AComponent>{letsConnectContext["h2"]["content"]}
             </H2Component>
+            <ButtonComponent
+                id={letsConnectContext["button"]["id"]}
+                className={letsConnectContext["button"]["className"]}
+                onClick={() => window.open(
+                    letsConnectContext["openWindow"]["url"],
+                    letsConnectContext["openWindow"]["target"])}>
+                {letsConnectContext["button"]["content"]}
+            </ButtonComponent>
         </SectionComponent>
     );
 }

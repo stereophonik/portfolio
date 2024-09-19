@@ -28,5 +28,14 @@ export const LetsConnectContext: React.Context<{}> = createContext({
     a: {
         href: "defaultValue",
         content: "defaultValue"
+    },
+    button: {
+        id: "defaultValue",
+        className: "defaultValue",
+        content: "defaultValue"
+    },
+    openWindow: {
+        url: "defaultValue",
+        target: "defaultValue"
     }
 });

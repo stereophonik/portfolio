@@ -5,4 +5,6 @@ export default interface ValueLetsConnectInterface {
     abSpan: { id: any; className: string; content: any; };
     h2: { id: any; className: string; content: any; };
     a: { href: string; target: any; content: any; };
+    button: { id: any; className: string; content: any; };
+    openWindow: { url: any; target: any; };
 }

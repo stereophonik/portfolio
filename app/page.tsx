@@ -469,6 +469,15 @@ export default function Page(): React.ReactElement {
             href: `${letsConnectParsedFromFile["hrefA"]}`,
             target: letsConnectParsedFromFile["targetA"],
             content: letsConnectParsedFromFile["contentA"]
+        },
+        button: {
+            id: letsConnectParsedFromFile["idButton"],
+            className: letsConnectParsedFromFile["classNameButton"],
+            content: letsConnectParsedFromFile["contentButton"]
+        },
+        openWindow: {
+            url: letsConnectParsedFromFile["urlOpenWindow"],
+            target: letsConnectParsedFromFile["targetOpenWindow"]
         }
     }
 

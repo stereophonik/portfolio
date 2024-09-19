@@ -15,5 +15,10 @@
   "contentH2": " to discuss your specific needs. Together, we can work on achieving your dream website. Looking forward to chatting soon!",
   "hrefA": "mailto:nikolai00reyes@outlook.ph",
   "targetA": "_blank",
-  "contentA": "Contact me"
+  "contentA": "Contact me",
+  "idButton": "idButtonLetsConnect",
+  "classNameButton": "classNameButton",
+  "contentButton": "Contact me",
+  "urlOpenWindow": "mailto:nikolai00reyes@outlook.ph",
+  "targetOpenWindow": "_blank"
 }
