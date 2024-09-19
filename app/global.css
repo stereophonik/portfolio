@@ -25,30 +25,35 @@ a:hover {
 
 .classNameNav {
     overflow: hidden;
-    width: 100vw;
+    width: 90vw;
     background-color: #00260F;
     color: #6B7280;
     text-align: right;
+    padding-right: 10vw;
 }
 
 .className01Section {
     overflow: hidden;
-    width: 100vw;
+    width: 80vw;
     background-color: #00260F;
     color: #6B7280;
     text-align: right;
     height: auto;
-    padding-bottom: 1vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-bottom: 5vw;
 }
 
 .className02Section {
     overflow: hidden;
-    width: 100vw;
+    width: 80vw;
     background-color: #113826;
     color: #6B7280;
     text-align: left;
     height: auto;
-    padding-bottom: 1vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-bottom: 5vw;
 }
 
 .className03Section {
@@ -58,7 +63,6 @@ a:hover {
     color: #6B7280;
     text-align: right;
     height: auto;
-    padding-bottom: 1vw;
     display: flex;
 }
 
@@ -69,7 +73,6 @@ a:hover {
     color: #6B7280;
     text-align: left;
     height: auto;
-    padding-bottom: 1vw;
     display: flex;
 }
 
@@ -91,7 +94,7 @@ a:hover {
     max-width: 100%;
     max-height: 100%;
     border-radius: 40px;
-    padding: 1.5vw;
+    padding: 5vw 10vw;
     width: 320px;
     height: 489px;
 }
@@ -106,14 +109,14 @@ a:hover {
     max-width: 100%;
     max-height: 100%;
     border-radius: 40px;
-    padding: 1.5vw;
+    padding: 5vw 10vw;
     width: 320px;
     height: 326px;
 }
 
 .classNameH1 {
     color: #F3F4F6;
-    padding: 0 1.5vw;
+    padding: 5vw 1.5vw 0;
     font-family: "Lexend Deca Bold", sans-serif;
     font-size: 4rem;
 }
@@ -186,7 +189,15 @@ a:hover {
     text-align: center;
 }
 
-.className03Div {}
+.className03Div {
+    padding-right: 10vw;
+    padding-bottom: 5vw;
+}
+
+.className04Div {
+    padding-left: 10vw;
+    padding-bottom: 5vw;
+}
 
 .classNameButton {
     margin: 1.5vw;
