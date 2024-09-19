@@ -1,6 +1,6 @@
 {
     "idSection": "idSectionHome",
-    "classNameSection": "classNameClassDSection",
+    "classNameSection": "className04Section",
     "idImg": "idImgHome",
     "classNameImg": "classNameImg",
     "srcImg": "/picture.jpeg",
@@ -28,18 +28,10 @@
     "idAdSpan": "idAdSpanHome",
     "classNameAdSpan": "className02Span",
     "contentAdSpan": ", not harder!",
-    "idH2": "idH2Home",
-    "classNameH2": "classNameH2",
-    "contentH2": "Hello! Are you looking to create or update your business website?",
-    "idUl": "idUlHome",
-    "classNameUl": "classNameUl",
-    "keyAaLis": 1,
-    "classNameAaLis": "classNameVerticalLi",
-    "contentAaLis": "If yes, I'm here to help!",
-    "keyAbLis": 2,
-    "classNameAbLis": "classNameVerticalLi",
-    "contentAbLis": "I have more than 6 years of experience with quality testing and I'm now transitioning to front-end development, so I bring a unique perspective to streamline your workflows and enhance your web applications.",
-    "keyAcLis": 3,
-    "classNameAcLis": "className02VerticalLi",
-    "contentAcLis": ""
+    "idAaH2": "idAaH2Home",
+    "classNameAaH2": "className02H2",
+    "contentAaH2": "Hello! Are you looking to create or update your business website?",
+    "idAbH2": "idAbH2Home",
+    "classNameAbH2": "className02H2",
+    "contentAbH2": "If yes, I'm here to help!"
 }

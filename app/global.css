@@ -36,7 +36,7 @@ a:hover {
     text-align: right;
 }
 
-.classNameClassASection {
+.className01Section {
     overflow: hidden;
     width: 100vw;
     background-color: #00260F;
@@ -46,7 +46,7 @@ a:hover {
     padding-bottom: 1vw;
 }
 
-.classNameClassBSection {
+.className02Section {
     overflow: hidden;
     width: 100vw;
     background-color: #113826;
@@ -64,7 +64,7 @@ a:hover {
     text-align: left;
 }
 
-.classNameClassCSection {
+.className03Section {
     overflow: hidden;
     width: 100vw;
     background-color: #00260F;
@@ -75,7 +75,7 @@ a:hover {
     display: flex;
 }
 
-.classNameClassDSection {
+.className04Section {
     overflow: hidden;
     width: 100vw;
     background-color: #113826;
@@ -131,7 +131,7 @@ a:hover {
 
 .className02H2 {
     color: #F3F4F6;
-    padding: 3vw 1.5vw;
+    padding: 3vw 1.5vw 0;
     font-family: "Lexend Deca Bold", sans-serif;
     font-size: 2.75rem;
 }

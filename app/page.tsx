@@ -264,32 +264,16 @@ export default function Page(): React.ReactElement {
             className: homeParsedFromFile["classNameAdSpan"],
             content: homeParsedFromFile["contentAdSpan"]
         },
-        h2: {
-            id: homeParsedFromFile["idH2"],
-            className: homeParsedFromFile["classNameH2"],
-            content: homeParsedFromFile["contentH2"]
+        aaH2: {
+            id: homeParsedFromFile["idAaH2"],
+            className: homeParsedFromFile["classNameAaH2"],
+            content: homeParsedFromFile["contentAaH2"]
         },
-        ul: {
-            id: homeParsedFromFile["idUl"],
-            className: homeParsedFromFile["classNameUl"]
-        },
-        lis: [
-            {
-                className: homeParsedFromFile["classNameAaLis"],
-                key: homeParsedFromFile["keyAaLis"],
-                content: homeParsedFromFile["contentAaLis"]
-            },
-            {
-                className: homeParsedFromFile["classNameAbLis"],
-                key: homeParsedFromFile["keyAbLis"],
-                content: homeParsedFromFile["contentAbLis"]
-            },
-            {
-                className: homeParsedFromFile["classNameAcLis"],
-                key: homeParsedFromFile["keyAcLis"],
-                content: homeParsedFromFile["contentAcLis"]
-            }
-        ]
+        abH2: {
+            id: homeParsedFromFile["idAbH2"],
+            className: homeParsedFromFile["classNameAbH2"],
+            content: homeParsedFromFile["contentAbH2"]
+        }
     }
 
     const valueAboutMe: ValueAboutMeInterface = {

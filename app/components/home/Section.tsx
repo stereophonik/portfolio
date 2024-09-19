@@ -5,10 +5,7 @@ import ImgComponent from "../Img";
 import DivComponent from "../Div";
 import H1Component from "../H1";
 import SpanComponent from "../Span";
-import StrongComponent from "../Strong";
 import H2Component from "../H2";
-import UlComponent from "../Ul";
-import LiComponent from "../Li";
 
 import { HomeContext } from "../../contexts/Home";
 
@@ -48,19 +45,15 @@ export default function SectionHomeComponent(): React.ReactElement {
                     {homeContext["aaSpan"]["content"]}
                 </SpanComponent>
                 <H2Component
-                    id={homeContext["h2"]["id"]}
-                    className="className02H2">
-                    {homeContext["h2"]["content"]}
+                    id={homeContext["aaH2"]["id"]}
+                    className={homeContext["aaH2"]["className"]}>
+                    {homeContext["aaH2"]["content"]}
                 </H2Component>
-                <UlComponent
-                    id={homeContext["ul"]["id"]}
-                    className={homeContext["ul"]["className"]}>
-                    <LiComponent
-                        className={homeContext["lis"][0]["className"]}
-                        keyValue={homeContext["lis"][0]["key"]}>
-                        {homeContext["lis"][0]["content"]}
-                    </LiComponent>
-                </UlComponent>
+                <H2Component
+                    id={homeContext["abH2"]["id"]}
+                    className={homeContext["abH2"]["className"]}>
+                    {homeContext["abH2"]["content"]}
+                </H2Component>
             </DivComponent>
         </SectionComponent>
     );

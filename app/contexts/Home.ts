@@ -50,30 +50,14 @@ export const HomeContext: React.Context<{}> = createContext({
         className: "defaultValue",
         content: "defaultValue"
     },
-    h2: {
+    aaH2: {
         id: "defaultValue",
         className: "defaultValue",
         content: "defaultValue"
     },
-    ul: {
+    abH2: {
         id: "defaultValue",
-        className: "defaultValue"
-    },
-    lis: [
-        {
-            className: "defaultValue",
-            key: "defaultValue",
-            content: "defaultValue"
-        },
-        {
-            className: "defaultValue",
-            key: "defaultValue",
-            content: "defaultValue"
-        },
-        {
-            className: "defaultValue",
-            key: "defaultValue",
-            content: "defaultValue"
-        }
-    ]
+        className: "defaultValue",
+        content: "defaultValue"
+    }
 });

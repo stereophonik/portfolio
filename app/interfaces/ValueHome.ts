@@ -9,7 +9,6 @@ export default interface ValueHomeInterface {
     abSpan: { id: any; className: string; content: any; };
     acSpan: { id: any; className: string; content: any; };
     adSpan: { id: any; className: string; content: any; };
-    h2: { id: any; className: string; content: any; };
-    ul: { id: any; className: any; };
-    lis: { className: any; key: any; content: any; }[];
+    aaH2: { id: any; className: string; content: any; };
+    abH2: { id: any; className: string; content: any; };
 }
