@@ -4,7 +4,6 @@ import NavComponent from "../Nav";
 import UlComponent from "../Ul";
 import LiComponent from "../Li";
 import AComponent from "../A";
-import ImgComponent from "../Img";
 
 import { TopContext } from "../../contexts/Top";
 
