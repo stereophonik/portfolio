@@ -16,6 +16,20 @@ export default function FooterBottomComponent(): React.ReactElement {
         <FooterComponent
             id={bottomContext["footer"]["id"]}
             className={bottomContext["footer"]["className"]}>
+            <DivComponent
+                id={bottomContext["divs"][0]["id"]}
+                className={bottomContext["divs"][0]["className"]}>
+                {bottomContext["divs"][0]["content"]}
+            </DivComponent>
+            <DivComponent
+                id={bottomContext["divs"][1]["id"]}
+                className={bottomContext["divs"][1]["className"]}>
+                <AComponent
+                    href={bottomContext["a"]["href"]}
+                    target={bottomContext["a"]["target"]}>
+                    {bottomContext["a"]["content"]}
+                </AComponent>
+            </DivComponent>
             <UlComponent
                 id={bottomContext["ul"]["id"]}
                 className={bottomContext["ul"]["className"]}>
@@ -46,20 +60,6 @@ export default function FooterBottomComponent(): React.ReactElement {
                     </AComponent>
                 </LiComponent>
             </UlComponent>
-            <DivComponent
-                id={bottomContext["divs"][0]["id"]}
-                className={bottomContext["divs"][0]["className"]}>
-                {bottomContext["divs"][0]["content"]}
-            </DivComponent>
-            <DivComponent
-                id={bottomContext["divs"][1]["id"]}
-                className={bottomContext["divs"][1]["className"]}>
-                <AComponent
-                    href={bottomContext["a"]["href"]}
-                    target={bottomContext["a"]["target"]}>
-                    {bottomContext["a"]["content"]}
-                </AComponent>
-            </DivComponent>
         </FooterComponent>
     );
 }
