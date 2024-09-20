@@ -592,13 +592,13 @@ export default function Page(): React.ReactElement {
                 value={valueWhatIOffer}>
                 <SectionWhatIOfferComponent />
             </WhatIOfferContext.Provider>
-            <PlatformContext.Provider
-                value={valuePlatform}>
-                <SectionPlatformComponent />
-            </PlatformContext.Provider>
             <FrameworkContext.Provider
                 value={valueFramework}>
-                <SectionFrameworkComponent />
+                <PlatformContext.Provider
+                    value={valuePlatform}>
+                    <SectionPlatformComponent />
+                </PlatformContext.Provider>
+                    <SectionFrameworkComponent />
             </FrameworkContext.Provider>
             <LetsConnectContext.Provider
                 value={valueLetsConnect}>

@@ -3,8 +3,7 @@ import { useContext } from "react";
 import SectionComponent from "../Section";
 import H1Component from "../H1";
 import H2Component from "../H2";
-import SpanComponent from "../Span";
-import AComponent from "../A";
+import DivComponent from "../Div";
 
 import { FrameworkContext } from "../../contexts/Framework";
 
@@ -23,17 +22,18 @@ export default function SectionFrameworkComponent(): React.ReactElement {
             <H2Component
                 id={frameworkContext["h2"]["id"]}
                 className={frameworkContext["h2"]["className"]}>
-                {frameworkContext["h2"]["content"]}
+                Please check the ones below:
             </H2Component>
-            <SpanComponent
+            <DivComponent
                 id={frameworkContext["span"]["id"]}
                 className={frameworkContext["span"]["className"]}>
-                <AComponent
-                    href={frameworkContext["a"]["href"]}
-                    target={frameworkContext["a"]["target"]}>
-                    {frameworkContext["a"]["content"]}
-                </AComponent>
-            </SpanComponent>
+                Since 2013 - Functional UI, API, and desktop testing experiences
+            </DivComponent>
+            <DivComponent
+                id={frameworkContext["span"]["id"]}
+                className={frameworkContext["span"]["className"]}>
+                Since June 2024 - editing and maintaining the website of Class Constructions
+            </DivComponent>
         </SectionComponent>
     );
 }

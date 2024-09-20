@@ -7,9 +7,11 @@ import SpanComponent from "../Span";
 import AComponent from "../A";
 
 import { PlatformContext } from "../../contexts/Platform";
+import { FrameworkContext } from "../../contexts/Framework";
 
 export default function SectionPlatformComponent(): React.ReactElement {
     const platformContext: {} = useContext(PlatformContext);
+    const frameworkContext: {} = useContext(FrameworkContext);
 
     return (
         <SectionComponent
@@ -32,6 +34,20 @@ export default function SectionPlatformComponent(): React.ReactElement {
                     href={platformContext["a"]["href"]}
                     target={platformContext["a"]["target"]}>
                     {platformContext["a"]["content"]}
+                </AComponent>
+            </SpanComponent>
+            <H2Component
+                id={frameworkContext["h2"]["id"]}
+                className={frameworkContext["h2"]["className"]}>
+                {frameworkContext["h2"]["content"]}
+            </H2Component>
+            <SpanComponent
+                id={frameworkContext["span"]["id"]}
+                className={frameworkContext["span"]["className"]}>
+                <AComponent
+                    href={frameworkContext["a"]["href"]}
+                    target={frameworkContext["a"]["target"]}>
+                    {frameworkContext["a"]["content"]}
                 </AComponent>
             </SpanComponent>
         </SectionComponent>
