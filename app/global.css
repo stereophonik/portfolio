@@ -36,6 +36,7 @@ a:hover {
     padding-right: 10vw;
     display: flex;
     justify-content: right;
+    position: fixed;
 }
 
 .className01Section {
