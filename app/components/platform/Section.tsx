@@ -6,10 +6,12 @@ import H2Component from "../H2";
 import SpanComponent from "../Span";
 import AComponent from "../A";
 
+import { WhatIOfferContext } from "../../contexts/WhatIOffer";
 import { PlatformContext } from "../../contexts/Platform";
 import { FrameworkContext } from "../../contexts/Framework";
 
 export default function SectionPlatformComponent(): React.ReactElement {
+    const whatIOfferContext = useContext(WhatIOfferContext);
     const platformContext: {} = useContext(PlatformContext);
     const frameworkContext: {} = useContext(FrameworkContext);
 
@@ -20,7 +22,16 @@ export default function SectionPlatformComponent(): React.ReactElement {
             <H1Component
                 id={platformContext["h1"]["id"]}
                 className={platformContext["h1"]["className"]}>
-                {platformContext["h1"]["content"]}
+                <SpanComponent
+                    id={whatIOfferContext["aaSpan"]["id"]}
+                    className={whatIOfferContext["aaSpan"]["className"]}>
+                    My&nbsp;
+                </SpanComponent>
+                <SpanComponent
+                    id={whatIOfferContext["abSpan"]["id"]}
+                    className={whatIOfferContext["abSpan"]["className"]}>
+                    Portfolio
+                </SpanComponent>
             </H1Component>
             <H2Component
                 id={platformContext["h2"]["id"]}

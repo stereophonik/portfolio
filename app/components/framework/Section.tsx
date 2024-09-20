@@ -5,9 +5,12 @@ import H1Component from "../H1";
 import H2Component from "../H2";
 import DivComponent from "../Div";
 
+import { WhatIOfferContext } from "../../contexts/WhatIOffer";
 import { FrameworkContext } from "../../contexts/Framework";
+import SpanComponent from "../Span";
 
 export default function SectionFrameworkComponent(): React.ReactElement {
+    const whatIOfferContext: {} = useContext(WhatIOfferContext);
     const frameworkContext: {} = useContext(FrameworkContext);
 
     return (
@@ -17,7 +20,16 @@ export default function SectionFrameworkComponent(): React.ReactElement {
             <H1Component
                 id={frameworkContext["h1"]["id"]}
                 className={frameworkContext["h1"]["className"]}>
-                {frameworkContext["h1"]["content"]}
+                <SpanComponent
+                    id={whatIOfferContext["aaSpan"]["id"]}
+                    className={whatIOfferContext["aaSpan"]["className"]}>
+                    My&nbsp;
+                </SpanComponent>
+                <SpanComponent
+                    id={whatIOfferContext["abSpan"]["id"]}
+                    className={whatIOfferContext["abSpan"]["className"]}>
+                    Experiences
+                </SpanComponent>
             </H1Component>
             <H2Component
                 id={frameworkContext["h2"]["id"]}
