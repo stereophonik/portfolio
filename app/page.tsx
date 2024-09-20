@@ -188,6 +188,11 @@ export default function Page(): React.ReactElement {
                 content: topParsedFromFile["contentAfAs"]
             }
         ],
+        a: {
+            href: `${topParsedFromFile["hrefA"]}`,
+            target: topParsedFromFile["targetA"],
+            content: topParsedFromFile["contentA"]
+        },
         img: {
             id: topParsedFromFile["idImg"],
             className: topParsedFromFile["classNameImg"],

@@ -16,8 +16,8 @@ export default function NavTopComponent(): React.ReactElement {
             id={topContext["nav"]["id"]}
             className={topContext["nav"]["className"]}>
             <AComponent
-                href={topContext["as"][0]["href"]}
-                target={topContext["as"][0]["target"]}>
+                href={topContext["a"]["href"]}
+                target={topContext["a"]["target"]}>
                 <ImgComponent
                     id={topContext["img"]["id"]}
                     className={topContext["img"]["className"]}
@@ -28,6 +28,15 @@ export default function NavTopComponent(): React.ReactElement {
             <UlComponent
                 id={topContext["ul"]["id"]}
                 className={topContext["ul"]["className"]}>
+                <LiComponent
+                    className={topContext["lis"][0]["className"]}
+                    keyValue={topContext["lis"][0]["key"]}>
+                    <AComponent
+                        href={topContext["as"][0]["href"]}
+                        target={topContext["as"][0]["target"]}>
+                        {topContext["as"][0]["content"]}
+                    </AComponent>
+                </LiComponent>
                 <LiComponent
                     className={topContext["lis"][1]["className"]}
                     keyValue={topContext["lis"][1]["key"]}>
@@ -71,15 +80,6 @@ export default function NavTopComponent(): React.ReactElement {
                         href={topContext["as"][5]["href"]}
                         target={topContext["as"][5]["target"]}>
                         {topContext["as"][5]["content"]}
-                    </AComponent>
-                </LiComponent>
-                <LiComponent
-                    className={topContext["lis"][6]["className"]}
-                    keyValue={topContext["lis"][6]["key"]}>
-                    <AComponent
-                        href={topContext["as"][6]["href"]}
-                        target={topContext["as"][6]["target"]}>
-                        {topContext["as"][6]["content"]}
                     </AComponent>
                 </LiComponent>
             </UlComponent>
