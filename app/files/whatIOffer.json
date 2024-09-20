@@ -15,13 +15,13 @@
   "idH2": "idH2WhatIOffer",
   "classNameH2": "className01H2",
   "contentH2": "Here's a glimpse of what I bring to the table:",
-  "keyAaLis": 1,
+  "keyAaLis": "keyAaLisWhatIOffer",
   "classNameAaLis": "className01VerticalLi",
   "contentAaLis": "Expertise in building platform web pages",
-  "keyAbLis": 2,
+  "keyAbLis": "keyAbLisWhatIOffer",
   "classNameAbLis": "className01VerticalLi",
   "contentAbLis": "Strong skills in frameworks and libraries for web application development",
-  "keyAcLis": 3,
+  "keyAcLis": "keyAcLisWhatIOffer",
   "classNameAcLis": "className01VerticalLi",
   "contentAcLis": "Extensive testing experience across various companies and industries including global software and fintech companies."
 }
