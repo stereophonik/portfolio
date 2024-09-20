@@ -96,13 +96,12 @@ a:hover {
 }
 
 .className01Img {
-    filter: brightness(75%);
     max-width: 100%;
     max-height: 100%;
     border-radius: 40px;
     padding: 5vw 10vw;
     width: 320px;
-    height: 489px;
+    height: 320px;
 }
 
 .className02Img {
@@ -111,13 +110,12 @@ a:hover {
 }
 
 .className03Img {
-    filter: brightness(75%);
     max-width: 100%;
     max-height: 100%;
     border-radius: 40px;
     padding: 5vw 10vw;
     width: 320px;
-    height: 326px;
+    height: 320px;
 }
 
 .className04Img {
@@ -230,7 +228,7 @@ a:hover {
 @media screen and (max-width: 1080px) {
     .className01Img {
         width: 290px;
-        height: 444px;
+        height: 290px;
     }
 
     .className02Img {
@@ -240,7 +238,7 @@ a:hover {
 
     .className03Img {
         width: 290px;
-        height: 295px;
+        height: 290px;
     }
 
     .className04Img {
@@ -301,7 +299,7 @@ a:hover {
 @media screen and (max-width: 920px) {
     .className01Img {
         width: 260px;
-        height: 398px;
+        height: 260px;
     }
 
     .className02Img {
@@ -311,7 +309,7 @@ a:hover {
 
     .className03Img {
         width: 260px;
-        height: 265px;
+        height: 260px;
     }
 
     .className04Img {
@@ -372,7 +370,7 @@ a:hover {
 @media screen and (max-width: 760px) {
     .className01Img {
         width: 230px;
-        height: 352px;
+        height: 230px;
     }
 
     .className02Img {
@@ -382,7 +380,7 @@ a:hover {
 
     .className03Img {
         width: 230px;
-        height: 234px;
+        height: 230px;
     }
 
     .className04Img {
@@ -443,7 +441,7 @@ a:hover {
 @media screen and (max-width: 600px) {
     .className01Img {
         width: 200px;
-        height: 306px;
+        height: 200px;
     }
 
     .className02Img {
@@ -453,7 +451,7 @@ a:hover {
 
     .className03Img {
         width: 200px;
-        height: 203px;
+        height: 200px;
     }
 
     .className04Img {
@@ -514,7 +512,7 @@ a:hover {
 @media screen and (max-width: 520px) {
     .className01Img {
         width: 110px;
-        height: 168px;
+        height: 110px;
     }
 
     .className02Img {
@@ -524,7 +522,7 @@ a:hover {
 
     .className03Img {
         width: 110px;
-        height: 112px;
+        height: 110px;
     }
 
     .className04Img {
@@ -585,7 +583,7 @@ a:hover {
 @media screen and (max-width: 440px) {
     .className01Img {
         width: 80px;
-        height: 122px;
+        height: 80px;
     }
 
     .className02Img {
@@ -595,7 +593,7 @@ a:hover {
 
     .className03Img {
         width: 80px;
-        height: 81px;
+        height: 80px;
     }
 
     .className04Img {
