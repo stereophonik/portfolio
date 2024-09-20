@@ -25,13 +25,11 @@ export default function FooterBottomComponent(): React.ReactElement {
                     {bottomContext["a"]["content"]}
                 </AComponent>
             </DivComponent>
-            <img
+            <ImgComponent
+                id="idImgBottom"
+                className="className05Img"
                 src="/picBottom.png"
-                style={{
-                    width: "150px",
-                    height: "75px",
-                }}
-            />
+                alt="Bottom Pic"/>
             <UlComponent
                 id={bottomContext["ul"]["id"]}
                 className={bottomContext["ul"]["className"]}>

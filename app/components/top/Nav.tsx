@@ -4,6 +4,7 @@ import NavComponent from "../Nav";
 import UlComponent from "../Ul";
 import LiComponent from "../Li";
 import AComponent from "../A";
+import ImgComponent from "../Img";
 
 import { TopContext } from "../../contexts/Top";
 
@@ -17,18 +18,19 @@ export default function NavTopComponent(): React.ReactElement {
             <UlComponent
                 id={topContext["ul"]["id"]}
                 className={topContext["ul"]["className"]}>
-                <li
+                <LiComponent
                     className="classNameHorizontalLi"
-                >
-                    <img
-                        src="/picTop.png"
-                        style={{
-                            height: "60px",
-                            width: "60px",
-                            paddingRight: "10vw",
-                        }}
-                    />
-                </li>
+                    keyValue="0">
+                    <AComponent
+                        href="#idSectionHome"
+                        target="_self">
+                        <ImgComponent
+                            id="idImgTop"
+                            className="className04Img"
+                            src="/picTop.png"
+                            alt="Top Pic"/>
+                    </AComponent>
+                </LiComponent>
                 <LiComponent
                     className={topContext["lis"][0]["className"]}
                     keyValue={topContext["lis"][0]["key"]}>
