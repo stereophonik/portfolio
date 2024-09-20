@@ -60,5 +60,11 @@ export const BottomContext: React.Context<{}> = createContext({
     a: {
         href: "defaultValue",
         content: "defaultValue"
+    },
+    img: {
+        id: "defaultValue",
+        className: "defaultValue",
+        src: "defaultValue",
+        alt: "defaultValue"
     }
 });

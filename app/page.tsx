@@ -116,6 +116,11 @@ export default function Page(): React.ReactElement {
         },
         lis: [
             {
+                className: topParsedFromFile["classNameZzLis"],
+                key: topParsedFromFile["keyZzLis"],
+                content: topParsedFromFile["contentZzLis"]
+            },
+            {
                 className: topParsedFromFile["classNameAaLis"],
                 key: topParsedFromFile["keyAaLis"],
                 content: topParsedFromFile["contentAaLis"]
@@ -148,6 +153,11 @@ export default function Page(): React.ReactElement {
         ],
         as: [
             {
+                href: `${topParsedFromFile["hrefZzAs"]}`,
+                target: topParsedFromFile["targetZzAs"],
+                content: topParsedFromFile["contentZzAs"]
+            },
+            {
                 href: `${topParsedFromFile["hrefAaAs"]}`,
                 target: topParsedFromFile["targetAaAs"],
                 content: topParsedFromFile["contentAaAs"]
@@ -177,7 +187,13 @@ export default function Page(): React.ReactElement {
                 target: topParsedFromFile["targetAfAs"],
                 content: topParsedFromFile["contentAfAs"]
             }
-        ]
+        ],
+        img: {
+            id: topParsedFromFile["idImg"],
+            className: topParsedFromFile["classNameImg"],
+            src: topParsedFromFile["srcImg"],
+            alt: topParsedFromFile["altImg"]
+        }
     }
 
     const valueHome: ValueHomeInterface = {
@@ -544,6 +560,12 @@ export default function Page(): React.ReactElement {
             href: `${bottomParsedFromFile["hrefA"]}`,
             target: bottomParsedFromFile["targetA"],
             content: bottomParsedFromFile["contentA"]
+        },
+        img: {
+            id: bottomParsedFromFile["idImg"],
+            className: bottomParsedFromFile["classNameImg"],
+            src: bottomParsedFromFile["srcImg"],
+            alt: bottomParsedFromFile["altImg"]
         }
     }
 

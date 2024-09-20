@@ -31,5 +31,9 @@
   "contentAbDivs": "",
   "hrefA": "#idNavTop",
   "targetA": "_self",
-  "contentA": "Back to Top"
+  "contentA": "Back to Top",
+  "idImg": "idImgBottom",
+  "classNameImg": "className05Img",
+  "srcImg": "/picBottom.png",
+  "altImg": "Bottom Pic"
 }

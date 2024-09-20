@@ -19,25 +19,17 @@ export default function NavTopComponent(): React.ReactElement {
                 id={topContext["ul"]["id"]}
                 className={topContext["ul"]["className"]}>
                 <LiComponent
-                    className="classNameHorizontalLi"
-                    keyValue="0">
-                    <AComponent
-                        href="#idSectionHome"
-                        target="_self">
-                        <ImgComponent
-                            id="idImgTop"
-                            className="className04Img"
-                            src="/picTop.png"
-                            alt="Top Pic"/>
-                    </AComponent>
-                </LiComponent>
-                <LiComponent
                     className={topContext["lis"][0]["className"]}
                     keyValue={topContext["lis"][0]["key"]}>
                     <AComponent
                         href={topContext["as"][0]["href"]}
                         target={topContext["as"][0]["target"]}>
-                        {topContext["as"][0]["content"]}
+                        <ImgComponent
+                            id={topContext["img"]["id"]}
+                            className={topContext["img"]["className"]}
+                            src={topContext["img"]["src"]}
+                            alt={topContext["img"]["alt"]}
+                        />
                     </AComponent>
                 </LiComponent>
                 <LiComponent
@@ -83,6 +75,15 @@ export default function NavTopComponent(): React.ReactElement {
                         href={topContext["as"][5]["href"]}
                         target={topContext["as"][5]["target"]}>
                         {topContext["as"][5]["content"]}
+                    </AComponent>
+                </LiComponent>
+                <LiComponent
+                    className={topContext["lis"][6]["className"]}
+                    keyValue={topContext["lis"][6]["key"]}>
+                    <AComponent
+                        href={topContext["as"][6]["href"]}
+                        target={topContext["as"][6]["target"]}>
+                        {topContext["as"][6]["content"]}
                     </AComponent>
                 </LiComponent>
             </UlComponent>

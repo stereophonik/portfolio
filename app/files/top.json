@@ -3,6 +3,9 @@
   "classNameNav": "classNameNav",
   "idUl": "idUlTop",
   "classNameUl": "classNameUl",
+  "classNameZzLis": "classNameHorizontalLi",
+  "keyZzLis": "keyZzLisTop",
+  "contentZzLis": "",
   "classNameAaLis": "classNameHorizontalLi",
   "keyAaLis": "keyAaLisTop",
   "contentAaLis": "",
@@ -21,6 +24,9 @@
   "classNameAfLis": "classNameHorizontalLi",
   "keyAfLis": "keyAfLisTop",
   "contentAfLis": "",
+  "hrefZzAs": "#idSectionHome",
+  "targetZzAs": "_self",
+  "contentZzAs": "",
   "hrefAaAs": "#idSectionAboutMe",
   "targetAaAs": "_self",
   "contentAaAs": "ABOUT ME",
@@ -38,5 +44,9 @@
   "contentAeAs": "LET'S CONNECT",
   "hrefAfAs": "mailto:nikolai00reyes@outlook.ph",
   "targetAfAs": "_blank",
-  "contentAfAs": "CONTACT ME"
+  "contentAfAs": "CONTACT ME",
+  "idImg": "idImgTop",
+  "classNameImg": "className04Img",
+  "srcImg": "/picTop.png",
+  "altImg": "Top Pic"
 }

@@ -6,4 +6,5 @@ export default interface ValueBottomInterface {
     imgs: { id: any; className: any; src: any; alt: any; }[];
     divs: { id: any; className: any; content: any; }[];
     a: { href: any; target: any; content: any; };
+    img: { id: any; className: any; src: any; alt: any; };
 }
