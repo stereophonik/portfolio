@@ -40,7 +40,7 @@ export default function Page(): React.ReactElement {
     const [bottomParsedFromFile, setBottomParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
 
     useEffect(() => {
-        fetch("/serving/file?fileName=top", {
+        fetch("/serving/datum?fileName=top", {
             method: "GET"
         })
             .then(fromFile => fromFile.json())
@@ -48,7 +48,7 @@ export default function Page(): React.ReactElement {
                 setTopParsedFromFile(parsedFromFile);
             });
 
-        fetch("/serving/file?fileName=home", {
+        fetch("/serving/datum?fileName=home", {
             method: "GET"
         })
             .then(fromFile => fromFile.json())
@@ -56,7 +56,7 @@ export default function Page(): React.ReactElement {
                 setHomeParsedFromFile(parsedFromFile);
             });
 
-        fetch("/serving/file?fileName=aboutMe", {
+        fetch("/serving/datum?fileName=aboutMe", {
             method: "GET"
         })
             .then(fromFile => fromFile.json())
@@ -64,7 +64,7 @@ export default function Page(): React.ReactElement {
                 setAboutMeParsedFromFile(parsedFromFile);
             });
 
-        fetch("/serving/file?fileName=whatIOffer", {
+        fetch("/serving/datum?fileName=whatIOffer", {
             method: "GET"
         })
             .then(fromFile => fromFile.json())
@@ -72,7 +72,7 @@ export default function Page(): React.ReactElement {
                 setWhatIOfferParsedFromFile(parsedFromFile);
             });
 
-        fetch("/serving/file?fileName=platform", {
+        fetch("/serving/datum?fileName=platform", {
             method: "GET"
         })
             .then(fromFile => fromFile.json())
@@ -80,7 +80,7 @@ export default function Page(): React.ReactElement {
                 setPlatformParsedFromFile(parsedFromFile);
             });
 
-        fetch("/serving/file?fileName=framework", {
+        fetch("/serving/datum?fileName=framework", {
             method: "GET"
         })
             .then(fromFile => fromFile.json())
@@ -88,7 +88,7 @@ export default function Page(): React.ReactElement {
                 setFrameworkParsedFromFile(parsedFromFile);
             });
 
-        fetch("/serving/file?fileName=letsConnect", {
+        fetch("/serving/datum?fileName=letsConnect", {
             method: "GET"
         })
             .then(fromFile => fromFile.json())
@@ -96,7 +96,7 @@ export default function Page(): React.ReactElement {
                 setLetsConnectParsedFromFile(parsedFromFile);
             });
 
-        fetch("/serving/file?fileName=bottom", {
+        fetch("/serving/datum?fileName=bottom", {
             method: "GET"
         })
             .then(fromFile => fromFile.json())
