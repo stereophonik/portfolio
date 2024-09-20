@@ -33,8 +33,9 @@ a:hover {
     width: 90vw;
     background-color: #00260F;
     color: #6B7280;
-    text-align: right;
     padding-right: 10vw;
+    display: flex;
+    justify-content: right;
 }
 
 .className01Section {
@@ -122,7 +123,8 @@ a:hover {
 .className04Img {
     width: 60px;
     height: 60px;
-    padding-right: 10vw;
+    padding-left: 10vw;
+    padding-right: 16vw;
 }
 
 .className05Img {
@@ -154,7 +156,7 @@ a:hover {
     display: inline-block;
     padding: 1vw 1.5vw;
     font-family: "Lexend Deca Regular", sans-serif;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .className01VerticalLi {
@@ -264,7 +266,7 @@ a:hover {
     }
 
     .classNameHorizontalLi {
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
 
     .className01VerticalLi {
@@ -335,7 +337,7 @@ a:hover {
     }
 
     .classNameHorizontalLi {
-        font-size: 1rem;
+        font-size: 0.6rem;
     }
 
     .className01VerticalLi {
@@ -406,7 +408,7 @@ a:hover {
     }
 
     .classNameHorizontalLi {
-        font-size: 0.75rem;
+        font-size: 0.6rem;
     }
 
     .className01VerticalLi {
@@ -477,7 +479,7 @@ a:hover {
     }
 
     .classNameHorizontalLi {
-        font-size: 0.75rem;
+        font-size: 0.6rem;
     }
 
     .className01VerticalLi {
@@ -548,7 +550,7 @@ a:hover {
     }
 
     .classNameHorizontalLi {
-        font-size: 0.75rem;
+        font-size: 0.6rem;
     }
 
     .className01VerticalLi {
@@ -619,7 +621,7 @@ a:hover {
     }
 
     .classNameHorizontalLi {
-        font-size: 0.5rem;
+        font-size: 0.6rem;
     }
 
     .className01VerticalLi {
