@@ -17,11 +17,6 @@ export default function FooterBottomComponent(): React.ReactElement {
             id={bottomContext["footer"]["id"]}
             className={bottomContext["footer"]["className"]}>
             <DivComponent
-                id={bottomContext["divs"][0]["id"]}
-                className={bottomContext["divs"][0]["className"]}>
-                {bottomContext["divs"][0]["content"]}
-            </DivComponent>
-            <DivComponent
                 id={bottomContext["divs"][1]["id"]}
                 className={bottomContext["divs"][1]["className"]}>
                 <AComponent
@@ -30,6 +25,13 @@ export default function FooterBottomComponent(): React.ReactElement {
                     {bottomContext["a"]["content"]}
                 </AComponent>
             </DivComponent>
+            <img
+                src="/picBottom.png"
+                style={{
+                    width: "150px",
+                    height: "75px",
+                }}
+            />
             <UlComponent
                 id={bottomContext["ul"]["id"]}
                 className={bottomContext["ul"]["className"]}>
@@ -43,7 +45,7 @@ export default function FooterBottomComponent(): React.ReactElement {
                             id={bottomContext["imgs"][0]["id"]}
                             className={bottomContext["imgs"][0]["className"]}
                             src={bottomContext["imgs"][0]["src"]}
-                            alt={bottomContext["imgs"][0]["alt"]} />
+                            alt={bottomContext["imgs"][0]["alt"]}/>
                     </AComponent>
                 </LiComponent>
                 <LiComponent
@@ -56,10 +58,15 @@ export default function FooterBottomComponent(): React.ReactElement {
                             id={bottomContext["imgs"][1]["id"]}
                             className={bottomContext["imgs"][1]["className"]}
                             src={bottomContext["imgs"][1]["src"]}
-                            alt={bottomContext["imgs"][1]["alt"]} />
+                            alt={bottomContext["imgs"][1]["alt"]}/>
                     </AComponent>
                 </LiComponent>
             </UlComponent>
+            <DivComponent
+                id={bottomContext["divs"][0]["id"]}
+                className={bottomContext["divs"][0]["className"]}>
+                {bottomContext["divs"][0]["content"]}
+            </DivComponent>
         </FooterComponent>
     );
 }

@@ -17,6 +17,18 @@ export default function NavTopComponent(): React.ReactElement {
             <UlComponent
                 id={topContext["ul"]["id"]}
                 className={topContext["ul"]["className"]}>
+                <li
+                    className="classNameHorizontalLi"
+                >
+                    <img
+                        src="/picTop.png"
+                        style={{
+                            height: "60px",
+                            width: "60px",
+                            paddingRight: "10vw",
+                        }}
+                    />
+                </li>
                 <LiComponent
                     className={topContext["lis"][0]["className"]}
                     keyValue={topContext["lis"][0]["key"]}>
