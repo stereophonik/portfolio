@@ -8,21 +8,21 @@ import IframeComponent from "../Iframe";
 import AComponent from "../A";
 
 import { WhatIOfferContext } from "../../contexts/WhatIOffer";
-import { PlatformContext } from "../../contexts/Platform";
+import { MyPortfolioContext } from "../../contexts/MyPortfolio";
 import { FrameworkContext } from "../../contexts/Framework";
 
-export default function SectionPlatformComponent(): React.ReactElement {
+export default function SectionMyPortfolioComponent(): React.ReactElement {
     const whatIOfferContext = useContext(WhatIOfferContext);
-    const platformContext: {} = useContext(PlatformContext);
+    const myPortfolioContext: {} = useContext(MyPortfolioContext);
     const frameworkContext: {} = useContext(FrameworkContext);
 
     return (
         <SectionComponent
-            id={platformContext["section"]["id"]}
-            className={platformContext["section"]["className"]}>
+            id={myPortfolioContext["section"]["id"]}
+            className={myPortfolioContext["section"]["className"]}>
             <H1Component
-                id={platformContext["h1"]["id"]}
-                className={platformContext["h1"]["className"]}>
+                id={myPortfolioContext["h1"]["id"]}
+                className={myPortfolioContext["h1"]["className"]}>
                 <SpanComponent
                     id={whatIOfferContext["aaSpan"]["id"]}
                     className={whatIOfferContext["aaSpan"]["className"]}>
@@ -35,17 +35,17 @@ export default function SectionPlatformComponent(): React.ReactElement {
                 </SpanComponent>
             </H1Component>
             <H2Component
-                id={platformContext["h2"]["id"]}
-                className={platformContext["h2"]["className"]}>
-                {platformContext["h2"]["content"]}
+                id={myPortfolioContext["h2"]["id"]}
+                className={myPortfolioContext["h2"]["className"]}>
+                {myPortfolioContext["h2"]["content"]}
             </H2Component>
             <SpanComponent
-                id={platformContext["span"]["id"]}
-                className={platformContext["span"]["className"]}>
+                id={myPortfolioContext["span"]["id"]}
+                className={myPortfolioContext["span"]["className"]}>
                 <IframeComponent
-                    id="idIframePlatform"
+                    id="idIframeMyPortfolio"
                     className="classNameIframe"
-                    src={platformContext["a"]["href"]}>
+                    src={myPortfolioContext["a"]["href"]}>
                 </IframeComponent>
             </SpanComponent>
             <H2Component

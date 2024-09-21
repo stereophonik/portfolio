@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-export const PlatformContext: React.Context<{}> = createContext({
+export const MyPortfolioContext: React.Context<{}> = createContext({
     section: {
         id: "defaultValue",
         className: "defaultValue"

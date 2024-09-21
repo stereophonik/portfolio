@@ -6,7 +6,7 @@ import NavTopComponent from "./components/top/Nav";
 import SectionHomeComponent from "./components/home/Section";
 import SectionAboutMeComponent from "./components/aboutMe/Section";
 import SectionWhatIOfferComponent from "./components/whatIOffer/Section";
-import SectionPlatformComponent from "./components/platform/Section";
+import SectionMyPortfolioComponent from "./components/myPortfolio/Section";
 import SectionFrameworkComponent from "./components/framework/Section";
 import SectionLetsConnectComponent from "./components/letsConnect/Section";
 import FooterBottomComponent from "./components/bottom/Footer";
@@ -15,7 +15,7 @@ import { TopContext } from "./contexts/Top";
 import { HomeContext } from "./contexts/Home";
 import { AboutMeContext } from "./contexts/AboutMe";
 import { WhatIOfferContext } from "./contexts/WhatIOffer";
-import { PlatformContext } from "./contexts/Platform";
+import { MyPortfolioContext } from "./contexts/MyPortfolio";
 import { FrameworkContext } from "./contexts/Framework";
 import { LetsConnectContext } from "./contexts/LetsConnect";
 import { BottomContext } from "./contexts/Bottom";
@@ -24,7 +24,7 @@ import ValueTopInterface from "./interfaces/ValueTop";
 import ValueHomeInterface from "./interfaces/ValueHome";
 import ValueAboutMeInterface from "./interfaces/ValueAboutMe";
 import ValueWhatIOfferInterface from "./interfaces/ValueWhatIOffer";
-import ValuePlatformInterface from "./interfaces/ValuePlatform";
+import ValueMyPortfolioInterface from "./interfaces/ValueMyPortfolio";
 import ValueFrameworkInterface from "./interfaces/ValueFramework";
 import ValueLetsConnectInterface from "./interfaces/ValueLetsConnect";
 import ValueBottomInterface from "./interfaces/ValueBottom";
@@ -34,7 +34,7 @@ export default function Page(): React.ReactElement {
     const [homeParsedFromFile, setHomeParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [aboutMeParsedFromFile, setAboutMeParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [whatIOfferParsedFromFile, setWhatIOfferParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
-    const [platformParsedFromFile, setPlatformParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
+    const [myPortfolioParsedFromFile, setMyPortfolioParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [frameworkParsedFromFile, setFrameworkParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [letsConnectParsedFromFile, setLetsConnectParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
     const [bottomParsedFromFile, setBottomParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
@@ -72,12 +72,12 @@ export default function Page(): React.ReactElement {
                 setWhatIOfferParsedFromFile(parsedFromFile);
             });
 
-        fetch("/serving/datum?fileName=platform", {
+        fetch("/serving/datum?fileName=myPortfolio", {
             method: "GET"
         })
             .then(fromFile => fromFile.json())
             .then(parsedFromFile => {
-                setPlatformParsedFromFile(parsedFromFile);
+                setMyPortfolioParsedFromFile(parsedFromFile);
             });
 
         fetch("/serving/datum?fileName=framework", {
@@ -407,30 +407,30 @@ export default function Page(): React.ReactElement {
         ]
     }
 
-    const valuePlatform: ValuePlatformInterface = {
+    const valueMyPortfolio: ValueMyPortfolioInterface = {
         section: {
-            id: platformParsedFromFile["idSection"],
-            className: platformParsedFromFile["classNameSection"]
+            id: myPortfolioParsedFromFile["idSection"],
+            className: myPortfolioParsedFromFile["classNameSection"]
         },
         h1: {
-            id: platformParsedFromFile["idH1"],
-            className: platformParsedFromFile["classNameH1"],
-            content: platformParsedFromFile["contentH1"]
+            id: myPortfolioParsedFromFile["idH1"],
+            className: myPortfolioParsedFromFile["classNameH1"],
+            content: myPortfolioParsedFromFile["contentH1"]
         },
         h2: {
-            id: platformParsedFromFile["idH2"],
-            className: platformParsedFromFile["classNameH2"],
-            content: platformParsedFromFile["contentH2"]
+            id: myPortfolioParsedFromFile["idH2"],
+            className: myPortfolioParsedFromFile["classNameH2"],
+            content: myPortfolioParsedFromFile["contentH2"]
         },
         span: {
-            id: platformParsedFromFile["idSpan"],
-            className: platformParsedFromFile["classNameSpan"],
-            content: platformParsedFromFile["contentSpan"]
+            id: myPortfolioParsedFromFile["idSpan"],
+            className: myPortfolioParsedFromFile["classNameSpan"],
+            content: myPortfolioParsedFromFile["contentSpan"]
         },
         a: {
-            href: `${platformParsedFromFile["hrefA"]}`,
-            target: platformParsedFromFile["targetA"],
-            content: platformParsedFromFile["contentA"]
+            href: `${myPortfolioParsedFromFile["hrefA"]}`,
+            target: myPortfolioParsedFromFile["targetA"],
+            content: myPortfolioParsedFromFile["contentA"]
         }
     }
 
@@ -593,10 +593,10 @@ export default function Page(): React.ReactElement {
                 <SectionWhatIOfferComponent />
                 <FrameworkContext.Provider
                     value={valueFramework}>
-                    <PlatformContext.Provider
-                        value={valuePlatform}>
-                        <SectionPlatformComponent />
-                    </PlatformContext.Provider>
+                    <MyPortfolioContext.Provider
+                        value={valueMyPortfolio}>
+                        <SectionMyPortfolioComponent />
+                    </MyPortfolioContext.Provider>
                         <SectionFrameworkComponent />
                 </FrameworkContext.Provider>
             </WhatIOfferContext.Provider>
