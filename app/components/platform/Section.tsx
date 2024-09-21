@@ -4,6 +4,7 @@ import SectionComponent from "../Section";
 import H1Component from "../H1";
 import H2Component from "../H2";
 import SpanComponent from "../Span";
+import IframeComponent from "../Iframe";
 import AComponent from "../A";
 
 import { WhatIOfferContext } from "../../contexts/WhatIOffer";
@@ -41,11 +42,11 @@ export default function SectionPlatformComponent(): React.ReactElement {
             <SpanComponent
                 id={platformContext["span"]["id"]}
                 className={platformContext["span"]["className"]}>
-                <iframe
-                    id="idIFramePlatform"
-                    className="classNameIFrame"
+                <IframeComponent
+                    id="idIframePlatform"
+                    className="classNameIframe"
                     src={platformContext["a"]["href"]}>
-                </iframe>
+                </IframeComponent>
             </SpanComponent>
             <H2Component
                 id={frameworkContext["h2"]["id"]}
