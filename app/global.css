@@ -130,6 +130,11 @@ a:hover {
     height: 75px;
 }
 
+.classNameIFrame {
+    width: 320px;
+    height: 320px;
+}
+
 .classNameH1 {
     color: #F3F4F6;
     padding: 5vw 1.5vw 0;
@@ -251,6 +256,11 @@ a:hover {
         height: 75px;
     }
 
+    .classNameIFrame {
+        width: 290px;
+        height: 290px;
+    }
+
     .classNameH1 {
         font-size: 2.75rem;
     }
@@ -320,6 +330,11 @@ a:hover {
     .className05Img {
         width: 150px;
         height: 75px;
+    }
+
+    .classNameIFrame {
+        width: 260px;
+        height: 260px;
     }
 
     .classNameH1 {
@@ -393,6 +408,11 @@ a:hover {
         height: 70px;
     }
 
+    .classNameIFrame {
+        width: 230px;
+        height: 230px;
+    }
+
     .classNameH1 {
         font-size: 2rem;
     }
@@ -462,6 +482,11 @@ a:hover {
     .className05Img {
         width: 140px;
         height: 70px;
+    }
+
+    .classNameIFrame {
+        width: 200px;
+        height: 200px;
     }
 
     .classNameH1 {
@@ -535,6 +560,11 @@ a:hover {
         height: 35px;
     }
 
+    .classNameIFrame {
+        width: 110px;
+        height: 110px;
+    }
+
     .classNameH1 {
         font-size: 1rem;
     }
@@ -604,6 +634,11 @@ a:hover {
     .className05Img {
         width: 70px;
         height: 35px;
+    }
+
+    .classNameIFrame {
+        width: 80px;
+        height: 80px;
     }
 
     .classNameH1 {

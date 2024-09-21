@@ -41,11 +41,11 @@ export default function SectionPlatformComponent(): React.ReactElement {
             <SpanComponent
                 id={platformContext["span"]["id"]}
                 className={platformContext["span"]["className"]}>
-                <AComponent
-                    href={platformContext["a"]["href"]}
-                    target={platformContext["a"]["target"]}>
-                    {platformContext["a"]["content"]}
-                </AComponent>
+                <iframe
+                    id="idIFramePlatform"
+                    className="classNameIFrame"
+                    src={platformContext["a"]["href"]}>
+                </iframe>
             </SpanComponent>
             <H2Component
                 id={frameworkContext["h2"]["id"]}
