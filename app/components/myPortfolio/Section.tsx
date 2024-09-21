@@ -24,14 +24,14 @@ export default function SectionMyPortfolioComponent(): React.ReactElement {
                 id={myPortfolioContext["h1"]["id"]}
                 className={myPortfolioContext["h1"]["className"]}>
                 <SpanComponent
-                    id={whatIOfferContext["aaSpan"]["id"]}
-                    className={whatIOfferContext["aaSpan"]["className"]}>
-                    My&nbsp;
+                    id={myPortfolioContext["aaSpan"]["id"]}
+                    className={myPortfolioContext["aaSpan"]["className"]}>
+                    {myPortfolioContext["aaSpan"]["content"]}
                 </SpanComponent>
                 <SpanComponent
-                    id={whatIOfferContext["abSpan"]["id"]}
-                    className={whatIOfferContext["abSpan"]["className"]}>
-                    Portfolio
+                    id={myPortfolioContext["abSpan"]["id"]}
+                    className={myPortfolioContext["abSpan"]["className"]}>
+                    {myPortfolioContext["abSpan"]["content"]}
                 </SpanComponent>
             </H1Component>
             <H2Component

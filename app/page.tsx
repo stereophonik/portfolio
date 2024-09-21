@@ -417,6 +417,16 @@ export default function Page(): React.ReactElement {
             className: myPortfolioParsedFromFile["classNameH1"],
             content: myPortfolioParsedFromFile["contentH1"]
         },
+        aaSpan: {
+            id: myPortfolioParsedFromFile["idAaSpan"],
+            className: myPortfolioParsedFromFile["classNameAaSpan"],
+            content: myPortfolioParsedFromFile["contentAaSpan"]
+        },
+        abSpan: {
+            id: myPortfolioParsedFromFile["idAbSpan"],
+            className: myPortfolioParsedFromFile["classNameAbSpan"],
+            content: myPortfolioParsedFromFile["contentAbSpan"]
+        },
         h2: {
             id: myPortfolioParsedFromFile["idH2"],
             className: myPortfolioParsedFromFile["classNameH2"],
@@ -443,6 +453,16 @@ export default function Page(): React.ReactElement {
             id: myExperiencesParsedFromFile["idH1"],
             className: myExperiencesParsedFromFile["classNameH1"],
             content: myExperiencesParsedFromFile["contentH1"]
+        },
+        aaSpan: {
+            id: myExperiencesParsedFromFile["idAaSpan"],
+            className: myExperiencesParsedFromFile["classNameAaSpan"],
+            content: myExperiencesParsedFromFile["contentAaSpan"]
+        },
+        abSpan: {
+            id: myExperiencesParsedFromFile["idAbSpan"],
+            className: myExperiencesParsedFromFile["classNameAbSpan"],
+            content: myExperiencesParsedFromFile["contentAbSpan"]
         },
         h2: {
             id: myExperiencesParsedFromFile["idH2"],

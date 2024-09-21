@@ -5,12 +5,10 @@ import H1Component from "../H1";
 import H2Component from "../H2";
 import DivComponent from "../Div";
 
-import { WhatIOfferContext } from "../../contexts/WhatIOffer";
 import { MyExperiencesContext } from "../../contexts/MyExperiences";
 import SpanComponent from "../Span";
 
 export default function SectionMyExperiencesComponent(): React.ReactElement {
-    const whatIOfferContext: {} = useContext(WhatIOfferContext);
     const myExperiencesContext: {} = useContext(MyExperiencesContext);
 
     return (
@@ -21,14 +19,14 @@ export default function SectionMyExperiencesComponent(): React.ReactElement {
                 id={myExperiencesContext["h1"]["id"]}
                 className={myExperiencesContext["h1"]["className"]}>
                 <SpanComponent
-                    id={whatIOfferContext["aaSpan"]["id"]}
-                    className={whatIOfferContext["aaSpan"]["className"]}>
-                    My&nbsp;
+                    id={myExperiencesContext["aaSpan"]["id"]}
+                    className={myExperiencesContext["aaSpan"]["className"]}>
+                    {myExperiencesContext["aaSpan"]["content"]}
                 </SpanComponent>
                 <SpanComponent
-                    id={whatIOfferContext["abSpan"]["id"]}
-                    className={whatIOfferContext["abSpan"]["className"]}>
-                    Experiences
+                    id={myExperiencesContext["abSpan"]["id"]}
+                    className={myExperiencesContext["abSpan"]["className"]}>
+                    {myExperiencesContext["abSpan"]["content"]}
                 </SpanComponent>
             </H1Component>
             <H2Component
