@@ -6,20 +6,20 @@ import H2Component from "../H2";
 import DivComponent from "../Div";
 
 import { WhatIOfferContext } from "../../contexts/WhatIOffer";
-import { FrameworkContext } from "../../contexts/Framework";
+import { MyExperiencesContext } from "../../contexts/MyExperiences";
 import SpanComponent from "../Span";
 
-export default function SectionFrameworkComponent(): React.ReactElement {
+export default function SectionMyExperiencesComponent(): React.ReactElement {
     const whatIOfferContext: {} = useContext(WhatIOfferContext);
-    const frameworkContext: {} = useContext(FrameworkContext);
+    const myExperiencesContext: {} = useContext(MyExperiencesContext);
 
     return (
         <SectionComponent
-            id={frameworkContext["section"]["id"]}
-            className={frameworkContext["section"]["className"]}>
+            id={myExperiencesContext["section"]["id"]}
+            className={myExperiencesContext["section"]["className"]}>
             <H1Component
-                id={frameworkContext["h1"]["id"]}
-                className={frameworkContext["h1"]["className"]}>
+                id={myExperiencesContext["h1"]["id"]}
+                className={myExperiencesContext["h1"]["className"]}>
                 <SpanComponent
                     id={whatIOfferContext["aaSpan"]["id"]}
                     className={whatIOfferContext["aaSpan"]["className"]}>
@@ -32,18 +32,18 @@ export default function SectionFrameworkComponent(): React.ReactElement {
                 </SpanComponent>
             </H1Component>
             <H2Component
-                id={frameworkContext["h2"]["id"]}
-                className={frameworkContext["h2"]["className"]}>
+                id={myExperiencesContext["h2"]["id"]}
+                className={myExperiencesContext["h2"]["className"]}>
                 Please check the ones below:
             </H2Component>
             <DivComponent
-                id={frameworkContext["span"]["id"]}
-                className={frameworkContext["span"]["className"]}>
+                id={myExperiencesContext["span"]["id"]}
+                className={myExperiencesContext["span"]["className"]}>
                 Since 2013 - Functional UI, API, and desktop testing experiences
             </DivComponent>
             <DivComponent
-                id={frameworkContext["span"]["id"]}
-                className={frameworkContext["span"]["className"]}>
+                id={myExperiencesContext["span"]["id"]}
+                className={myExperiencesContext["span"]["className"]}>
                 Since June 2024 - editing and maintaining the website of Class Constructions
             </DivComponent>
         </SectionComponent>

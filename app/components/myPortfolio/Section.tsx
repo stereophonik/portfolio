@@ -9,12 +9,12 @@ import AComponent from "../A";
 
 import { WhatIOfferContext } from "../../contexts/WhatIOffer";
 import { MyPortfolioContext } from "../../contexts/MyPortfolio";
-import { FrameworkContext } from "../../contexts/Framework";
+import { MyExperiencesContext } from "../../contexts/MyExperiences";
 
 export default function SectionMyPortfolioComponent(): React.ReactElement {
     const whatIOfferContext = useContext(WhatIOfferContext);
     const myPortfolioContext: {} = useContext(MyPortfolioContext);
-    const frameworkContext: {} = useContext(FrameworkContext);
+    const myExperiencesContext: {} = useContext(MyExperiencesContext);
 
     return (
         <SectionComponent
@@ -49,17 +49,17 @@ export default function SectionMyPortfolioComponent(): React.ReactElement {
                 </IframeComponent>
             </SpanComponent>
             <H2Component
-                id={frameworkContext["h2"]["id"]}
-                className={frameworkContext["h2"]["className"]}>
-                {frameworkContext["h2"]["content"]}
+                id={myExperiencesContext["h2"]["id"]}
+                className={myExperiencesContext["h2"]["className"]}>
+                {myExperiencesContext["h2"]["content"]}
             </H2Component>
             <SpanComponent
-                id={frameworkContext["span"]["id"]}
-                className={frameworkContext["span"]["className"]}>
+                id={myExperiencesContext["span"]["id"]}
+                className={myExperiencesContext["span"]["className"]}>
                 <AComponent
-                    href={frameworkContext["a"]["href"]}
-                    target={frameworkContext["a"]["target"]}>
-                    {frameworkContext["a"]["content"]}
+                    href={myExperiencesContext["a"]["href"]}
+                    target={myExperiencesContext["a"]["target"]}>
+                    {myExperiencesContext["a"]["content"]}
                 </AComponent>
             </SpanComponent>
         </SectionComponent>

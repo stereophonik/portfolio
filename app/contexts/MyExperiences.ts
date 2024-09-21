@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-export const FrameworkContext: React.Context<{}> = createContext({
+export const MyExperiencesContext: React.Context<{}> = createContext({
     section: {
         id: "defaultValue",
         className: "defaultValue"
