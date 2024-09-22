@@ -32,7 +32,7 @@ export default function SectionMyExperiencesComponent(): React.ReactElement {
             <H2Component
                 id={myExperiencesContext["h2"]["id"]}
                 className={myExperiencesContext["h2"]["className"]}>
-                Please check the ones below:
+                {myExperiencesContext["h2"]["content"]}
             </H2Component>
             <DivComponent
                 id={myExperiencesContext["span"]["id"]}
