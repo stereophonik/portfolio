@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { HomeContext } from "../../contexts/Home";
+import { HomeContext } from "../contexts/Home";
 
-export default function SectionHomeComponent(): React.ReactElement {
+export default function HomeComponent(): React.ReactElement {
     const homeContext: {} = useContext(HomeContext);
 
     return (

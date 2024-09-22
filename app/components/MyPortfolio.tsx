@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { MyPortfolioContext } from "../../contexts/MyPortfolio";
+import { MyPortfolioContext } from "../contexts/MyPortfolio";
 
-export default function SectionMyPortfolioComponent(): React.ReactElement {
+export default function MyPortfolioComponent(): React.ReactElement {
     const myPortfolioContext: {} = useContext(MyPortfolioContext);
 
     return (

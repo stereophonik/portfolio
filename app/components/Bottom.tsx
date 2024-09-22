@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { BottomContext } from "../../contexts/Bottom";
+import { BottomContext } from "../contexts/Bottom";
 
-export default function FooterBottomComponent(): React.ReactElement {
+export default function BottomComponent(): React.ReactElement {
     const bottomContext: {} = useContext(BottomContext);
 
     return (

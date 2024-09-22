@@ -2,14 +2,14 @@
 
 import { useState, useEffect, Dispatch, SetStateAction } from "react";
 
-import NavTopComponent from "./components/top/Nav";
-import SectionHomeComponent from "./components/home/Section";
-import SectionAboutMeComponent from "./components/aboutMe/Section";
-import SectionWhatIOfferComponent from "./components/whatIOffer/Section";
-import SectionMyPortfolioComponent from "./components/myPortfolio/Section";
-import SectionMyExperiencesComponent from "./components/myExperiences/Section";
-import SectionLetsConnectComponent from "./components/letsConnect/Section";
-import FooterBottomComponent from "./components/bottom/Footer";
+import TopComponent from "./components/Top";
+import HomeComponent from "./components/Home";
+import AboutMeComponent from "./components/AboutMe";
+import WhatIOfferComponent from "./components/WhatIOffer";
+import MyPortfolioComponent from "./components/MyPortfolio";
+import MyExperiencesComponent from "./components/MyExperiences";
+import LetsConnectComponent from "./components/LetsConnect";
+import BottomComponent from "./components/Bottom";
 
 import { TopContext } from "./contexts/Top";
 import { HomeContext } from "./contexts/Home";
@@ -629,35 +629,35 @@ export default function Page(): React.ReactElement {
         <>
             <TopContext.Provider
                 value={top["value"]}>
-                <NavTopComponent />
+                <TopComponent />
             </TopContext.Provider>
             <HomeContext.Provider
                 value={home["value"]}>
-                <SectionHomeComponent />
+                <HomeComponent />
             </HomeContext.Provider>
             <AboutMeContext.Provider
                 value={aboutMe["value"]}>
-                <SectionAboutMeComponent />
+                <AboutMeComponent />
             </AboutMeContext.Provider>
             <WhatIOfferContext.Provider
                 value={whatIOffer["value"]}>
-                <SectionWhatIOfferComponent />
+                <WhatIOfferComponent />
             </WhatIOfferContext.Provider>
             <MyPortfolioContext.Provider
                 value={myPortfolio["value"]}>
-                <SectionMyPortfolioComponent />
+                <MyPortfolioComponent />
             </MyPortfolioContext.Provider>
             <MyExperiencesContext.Provider
                 value={myExperiences["value"]}>
-                <SectionMyExperiencesComponent />
+                <MyExperiencesComponent />
             </MyExperiencesContext.Provider>
             <LetsConnectContext.Provider
                 value={letsConnect["value"]}>
-                <SectionLetsConnectComponent />
+                <LetsConnectComponent />
             </LetsConnectContext.Provider>
             <BottomContext.Provider
                 value={bottom["value"]}>
-                <FooterBottomComponent />
+                <BottomComponent />
             </BottomContext.Provider>
         </>
     );

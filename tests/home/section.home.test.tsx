@@ -1,10 +1,10 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import SectionHomeComponent from "../../app/components/home/Section";
+import HomeComponent from "../../app/components/Home";
 
 describe("SectionHomeComponent", () => {
     it("renders an img", () => {
-        render(<SectionHomeComponent />);
+        render(<HomeComponent />);
         const img = screen.getByRole("img");
         expect(img).toBeInTheDocument();
     });

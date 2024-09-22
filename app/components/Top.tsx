@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { TopContext } from "../../contexts/Top";
+import { TopContext } from "../contexts/Top";
 
-export default function NavTopComponent(): React.ReactElement {
+export default function TopComponent(): React.ReactElement {
     const topContext: {} = useContext(TopContext);
 
     return (

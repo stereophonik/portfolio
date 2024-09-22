@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { LetsConnectContext } from "../../contexts/LetsConnect";
+import { LetsConnectContext } from "../contexts/LetsConnect";
 
-export default function SectionLetsConnectComponent(): React.ReactElement {
+export default function LetsConnectComponent(): React.ReactElement {
     const letsConnectContext: {} = useContext(LetsConnectContext);
 
     return (

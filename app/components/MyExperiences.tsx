@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { MyExperiencesContext } from "../../contexts/MyExperiences";
+import { MyExperiencesContext } from "../contexts/MyExperiences";
 
-export default function SectionMyExperiencesComponent(): React.ReactElement {
+export default function MyExperiencesComponent(): React.ReactElement {
     const myExperiencesContext: {} = useContext(MyExperiencesContext);
 
     return (

@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { WhatIOfferContext } from "../../contexts/WhatIOffer";
+import { WhatIOfferContext } from "../contexts/WhatIOffer";
 
-export default function SectionWhatIOfferComponent(): React.ReactElement {
+export default function WhatIOfferComponent(): React.ReactElement {
     const whatIOfferContext: {} = useContext(WhatIOfferContext);
 
     return (
