@@ -427,20 +427,35 @@ export default function Page(): React.ReactElement {
             className: myPortfolioParsedFromFile["classNameAbSpan"],
             content: myPortfolioParsedFromFile["contentAbSpan"]
         },
-        h2: {
-            id: myPortfolioParsedFromFile["idH2"],
-            className: myPortfolioParsedFromFile["classNameH2"],
-            content: myPortfolioParsedFromFile["contentH2"]
+        aaH2: {
+            id: myPortfolioParsedFromFile["idAaH2"],
+            className: myPortfolioParsedFromFile["classNameAaH2"],
+            content: myPortfolioParsedFromFile["contentAaH2"]
         },
-        span: {
-            id: myPortfolioParsedFromFile["idSpan"],
-            className: myPortfolioParsedFromFile["classNameSpan"],
-            content: myPortfolioParsedFromFile["contentSpan"]
+        acSpan: {
+            id: myPortfolioParsedFromFile["idAcSpan"],
+            className: myPortfolioParsedFromFile["classNameAcSpan"],
+            content: myPortfolioParsedFromFile["contentAcSpan"]
         },
-        a: {
-            href: `${myPortfolioParsedFromFile["hrefA"]}`,
-            target: myPortfolioParsedFromFile["targetA"],
-            content: myPortfolioParsedFromFile["contentA"]
+        aaA: {
+            href: `${myPortfolioParsedFromFile["hrefAaA"]}`,
+            target: myPortfolioParsedFromFile["targetAaA"],
+            content: myPortfolioParsedFromFile["contentAaA"]
+        },
+        abH2: {
+            id: myPortfolioParsedFromFile["idAbH2"],
+            className: myPortfolioParsedFromFile["classNameAbH2"],
+            content: myPortfolioParsedFromFile["contentAbH2"]
+        },
+        adSpan: {
+            id: myPortfolioParsedFromFile["idAdSpan"],
+            className: myPortfolioParsedFromFile["classNameAdSpan"],
+            content: myPortfolioParsedFromFile["contentAdSpan"]
+        },
+        abA: {
+            href: `${myPortfolioParsedFromFile["hrefAbA"]}`,
+            target: myPortfolioParsedFromFile["targetAbA"],
+            content: myPortfolioParsedFromFile["contentAbA"]
         }
     }
 
@@ -612,13 +627,13 @@ export default function Page(): React.ReactElement {
                 value={valueWhatIOffer}>
                 <SectionWhatIOfferComponent />
             </WhatIOfferContext.Provider>
+            <MyPortfolioContext.Provider
+                value={valueMyPortfolio}>
+                <SectionMyPortfolioComponent />
+            </MyPortfolioContext.Provider>
             <MyExperiencesContext.Provider
                 value={valueMyExperiences}>
-                <MyPortfolioContext.Provider
-                    value={valueMyPortfolio}>
-                    <SectionMyPortfolioComponent />
-                </MyPortfolioContext.Provider>
-                    <SectionMyExperiencesComponent />
+                <SectionMyExperiencesComponent />
             </MyExperiencesContext.Provider>
             <LetsConnectContext.Provider
                 value={valueLetsConnect}>

@@ -4,9 +4,9 @@ import SectionComponent from "../Section";
 import H1Component from "../H1";
 import H2Component from "../H2";
 import DivComponent from "../Div";
+import SpanComponent from "../Span";
 
 import { MyExperiencesContext } from "../../contexts/MyExperiences";
-import SpanComponent from "../Span";
 
 export default function SectionMyExperiencesComponent(): React.ReactElement {
     const myExperiencesContext: {} = useContext(MyExperiencesContext);
@@ -36,12 +36,12 @@ export default function SectionMyExperiencesComponent(): React.ReactElement {
             </H2Component>
             <DivComponent
                 id={myExperiencesContext["span"]["id"]}
-                className={myExperiencesContext["span"]["className"]}>
+                className="className01Span">
                 Since 2013 - Functional UI, API, and desktop testing experiences
             </DivComponent>
             <DivComponent
                 id={myExperiencesContext["span"]["id"]}
-                className={myExperiencesContext["span"]["className"]}>
+                className="className01Span">
                 Since June 2024 - editing and maintaining the website of Class Constructions
             </DivComponent>
         </SectionComponent>

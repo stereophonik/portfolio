@@ -12,11 +12,5 @@
   "contentAbSpan": "Experiences",
   "idH2": "idH2MyExperiences",
   "classNameH2": "className01H2",
-  "contentH2": "If you have a website design in mind, I can definitely bring it to life for you. This app was built with Next.js, despite my initial lack of experience. Check out my portfolio to see how I handled it:",
-  "idSpan": "idSpanMyExperiences",
-  "classNameSpan": "className01Span",
-  "contentSpan": "",
-  "hrefA": "https://github.com/stereophonik/portfolio/tree/main/app",
-  "targetA": "_blank",
-  "contentA": "My Portfolio Application"
+  "contentH2": "Please check the ones below:"
 }

@@ -20,17 +20,31 @@ export const MyPortfolioContext: React.Context<{}> = createContext({
         className: "defaultValue",
         content: "defaultValue"
     },
-    h2: {
+    aaH2: {
         id: "defaultValue",
         className: "defaultValue",
         content: "defaultValue"
     },
-    span: {
+    acSpan: {
         id: "defaultValue",
         className: "defaultValue",
         content: "defaultValue"
     },
-    a: {
+    aaA: {
+        href: "defaultValue",
+        content: "defaultValue"
+    },
+    abH2: {
+        id: "defaultValue",
+        className: "defaultValue",
+        content: "defaultValue"
+    },
+    adSpan: {
+        id: "defaultValue",
+        className: "defaultValue",
+        content: "defaultValue"
+    },
+    abA: {
         href: "defaultValue",
         content: "defaultValue"
     }

@@ -7,14 +7,10 @@ import SpanComponent from "../Span";
 import IframeComponent from "../Iframe";
 import AComponent from "../A";
 
-import { WhatIOfferContext } from "../../contexts/WhatIOffer";
 import { MyPortfolioContext } from "../../contexts/MyPortfolio";
-import { MyExperiencesContext } from "../../contexts/MyExperiences";
 
 export default function SectionMyPortfolioComponent(): React.ReactElement {
-    const whatIOfferContext = useContext(WhatIOfferContext);
     const myPortfolioContext: {} = useContext(MyPortfolioContext);
-    const myExperiencesContext: {} = useContext(MyExperiencesContext);
 
     return (
         <SectionComponent
@@ -35,31 +31,31 @@ export default function SectionMyPortfolioComponent(): React.ReactElement {
                 </SpanComponent>
             </H1Component>
             <H2Component
-                id={myPortfolioContext["h2"]["id"]}
-                className={myPortfolioContext["h2"]["className"]}>
-                {myPortfolioContext["h2"]["content"]}
+                id={myPortfolioContext["aaH2"]["id"]}
+                className={myPortfolioContext["aaH2"]["className"]}>
+                {myPortfolioContext["aaH2"]["content"]}
             </H2Component>
             <SpanComponent
-                id={myPortfolioContext["span"]["id"]}
-                className={myPortfolioContext["span"]["className"]}>
+                id={myPortfolioContext["acSpan"]["id"]}
+                className={myPortfolioContext["acSpan"]["className"]}>
                 <IframeComponent
                     id="idIframeMyPortfolio"
                     className="classNameIframe"
-                    src={myPortfolioContext["a"]["href"]}>
+                    src={myPortfolioContext["aaA"]["href"]}>
                 </IframeComponent>
             </SpanComponent>
             <H2Component
-                id={myExperiencesContext["h2"]["id"]}
-                className={myExperiencesContext["h2"]["className"]}>
-                {myExperiencesContext["h2"]["content"]}
+                id={myPortfolioContext["abH2"]["id"]}
+                className={myPortfolioContext["abH2"]["className"]}>
+                {myPortfolioContext["abH2"]["content"]}
             </H2Component>
             <SpanComponent
-                id={myExperiencesContext["span"]["id"]}
-                className={myExperiencesContext["span"]["className"]}>
+                id={myPortfolioContext["adSpan"]["id"]}
+                className={myPortfolioContext["adSpan"]["className"]}>
                 <AComponent
-                    href={myExperiencesContext["a"]["href"]}
-                    target={myExperiencesContext["a"]["target"]}>
-                    {myExperiencesContext["a"]["content"]}
+                    href={myPortfolioContext["abA"]["href"]}
+                    target={myPortfolioContext["abA"]["target"]}>
+                    {myPortfolioContext["abA"]["content"]}
                 </AComponent>
             </SpanComponent>
         </SectionComponent>
