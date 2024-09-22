@@ -1,63 +1,55 @@
 import { useContext } from "react";
-
-import SectionComponent from "../Section";
-import H1Component from "../H1";
-import H2Component from "../H2";
-import SpanComponent from "../Span";
-import IframeComponent from "../Iframe";
-import AComponent from "../A";
-
 import { MyPortfolioContext } from "../../contexts/MyPortfolio";
 
 export default function SectionMyPortfolioComponent(): React.ReactElement {
     const myPortfolioContext: {} = useContext(MyPortfolioContext);
 
     return (
-        <SectionComponent
+        <section
             id={myPortfolioContext["section"]["id"]}
             className={myPortfolioContext["section"]["className"]}>
-            <H1Component
+            <h1
                 id={myPortfolioContext["h1"]["id"]}
                 className={myPortfolioContext["h1"]["className"]}>
-                <SpanComponent
+                <span
                     id={myPortfolioContext["aaSpan"]["id"]}
                     className={myPortfolioContext["aaSpan"]["className"]}>
                     {myPortfolioContext["aaSpan"]["content"]}
-                </SpanComponent>
-                <SpanComponent
+                </span>
+                <span
                     id={myPortfolioContext["abSpan"]["id"]}
                     className={myPortfolioContext["abSpan"]["className"]}>
                     {myPortfolioContext["abSpan"]["content"]}
-                </SpanComponent>
-            </H1Component>
-            <H2Component
+                </span>
+            </h1>
+            <h2
                 id={myPortfolioContext["aaH2"]["id"]}
                 className={myPortfolioContext["aaH2"]["className"]}>
                 {myPortfolioContext["aaH2"]["content"]}
-            </H2Component>
-            <SpanComponent
+            </h2>
+            <span
                 id={myPortfolioContext["acSpan"]["id"]}
                 className={myPortfolioContext["acSpan"]["className"]}>
-                <IframeComponent
+                <iframe
                     id="idIframeMyPortfolio"
                     className="classNameIframe"
                     src={myPortfolioContext["aaA"]["href"]}>
-                </IframeComponent>
-            </SpanComponent>
-            <H2Component
+                </iframe>
+            </span>
+            <h2
                 id={myPortfolioContext["abH2"]["id"]}
                 className={myPortfolioContext["abH2"]["className"]}>
                 {myPortfolioContext["abH2"]["content"]}
-            </H2Component>
-            <SpanComponent
+            </h2>
+            <span
                 id={myPortfolioContext["adSpan"]["id"]}
                 className={myPortfolioContext["adSpan"]["className"]}>
-                <AComponent
+                <a
                     href={myPortfolioContext["abA"]["href"]}
                     target={myPortfolioContext["abA"]["target"]}>
                     {myPortfolioContext["abA"]["content"]}
-                </AComponent>
-            </SpanComponent>
-        </SectionComponent>
+                </a>
+            </span>
+        </section>
     );
 }
