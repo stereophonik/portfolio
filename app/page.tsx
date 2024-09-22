@@ -611,15 +611,15 @@ export default function Page(): React.ReactElement {
             <WhatIOfferContext.Provider
                 value={valueWhatIOffer}>
                 <SectionWhatIOfferComponent />
-                <MyExperiencesContext.Provider
-                    value={valueMyExperiences}>
-                    <MyPortfolioContext.Provider
-                        value={valueMyPortfolio}>
-                        <SectionMyPortfolioComponent />
-                    </MyPortfolioContext.Provider>
-                        <SectionMyExperiencesComponent />
-                </MyExperiencesContext.Provider>
             </WhatIOfferContext.Provider>
+            <MyExperiencesContext.Provider
+                value={valueMyExperiences}>
+                <MyPortfolioContext.Provider
+                    value={valueMyPortfolio}>
+                    <SectionMyPortfolioComponent />
+                </MyPortfolioContext.Provider>
+                    <SectionMyExperiencesComponent />
+            </MyExperiencesContext.Provider>
             <LetsConnectContext.Provider
                 value={valueLetsConnect}>
                 <SectionLetsConnectComponent />
