@@ -117,11 +117,6 @@ export default function Page(): React.ReactElement {
             },
             lis: [
                 {
-                    className: topParsedFromFile["classNameZzLis"],
-                    key: topParsedFromFile["keyZzLis"],
-                    content: topParsedFromFile["contentZzLis"]
-                },
-                {
                     className: topParsedFromFile["classNameAaLis"],
                     key: topParsedFromFile["keyAaLis"],
                     content: topParsedFromFile["contentAaLis"]
@@ -153,11 +148,6 @@ export default function Page(): React.ReactElement {
                 }
             ],
             as: [
-                {
-                    href: `${topParsedFromFile["hrefZzAs"]}`,
-                    target: topParsedFromFile["targetZzAs"],
-                    content: topParsedFromFile["contentZzAs"]
-                },
                 {
                     href: `${topParsedFromFile["hrefAaAs"]}`,
                     target: topParsedFromFile["targetAaAs"],

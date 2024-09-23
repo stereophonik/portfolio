@@ -40,11 +40,6 @@ export const TopContext: React.Context<{}> = createContext({
                 className: "defaultValue",
                 key: "defaultValue",
                 content: "defaultValue"
-            },
-            {
-                className: "defaultValue",
-                key: "defaultValue",
-                content: "defaultValue"
             }
         ],
         as: [
