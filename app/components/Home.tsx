@@ -31,11 +31,11 @@ export default function HomeComponent(): React.ReactElement {
                         {homeContext["zzSpan"]["content"]}
                     </span>
                 </h1>
-                <span
+                <div
                     id={homeContext["aaSpan"]["id"]}
                     className={homeContext["aaSpan"]["className"]}>
                     {homeContext["aaSpan"]["content"]}
-                </span>
+                </div>
                 <h2
 
                     id={homeContext["aaH2"]["id"]}
