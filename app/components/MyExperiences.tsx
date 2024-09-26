@@ -24,8 +24,11 @@ export default function MyExperiencesComponent(): React.ReactElement {
             </h1>
             <div style={{
                 backgroundColor: "#00260F",
-                paddingTop: "1vw",
-                paddingBottom: "1vw"
+                marginTop: "0.5vw",
+                marginBottom: "0.5vw",
+                paddingTop: "0.5vw",
+                paddingBottom: "0.5vw",
+                borderRadius: "12px"
             }}>
                 <div
                     className="className01Span"
@@ -72,8 +75,11 @@ export default function MyExperiencesComponent(): React.ReactElement {
             </div>
             <div style={{
                 backgroundColor: "#00260F",
-                paddingTop: "1vw",
-                paddingBottom: "1vw"
+                marginTop: "0.5vw",
+                marginBottom: "0.5vw",
+                paddingTop: "0.5vw",
+                paddingBottom: "0.5vw",
+                borderRadius: "12px"
             }}>
                 <div
                     className="className01Span"
@@ -135,8 +141,11 @@ export default function MyExperiencesComponent(): React.ReactElement {
             </div>
             <div style={{
                 backgroundColor: "#00260F",
-                paddingTop: "1vw",
-                paddingBottom: "1vw"
+                marginTop: "0.5vw",
+                marginBottom: "0.5vw",
+                paddingTop: "0.5vw",
+                paddingBottom: "0.5vw",
+                borderRadius: "12px"
             }}>
                 <div
                     className="className01Span"
@@ -191,8 +200,11 @@ export default function MyExperiencesComponent(): React.ReactElement {
             </div>
             <div style={{
                 backgroundColor: "#00260F",
-                paddingTop: "1vw",
-                paddingBottom: "1vw"
+                marginTop: "0.5vw",
+                marginBottom: "0.5vw",
+                paddingTop: "0.5vw",
+                paddingBottom: "0.5vw",
+                borderRadius: "12px"
             }}>
                 <div
                     className="className01Span"
@@ -314,8 +326,11 @@ export default function MyExperiencesComponent(): React.ReactElement {
             </div>
             <div style={{
                 backgroundColor: "#00260F",
-                paddingTop: "1vw",
-                paddingBottom: "1vw"
+                marginTop: "0.5vw",
+                marginBottom: "0.5vw",
+                paddingTop: "0.5vw",
+                paddingBottom: "0.5vw",
+                borderRadius: "12px"
             }}>
                 <div
                     className="className01Span"
