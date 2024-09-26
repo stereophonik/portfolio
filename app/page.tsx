@@ -480,11 +480,6 @@ export default function Page(): React.ReactElement {
                 className: myExperiencesParsedFromFile["classNameAbSpan"],
                 content: myExperiencesParsedFromFile["contentAbSpan"]
             },
-            h2: {
-                id: myExperiencesParsedFromFile["idH2"],
-                className: myExperiencesParsedFromFile["classNameH2"],
-                content: myExperiencesParsedFromFile["contentH2"]
-            },
             span: {
                 id: myExperiencesParsedFromFile["idSpan"],
                 className: myExperiencesParsedFromFile["classNameSpan"],

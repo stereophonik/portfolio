@@ -21,11 +21,6 @@ export const MyExperiencesContext: React.Context<{}> = createContext({
             className: "defaultValue",
             content: "defaultValue"
         },
-        h2: {
-            id: "defaultValue",
-            className: "defaultValue",
-            content: "defaultValue"
-        },
         span: {
             id: "defaultValue",
             className: "defaultValue",

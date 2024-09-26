@@ -22,11 +22,6 @@ export default function MyExperiencesComponent(): React.ReactElement {
                     {myExperiencesContext["abSpan"]["content"]}
                 </span>
             </h1>
-            <h2
-                id={myExperiencesContext["h2"]["id"]}
-                className={myExperiencesContext["h2"]["className"]}>
-                {myExperiencesContext["h2"]["content"]}
-            </h2>
             <div style={{
                 backgroundColor: "#00260F",
                 paddingTop: "1vw",
