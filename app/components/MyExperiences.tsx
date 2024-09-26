@@ -119,7 +119,7 @@ export default function MyExperiencesComponent(): React.ReactElement {
                     style={{
                         color: "#6B7280"
                     }}>
-                    Provided process automation, app development tasks, and database querying using PostgreSQL to
+                    Provided process automation, app development tasks, and database querying using PostgresSQL to
                     support testing efforts.
                 </div>
                 <div
