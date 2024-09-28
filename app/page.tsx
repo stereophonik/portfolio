@@ -1,6 +1,13 @@
 "use client"
 
-import { useState, useEffect, Dispatch, SetStateAction } from "react";
+import topDatumFile from "./datumFiles/top.json";
+import homeDatumFile from "./datumFiles/home.json";
+import aboutMeDatumFile from "./datumFiles/aboutMe.json";
+import whatIOfferDatumFile from "./datumFiles/whatIOffer.json";
+import myPortfolioDatumFile from "./datumFiles/myPortfolio.json";
+import myExperiencesDatumFile from "./datumFiles/myExperiences.json";
+import letsConnectDatumFile from "./datumFiles/letsConnect.json";
+import bottomDatumFile from "./datumFiles/bottom.json";
 
 import TopComponent from "./components/Top";
 import HomeComponent from "./components/Home";
@@ -30,165 +37,90 @@ import LetsConnectInterface from "./interfaces/LetsConnect";
 import BottomInterface from "./interfaces/Bottom";
 
 export default function Page(): React.ReactElement {
-    const [topParsedFromFile, setTopParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
-    const [homeParsedFromFile, setHomeParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
-    const [aboutMeParsedFromFile, setAboutMeParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
-    const [whatIOfferParsedFromFile, setWhatIOfferParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
-    const [myPortfolioParsedFromFile, setMyPortfolioParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
-    const [myExperiencesParsedFromFile, setMyExperiencesParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
-    const [letsConnectParsedFromFile, setLetsConnectParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
-    const [bottomParsedFromFile, setBottomParsedFromFile]: [{}, Dispatch<SetStateAction<{}>>] = useState({});
-
-    useEffect(() => {
-        fetch("/serving/datumFile?fileName=top", {
-            method: "GET"
-        })
-            .then(fromFile => fromFile.json())
-            .then(parsedFromFile => {
-                setTopParsedFromFile(parsedFromFile);
-            });
-
-        fetch("/serving/datumFile?fileName=home", {
-            method: "GET"
-        })
-            .then(fromFile => fromFile.json())
-            .then(parsedFromFile => {
-                setHomeParsedFromFile(parsedFromFile);
-            });
-
-        fetch("/serving/datumFile?fileName=aboutMe", {
-            method: "GET"
-        })
-            .then(fromFile => fromFile.json())
-            .then(parsedFromFile => {
-                setAboutMeParsedFromFile(parsedFromFile);
-            });
-
-        fetch("/serving/datumFile?fileName=whatIOffer", {
-            method: "GET"
-        })
-            .then(fromFile => fromFile.json())
-            .then(parsedFromFile => {
-                setWhatIOfferParsedFromFile(parsedFromFile);
-            });
-
-        fetch("/serving/datumFile?fileName=myPortfolio", {
-            method: "GET"
-        })
-            .then(fromFile => fromFile.json())
-            .then(parsedFromFile => {
-                setMyPortfolioParsedFromFile(parsedFromFile);
-            });
-
-        fetch("/serving/datumFile?fileName=myExperiences", {
-            method: "GET"
-        })
-            .then(fromFile => fromFile.json())
-            .then(parsedFromFile => {
-                setMyExperiencesParsedFromFile(parsedFromFile);
-            });
-
-        fetch("/serving/datumFile?fileName=letsConnect", {
-            method: "GET"
-        })
-            .then(fromFile => fromFile.json())
-            .then(parsedFromFile => {
-                setLetsConnectParsedFromFile(parsedFromFile);
-            });
-
-        fetch("/serving/datumFile?fileName=bottom", {
-            method: "GET"
-        })
-            .then(fromFile => fromFile.json())
-            .then(parsedFromFile => {
-                setBottomParsedFromFile(parsedFromFile);
-            });
-    }, []);
-
     const top: TopInterface = {
         value: {
             nav: {
-                id: topParsedFromFile["idNav"],
-                className: topParsedFromFile["classNameNav"]
+                id: topDatumFile["idNav"],
+                className: topDatumFile["classNameNav"]
             },
             ul: {
-                id: topParsedFromFile["idUl"],
-                className: topParsedFromFile["classNameUl"]
+                id: topDatumFile["idUl"],
+                className: topDatumFile["classNameUl"]
             },
             lis: [
                 {
-                    className: topParsedFromFile["classNameAaLis"],
-                    key: topParsedFromFile["keyAaLis"],
-                    content: topParsedFromFile["contentAaLis"]
+                    className: topDatumFile["classNameAaLis"],
+                    key: topDatumFile["keyAaLis"],
+                    content: topDatumFile["contentAaLis"]
                 },
                 {
-                    className: topParsedFromFile["classNameAbLis"],
-                    key: topParsedFromFile["keyAbLis"],
-                    content: topParsedFromFile["contentAbLis"]
+                    className: topDatumFile["classNameAbLis"],
+                    key: topDatumFile["keyAbLis"],
+                    content: topDatumFile["contentAbLis"]
                 },
                 {
-                    className: topParsedFromFile["classNameAcLis"],
-                    key: topParsedFromFile["keyAcLis"],
-                    content: topParsedFromFile["contentAcLis"]
+                    className: topDatumFile["classNameAcLis"],
+                    key: topDatumFile["keyAcLis"],
+                    content: topDatumFile["contentAcLis"]
                 },
                 {
-                    className: topParsedFromFile["classNameAdLis"],
-                    key: topParsedFromFile["keyAdLis"],
-                    content: topParsedFromFile["contentAdLis"]
+                    className: topDatumFile["classNameAdLis"],
+                    key: topDatumFile["keyAdLis"],
+                    content: topDatumFile["contentAdLis"]
                 },
                 {
-                    className: topParsedFromFile["classNameAeLis"],
-                    key: topParsedFromFile["keyAeLis"],
-                    content: topParsedFromFile["contentAeLis"]
+                    className: topDatumFile["classNameAeLis"],
+                    key: topDatumFile["keyAeLis"],
+                    content: topDatumFile["contentAeLis"]
                 },
                 {
-                    className: topParsedFromFile["classNameAfLis"],
-                    key: topParsedFromFile["keyAfLis"],
-                    content: topParsedFromFile["contentAfLis"]
+                    className: topDatumFile["classNameAfLis"],
+                    key: topDatumFile["keyAfLis"],
+                    content: topDatumFile["contentAfLis"]
                 }
             ],
             as: [
                 {
-                    href: `${topParsedFromFile["hrefAaAs"]}`,
-                    target: topParsedFromFile["targetAaAs"],
-                    content: topParsedFromFile["contentAaAs"]
+                    href: `${topDatumFile["hrefAaAs"]}`,
+                    target: topDatumFile["targetAaAs"],
+                    content: topDatumFile["contentAaAs"]
                 },
                 {
-                    href: `${topParsedFromFile["hrefAbAs"]}`,
-                    target: topParsedFromFile["targetAbAs"],
-                    content: topParsedFromFile["contentAbAs"]
+                    href: `${topDatumFile["hrefAbAs"]}`,
+                    target: topDatumFile["targetAbAs"],
+                    content: topDatumFile["contentAbAs"]
                 },
                 {
-                    href: `${topParsedFromFile["hrefAcAs"]}`,
-                    target: topParsedFromFile["targetAcAs"],
-                    content: topParsedFromFile["contentAcAs"]
+                    href: `${topDatumFile["hrefAcAs"]}`,
+                    target: topDatumFile["targetAcAs"],
+                    content: topDatumFile["contentAcAs"]
                 },
                 {
-                    href: `${topParsedFromFile["hrefAdAs"]}`,
-                    target: topParsedFromFile["targetAdAs"],
-                    content: topParsedFromFile["contentAdAs"]
+                    href: `${topDatumFile["hrefAdAs"]}`,
+                    target: topDatumFile["targetAdAs"],
+                    content: topDatumFile["contentAdAs"]
                 },
                 {
-                    href: `${topParsedFromFile["hrefAeAs"]}`,
-                    target: topParsedFromFile["targetAeAs"],
-                    content: topParsedFromFile["contentAeAs"]
+                    href: `${topDatumFile["hrefAeAs"]}`,
+                    target: topDatumFile["targetAeAs"],
+                    content: topDatumFile["contentAeAs"]
                 },
                 {
-                    href: `${topParsedFromFile["hrefAfAs"]}`,
-                    target: topParsedFromFile["targetAfAs"],
-                    content: topParsedFromFile["contentAfAs"]
+                    href: `${topDatumFile["hrefAfAs"]}`,
+                    target: topDatumFile["targetAfAs"],
+                    content: topDatumFile["contentAfAs"]
                 }
             ],
             a: {
-                href: `${topParsedFromFile["hrefA"]}`,
-                target: topParsedFromFile["targetA"],
-                content: topParsedFromFile["contentA"]
+                href: `${topDatumFile["hrefA"]}`,
+                target: topDatumFile["targetA"],
+                content: topDatumFile["contentA"]
             },
             img: {
-                id: topParsedFromFile["idImg"],
-                className: topParsedFromFile["classNameImg"],
-                src: topParsedFromFile["srcImg"],
-                alt: topParsedFromFile["altImg"]
+                id: topDatumFile["idImg"],
+                className: topDatumFile["classNameImg"],
+                src: topDatumFile["srcImg"],
+                alt: topDatumFile["altImg"]
             }
         }
     }
@@ -196,72 +128,72 @@ export default function Page(): React.ReactElement {
     const home: HomeInterface = {
         value: {
             section: {
-                id: homeParsedFromFile["idSection"],
-                className: homeParsedFromFile["classNameSection"]
+                id: homeDatumFile["idSection"],
+                className: homeDatumFile["classNameSection"]
             },
             img: {
-                id: homeParsedFromFile["idImg"],
-                className: homeParsedFromFile["classNameImg"],
-                src: homeParsedFromFile["srcImg"],
-                alt: homeParsedFromFile["altImg"]
+                id: homeDatumFile["idImg"],
+                className: homeDatumFile["classNameImg"],
+                src: homeDatumFile["srcImg"],
+                alt: homeDatumFile["altImg"]
             },
             div: {
-                id: homeParsedFromFile["idDiv"],
-                className: homeParsedFromFile["classNameDiv"]
+                id: homeDatumFile["idDiv"],
+                className: homeDatumFile["classNameDiv"]
             },
             h1: {
-                id: homeParsedFromFile["idH1"],
-                className: homeParsedFromFile["classNameH1"],
-                content: homeParsedFromFile["contentH1"]
+                id: homeDatumFile["idH1"],
+                className: homeDatumFile["classNameH1"],
+                content: homeDatumFile["contentH1"]
             },
             zySpan: {
-                id: homeParsedFromFile["idZySpan"],
-                className: homeParsedFromFile["classNameZySpan"],
-                content: homeParsedFromFile["contentZySpan"]
+                id: homeDatumFile["idZySpan"],
+                className: homeDatumFile["classNameZySpan"],
+                content: homeDatumFile["contentZySpan"]
             },
             zzSpan: {
-                id: homeParsedFromFile["idZzSpan"],
-                className: homeParsedFromFile["classNameZzSpan"],
-                content: homeParsedFromFile["contentZzSpan"]
+                id: homeDatumFile["idZzSpan"],
+                className: homeDatumFile["classNameZzSpan"],
+                content: homeDatumFile["contentZzSpan"]
             },
             aaSpan: {
-                id: homeParsedFromFile["idAaSpan"],
-                className: homeParsedFromFile["classNameAaSpan"],
-                content: homeParsedFromFile["contentAaSpan"]
+                id: homeDatumFile["idAaSpan"],
+                className: homeDatumFile["classNameAaSpan"],
+                content: homeDatumFile["contentAaSpan"]
             },
             abSpan: {
-                id: homeParsedFromFile["idAbSpan"],
-                className: homeParsedFromFile["classNameAbSpan"],
-                content: homeParsedFromFile["contentAbSpan"]
+                id: homeDatumFile["idAbSpan"],
+                className: homeDatumFile["classNameAbSpan"],
+                content: homeDatumFile["contentAbSpan"]
             },
             acSpan: {
-                id: homeParsedFromFile["idAcSpan"],
-                className: homeParsedFromFile["classNameAcSpan"],
-                content: homeParsedFromFile["contentAcSpan"]
+                id: homeDatumFile["idAcSpan"],
+                className: homeDatumFile["classNameAcSpan"],
+                content: homeDatumFile["contentAcSpan"]
             },
             adSpan: {
-                id: homeParsedFromFile["idAdSpan"],
-                className: homeParsedFromFile["classNameAdSpan"],
-                content: homeParsedFromFile["contentAdSpan"]
+                id: homeDatumFile["idAdSpan"],
+                className: homeDatumFile["classNameAdSpan"],
+                content: homeDatumFile["contentAdSpan"]
             },
             aaH2: {
-                id: homeParsedFromFile["idAaH2"],
-                className: homeParsedFromFile["classNameAaH2"],
-                content: homeParsedFromFile["contentAaH2"]
+                id: homeDatumFile["idAaH2"],
+                className: homeDatumFile["classNameAaH2"],
+                content: homeDatumFile["contentAaH2"]
             },
             abH2: {
-                id: homeParsedFromFile["idAbH2"],
-                className: homeParsedFromFile["classNameAbH2"],
-                content: homeParsedFromFile["contentAbH2"]
+                id: homeDatumFile["idAbH2"],
+                className: homeDatumFile["classNameAbH2"],
+                content: homeDatumFile["contentAbH2"]
             },
             button: {
-                id: homeParsedFromFile["idButton"],
-                className: homeParsedFromFile["classNameButton"],
-                content: homeParsedFromFile["contentButton"]
+                id: homeDatumFile["idButton"],
+                className: homeDatumFile["classNameButton"],
+                content: homeDatumFile["contentButton"]
             },
             openWindow: {
-                url: homeParsedFromFile["urlOpenWindow"],
-                target: homeParsedFromFile["targetOpenWindow"]
+                url: homeDatumFile["urlOpenWindow"],
+                target: homeDatumFile["targetOpenWindow"]
             }
         }
     }
@@ -269,88 +201,88 @@ export default function Page(): React.ReactElement {
     const aboutMe: AboutMeInterface = {
         value: {
             section: {
-                id: aboutMeParsedFromFile["idSection"],
-                className: aboutMeParsedFromFile["classNameSection"]
+                id: aboutMeDatumFile["idSection"],
+                className: aboutMeDatumFile["classNameSection"]
             },
             img: {
-                id: aboutMeParsedFromFile["idImg"],
-                className: aboutMeParsedFromFile["classNameImg"],
-                src: aboutMeParsedFromFile["srcImg"],
-                alt: aboutMeParsedFromFile["altImg"]
+                id: aboutMeDatumFile["idImg"],
+                className: aboutMeDatumFile["classNameImg"],
+                src: aboutMeDatumFile["srcImg"],
+                alt: aboutMeDatumFile["altImg"]
             },
             div: {
-                id: aboutMeParsedFromFile["idDiv"],
-                className: aboutMeParsedFromFile["classNameDiv"]
+                id: aboutMeDatumFile["idDiv"],
+                className: aboutMeDatumFile["classNameDiv"]
             },
             h1: {
-                id: aboutMeParsedFromFile["idH1"],
-                className: aboutMeParsedFromFile["classNameH1"],
-                content: aboutMeParsedFromFile["contentH1"]
+                id: aboutMeDatumFile["idH1"],
+                className: aboutMeDatumFile["classNameH1"],
+                content: aboutMeDatumFile["contentH1"]
             },
             zySpan: {
-                id: aboutMeParsedFromFile["idZySpan"],
-                className: aboutMeParsedFromFile["classNameZySpan"],
-                content: aboutMeParsedFromFile["contentZySpan"]
+                id: aboutMeDatumFile["idZySpan"],
+                className: aboutMeDatumFile["classNameZySpan"],
+                content: aboutMeDatumFile["contentZySpan"]
             },
             zzSpan: {
-                id: aboutMeParsedFromFile["idZzSpan"],
-                className: aboutMeParsedFromFile["classNameZzSpan"],
-                content: aboutMeParsedFromFile["contentZzSpan"]
+                id: aboutMeDatumFile["idZzSpan"],
+                className: aboutMeDatumFile["classNameZzSpan"],
+                content: aboutMeDatumFile["contentZzSpan"]
             },
             aaSpan: {
-                id: aboutMeParsedFromFile["idAaSpan"],
-                className: aboutMeParsedFromFile["classNameAaSpan"],
-                content: aboutMeParsedFromFile["contentAaSpan"]
+                id: aboutMeDatumFile["idAaSpan"],
+                className: aboutMeDatumFile["classNameAaSpan"],
+                content: aboutMeDatumFile["contentAaSpan"]
             },
             abSpan: {
-                id: aboutMeParsedFromFile["idAbSpan"],
-                className: aboutMeParsedFromFile["classNameAbSpan"],
-                content: aboutMeParsedFromFile["contentAbSpan"]
+                id: aboutMeDatumFile["idAbSpan"],
+                className: aboutMeDatumFile["classNameAbSpan"],
+                content: aboutMeDatumFile["contentAbSpan"]
             },
             acSpan: {
-                id: aboutMeParsedFromFile["idAcSpan"],
-                className: aboutMeParsedFromFile["classNameAcSpan"],
-                content: aboutMeParsedFromFile["contentAcSpan"]
+                id: aboutMeDatumFile["idAcSpan"],
+                className: aboutMeDatumFile["classNameAcSpan"],
+                content: aboutMeDatumFile["contentAcSpan"]
             },
             adSpan: {
-                id: aboutMeParsedFromFile["idAdSpan"],
-                className: aboutMeParsedFromFile["classNameAdSpan"],
-                content: aboutMeParsedFromFile["contentAdSpan"]
+                id: aboutMeDatumFile["idAdSpan"],
+                className: aboutMeDatumFile["classNameAdSpan"],
+                content: aboutMeDatumFile["contentAdSpan"]
             },
             h2: {
-                id: aboutMeParsedFromFile["idH2"],
-                className: aboutMeParsedFromFile["classNameH2"],
-                content: aboutMeParsedFromFile["contentH2"]
+                id: aboutMeDatumFile["idH2"],
+                className: aboutMeDatumFile["classNameH2"],
+                content: aboutMeDatumFile["contentH2"]
             },
             ul: {
-                id: aboutMeParsedFromFile["idUl"],
-                className: aboutMeParsedFromFile["classNameUl"]
+                id: aboutMeDatumFile["idUl"],
+                className: aboutMeDatumFile["classNameUl"]
             },
             lis: [
                 {
-                    className: aboutMeParsedFromFile["classNameAaLis"],
-                    key: aboutMeParsedFromFile["keyAaLis"],
-                    content: aboutMeParsedFromFile["contentAaLis"]
+                    className: aboutMeDatumFile["classNameAaLis"],
+                    key: aboutMeDatumFile["keyAaLis"],
+                    content: aboutMeDatumFile["contentAaLis"]
                 },
                 {
-                    className: aboutMeParsedFromFile["classNameAbLis"],
-                    key: aboutMeParsedFromFile["keyAbLis"],
-                    content: aboutMeParsedFromFile["contentAbLis"]
+                    className: aboutMeDatumFile["classNameAbLis"],
+                    key: aboutMeDatumFile["keyAbLis"],
+                    content: aboutMeDatumFile["contentAbLis"]
                 },
                 {
-                    className: aboutMeParsedFromFile["classNameAcLis"],
-                    key: aboutMeParsedFromFile["keyAcLis"],
-                    content: aboutMeParsedFromFile["contentAcLis"]
+                    className: aboutMeDatumFile["classNameAcLis"],
+                    key: aboutMeDatumFile["keyAcLis"],
+                    content: aboutMeDatumFile["contentAcLis"]
                 }
             ],
             button: {
-                id: aboutMeParsedFromFile["idButton"],
-                className: aboutMeParsedFromFile["classNameButton"],
-                content: aboutMeParsedFromFile["contentButton"]
+                id: aboutMeDatumFile["idButton"],
+                className: aboutMeDatumFile["classNameButton"],
+                content: aboutMeDatumFile["contentButton"]
             },
             openWindow: {
-                url: aboutMeParsedFromFile["urlOpenWindow"],
-                target: aboutMeParsedFromFile["targetOpenWindow"]
+                url: aboutMeDatumFile["urlOpenWindow"],
+                target: aboutMeDatumFile["targetOpenWindow"]
             }
         }
     }
@@ -358,48 +290,48 @@ export default function Page(): React.ReactElement {
     const whatIOffer: WhatIOfferInterface = {
         value: {
             section: {
-                id: whatIOfferParsedFromFile["idSection"],
-                className: whatIOfferParsedFromFile["classNameSection"]
+                id: whatIOfferDatumFile["idSection"],
+                className: whatIOfferDatumFile["classNameSection"]
             },
             h1: {
-                id: whatIOfferParsedFromFile["idH1"],
-                className: whatIOfferParsedFromFile["classNameH1"],
-                content: whatIOfferParsedFromFile["contentH1"]
+                id: whatIOfferDatumFile["idH1"],
+                className: whatIOfferDatumFile["classNameH1"],
+                content: whatIOfferDatumFile["contentH1"]
             },
             aaSpan: {
-                id: whatIOfferParsedFromFile["idAaSpan"],
-                className: whatIOfferParsedFromFile["classNameAaSpan"],
-                content: whatIOfferParsedFromFile["contentAaSpan"]
+                id: whatIOfferDatumFile["idAaSpan"],
+                className: whatIOfferDatumFile["classNameAaSpan"],
+                content: whatIOfferDatumFile["contentAaSpan"]
             },
             abSpan: {
-                id: whatIOfferParsedFromFile["idAbSpan"],
-                className: whatIOfferParsedFromFile["classNameAbSpan"],
-                content: whatIOfferParsedFromFile["contentAbSpan"]
+                id: whatIOfferDatumFile["idAbSpan"],
+                className: whatIOfferDatumFile["classNameAbSpan"],
+                content: whatIOfferDatumFile["contentAbSpan"]
             },
             ul: {
-                id: whatIOfferParsedFromFile["idUl"],
-                className: whatIOfferParsedFromFile["classNameUl"]
+                id: whatIOfferDatumFile["idUl"],
+                className: whatIOfferDatumFile["classNameUl"]
             },
             h2: {
-                id: whatIOfferParsedFromFile["idH2"],
-                className: whatIOfferParsedFromFile["classNameH2"],
-                content: whatIOfferParsedFromFile["contentH2"]
+                id: whatIOfferDatumFile["idH2"],
+                className: whatIOfferDatumFile["classNameH2"],
+                content: whatIOfferDatumFile["contentH2"]
             },
             lis: [
                 {
-                    className: whatIOfferParsedFromFile["classNameAaLis"],
-                    key: whatIOfferParsedFromFile["keyAaLis"],
-                    content: whatIOfferParsedFromFile["contentAaLis"]
+                    className: whatIOfferDatumFile["classNameAaLis"],
+                    key: whatIOfferDatumFile["keyAaLis"],
+                    content: whatIOfferDatumFile["contentAaLis"]
                 },
                 {
-                    className: whatIOfferParsedFromFile["classNameAbLis"],
-                    key: whatIOfferParsedFromFile["keyAbLis"],
-                    content: whatIOfferParsedFromFile["contentAbLis"]
+                    className: whatIOfferDatumFile["classNameAbLis"],
+                    key: whatIOfferDatumFile["keyAbLis"],
+                    content: whatIOfferDatumFile["contentAbLis"]
                 },
                 {
-                    className: whatIOfferParsedFromFile["classNameAcLis"],
-                    key: whatIOfferParsedFromFile["keyAcLis"],
-                    content: whatIOfferParsedFromFile["contentAcLis"]
+                    className: whatIOfferDatumFile["classNameAcLis"],
+                    key: whatIOfferDatumFile["keyAcLis"],
+                    content: whatIOfferDatumFile["contentAcLis"]
                 }
             ]
         }
@@ -408,53 +340,53 @@ export default function Page(): React.ReactElement {
     const myPortfolio: MyPortfolioInterface = {
         value: {
             section: {
-                id: myPortfolioParsedFromFile["idSection"],
-                className: myPortfolioParsedFromFile["classNameSection"]
+                id: myPortfolioDatumFile["idSection"],
+                className: myPortfolioDatumFile["classNameSection"]
             },
             h1: {
-                id: myPortfolioParsedFromFile["idH1"],
-                className: myPortfolioParsedFromFile["classNameH1"],
-                content: myPortfolioParsedFromFile["contentH1"]
+                id: myPortfolioDatumFile["idH1"],
+                className: myPortfolioDatumFile["classNameH1"],
+                content: myPortfolioDatumFile["contentH1"]
             },
             aaSpan: {
-                id: myPortfolioParsedFromFile["idAaSpan"],
-                className: myPortfolioParsedFromFile["classNameAaSpan"],
-                content: myPortfolioParsedFromFile["contentAaSpan"]
+                id: myPortfolioDatumFile["idAaSpan"],
+                className: myPortfolioDatumFile["classNameAaSpan"],
+                content: myPortfolioDatumFile["contentAaSpan"]
             },
             abSpan: {
-                id: myPortfolioParsedFromFile["idAbSpan"],
-                className: myPortfolioParsedFromFile["classNameAbSpan"],
-                content: myPortfolioParsedFromFile["contentAbSpan"]
+                id: myPortfolioDatumFile["idAbSpan"],
+                className: myPortfolioDatumFile["classNameAbSpan"],
+                content: myPortfolioDatumFile["contentAbSpan"]
             },
             aaH2: {
-                id: myPortfolioParsedFromFile["idAaH2"],
-                className: myPortfolioParsedFromFile["classNameAaH2"],
-                content: myPortfolioParsedFromFile["contentAaH2"]
+                id: myPortfolioDatumFile["idAaH2"],
+                className: myPortfolioDatumFile["classNameAaH2"],
+                content: myPortfolioDatumFile["contentAaH2"]
             },
             acSpan: {
-                id: myPortfolioParsedFromFile["idAcSpan"],
-                className: myPortfolioParsedFromFile["classNameAcSpan"],
-                content: myPortfolioParsedFromFile["contentAcSpan"]
+                id: myPortfolioDatumFile["idAcSpan"],
+                className: myPortfolioDatumFile["classNameAcSpan"],
+                content: myPortfolioDatumFile["contentAcSpan"]
             },
             aaA: {
-                href: `${myPortfolioParsedFromFile["hrefAaA"]}`,
-                target: myPortfolioParsedFromFile["targetAaA"],
-                content: myPortfolioParsedFromFile["contentAaA"]
+                href: `${myPortfolioDatumFile["hrefAaA"]}`,
+                target: myPortfolioDatumFile["targetAaA"],
+                content: myPortfolioDatumFile["contentAaA"]
             },
             abH2: {
-                id: myPortfolioParsedFromFile["idAbH2"],
-                className: myPortfolioParsedFromFile["classNameAbH2"],
-                content: myPortfolioParsedFromFile["contentAbH2"]
+                id: myPortfolioDatumFile["idAbH2"],
+                className: myPortfolioDatumFile["classNameAbH2"],
+                content: myPortfolioDatumFile["contentAbH2"]
             },
             adSpan: {
-                id: myPortfolioParsedFromFile["idAdSpan"],
-                className: myPortfolioParsedFromFile["classNameAdSpan"],
-                content: myPortfolioParsedFromFile["contentAdSpan"]
+                id: myPortfolioDatumFile["idAdSpan"],
+                className: myPortfolioDatumFile["classNameAdSpan"],
+                content: myPortfolioDatumFile["contentAdSpan"]
             },
             abA: {
-                href: `${myPortfolioParsedFromFile["hrefAbA"]}`,
-                target: myPortfolioParsedFromFile["targetAbA"],
-                content: myPortfolioParsedFromFile["contentAbA"]
+                href: `${myPortfolioDatumFile["hrefAbA"]}`,
+                target: myPortfolioDatumFile["targetAbA"],
+                content: myPortfolioDatumFile["contentAbA"]
             }
         }
     }
@@ -462,33 +394,33 @@ export default function Page(): React.ReactElement {
     const myExperiences: MyExperiencesInterface = {
         value: {
             section: {
-                id: myExperiencesParsedFromFile["idSection"],
-                className: myExperiencesParsedFromFile["classNameSection"]
+                id: myExperiencesDatumFile["idSection"],
+                className: myExperiencesDatumFile["classNameSection"]
             },
             h1: {
-                id: myExperiencesParsedFromFile["idH1"],
-                className: myExperiencesParsedFromFile["classNameH1"],
-                content: myExperiencesParsedFromFile["contentH1"]
+                id: myExperiencesDatumFile["idH1"],
+                className: myExperiencesDatumFile["classNameH1"],
+                content: myExperiencesDatumFile["contentH1"]
             },
             aaSpan: {
-                id: myExperiencesParsedFromFile["idAaSpan"],
-                className: myExperiencesParsedFromFile["classNameAaSpan"],
-                content: myExperiencesParsedFromFile["contentAaSpan"]
+                id: myExperiencesDatumFile["idAaSpan"],
+                className: myExperiencesDatumFile["classNameAaSpan"],
+                content: myExperiencesDatumFile["contentAaSpan"]
             },
             abSpan: {
-                id: myExperiencesParsedFromFile["idAbSpan"],
-                className: myExperiencesParsedFromFile["classNameAbSpan"],
-                content: myExperiencesParsedFromFile["contentAbSpan"]
+                id: myExperiencesDatumFile["idAbSpan"],
+                className: myExperiencesDatumFile["classNameAbSpan"],
+                content: myExperiencesDatumFile["contentAbSpan"]
             },
             span: {
-                id: myExperiencesParsedFromFile["idSpan"],
-                className: myExperiencesParsedFromFile["classNameSpan"],
-                content: myExperiencesParsedFromFile["contentSpan"]
+                id: myExperiencesDatumFile["idSpan"],
+                className: myExperiencesDatumFile["classNameSpan"],
+                content: myExperiencesDatumFile["contentSpan"]
             },
             a: {
-                href: `${myExperiencesParsedFromFile["hrefA"]}`,
-                target: myExperiencesParsedFromFile["targetA"],
-                content: myExperiencesParsedFromFile["contentA"]
+                href: `${myExperiencesDatumFile["hrefA"]}`,
+                target: myExperiencesDatumFile["targetA"],
+                content: myExperiencesDatumFile["contentA"]
             }
         }
     }
@@ -496,42 +428,42 @@ export default function Page(): React.ReactElement {
     const letsConnect: LetsConnectInterface = {
         value: {
             section: {
-                id: letsConnectParsedFromFile["idSection"],
-                className: letsConnectParsedFromFile["classNameSection"]
+                id: letsConnectDatumFile["idSection"],
+                className: letsConnectDatumFile["classNameSection"]
             },
             h1: {
-                id: letsConnectParsedFromFile["idH1"],
-                className: letsConnectParsedFromFile["classNameH1"],
-                content: letsConnectParsedFromFile["contentH1"]
+                id: letsConnectDatumFile["idH1"],
+                className: letsConnectDatumFile["classNameH1"],
+                content: letsConnectDatumFile["contentH1"]
             },
             aaSpan: {
-                id: letsConnectParsedFromFile["idAaSpan"],
-                className: letsConnectParsedFromFile["classNameAaSpan"],
-                content: letsConnectParsedFromFile["contentAaSpan"]
+                id: letsConnectDatumFile["idAaSpan"],
+                className: letsConnectDatumFile["classNameAaSpan"],
+                content: letsConnectDatumFile["contentAaSpan"]
             },
             abSpan: {
-                id: letsConnectParsedFromFile["idAbSpan"],
-                className: letsConnectParsedFromFile["classNameAbSpan"],
-                content: letsConnectParsedFromFile["contentAbSpan"]
+                id: letsConnectDatumFile["idAbSpan"],
+                className: letsConnectDatumFile["classNameAbSpan"],
+                content: letsConnectDatumFile["contentAbSpan"]
             },
             h2: {
-                id: letsConnectParsedFromFile["idH2"],
-                className: letsConnectParsedFromFile["classNameH2"],
-                content: letsConnectParsedFromFile["contentH2"]
+                id: letsConnectDatumFile["idH2"],
+                className: letsConnectDatumFile["classNameH2"],
+                content: letsConnectDatumFile["contentH2"]
             },
             a: {
-                href: `${letsConnectParsedFromFile["hrefA"]}`,
-                target: letsConnectParsedFromFile["targetA"],
-                content: letsConnectParsedFromFile["contentA"]
+                href: `${letsConnectDatumFile["hrefA"]}`,
+                target: letsConnectDatumFile["targetA"],
+                content: letsConnectDatumFile["contentA"]
             },
             button: {
-                id: letsConnectParsedFromFile["idButton"],
-                className: letsConnectParsedFromFile["classNameButton"],
-                content: letsConnectParsedFromFile["contentButton"]
+                id: letsConnectDatumFile["idButton"],
+                className: letsConnectDatumFile["classNameButton"],
+                content: letsConnectDatumFile["contentButton"]
             },
             openWindow: {
-                url: letsConnectParsedFromFile["urlOpenWindow"],
-                target: letsConnectParsedFromFile["targetOpenWindow"]
+                url: letsConnectDatumFile["urlOpenWindow"],
+                target: letsConnectDatumFile["targetOpenWindow"]
             }
         }
     }
@@ -539,73 +471,73 @@ export default function Page(): React.ReactElement {
     const bottom: BottomInterface = {
         value: {
             footer: {
-                id: bottomParsedFromFile["idFooter"],
-                className: bottomParsedFromFile["classNameFooter"]
+                id: bottomDatumFile["idFooter"],
+                className: bottomDatumFile["classNameFooter"]
             },
             ul: {
-                id: bottomParsedFromFile["idUl"],
-                className: bottomParsedFromFile["classNameUl"]
+                id: bottomDatumFile["idUl"],
+                className: bottomDatumFile["classNameUl"]
             },
             lis: [
                 {
-                    className: bottomParsedFromFile["classNameAaLis"],
-                    key: bottomParsedFromFile["keyAaLis"],
-                    content: bottomParsedFromFile["contentAaLis"]
+                    className: bottomDatumFile["classNameAaLis"],
+                    key: bottomDatumFile["keyAaLis"],
+                    content: bottomDatumFile["contentAaLis"]
                 },
                 {
-                    className: bottomParsedFromFile["classNameAbLis"],
-                    key: bottomParsedFromFile["keyAbLis"],
-                    content: bottomParsedFromFile["contentAbLis"]
+                    className: bottomDatumFile["classNameAbLis"],
+                    key: bottomDatumFile["keyAbLis"],
+                    content: bottomDatumFile["contentAbLis"]
                 }
             ],
             as: [
                 {
-                    href: `${bottomParsedFromFile["hrefAaAs"]}`,
-                    target: bottomParsedFromFile["targetAaAs"],
-                    content: bottomParsedFromFile["contentAaAs"]
+                    href: `${bottomDatumFile["hrefAaAs"]}`,
+                    target: bottomDatumFile["targetAaAs"],
+                    content: bottomDatumFile["contentAaAs"]
                 },
                 {
-                    href: `${bottomParsedFromFile["hrefAbAs"]}`,
-                    target: bottomParsedFromFile["targetAbAs"],
-                    content: bottomParsedFromFile["contentAbAs"]
+                    href: `${bottomDatumFile["hrefAbAs"]}`,
+                    target: bottomDatumFile["targetAbAs"],
+                    content: bottomDatumFile["contentAbAs"]
                 }
             ],
             imgs: [
                 {
-                    id: bottomParsedFromFile["idAaImgs"],
-                    className: bottomParsedFromFile["classNameAaImgs"],
-                    src: bottomParsedFromFile["srcAaImgs"],
-                    alt: bottomParsedFromFile["altAaImgs"]
+                    id: bottomDatumFile["idAaImgs"],
+                    className: bottomDatumFile["classNameAaImgs"],
+                    src: bottomDatumFile["srcAaImgs"],
+                    alt: bottomDatumFile["altAaImgs"]
                 },
                 {
-                    id: bottomParsedFromFile["idAbImgs"],
-                    className: bottomParsedFromFile["classNameAbImgs"],
-                    src: bottomParsedFromFile["srcAbImgs"],
-                    alt: bottomParsedFromFile["altAbImgs"]
+                    id: bottomDatumFile["idAbImgs"],
+                    className: bottomDatumFile["classNameAbImgs"],
+                    src: bottomDatumFile["srcAbImgs"],
+                    alt: bottomDatumFile["altAbImgs"]
                 }
             ],
             divs: [
                 {
-                    id: bottomParsedFromFile["idAaDivs"],
-                    className: bottomParsedFromFile["classNameAaDivs"],
-                    content: bottomParsedFromFile["contentAaDivs"]
+                    id: bottomDatumFile["idAaDivs"],
+                    className: bottomDatumFile["classNameAaDivs"],
+                    content: bottomDatumFile["contentAaDivs"]
                 },
                 {
-                    id: bottomParsedFromFile["idAbDivs"],
-                    className: bottomParsedFromFile["classNameAbDivs"],
-                    content: bottomParsedFromFile["contentAbDivs"]
+                    id: bottomDatumFile["idAbDivs"],
+                    className: bottomDatumFile["classNameAbDivs"],
+                    content: bottomDatumFile["contentAbDivs"]
                 }
             ],
             a: {
-                href: `${bottomParsedFromFile["hrefA"]}`,
-                target: bottomParsedFromFile["targetA"],
-                content: bottomParsedFromFile["contentA"]
+                href: `${bottomDatumFile["hrefA"]}`,
+                target: bottomDatumFile["targetA"],
+                content: bottomDatumFile["contentA"]
             },
             img: {
-                id: bottomParsedFromFile["idImg"],
-                className: bottomParsedFromFile["classNameImg"],
-                src: bottomParsedFromFile["srcImg"],
-                alt: bottomParsedFromFile["altImg"]
+                id: bottomDatumFile["idImg"],
+                className: bottomDatumFile["classNameImg"],
+                src: bottomDatumFile["srcImg"],
+                alt: bottomDatumFile["altImg"]
             }
         }
     }
