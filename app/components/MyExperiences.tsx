@@ -86,7 +86,7 @@ export default function MyExperiencesComponent(): React.ReactElement {
                     style={{
                         color: "#D1D5DB"
                     }}>
-                    August 2022 - August 2024
+                    August 2022 - September 2024
                 </div>
                 <div
                     className="className01Span">
@@ -274,7 +274,7 @@ export default function MyExperiencesComponent(): React.ReactElement {
                     style={{
                         color: "#6B7280"
                     }}>
-                    Developed and managed test automation frameworks using Java, Selenium,Appium, and Cucumber.
+                    Developed and managed test automation frameworks using Java, Appium, and Cucumber.
                 </div>
                 <div
                     className="className01Span"
