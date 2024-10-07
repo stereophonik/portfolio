@@ -260,6 +260,13 @@ export default function MyExperiencesComponent(): React.ReactElement {
                     style={{
                         color: "#6B7280"
                     }}>
+                    With a bank client opportunity for less than 11 months with mobile app testing, meeting attending, and app demonstrating.
+                </div>
+                <div
+                    className="className01Span"
+                    style={{
+                        color: "#6B7280"
+                    }}>
                     ---
                 </div>
                 <div
