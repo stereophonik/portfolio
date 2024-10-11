@@ -1,39 +1,73 @@
 {
-  "idFooter": "idFooterBottom",
-  "classNameFooter": "classNameFooter",
-  "idUl": "idUlBottom",
-  "classNameUl": "classNameUl",
-  "classNameAaLis": "className03VerticalLi",
-  "keyAaLis": "keyAaLisBottom",
-  "contentAaLis": "",
-  "classNameAbLis": "className03VerticalLi",
-  "keyAbLis": "keyAbLisBottom",
-  "contentAbLis": "",
-  "hrefAaAs": "https://github.com/stereophonik/portfolio",
-  "targetAaAs": "_blank",
-  "contentAaAs": "",
-  "hrefAbAs": "https://www.linkedin.com/in/nikolai-reyes",
-  "targetAbAs": "_blank",
-  "contentAbAs": "",
-  "idAaImgs": "idAaImgsBottom",
-  "classNameAaImgs": "className02Img",
-  "srcAaImgs": "/github.png",
-  "altAaImgs": "Github PNG",
-  "idAbImgs": "idAbImgsBottom",
-  "classNameAbImgs": "className02Img",
-  "srcAbImgs": "/linkedin.png",
-  "altAbImgs": "LinkedIn PNG",
-  "idAaDivs": "idAaDivsBottom",
-  "classNameAaDivs": "className02Div",
-  "contentAaDivs": "@2024 Nikolai Reyes - All Rights Reserved",
-  "idAbDivs": "idAbDivsBottom",
-  "classNameAbDivs": "className02Div",
-  "contentAbDivs": "",
-  "hrefA": "#idNavTop",
-  "targetA": "_self",
-  "contentA": "Back to Top",
-  "idImg": "idImgBottom",
-  "classNameImg": "className05Img",
-  "srcImg": "/picBottom.png",
-  "altImg": "Bottom Pic"
+  "value": {
+    "footer": {
+      "id": "idFooterBottom",
+      "className": "classNameFooter"
+    },
+    "ul": {
+      "id": "idUlBottom",
+      "className": "classNameUl"
+    },
+    "lis": [
+      {
+        "className": "className03VerticalLi",
+        "key": "keyAaLisBottom",
+        "content": ""
+      },
+      {
+        "className": "className03VerticalLi",
+        "key": "keyAbLisBottom",
+        "content": ""
+      }
+    ],
+    "as": [
+      {
+        "href": "https://github.com/stereophonik/portfolio",
+        "target": "_blank",
+        "content": ""
+      },
+      {
+        "href": "https://www.linkedin.com/in/nikolai-reyes",
+        "target": "_blank",
+        "content": ""
+      }
+    ],
+    "imgs": [
+      {
+        "id": "idAaImgsBottom",
+        "className": "className02Img",
+        "src": "/github.png",
+        "alt": "Github PNG"
+      },
+      {
+        "id": "idAbImgsBottom",
+        "className": "className02Img",
+        "src": "/linkedin.png",
+        "alt": "LinkedIn PNG"
+      }
+    ],
+    "divs": [
+      {
+        "id": "idAaDivsBottom",
+        "className": "className02Div",
+        "content": "@2024 Nikolai Reyes - All Rights Reserved"
+      },
+      {
+        "id": "idAbDivsBottom",
+        "className": "className02Div",
+        "content": ""
+      }
+    ],
+    "a": {
+      "href": "#idNavTop",
+      "target": "_self",
+      "content": "Back to Top"
+    },
+    "img": {
+      "id": "idImgBottom",
+      "className": "className05Img",
+      "src": "/picBottom.png",
+      "alt": "Bottom Pic"
+    }
+  }
 }

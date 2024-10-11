@@ -20,15 +20,6 @@ export const MyExperiencesContext: React.Context<{}> = createContext({
             id: "defaultValue",
             className: "defaultValue",
             content: "defaultValue"
-        },
-        span: {
-            id: "defaultValue",
-            className: "defaultValue",
-            content: "defaultValue"
-        },
-        a: {
-            href: "defaultValue",
-            content: "defaultValue"
         }
     }
 });

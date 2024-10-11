@@ -19,23 +19,35 @@
       "className": "className03Span",
       "content": "Portfolio"
     },
-    "idAaH2": "idAaH2MyPortfolio",
-    "classNameAaH2": "className01H2",
-    "contentAaH2": "Looking for a WordPress site? I’ve got you covered!",
-    "idAcSpan": "idAcSpanMyPortfolio",
-    "classNameAcSpan": "className01Span",
-    "contentAcSpan": "",
-    "hrefAaA": "https://classconstructions.com.au",
-    "targetAaA": "_blank",
-    "contentAaA": "Class Constructions Blogs Page",
-    "idAbH2": "idAbH2MyExperiences",
-    "classNameAbH2": "className01H2",
-    "contentAbH2": "If you have a website design in mind, I can definitely bring it to life for you. This app was built with Next.js, despite my initial lack of experience. Check out my portfolio to see how I handled it:",
-    "idAdSpan": "idAdSpanMyExperiences",
-    "classNameAdSpan": "className01Span",
-    "contentAdSpan": "",
-    "hrefAbA": "https://github.com/stereophonik/portfolio/tree/main/app",
-    "targetAbA": "_blank",
-    "contentAbA": "My Portfolio Application"
+    "aaH2": {
+      "id": "idAaH2MyPortfolio",
+      "className": "className01H2",
+      "content": "Looking for a WordPress site? I’ve got you covered!"
+    },
+    "acSpan": {
+      "id": "idAcSpanMyPortfolio",
+      "className": "className01Span",
+      "content": ""
+    },
+    "aaA": {
+      "href": "https://classconstructions.com.au",
+      "target": "_blank",
+      "content": "Class Constructions Blogs Page"
+    },
+    "abH2": {
+      "id": "idAbH2MyExperiences",
+      "className": "className01H2",
+      "content": "If you have a website design in mind, I can definitely bring it to life for you. This app was built with Next.js, despite my initial lack of experience. Check out my portfolio to see how I handled it:"
+    },
+    "adSpan": {
+      "id": "idAdSpanMyExperiences",
+      "className": "className01Span",
+      "content": ""
+    },
+    "abA": {
+      "href": "https://github.com/stereophonik/portfolio/tree/main/app",
+      "target": "_blank",
+      "content": "My Portfolio Application"
+    }
   }
 }

@@ -1,24 +1,42 @@
 {
-  "idSection": "idSectionLetsConnect",
-  "classNameSection": "className01Section",
-  "idH1": "idH1LetsConnect",
-  "classNameH1": "classNameH1",
-  "contentH1": "",
-  "idAaSpan": "idAaSpanLetsConnect",
-  "classNameAaSpan": "className02Span",
-  "contentAaSpan": "Let’s ",
-  "idAbSpan": "idAbSpanLetsConnect",
-  "classNameAbSpan": "className03Span",
-  "contentAbSpan": "Connect",
-  "idH2": "idH2LetsConnect",
-  "classNameH2": "className01H2",
-  "contentH2": " to discuss your specific needs. Together, we can work on creating, updating, or testing your dream website. Looking forward to chatting soon!",
-  "hrefA": "mailto:nikolai00reyes@outlook.ph",
-  "targetA": "_blank",
-  "contentA": "Contact me",
-  "idButton": "idButtonLetsConnect",
-  "classNameButton": "classNameButton",
-  "contentButton": "Contact me",
-  "urlOpenWindow": "mailto:nikolai00reyes@outlook.ph",
-  "targetOpenWindow": "_blank"
+  "value": {
+    "section": {
+      "id": "idSectionLetsConnect",
+      "className": "className01Section"
+    },
+    "h1": {
+      "id": "idH1LetsConnect",
+      "className": "classNameH1",
+      "content": ""
+    },
+    "aaSpan": {
+      "id": "idAaSpanLetsConnect",
+      "className": "className02Span",
+      "content": "Let’s "
+    },
+    "abSpan": {
+      "id": "idAbSpanLetsConnect",
+      "className": "className03Span",
+      "content": "Connect"
+    },
+    "h2": {
+      "id": "idH2LetsConnect",
+      "className": "className01H2",
+      "content": " to discuss your specific needs. Together, we can work on creating, updating, or testing your dream website. Looking forward to chatting soon!"
+    },
+    "a": {
+      "href": "mailto:nikolai00reyes@outlook.ph",
+      "target": "_blank",
+      "content": "Contact me"
+    },
+    "button": {
+      "id": "idButtonLetsConnect",
+      "className": "classNameButton",
+      "content": "Contact me"
+    },
+    "openWindow": {
+      "url": "mailto:nikolai00reyes@outlook.ph",
+      "target": "_blank"
+    }
+  }
 }

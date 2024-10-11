@@ -4,7 +4,5 @@ export default interface MyExperiencesInterface {
         h1: { id: any; className: string; content: any; };
         aaSpan: { id: any; className: string; content: any; };
         abSpan: { id: any; className: string; content: any; };
-        span: { id: any; className: string; content: any; };
-        a: { href: string; target: any; content: any; };
     }
 }

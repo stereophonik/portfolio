@@ -1,13 +1,23 @@
 {
-  "idSection": "idSectionMyExperiences",
-  "classNameSection": "className02Section",
-  "idH1": "idH1MyExperiences",
-  "classNameH1": "classNameH1",
-  "contentH1": "",
-  "idAaSpan": "idAaSpanMyExperiences",
-  "classNameAaSpan": "className02Span",
-  "contentAaSpan": "My ",
-  "idAbSpan": "idAbSpanMyExperiences",
-  "classNameAbSpan": "className03Span",
-  "contentAbSpan": "Experiences"
+  "value": {
+    "section": {
+      "id": "idSectionMyExperiences",
+      "className": "className02Section"
+    },
+    "h1": {
+      "id": "idH1MyExperiences",
+      "className": "classNameH1",
+      "content": ""
+    },
+    "aaSpan": {
+      "id": "idAaSpanMyExperiences",
+      "className": "className02Span",
+      "content": "My "
+    },
+    "abSpan": {
+      "id": "idAbSpanMyExperiences",
+      "className": "className03Span",
+      "content": "Experiences"
+    }
+  }
 }
