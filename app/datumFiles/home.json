@@ -10,39 +10,48 @@
       "src": "/picHome.png",
       "alt": "Home Pic"
     },
-    "idDiv": "idDivHome",
-    "classNameDiv": "className03Div",
-    "idH1": "idH1Home",
-    "classNameH1": "classNameH1",
-    "contentH1": "",
-    "idZySpan": "idZySpanHome",
-    "classNameZySpan": "className02Span",
-    "contentZySpan": "I'm Nikolai ",
-    "idZzSpan": "idZzSpanHome",
-    "classNameZzSpan": "className03Span",
-    "contentZzSpan": "Reyes",
-    "idAaSpan": "idAaSpanHome",
-    "classNameAaSpan": "className01Span",
-    "contentAaSpan": "WordPress builder | Front-end developer | Certified Agile tester",
-    "idAbSpan": "idAbSpanHome",
-    "classNameAbSpan": "className02Span",
-    "contentAbSpan": "Simply put, I’m here to ",
-    "idAcSpan": "idAcSpanHome",
-    "classNameAcSpan": "className02Span",
-    "contentAcSpan": "make things work smarter",
-    "idAdSpan": "idAdSpanHome",
-    "classNameAdSpan": "className02Span",
-    "contentAdSpan": ", not harder!",
-    "idAaH2": "idAaH2Home",
-    "classNameAaH2": "className02H2",
-    "contentAaH2": "Hello! Are you looking to create, update, or test your business website?",
-    "idAbH2": "idAbH2Home",
-    "classNameAbH2": "className02H2",
-    "contentAbH2": "If yes, I'm here to help!",
-    "idButton": "idButtonHome",
-    "classNameButton": "classNameButton",
-    "contentButton": "Contact me",
-    "urlOpenWindow": "mailto:nikolai00reyes@outlook.ph",
-    "targetOpenWindow": "_blank"
+    "div": {
+      "id": "idDivHome",
+      "className": "className03Div"
+    },
+    "h1": {
+      "id": "idH1Home",
+      "className": "classNameH1",
+      "content": ""
+    },
+    "zySpan": {
+      "id": "idZySpanHome",
+      "className": "className02Span",
+      "content": "I'm Nikolai "
+    },
+    "zzSpan": {
+      "id": "idZzSpanHome",
+      "className": "className03Span",
+      "content": "Reyes"
+    },
+    "aaSpan": {
+      "id": "idAaSpanHome",
+      "className": "className01Span",
+      "content": "WordPress builder | Front-end developer | Certified Agile tester"
+    },
+    "aaH2": {
+      "id": "idAaH2Home",
+      "className": "className02H2",
+      "content": "Hello! Are you looking to create, update, or test your business website?"
+    },
+    "abH2": {
+      "id": "idAbH2Home",
+      "className": "className02H2",
+      "content": "If yes, I'm here to help!"
+    },
+    "button": {
+      "id": "idButtonHome",
+      "className": "classNameButton",
+      "content": "Contact me"
+    },
+    "openWindow": {
+      "url": "mailto:nikolai00reyes@outlook.ph",
+      "target": "_blank"
+    }
   }
 }

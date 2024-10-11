@@ -46,26 +46,11 @@ export const AboutMeContext: React.Context<{}> = createContext({
             className: "defaultValue",
             content: "defaultValue"
         },
-        adSpan: {
-            id: "defaultValue",
-            className: "defaultValue",
-            content: "defaultValue"
-        },
-        h2: {
-            id: "defaultValue",
-            className: "defaultValue",
-            content: "defaultValue"
-        },
         ul: {
             id: "defaultValue",
             className: "defaultValue"
         },
         lis: [
-            {
-                className: "defaultValue",
-                key: "defaultValue",
-                content: "defaultValue"
-            },
             {
                 className: "defaultValue",
                 key: "defaultValue",

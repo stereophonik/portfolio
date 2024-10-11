@@ -29,29 +29,29 @@ export default function AboutMeComponent(): React.ReactElement {
                     id={aboutMeContext["ul"]["id"]}
                     className={aboutMeContext["ul"]["className"]}>
                     <li
-                        className={aboutMeContext["lis"][1]["className"]}
-                        key={aboutMeContext["lis"][1]["key"]}>
-                        {aboutMeContext["lis"][1]["content"]}
+                        className={aboutMeContext["lis"][0]["className"]}
+                        key={aboutMeContext["lis"][0]["key"]}>
+                        {aboutMeContext["lis"][0]["content"]}
                     </li>
                     <li
-                        className={aboutMeContext["lis"][2]["className"]}
-                        key={aboutMeContext["lis"][2]["key"]}>
+                        className={aboutMeContext["lis"][1]["className"]}
+                        key={aboutMeContext["lis"][1]["key"]}>
                         <span
-                            id={aboutMeContext["abSpan"]["id"]}
-                            className={aboutMeContext["abSpan"]["className"]}>
-                            {aboutMeContext["abSpan"]["content"]}
+                            id={aboutMeContext["aaSpan"]["id"]}
+                            className={aboutMeContext["aaSpan"]["className"]}>
+                            {aboutMeContext["aaSpan"]["content"]}
                         </span>
                         <strong>
                             <span
-                                id={aboutMeContext["acSpan"]["id"]}
-                                className={aboutMeContext["acSpan"]["className"]}>
-                                {aboutMeContext["acSpan"]["content"]}
+                                id={aboutMeContext["abSpan"]["id"]}
+                                className={aboutMeContext["abSpan"]["className"]}>
+                                {aboutMeContext["abSpan"]["content"]}
                             </span>
                         </strong>
                         <span
-                            id={aboutMeContext["adSpan"]["id"]}
-                            className={aboutMeContext["adSpan"]["className"]}>
-                            {aboutMeContext["adSpan"]["content"]}
+                            id={aboutMeContext["acSpan"]["id"]}
+                            className={aboutMeContext["acSpan"]["className"]}>
+                            {aboutMeContext["acSpan"]["content"]}
                         </span>
                     </li>
                 </ul>

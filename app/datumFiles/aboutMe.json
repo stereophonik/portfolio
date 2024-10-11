@@ -1,50 +1,73 @@
 {
-    "idSection": "idSectionAboutMe",
-    "classNameSection": "className03Section",
-    "idImg": "idImgAboutMe",
-    "classNameImg": "className03Img",
-    "srcImg": "/picAboutMe.png",
-    "altImg": "About Me Pic",
-    "idDiv": "idDivAboutMe",
-    "classNameDiv": "className04Div",
-    "idH1": "idH1AboutMe",
-    "classNameH1": "classNameH1",
-    "contentH1": "",
-    "idZySpan": "idZySpanAboutMe",
-    "classNameZySpan": "className02Span",
-    "contentZySpan": "About ",
-    "idZzSpan": "idZzSpanAboutMe",
-    "classNameZzSpan": "className03Span",
-    "contentZzSpan": "Me",
-    "idAaSpan": "idAaSpanAboutMe",
-    "classNameAaSpan": "className01Span",
-    "contentAaSpan": "Web Builder",
-    "idAbSpan": "idAbSpanAboutMe",
-    "classNameAbSpan": "className02Span",
-    "contentAbSpan": "Simply put, I’m here to ",
-    "idAcSpan": "idAcSpanAboutMe",
-    "classNameAcSpan": "className02Span",
-    "contentAcSpan": "make things work smarter",
-    "idAdSpan": "idAdSpanAboutMe",
-    "classNameAdSpan": "className02Span",
-    "contentAdSpan": ", not harder!",
-    "idH2": "idH2AboutMe",
-    "classNameH2": "className01H2",
-    "contentH2": "Hello! Are you looking to create, update, or test your business website?",
-    "idUl": "idUlAboutMe",
-    "classNameUl": "classNameUl",
-    "keyAaLis": "keyAaLisAboutMe",
-    "classNameAaLis": "className01VerticalLi",
-    "contentAaLis": "If yes, I'm here to help!",
-    "keyAbLis": "keyAbLisAboutMe",
-    "classNameAbLis": "className01VerticalLi",
-    "contentAbLis": "I have several years of experience with quality testing and I'm now transitioning to front-end development, so I bring a unique perspective to streamline your workflows and create, update, or test your web applications.",
-    "keyAcLis": "keyAcLisAboutMe",
-    "classNameAcLis": "className02VerticalLi",
-    "contentAcLis": "",
-    "idButton": "idButtonAboutMe",
-    "classNameButton": "classNameButton",
-    "contentButton": "Contact me",
-    "urlOpenWindow": "mailto:nikolai00reyes@outlook.ph",
-    "targetOpenWindow": "_blank"
+  "value": {
+    "section": {
+      "id": "idSectionAboutMe",
+      "className": "className03Section"
+    },
+    "img": {
+      "id": "idImgAboutMe",
+      "className": "className03Img",
+      "src": "/picAboutMe.png",
+      "alt": "About Me Pic"
+    },
+    "div": {
+      "id": "idDivAboutMe",
+      "className": "className04Div"
+    },
+    "h1": {
+      "id": "idH1AboutMe",
+      "className": "classNameH1",
+      "content": ""
+    },
+    "zySpan": {
+      "id": "idZySpanAboutMe",
+      "className": "className02Span",
+      "content": "About "
+    },
+    "zzSpan": {
+      "id": "idZzSpanAboutMe",
+      "className": "className03Span",
+      "content": "Me"
+    },
+    "aaSpan": {
+      "id": "idAbSpanAboutMe",
+      "className": "className02Span",
+      "content": "Simply put, I’m here to "
+    },
+    "abSpan": {
+      "id": "idAcSpanAboutMe",
+      "className": "className02Span",
+      "content": "make things work smarter"
+    },
+    "acSpan": {
+      "id": "idAdSpanAboutMe",
+      "className": "className02Span",
+      "content": ", not harder!"
+    },
+    "ul": {
+      "id": "idUlAboutMe",
+      "className": "classNameUl"
+    },
+    "lis": [
+      {
+        "key": "keyAbLisAboutMe",
+        "className": "className01VerticalLi",
+        "content": "I have several years of experience with quality testing and I'm now transitioning to front-end development, so I bring a unique perspective to streamline your workflows and create, update, or test your web applications."
+      },
+      {
+        "key": "keyAcLisAboutMe",
+        "className": "className02VerticalLi",
+        "content": ""
+      }
+    ],
+    "button": {
+      "id": "idButtonAboutMe",
+      "className": "classNameButton",
+      "content": "Contact me"
+    },
+    "openWindow": {
+      "url": "mailto:nikolai00reyes@outlook.ph",
+      "target": "_blank"
+    }
+  }
 }
