@@ -1,10 +1,15 @@
 {
-    "idSection": "idSectionHome",
-    "classNameSection": "className04Section",
-    "idImg": "idImgHome",
-    "classNameImg": "className01Img",
-    "srcImg": "/picHome.png",
-    "altImg": "Home Pic",
+  "value": {
+    "section": {
+      "id": "idSectionHome",
+      "className": "className04Section"
+    },
+    "img": {
+      "id": "idImgHome",
+      "className": "className01Img",
+      "src": "/picHome.png",
+      "alt": "Home Pic"
+    },
     "idDiv": "idDivHome",
     "classNameDiv": "className03Div",
     "idH1": "idH1Home",
@@ -39,4 +44,5 @@
     "contentButton": "Contact me",
     "urlOpenWindow": "mailto:nikolai00reyes@outlook.ph",
     "targetOpenWindow": "_blank"
+  }
 }

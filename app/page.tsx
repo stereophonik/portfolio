@@ -37,163 +37,69 @@ import LetsConnectInterface from "./interfaces/LetsConnect";
 import BottomInterface from "./interfaces/Bottom";
 
 export default function Page(): React.ReactElement {
-    const top: TopInterface = {
-        value: {
-            nav: {
-                id: topDatumFile["idNav"],
-                className: topDatumFile["classNameNav"]
-            },
-            ul: {
-                id: topDatumFile["idUl"],
-                className: topDatumFile["classNameUl"]
-            },
-            lis: [
-                {
-                    className: topDatumFile["classNameAaLis"],
-                    key: topDatumFile["keyAaLis"],
-                    content: topDatumFile["contentAaLis"]
-                },
-                {
-                    className: topDatumFile["classNameAbLis"],
-                    key: topDatumFile["keyAbLis"],
-                    content: topDatumFile["contentAbLis"]
-                },
-                {
-                    className: topDatumFile["classNameAcLis"],
-                    key: topDatumFile["keyAcLis"],
-                    content: topDatumFile["contentAcLis"]
-                },
-                {
-                    className: topDatumFile["classNameAdLis"],
-                    key: topDatumFile["keyAdLis"],
-                    content: topDatumFile["contentAdLis"]
-                },
-                {
-                    className: topDatumFile["classNameAeLis"],
-                    key: topDatumFile["keyAeLis"],
-                    content: topDatumFile["contentAeLis"]
-                },
-                {
-                    className: topDatumFile["classNameAfLis"],
-                    key: topDatumFile["keyAfLis"],
-                    content: topDatumFile["contentAfLis"]
-                }
-            ],
-            as: [
-                {
-                    href: `${topDatumFile["hrefAaAs"]}`,
-                    target: topDatumFile["targetAaAs"],
-                    content: topDatumFile["contentAaAs"]
-                },
-                {
-                    href: `${topDatumFile["hrefAbAs"]}`,
-                    target: topDatumFile["targetAbAs"],
-                    content: topDatumFile["contentAbAs"]
-                },
-                {
-                    href: `${topDatumFile["hrefAcAs"]}`,
-                    target: topDatumFile["targetAcAs"],
-                    content: topDatumFile["contentAcAs"]
-                },
-                {
-                    href: `${topDatumFile["hrefAdAs"]}`,
-                    target: topDatumFile["targetAdAs"],
-                    content: topDatumFile["contentAdAs"]
-                },
-                {
-                    href: `${topDatumFile["hrefAeAs"]}`,
-                    target: topDatumFile["targetAeAs"],
-                    content: topDatumFile["contentAeAs"]
-                },
-                {
-                    href: `${topDatumFile["hrefAfAs"]}`,
-                    target: topDatumFile["targetAfAs"],
-                    content: topDatumFile["contentAfAs"]
-                }
-            ],
-            a: {
-                href: `${topDatumFile["hrefA"]}`,
-                target: topDatumFile["targetA"],
-                content: topDatumFile["contentA"]
-            },
-            img: {
-                id: topDatumFile["idImg"],
-                className: topDatumFile["classNameImg"],
-                src: topDatumFile["srcImg"],
-                alt: topDatumFile["altImg"]
-            }
-        }
-    }
+    const top: TopInterface = topDatumFile
 
     const home: HomeInterface = {
         value: {
-            section: {
-                id: homeDatumFile["idSection"],
-                className: homeDatumFile["classNameSection"]
-            },
-            img: {
-                id: homeDatumFile["idImg"],
-                className: homeDatumFile["classNameImg"],
-                src: homeDatumFile["srcImg"],
-                alt: homeDatumFile["altImg"]
-            },
+            section: homeDatumFile["value"]["section"],
+            img: homeDatumFile["value"]["img"],
             div: {
-                id: homeDatumFile["idDiv"],
-                className: homeDatumFile["classNameDiv"]
+                id: homeDatumFile["value"]["idDiv"],
+                className: homeDatumFile["value"]["classNameDiv"]
             },
             h1: {
-                id: homeDatumFile["idH1"],
-                className: homeDatumFile["classNameH1"],
-                content: homeDatumFile["contentH1"]
+                id: homeDatumFile["value"]["idH1"],
+                className: homeDatumFile["value"]["classNameH1"],
+                content: homeDatumFile["value"]["contentH1"]
             },
             zySpan: {
-                id: homeDatumFile["idZySpan"],
-                className: homeDatumFile["classNameZySpan"],
-                content: homeDatumFile["contentZySpan"]
+                id: homeDatumFile["value"]["idZySpan"],
+                className: homeDatumFile["value"]["classNameZySpan"],
+                content: homeDatumFile["value"]["contentZySpan"]
             },
             zzSpan: {
-                id: homeDatumFile["idZzSpan"],
-                className: homeDatumFile["classNameZzSpan"],
-                content: homeDatumFile["contentZzSpan"]
+                id: homeDatumFile["value"]["idZzSpan"],
+                className: homeDatumFile["value"]["classNameZzSpan"],
+                content: homeDatumFile["value"]["contentZzSpan"]
             },
             aaSpan: {
-                id: homeDatumFile["idAaSpan"],
-                className: homeDatumFile["classNameAaSpan"],
-                content: homeDatumFile["contentAaSpan"]
+                id: homeDatumFile["value"]["idAaSpan"],
+                className: homeDatumFile["value"]["classNameAaSpan"],
+                content: homeDatumFile["value"]["contentAaSpan"]
             },
             abSpan: {
-                id: homeDatumFile["idAbSpan"],
-                className: homeDatumFile["classNameAbSpan"],
-                content: homeDatumFile["contentAbSpan"]
+                id: homeDatumFile["value"]["idAbSpan"],
+                className: homeDatumFile["value"]["classNameAbSpan"],
+                content: homeDatumFile["value"]["contentAbSpan"]
             },
             acSpan: {
-                id: homeDatumFile["idAcSpan"],
-                className: homeDatumFile["classNameAcSpan"],
-                content: homeDatumFile["contentAcSpan"]
+                id: homeDatumFile["value"]["idAcSpan"],
+                className: homeDatumFile["value"]["classNameAcSpan"],
+                content: homeDatumFile["value"]["contentAcSpan"]
             },
             adSpan: {
-                id: homeDatumFile["idAdSpan"],
-                className: homeDatumFile["classNameAdSpan"],
-                content: homeDatumFile["contentAdSpan"]
+                id: homeDatumFile["value"]["idAdSpan"],
+                className: homeDatumFile["value"]["classNameAdSpan"],
+                content: homeDatumFile["value"]["contentAdSpan"]
             },
             aaH2: {
-                id: homeDatumFile["idAaH2"],
-                className: homeDatumFile["classNameAaH2"],
-                content: homeDatumFile["contentAaH2"]
+                id: homeDatumFile["value"]["idAaH2"],
+                className: homeDatumFile["value"]["classNameAaH2"],
+                content: homeDatumFile["value"]["contentAaH2"]
             },
             abH2: {
-                id: homeDatumFile["idAbH2"],
-                className: homeDatumFile["classNameAbH2"],
-                content: homeDatumFile["contentAbH2"]
+                id: homeDatumFile["value"]["idAbH2"],
+                className: homeDatumFile["value"]["classNameAbH2"],
+                content: homeDatumFile["value"]["contentAbH2"]
             },
             button: {
-                id: homeDatumFile["idButton"],
-                className: homeDatumFile["classNameButton"],
-                content: homeDatumFile["contentButton"]
+                id: homeDatumFile["value"]["idButton"],
+                className: homeDatumFile["value"]["classNameButton"],
+                content: homeDatumFile["value"]["contentButton"]
             },
             openWindow: {
-                url: homeDatumFile["urlOpenWindow"],
-                target: homeDatumFile["targetOpenWindow"]
+                url: homeDatumFile["value"]["urlOpenWindow"],
+                target: homeDatumFile["value"]["targetOpenWindow"]
             }
         }
     }

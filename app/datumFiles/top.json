@@ -1,49 +1,87 @@
 {
-  "idNav": "idNavTop",
-  "classNameNav": "classNameNav",
-  "idUl": "idUlTop",
-  "classNameUl": "classNameUl",
-  "classNameAaLis": "classNameHorizontalLi",
-  "keyAaLis": "keyAaLisTop",
-  "contentAaLis": "",
-  "classNameAbLis": "classNameHorizontalLi",
-  "keyAbLis": "keyAbLisTop",
-  "contentAbLis": "",
-  "classNameAcLis": "classNameHorizontalLi",
-  "keyAcLis": "keyAcLisTop",
-  "contentAcLis": "",
-  "classNameAdLis": "classNameHorizontalLi",
-  "keyAdLis": "keyAdLisTop",
-  "contentAdLis": "",
-  "classNameAeLis": "classNameHorizontalLi",
-  "keyAeLis": "keyAeLisTop",
-  "contentAeLis": "",
-  "classNameAfLis": "classNameHorizontalLi",
-  "keyAfLis": "keyAfLisTop",
-  "contentAfLis": "",
-  "hrefAaAs": "#idSectionAboutMe",
-  "targetAaAs": "_self",
-  "contentAaAs": "ABOUT ME",
-  "hrefAbAs": "#idSectionWhatIOffer",
-  "targetAbAs": "_self",
-  "contentAbAs": "WHAT I OFFER",
-  "hrefAcAs": "#idSectionMyPortfolio",
-  "targetAcAs": "_self",
-  "contentAcAs": "MY PORTFOLIO",
-  "hrefAdAs": "#idSectionMyExperiences",
-  "targetAdAs": "_self",
-  "contentAdAs": "MY EXPERIENCES",
-  "hrefAeAs": "#idSectionLetsConnect",
-  "targetAeAs": "_self",
-  "contentAeAs": "LET'S CONNECT",
-  "hrefAfAs": "mailto:nikolai00reyes@outlook.ph",
-  "targetAfAs": "_blank",
-  "contentAfAs": "CONTACT ME",
-  "hrefA": "#idSectionHome",
-  "targetA": "_self",
-  "contentA": "",
-  "idImg": "idImgTop",
-  "classNameImg": "className04Img",
-  "srcImg": "/picTop.png",
-  "altImg": "Top Pic"
+  "value": {
+    "nav": {
+      "id": "idNavTop",
+      "className": "classNameNav"
+    },
+    "ul": {
+      "id": "idUlTop",
+      "className": "classNameUl"
+    },
+    "lis": [
+      {
+        "className": "classNameHorizontalLi",
+        "key": "keyAaLisTop",
+        "content": ""
+      },
+      {
+        "className": "classNameHorizontalLi",
+        "key": "keyAbLisTop",
+        "content": ""
+      },
+      {
+        "className": "classNameHorizontalLi",
+        "key": "keyAcLisTop",
+        "content": ""
+      },
+      {
+        "className": "classNameHorizontalLi",
+        "key": "keyAdLisTop",
+        "content": ""
+      },
+      {
+        "className": "classNameHorizontalLi",
+        "key": "keyAeLisTop",
+        "content": ""
+      },
+      {
+        "className": "classNameHorizontalLi",
+        "key": "keyAfLisTop",
+        "content": ""
+      }
+    ],
+    "as": [
+      {
+        "href": "#idSectionAboutMe",
+        "target": "_self",
+        "content": "ABOUT ME"
+      },
+      {
+        "href": "#idSectionWhatIOffer",
+        "target": "_self",
+        "content": "WHAT I OFFER"
+      },
+      {
+        "href": "#idSectionMyPortfolio",
+        "target": "_self",
+        "content": "MY PORTFOLIO"
+      },
+      {
+        "href": "#idSectionMyExperiences",
+        "target": "_self",
+        "content": "MY EXPERIENCES"
+      },
+      {
+        "href": "#idSectionLetsConnect",
+        "target": "_self",
+        "content": "LET'S CONNECT"
+      },
+      {
+        "href": "mailto:nikolai00reyes@outlook.ph",
+        "target": "_blank",
+        "content": "CONTACT ME"
+      }
+    ],
+    "a": {
+      "href": "#idSectionHome",
+      "target": "_self",
+      "content": ""
+    },
+    "img": {
+      "id": "idImgTop",
+      "className": "className04Img",
+      "src": "/picTop.png",
+      "alt": "Top Pic"
+    }
+  }
 }
