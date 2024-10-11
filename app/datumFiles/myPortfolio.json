@@ -1,31 +1,41 @@
 {
-  "idSection": "idSectionMyPortfolio",
-  "classNameSection": "className01Section",
-  "idH1": "idH1MyPortfolio",
-  "classNameH1": "classNameH1",
-  "contentH1": "",
-  "idAaSpan": "idAaSpanMyPortfolio",
-  "classNameAaSpan": "className02Span",
-  "contentAaSpan": "My ",
-  "idAbSpan": "idAbSpanMyPortfolio",
-  "classNameAbSpan": "className03Span",
-  "contentAbSpan": "Portfolio",
-  "idAaH2": "idAaH2MyPortfolio",
-  "classNameAaH2": "className01H2",
-  "contentAaH2": "Looking for a WordPress site? I’ve got you covered!",
-  "idAcSpan": "idAcSpanMyPortfolio",
-  "classNameAcSpan": "className01Span",
-  "contentAcSpan": "",
-  "hrefAaA": "https://classconstructions.com.au",
-  "targetAaA": "_blank",
-  "contentAaA": "Class Constructions Blogs Page",
-  "idAbH2": "idAbH2MyExperiences",
-  "classNameAbH2": "className01H2",
-  "contentAbH2": "If you have a website design in mind, I can definitely bring it to life for you. This app was built with Next.js, despite my initial lack of experience. Check out my portfolio to see how I handled it:",
-  "idAdSpan": "idAdSpanMyExperiences",
-  "classNameAdSpan": "className01Span",
-  "contentAdSpan": "",
-  "hrefAbA": "https://github.com/stereophonik/portfolio/tree/main/app",
-  "targetAbA": "_blank",
-  "contentAbA": "My Portfolio Application"
+  "value": {
+    "section": {
+      "id": "idSectionMyPortfolio",
+      "className": "className01Section"
+    },
+    "h1": {
+      "id": "idH1MyPortfolio",
+      "className": "classNameH1",
+      "content": ""
+    },
+    "aaSpan": {
+      "id": "idAaSpanMyPortfolio",
+      "className": "className02Span",
+      "content": "My "
+    },
+    "abSpan": {
+      "id": "idAbSpanMyPortfolio",
+      "className": "className03Span",
+      "content": "Portfolio"
+    },
+    "idAaH2": "idAaH2MyPortfolio",
+    "classNameAaH2": "className01H2",
+    "contentAaH2": "Looking for a WordPress site? I’ve got you covered!",
+    "idAcSpan": "idAcSpanMyPortfolio",
+    "classNameAcSpan": "className01Span",
+    "contentAcSpan": "",
+    "hrefAaA": "https://classconstructions.com.au",
+    "targetAaA": "_blank",
+    "contentAaA": "Class Constructions Blogs Page",
+    "idAbH2": "idAbH2MyExperiences",
+    "classNameAbH2": "className01H2",
+    "contentAbH2": "If you have a website design in mind, I can definitely bring it to life for you. This app was built with Next.js, despite my initial lack of experience. Check out my portfolio to see how I handled it:",
+    "idAdSpan": "idAdSpanMyExperiences",
+    "classNameAdSpan": "className01Span",
+    "contentAdSpan": "",
+    "hrefAbA": "https://github.com/stereophonik/portfolio/tree/main/app",
+    "targetAbA": "_blank",
+    "contentAbA": "My Portfolio Application"
+  }
 }

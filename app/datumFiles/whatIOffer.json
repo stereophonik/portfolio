@@ -1,27 +1,49 @@
 {
-  "idSection": "idSectionWhatIOffer",
-  "classNameSection": "className02Section",
-  "idH1": "idH1WhatIOffer",
-  "classNameH1": "classNameH1",
-  "contentH1": "",
-  "idAaSpan": "idAaSpanWhatIOffer",
-  "classNameAaSpan": "className02Span",
-  "contentAaSpan": "What I ",
-  "idAbSpan": "idAbSpanWhatIOffer",
-  "classNameAbSpan": "className03Span",
-  "contentAbSpan": "Offer",
-  "idUl": "idUlWhatIOffer",
-  "classNameUl": "classNameUl",
-  "idH2": "idH2WhatIOffer",
-  "classNameH2": "className01H2",
-  "contentH2": "Here's a glimpse of what I bring to the table:",
-  "keyAaLis": "keyAaLisWhatIOffer",
-  "classNameAaLis": "className01VerticalLi",
-  "contentAaLis": "Expertise in building platform web pages.",
-  "keyAbLis": "keyAbLisWhatIOffer",
-  "classNameAbLis": "className01VerticalLi",
-  "contentAbLis": "Strong skills in frameworks and libraries for web application development.",
-  "keyAcLis": "keyAcLisWhatIOffer",
-  "classNameAcLis": "className01VerticalLi",
-  "contentAcLis": "Extensive testing experience across various companies and industries including global software and fintech companies."
+  "value": {
+    "section": {
+      "id": "idSectionWhatIOffer",
+      "className": "className02Section"
+    },
+    "h1": {
+      "id": "idH1WhatIOffer",
+      "className": "classNameH1",
+      "content": ""
+    },
+    "aaSpan": {
+      "id": "idAaSpanWhatIOffer",
+      "className": "className02Span",
+      "content": "What I "
+    },
+    "abSpan": {
+      "id": "idAbSpanWhatIOffer",
+      "className": "className03Span",
+      "content": "Offer"
+    },
+    "ul": {
+      "id": "idUlWhatIOffer",
+      "className": "classNameUl"
+    },
+    "h2": {
+      "id": "idH2WhatIOffer",
+      "className": "className01H2",
+      "content": "Here's a glimpse of what I bring to the table:"
+    },
+    "lis": [
+      {
+        "key": "keyAaLisWhatIOffer",
+        "className": "className01VerticalLi",
+        "content": "Expertise in building platform web pages."
+      },
+      {
+        "key": "keyAbLisWhatIOffer",
+        "className": "className01VerticalLi",
+        "content": "Strong skills in frameworks and libraries for web application development."
+      },
+      {
+        "key": "keyAcLisWhatIOffer",
+        "className": "className01VerticalLi",
+        "content": "Extensive testing experience across various companies and industries including global software and fintech companies."
+      }
+    ]
+  }
 }

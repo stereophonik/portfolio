@@ -40,107 +40,43 @@ export default function Page(): React.ReactElement {
     const top: TopInterface = topDatumFile;
     const home: HomeInterface = homeDatumFile;
     const aboutMe: AboutMeInterface = aboutMeDatumFile;
-
-    const whatIOffer: WhatIOfferInterface = {
-        value: {
-            section: {
-                id: whatIOfferDatumFile["idSection"],
-                className: whatIOfferDatumFile["classNameSection"]
-            },
-            h1: {
-                id: whatIOfferDatumFile["idH1"],
-                className: whatIOfferDatumFile["classNameH1"],
-                content: whatIOfferDatumFile["contentH1"]
-            },
-            aaSpan: {
-                id: whatIOfferDatumFile["idAaSpan"],
-                className: whatIOfferDatumFile["classNameAaSpan"],
-                content: whatIOfferDatumFile["contentAaSpan"]
-            },
-            abSpan: {
-                id: whatIOfferDatumFile["idAbSpan"],
-                className: whatIOfferDatumFile["classNameAbSpan"],
-                content: whatIOfferDatumFile["contentAbSpan"]
-            },
-            ul: {
-                id: whatIOfferDatumFile["idUl"],
-                className: whatIOfferDatumFile["classNameUl"]
-            },
-            h2: {
-                id: whatIOfferDatumFile["idH2"],
-                className: whatIOfferDatumFile["classNameH2"],
-                content: whatIOfferDatumFile["contentH2"]
-            },
-            lis: [
-                {
-                    className: whatIOfferDatumFile["classNameAaLis"],
-                    key: whatIOfferDatumFile["keyAaLis"],
-                    content: whatIOfferDatumFile["contentAaLis"]
-                },
-                {
-                    className: whatIOfferDatumFile["classNameAbLis"],
-                    key: whatIOfferDatumFile["keyAbLis"],
-                    content: whatIOfferDatumFile["contentAbLis"]
-                },
-                {
-                    className: whatIOfferDatumFile["classNameAcLis"],
-                    key: whatIOfferDatumFile["keyAcLis"],
-                    content: whatIOfferDatumFile["contentAcLis"]
-                }
-            ]
-        }
-    }
+    const whatIOffer: WhatIOfferInterface = whatIOfferDatumFile;
 
     const myPortfolio: MyPortfolioInterface = {
         value: {
-            section: {
-                id: myPortfolioDatumFile["idSection"],
-                className: myPortfolioDatumFile["classNameSection"]
-            },
-            h1: {
-                id: myPortfolioDatumFile["idH1"],
-                className: myPortfolioDatumFile["classNameH1"],
-                content: myPortfolioDatumFile["contentH1"]
-            },
-            aaSpan: {
-                id: myPortfolioDatumFile["idAaSpan"],
-                className: myPortfolioDatumFile["classNameAaSpan"],
-                content: myPortfolioDatumFile["contentAaSpan"]
-            },
-            abSpan: {
-                id: myPortfolioDatumFile["idAbSpan"],
-                className: myPortfolioDatumFile["classNameAbSpan"],
-                content: myPortfolioDatumFile["contentAbSpan"]
-            },
+            section: myPortfolioDatumFile["value"]["section"],
+            h1: myPortfolioDatumFile["value"]["h1"],
+            aaSpan: myPortfolioDatumFile["value"]["aaSpan"],
+            abSpan: myPortfolioDatumFile["value"]["abSpan"],
             aaH2: {
-                id: myPortfolioDatumFile["idAaH2"],
-                className: myPortfolioDatumFile["classNameAaH2"],
-                content: myPortfolioDatumFile["contentAaH2"]
+                id: myPortfolioDatumFile["value"]["idAaH2"],
+                className: myPortfolioDatumFile["value"]["classNameAaH2"],
+                content: myPortfolioDatumFile["value"]["contentAaH2"]
             },
             acSpan: {
-                id: myPortfolioDatumFile["idAcSpan"],
-                className: myPortfolioDatumFile["classNameAcSpan"],
-                content: myPortfolioDatumFile["contentAcSpan"]
+                id: myPortfolioDatumFile["value"]["idAcSpan"],
+                className: myPortfolioDatumFile["value"]["classNameAcSpan"],
+                content: myPortfolioDatumFile["value"]["contentAcSpan"]
             },
             aaA: {
-                href: `${myPortfolioDatumFile["hrefAaA"]}`,
-                target: myPortfolioDatumFile["targetAaA"],
-                content: myPortfolioDatumFile["contentAaA"]
+                href: `${myPortfolioDatumFile["value"]["hrefAaA"]}`,
+                target: myPortfolioDatumFile["value"]["targetAaA"],
+                content: myPortfolioDatumFile["value"]["contentAaA"]
             },
             abH2: {
-                id: myPortfolioDatumFile["idAbH2"],
-                className: myPortfolioDatumFile["classNameAbH2"],
-                content: myPortfolioDatumFile["contentAbH2"]
+                id: myPortfolioDatumFile["value"]["idAbH2"],
+                className: myPortfolioDatumFile["value"]["classNameAbH2"],
+                content: myPortfolioDatumFile["value"]["contentAbH2"]
             },
             adSpan: {
-                id: myPortfolioDatumFile["idAdSpan"],
-                className: myPortfolioDatumFile["classNameAdSpan"],
-                content: myPortfolioDatumFile["contentAdSpan"]
+                id: myPortfolioDatumFile["value"]["idAdSpan"],
+                className: myPortfolioDatumFile["value"]["classNameAdSpan"],
+                content: myPortfolioDatumFile["value"]["contentAdSpan"]
             },
             abA: {
-                href: `${myPortfolioDatumFile["hrefAbA"]}`,
-                target: myPortfolioDatumFile["targetAbA"],
-                content: myPortfolioDatumFile["contentAbA"]
+                href: `${myPortfolioDatumFile["value"]["hrefAbA"]}`,
+                target: myPortfolioDatumFile["value"]["targetAbA"],
+                content: myPortfolioDatumFile["value"]["contentAbA"]
             }
         }
     }
