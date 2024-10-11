@@ -30,11 +30,6 @@ export default function MyPortfolioComponent(): React.ReactElement {
             <span
                 id={myPortfolioContext["acSpan"]["id"]}
                 className={myPortfolioContext["acSpan"]["className"]}>
-                <iframe
-                    id="idIframeMyPortfolio"
-                    className="classNameIframe"
-                    src={myPortfolioContext["aaA"]["href"]}>
-                </iframe>
             </span>
             <h2
                 id={myPortfolioContext["abH2"]["id"]}
