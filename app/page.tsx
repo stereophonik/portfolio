@@ -68,10 +68,6 @@ export default function Page(): React.ReactElement {
                 value={myPortfolio["value"]}>
                 <MyPortfolioComponent />
             </MyPortfolioContext.Provider>
-            <MyExperiencesContext.Provider
-                value={myExperiences["value"]}>
-                <MyExperiencesComponent />
-            </MyExperiencesContext.Provider>
             <LetsConnectContext.Provider
                 value={letsConnect["value"]}>
                 <LetsConnectComponent />
