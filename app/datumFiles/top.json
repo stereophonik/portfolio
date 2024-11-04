@@ -33,11 +33,6 @@
         "className": "classNameHorizontalLi",
         "key": "keyAeLisTop",
         "content": ""
-      },
-      {
-        "className": "classNameHorizontalLi",
-        "key": "keyAfLisTop",
-        "content": ""
       }
     ],
     "as": [
@@ -55,11 +50,6 @@
         "href": "#idSectionMyPortfolio",
         "target": "_self",
         "content": "MY PORTFOLIO"
-      },
-      {
-        "href": "#idSectionMyExperiences",
-        "target": "_self",
-        "content": "MY EXPERIENCES"
       },
       {
         "href": "#idSectionLetsConnect",

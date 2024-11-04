@@ -66,15 +66,6 @@ export default function TopComponent(): React.ReactElement {
                         {topContext["as"][4]["content"]}
                     </a>
                 </li>
-                <li
-                    className={topContext["lis"][5]["className"]}
-                    key={topContext["lis"][5]["key"]}>
-                    <a
-                        href={topContext["as"][5]["href"]}
-                        target={topContext["as"][5]["target"]}>
-                        {topContext["as"][5]["content"]}
-                    </a>
-                </li>
             </ul>
         </nav>
     );

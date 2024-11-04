@@ -35,18 +35,9 @@ export const TopContext: React.Context<{}> = createContext({
                 className: "defaultValue",
                 key: "defaultValue",
                 content: "defaultValue"
-            },
-            {
-                className: "defaultValue",
-                key: "defaultValue",
-                content: "defaultValue"
             }
         ],
         as: [
-            {
-                href: "defaultValue",
-                content: "defaultValue"
-            },
             {
                 href: "defaultValue",
                 content: "defaultValue"
